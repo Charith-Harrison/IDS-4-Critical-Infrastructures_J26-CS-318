@@ -1,0 +1,8 @@
+feature,category,reason
+source_role_map,F,No device-role/authorisation map exists; only client/server direction is derivable.
+authorised_register_map,F,No authorisation map supplied; 'unseen in normal training traffic' is used instead.
+recent_missing_responses_window,F,Whether an earlier request gets a response is only known later; using it would leak future information.
+recent_exceptions_window,F,Same reason: earlier responses may arrive after the current request.
+response_delay_context_window,F,Same reason (depends on later response arrival).
+response_injection_pair_forgery_evidence,F,No forged-response labels or evidence exist in the data.
+value_echo_for_reads,F,Read requests carry no value to echo.

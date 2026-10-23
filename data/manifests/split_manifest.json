@@ -1,0 +1,106 @@
+{
+  "test_captures": [
+    "atk-2",
+    "atk-3",
+    "base-network-wide-normal-14"
+  ],
+  "train_captures": [
+    "atk-0",
+    "atk-1",
+    "atk-4",
+    "atk-5",
+    "base-veth4edc015-normal-4",
+    "base-veth5bbeaa2-normal-13",
+    "base-veth5bbeaa2-normal-14",
+    "base-veth8bc3408-normal-4",
+    "base-vethd9e14c0-normal-4"
+  ],
+  "labelled_event_share_test": 0.19860118434973265,
+  "selection": "closest to 20% of labelled events; deterministic enumeration",
+  "random_state": 42,
+  "per_capture_counts": [
+    {
+      "capture_id": "atk-0",
+      "normal": 4,
+      "attack": 65555
+    },
+    {
+      "capture_id": "atk-1",
+      "normal": 24934,
+      "attack": 0
+    },
+    {
+      "capture_id": "atk-2",
+      "normal": 10172,
+      "attack": 0
+    },
+    {
+      "capture_id": "atk-3",
+      "normal": 6436,
+      "attack": 12377
+    },
+    {
+      "capture_id": "atk-4",
+      "normal": 7089,
+      "attack": 6295
+    },
+    {
+      "capture_id": "atk-5",
+      "normal": 4,
+      "attack": 1023
+    },
+    {
+      "capture_id": "base-network-wide-normal-14",
+      "normal": 12501,
+      "attack": 0
+    },
+    {
+      "capture_id": "base-veth4edc015-normal-4",
+      "normal": 12500,
+      "attack": 0
+    },
+    {
+      "capture_id": "base-veth5bbeaa2-normal-13",
+      "normal": 12500,
+      "attack": 0
+    },
+    {
+      "capture_id": "base-veth5bbeaa2-normal-14",
+      "normal": 12501,
+      "attack": 0
+    },
+    {
+      "capture_id": "base-veth8bc3408-normal-4",
+      "normal": 12500,
+      "attack": 0
+    },
+    {
+      "capture_id": "base-vethd9e14c0-normal-4",
+      "normal": 12500,
+      "attack": 0
+    }
+  ],
+  "verification": {
+    "capture_overlap": [],
+    "record_id_overlap": 0,
+    "duplicate_overlap_cross_file_pairs": 0,
+    "divided_request_response_pairs": 0,
+    "pairing_key_contains_capture_id": true,
+    "context_windows_cross_partitions": false,
+    "context_window_reason": "context is built per (capture, src, dst) stream; a capture lives in one partition",
+    "statistics_fitted_on_test": false,
+    "train_packets": 266867,
+    "test_packets": 76053,
+    "train_share_packets": 0.7782194097748746,
+    "train_events": 167507,
+    "test_events": 41608,
+    "train_classes_present": [
+      0,
+      1
+    ]
+  },
+  "source_checksums": {
+    "normal_traffic_baseline.csv": "5f34db07e4a5efc42f6406a2a81f00198ad797f9dffb57ddcf56184d4244abc0",
+    "command_response_injection_attacks.csv": "ae14a45888f5b67b4c04479681324ba150cba2375e2481fbbee9b13921ede13f"
+  }
+}

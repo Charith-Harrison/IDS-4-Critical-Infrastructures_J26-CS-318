@@ -1,0 +1,86 @@
+{
+  "rule_unseen_write_equals_label_rule": {
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "per_class": {
+      "Normal": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "Command Injection": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "false_positive_rate": 0.0,
+    "confusion_matrix": [
+      [
+        94532,
+        0
+      ],
+      [
+        0,
+        72873
+      ]
+    ],
+    "support": {
+      "Normal": 94532,
+      "Command Injection": 72873
+    },
+    "roc_auc": 1.0,
+    "pr_auc": 1.0
+  },
+  "rf_without_register_value_access_features": {
+    "macro_precision": 0.9999719822802211,
+    "macro_recall": 0.9999672657786987,
+    "macro_f1": 0.9999696236917293,
+    "per_class": {
+      "Normal": {
+        "precision": 0.9999576876289205,
+        "recall": 0.9999894215715314,
+        "f1": 0.9999735543484585
+      },
+      "Command Injection": {
+        "precision": 0.9999862769315219,
+        "recall": 0.9999451099858658,
+        "f1": 0.9999656930349999
+      }
+    },
+    "false_positive_rate": 1.0578428468666694e-05,
+    "confusion_matrix": [
+      [
+        94531,
+        1
+      ],
+      [
+        4,
+        72869
+      ]
+    ],
+    "support": {
+      "Normal": 94532,
+      "Command Injection": 72873
+    },
+    "roc_auc": 0.999999937725278,
+    "pr_auc": 0.9999999195857697
+  },
+  "features_removed_in_diagnostic": [
+    "access_combo_normal_count_log",
+    "access_combo_unseen",
+    "access_write_unseen",
+    "distinct_ref_prev_k",
+    "prev_ref",
+    "prev_value_same_ref",
+    "ref_num",
+    "same_ref_writes_prev_k",
+    "value_changed",
+    "value_delta",
+    "value_outside_normal_range",
+    "value_rate",
+    "write_value"
+  ],
+  "interpretation": "High scores for the rule show the labels are largely reproducible from function code + register novelty, i.e. results partly restate the labelling rule. The diagnostic RF shows how much signal remains from behaviour alone."
+}

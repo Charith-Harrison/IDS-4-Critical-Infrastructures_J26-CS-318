@@ -1,0 +1,14 @@
+# Limitations
+
+1. **No response injection.** The attack file contains only `Coil_Brute_Force` (command-side writes) and 20 `Length_Manipulation` rows. No labelled forged or modified responses exist, so only Normal and Command Injection are modelled.
+2. **Researcher-reconstructed labels.** The datasets give a binary attack flag and a sub-type. "Command Injection" is assigned to attack-labelled FC5/FC6 write requests whose function/register combination is absent from the baseline normal file. This is not independently verified ground truth. 204 attack-labelled writes identical to routine baseline writes are excluded as ambiguous; the 20 `Length_Manipulation` rows are excluded as out of scope.
+3. **Circular labelling.** Because the label rule uses function code and register novelty, a one-line rule built from those fields scores macro F1 1.0 on the development data, and a baseline Random Forest using only current-event fields scores 0.99996. The contextual model's perfect score therefore does not show that context helps. A diagnostic RF without register/value/access features also scores 0.99997 (`results/progress_70/circularity_diagnostics.json`), which suggests that other signals (for example timing or capture vantage) also separate the classes; this was not investigated further.
+4. **Capture artefact.** Capture `atk-0` holds 65,555 of 72,873 development attack events and contains no response packets, so missing-response and pairing features partly identify the capture.
+5. **Few attack captures.** Only three development captures contain attacks (atk-0, atk-4, atk-5); two of five CV folds contain no attack records, so per-fold F1 is 0.5 there.
+6. **Pairing.** Pairing uses endpoint, port and transaction ID within a capture; this is full pairing where responses exist. 76,634 requests across all captures have no response (mostly atk-0).
+7. **Validation-record detection is in-sample for the final model.** Development records were used to train the saved final model. The genuine validation outputs are the saved out-of-fold predictions, shown alongside in the dashboard.
+8. **Final test partition consumed once.** At the user's request, the existing capture-grouped 20% test partition was evaluated once on 2026-10-23. Do not reuse it for feature selection, threshold/model tuning, or repeated model selection; use new independent data for further experiments.
+9. **Dataset age/environment.** Traffic comes from the supplied lab captures only; generalisation to other environments is untested.
+10. **Not run on Windows.** Windows commands in the README were not executed by the author of this package.
+
+Before claiming three-class Command/Response Injection detection, obtain additional labelled data or define and validate a defensible mapping. Do not infer Response Injection solely because a packet is a response.

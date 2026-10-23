@@ -1,0 +1,9 @@
+[
+  "func_code",
+  "ref_num",
+  "word_cnt",
+  "bit_cnt",
+  "write_value",
+  "is_write",
+  "is_coil_op"
+]

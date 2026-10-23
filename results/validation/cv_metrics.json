@@ -1,0 +1,575 @@
+{
+  "label": "Preliminary cross-validation results - final test evaluation pending.",
+  "cv_design": "StratifiedGroupKFold(n_splits=5, shuffle, seed 42) grouped by capture_id; profile statistics, clip thresholds and imputation values refitted on fold-training rows in every fold",
+  "folds": [
+    {
+      "fold": 0,
+      "train_captures": [
+        "atk-1",
+        "atk-4",
+        "atk-5",
+        "base-veth4edc015-normal-4",
+        "base-veth5bbeaa2-normal-13",
+        "base-veth5bbeaa2-normal-14",
+        "base-veth8bc3408-normal-4"
+      ],
+      "val_captures": [
+        "atk-0",
+        "base-vethd9e14c0-normal-4"
+      ],
+      "val_class_counts": {
+        "Normal": 12504,
+        "Command Injection": 65555
+      }
+    },
+    {
+      "fold": 1,
+      "train_captures": [
+        "atk-0",
+        "atk-4",
+        "atk-5",
+        "base-veth4edc015-normal-4",
+        "base-veth5bbeaa2-normal-13",
+        "base-veth5bbeaa2-normal-14",
+        "base-veth8bc3408-normal-4",
+        "base-vethd9e14c0-normal-4"
+      ],
+      "val_captures": [
+        "atk-1"
+      ],
+      "val_class_counts": {
+        "Normal": 24934,
+        "Command Injection": 0
+      }
+    },
+    {
+      "fold": 2,
+      "train_captures": [
+        "atk-0",
+        "atk-1",
+        "atk-5",
+        "base-veth4edc015-normal-4",
+        "base-veth5bbeaa2-normal-13",
+        "base-veth8bc3408-normal-4",
+        "base-vethd9e14c0-normal-4"
+      ],
+      "val_captures": [
+        "atk-4",
+        "base-veth5bbeaa2-normal-14"
+      ],
+      "val_class_counts": {
+        "Normal": 19590,
+        "Command Injection": 6295
+      }
+    },
+    {
+      "fold": 3,
+      "train_captures": [
+        "atk-0",
+        "atk-1",
+        "atk-4",
+        "atk-5",
+        "base-veth5bbeaa2-normal-13",
+        "base-veth5bbeaa2-normal-14",
+        "base-vethd9e14c0-normal-4"
+      ],
+      "val_captures": [
+        "base-veth4edc015-normal-4",
+        "base-veth8bc3408-normal-4"
+      ],
+      "val_class_counts": {
+        "Normal": 25000,
+        "Command Injection": 0
+      }
+    },
+    {
+      "fold": 4,
+      "train_captures": [
+        "atk-0",
+        "atk-1",
+        "atk-4",
+        "base-veth4edc015-normal-4",
+        "base-veth5bbeaa2-normal-14",
+        "base-veth8bc3408-normal-4",
+        "base-vethd9e14c0-normal-4"
+      ],
+      "val_captures": [
+        "atk-5",
+        "base-veth5bbeaa2-normal-13"
+      ],
+      "val_class_counts": {
+        "Normal": 12504,
+        "Command Injection": 1023
+      }
+    }
+  ],
+  "search": [
+    {
+      "model": "baseline",
+      "config_id": 0,
+      "params": {
+        "n_estimators": 100,
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "max_features": "sqrt",
+        "class_weight": "balanced_subsample"
+      },
+      "pooled_oof": {
+        "macro_precision": 0.9999682667287229,
+        "macro_recall": 0.9999588324893993,
+        "macro_f1": 0.999963548258128,
+        "per_class": {
+          "Normal": {
+            "precision": 0.9999365334574457,
+            "recall": 1.0,
+            "f1": 0.9999682657216904
+          },
+          "Command Injection": {
+            "precision": 1.0,
+            "recall": 0.9999176649787987,
+            "f1": 0.9999588307945657
+          }
+        },
+        "false_positive_rate": 0.0,
+        "confusion_matrix": [
+          [
+            94532,
+            0
+          ],
+          [
+            6,
+            72867
+          ]
+        ],
+        "support": {
+          "Normal": 94532,
+          "Command Injection": 72873
+        },
+        "roc_auc": 0.9999588316184241,
+        "pr_auc": 0.9999535062021792
+      },
+      "fold_macro_f1": [
+        1.0,
+        0.5,
+        0.9996850440799578,
+        0.5,
+        1.0
+      ],
+      "seconds": 11.66404676437378
+    },
+    {
+      "model": "baseline",
+      "config_id": 1,
+      "params": {
+        "n_estimators": 100,
+        "max_depth": 12,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "pooled_oof": {
+        "macro_precision": 0.9999682667287229,
+        "macro_recall": 0.9999588324893993,
+        "macro_f1": 0.999963548258128,
+        "per_class": {
+          "Normal": {
+            "precision": 0.9999365334574457,
+            "recall": 1.0,
+            "f1": 0.9999682657216904
+          },
+          "Command Injection": {
+            "precision": 1.0,
+            "recall": 0.9999176649787987,
+            "f1": 0.9999588307945657
+          }
+        },
+        "false_positive_rate": 0.0,
+        "confusion_matrix": [
+          [
+            94532,
+            0
+          ],
+          [
+            6,
+            72867
+          ]
+        ],
+        "support": {
+          "Normal": 94532,
+          "Command Injection": 72873
+        },
+        "roc_auc": 0.9999522322398472,
+        "pr_auc": 0.9999535062021792
+      },
+      "fold_macro_f1": [
+        1.0,
+        0.5,
+        0.9996850440799578,
+        0.5,
+        1.0
+      ],
+      "seconds": 6.894146680831909
+    },
+    {
+      "model": "baseline",
+      "config_id": 2,
+      "params": {
+        "n_estimators": 100,
+        "max_depth": 20,
+        "min_samples_leaf": 2,
+        "max_features": 0.5,
+        "class_weight": "balanced_subsample"
+      },
+      "pooled_oof": {
+        "macro_precision": 0.9999682667287229,
+        "macro_recall": 0.9999588324893993,
+        "macro_f1": 0.999963548258128,
+        "per_class": {
+          "Normal": {
+            "precision": 0.9999365334574457,
+            "recall": 1.0,
+            "f1": 0.9999682657216904
+          },
+          "Command Injection": {
+            "precision": 1.0,
+            "recall": 0.9999176649787987,
+            "f1": 0.9999588307945657
+          }
+        },
+        "false_positive_rate": 0.0,
+        "confusion_matrix": [
+          [
+            94532,
+            0
+          ],
+          [
+            6,
+            72867
+          ]
+        ],
+        "support": {
+          "Normal": 94532,
+          "Command Injection": 72873
+        },
+        "roc_auc": 0.9999587423434732,
+        "pr_auc": 0.9999535062021792
+      },
+      "fold_macro_f1": [
+        1.0,
+        0.5,
+        0.9996850440799578,
+        0.5,
+        1.0
+      ],
+      "seconds": 12.682698965072632
+    },
+    {
+      "model": "contextual",
+      "config_id": 0,
+      "params": {
+        "n_estimators": 100,
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "max_features": "sqrt",
+        "class_weight": "balanced_subsample"
+      },
+      "pooled_oof": {
+        "macro_precision": 0.9999862778730704,
+        "macro_recall": 0.9999894215715313,
+        "macro_f1": 0.999987849572199,
+        "per_class": {
+          "Normal": {
+            "precision": 1.0,
+            "recall": 0.9999788431430626,
+            "f1": 0.999989421459627
+          },
+          "Command Injection": {
+            "precision": 0.9999725557461406,
+            "recall": 1.0,
+            "f1": 0.999986277684771
+          }
+        },
+        "false_positive_rate": 2.115685693733339e-05,
+        "confusion_matrix": [
+          [
+            94530,
+            2
+          ],
+          [
+            0,
+            72873
+          ]
+        ],
+        "support": {
+          "Normal": 94532,
+          "Command Injection": 72873
+        },
+        "roc_auc": 1.0,
+        "pr_auc": 1.0
+      },
+      "fold_macro_f1": [
+        1.0,
+        0.5,
+        0.9998950599690215,
+        0.5,
+        1.0
+      ],
+      "seconds": 18.867477655410767
+    },
+    {
+      "model": "contextual",
+      "config_id": 1,
+      "params": {
+        "n_estimators": 100,
+        "max_depth": 12,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "pooled_oof": {
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "per_class": {
+          "Normal": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "Command Injection": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "false_positive_rate": 0.0,
+        "confusion_matrix": [
+          [
+            94532,
+            0
+          ],
+          [
+            0,
+            72873
+          ]
+        ],
+        "support": {
+          "Normal": 94532,
+          "Command Injection": 72873
+        },
+        "roc_auc": 1.0,
+        "pr_auc": 1.0
+      },
+      "fold_macro_f1": [
+        1.0,
+        0.5,
+        1.0,
+        0.5,
+        1.0
+      ],
+      "seconds": 14.709915399551392
+    },
+    {
+      "model": "contextual",
+      "config_id": 2,
+      "params": {
+        "n_estimators": 100,
+        "max_depth": 20,
+        "min_samples_leaf": 2,
+        "max_features": 0.5,
+        "class_weight": "balanced_subsample"
+      },
+      "pooled_oof": {
+        "macro_precision": 0.9999862778730704,
+        "macro_recall": 0.9999894215715313,
+        "macro_f1": 0.999987849572199,
+        "per_class": {
+          "Normal": {
+            "precision": 1.0,
+            "recall": 0.9999788431430626,
+            "f1": 0.999989421459627
+          },
+          "Command Injection": {
+            "precision": 0.9999725557461406,
+            "recall": 1.0,
+            "f1": 0.999986277684771
+          }
+        },
+        "false_positive_rate": 2.115685693733339e-05,
+        "confusion_matrix": [
+          [
+            94530,
+            2
+          ],
+          [
+            0,
+            72873
+          ]
+        ],
+        "support": {
+          "Normal": 94532,
+          "Command Injection": 72873
+        },
+        "roc_auc": 0.9999999982580496,
+        "pr_auc": 0.9999999977403767
+      },
+      "fold_macro_f1": [
+        1.0,
+        0.5,
+        0.9998950599690215,
+        0.5,
+        1.0
+      ],
+      "seconds": 33.789878129959106
+    }
+  ],
+  "selected": {
+    "baseline": {
+      "config_id": 0,
+      "params": {
+        "n_estimators": 100,
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "max_features": "sqrt",
+        "class_weight": "balanced_subsample"
+      },
+      "pooled_oof": {
+        "macro_precision": 0.9999682667287229,
+        "macro_recall": 0.9999588324893993,
+        "macro_f1": 0.999963548258128,
+        "per_class": {
+          "Normal": {
+            "precision": 0.9999365334574457,
+            "recall": 1.0,
+            "f1": 0.9999682657216904
+          },
+          "Command Injection": {
+            "precision": 1.0,
+            "recall": 0.9999176649787987,
+            "f1": 0.9999588307945657
+          }
+        },
+        "false_positive_rate": 0.0,
+        "confusion_matrix": [
+          [
+            94532,
+            0
+          ],
+          [
+            6,
+            72867
+          ]
+        ],
+        "support": {
+          "Normal": 94532,
+          "Command Injection": 72873
+        },
+        "roc_auc": 0.9999588316184241,
+        "pr_auc": 0.9999535062021792
+      },
+      "fold_macro_f1": [
+        1.0,
+        0.5,
+        0.9996850440799578,
+        0.5,
+        1.0
+      ]
+    },
+    "contextual": {
+      "config_id": 1,
+      "params": {
+        "n_estimators": 100,
+        "max_depth": 12,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "pooled_oof": {
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "per_class": {
+          "Normal": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "Command Injection": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "false_positive_rate": 0.0,
+        "confusion_matrix": [
+          [
+            94532,
+            0
+          ],
+          [
+            0,
+            72873
+          ]
+        ],
+        "support": {
+          "Normal": 94532,
+          "Command Injection": 72873
+        },
+        "roc_auc": 1.0,
+        "pr_auc": 1.0
+      },
+      "fold_macro_f1": [
+        1.0,
+        0.5,
+        1.0,
+        0.5,
+        1.0
+      ]
+    }
+  },
+  "feature_counts": {
+    "baseline": 7,
+    "contextual": 46
+  },
+  "models": {
+    "baseline": {
+      "path": "models/baseline/baseline_random_forest.joblib",
+      "training_seconds": 2.2261688709259033,
+      "latency": {
+        "single_median_ms": 4.828974500000527,
+        "single_p95_ms": 5.891548299997846,
+        "batch_per_event_ms": 0.0013061499999992066
+      }
+    },
+    "contextual": {
+      "path": "models/contextual/contextual_rf.joblib",
+      "training_seconds": 2.738942861557007,
+      "latency": {
+        "single_median_ms": 5.136437499999147,
+        "single_p95_ms": 5.789885199999389,
+        "batch_per_event_ms": 0.0014932047999991482
+      }
+    }
+  },
+  "dropped_constant_features": [
+    "frame_len",
+    "payload_len",
+    "mbtcp_len",
+    "unit_id",
+    "tcp_syn",
+    "tcp_ack",
+    "tcp_fin",
+    "tcp_rst",
+    "tcp_psh",
+    "is_known_fc",
+    "proto_id_valid",
+    "length_consistent",
+    "len_discrepancy",
+    "has_stacked_frames"
+  ],
+  "total_seconds": 124.50213408470154,
+  "supported_classes": {
+    "0": "Normal",
+    "1": "Command Injection"
+  }
+}

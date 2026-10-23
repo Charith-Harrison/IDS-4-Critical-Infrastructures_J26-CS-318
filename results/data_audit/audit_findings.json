@@ -1,0 +1,17 @@
+{
+  "captures_baseline": 6,
+  "captures_attack_reconstructed": 6,
+  "captures_without_any_response_packet": [
+    "atk-0"
+  ],
+  "length_manipulation_present_rows": 20,
+  "genuine_response_injection_labels_in_data": 0,
+  "label_status_counts": {
+    "dataset_normal": 247960,
+    "reconstructed_command_injection": 85250,
+    "attack_labelled_response_packet": 9486,
+    "ambiguous_write_matches_normal_profile": 204,
+    "unsupported_length_manipulation": 20
+  },
+  "cross_file_duplicate_pairs": 0
+}

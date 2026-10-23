@@ -1,0 +1,13 @@
+{
+  "BASELINE": [
+    "func_code",
+    "ref_num",
+    "word_cnt",
+    "bit_cnt",
+    "write_value"
+  ],
+  "PROTOCOL": [
+    "is_write",
+    "is_coil_op"
+  ]
+}

@@ -1,0 +1,61 @@
+name,group,leakage_risk
+func_code,BASELINE,MEDIUM-HIGH: function/register are label-construction fields
+ref_num,BASELINE,MEDIUM-HIGH: function/register are label-construction fields
+word_cnt,BASELINE,LOW
+bit_cnt,BASELINE,LOW
+write_value,BASELINE,MEDIUM-HIGH: function/register are label-construction fields
+frame_len,BASELINE,LOW
+payload_len,BASELINE,LOW
+mbtcp_len,BASELINE,LOW
+unit_id,BASELINE,LOW
+tcp_syn,BASELINE,LOW
+tcp_ack,BASELINE,LOW
+tcp_fin,BASELINE,LOW
+tcp_rst,BASELINE,LOW
+tcp_psh,BASELINE,LOW
+is_write,PROTOCOL,MEDIUM-HIGH: function/register are label-construction fields
+is_coil_op,PROTOCOL,MEDIUM-HIGH: function/register are label-construction fields
+is_known_fc,PROTOCOL,LOW
+proto_id_valid,PROTOCOL,LOW
+length_consistent,PROTOCOL,LOW
+len_discrepancy,PROTOCOL,LOW
+has_stacked_frames,PROTOCOL,LOW
+pair_found,PAIR,MEDIUM: capture-vantage artefact (e.g. one capture contains no responses) and exception replies appear only in attack captures
+pair_status_code,PAIR,MEDIUM: capture-vantage artefact (e.g. one capture contains no responses) and exception replies appear only in attack captures
+response_missing,PAIR,MEDIUM: capture-vantage artefact (e.g. one capture contains no responses) and exception replies appear only in attack captures
+unit_id_match,PAIR,LOW
+function_code_match,PAIR,LOW
+address_match,PAIR,LOW
+quantity_match,PAIR,LOW
+value_echo_match,PAIR,LOW
+response_delay,PAIR,MEDIUM: capture-vantage artefact (e.g. one capture contains no responses) and exception replies appear only in attack captures
+response_exception,PAIR,MEDIUM: capture-vantage artefact (e.g. one capture contains no responses) and exception replies appear only in attack captures
+response_length_valid,PAIR,LOW
+first_in_stream,SEQUENCE,LOW
+prev_fc,SEQUENCE,MEDIUM-HIGH: function/register are label-construction fields
+prev_is_write,SEQUENCE,LOW
+prev_ref,SEQUENCE,MEDIUM-HIGH: function/register are label-construction fields
+read_to_write,SEQUENCE,LOW
+write_to_write,SEQUENCE,LOW
+same_ref_as_prev,SEQUENCE,MEDIUM-HIGH: function/register are label-construction fields
+writes_prev_k,SEQUENCE,LOW
+reads_prev_k,SEQUENCE,LOW
+distinct_fc_prev_k,SEQUENCE,LOW
+distinct_ref_prev_k,SEQUENCE,MEDIUM-HIGH: function/register are label-construction fields
+same_ref_writes_prev_k,SEQUENCE,MEDIUM-HIGH: function/register are label-construction fields
+access_combo_unseen,ACCESS,"HIGH: label rule uses the same (function, register) evidence (circular-labelling risk)"
+access_combo_normal_count_log,ACCESS,"HIGH: label rule uses the same (function, register) evidence (circular-labelling risk)"
+access_write_unseen,ACCESS,"HIGH: label rule uses the same (function, register) evidence (circular-labelling risk)"
+prev_value_same_ref,VALUE,MEDIUM-HIGH: function/register are label-construction fields
+value_delta,VALUE,LOW
+value_changed,VALUE,LOW
+value_rate,VALUE,LOW
+value_outside_normal_range,VALUE,"HIGH: label rule uses the same (function, register) evidence (circular-labelling risk)"
+iat,RATE,"LOW-MEDIUM: brute-force bursts are fast; rate is context, not a label field"
+iat_mean_prev_k,RATE,"LOW-MEDIUM: brute-force bursts are fast; rate is context, not a label field"
+iat_min_prev_k,RATE,"LOW-MEDIUM: brute-force bursts are fast; rate is context, not a label field"
+events_last_1s,RATE,"LOW-MEDIUM: brute-force bursts are fast; rate is context, not a label field"
+events_last_10s,RATE,"LOW-MEDIUM: brute-force bursts are fast; rate is context, not a label field"
+writes_last_1s,RATE,"LOW-MEDIUM: brute-force bursts are fast; rate is context, not a label field"
+time_since_last_write,RATE,LOW
+time_since_last_read,RATE,LOW

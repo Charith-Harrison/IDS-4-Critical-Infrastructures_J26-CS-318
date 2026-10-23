@@ -1,0 +1,2234 @@
+{
+  "evaluation_partition": "development grouped OOF plus one-time capture-grouped held-out test",
+  "final_test_partition_used": true,
+  "final_test_partition_usage_note": "The reserved capture-grouped final test split was read once for this user-authorized final evaluation. Do not use it for model selection, feature changes, threshold tuning, or repeated evaluation.",
+  "leakage_prone_predictors": {
+    "direct_predictors_found": [],
+    "direct_predictors_excluded": [
+      "actual_class",
+      "attack_category",
+      "attack_sub_type",
+      "capture_filename",
+      "capture_id",
+      "class_id",
+      "class_name",
+      "dst_ip",
+      "dst_port",
+      "event_id",
+      "file_name",
+      "file_source",
+      "filename",
+      "frame_number",
+      "is_attack",
+      "label",
+      "label_status",
+      "mbtcp_trans_id",
+      "post_event_annotation",
+      "predicted_class",
+      "row_index",
+      "scenario_id",
+      "source_name",
+      "source_row",
+      "src_ip",
+      "src_port",
+      "target_class",
+      "timestamp"
+    ],
+    "model_feature_schemas": {
+      "baseline": [
+        "func_code",
+        "ref_num",
+        "word_cnt",
+        "bit_cnt",
+        "write_value",
+        "is_write",
+        "is_coil_op"
+      ],
+      "contextual": [
+        "func_code",
+        "ref_num",
+        "word_cnt",
+        "bit_cnt",
+        "write_value",
+        "is_write",
+        "is_coil_op",
+        "pair_found",
+        "pair_status_code",
+        "response_missing",
+        "unit_id_match",
+        "function_code_match",
+        "address_match",
+        "quantity_match",
+        "value_echo_match",
+        "response_delay",
+        "response_exception",
+        "response_length_valid",
+        "first_in_stream",
+        "prev_fc",
+        "prev_is_write",
+        "prev_ref",
+        "read_to_write",
+        "write_to_write",
+        "same_ref_as_prev",
+        "writes_prev_k",
+        "reads_prev_k",
+        "distinct_fc_prev_k",
+        "distinct_ref_prev_k",
+        "same_ref_writes_prev_k",
+        "access_combo_unseen",
+        "access_combo_normal_count_log",
+        "access_write_unseen",
+        "prev_value_same_ref",
+        "value_delta",
+        "value_changed",
+        "value_rate",
+        "value_outside_normal_range",
+        "iat",
+        "iat_mean_prev_k",
+        "iat_min_prev_k",
+        "events_last_1s",
+        "events_last_10s",
+        "writes_last_1s",
+        "time_since_last_write",
+        "time_since_last_read"
+      ]
+    }
+  },
+  "capture_leakage_check": {
+    "status": "PASSED",
+    "manifest_train_test_capture_overlap": [],
+    "cv_folds": [
+      {
+        "fold": 1,
+        "passed": true,
+        "overlap": []
+      },
+      {
+        "fold": 2,
+        "passed": true,
+        "overlap": []
+      },
+      {
+        "fold": 3,
+        "passed": true,
+        "overlap": []
+      },
+      {
+        "fold": 4,
+        "passed": true,
+        "overlap": []
+      },
+      {
+        "fold": 5,
+        "passed": true,
+        "overlap": []
+      }
+    ],
+    "message": "Capture leakage check: PASSED"
+  },
+  "main_capture_grouped_evaluation": {
+    "baseline": {
+      "records": 167405,
+      "accuracy": 0.9999641587766196,
+      "balanced_accuracy": 0.9999588324893993,
+      "precision": 1.0,
+      "recall": 0.9999176649787987,
+      "f1": 0.9999588307945657,
+      "macro_f1": 0.999963548258128,
+      "per_class": {
+        "Normal": {
+          "precision": 0.9999365334574457,
+          "recall": 1.0,
+          "f1": 0.9999682657216904,
+          "support": 94532
+        },
+        "Command Injection": {
+          "precision": 1.0,
+          "recall": 0.9999176649787987,
+          "f1": 0.9999588307945657,
+          "support": 72873
+        }
+      },
+      "confusion_matrix": [
+        [
+          94532,
+          0
+        ],
+        [
+          6,
+          72867
+        ]
+      ],
+      "false_positives": 0,
+      "false_negatives": 6,
+      "evaluation": "capture-grouped out-of-fold development predictions"
+    },
+    "contextual": {
+      "records": 167405,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "macro_f1": 1.0,
+      "per_class": {
+        "Normal": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 94532
+        },
+        "Command Injection": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 72873
+        }
+      },
+      "confusion_matrix": [
+        [
+          94532,
+          0
+        ],
+        [
+          0,
+          72873
+        ]
+      ],
+      "false_positives": 0,
+      "false_negatives": 0,
+      "evaluation": "capture-grouped out-of-fold development predictions"
+    }
+  },
+  "in_sample_training_evaluation": {
+    "baseline": {
+      "records": 167405,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "macro_f1": 1.0,
+      "per_class": {
+        "Normal": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 94532
+        },
+        "Command Injection": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 72873
+        }
+      },
+      "confusion_matrix": [
+        [
+          94532,
+          0
+        ],
+        [
+          0,
+          72873
+        ]
+      ],
+      "false_positives": 0,
+      "false_negatives": 0,
+      "evaluation": "in-sample predictions on the development training partition"
+    },
+    "contextual": {
+      "records": 167405,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "macro_f1": 1.0,
+      "per_class": {
+        "Normal": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 94532
+        },
+        "Command Injection": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 72873
+        }
+      },
+      "confusion_matrix": [
+        [
+          94532,
+          0
+        ],
+        [
+          0,
+          72873
+        ]
+      ],
+      "false_positives": 0,
+      "false_negatives": 0,
+      "evaluation": "in-sample predictions on the development training partition"
+    }
+  },
+  "final_test_evaluation": {
+    "baseline": {
+      "records": 41486,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "macro_f1": 1.0,
+      "per_class": {
+        "Normal": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 29109
+        },
+        "Command Injection": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 12377
+        }
+      },
+      "confusion_matrix": [
+        [
+          29109,
+          0
+        ],
+        [
+          0,
+          12377
+        ]
+      ],
+      "false_positives": 0,
+      "false_negatives": 0,
+      "evaluation": "one-time capture-grouped final held-out test evaluation"
+    },
+    "contextual": {
+      "records": 41486,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "macro_f1": 1.0,
+      "per_class": {
+        "Normal": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 29109
+        },
+        "Command Injection": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 12377
+        }
+      },
+      "confusion_matrix": [
+        [
+          29109,
+          0
+        ],
+        [
+          0,
+          12377
+        ]
+      ],
+      "false_positives": 0,
+      "false_negatives": 0,
+      "evaluation": "one-time capture-grouped final held-out test evaluation"
+    }
+  },
+  "final_test_capture_separation": {
+    "status": "PASSED",
+    "train_captures": [
+      "atk-0",
+      "atk-1",
+      "atk-4",
+      "atk-5",
+      "base-veth4edc015-normal-4",
+      "base-veth5bbeaa2-normal-13",
+      "base-veth5bbeaa2-normal-14",
+      "base-veth8bc3408-normal-4",
+      "base-vethd9e14c0-normal-4"
+    ],
+    "test_captures": [
+      "atk-2",
+      "atk-3",
+      "base-network-wide-normal-14"
+    ],
+    "overlap": [],
+    "message": "Capture leakage check: PASSED"
+  },
+  "final_test_pairing_statistics": {
+    "requests": 41608,
+    "responses": 34445,
+    "matched_pairs": 33254,
+    "exception_responses": 2134,
+    "missing_responses": 8354,
+    "out_of_order_pairs": 0,
+    "orphan_responses": 1191,
+    "requests_with_reused_transaction_key": 2981,
+    "pairing_level": "full (endpoint+port+transaction-id keyed, time ordered)"
+  },
+  "fc5_challenge_evaluation": {
+    "baseline": {
+      "records": 72934,
+      "accuracy": 0.9999177338415554,
+      "balanced_accuracy": 0.9999588324893993,
+      "precision": 1.0,
+      "recall": 0.9999176649787987,
+      "f1": 0.9999588307945657,
+      "macro_f1": 0.9765419153972829,
+      "per_class": {
+        "Normal": {
+          "precision": 0.9104477611940298,
+          "recall": 1.0,
+          "f1": 0.953125,
+          "support": 61
+        },
+        "Command Injection": {
+          "precision": 1.0,
+          "recall": 0.9999176649787987,
+          "f1": 0.9999588307945657,
+          "support": 72873
+        }
+      },
+      "confusion_matrix": [
+        [
+          61,
+          0
+        ],
+        [
+          6,
+          72867
+        ]
+      ],
+      "false_positives": 0,
+      "false_negatives": 6,
+      "warning": "FC5 challenge set contains limited normal FC5 samples; results should be interpreted cautiously."
+    },
+    "contextual": {
+      "records": 72934,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "macro_f1": 1.0,
+      "per_class": {
+        "Normal": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 61
+        },
+        "Command Injection": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 72873
+        }
+      },
+      "confusion_matrix": [
+        [
+          61,
+          0
+        ],
+        [
+          0,
+          72873
+        ]
+      ],
+      "false_positives": 0,
+      "false_negatives": 0,
+      "warning": "FC5 challenge set contains limited normal FC5 samples; results should be interpreted cautiously."
+    }
+  },
+  "final_test_fc5_challenge_evaluation": {
+    "baseline": {
+      "records": 12389,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "macro_f1": 1.0,
+      "per_class": {
+        "Normal": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 12
+        },
+        "Command Injection": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 12377
+        }
+      },
+      "confusion_matrix": [
+        [
+          12,
+          0
+        ],
+        [
+          0,
+          12377
+        ]
+      ],
+      "false_positives": 0,
+      "false_negatives": 0,
+      "warning": "FC5 challenge set contains limited normal FC5 samples; results should be interpreted cautiously."
+    },
+    "contextual": {
+      "records": 12389,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "macro_f1": 1.0,
+      "per_class": {
+        "Normal": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 12
+        },
+        "Command Injection": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 12377
+        }
+      },
+      "confusion_matrix": [
+        [
+          12,
+          0
+        ],
+        [
+          0,
+          12377
+        ]
+      ],
+      "false_positives": 0,
+      "false_negatives": 0,
+      "warning": "FC5 challenge set contains limited normal FC5 samples; results should be interpreted cautiously."
+    }
+  },
+  "function_code_label_distribution": [
+    {
+      "function_code": 1,
+      "normal_count": 37407,
+      "command_injection_count": 0,
+      "total_count": 37407,
+      "attack_rate": 0.0
+    },
+    {
+      "function_code": 2,
+      "normal_count": 18684,
+      "command_injection_count": 0,
+      "total_count": 18684,
+      "attack_rate": 0.0
+    },
+    {
+      "function_code": 3,
+      "normal_count": 19450,
+      "command_injection_count": 0,
+      "total_count": 19450,
+      "attack_rate": 0.0
+    },
+    {
+      "function_code": 4,
+      "normal_count": 18696,
+      "command_injection_count": 0,
+      "total_count": 18696,
+      "attack_rate": 0.0
+    },
+    {
+      "function_code": 5,
+      "normal_count": 61,
+      "command_injection_count": 72873,
+      "total_count": 72934,
+      "attack_rate": 0.9991636273891463
+    },
+    {
+      "function_code": 6,
+      "normal_count": 234,
+      "command_injection_count": 0,
+      "total_count": 234,
+      "attack_rate": 0.0
+    }
+  ],
+  "feature_importance_top_15": {
+    "baseline": [
+      {
+        "model": "baseline",
+        "rank": 1,
+        "feature": "ref_num",
+        "importance": 0.3359323140300004,
+        "top_15": true,
+        "training_rows": 167405
+      },
+      {
+        "model": "baseline",
+        "rank": 2,
+        "feature": "write_value",
+        "importance": 0.23750574122495657,
+        "top_15": true,
+        "training_rows": 167405
+      },
+      {
+        "model": "baseline",
+        "rank": 3,
+        "feature": "func_code",
+        "importance": 0.22509243626223122,
+        "top_15": true,
+        "training_rows": 167405
+      },
+      {
+        "model": "baseline",
+        "rank": 4,
+        "feature": "is_write",
+        "importance": 0.14809715357198713,
+        "top_15": true,
+        "training_rows": 167405
+      },
+      {
+        "model": "baseline",
+        "rank": 5,
+        "feature": "bit_cnt",
+        "importance": 0.033792261869358034,
+        "top_15": true,
+        "training_rows": 167405
+      },
+      {
+        "model": "baseline",
+        "rank": 6,
+        "feature": "is_coil_op",
+        "importance": 0.013869310266843668,
+        "top_15": true,
+        "training_rows": 167405
+      },
+      {
+        "model": "baseline",
+        "rank": 7,
+        "feature": "word_cnt",
+        "importance": 0.005710782774622975,
+        "top_15": true,
+        "training_rows": 167405
+      }
+    ],
+    "contextual": [
+      {
+        "model": "contextual",
+        "rank": 1,
+        "feature": "access_combo_unseen",
+        "importance": 0.13013282204352866,
+        "top_15": true,
+        "training_rows": 167405
+      },
+      {
+        "model": "contextual",
+        "rank": 2,
+        "feature": "access_combo_normal_count_log",
+        "importance": 0.13012652245176118,
+        "top_15": true,
+        "training_rows": 167405
+      },
+      {
+        "model": "contextual",
+        "rank": 3,
+        "feature": "access_write_unseen",
+        "importance": 0.09008444552956427,
+        "top_15": true,
+        "training_rows": 167405
+      },
+      {
+        "model": "contextual",
+        "rank": 4,
+        "feature": "write_to_write",
+        "importance": 0.08004756414490176,
+        "top_15": true,
+        "training_rows": 167405
+      },
+      {
+        "model": "contextual",
+        "rank": 5,
+        "feature": "writes_prev_k",
+        "importance": 0.06996746759930941,
+        "top_15": true,
+        "training_rows": 167405
+      },
+      {
+        "model": "contextual",
+        "rank": 6,
+        "feature": "prev_ref",
+        "importance": 0.06996207491925602,
+        "top_15": true,
+        "training_rows": 167405
+      },
+      {
+        "model": "contextual",
+        "rank": 7,
+        "feature": "same_ref_writes_prev_k",
+        "importance": 0.060314138190632395,
+        "top_15": true,
+        "training_rows": 167405
+      },
+      {
+        "model": "contextual",
+        "rank": 8,
+        "feature": "ref_num",
+        "importance": 0.060093063734011,
+        "top_15": true,
+        "training_rows": 167405
+      },
+      {
+        "model": "contextual",
+        "rank": 9,
+        "feature": "write_value",
+        "importance": 0.05030126435158806,
+        "top_15": true,
+        "training_rows": 167405
+      },
+      {
+        "model": "contextual",
+        "rank": 10,
+        "feature": "time_since_last_write",
+        "importance": 0.049895293141659025,
+        "top_15": true,
+        "training_rows": 167405
+      },
+      {
+        "model": "contextual",
+        "rank": 11,
+        "feature": "reads_prev_k",
+        "importance": 0.03997393903647305,
+        "top_15": true,
+        "training_rows": 167405
+      },
+      {
+        "model": "contextual",
+        "rank": 12,
+        "feature": "prev_value_same_ref",
+        "importance": 0.029973611053962415,
+        "top_15": true,
+        "training_rows": 167405
+      },
+      {
+        "model": "contextual",
+        "rank": 13,
+        "feature": "writes_last_1s",
+        "importance": 0.029899256387906983,
+        "top_15": true,
+        "training_rows": 167405
+      },
+      {
+        "model": "contextual",
+        "rank": 14,
+        "feature": "value_rate",
+        "importance": 0.019936197208556106,
+        "top_15": true,
+        "training_rows": 167405
+      },
+      {
+        "model": "contextual",
+        "rank": 15,
+        "feature": "value_changed",
+        "importance": 0.019887243214206016,
+        "top_15": true,
+        "training_rows": 167405
+      }
+    ]
+  },
+  "baseline_feature_names": [
+    "func_code",
+    "ref_num",
+    "word_cnt",
+    "bit_cnt",
+    "write_value",
+    "is_write",
+    "is_coil_op"
+  ],
+  "baseline_feature_class_profiles_development": [
+    {
+      "feature": "func_code",
+      "normal": {
+        "count": 94532,
+        "min": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "median": 2.0,
+        "p75": 3.0,
+        "p95": 4.0,
+        "max": 6.0,
+        "unique_values": 6
+      },
+      "command_injection": {
+        "count": 72873,
+        "min": 5.0,
+        "p05": 5.0,
+        "p25": 5.0,
+        "median": 5.0,
+        "p75": 5.0,
+        "p95": 5.0,
+        "max": 5.0,
+        "unique_values": 1
+      },
+      "normal_top_values": [
+        {
+          "value": 1.0,
+          "count": 37407
+        },
+        {
+          "value": 3.0,
+          "count": 19450
+        },
+        {
+          "value": 4.0,
+          "count": 18696
+        },
+        {
+          "value": 2.0,
+          "count": 18684
+        },
+        {
+          "value": 6.0,
+          "count": 234
+        },
+        {
+          "value": 5.0,
+          "count": 61
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 5.0,
+          "count": 72873
+        }
+      ],
+      "range_overlap": true,
+      "range_overlap_width": 0.0,
+      "normalized_range_overlap": 0.0,
+      "shared_exact_values_count": 1,
+      "shared_exact_values_preview": [
+        5.0
+      ]
+    },
+    {
+      "feature": "ref_num",
+      "normal": {
+        "count": 94532,
+        "min": 1.0,
+        "p05": 5.0,
+        "p25": 8.0,
+        "median": 8.0,
+        "p75": 14.0,
+        "p95": 35.0,
+        "max": 35.0,
+        "unique_values": 8
+      },
+      "command_injection": {
+        "count": 72873,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 1.0,
+        "max": 8.0,
+        "unique_values": 3
+      },
+      "normal_top_values": [
+        {
+          "value": 8.0,
+          "count": 41591
+        },
+        {
+          "value": 14.0,
+          "count": 13569
+        },
+        {
+          "value": 13.0,
+          "count": 13561
+        },
+        {
+          "value": 5.0,
+          "count": 10293
+        },
+        {
+          "value": 35.0,
+          "count": 5180
+        },
+        {
+          "value": 25.0,
+          "count": 5178
+        },
+        {
+          "value": 15.0,
+          "count": 5158
+        },
+        {
+          "value": 1.0,
+          "count": 2
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 0.0,
+          "count": 65555
+        },
+        {
+          "value": 1.0,
+          "count": 7312
+        },
+        {
+          "value": 8.0,
+          "count": 6
+        }
+      ],
+      "range_overlap": true,
+      "range_overlap_width": 7.0,
+      "normalized_range_overlap": 0.2,
+      "shared_exact_values_count": 2,
+      "shared_exact_values_preview": [
+        1.0,
+        8.0
+      ]
+    },
+    {
+      "feature": "word_cnt",
+      "normal": {
+        "count": 94532,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 2.0,
+        "unique_values": 3
+      },
+      "command_injection": {
+        "count": 72873,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "max": 0.0,
+        "unique_values": 1
+      },
+      "normal_top_values": [
+        {
+          "value": 0.0,
+          "count": 56386
+        },
+        {
+          "value": 1.0,
+          "count": 38145
+        },
+        {
+          "value": 2.0,
+          "count": 1
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 0.0,
+          "count": 72873
+        }
+      ],
+      "range_overlap": true,
+      "range_overlap_width": 0.0,
+      "normalized_range_overlap": 0.0,
+      "shared_exact_values_count": 1,
+      "shared_exact_values_preview": [
+        0.0
+      ]
+    },
+    {
+      "feature": "bit_cnt",
+      "normal": {
+        "count": 94532,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 20.0,
+        "unique_values": 3
+      },
+      "command_injection": {
+        "count": 72873,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "max": 0.0,
+        "unique_values": 1
+      },
+      "normal_top_values": [
+        {
+          "value": 1.0,
+          "count": 56089
+        },
+        {
+          "value": 0.0,
+          "count": 38441
+        },
+        {
+          "value": 20.0,
+          "count": 2
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 0.0,
+          "count": 72873
+        }
+      ],
+      "range_overlap": true,
+      "range_overlap_width": 0.0,
+      "normalized_range_overlap": 0.0,
+      "shared_exact_values_count": 1,
+      "shared_exact_values_preview": [
+        0.0
+      ]
+    },
+    {
+      "feature": "write_value",
+      "normal": {
+        "count": 94532,
+        "min": -1.0,
+        "p05": -1.0,
+        "p25": -1.0,
+        "median": -1.0,
+        "p75": -1.0,
+        "p95": -1.0,
+        "max": 1.0,
+        "unique_values": 3
+      },
+      "command_injection": {
+        "count": 72873,
+        "min": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "unique_values": 1
+      },
+      "normal_top_values": [
+        {
+          "value": -1.0,
+          "count": 94237
+        },
+        {
+          "value": 0.0,
+          "count": 234
+        },
+        {
+          "value": 1.0,
+          "count": 61
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 1.0,
+          "count": 72873
+        }
+      ],
+      "range_overlap": true,
+      "range_overlap_width": 0.0,
+      "normalized_range_overlap": 0.0,
+      "shared_exact_values_count": 1,
+      "shared_exact_values_preview": [
+        1.0
+      ]
+    },
+    {
+      "feature": "is_write",
+      "normal": {
+        "count": 94532,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "max": 1.0,
+        "unique_values": 2
+      },
+      "command_injection": {
+        "count": 72873,
+        "min": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "unique_values": 1
+      },
+      "normal_top_values": [
+        {
+          "value": 0.0,
+          "count": 94237
+        },
+        {
+          "value": 1.0,
+          "count": 295
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 1.0,
+          "count": 72873
+        }
+      ],
+      "range_overlap": true,
+      "range_overlap_width": 0.0,
+      "normalized_range_overlap": 0.0,
+      "shared_exact_values_count": 1,
+      "shared_exact_values_preview": [
+        1.0
+      ]
+    },
+    {
+      "feature": "is_coil_op",
+      "normal": {
+        "count": 94532,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "unique_values": 2
+      },
+      "command_injection": {
+        "count": 72873,
+        "min": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "unique_values": 1
+      },
+      "normal_top_values": [
+        {
+          "value": 1.0,
+          "count": 56152
+        },
+        {
+          "value": 0.0,
+          "count": 38380
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 1.0,
+          "count": 72873
+        }
+      ],
+      "range_overlap": true,
+      "range_overlap_width": 0.0,
+      "normalized_range_overlap": 0.0,
+      "shared_exact_values_count": 1,
+      "shared_exact_values_preview": [
+        1.0
+      ]
+    }
+  ],
+  "baseline_feature_class_profiles_heldout_test": [
+    {
+      "feature": "func_code",
+      "normal": {
+        "count": 29109,
+        "min": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "median": 2.0,
+        "p75": 3.0,
+        "p95": 4.0,
+        "max": 6.0,
+        "unique_values": 6
+      },
+      "command_injection": {
+        "count": 12377,
+        "min": 5.0,
+        "p05": 5.0,
+        "p25": 5.0,
+        "median": 5.0,
+        "p75": 5.0,
+        "p95": 5.0,
+        "max": 5.0,
+        "unique_values": 1
+      },
+      "normal_top_values": [
+        {
+          "value": 1.0,
+          "count": 11745
+        },
+        {
+          "value": 4.0,
+          "count": 5925
+        },
+        {
+          "value": 2.0,
+          "count": 5824
+        },
+        {
+          "value": 3.0,
+          "count": 5595
+        },
+        {
+          "value": 5.0,
+          "count": 12
+        },
+        {
+          "value": 6.0,
+          "count": 8
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 5.0,
+          "count": 12377
+        }
+      ],
+      "range_overlap": true,
+      "range_overlap_width": 0.0,
+      "normalized_range_overlap": 0.0,
+      "shared_exact_values_count": 1,
+      "shared_exact_values_preview": [
+        5.0
+      ]
+    },
+    {
+      "feature": "ref_num",
+      "normal": {
+        "count": 29109,
+        "min": 1.0,
+        "p05": 5.0,
+        "p25": 8.0,
+        "median": 8.0,
+        "p75": 15.0,
+        "p95": 35.0,
+        "max": 35.0,
+        "unique_values": 8
+      },
+      "command_injection": {
+        "count": 12377,
+        "min": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 8.0,
+        "unique_values": 2
+      },
+      "normal_top_values": [
+        {
+          "value": 8.0,
+          "count": 9911
+        },
+        {
+          "value": 5.0,
+          "count": 4950
+        },
+        {
+          "value": 14.0,
+          "count": 3441
+        },
+        {
+          "value": 13.0,
+          "count": 3328
+        },
+        {
+          "value": 25.0,
+          "count": 2499
+        },
+        {
+          "value": 35.0,
+          "count": 2491
+        },
+        {
+          "value": 15.0,
+          "count": 2475
+        },
+        {
+          "value": 1.0,
+          "count": 14
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 1.0,
+          "count": 12375
+        },
+        {
+          "value": 8.0,
+          "count": 2
+        }
+      ],
+      "range_overlap": true,
+      "range_overlap_width": 7.0,
+      "normalized_range_overlap": 0.20588235294117646,
+      "shared_exact_values_count": 2,
+      "shared_exact_values_preview": [
+        1.0,
+        8.0
+      ]
+    },
+    {
+      "feature": "word_cnt",
+      "normal": {
+        "count": 29109,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "unique_values": 2
+      },
+      "command_injection": {
+        "count": 12377,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "max": 0.0,
+        "unique_values": 1
+      },
+      "normal_top_values": [
+        {
+          "value": 0.0,
+          "count": 17589
+        },
+        {
+          "value": 1.0,
+          "count": 11520
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 0.0,
+          "count": 12377
+        }
+      ],
+      "range_overlap": true,
+      "range_overlap_width": 0.0,
+      "normalized_range_overlap": 0.0,
+      "shared_exact_values_count": 1,
+      "shared_exact_values_preview": [
+        0.0
+      ]
+    },
+    {
+      "feature": "bit_cnt",
+      "normal": {
+        "count": 29109,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 20.0,
+        "unique_values": 3
+      },
+      "command_injection": {
+        "count": 12377,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "max": 0.0,
+        "unique_values": 1
+      },
+      "normal_top_values": [
+        {
+          "value": 1.0,
+          "count": 17555
+        },
+        {
+          "value": 0.0,
+          "count": 11540
+        },
+        {
+          "value": 20.0,
+          "count": 14
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 0.0,
+          "count": 12377
+        }
+      ],
+      "range_overlap": true,
+      "range_overlap_width": 0.0,
+      "normalized_range_overlap": 0.0,
+      "shared_exact_values_count": 1,
+      "shared_exact_values_preview": [
+        0.0
+      ]
+    },
+    {
+      "feature": "write_value",
+      "normal": {
+        "count": 29109,
+        "min": -1.0,
+        "p05": -1.0,
+        "p25": -1.0,
+        "median": -1.0,
+        "p75": -1.0,
+        "p95": -1.0,
+        "max": 1.0,
+        "unique_values": 3
+      },
+      "command_injection": {
+        "count": 12377,
+        "min": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "unique_values": 1
+      },
+      "normal_top_values": [
+        {
+          "value": -1.0,
+          "count": 29089
+        },
+        {
+          "value": 1.0,
+          "count": 12
+        },
+        {
+          "value": 0.0,
+          "count": 8
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 1.0,
+          "count": 12377
+        }
+      ],
+      "range_overlap": true,
+      "range_overlap_width": 0.0,
+      "normalized_range_overlap": 0.0,
+      "shared_exact_values_count": 1,
+      "shared_exact_values_preview": [
+        1.0
+      ]
+    },
+    {
+      "feature": "is_write",
+      "normal": {
+        "count": 29109,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "max": 1.0,
+        "unique_values": 2
+      },
+      "command_injection": {
+        "count": 12377,
+        "min": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "unique_values": 1
+      },
+      "normal_top_values": [
+        {
+          "value": 0.0,
+          "count": 29089
+        },
+        {
+          "value": 1.0,
+          "count": 20
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 1.0,
+          "count": 12377
+        }
+      ],
+      "range_overlap": true,
+      "range_overlap_width": 0.0,
+      "normalized_range_overlap": 0.0,
+      "shared_exact_values_count": 1,
+      "shared_exact_values_preview": [
+        1.0
+      ]
+    },
+    {
+      "feature": "is_coil_op",
+      "normal": {
+        "count": 29109,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "unique_values": 2
+      },
+      "command_injection": {
+        "count": 12377,
+        "min": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "unique_values": 1
+      },
+      "normal_top_values": [
+        {
+          "value": 1.0,
+          "count": 17581
+        },
+        {
+          "value": 0.0,
+          "count": 11528
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 1.0,
+          "count": 12377
+        }
+      ],
+      "range_overlap": true,
+      "range_overlap_width": 0.0,
+      "normalized_range_overlap": 0.0,
+      "shared_exact_values_count": 1,
+      "shared_exact_values_preview": [
+        1.0
+      ]
+    }
+  ],
+  "baseline_feature_class_profiles_fc5_heldout_test": [
+    {
+      "feature": "func_code",
+      "normal": {
+        "count": 12,
+        "min": 5.0,
+        "p05": 5.0,
+        "p25": 5.0,
+        "median": 5.0,
+        "p75": 5.0,
+        "p95": 5.0,
+        "max": 5.0,
+        "unique_values": 1
+      },
+      "command_injection": {
+        "count": 12377,
+        "min": 5.0,
+        "p05": 5.0,
+        "p25": 5.0,
+        "median": 5.0,
+        "p75": 5.0,
+        "p95": 5.0,
+        "max": 5.0,
+        "unique_values": 1
+      },
+      "normal_top_values": [
+        {
+          "value": 5.0,
+          "count": 12
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 5.0,
+          "count": 12377
+        }
+      ],
+      "range_overlap": true,
+      "range_overlap_width": 0.0,
+      "normalized_range_overlap": 1.0,
+      "shared_exact_values_count": 1,
+      "shared_exact_values_preview": [
+        5.0
+      ]
+    },
+    {
+      "feature": "ref_num",
+      "normal": {
+        "count": 12,
+        "min": 13.0,
+        "p05": 13.0,
+        "p25": 13.0,
+        "median": 14.0,
+        "p75": 14.0,
+        "p95": 19.499999999999993,
+        "max": 25.0,
+        "unique_values": 4
+      },
+      "command_injection": {
+        "count": 12377,
+        "min": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 8.0,
+        "unique_values": 2
+      },
+      "normal_top_values": [
+        {
+          "value": 13.0,
+          "count": 5
+        },
+        {
+          "value": 14.0,
+          "count": 5
+        },
+        {
+          "value": 15.0,
+          "count": 1
+        },
+        {
+          "value": 25.0,
+          "count": 1
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 1.0,
+          "count": 12375
+        },
+        {
+          "value": 8.0,
+          "count": 2
+        }
+      ],
+      "range_overlap": false,
+      "range_overlap_width": 0.0,
+      "normalized_range_overlap": 0.0,
+      "shared_exact_values_count": 0,
+      "shared_exact_values_preview": []
+    },
+    {
+      "feature": "word_cnt",
+      "normal": {
+        "count": 12,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "max": 0.0,
+        "unique_values": 1
+      },
+      "command_injection": {
+        "count": 12377,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "max": 0.0,
+        "unique_values": 1
+      },
+      "normal_top_values": [
+        {
+          "value": 0.0,
+          "count": 12
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 0.0,
+          "count": 12377
+        }
+      ],
+      "range_overlap": true,
+      "range_overlap_width": 0.0,
+      "normalized_range_overlap": 1.0,
+      "shared_exact_values_count": 1,
+      "shared_exact_values_preview": [
+        0.0
+      ]
+    },
+    {
+      "feature": "bit_cnt",
+      "normal": {
+        "count": 12,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "max": 0.0,
+        "unique_values": 1
+      },
+      "command_injection": {
+        "count": 12377,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "max": 0.0,
+        "unique_values": 1
+      },
+      "normal_top_values": [
+        {
+          "value": 0.0,
+          "count": 12
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 0.0,
+          "count": 12377
+        }
+      ],
+      "range_overlap": true,
+      "range_overlap_width": 0.0,
+      "normalized_range_overlap": 1.0,
+      "shared_exact_values_count": 1,
+      "shared_exact_values_preview": [
+        0.0
+      ]
+    },
+    {
+      "feature": "write_value",
+      "normal": {
+        "count": 12,
+        "min": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "unique_values": 1
+      },
+      "command_injection": {
+        "count": 12377,
+        "min": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "unique_values": 1
+      },
+      "normal_top_values": [
+        {
+          "value": 1.0,
+          "count": 12
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 1.0,
+          "count": 12377
+        }
+      ],
+      "range_overlap": true,
+      "range_overlap_width": 0.0,
+      "normalized_range_overlap": 1.0,
+      "shared_exact_values_count": 1,
+      "shared_exact_values_preview": [
+        1.0
+      ]
+    },
+    {
+      "feature": "is_write",
+      "normal": {
+        "count": 12,
+        "min": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "unique_values": 1
+      },
+      "command_injection": {
+        "count": 12377,
+        "min": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "unique_values": 1
+      },
+      "normal_top_values": [
+        {
+          "value": 1.0,
+          "count": 12
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 1.0,
+          "count": 12377
+        }
+      ],
+      "range_overlap": true,
+      "range_overlap_width": 0.0,
+      "normalized_range_overlap": 1.0,
+      "shared_exact_values_count": 1,
+      "shared_exact_values_preview": [
+        1.0
+      ]
+    },
+    {
+      "feature": "is_coil_op",
+      "normal": {
+        "count": 12,
+        "min": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "unique_values": 1
+      },
+      "command_injection": {
+        "count": 12377,
+        "min": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "unique_values": 1
+      },
+      "normal_top_values": [
+        {
+          "value": 1.0,
+          "count": 12
+        }
+      ],
+      "command_injection_top_values": [
+        {
+          "value": 1.0,
+          "count": 12377
+        }
+      ],
+      "range_overlap": true,
+      "range_overlap_width": 0.0,
+      "normalized_range_overlap": 1.0,
+      "shared_exact_values_count": 1,
+      "shared_exact_values_preview": [
+        1.0
+      ]
+    }
+  ],
+  "baseline_single_feature_grouped_oof": [
+    {
+      "feature": "func_code",
+      "records": 167405,
+      "accuracy": 0.9996356142289656,
+      "balanced_accuracy": 0.9996773579317056,
+      "precision": 0.9991636273891463,
+      "recall": 1.0,
+      "f1": 0.9995816387416242,
+      "macro_f1": 0.9996294462709142,
+      "per_class": {
+        "Normal": {
+          "precision": 1.0,
+          "recall": 0.9993547158634113,
+          "f1": 0.9996772538002042,
+          "support": 94532
+        },
+        "Command Injection": {
+          "precision": 0.9991636273891463,
+          "recall": 1.0,
+          "f1": 0.9995816387416242,
+          "support": 72873
+        }
+      },
+      "confusion_matrix": [
+        [
+          94471,
+          61
+        ],
+        [
+          0,
+          72873
+        ]
+      ],
+      "false_positives": 61,
+      "false_negatives": 0
+    },
+    {
+      "feature": "ref_num",
+      "records": 167405,
+      "accuracy": 0.9999522117021594,
+      "balanced_accuracy": 0.9999482540609307,
+      "precision": 0.9999725534863934,
+      "recall": 0.9999176649787987,
+      "f1": 0.9999451084793677,
+      "macro_f1": 0.9999513978303496,
+      "per_class": {
+        "Normal": {
+          "precision": 0.99993653211475,
+          "recall": 0.9999788431430626,
+          "f1": 0.9999576871813316,
+          "support": 94532
+        },
+        "Command Injection": {
+          "precision": 0.9999725534863934,
+          "recall": 0.9999176649787987,
+          "f1": 0.9999451084793677,
+          "support": 72873
+        }
+      },
+      "confusion_matrix": [
+        [
+          94530,
+          2
+        ],
+        [
+          6,
+          72867
+        ]
+      ],
+      "false_positives": 2,
+      "false_negatives": 6
+    },
+    {
+      "feature": "word_cnt",
+      "records": 167405,
+      "accuracy": 0.6631761297452287,
+      "balanced_accuracy": 0.7017623661828799,
+      "precision": 0.5637750562823478,
+      "recall": 1.0,
+      "f1": 0.7210436744305702,
+      "macro_f1": 0.6480299395382022,
+      "per_class": {
+        "Normal": {
+          "precision": 1.0,
+          "recall": 0.40352473236575975,
+          "f1": 0.5750162046458343,
+          "support": 94532
+        },
+        "Command Injection": {
+          "precision": 0.5637750562823478,
+          "recall": 1.0,
+          "f1": 0.7210436744305702,
+          "support": 72873
+        }
+      },
+      "confusion_matrix": [
+        [
+          38146,
+          56386
+        ],
+        [
+          0,
+          72873
+        ]
+      ],
+      "false_positives": 56386,
+      "false_negatives": 0
+    },
+    {
+      "feature": "bit_cnt",
+      "records": 167405,
+      "accuracy": 0.7703712553388489,
+      "balanced_accuracy": 0.7966773156179918,
+      "precision": 0.6546615879404208,
+      "recall": 1.0,
+      "f1": 0.7912936309294358,
+      "macro_f1": 0.7680401418491347,
+      "per_class": {
+        "Normal": {
+          "precision": 1.0,
+          "recall": 0.5933546312359835,
+          "f1": 0.7447866527688335,
+          "support": 94532
+        },
+        "Command Injection": {
+          "precision": 0.6546615879404208,
+          "recall": 1.0,
+          "f1": 0.7912936309294358,
+          "support": 72873
+        }
+      },
+      "confusion_matrix": [
+        [
+          56091,
+          38441
+        ],
+        [
+          0,
+          72873
+        ]
+      ],
+      "false_positives": 38441,
+      "false_negatives": 0
+    },
+    {
+      "feature": "write_value",
+      "records": 167405,
+      "accuracy": 0.9996356142289656,
+      "balanced_accuracy": 0.9996773579317056,
+      "precision": 0.9991636273891463,
+      "recall": 1.0,
+      "f1": 0.9995816387416242,
+      "macro_f1": 0.9996294462709142,
+      "per_class": {
+        "Normal": {
+          "precision": 1.0,
+          "recall": 0.9993547158634113,
+          "f1": 0.9996772538002042,
+          "support": 94532
+        },
+        "Command Injection": {
+          "precision": 0.9991636273891463,
+          "recall": 1.0,
+          "f1": 0.9995816387416242,
+          "support": 72873
+        }
+      },
+      "confusion_matrix": [
+        [
+          94471,
+          61
+        ],
+        [
+          0,
+          72873
+        ]
+      ],
+      "false_positives": 61,
+      "false_negatives": 0
+    },
+    {
+      "feature": "is_write",
+      "records": 167405,
+      "accuracy": 0.9982378065171291,
+      "balanced_accuracy": 0.9984396818008716,
+      "precision": 0.9959681828121584,
+      "recall": 1.0,
+      "f1": 0.997980019309646,
+      "macro_f1": 0.9982086313564795,
+      "per_class": {
+        "Normal": {
+          "precision": 1.0,
+          "recall": 0.9968793636017433,
+          "f1": 0.9984372434033131,
+          "support": 94532
+        },
+        "Command Injection": {
+          "precision": 0.9959681828121584,
+          "recall": 1.0,
+          "f1": 0.997980019309646,
+          "support": 72873
+        }
+      },
+      "confusion_matrix": [
+        [
+          94237,
+          295
+        ],
+        [
+          0,
+          72873
+        ]
+      ],
+      "false_positives": 295,
+      "false_negatives": 0
+    },
+    {
+      "feature": "is_coil_op",
+      "records": 167405,
+      "accuracy": 0.6645739374570652,
+      "balanced_accuracy": 0.7030000423137139,
+      "precision": 0.5647975198604922,
+      "recall": 1.0,
+      "f1": 0.7218793648277844,
+      "macro_f1": 0.6497021718806071,
+      "per_class": {
+        "Normal": {
+          "precision": 1.0,
+          "recall": 0.40600008462742776,
+          "f1": 0.5775249789334297,
+          "support": 94532
+        },
+        "Command Injection": {
+          "precision": 0.5647975198604922,
+          "recall": 1.0,
+          "f1": 0.7218793648277844,
+          "support": 72873
+        }
+      },
+      "confusion_matrix": [
+        [
+          38380,
+          56152
+        ],
+        [
+          0,
+          72873
+        ]
+      ],
+      "false_positives": 56152,
+      "false_negatives": 0
+    }
+  ],
+  "label_rule_circularity_warning": {
+    "features": [
+      "access_combo_unseen",
+      "access_combo_normal_count_log",
+      "access_write_unseen"
+    ],
+    "interpretation": "These engineered access-profile features are not raw label or identifier columns, but are closely related to the function/register novelty rule used to reconstruct Command Injection labels. Treat performance as partly circular; the access-group ablation is diagnostic, not proof of independent attack generalization."
+  },
+  "ablation_results": [
+    {
+      "experiment": "Full contextual",
+      "excluded_groups": "",
+      "records": 167405,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "macro_f1": 1.0,
+      "false_positives": 0,
+      "false_negatives": 0
+    },
+    {
+      "experiment": "Without sequence",
+      "excluded_groups": "SEQUENCE",
+      "records": 167405,
+      "accuracy": 0.9999940264627699,
+      "balanced_accuracy": 0.9999947107857656,
+      "precision": 0.999986277684771,
+      "recall": 1.0,
+      "f1": 0.9999931387953097,
+      "macro_f1": 0.9999939247765497,
+      "false_positives": 1,
+      "false_negatives": 0
+    },
+    {
+      "experiment": "Without request-response/pair",
+      "excluded_groups": "PAIR",
+      "records": 167405,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "macro_f1": 1.0,
+      "false_positives": 0,
+      "false_negatives": 0
+    },
+    {
+      "experiment": "Without access/register context",
+      "excluded_groups": "ACCESS",
+      "records": 167405,
+      "accuracy": 0.9999462381649293,
+      "balanced_accuracy": 0.9999382487340991,
+      "precision": 1.0,
+      "recall": 0.9998764974681981,
+      "f1": 0.9999382449206448,
+      "macro_f1": 0.9999453221292334,
+      "false_positives": 0,
+      "false_negatives": 9
+    },
+    {
+      "experiment": "Without value transitions",
+      "excluded_groups": "VALUE",
+      "records": 167405,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "macro_f1": 1.0,
+      "false_positives": 0,
+      "false_negatives": 0
+    }
+  ],
+  "label_limitations": {
+    "observed_attack_dataset_labels": [
+      {
+        "attack_sub_type": "Coil_Brute_Force",
+        "is_attack": 1,
+        "records": 94940
+      },
+      {
+        "attack_sub_type": "Length_Manipulation",
+        "is_attack": 1,
+        "records": 20
+      },
+      {
+        "attack_sub_type": "Normal",
+        "is_attack": 0,
+        "records": 97960
+      }
+    ],
+    "supported_classes": {
+      "0": "Normal",
+      "1": "Command Injection"
+    },
+    "response_injection_ground_truth_available": false,
+    "limitation": "The supplied data does not provide independently verified, separate Command Injection and Response Injection labels. Attack-labelled response packets are not evidence of forged responses. A defensible mapping or additional labelled data is required before claiming three-class detection."
+  }
+}

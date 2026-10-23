@@ -1,0 +1,37 @@
+{
+  "model": "contextual",
+  "model_version": "rp3-progress70-rf-0.1",
+  "feature_schema_version": "fs-1.0",
+  "trained_on": "data/splits/train.parquet (capture-grouped 80% development partition)",
+  "test_partition_used": false,
+  "training_rows": 167405,
+  "classes": [
+    0,
+    1
+  ],
+  "n_features": 46,
+  "dropped_constant_features": [
+    "frame_len",
+    "payload_len",
+    "mbtcp_len",
+    "unit_id",
+    "tcp_syn",
+    "tcp_ack",
+    "tcp_fin",
+    "tcp_rst",
+    "tcp_psh",
+    "is_known_fc",
+    "proto_id_valid",
+    "length_consistent",
+    "len_discrepancy",
+    "has_stacked_frames"
+  ],
+  "random_state": 42,
+  "training_seconds": 2.738942861557007,
+  "validation_inference_latency": {
+    "single_median_ms": 5.136437499999147,
+    "single_p95_ms": 5.789885199999389,
+    "batch_per_event_ms": 0.0014932047999991482
+  },
+  "limitation": "The current progress model supports Normal and Command Injection only. Verified response-injection training examples are unavailable in the supplied datasets, so final three-class implementation remains pending."
+}

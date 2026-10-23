@@ -1,0 +1,52 @@
+# Python environments, bytecode, and packaging
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Test, lint, and coverage outputs
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.ipynb_checkpoints/
+
+# Local secrets (keep shareable examples)
+.env
+.env.*
+!.env.example
+!.env.sample
+.streamlit/secrets.toml
+
+# Local datasets and generated training/validation data
+# Keep JSON manifests and small reports available for version control.
+/data/raw/*
+!/data/raw/.gitkeep
+/data/processed/*.parquet
+/data/splits/*
+!/data/splits/.gitkeep
+/data/validation/*
+!/data/validation/.gitkeep
+/data/manifests/*_record_ids.csv
+
+# Trained model binaries (keep model metadata and documentation)
+*.joblib
+*.pkl
+*.pickle
+
+# Machine-specific editor files, logs, and OS metadata
+.idea/
+.vscode/*.local.json
+*.code-workspace
+*.log
+.DS_Store
+Thumbs.db
+Desktop.ini
+~$*

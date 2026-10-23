@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-header">
+    <div class="page-title-group">
+        <h2>Stage C: Model Training &amp; Persistence</h2>
+    </div>
+    <div class="page-actions">
+        <button id="btnTrainModel" class="btn btn-primary" onclick="triggerTraining()">
+            <span class="btn-icon">▶</span> Train XGBoost Model
+        </button>
+        <button id="btnLoadModel" class="btn btn-secondary" onclick="triggerLoadModel()">
+            <span class="btn-icon">📁</span> Load Saved Model
+        </button>
+    </div>
+</div>
+
+<div id="statusAlert" class="alert-box" style="display: none;"></div>
+
+{% if error_message %}
+<div class="alert-box alert-error">
+    {{ error_message }}
+</div>
+{% endif %}
+
+<!-- Model Training Status & Metadata Card -->
+<div class="card" id="cardModelStatus">
+    <div class="card-header">
+        <h3>Model State &amp; Provenance Metadata</h3>
+    </div>
+    <div class="card-body">
+        {% if saved_model_info %}
+        <div class="metrics-grid" style="grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));">
+            <div class="metric-card">
+                <div class="metric-label">Model Name</div>
+                <div class="metric-value" style="font-size: 1.15rem;" id="metaModelName">{{ saved_model_info.model_name | default('XGBClassifier') }}</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Status</div>
+                <div class="metric-value text-success" style="font-size: 1.15rem;" id="metaStatus">{{ saved_model_info.status | default('Serialized & Ready') }}</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Training Samples</div>
+                <div class="metric-value" style="font-size: 1.15rem;" id="metaSampleCount">{{ saved_model_info.sample_count | default('-') }}</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Features</div>
+                <div class="metric-value" style="font-size: 1.15rem;" id="metaFeatureCount">{{ saved_model_info.feature_count | default(10) }}</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Duration</div>
+                <div class="metric-value" style="font-size: 1.15rem;" id="metaDuration">{{ saved_model_info.duration_seconds }} s</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Boosting Rounds</div>
+                <div class="metric-value" style="font-size: 1.15rem;" id="metaRounds">{{ saved_model_info.boosting_rounds | default(100) }}</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Version</div>
+                <div class="metric-value" style="font-size: 1.15rem;" id="metaVersion">{{ saved_model_info.version | default('v1.0') }}</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">scale_pos_weight</div>
+                <div class="metric-value" style="font-size: 1.15rem;" id="metaScaleWeight">{{ saved_model_info.scale_pos_weight }}</div>
+            </div>
+        </div>
+        {% else %}
+        <div class="empty-state" id="emptyModelState">
+            <div class="empty-state-icon">🤖</div>
+            <p>No trained model detected. Click <strong>Train XGBoost Model</strong> above to train on the 70% partition, or <strong>Load Saved Model</strong> if weights already exist.</p>
+        </div>
+        <div class="metrics-grid" id="dynamicModelMetaGrid" style="display: none; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));">
+            <div class="metric-card"><div class="metric-label">Model Name</div><div class="metric-value" style="font-size: 1.15rem;" id="metaModelName">XGBClassifier</div></div>
+            <div class="metric-card"><div class="metric-label">Status</div><div class="metric-value text-success" style="font-size: 1.15rem;" id="metaStatus">Trained &amp; Ready</div></div>
+            <div class="metric-card"><div class="metric-label">Training Samples</div><div class="metric-value" style="font-size: 1.15rem;" id="metaSampleCount">-</div></div>
+            <div class="metric-card"><div class="metric-label">Features</div><div class="metric-value" style="font-size: 1.15rem;" id="metaFeatureCount">10</div></div>
+            <div class="metric-card"><div class="metric-label">Duration</div><div class="metric-value" style="font-size: 1.15rem;" id="metaDuration">-</div></div>
+            <div class="metric-card"><div class="metric-label">Boosting Rounds</div><div class="metric-value" style="font-size: 1.15rem;" id="metaRounds">100</div></div>
+            <div class="metric-card"><div class="metric-label">Version</div><div class="metric-value" style="font-size: 1.15rem;" id="metaVersion">-</div></div>
+            <div class="metric-card"><div class="metric-label">scale_pos_weight</div><div class="metric-value" style="font-size: 1.15rem;" id="metaScaleWeight">-</div></div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- XGBoost Training Progress Chart Card -->
+<div class="card" style="margin-top: 1.5rem;" id="cardTrainingProgress">
+    <div class="card-header">
+        <div>
+            <h3>XGBoost Training Progress</h3>
+        </div>
+    </div>
+    <div class="card-body">
+        {% set hist_list = training_history.eval_metric_history if (training_history and training_history.eval_metric_history) else (training_history.training_logloss if (training_history and training_history.training_logloss) else none) %}
+        <div id="chartContainer" style="width: 100%; min-height: 260px; position: relative;">
+            <div id="chartEmptyState" class="empty-state" style="padding: 2.5rem 1rem; {% if hist_list %}display: none;{% endif %}">
+                <div class="empty-state-icon">📈</div>
+                <p>Train the model to view progress</p>
+            </div>
+            <div id="chartCanvasWrapper" style="{% if not hist_list %}display: none;{% endif %}">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+                    <div>Metric: <strong>Binary Log Loss (logloss)</strong></div>
+                    <div id="chartFinalLoss">
+                        {% if hist_list %}
+                            Final Loss: <strong>{{ hist_list[-1] | round(5) }}</strong> (Round {{ hist_list | length }})
+                        {% endif %}
+                    </div>
+                </div>
+                <div style="position: relative; width: 100%; overflow-x: auto;">
+                    <svg id="trainingLossSvg" width="100%" height="240" viewBox="0 0 800 240" preserveAspectRatio="none" style="display: block;"></svg>
+                    <div id="chartTooltip" style="position: absolute; display: none; background: rgba(15, 23, 42, 0.9); color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; pointer-events: none; z-index: 10;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- XGBoost Feature Importance Chart Card -->
+<div class="card" style="margin-top: 1.5rem;" id="cardFeatureImportance">
+    <div class="card-header">
+        <div>
+            <h3>Protocol Feature Importance</h3>
+        </div>
+    </div>
+    <div class="card-body">
+        <div id="importanceEmptyState" class="empty-state" style="padding: 2.5rem 1rem; {% if feature_importance %}display: none;{% endif %}">
+            <div class="empty-state-icon">📊</div>
+            <p>Train or load the model to display feature importance rankings</p>
+        </div>
+        <div id="importanceContent" style="{% if not feature_importance %}display: none;{% endif %}">
+            <div id="featureImportanceBars" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                {% if feature_importance %}
+                    {% for item in feature_importance %}
+                    <div class="feature-bar-row" style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 220px; font-size: 0.85rem; font-family: monospace; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="{{ item.feature }}">
+                            {{ item.feature }}
+                        </div>
+                        <div style="flex: 1; background: #e2e8f0; height: 18px; border-radius: 4px; overflow: hidden;">
+                            <div style="width: {{ (item.importance * 100) | round(1) }}%; background: #0f4c81; height: 100%; border-radius: 4px; transition: width 0.3s ease;"></div>
+                        </div>
+                        <div style="width: 70px; text-align: right; font-size: 0.85rem; font-weight: 600; color: var(--text-main);">
+                            {{ (item.importance * 100) | round(2) }}%
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hidden JSON storage for initial training history and feature importance -->
+<script id="initialTrainingHistory" type="application/json">
+    {{ training_history | tojson if training_history else 'null' }}
+</script>
+<script id="initialFeatureImportance" type="application/json">
+    {{ feature_importance | tojson if feature_importance else 'null' }}
+</script>
+
+<div class="next-step-bar" style="margin-top: 2rem;">
+    <span>Ready to evaluate detection performance?</span>
+    <a href="{{ url_for('main.evaluation_page') }}" class="btn btn-primary">Proceed to Step D: Preliminary Evaluation &rarr;</a>
+</div>
+{% endblock %}

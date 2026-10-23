@@ -1,0 +1,11 @@
+{
+  "normal_path": "uploads\\normal\\normal_traffic_baseline.csv",
+  "replay_path": "uploads\\replay\\replay_attacks.csv",
+  "normal_filename": "normal_traffic_baseline.csv",
+  "replay_filename": "replay_attacks.csv",
+  "normal_type": "csv",
+  "replay_type": "csv",
+  "normal_size": 26117984,
+  "replay_size": 1427736,
+  "is_custom_uploaded": true
+}

@@ -1,0 +1,336 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-header">
+    <div class="page-title-group">
+        <h2>Stage D: Preliminary Evaluation &amp; Comparative Analysis</h2>
+    </div>
+    <div class="page-actions">
+        <button id="btnRunEval" class="btn btn-primary" onclick="triggerEvaluation()">
+            <span class="btn-icon">↺</span> Run / Refresh Evaluation
+        </button>
+        {% if eval_data %}
+        <a href="{{ url_for('main.download_artifact', file_type='metrics') }}" class="btn btn-secondary">
+            Download Metrics
+        </a>
+        <a href="{{ url_for('main.download_artifact', file_type='predictions') }}" class="btn btn-secondary">
+            Download Transaction Predictions (.xlsx)
+        </a>
+        {% endif %}
+    </div>
+</div>
+
+<div id="statusAlert" class="alert-box" style="display: none;"></div>
+
+{% if error_message %}
+<div class="alert-box alert-error">
+    {{ error_message }}
+</div>
+{% endif %}
+
+{% if eval_data %}
+<!-- Comparative Metrics Table Card -->
+<div class="card">
+    <div class="card-header">
+        <h3>Comparative Performance (Held-Out 30% Test Partition)</h3>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="data-table comparative-table">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Transparent Rule Baseline</th>
+                        <th>XGBoost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Accuracy</strong></td>
+                        <td>{{ (eval_data.rule_baseline_metrics.accuracy * 100) | round(2) }}%</td>
+                        <td><strong class="text-success">{{ (eval_data.xgboost_metrics.accuracy * 100) | round(2) }}%</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Precision</strong></td>
+                        <td>{{ (eval_data.rule_baseline_metrics.precision * 100) | round(2) }}%</td>
+                        <td><strong class="text-success">{{ (eval_data.xgboost_metrics.precision * 100) | round(2) }}%</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Recall (Sensitivity)</strong></td>
+                        <td>{{ (eval_data.rule_baseline_metrics.recall * 100) | round(2) }}%</td>
+                        <td><strong class="text-success">{{ (eval_data.xgboost_metrics.recall * 100) | round(2) }}%</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>F1-Score</strong></td>
+                        <td>{{ (eval_data.rule_baseline_metrics.f1_score * 100) | round(2) }}%</td>
+                        <td><strong class="text-success">{{ (eval_data.xgboost_metrics.f1_score * 100) | round(2) }}%</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>False Positive Rate (FPR)</strong></td>
+                        <td>{{ (eval_data.rule_baseline_metrics.false_positive_rate * 100) | round(2) }}%</td>
+                        <td><strong class="text-success">{{ (eval_data.xgboost_metrics.false_positive_rate * 100) | round(2) }}%</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>ROC-AUC</strong></td>
+                        <td><em>N/A (Deterministic)</em></td>
+                        <td><strong class="text-success">{{ eval_data.xgboost_metrics.roc_auc }}</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Test Support</strong></td>
+                        <td colspan="2" class="text-center">
+                            Normal (0): <strong>{{ eval_data.partition_counts.test.normal }}</strong> &nbsp;|&nbsp; 
+                            Replay (1): <strong>{{ eval_data.partition_counts.test.replay }}</strong> &nbsp;|&nbsp; 
+                            Total: <strong>{{ eval_data.partition_counts.test.total }}</strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Confusion Matrix Grid -->
+<div class="grid-2-col" style="margin-top: 1.5rem;">
+    <!-- Rule Baseline CM -->
+    <div class="card">
+        <div class="card-header">
+            <h4>Rule Baseline Confusion Matrix</h4>
+        </div>
+        <div class="card-body">
+            <div class="cm-table-container">
+                <table class="cm-table">
+                    <tr>
+                        <th class="cm-corner"></th>
+                        <th>Pred: Normal (0)</th>
+                        <th>Pred: Replay (1)</th>
+                    </tr>
+                    <tr>
+                        <th>Actual: Normal (0)</th>
+                        <td class="cm-cell cm-tn">{{ eval_data.rule_baseline_metrics.confusion_matrix.true_negatives }}<br><small>TN</small></td>
+                        <td class="cm-cell cm-fp">{{ eval_data.rule_baseline_metrics.confusion_matrix.false_positives }}<br><small>FP</small></td>
+                    </tr>
+                    <tr>
+                        <th>Actual: Replay (1)</th>
+                        <td class="cm-cell cm-fn">{{ eval_data.rule_baseline_metrics.confusion_matrix.false_negatives }}<br><small>FN</small></td>
+                        <td class="cm-cell cm-tp">{{ eval_data.rule_baseline_metrics.confusion_matrix.true_positives }}<br><small>TP</small></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- XGBoost CM -->
+    <div class="card">
+        <div class="card-header">
+            <h4>XGBoost Confusion Matrix</h4>
+        </div>
+        <div class="card-body">
+            <div class="cm-table-container">
+                <table class="cm-table">
+                    <tr>
+                        <th class="cm-corner"></th>
+                        <th>Pred: Normal (0)</th>
+                        <th>Pred: Replay (1)</th>
+                    </tr>
+                    <tr>
+                        <th>Actual: Normal (0)</th>
+                        <td class="cm-cell cm-tn">{{ eval_data.xgboost_metrics.confusion_matrix.true_negatives }}<br><small>TN</small></td>
+                        <td class="cm-cell cm-fp">{{ eval_data.xgboost_metrics.confusion_matrix.false_positives }}<br><small>FP</small></td>
+                    </tr>
+                    <tr>
+                        <th>Actual: Replay (1)</th>
+                        <td class="cm-cell cm-fn">{{ eval_data.xgboost_metrics.confusion_matrix.false_negatives }}<br><small>FN</small></td>
+                        <td class="cm-cell cm-tp">{{ eval_data.xgboost_metrics.confusion_matrix.true_positives }}<br><small>TP</small></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Detection Latency Breakdown Card -->
+<div class="card" style="margin-top: 1.5rem;">
+    <div class="card-header">
+        <h3>Detection Delay Breakdown (Computational vs. Network Resolution)</h3>
+    </div>
+    <div class="card-body">
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-label">Model Inference Time</div>
+                <div class="metric-value">{{ eval_data.timing_breakdown.model_inference_time_per_tx_ms }} ms</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Feature Preparation</div>
+                <div class="metric-value">{{ eval_data.timing_breakdown.feature_prep_time_per_tx_ms }} ms</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Total Computational Delay</div>
+                <div class="metric-value">{{ eval_data.timing_breakdown.total_computational_delay_per_tx_ms }} ms</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Average Network Resolution</div>
+                <div class="metric-value">{{ eval_data.timing_breakdown.avg_network_resolution_delay_ms }} ms</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Transaction Prediction Results Table Card -->
+<div class="card" id="cardPredictionResults" style="margin-top: 1.5rem;">
+    <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+        <div>
+            <h3>Transaction Prediction Results</h3>
+        </div>
+        <div class="page-actions">
+            <a href="{{ url_for('main.download_artifact', file_type='predictions') }}" class="btn btn-secondary btn-sm">
+                Download Predictions (.xlsx)
+            </a>
+        </div>
+    </div>
+    <div class="card-body">
+        <!-- Summary Cards Grid -->
+        <div class="metrics-grid" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin-bottom: 1.25rem;">
+            <div class="metric-card">
+                <div class="metric-label">Total Predictions</div>
+                <div class="metric-value" id="predCountTotal">
+                    {{ eval_data.prediction_summary.total_count if eval_data.prediction_summary else eval_data.partition_counts.test.total }}
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Predicted Normal</div>
+                <div class="metric-value text-normal" id="predCountNormal">
+                    {{ eval_data.prediction_summary.predicted_normal_count if eval_data.prediction_summary else '-' }}
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Predicted Replay</div>
+                <div class="metric-value text-danger" id="predCountReplay">
+                    {{ eval_data.prediction_summary.predicted_replay_count if eval_data.prediction_summary else '-' }}
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Correct Predictions</div>
+                <div class="metric-value text-success" id="predCountCorrect">
+                    {{ eval_data.prediction_summary.correct_predictions if eval_data.prediction_summary else '-' }}
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Incorrect Predictions</div>
+                <div class="metric-value text-warning" id="predCountIncorrect">
+                    {{ eval_data.prediction_summary.incorrect_predictions if eval_data.prediction_summary else '-' }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Filter Bar -->
+        <div class="filter-controls-bar" style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-subtle);">
+            <!-- Text Search -->
+            <div style="flex: 1; min-width: 200px;">
+                <input type="text" id="searchPredictions" class="form-input" placeholder="Search Tx ID, IP, or Func Code..." style="width: 100%; padding: 0.4rem 0.6rem; border: 1px solid var(--border-strong); border-radius: 4px; font-size: 0.85rem;" onkeyup="handlePredictionSearch(event)">
+            </div>
+
+            <!-- Predicted Label Filter -->
+            <div style="display: flex; align-items: center; gap: 0.3rem;">
+                <label for="filterPredLabel" style="font-size: 0.8rem; color: var(--text-muted);">Predicted:</label>
+                <select id="filterPredLabel" class="form-input" style="padding: 0.35rem; border: 1px solid var(--border-strong); border-radius: 4px; font-size: 0.85rem;" onchange="loadPredictionsPage(1)">
+                    <option value="all">All Predictions</option>
+                    <option value="normal">Normal (0)</option>
+                    <option value="replay">Replay (1)</option>
+                </select>
+            </div>
+
+            <!-- Actual Label Filter -->
+            <div style="display: flex; align-items: center; gap: 0.3rem;">
+                <label for="filterActualLabel" style="font-size: 0.8rem; color: var(--text-muted);">Actual:</label>
+                <select id="filterActualLabel" class="form-input" style="padding: 0.35rem; border: 1px solid var(--border-strong); border-radius: 4px; font-size: 0.85rem;" onchange="loadPredictionsPage(1)">
+                    <option value="all">All Actual</option>
+                    <option value="normal">Normal (0)</option>
+                    <option value="replay">Replay (1)</option>
+                    <option value="unknown">Unknown</option>
+                </select>
+            </div>
+
+            <!-- Prediction Status Filter -->
+            <div style="display: flex; align-items: center; gap: 0.3rem;">
+                <label for="filterStatus" style="font-size: 0.8rem; color: var(--text-muted);">Status:</label>
+                <select id="filterStatus" class="form-input" style="padding: 0.35rem; border: 1px solid var(--border-strong); border-radius: 4px; font-size: 0.85rem;" onchange="loadPredictionsPage(1)">
+                    <option value="all">All Statuses</option>
+                    <option value="True Positive">TP (True Positive)</option>
+                    <option value="True Negative">TN (True Negative)</option>
+                    <option value="False Positive">FP (False Positive)</option>
+                    <option value="False Negative">FN (False Negative)</option>
+                    <option value="Not Evaluated">Not Evaluated</option>
+                </select>
+            </div>
+
+            <!-- Source Dataset Filter -->
+            <div style="display: flex; align-items: center; gap: 0.3rem;">
+                <label for="filterDataset" style="font-size: 0.8rem; color: var(--text-muted);">Dataset:</label>
+                <select id="filterDataset" class="form-input" style="padding: 0.35rem; border: 1px solid var(--border-strong); border-radius: 4px; font-size: 0.85rem;" onchange="loadPredictionsPage(1)">
+                    <option value="all">All Datasets</option>
+                    <option value="normal">Normal Traffic</option>
+                    <option value="replay">Replay Traffic</option>
+                </select>
+            </div>
+
+            <!-- Rows per page -->
+            <div style="display: flex; align-items: center; gap: 0.3rem;">
+                <select id="limitPredictions" class="form-input" style="padding: 0.35rem; border: 1px solid var(--border-strong); border-radius: 4px; font-size: 0.85rem;" onchange="loadPredictionsPage(1)">
+                    <option value="10">10 / page</option>
+                    <option value="20" selected>20 / page</option>
+                    <option value="50">50 / page</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Predictions Table -->
+        <div class="table-responsive">
+            <table class="data-table" id="tablePredictions">
+                <thead>
+                    <tr>
+                        <th onclick="sortPredictionsTable('transaction_id')" style="cursor: pointer;">Tx ID &#x25B4;&#x25BE;</th>
+                        <th onclick="sortPredictionsTable('request_timestamp')" style="cursor: pointer;">Timestamp &#x25B4;&#x25BE;</th>
+                        <th>Source Dataset</th>
+                        <th>Source IP</th>
+                        <th>Destination IP</th>
+                        <th>Func Code</th>
+                        <th>Actual Label</th>
+                        <th>Predicted Label</th>
+                        <th>Replay Prob</th>
+                        <th>Confidence</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyPredictions">
+                    <tr><td colspan="11" class="text-center" style="padding: 2rem;">Loading test transaction predictions...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Pagination Bar -->
+        <div class="pagination-bar" id="paginationPredictions" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+            <button class="btn btn-secondary btn-sm" id="btnPrevPred" onclick="changePredictionsPage(-1)" disabled>&larr; Previous</button>
+            <span id="pageInfoPred" style="font-size: 0.85rem; color: var(--text-muted);">Page 1 of 1</span>
+            <button class="btn btn-secondary btn-sm" id="btnNextPred" onclick="changePredictionsPage(1)" disabled>Next &rarr;</button>
+        </div>
+    </div>
+</div>
+
+<!-- Hidden storage for initial evaluation data for charts -->
+<script id="initialEvalData" type="application/json">
+    {{ eval_data | tojson if eval_data else 'null' }}
+</script>
+
+{% else %}
+<div class="empty-state">
+    <div class="empty-state-icon">📊</div>
+    <h3>No Evaluation Metrics Found</h3>
+    <p>Ensure Step C (Train Model) has completed, then click <strong>Run / Refresh Evaluation</strong> to compute test partition metrics.</p>
+</div>
+{% endif %}
+
+<div class="next-step-bar" style="margin-top: 2rem;">
+    <span>Need to adjust parameters or evaluate custom data?</span>
+    <a href="{{ url_for('main.upload_page') }}" class="btn btn-secondary">&larr; Return to File Upload</a>
+</div>
+{% endblock %}

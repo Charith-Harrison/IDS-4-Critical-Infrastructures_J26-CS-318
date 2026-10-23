@@ -1,0 +1,23 @@
+{
+  "session_id": "RP4-SESSION-F923CAFD",
+  "created_at": "2026-10-23T11:52:19.712294",
+  "normal_file": "normal_traffic_baseline.csv",
+  "normal_rows": 150000,
+  "normal_size": 26117984,
+  "replay_file": "replay_attacks.csv",
+  "replay_rows": 9494,
+  "replay_size": 1427736,
+  "timestamps_valid": true,
+  "protocol_fields_detected": [
+    "dst_ip",
+    "dst_port",
+    "is_request",
+    "mbtcp_trans_id",
+    "mbtcp_unit_id",
+    "modbus_func_code",
+    "src_ip",
+    "src_port",
+    "timestamp"
+  ],
+  "stage_a_ready": true
+}

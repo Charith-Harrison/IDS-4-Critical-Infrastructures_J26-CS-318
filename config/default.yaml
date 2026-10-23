@@ -1,0 +1,68 @@
+# Protocol-aware Replay Attack Detection for Modbus/TCP
+# Default Configuration - Stage 1 Research Prototype
+
+data:
+  normal_csv: "data/raw/normal_traffic_baseline.csv"
+  replay_csv: "data/raw/replay_attacks.csv"
+  # Set normal_max_rows to null to process the full dataset, or an integer (e.g., 50000) for faster demo iterations
+  normal_max_rows: null
+
+transaction_context:
+  response_timeout_seconds: 1.0
+  inter_capture_gap_seconds: 100.0
+
+split:
+  train_ratio: 0.70
+  separation_gap_seconds: 300.0
+  random_seed: 42
+  grouping_method: "independent_capture_and_chronological_block_with_gap"
+
+feature_engineering:
+  history_window_size: 100
+  trailing_time_window_seconds: 60.0
+  max_unseen_time_sentinel: 3600.0
+
+rule_baseline:
+  # Transparent rule criteria:
+  # 1. Transaction ID previously seen in recent bounded window (direct replay of historical TID)
+  # 2. Non-sequential TID delta accompanied by a repeated command
+  # 3. Timeout / missing response accompanied by anomalous TID delta
+  require_tid_previously_seen: true
+  enable_non_sequential_repeated_cmd: true
+  enable_timeout_rule: true
+
+model:
+  random_state: 42
+  n_estimators: 100
+  max_depth: 4
+  learning_rate: 0.1
+  subsample: 0.8
+  colsample_bytree: 0.8
+  probability_threshold: 0.5
+  eval_metric: "logloss"
+
+artifacts:
+  results_dir: "artifacts/results"
+  audits_dir: "artifacts/audits"
+  splits_dir: "artifacts/splits"
+  predictions_dir: "artifacts/predictions"
+  metrics_dir: "artifacts/metrics"
+  models_dir: "artifacts/models"
+  
+  features_csv: "artifacts/results/extracted_features.csv"
+  normal_features_csv: "artifacts/results/normal_protocol_features.csv"
+  replay_features_csv: "artifacts/results/replay_protocol_features.csv"
+  feature_dictionary: "artifacts/results/feature_dictionary.json"
+  audit_report: "artifacts/audits/data_audit_report.json"
+  audit_pdf: "artifacts/audits/RP4_Data_Audit_Report.pdf"
+  split_manifest: "artifacts/splits/split_manifest.csv"
+  model_path: "artifacts/models/xgboost_model.json"
+  pipeline_path: "artifacts/models/pipeline_artifacts.joblib"
+  training_history: "artifacts/models/xgboost_training_history.json"
+  predictions_csv: "artifacts/predictions/test_predictions.csv"
+  metrics_json: "artifacts/metrics/evaluation_metrics.json"
+
+server:
+  host: "127.0.0.1"
+  port: 5000
+  debug: false

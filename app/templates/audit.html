@@ -1,0 +1,298 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-header">
+    <div class="page-title-group">
+        <h2>Stage A: Data Audit, Cleaning &amp; Transaction Reconstruction</h2>
+    </div>
+    <div class="page-actions">
+        <button id="btnRunAudit" class="btn btn-primary" onclick="triggerAudit()">
+            <span class="btn-icon">↻</span> Run / Refresh Data Audit
+        </button>
+        {% if audit_data %}
+        <a href="{{ url_for('main.download_artifact', file_type='audit') }}" class="btn btn-secondary" id="btnDownloadAudit">
+            Download Audit Report (PDF)
+        </a>
+        {% endif %}
+    </div>
+</div>
+
+<div id="statusAlert" class="alert-box" style="display: none;"></div>
+
+{% if audit_data %}
+<!-- Top Metrics Grid (6 Critical Provenance Cards) -->
+<div class="metrics-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+    <div class="metric-card">
+        <div class="metric-label">Total Normal Records</div>
+        <div class="metric-value text-normal" id="metricNormalRows">{{ audit_data.row_counts.normal_rows | default(0) }}</div>
+    </div>
+    <div class="metric-card">
+        <div class="metric-label">Total Replay Records</div>
+        <div class="metric-value text-danger" id="metricReplayRows">{{ audit_data.row_counts.replay_rows | default(0) }}</div>
+    </div>
+    <div class="metric-card">
+        <div class="metric-label">Total Reconstructed Tx</div>
+        <div class="metric-value" id="metricMatchedTx">
+            {{ audit_data.reconstruction_coverage.total_requests_processed if audit_data.reconstruction_coverage else 0 }}
+        </div>
+    </div>
+    <div class="metric-card">
+        <div class="metric-label">Missing Values Count</div>
+        <div class="metric-value {% if (audit_data.missing_values.normal_missing_total + audit_data.missing_values.replay_missing_total) == 0 %}text-success{% else %}text-danger{% endif %}" id="metricMissingCount">
+            {{ audit_data.missing_values.normal_missing_total + audit_data.missing_values.replay_missing_total }}
+        </div>
+    </div>
+    <div class="metric-card">
+        <div class="metric-label">Duplicate Records Count</div>
+        <div class="metric-value {% if audit_data.duplicate_records and audit_data.duplicate_records.total_duplicates == 0 %}text-success{% else %}text-warning{% endif %}" id="metricDuplicateCount">
+            {{ audit_data.duplicate_records.total_duplicates if audit_data.duplicate_records else 0 }}
+        </div>
+    </div>
+    <div class="metric-card">
+        <div class="metric-label">Label Conflict Count</div>
+        <div class="metric-value text-warning" id="metricConflictCount">
+            {{ audit_data.reconstruction_coverage.label_conflicts_flagged if audit_data.reconstruction_coverage else 0 }}
+        </div>
+    </div>
+</div>
+
+<!-- Data Cleaning & Preprocessing Section -->
+<div class="card" style="margin-top: 1.5rem;" id="cardDataCleaning">
+    <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+        <div>
+            <h3>Data Cleaning &amp; Preprocessing</h3>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="cleaning-controls-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 1.25rem;">
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
+                <input type="checkbox" id="cleanDuplicates" checked style="margin-top: 0.2rem;">
+                <div>
+                    <strong>Remove exact duplicate records</strong>
+                </div>
+            </label>
+
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
+                <input type="checkbox" id="cleanMissing" checked style="margin-top: 0.2rem;">
+                <div>
+                    <strong>Handle missing values</strong>
+                </div>
+            </label>
+
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
+                <input type="checkbox" id="cleanTimestamps" checked style="margin-top: 0.2rem;">
+                <div>
+                    <strong>Validate timestamps &amp; sort chronologically</strong>
+                </div>
+            </label>
+
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
+                <input type="checkbox" id="cleanInvalid" checked style="margin-top: 0.2rem;">
+                <div>
+                    <strong>Exclude invalid Modbus protocol frames</strong>
+                </div>
+            </label>
+
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
+                <input type="checkbox" id="cleanInconsistentLabels" checked style="margin-top: 0.2rem;">
+                <div>
+                    <strong>Inspect inconsistent labels</strong>
+                </div>
+            </label>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; align-items: center; gap: 1rem; border-top: 1px solid var(--border-subtle); padding-top: 1rem;">
+            <button id="btnApplyCleaning" class="btn btn-primary" onclick="applyDataCleaning()">
+                <span class="btn-icon">⚡</span> Apply Cleaning &amp; Preprocessing
+            </button>
+        </div>
+
+        <!-- Cleaning Summary Card (Shown if cleaning applied) -->
+        <div id="cleaningSummaryBox" style="margin-top: 1.25rem; background: #f8fafc; border: 1px solid var(--border-subtle); border-radius: 6px; padding: 1rem; {% if not cleaning_summary %}display: none;{% endif %}">
+            <h4 style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--text-main);">Cleaning &amp; Preprocessing Summary:</h4>
+            <div class="metrics-grid" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));">
+                <div class="metric-card" style="padding: 0.75rem;">
+                    <div class="metric-label" style="font-size: 0.75rem;">Duplicates Removed</div>
+                    <div class="metric-value text-normal" id="cleanSummaryDups" style="font-size: 1.25rem;">
+                        {{ cleaning_summary.transformations.duplicates_removed if cleaning_summary else 0 }}
+                    </div>
+                </div>
+                <div class="metric-card" style="padding: 0.75rem;">
+                    <div class="metric-label" style="font-size: 0.75rem;">Missing Handled</div>
+                    <div class="metric-value text-normal" id="cleanSummaryMissing" style="font-size: 1.25rem;">
+                        {{ cleaning_summary.transformations.missing_records_handled if cleaning_summary else 0 }}
+                    </div>
+                </div>
+                <div class="metric-card" style="padding: 0.75rem;">
+                    <div class="metric-label" style="font-size: 0.75rem;">Invalid Frames Excluded</div>
+                    <div class="metric-value text-normal" id="cleanSummaryInvalid" style="font-size: 1.25rem;">
+                        {{ cleaning_summary.transformations.invalid_frames_excluded if cleaning_summary else 0 }}
+                    </div>
+                </div>
+                <div class="metric-card" style="padding: 0.75rem;">
+                    <div class="metric-label" style="font-size: 0.75rem;">Final Usable Records</div>
+                    <div class="metric-value text-success" id="cleanSummaryFinal" style="font-size: 1.25rem;">
+                        {{ cleaning_summary.cleaned_records.total if cleaning_summary else (audit_data.row_counts.normal_rows + audit_data.row_counts.replay_rows) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Transaction Reconstruction Preview Table Card -->
+<div class="card" style="margin-top: 1.5rem;" id="cardReconstructedTx">
+    <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+        <div>
+            <h3>Modbus/TCP Reconstructed Transactions</h3>
+        </div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+            <input type="text" id="searchReconstructedTx" class="form-input" placeholder="Search Tx ID, IP, or Func Code..." style="padding: 0.35rem 0.6rem; border: 1px solid var(--border-strong); border-radius: 4px; font-size: 0.85rem;" onkeyup="handleTxSearch(event)">
+            <select id="filterTxStatus" class="form-input" style="padding: 0.35rem; border: 1px solid var(--border-strong); border-radius: 4px; font-size: 0.85rem;" onchange="loadReconstructedTxPage(1)">
+                <option value="all">All Match Statuses</option>
+                <option value="matched">Matched Only</option>
+                <option value="timeout">Timeouts / Missing</option>
+                <option value="ambiguous">Ambiguous Matches</option>
+            </select>
+            <select id="limitReconstructedTx" class="form-input" style="padding: 0.35rem; border: 1px solid var(--border-strong); border-radius: 4px; font-size: 0.85rem;" onchange="loadReconstructedTxPage(1)">
+                <option value="10">10 / page</option>
+                <option value="20" selected>20 / page</option>
+                <option value="50">50 / page</option>
+            </select>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-meta" style="margin-bottom: 0.75rem; font-size: 0.85rem; color: var(--text-muted); display: flex; justify-content: flex-end;">
+            <div>Total Reconstructed: <strong id="totalReconstructedCount">-</strong></div>
+        </div>
+        <div class="table-responsive">
+            <table class="data-table" id="tableReconstructedTx">
+                <thead>
+                    <tr>
+                        <th onclick="sortReconstructedTx('transaction_id')" style="cursor: pointer;">Tx ID &#x25B4;&#x25BE;</th>
+                        <th onclick="sortReconstructedTx('request_timestamp')" style="cursor: pointer;">Timestamp &#x25B4;&#x25BE;</th>
+                        <th>Client IP</th>
+                        <th>Server IP</th>
+                        <th>Func Code</th>
+                        <th>Match Status</th>
+                        <th>Latency (ms)</th>
+                        <th>Label Conflict</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyReconstructedTx">
+                    <tr><td colspan="8" class="text-center" style="padding: 2rem;">Loading reconstructed transactions...</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination-bar" id="paginationReconstructedTx" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+            <button class="btn btn-secondary btn-sm" id="btnPrevTx" onclick="changeReconstructedTxPage(-1)" disabled>&larr; Previous</button>
+            <span id="pageInfoTx" style="font-size: 0.85rem; color: var(--text-muted);">Page 1 of 1</span>
+            <button class="btn btn-secondary btn-sm" id="btnNextTx" onclick="changeReconstructedTxPage(1)" disabled>Next &rarr;</button>
+        </div>
+    </div>
+</div>
+
+<!-- Transaction Pairing Coverage Card -->
+{% if audit_data.reconstruction_coverage %}
+<div class="card" style="margin-top: 1.5rem;">
+    <div class="card-header">
+        <h3>Modbus/TCP Transaction Reconstruction Pairing Coverage</h3>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Count</th>
+                        <th>Proportion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Total Requests Processed</strong></td>
+                        <td>{{ audit_data.reconstruction_coverage.total_requests_processed | default(0) }}</td>
+                        <td>100.0%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Matched Transactions</strong></td>
+                        <td>{{ audit_data.reconstruction_coverage.matched_transactions | default(0) }}</td>
+                        <td>{{ (audit_data.reconstruction_coverage.pairing_success_rate * 100) | round(2) }}%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Timeouts / Missing Responses</strong></td>
+                        <td>{{ audit_data.reconstruction_coverage.timeout_missing_responses | default(0) }}</td>
+                        <td>{{ (audit_data.reconstruction_coverage.timeout_rate * 100) | round(2) }}%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Orphan Responses</strong></td>
+                        <td>{{ audit_data.reconstruction_coverage.orphan_responses | default(0) }}</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Label Conflicts Flagged</strong></td>
+                        <td>{{ audit_data.reconstruction_coverage.label_conflicts_flagged | default(0) }}</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- Field Availability Table -->
+<div class="card" style="margin-top: 1.5rem;">
+    <div class="card-header">
+        <h3>Reconstruction Field Availability &amp; Schema Verification</h3>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Field Name</th>
+                        <th>Present in Normal?</th>
+                        <th>Present in Replay?</th>
+                        <th>Data Type</th>
+                        <th>Reconstruction Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for field, info in audit_data.field_availability_for_reconstruction.items() %}
+                    <tr>
+                        <td><code>{{ field }}</code></td>
+                        <td><span class="badge badge-success">Yes</span></td>
+                        <td><span class="badge badge-success">Yes</span></td>
+                        <td><code>{{ info.normal_dtype }}</code></td>
+                        <td>
+                            {% if field == 'mbtcp_trans_id' %}16-bit Modbus Transaction Identifier
+                            {% elif field == 'is_request' %}Direction (1=Query, 0=Reply)
+                            {% elif field == 'timestamp' %}Epoch time for chronological sequencing and latency
+                            {% elif field == 'modbus_func_code' %}Modbus function code matching
+                            {% elif field == 'src_ip' or field == 'dst_ip' %}Endpoint identity for channel scoping
+                            {% elif field == 'src_port' or field == 'dst_port' %}TCP port scoping (502 = Modbus)
+                            {% elif field == 'mbtcp_unit_id' %}Device slave/unit address
+                            {% else %}Protocol parameter{% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% else %}
+<div class="empty-state">
+    <div class="empty-state-icon">📋</div>
+    <h3>No Audit Report Found</h3>
+    <p>Click "Run / Refresh Data Audit" to load the dataset files, inspect schemas, verify labels, and calculate pairing coverage.</p>
+</div>
+{% endif %}
+
+<div class="next-step-bar" style="margin-top: 2rem;">
+    <span>Ready for feature engineering and dataset partitioning?</span>
+    <a href="{{ url_for('main.features_page') }}" class="btn btn-primary">Proceed to Step B: Features &amp; Split &rarr;</a>
+</div>
+{% endblock %}

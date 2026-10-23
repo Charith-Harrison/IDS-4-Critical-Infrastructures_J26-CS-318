@@ -1,0 +1,53 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Web Dashboard",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe run_app.py",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Run Full Research Pipeline",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe run_pipeline.py",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Run Verification Tests",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe -m unittest tests/test_verification.py",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Install / Verify Dependencies",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe -m pip install -r requirements.txt",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
+    ]
+}

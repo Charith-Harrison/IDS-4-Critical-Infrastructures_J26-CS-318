@@ -1,0 +1,86 @@
+[
+  {
+    "feature": "response_latency",
+    "importance": 0.60043
+  },
+  {
+    "feature": "outstanding_requests",
+    "importance": 0.17889
+  },
+  {
+    "feature": "is_timeout",
+    "importance": 0.08213
+  },
+  {
+    "feature": "trans_id_raw_diff",
+    "importance": 0.05154
+  },
+  {
+    "feature": "modbus_ref_num",
+    "importance": 0.02716
+  },
+  {
+    "feature": "request_iat",
+    "importance": 0.01298
+  },
+  {
+    "feature": "trans_id_delta",
+    "importance": 0.01268
+  },
+  {
+    "feature": "time_since_identical_cmd",
+    "importance": 0.01035
+  },
+  {
+    "feature": "is_repeated_command",
+    "importance": 0.00599
+  },
+  {
+    "feature": "repeated_cmd_count_window",
+    "importance": 0.00578
+  },
+  {
+    "feature": "duplicate_cmd_freq",
+    "importance": 0.00534
+  },
+  {
+    "feature": "modbus_func_code",
+    "importance": 0.0029
+  },
+  {
+    "feature": "is_matched",
+    "importance": 0.00192
+  },
+  {
+    "feature": "modbus_word_cnt",
+    "importance": 0.00096
+  },
+  {
+    "feature": "has_response_latency",
+    "importance": 0.00062
+  },
+  {
+    "feature": "modbus_val",
+    "importance": 0.00033
+  },
+  {
+    "feature": "tid_previously_seen",
+    "importance": 0.0
+  },
+  {
+    "feature": "mbtcp_unit_id",
+    "importance": 0.0
+  },
+  {
+    "feature": "modbus_bit_cnt",
+    "importance": 0.0
+  },
+  {
+    "feature": "payload_len",
+    "importance": 0.0
+  },
+  {
+    "feature": "is_ambiguous",
+    "importance": 0.0
+  }
+]

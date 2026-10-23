@@ -1,0 +1,55 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Flask Dashboard (run_app.py)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/run_app.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "FLASK_ENV": "development"
+            }
+        },
+        {
+            "name": "Run Full Pipeline (run_pipeline.py)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/run_pipeline.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Run Quick Demo Pipeline (30k rows)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/run_pipeline.py",
+            "args": ["--normal-rows", "30000"],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Run Verification Tests",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "unittest",
+            "args": ["tests/test_verification.py"],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Python: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

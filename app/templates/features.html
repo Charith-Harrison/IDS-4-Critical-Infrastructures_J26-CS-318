@@ -1,0 +1,201 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-header">
+    <div class="page-title-group">
+        <h2>Stage B: Features &amp; Leakage-Controlled Split</h2>
+    </div>
+    <div class="page-actions">
+        <button id="btnRunFeatures" class="btn btn-primary" onclick="triggerFeatures()">
+            <span class="btn-icon">⚡</span> Extract Features &amp; Create Split
+        </button>
+        {% if status.features_ready %}
+        <a href="{{ url_for('main.download_artifact', file_type='normal_features') }}" class="btn btn-secondary">
+            Download Normal Traffic Features (.xlsx)
+        </a>
+        <a href="{{ url_for('main.download_artifact', file_type='replay_features') }}" class="btn btn-secondary">
+            Download Replay Traffic Features (.xlsx)
+        </a>
+        <a href="{{ url_for('main.download_artifact', file_type='manifest') }}" class="btn btn-secondary">
+            Download Split Manifest
+        </a>
+        {% endif %}
+    </div>
+</div>
+
+<div id="statusAlert" class="alert-box" style="display: none;"></div>
+
+{% if error_message %}
+<div class="alert-box alert-error">
+    {{ error_message }}
+</div>
+{% endif %}
+
+<!-- Time Window Configuration Card -->
+<div class="card">
+    <div class="card-header">
+        <h3>Time Window Configuration</h3>
+    </div>
+    <div class="card-body">
+        <div class="time-window-controls" style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <label for="inputTimeWindow" style="font-weight: 600;">Window Duration:</label>
+                <div style="display: flex; align-items: center;">
+                    <input type="number" id="inputTimeWindow" class="form-input" style="width: 100px; padding: 0.4rem 0.6rem; border: 1px solid var(--border-strong); border-radius: 4px;" min="1" max="3600" step="1" value="{{ time_window_seconds | default(60.0) | int }}">
+                    <span style="margin-left: 0.4rem; color: var(--text-muted);">seconds</span>
+                </div>
+            </div>
+
+            <button id="btnApplyWindow" class="btn btn-primary btn-sm" style="margin-left: auto;" onclick="applyTimeWindow()">
+                Apply Window &amp; Re-Extract Features
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Split Summary Cards -->
+{% if split_summary %}
+<div class="card">
+    <div class="card-header">
+        <h3>Dataset Partitioning &amp; Leakage Control</h3>
+    </div>
+    <div class="card-body">
+        <div class="split-stats-grid">
+            <div class="split-box">
+                <h4>Training Partition (~70%)</h4>
+                <div class="split-count">{{ split_summary.train_total }} transactions</div>
+                <div class="class-breakdown">
+                    <span class="badge badge-normal">Normal (0): {{ split_summary.train_normal }}</span>
+                    <span class="badge badge-attack">Replay (1): {{ split_summary.train_replay }}</span>
+                </div>
+            </div>
+            <div class="split-box">
+                <h4>Held-Out Test Partition (~30%)</h4>
+                <div class="split-count">{{ split_summary.test_total }} transactions</div>
+                <div class="class-breakdown">
+                    <span class="badge badge-normal">Normal (0): {{ split_summary.test_normal }}</span>
+                    <span class="badge badge-attack">Replay (1): {{ split_summary.test_replay }}</span>
+                </div>
+            </div>
+            <div class="split-box">
+                <h4>Embargo Separation Gap</h4>
+                <div class="split-count">{{ split_summary.gap_excluded }} transactions</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% if status.features_ready %}
+<!-- Table 1: Extracted Protocol-Aware Features – Normal Traffic -->
+<div class="card" id="cardNormalFeatures">
+    <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+        <div>
+            <h3>Extracted Protocol-Aware Features – Normal Traffic</h3>
+            <span class="badge badge-normal" style="margin-top: 0.25rem;">normal_traffic</span>
+        </div>
+        <div class="table-actions" style="display: flex; gap: 0.5rem; align-items: center;">
+            <input type="text" id="searchNormal" class="form-input" placeholder="Search Tx ID, IP, or Func..." style="padding: 0.35rem 0.6rem; border: 1px solid var(--border-strong); border-radius: 4px; font-size: 0.85rem;" onkeyup="handleNormalSearch(event)">
+            <select id="limitNormal" class="form-input" style="padding: 0.35rem; border: 1px solid var(--border-strong); border-radius: 4px; font-size: 0.85rem;" onchange="loadFeaturesPage('normal', 1)">
+                <option value="10">10 / page</option>
+                <option value="20" selected>20 / page</option>
+                <option value="50">50 / page</option>
+            </select>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-meta" style="margin-bottom: 0.75rem; font-size: 0.85rem; color: var(--text-muted); display: flex; justify-content: flex-end;">
+            <div>Total Records: <strong id="totalNormalRecords">{{ normal_feature_rows }}</strong></div>
+        </div>
+        <div class="table-responsive">
+            <table class="data-table" id="tableNormalFeatures">
+                <thead>
+                    <tr>
+                        <th onclick="sortFeaturesTable('normal', 'transaction_id')" style="cursor: pointer;">Tx ID &#x25B4;&#x25BE;</th>
+                        <th onclick="sortFeaturesTable('normal', 'request_timestamp')" style="cursor: pointer;">Req Time &#x25B4;&#x25BE;</th>
+                        <th>Client IP</th>
+                        <th>Server IP</th>
+                        <th>Func Code</th>
+                        <th>Req Len</th>
+                        <th>Resp Len</th>
+                        <th>Latency (s)</th>
+                        <th>IAT (s)</th>
+                        <th>TID Delta</th>
+                        <th>TID Reused?</th>
+                        <th>Rolling Freq</th>
+                        <th>Partition</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyNormalFeatures">
+                    <tr><td colspan="14" class="text-center" style="padding: 2rem;">Loading normal traffic features...</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination-bar" id="paginationNormal" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+            <button class="btn btn-secondary btn-sm" id="btnPrevNormal" onclick="changeFeaturesPage('normal', -1)" disabled>&larr; Previous</button>
+            <span id="pageInfoNormal" style="font-size: 0.85rem; color: var(--text-muted);">Page 1 of 1</span>
+            <button class="btn btn-secondary btn-sm" id="btnNextNormal" onclick="changeFeaturesPage('normal', 1)" disabled>Next &rarr;</button>
+        </div>
+    </div>
+</div>
+
+<!-- Table 2: Extracted Protocol-Aware Features – Replay Attack Traffic -->
+<div class="card" id="cardReplayFeatures" style="margin-top: 2rem;">
+    <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+        <div>
+            <h3>Extracted Protocol-Aware Features – Replay Attack Traffic</h3>
+            <span class="badge badge-attack" style="margin-top: 0.25rem;">replay_traffic</span>
+        </div>
+        <div class="table-actions" style="display: flex; gap: 0.5rem; align-items: center;">
+            <input type="text" id="searchReplay" class="form-input" placeholder="Search Tx ID, IP, or Func..." style="padding: 0.35rem 0.6rem; border: 1px solid var(--border-strong); border-radius: 4px; font-size: 0.85rem;" onkeyup="handleReplaySearch(event)">
+            <select id="limitReplay" class="form-input" style="padding: 0.35rem; border: 1px solid var(--border-strong); border-radius: 4px; font-size: 0.85rem;" onchange="loadFeaturesPage('replay', 1)">
+                <option value="10">10 / page</option>
+                <option value="20" selected>20 / page</option>
+                <option value="50">50 / page</option>
+            </select>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-meta" style="margin-bottom: 0.75rem; font-size: 0.85rem; color: var(--text-muted); display: flex; justify-content: flex-end;">
+            <div>Total Records: <strong id="totalReplayRecords">{{ replay_feature_rows }}</strong></div>
+        </div>
+        <div class="table-responsive">
+            <table class="data-table" id="tableReplayFeatures">
+                <thead>
+                    <tr>
+                        <th onclick="sortFeaturesTable('replay', 'transaction_id')" style="cursor: pointer;">Tx ID &#x25B4;&#x25BE;</th>
+                        <th onclick="sortFeaturesTable('replay', 'request_timestamp')" style="cursor: pointer;">Req Time &#x25B4;&#x25BE;</th>
+                        <th>Client IP</th>
+                        <th>Server IP</th>
+                        <th>Func Code</th>
+                        <th>Req Len</th>
+                        <th>Resp Len</th>
+                        <th>Latency (s)</th>
+                        <th>IAT (s)</th>
+                        <th>TID Delta</th>
+                        <th>TID Reused?</th>
+                        <th>Rolling Freq</th>
+                        <th>Partition</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyReplayFeatures">
+                    <tr><td colspan="14" class="text-center" style="padding: 2rem;">Loading replay traffic features...</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination-bar" id="paginationReplay" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+            <button class="btn btn-secondary btn-sm" id="btnPrevReplay" onclick="changeFeaturesPage('replay', -1)" disabled>&larr; Previous</button>
+            <span id="pageInfoReplay" style="font-size: 0.85rem; color: var(--text-muted);">Page 1 of 1</span>
+            <button class="btn btn-secondary btn-sm" id="btnNextReplay" onclick="changeFeaturesPage('replay', 1)" disabled>Next &rarr;</button>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<div class="next-step-bar" style="margin-top: 2rem;">
+    <span>Ready to train the XGBoost model?</span>
+    <a href="{{ url_for('main.training_page') }}" class="btn btn-primary">Proceed to Step C: Train Model &rarr;</a>
+</div>
+{% endblock %}

@@ -1,0 +1,325 @@
+{
+  "dataset_provenance": {
+    "source_benchmark": "CIC Modbus 2023 Dataset (Canadian Institute for Cybersecurity)",
+    "normal_file": "normal_traffic_baseline.csv",
+    "replay_file": "replay_attacks.csv",
+    "provenance_notes": [
+      "Labels are dataset annotations from experimental testbed generation, treated as reference annotations rather than independently verified ground truth.",
+      "Normal traffic extract includes 'file_source' metadata indicating distinct PCAP capture sessions.",
+      "Replay traffic extract capture boundaries are inferred from timestamp and frame discontinuities.",
+      "Raw TCP sequence numbers and full packet hex payloads are absent from the CSV; transaction reconstruction relies on MBAP and PDU fields."
+    ]
+  },
+  "input_files": {
+    "normal_baseline": {
+      "filename": "normal_traffic_baseline.csv",
+      "capture_count": 6,
+      "size_formatted": "Ready"
+    },
+    "replay_attacks": {
+      "filename": "replay_attacks.csv",
+      "capture_count": 10,
+      "size_formatted": "Ready"
+    }
+  },
+  "row_counts": {
+    "normal_rows": 150000,
+    "replay_rows": 9494,
+    "total_rows": 159494
+  },
+  "schemas": {
+    "normal_columns": {
+      "frame_number": "int64",
+      "timestamp": "float64",
+      "frame_len": "int64",
+      "src_ip": "str",
+      "dst_ip": "str",
+      "src_port": "int64",
+      "dst_port": "int64",
+      "payload_len": "int64",
+      "is_request": "int64",
+      "tcp_flags_syn": "int64",
+      "tcp_flags_ack": "int64",
+      "tcp_flags_fin": "int64",
+      "tcp_flags_rst": "int64",
+      "tcp_flags_psh": "int64",
+      "mbtcp_trans_id": "int64",
+      "mbtcp_proto_id": "int64",
+      "mbtcp_len": "int64",
+      "mbtcp_unit_id": "int64",
+      "modbus_func_code": "int64",
+      "is_exception": "int64",
+      "modbus_exception_code": "int64",
+      "modbus_ref_num": "int64",
+      "modbus_word_cnt": "int64",
+      "modbus_bit_cnt": "int64",
+      "modbus_byte_cnt": "int64",
+      "modbus_val": "int64",
+      "len_discrepancy": "int64",
+      "has_stacked_frames": "int64",
+      "inter_arrival_time": "float64",
+      "packet_rate_1s": "int64",
+      "response_time": "float64",
+      "trans_id_diff": "int64",
+      "attack_sub_type": "str",
+      "is_attack": "int64",
+      "attack_category": "str",
+      "file_source": "str",
+      "source_file": "str",
+      "original_row_id": "int64",
+      "dataset_category": "str",
+      "capture_id": "str"
+    },
+    "replay_columns": {
+      "frame_number": "int64",
+      "timestamp": "float64",
+      "frame_len": "int64",
+      "src_ip": "str",
+      "dst_ip": "str",
+      "src_port": "int64",
+      "dst_port": "int64",
+      "payload_len": "int64",
+      "is_request": "int64",
+      "tcp_flags_syn": "int64",
+      "tcp_flags_ack": "int64",
+      "tcp_flags_fin": "int64",
+      "tcp_flags_rst": "int64",
+      "tcp_flags_psh": "int64",
+      "mbtcp_trans_id": "int64",
+      "mbtcp_proto_id": "int64",
+      "mbtcp_len": "int64",
+      "mbtcp_unit_id": "int64",
+      "modbus_func_code": "int64",
+      "is_exception": "int64",
+      "modbus_exception_code": "int64",
+      "modbus_ref_num": "int64",
+      "modbus_word_cnt": "int64",
+      "modbus_bit_cnt": "int64",
+      "modbus_byte_cnt": "int64",
+      "modbus_val": "int64",
+      "len_discrepancy": "int64",
+      "has_stacked_frames": "int64",
+      "inter_arrival_time": "float64",
+      "packet_rate_1s": "int64",
+      "response_time": "float64",
+      "trans_id_diff": "int64",
+      "attack_sub_type": "str",
+      "is_attack": "int64",
+      "attack_category": "str",
+      "source_file": "str",
+      "original_row_id": "int64",
+      "dataset_category": "str",
+      "capture_id": "str"
+    },
+    "columns_only_in_normal": [
+      "file_source"
+    ],
+    "columns_only_in_replay": []
+  },
+  "missing_values": {
+    "normal_missing_total": 0,
+    "replay_missing_total": 0,
+    "normal_columns_with_nulls": {},
+    "replay_columns_with_nulls": {}
+  },
+  "duplicate_records": {
+    "normal_duplicates": 0,
+    "replay_duplicates": 0,
+    "total_duplicates": 0
+  },
+  "label_audit": {
+    "normal_class_distribution": {
+      "0": 150000
+    },
+    "replay_class_distribution": {
+      "0": 7247,
+      "1": 2247
+    },
+    "replay_contains_normal_rows": true,
+    "replay_normal_row_count": 7247,
+    "replay_attack_row_count": 2247,
+    "cross_column_consistency": {
+      "normal_category_discrepancies": 0,
+      "replay_category_discrepancies": 0
+    }
+  },
+  "field_availability_for_reconstruction": {
+    "src_ip": {
+      "available_in_normal": true,
+      "available_in_replay": true,
+      "normal_dtype": "str",
+      "replay_dtype": "str"
+    },
+    "dst_ip": {
+      "available_in_normal": true,
+      "available_in_replay": true,
+      "normal_dtype": "str",
+      "replay_dtype": "str"
+    },
+    "src_port": {
+      "available_in_normal": true,
+      "available_in_replay": true,
+      "normal_dtype": "int64",
+      "replay_dtype": "int64"
+    },
+    "dst_port": {
+      "available_in_normal": true,
+      "available_in_replay": true,
+      "normal_dtype": "int64",
+      "replay_dtype": "int64"
+    },
+    "is_request": {
+      "available_in_normal": true,
+      "available_in_replay": true,
+      "normal_dtype": "int64",
+      "replay_dtype": "int64"
+    },
+    "mbtcp_trans_id": {
+      "available_in_normal": true,
+      "available_in_replay": true,
+      "normal_dtype": "int64",
+      "replay_dtype": "int64"
+    },
+    "mbtcp_unit_id": {
+      "available_in_normal": true,
+      "available_in_replay": true,
+      "normal_dtype": "int64",
+      "replay_dtype": "int64"
+    },
+    "modbus_func_code": {
+      "available_in_normal": true,
+      "available_in_replay": true,
+      "normal_dtype": "int64",
+      "replay_dtype": "int64"
+    },
+    "timestamp": {
+      "available_in_normal": true,
+      "available_in_replay": true,
+      "normal_dtype": "float64",
+      "replay_dtype": "float64"
+    }
+  },
+  "timestamp_audit": {
+    "normal_captures": {
+      "network-wide-normal-14.pcap": {
+        "monotonic_increasing": true,
+        "start_time": 1674507125.777466,
+        "end_time": 1674512552.536585,
+        "duration_seconds": 5426.7591190338135
+      },
+      "veth4edc015-normal-4.pcap": {
+        "monotonic_increasing": true,
+        "start_time": 1674360636.658912,
+        "end_time": 1674431602.346113,
+        "duration_seconds": 70965.6872010231
+      },
+      "veth5bbeaa2-normal-13.pcap": {
+        "monotonic_increasing": true,
+        "start_time": 1674481924.004201,
+        "end_time": 1674486194.498424,
+        "duration_seconds": 4270.494223117828
+      },
+      "veth5bbeaa2-normal-14.pcap": {
+        "monotonic_increasing": true,
+        "start_time": 1674520590.864227,
+        "end_time": 1674526444.074282,
+        "duration_seconds": 5853.21005487442
+      },
+      "veth8bc3408-normal-4.pcap": {
+        "monotonic_increasing": true,
+        "start_time": 1674360030.274995,
+        "end_time": 1674430797.41358,
+        "duration_seconds": 70767.13858485222
+      },
+      "vethd9e14c0-normal-4.pcap": {
+        "monotonic_increasing": true,
+        "start_time": 1674468178.561445,
+        "end_time": 1674480905.82463,
+        "duration_seconds": 12727.263185024261
+      }
+    },
+    "replay_captures": {
+      "replay_capture_0": {
+        "monotonic_increasing": true,
+        "start_time": 1675256622.70579,
+        "end_time": 1675256777.70174,
+        "duration_seconds": 154.9959499835968
+      },
+      "replay_capture_1": {
+        "monotonic_increasing": true,
+        "start_time": 1675223325.48644,
+        "end_time": 1675225910.727015,
+        "duration_seconds": 2585.2405750751495
+      },
+      "replay_capture_2": {
+        "monotonic_increasing": true,
+        "start_time": 1678870414.805525,
+        "end_time": 1678881156.665522,
+        "duration_seconds": 10741.859997034073
+      },
+      "replay_capture_3": {
+        "monotonic_increasing": true,
+        "start_time": 1679539957.149365,
+        "end_time": 1679540021.814174,
+        "duration_seconds": 64.66480898857117
+      },
+      "replay_capture_4": {
+        "monotonic_increasing": true,
+        "start_time": 1679541220.689726,
+        "end_time": 1679541287.183009,
+        "duration_seconds": 66.49328279495239
+      },
+      "replay_capture_5": {
+        "monotonic_increasing": true,
+        "start_time": 1679542184.25562,
+        "end_time": 1679542246.564995,
+        "duration_seconds": 62.309375047683716
+      },
+      "replay_capture_6": {
+        "monotonic_increasing": true,
+        "start_time": 1679543865.509983,
+        "end_time": 1679543930.728626,
+        "duration_seconds": 65.21864295005798
+      },
+      "replay_capture_7": {
+        "monotonic_increasing": true,
+        "start_time": 1679544767.24382,
+        "end_time": 1679544838.60795,
+        "duration_seconds": 71.3641300201416
+      },
+      "replay_capture_8": {
+        "monotonic_increasing": true,
+        "start_time": 1679546362.648966,
+        "end_time": 1679546362.67068,
+        "duration_seconds": 0.021713972091674805
+      },
+      "replay_capture_9": {
+        "monotonic_increasing": true,
+        "start_time": 1679546532.984944,
+        "end_time": 1679546582.992797,
+        "duration_seconds": 50.00785279273987
+      }
+    }
+  },
+  "data_quality_flags": [
+    {
+      "level": "INFO",
+      "message": "Row-level labels in replay CSV are internally consistent across is_attack, attack_category, and attack_sub_type."
+    }
+  ],
+  "repeated_traffic_check": {
+    "legitimate_repeated_polling_instances": 149955,
+    "handling_note": "Legitimate repeated polling requests are preserved. Duplicate packet rows are NOT removed, maintaining genuine industrial polling cadence."
+  },
+  "reconstruction_coverage": {
+    "total_requests_processed": 80753,
+    "matched_transactions": 78620,
+    "ambiguous_matches": 0,
+    "timeout_missing_responses": 2133,
+    "orphan_responses": 121,
+    "pairing_success_rate": 0.9736,
+    "timeout_rate": 0.0264,
+    "label_conflicts_flagged": 1047,
+    "label_conflict_explanation": "Flagged 1047 transactions where request is_attack != response is_attack. In CIC Modbus 2023 replay episodes, victim servers execute replayed queries legitimately, causing the response packet to be labeled Normal while the initiating request is labeled Replay. The transaction label preserves the request's attack annotation while retaining conflict metadata."
+  }
+}

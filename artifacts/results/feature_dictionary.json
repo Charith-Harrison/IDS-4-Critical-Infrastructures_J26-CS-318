@@ -1,0 +1,161 @@
+{
+  "model_features": {
+    "trans_id_delta": {
+      "type": "float",
+      "description": "Modulo-65536 difference between current request TID and previous request TID in this communication channel. Normal Modbus sequentially increments by 1.",
+      "supported_by": "MBAP Header mbtcp_trans_id",
+      "relevance": "Replays often exhibit abrupt TID jumps or backwards wraps compared to the active session."
+    },
+    "trans_id_raw_diff": {
+      "type": "float",
+      "description": "Unbounded numerical difference (curr_tid - prev_tid) in communication channel.",
+      "supported_by": "MBAP Header mbtcp_trans_id",
+      "relevance": "Captures raw positive or negative jumps when replayed bursts disrupt monotonic sequence."
+    },
+    "tid_previously_seen": {
+      "type": "binary (0.0 or 1.0)",
+      "description": "1.0 if current TID was observed in the preceding bounded history window (default 100 transactions) in this channel, else 0.0.",
+      "supported_by": "Channel TID history deque",
+      "relevance": "Direct indicator of TID reuse within a short operational timeframe."
+    },
+    "request_iat": {
+      "type": "float (seconds)",
+      "description": "Inter-arrival time between this request and the preceding request in this communication channel.",
+      "supported_by": "Packet capture timestamps",
+      "relevance": "Attacker burst injection or replay timing deviations disrupt normal periodic polling rates."
+    },
+    "time_since_identical_cmd": {
+      "type": "float (seconds)",
+      "description": "Elapsed seconds since the exact same observed-command fingerprint was sent in this channel (capped at 3600.0s sentinel if not yet observed).",
+      "supported_by": "Observed-command fingerprint history",
+      "relevance": "Measures polling periodicity and highlights burst repetition of replayed commands."
+    },
+    "is_repeated_command": {
+      "type": "binary (0.0 or 1.0)",
+      "description": "1.0 if this observed-command fingerprint was previously observed in the channel history, else 0.0.",
+      "supported_by": "Observed-command fingerprint cache",
+      "relevance": "Contextual indicator that a command has prior presence in the capture."
+    },
+    "repeated_cmd_count_window": {
+      "type": "float",
+      "description": "Count of identical observed-command fingerprints occurring in the trailing time window (default 5.0 seconds).",
+      "supported_by": "Trailing time-window queue",
+      "relevance": "Captures anomalous clustering of repeated commands indicative of rapid replay."
+    },
+    "duplicate_cmd_freq": {
+      "type": "float (events/sec)",
+      "description": "Rate of duplicate commands per second within the trailing time window.",
+      "supported_by": "Trailing time-window queue",
+      "relevance": "Normalizes command repetition across time."
+    },
+    "outstanding_requests": {
+      "type": "float",
+      "description": "Number of currently active, pending requests in the channel awaiting response when this request was sent.",
+      "supported_by": "Transaction context tracker",
+      "relevance": "Replay floods often generate backlog without corresponding responses."
+    },
+    "modbus_func_code": {
+      "type": "float (integer code)",
+      "description": "Modbus Function Code (e.g., 1=Read Coils, 3=Read Holding Registers, 4=Read Input Registers).",
+      "supported_by": "Modbus PDU Header",
+      "relevance": "Specifies command type and operation semantics."
+    },
+    "mbtcp_unit_id": {
+      "type": "float",
+      "description": "Modbus Unit ID / Slave address in MBAP header.",
+      "supported_by": "MBAP Header",
+      "relevance": "Target device sub-address."
+    },
+    "modbus_ref_num": {
+      "type": "float",
+      "description": "Starting register reference / memory address queried by the command.",
+      "supported_by": "Modbus PDU request payload",
+      "relevance": "Industrial register target."
+    },
+    "modbus_word_cnt": {
+      "type": "float",
+      "description": "Number of 16-bit words requested.",
+      "supported_by": "Modbus PDU request payload",
+      "relevance": "Quantity of registers requested."
+    },
+    "modbus_bit_cnt": {
+      "type": "float",
+      "description": "Number of discrete bits requested.",
+      "supported_by": "Modbus PDU request payload",
+      "relevance": "Quantity of coil/discrete inputs requested."
+    },
+    "modbus_val": {
+      "type": "float",
+      "description": "Modbus write value or single parameter.",
+      "supported_by": "Modbus PDU request payload",
+      "relevance": "Command parameter value."
+    },
+    "payload_len": {
+      "type": "float (bytes)",
+      "description": "Total Modbus TCP application payload length in bytes.",
+      "supported_by": "TCP frame headers",
+      "relevance": "PDU size consistency."
+    },
+    "is_matched": {
+      "type": "binary (0.0 or 1.0)",
+      "description": "1.0 if a matching server response was received within timeout, 0.0 otherwise.",
+      "supported_by": "Transaction reconstruction pairing",
+      "relevance": "Validates whether the transaction was acknowledged by an active server."
+    },
+    "is_timeout": {
+      "type": "binary (0.0 or 1.0)",
+      "description": "1.0 if the transaction timed out with missing response, 0.0 otherwise.",
+      "supported_by": "Transaction reconstruction pairing",
+      "relevance": "Replays injected into closed or invalid sessions often produce no server response."
+    },
+    "is_ambiguous": {
+      "type": "binary (0.0 or 1.0)",
+      "description": "1.0 if multiple identical outstanding requests matched the response, 0.0 otherwise.",
+      "supported_by": "Transaction reconstruction pairing",
+      "relevance": "Identifies transaction collision caused by replayed duplicate TIDs."
+    },
+    "response_latency": {
+      "type": "float (seconds)",
+      "description": "Round-trip time (response_time - request_time) for matched transactions, or imputed timeout sentinel if missing.",
+      "supported_by": "Reconstructed transaction timestamps",
+      "relevance": "Legitimate Modbus responses exhibit consistent low server latency."
+    },
+    "has_response_latency": {
+      "type": "binary (0.0 or 1.0)",
+      "description": "Missingness indicator: 1.0 if response_latency is genuinely observed, 0.0 if imputed due to timeout.",
+      "supported_by": "Missing value indicator for latency",
+      "relevance": "Allows the tree model to distinguish genuine low-latency responses from imputed timeouts."
+    }
+  },
+  "excluded_features": [
+    "is_attack",
+    "attack_category",
+    "attack_sub_type",
+    "target_is_attack",
+    "source_file",
+    "dataset_category",
+    "file_source",
+    "capture_id",
+    "partition",
+    "split_method",
+    "transaction_id",
+    "request_row",
+    "response_row",
+    "request_frame",
+    "response_frame",
+    "request_timestamp",
+    "response_timestamp",
+    "timestamp",
+    "src_ip",
+    "dst_ip",
+    "src_port",
+    "dst_port",
+    "frame_number",
+    "original_row_id",
+    "client_ip",
+    "server_ip",
+    "client_port",
+    "server_port",
+    "label_conflict"
+  ]
+}

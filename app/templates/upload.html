@@ -1,0 +1,208 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-header">
+    <div class="page-title-group">
+        <h2>Dataset Upload &amp; Provenance Configuration</h2>
+    </div>
+</div>
+
+<div id="statusAlert" class="alert-box" style="display: none;"></div>
+
+<div class="grid-2-col">
+    <!-- Upload Section 1: Normal Traffic Dataset -->
+    <div class="card upload-card" id="cardNormalUpload">
+        <div class="card-header">
+            <h3>Upload Normal Traffic File</h3>
+            <span class="badge badge-normal">normal_traffic</span>
+        </div>
+        <div class="card-body">
+            <p class="text-muted" style="margin-bottom: 1rem; font-size: 0.85rem;">
+                Accepted formats: <strong>.csv</strong>, <strong>.pcap</strong>, <strong>.pcapng</strong> (max 200 MB).
+            </p>
+
+            <!-- Drop Zone -->
+            <div class="upload-dropzone" id="dropzoneNormal" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event, 'normal_traffic')">
+                <input type="file" id="fileInputNormal" class="file-input-hidden" accept=".csv,.pcap,.pcapng" onchange="handleFileSelect(event, 'normal_traffic')">
+                <div class="dropzone-content">
+                    <span class="dropzone-icon">📁</span>
+                    <p class="dropzone-title">Drag &amp; drop normal traffic file here</p>
+                    <p class="dropzone-sub">or click to browse from local disk</p>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="document.getElementById('fileInputNormal').click()">
+                        Browse Files
+                    </button>
+                </div>
+            </div>
+
+            <!-- Upload Progress Bar -->
+            <div class="upload-progress-container" id="progressContainerNormal" style="display: none; margin-top: 1rem;">
+                <div class="progress-bar-label">
+                    <span id="progressLabelNormal">Uploading...</span>
+                    <span id="progressPercentNormal">0%</span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill" id="progressFillNormal" style="width: 0%;"></div>
+                </div>
+            </div>
+
+            <!-- Active File Info -->
+            <div class="active-file-box" id="activeBoxNormal" style="margin-top: 1.25rem;">
+                <div class="file-info-header">
+                    <strong>Active Normal Dataset:</strong>
+                </div>
+                <div class="file-info-details">
+                    <div class="file-info-row">
+                        <span class="text-muted">Filename:</span>
+                        <code id="nameNormal">{{ active_datasets.normal_filename | default('normal_traffic_baseline.csv') }}</code>
+                    </div>
+                    <div class="file-info-row">
+                        <span class="text-muted">File Size:</span>
+                        <span id="sizeNormal">
+                            {% if active_datasets.normal_size %}
+                                {{ (active_datasets.normal_size / (1024 * 1024)) | round(2) }} MB
+                            {% else %}
+                                1.12 MB (Benchmark Default)
+                            {% endif %}
+                        </span>
+                    </div>
+                    <div class="file-info-row">
+                        <span class="text-muted">Format:</span>
+                        <span class="badge badge-secondary" id="typeNormal">{{ active_datasets.normal_type | default('CSV') | upper }}</span>
+                    </div>
+                </div>
+                <div class="file-actions" style="margin-top: 0.75rem; display: flex; gap: 0.5rem;">
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="document.getElementById('fileInputNormal').click()">
+                        Replace File
+                    </button>
+                    <button type="button" class="btn btn-outline-danger btn-sm" onclick="removeDataset('normal_traffic')">
+                        Reset to Default
+                    </button>
+                </div>
+            </div>
+            
+            <div id="uploadMsgNormal" class="upload-feedback" style="display: none; margin-top: 0.75rem;"></div>
+        </div>
+    </div>
+
+    <!-- Upload Section 2: Replay Attack Dataset -->
+    <div class="card upload-card" id="cardReplayUpload">
+        <div class="card-header">
+            <h3>Upload Replay Attack Traffic File</h3>
+            <span class="badge badge-attack">replay_traffic</span>
+        </div>
+        <div class="card-body">
+            <p class="text-muted" style="margin-bottom: 1rem; font-size: 0.85rem;">
+                Accepted formats: <strong>.csv</strong>, <strong>.pcap</strong>, <strong>.pcapng</strong> (max 200 MB).
+            </p>
+
+            <!-- Drop Zone -->
+            <div class="upload-dropzone" id="dropzoneReplay" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event, 'replay_traffic')">
+                <input type="file" id="fileInputReplay" class="file-input-hidden" accept=".csv,.pcap,.pcapng" onchange="handleFileSelect(event, 'replay_traffic')">
+                <div class="dropzone-content">
+                    <span class="dropzone-icon">📁</span>
+                    <p class="dropzone-title">Drag &amp; drop replay attack file here</p>
+                    <p class="dropzone-sub">or click to browse from local disk</p>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="document.getElementById('fileInputReplay').click()">
+                        Browse Files
+                    </button>
+                </div>
+            </div>
+
+            <!-- Upload Progress Bar -->
+            <div class="upload-progress-container" id="progressContainerReplay" style="display: none; margin-top: 1rem;">
+                <div class="progress-bar-label">
+                    <span id="progressLabelReplay">Uploading...</span>
+                    <span id="progressPercentReplay">0%</span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill" id="progressFillReplay" style="width: 0%;"></div>
+                </div>
+            </div>
+
+            <!-- Active File Info -->
+            <div class="active-file-box" id="activeBoxReplay" style="margin-top: 1.25rem;">
+                <div class="file-info-header">
+                    <strong>Active Replay Dataset:</strong>
+                </div>
+                <div class="file-info-details">
+                    <div class="file-info-row">
+                        <span class="text-muted">Filename:</span>
+                        <code id="nameReplay">{{ active_datasets.replay_filename | default('replay_attacks.csv') }}</code>
+                    </div>
+                    <div class="file-info-row">
+                        <span class="text-muted">File Size:</span>
+                        <span id="sizeReplay">
+                            {% if active_datasets.replay_size %}
+                                {{ (active_datasets.replay_size / (1024 * 1024)) | round(2) }} MB
+                            {% else %}
+                                0.78 MB (Benchmark Default)
+                            {% endif %}
+                        </span>
+                    </div>
+                    <div class="file-info-row">
+                        <span class="text-muted">Format:</span>
+                        <span class="badge badge-secondary" id="typeReplay">{{ active_datasets.replay_type | default('CSV') | upper }}</span>
+                    </div>
+                </div>
+                <div class="file-actions" style="margin-top: 0.75rem; display: flex; gap: 0.5rem;">
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="document.getElementById('fileInputReplay').click()">
+                        Replace File
+                    </button>
+                    <button type="button" class="btn btn-outline-danger btn-sm" onclick="removeDataset('replay_traffic')">
+                        Reset to Default
+                    </button>
+                </div>
+            </div>
+
+            <div id="uploadMsgReplay" class="upload-feedback" style="display: none; margin-top: 0.75rem;"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Primary Action: Upload & Process Datasets -->
+<div class="card" style="margin-top: 1.5rem;">
+    <div class="card-body" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+        <div>
+            <h4 style="margin: 0; font-size: 1.05rem;">Process &amp; Register Active Datasets</h4>
+        </div>
+        <button id="btnUploadAndProcess" class="btn btn-primary" onclick="uploadAndProcessDatasets()">
+            <span class="btn-icon">⚡</span> Upload &amp; Process Datasets
+        </button>
+    </div>
+</div>
+
+<!-- Session Summary Card -->
+<div class="card" id="cardSessionSummary" style="margin-top: 1.5rem; {% if not session_data %}display: none;{% endif %}">
+    <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+        <h3>Active Processing Session Summary</h3>
+        <span class="badge badge-success" id="badgeSessionStatus">Stage A Ready</span>
+    </div>
+    <div class="card-body">
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-label">Normal Records</div>
+                <div class="metric-value text-normal" id="valSessionNormalRows">
+                    {{ session_data.normal_rows if session_data else '-' }}
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Replay Records</div>
+                <div class="metric-value text-danger" id="valSessionReplayRows">
+                    {{ session_data.replay_rows if session_data else '-' }}
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Timestamp Integrity</div>
+                <div class="metric-value text-success" id="valSessionTimestamps">
+                    {{ "Valid & Verified" if (session_data and session_data.timestamps_valid) else "Verified" }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="next-step-bar" style="margin-top: 2rem;">
+    <span>Files configured. Ready to verify schema and audit labels?</span>
+    <a href="{{ url_for('main.audit_page') }}" class="btn btn-primary" id="btnProceedToAudit">Proceed to Stage A: Data Audit &rarr;</a>
+</div>
+{% endblock %}

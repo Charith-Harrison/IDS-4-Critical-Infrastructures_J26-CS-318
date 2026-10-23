@@ -1,149 +1,200 @@
-# Command and Response Injection Detection in Modbus/TCP
+# Command and Response Injection Detection in Modbus/TCP Using Context-Aware Command Analysis
 
-IT4010, J26-CS-318 (RP3). Progress version, roughly 70% of the planned work.
+**J26-CS-318 — Preliminary Binary Injection Detection Model (approximately 70% implementation).**
 
-This component classifies Modbus/TCP request events using the surrounding command context (what came before, whether the register was seen in normal traffic, timing, request/response pairing).
+The research contribution is contextual protocol feature engineering, evaluated
+by comparing an isolated-event Random Forest with a context-aware Random Forest
+on identical partitions and candidate settings. Random Forest was selected
+because it is suitable for structured contextual features; performance is
+evaluated experimentally.
 
-**Current status.** The progress model supports Normal and Command Injection only. Verified response-injection training examples are unavailable in the supplied datasets, so final three-class implementation remains pending. Held-out evaluation, ablation, full explainability and fusion-layer integration are also still to do.
+**The current dataset combines command and response injection under one attack
+label. Separate command-injection and response-injection classification will be
+enabled when the verified three-class dataset is integrated.**
 
-## Layout
+Current classes are exactly `Normal` and `Command_Response_Injection`. Request
+direction never determines a target. The old reconstructed Command Injection
+labels and models are no longer used.
 
-```
-app/          Streamlit dashboard
-src/          data loading, pairing, features, training, inference
-tests/        pytest suite
-data/raw/     the two source CSVs (unchanged)
-data/splits/  80/20 split by capture; test.parquet is kept for the final stage
-models/       saved baseline and contextual Random Forests plus their metadata
-results/      audit reports, feature audit, validation metrics, progress notes
-docs/         data dictionary, model card, limitations
-```
+## Installation
 
-## Setup and run (Windows)
+The rebuild was verified with Python 3.14 on Windows (Python 3.12+ is required by
+the pinned dependencies). Use a fresh virtual
+environment when copying the repository to another machine. Exact package
+versions are in requirements.txt and model metadata; the pinned scientific
+packages require a compatible recent Python release.
 
-```
-py -m venv .venv
-.\.venv\Scripts\python.exe -m pip install --upgrade pip
+```powershell
+py -3.14 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe -m streamlit run app\dashboard.py
 ```
 
-The dashboard opens at http://localhost:8501.
+With the virtual environment activated, the workflow is:
 
-Open **Preliminary Model Performance** to compare the baseline and contextual
-models using saved grouped out-of-fold predictions. It shows accuracy,
-balanced accuracy, macro and per-class precision/recall/F1, false-positive and
-false-negative rates, ROC-AUC, PR-AUC, confusion matrices, ROC and
-precision-recall curves, fold stability, feature counts, training time and
-inference latency. These are development-validation results, not final
-held-out test scores; the final test partition remains untouched.
-
-Rebuild everything from the raw CSVs (a few minutes):
-
-```
-.\.venv\Scripts\python.exe run_pipeline.py all
+```powershell
+python scripts/inspect_dataset.py
+python scripts/prepare_data.py
+python scripts/train_models.py
+python scripts/evaluate_models.py
+python scripts/run_demo.py
+streamlit run app/dashboard.py
+pytest
 ```
 
-Single steps: `prep`, `train`, `verify`, `audit`, `compare`. Checks:
+For an integration check of all five pages with both saved models, run
+`python scripts/verify_dashboard.py`. This needs local loopback sockets for
+Streamlit's test runner; it does not start a persistent web server.
 
-```
-.\.venv\Scripts\python.exe -m pytest
-.\.venv\Scripts\python.exe -m black --check app src tests run_pipeline.py
-.\.venv\Scripts\python.exe -m ruff check app src tests run_pipeline.py
-```
+Without activation, replace `python` with `.\.venv\Scripts\python.exe` and use
+`.\.venv\Scripts\python.exe -m streamlit run app/dashboard.py` or
+`.\.venv\Scripts\python.exe -m pytest`. These commands use project-relative paths.
+The first four scripts accept `--config path/to/config.yaml` for explicit experiments.
+The dashboard uses the primary `config/config.yaml`.
 
-Run the model diagnostics after training:
+## Dataset placement and inspection
 
-```
-.\.venv\Scripts\python.exe run_pipeline.py evaluate
-```
-
-This reuses saved capture-grouped out-of-fold predictions for validation,
-checks train/test capture separation, reports function-code label rates and
-per-code performance, ranks fitted Random Forest feature importances, runs
-contextual feature-group ablations, and evaluates the saved models on the
-capture-grouped held-out test partition. It also reports in-sample training
-scores and an FC5-only diagnostic. Outputs are written to
-`results\evaluation_diagnostics\`.
-
-The held-out test partition was evaluated once on 2026-10-23 at the user's
-request. Do not use its results for feature selection, threshold/model tuning,
-or repeated model selection; obtain new independent data for further
-experiments. The FC5 test subset has very few Normal examples, and labels are
-not independently verified, so even perfect scores are not evidence of
-deployment readiness. Diagnostics additionally include class-wise summaries
-for all seven baseline features and single-feature grouped OOF tests.
-
-## Candidate-model comparison
-
-The comparison uses only the existing capture-grouped development file
-(`data/splits/train.parquet`) and the split manifest. It does not open the
-protected final 20% test partition. The existing event feature builder and
-capture grouping are reused. Candidate pipelines fit median imputation (and,
-for Logistic Regression and LinearSVC, scaling) within each validation fold.
-Label-informed normal-access and value-range profile features are excluded
-from the candidate feature set because they can reproduce the current
-function/register-based label rule.
-
-Run the documented preprocessing step if the saved split files need to be
-rebuilt:
-
-```
-.\.venv\Scripts\python.exe run_pipeline.py prep
-```
-
-Run candidate-model comparison (Experiment A algorithm selection and separate
-Experiment B isolated-versus-contextual Random Forest comparison):
-
-```
-.\.venv\Scripts\python.exe -m scripts.compare_models
-```
-
-Alternatively, after preprocessing, run:
-
-```
-.\.venv\Scripts\python.exe run_pipeline.py compare
-```
-
-Inspect Experiment A's summary and table:
-
-```
-Get-Content reports\model_comparison_summary.md
-Import-Csv reports\model_comparison.csv | Format-Table
-```
-
-The separate Experiment B results are in
-`reports\context_feature_experiment_summary.md`,
-`reports\context_feature_experiment.csv`, and
-`reports\context_feature_experiment.json`. Experiment A's JSON table and three
-plots are `reports\model_comparison.json`,
-`reports\model_comparison_macro_f1.png`,
-`reports\model_comparison_attack_recall.png`, and
-`reports\model_comparison_false_positive_rate.png`.
-
-Load the selected fitted pipeline and its feature schema/metadata:
-
-```
-.\.venv\Scripts\python.exe -c "from scripts.compare_models import load_selected_candidate; artifact = load_selected_candidate(); print(artifact['metadata'])"
-```
-
-The fitted pipeline and sidecars are saved under `models\` as
-`selected_candidate_model.joblib`, `selected_candidate_feature_names.json`,
-and `selected_candidate_model.json`. Model selection prioritizes macro F1,
-then Command Injection recall, false-positive rate, fold stability and
-latency; models over the 100 ms/event target are not operationally acceptable.
-
-## Data
-
-Put these in `data/raw/` if they are missing:
+Place these original files in `data/raw/`:
 
 - `normal_traffic_baseline.csv`
 - `command_response_injection_attacks.csv`
 
-Use only authorized public research data or authorized laboratory traffic.
+The current files contain 150,000 and 192,920 records respectively. Their combined
+labels are 247,960 Normal and 94,960 Command_Response_Injection. The inspection
+script records schemas, missingness, duplicates, labels, constant fields and
+suspicious identifiers under `results/metrics/dataset_audit.json` and `.md`.
+Raw files are read-only inputs and their checksums are recorded.
 
-## Things to know before presenting
+## Architecture and outputs
 
-- The labels are reconstructed from the dataset, not independently verified. Command Injection means an attack-labelled write to a function/register combination that never appears as a write in the normal file.
-- Because of that, the cross-validation scores are close to perfect and a simple rule gives the same result. Read them as preliminary. Details are in `docs/limitations.md`.
-- The final 20% test partition has not been used for anything. Code that reads data goes through a guard that blocks it.
+```text
+app/dashboard.py          Streamlit entry point and five modular pages
+config/config.yaml        modes, dataset, features, split and RF settings
+src/                      ingestion → validation → labels → events → features
+                          → training/evaluation → inference/explanations
+scripts/                  reproducible CLI commands
+tests/                    small synthetic software fixtures
+data/raw/                 unchanged original data (ignored by Git)
+data/processed/           events.parquet, quarantine.parquet (ignored by Git)
+data/manifests/           source hashes, exclusions, grouping, split provenance
+models/baseline/           isolated-event pipeline and metadata
+models/contextual/         proposed pipeline and metadata
+results/metrics/          audit, validation and holdout comparison
+results/predictions/      API demo and measured predictions
+results/figures/          confusion-matrix figure
+docs/                    audit record, feature contract, limitations
+legacy_backup/           preserved pre-rebuild project (ignored by Git)
+experiments/             automatic archives on dataset/configuration changes
+```
+
+`src/label_mapper.py` centralizes both modes. `src/leakage_guard.py` enforces an
+exact feature whitelist, including order and numeric types. `src/event_builder.py`
+uses session/capture boundaries and causal partial pairing. The baseline contains
+current-event features only; the contextual RF adds enabled sequence, pairing,
+access, timing and value groups. Each feature has a missingness indicator.
+`src/feature_profiles.py` fits training-only reference quantiles for explanation.
+
+## Preprocessing and evaluation
+
+Preprocessing normalizes schemas, preserves original row IDs, quarantines invalid
+records, checks duplicates/conflicting labels, and writes a manifest. The current
+data retains all 342,920 rows. Six supplied normal capture IDs and six inferred
+attack reset segments are kept disjoint across train, validation and test.
+
+Train: 156,376 rows; validation: 70,984; test: 115,560. Group fractions need not
+equal row fractions. Validation has only 98 attack-labelled rows; this limits
+selection reliability. If reliable groups cannot be formed, the code can use
+chronological blocks, resetting context at boundaries; it refuses unsupported
+random row splitting and partitions that lack configured classes.
+
+Both RFs use 200 trees and the same two reduced candidates. Median imputation is
+fitted on training rows only. Selection uses validation macro F1, never test
+scores; the selected model remains fitted on train only. Configurable class
+weighting avoids test resampling. There is no oversampling.
+
+Run evaluation once after training. Inspect `results/metrics/comparison.md`,
+`comparison.csv`, and `comparison.json` for measured accuracy, macro/weighted
+metrics, attack recall, false-positive rate, binary or multiclass AUC, confusion
+matrices and latency. PR-AUC is average precision; latency excludes feature
+construction. Repeated evaluation of the same hashes returns the saved report.
+Retraining the identical evaluated experiment is blocked. When input checksums
+or configuration change, inspection/preprocessing automatically archives the old
+models, generated data, results and configuration under `experiments/` before
+starting a new experiment. Original raw data, source and research docs stay in place.
+
+The legacy project already evaluated these source data. This is **preliminary
+internal evaluation, not an untouched final research holdout**. High scores can
+reflect scenario/function-code artifacts even with the feature whitelist. Do
+not claim contextual improvement unless the measured comparison supports it.
+
+## Dashboard and inference
+
+The five pages are Security Overview, Detection Events, Event Investigation,
+Model Performance and System Health. The default view predicts the first 3,000
+validation events, labelled as a demo. Upload a CSV to analyze an ordered batch;
+each batch resets context and all invalid rows remain visible. The UI does not
+train or evaluate models. It displays the preliminary limitation prominently.
+
+Programmatic inference:
+
+```python
+import pandas as pd
+from src.inference import load_model, predict_csv, prediction_records
+from src.utils import load_config
+
+model = load_model('contextual', load_config())
+predictions, health = predict_csv(pd.read_csv('data/raw/my_batch.csv'), model)
+records = prediction_records(predictions)
+```
+
+Records include event_id, timestamp, prediction, confidence, function_code,
+address_or_register, evidence, model_version, model_mode, processing_status and
+invalid_reason. Confidence is an uncalibrated RF vote fraction. Explanations
+show observed feature evidence and global importance, not causal local attribution.
+Only locally trained trusted joblib artifacts are loaded; uploads are CSV only.
+
+## Ablation support
+
+Set `features.sequence`, `pairing`, `access`, `timing` or `value` to false to
+exclude that group. Set `features.windows` to `[3]`, `[5]`, `[10]`, or a combination.
+Reprocess and retrain to keep feature/model schemas consistent. Use development
+validation for ablations; do not tune against the already evaluated holdout.
+The full scientific ablation study remains pending.
+
+## Transition to Final Three-Class Dataset
+
+1. Place the properly labelled new CSV(s) in `data/raw/`; never overwrite originals.
+2. Update `config/config.yaml`: set `model_mode: final_three_class`, replace
+   `dataset.files`, set `dataset.label_column`, set `verified_labels: true`, and
+   provide `label_evidence` referencing the verified source/mapping documentation.
+3. For canonical targets use `label_scheme: canonical` with exactly `Normal`,
+   `Command_Injection`, `Response_Injection`. For verified original MSU categories,
+   use `label_scheme: msu_numeric`: 0→Normal; 1/2→Response_Injection;
+   3/4/5→Command_Injection; 6/7→explicitly excluded and recorded. This planned
+   mapping must be checked against the actual supplied dataset documentation.
+4. Configure `column_map` for actual raw-to-canonical protocol names,
+   `timestamp_unit`, and preferably a verified `group_column`. Disable inferred
+   reset grouping when verified capture/session identifiers are available.
+5. Run inspect, prepare, train, evaluate, demo and tests using the commands above.
+   The changed configuration automatically archives the current experiment under
+   `experiments/`; no manual deletion or application redesign is required.
+   Inspect label counts, exclusions, class-complete partitions and source evidence
+   before accepting results. The saved class schema automatically drives the UI.
+
+CIC targets require external, verified packet/log preprocessing with original
+attack information, direction, request/response relationships and supporting
+evidence. This application does not manufacture that ground truth. Missing
+protocol fields become explicit missing features; complete PCAP reconstruction
+still requires a dedicated ingestion step.
+
+## Tests and current limitations
+
+Tests exercise schema/range checks, label mapping, leakage protection, chronological
+order, causal windows, session/partition separation, partial pairing, missingness,
+model reload, valid predictions/confidence, deterministic inference and a synthetic
+three-class software path. Synthetic fixtures are not used in research metrics.
+
+See `docs/research_limitations.md` for pairing, exporter semantics, grouping,
+prior test exposure and probability limitations, and `docs/rebuild_audit.md` for
+the preserved old project. Final verified labels/data, full CIC reconstruction,
+external MSU validation, full ablation/hyperparameter experiments, integration
+with other components and final research conclusions remain pending.

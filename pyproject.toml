@@ -1,9 +1,13 @@
-# Project metadata and tool configuration (Black, Ruff, pytest).
 [project]
-name = "command-response-detection-progress-70"
-version = "0.1.0"
-description = "Progress-stage (approx. 70%) Modbus/TCP command/response injection detection component, IT4010 J26-CS-318"
-requires-python = ">=3.10"
+name = "modbus-context-injection-detection"
+version = "2.0.0"
+description = "J26-CS-318 preliminary binary Modbus/TCP contextual detection research"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "--basetemp=.pytest_tmp"
 
 [tool.black]
 line-length = 120
@@ -14,10 +18,5 @@ line-length = 120
 target-version = "py310"
 
 [tool.ruff.lint]
-select = ["E", "F", "W", "I"]
-# Long prose strings (audit justifications) cannot be wrapped by Black; code lines still follow 120 columns.
-ignore = ["E501"]
-
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-pythonpath = ["."]
+select = ["E", "F", "I"]
+ignore = ["E501", "E402"]

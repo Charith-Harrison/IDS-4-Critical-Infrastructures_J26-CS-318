@@ -1,1 +1,0 @@
-{"random_state": 42, "max_upload_mb": 50, "feature_schema_version": "fs-1.0", "note": "Authoritative constants live in src/utils/config.py"}

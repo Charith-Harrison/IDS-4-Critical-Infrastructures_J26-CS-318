@@ -1,55 +1,55 @@
-# Shared test helpers. Small hand-written packet frames are UNIT-TEST inputs
-# only (to exercise edge cases deterministically); they are never written to
-# data/ and never used for training. Integration tests use real dev records.
-from __future__ import annotations
+"""Small synthetic protocol fixtures for software checks, never reported as research data."""
 
-import sys
-from pathlib import Path
+import copy
 
+import numpy as np
 import pandas as pd
 import pytest
 
-ROOT = Path(__file__).resolve().parents[1]
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
-
-from src.data.loader import REQUIRED_COLUMNS  # noqa: E402
-
-
-def mk_row(ts, frame, is_req, tid, fc, ref=1, val=1, src="10.0.0.1", dst="10.0.0.2", sport=40000, exc=0):
-    """Build one raw packet row with every required column."""
-    a, b = (src, dst) if is_req else (dst, src)
-    row = {c: 0 for c in REQUIRED_COLUMNS}
-    row.update(
-        frame_number=frame,
-        timestamp=ts,
-        frame_len=78,
-        src_ip=a,
-        dst_ip=b,
-        src_port=sport if is_req else 502,
-        dst_port=502 if is_req else sport,
-        payload_len=12,
-        is_request=is_req,
-        mbtcp_trans_id=tid,
-        mbtcp_len=6,
-        mbtcp_unit_id=1,
-        modbus_func_code=fc,
-        modbus_ref_num=ref,
-        modbus_val=val,
-        is_exception=exc,
-        tcp_flags_ack=1,
-        tcp_flags_psh=1,
-    )
-    return row
+from src.event_builder import build_events
+from src.preprocessing import preprocess_frame
+from src.utils import load_config
 
 
 @pytest.fixture
-def raw_pairs() -> pd.DataFrame:
-    """Three requests: one answered, one unanswered, plus one orphan response."""
-    rows = [
-        mk_row(1000.0, 1, 1, 1, 3, 5),
-        mk_row(1000.1, 2, 0, 1, 3, 5),
-        mk_row(1001.0, 3, 1, 2, 6, 9, 7),  # request with no response
-        mk_row(1002.0, 4, 0, 99, 3, 5),  # orphan response
+def cfg():
+    config = copy.deepcopy(load_config())
+    config["training"]["n_estimators"] = 8
+    config["training"]["n_jobs"] = 1
+    config["training"]["candidates"] = [
+        {"max_depth": 4, "min_samples_leaf": 1, "max_features": "sqrt", "class_weight": "balanced"}
     ]
-    return pd.DataFrame(rows)
+    config["features"]["windows"] = [3, 5, 10]
+    return config
+
+
+@pytest.fixture
+def raw():
+    n = 48
+    return pd.DataFrame(
+        {
+            "frame_number": np.arange(n),
+            "timestamp": 1700000000 + np.arange(n) * 0.1,
+            "src_ip": ["client" if i % 2 == 0 else "server" for i in range(n)],
+            "dst_ip": ["server" if i % 2 == 0 else "client" for i in range(n)],
+            "src_port": [1200 if i % 2 == 0 else 502 for i in range(n)],
+            "dst_port": [502 if i % 2 == 0 else 1200 for i in range(n)],
+            "mbtcp_trans_id": np.arange(n) // 2,
+            "mbtcp_unit_id": 1,
+            "modbus_func_code": [3 if i < 24 else 5 for i in range(n)],
+            "modbus_ref_num": np.arange(n) % 4,
+            "modbus_val": np.arange(n) % 7,
+            "modbus_word_cnt": 1,
+            "modbus_bit_cnt": 0,
+            "modbus_byte_cnt": 0,
+            "is_request": [int(i % 2 == 0) for i in range(n)],
+            "is_exception": 0,
+            "attack_category": ["Normal" if i < 24 else "Command_Response_Injection" for i in range(n)],
+            "file_source": "software-test-capture",
+        }
+    )
+
+
+@pytest.fixture
+def events(raw, cfg):
+    return build_events(preprocess_frame(raw, cfg, "fixture.csv"), cfg)

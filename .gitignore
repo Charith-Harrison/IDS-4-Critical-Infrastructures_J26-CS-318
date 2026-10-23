@@ -1,4 +1,6 @@
 # Python environments, bytecode, and packaging
+legacy_backup/
+experiments/
 .venv/
 venv/
 env/
@@ -10,6 +12,7 @@ dist/
 
 # Test, lint, and coverage outputs
 .pytest_cache/
+.pytest_tmp/
 .ruff_cache/
 .mypy_cache/
 .coverage
@@ -40,6 +43,10 @@ coverage.xml
 *.joblib
 *.pkl
 *.pickle
+/results/predictions/*.parquet
+
+# Local Streamlit cache
+.streamlit/cache/
 
 # Machine-specific editor files, logs, and OS metadata
 .idea/

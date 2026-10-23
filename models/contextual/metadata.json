@@ -1,0 +1,706 @@
+{
+  "model_type": "RandomForestClassifier",
+  "model_kind": "contextual",
+  "model_mode": "temporary_binary",
+  "classes": [
+    "Command_Response_Injection",
+    "Normal"
+  ],
+  "class_mapping": {
+    "0": "Command_Response_Injection",
+    "1": "Normal"
+  },
+  "training_date": "2026-10-23T09:25:48.872733+00:00",
+  "model_version": "2.0.0-preliminary",
+  "feature_version": "context-causal-v2",
+  "preprocessing_version": "direct-labels-v2",
+  "configuration": {
+    "project_id": "J26-CS-318",
+    "model_mode": "temporary_binary",
+    "random_seed": 42,
+    "dataset": {
+      "files": [
+        "data/raw/normal_traffic_baseline.csv",
+        "data/raw/command_response_injection_attacks.csv"
+      ],
+      "label_column": "attack_category",
+      "label_scheme": "canonical",
+      "verified_labels": false,
+      "label_evidence": "",
+      "column_map": {},
+      "group_column": "auto",
+      "timestamp_unit": "s",
+      "infer_reset_groups": true
+    },
+    "features": {
+      "windows": [
+        3,
+        5,
+        10
+      ],
+      "sequence": true,
+      "pairing": true,
+      "access": true,
+      "timing": true,
+      "value": true
+    },
+    "events": {
+      "session_idle_seconds": 60,
+      "response_timeout_seconds": 10
+    },
+    "split": {
+      "test_fraction": 0.2,
+      "validation_fraction": 0.2
+    },
+    "training": {
+      "n_estimators": 200,
+      "n_jobs": 2,
+      "candidates": [
+        {
+          "max_depth": 20,
+          "min_samples_leaf": 2,
+          "max_features": "sqrt",
+          "class_weight": "balanced"
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 5,
+          "max_features": "sqrt",
+          "class_weight": "balanced"
+        }
+      ]
+    }
+  },
+  "configuration_hash": "50c0c101a94ef91b00c550b880cc3c8d92fbbc73bb7e8725be86d70cd1bfe7bd",
+  "hyperparameters": {
+    "max_depth": 10,
+    "min_samples_leaf": 5,
+    "max_features": "sqrt",
+    "class_weight": "balanced",
+    "n_estimators": 200
+  },
+  "random_seed": 42,
+  "training_seconds": 98.61480889999075,
+  "feature_count": 114,
+  "feature_names": [
+    "function_code",
+    "is_read",
+    "is_write",
+    "address",
+    "value",
+    "word_count",
+    "bit_count",
+    "byte_count",
+    "unit_id",
+    "is_request",
+    "is_exception",
+    "previous_function_code",
+    "previous_operation",
+    "function_transition",
+    "read_to_write_transition",
+    "write_to_read_transition",
+    "recent_write_ratio_3",
+    "repeated_write_count_3",
+    "function_diversity_3",
+    "recent_write_ratio_5",
+    "repeated_write_count_5",
+    "function_diversity_5",
+    "recent_write_ratio_10",
+    "repeated_write_count_10",
+    "function_diversity_10",
+    "has_matching_pair",
+    "function_match",
+    "unit_match",
+    "transaction_match",
+    "response_delay",
+    "unexpected_response",
+    "expired_requests",
+    "previous_register",
+    "address_change",
+    "repeated_access",
+    "distinct_registers_3",
+    "repeated_access_count_3",
+    "distinct_registers_5",
+    "repeated_access_count_5",
+    "distinct_registers_10",
+    "repeated_access_count_10",
+    "inter_arrival_time",
+    "previous_inter_arrival_time",
+    "rolling_mean_inter_arrival_3",
+    "rolling_std_inter_arrival_3",
+    "rolling_mean_inter_arrival_5",
+    "rolling_std_inter_arrival_5",
+    "rolling_mean_inter_arrival_10",
+    "rolling_std_inter_arrival_10",
+    "previous_value",
+    "value_delta",
+    "absolute_value_delta",
+    "value_direction",
+    "repeated_same_value",
+    "rolling_value_change_3",
+    "rolling_value_change_5",
+    "rolling_value_change_10",
+    "function_code_missing",
+    "is_read_missing",
+    "is_write_missing",
+    "address_missing",
+    "value_missing",
+    "word_count_missing",
+    "bit_count_missing",
+    "byte_count_missing",
+    "unit_id_missing",
+    "is_request_missing",
+    "is_exception_missing",
+    "previous_function_code_missing",
+    "previous_operation_missing",
+    "function_transition_missing",
+    "read_to_write_transition_missing",
+    "write_to_read_transition_missing",
+    "recent_write_ratio_3_missing",
+    "repeated_write_count_3_missing",
+    "function_diversity_3_missing",
+    "recent_write_ratio_5_missing",
+    "repeated_write_count_5_missing",
+    "function_diversity_5_missing",
+    "recent_write_ratio_10_missing",
+    "repeated_write_count_10_missing",
+    "function_diversity_10_missing",
+    "has_matching_pair_missing",
+    "function_match_missing",
+    "unit_match_missing",
+    "transaction_match_missing",
+    "response_delay_missing",
+    "unexpected_response_missing",
+    "expired_requests_missing",
+    "previous_register_missing",
+    "address_change_missing",
+    "repeated_access_missing",
+    "distinct_registers_3_missing",
+    "repeated_access_count_3_missing",
+    "distinct_registers_5_missing",
+    "repeated_access_count_5_missing",
+    "distinct_registers_10_missing",
+    "repeated_access_count_10_missing",
+    "inter_arrival_time_missing",
+    "previous_inter_arrival_time_missing",
+    "rolling_mean_inter_arrival_3_missing",
+    "rolling_std_inter_arrival_3_missing",
+    "rolling_mean_inter_arrival_5_missing",
+    "rolling_std_inter_arrival_5_missing",
+    "rolling_mean_inter_arrival_10_missing",
+    "rolling_std_inter_arrival_10_missing",
+    "previous_value_missing",
+    "value_delta_missing",
+    "absolute_value_delta_missing",
+    "value_direction_missing",
+    "repeated_same_value_missing",
+    "rolling_value_change_3_missing",
+    "rolling_value_change_5_missing",
+    "rolling_value_change_10_missing"
+  ],
+  "feature_groups": {
+    "static": [
+      "function_code",
+      "is_read",
+      "is_write",
+      "address",
+      "value",
+      "word_count",
+      "bit_count",
+      "byte_count",
+      "unit_id",
+      "is_request",
+      "is_exception"
+    ],
+    "sequence": [
+      "previous_function_code",
+      "previous_operation",
+      "function_transition",
+      "read_to_write_transition",
+      "write_to_read_transition",
+      "recent_write_ratio_3",
+      "repeated_write_count_3",
+      "function_diversity_3",
+      "recent_write_ratio_5",
+      "repeated_write_count_5",
+      "function_diversity_5",
+      "recent_write_ratio_10",
+      "repeated_write_count_10",
+      "function_diversity_10"
+    ],
+    "pairing": [
+      "has_matching_pair",
+      "function_match",
+      "unit_match",
+      "transaction_match",
+      "response_delay",
+      "unexpected_response",
+      "expired_requests"
+    ],
+    "access": [
+      "previous_register",
+      "address_change",
+      "repeated_access",
+      "distinct_registers_3",
+      "repeated_access_count_3",
+      "distinct_registers_5",
+      "repeated_access_count_5",
+      "distinct_registers_10",
+      "repeated_access_count_10"
+    ],
+    "timing": [
+      "inter_arrival_time",
+      "previous_inter_arrival_time",
+      "rolling_mean_inter_arrival_3",
+      "rolling_std_inter_arrival_3",
+      "rolling_mean_inter_arrival_5",
+      "rolling_std_inter_arrival_5",
+      "rolling_mean_inter_arrival_10",
+      "rolling_std_inter_arrival_10"
+    ],
+    "value": [
+      "previous_value",
+      "value_delta",
+      "absolute_value_delta",
+      "value_direction",
+      "repeated_same_value",
+      "rolling_value_change_3",
+      "rolling_value_change_5",
+      "rolling_value_change_10"
+    ]
+  },
+  "class_distribution": {
+    "Normal": 127070,
+    "Command_Response_Injection": 29306
+  },
+  "validation_metrics": {
+    "accuracy": 0.9987602840076637,
+    "confusion_matrix": [
+      [
+        98,
+        0
+      ],
+      [
+        88,
+        70798
+      ]
+    ],
+    "classes": [
+      "Command_Response_Injection",
+      "Normal"
+    ],
+    "per_class": {
+      "Command_Response_Injection": {
+        "precision": 0.5268817204301075,
+        "recall": 1.0,
+        "f1-score": 0.6901408450704225,
+        "support": 98.0
+      },
+      "Normal": {
+        "precision": 1.0,
+        "recall": 0.9987585700984679,
+        "f1-score": 0.999378899522882,
+        "support": 70886.0
+      },
+      "accuracy": 0.9987602840076637,
+      "macro avg": {
+        "precision": 0.7634408602150538,
+        "recall": 0.999379285049234,
+        "f1-score": 0.8447598722966523,
+        "support": 70984.0
+      },
+      "weighted avg": {
+        "precision": 0.9993468163051132,
+        "recall": 0.9987602840076637,
+        "f1-score": 0.9989519676884356,
+        "support": 70984.0
+      }
+    },
+    "macro_precision": 0.7634408602150538,
+    "macro_recall": 0.999379285049234,
+    "macro_f1": 0.8447598722966523,
+    "weighted_precision": 0.9993468163051132,
+    "weighted_recall": 0.9987602840076637,
+    "weighted_f1": 0.9989519676884356,
+    "false_positive_rate": 0.0012414299015320374,
+    "attack_recall": 1.0,
+    "roc_auc": 0.999374462704417,
+    "pr_auc": 0.5515465191096867,
+    "auc_definition": "attack-class ROC AUC / average precision",
+    "binary_precision": 0.5268817204301075,
+    "binary_recall": 1.0,
+    "binary_f1": 0.6901408450704225,
+    "batch_inference_ms_per_event": 0.004922192325608994,
+    "single_event_model_latency_ms_median": 37.19970001839101,
+    "latency_scope": "model-only; context construction excluded; hardware-dependent"
+  },
+  "selection": "highest validation macro F1; first candidate wins ties; no test-based selection",
+  "trials": [
+    {
+      "parameters": {
+        "max_depth": 20,
+        "min_samples_leaf": 2,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "validation": {
+        "accuracy": 0.9986616702355461,
+        "confusion_matrix": [
+          [
+            88,
+            10
+          ],
+          [
+            85,
+            70801
+          ]
+        ],
+        "classes": [
+          "Command_Response_Injection",
+          "Normal"
+        ],
+        "per_class": {
+          "Command_Response_Injection": {
+            "precision": 0.5086705202312138,
+            "recall": 0.8979591836734694,
+            "f1-score": 0.6494464944649446,
+            "support": 98.0
+          },
+          "Normal": {
+            "precision": 0.9998587790032623,
+            "recall": 0.9988008915723838,
+            "f1-score": 0.9993295553187436,
+            "support": 70886.0
+          },
+          "accuracy": 0.9986616702355461,
+          "macro avg": {
+            "precision": 0.754264649617238,
+            "recall": 0.9483800376229266,
+            "f1-score": 0.824388024891844,
+            "support": 70984.0
+          },
+          "weighted avg": {
+            "precision": 0.9991806480250184,
+            "recall": 0.9986616702355461,
+            "f1-score": 0.9988465092807114,
+            "support": 70984.0
+          }
+        },
+        "macro_precision": 0.754264649617238,
+        "macro_recall": 0.9483800376229266,
+        "macro_f1": 0.824388024891844,
+        "weighted_precision": 0.9991806480250184,
+        "weighted_recall": 0.9986616702355461,
+        "weighted_f1": 0.9988465092807114,
+        "false_positive_rate": 0.0011991084276161725,
+        "attack_recall": 0.8979591836734694,
+        "roc_auc": 0.999382164061065,
+        "pr_auc": 0.5447888449020816,
+        "auc_definition": "attack-class ROC AUC / average precision",
+        "binary_precision": 0.5086705202312138,
+        "binary_recall": 0.8979591836734694,
+        "binary_f1": 0.6494464944649446,
+        "batch_inference_ms_per_event": 0.004841445959576457,
+        "single_event_model_latency_ms_median": 36.069850000785664,
+        "latency_scope": "model-only; context construction excluded; hardware-dependent"
+      },
+      "seconds": 9.333673799992539
+    },
+    {
+      "parameters": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "validation": {
+        "accuracy": 0.9987602840076637,
+        "confusion_matrix": [
+          [
+            98,
+            0
+          ],
+          [
+            88,
+            70798
+          ]
+        ],
+        "classes": [
+          "Command_Response_Injection",
+          "Normal"
+        ],
+        "per_class": {
+          "Command_Response_Injection": {
+            "precision": 0.5268817204301075,
+            "recall": 1.0,
+            "f1-score": 0.6901408450704225,
+            "support": 98.0
+          },
+          "Normal": {
+            "precision": 1.0,
+            "recall": 0.9987585700984679,
+            "f1-score": 0.999378899522882,
+            "support": 70886.0
+          },
+          "accuracy": 0.9987602840076637,
+          "macro avg": {
+            "precision": 0.7634408602150538,
+            "recall": 0.999379285049234,
+            "f1-score": 0.8447598722966523,
+            "support": 70984.0
+          },
+          "weighted avg": {
+            "precision": 0.9993468163051132,
+            "recall": 0.9987602840076637,
+            "f1-score": 0.9989519676884356,
+            "support": 70984.0
+          }
+        },
+        "macro_precision": 0.7634408602150538,
+        "macro_recall": 0.999379285049234,
+        "macro_f1": 0.8447598722966523,
+        "weighted_precision": 0.9993468163051132,
+        "weighted_recall": 0.9987602840076637,
+        "weighted_f1": 0.9989519676884356,
+        "false_positive_rate": 0.0012414299015320374,
+        "attack_recall": 1.0,
+        "roc_auc": 0.999374462704417,
+        "pr_auc": 0.5515465191096867,
+        "auc_definition": "attack-class ROC AUC / average precision",
+        "binary_precision": 0.5268817204301075,
+        "binary_recall": 1.0,
+        "binary_f1": 0.6901408450704225,
+        "batch_inference_ms_per_event": 0.004922192325608994,
+        "single_event_model_latency_ms_median": 37.19970001839101,
+        "latency_scope": "model-only; context construction excluded; hardware-dependent"
+      },
+      "seconds": 9.216477099980693
+    }
+  ],
+  "dataset_source": {
+    "created_at": "2026-10-23T09:23:42.500683+00:00",
+    "preprocessing_version": "direct-labels-v2",
+    "configuration_hash": "50c0c101a94ef91b00c550b880cc3c8d92fbbc73bb7e8725be86d70cd1bfe7bd",
+    "configuration": {
+      "project_id": "J26-CS-318",
+      "model_mode": "temporary_binary",
+      "random_seed": 42,
+      "dataset": {
+        "files": [
+          "data/raw/normal_traffic_baseline.csv",
+          "data/raw/command_response_injection_attacks.csv"
+        ],
+        "label_column": "attack_category",
+        "label_scheme": "canonical",
+        "verified_labels": false,
+        "label_evidence": "",
+        "column_map": {},
+        "group_column": "auto",
+        "timestamp_unit": "s",
+        "infer_reset_groups": true
+      },
+      "features": {
+        "windows": [
+          3,
+          5,
+          10
+        ],
+        "sequence": true,
+        "pairing": true,
+        "access": true,
+        "timing": true,
+        "value": true
+      },
+      "events": {
+        "session_idle_seconds": 60,
+        "response_timeout_seconds": 10
+      },
+      "split": {
+        "test_fraction": 0.2,
+        "validation_fraction": 0.2
+      },
+      "training": {
+        "n_estimators": 200,
+        "n_jobs": 2,
+        "candidates": [
+          {
+            "max_depth": 20,
+            "min_samples_leaf": 2,
+            "max_features": "sqrt",
+            "class_weight": "balanced"
+          },
+          {
+            "max_depth": 10,
+            "min_samples_leaf": 5,
+            "max_features": "sqrt",
+            "class_weight": "balanced"
+          }
+        ]
+      }
+    },
+    "inputs": [
+      {
+        "input_file": "data/raw/normal_traffic_baseline.csv",
+        "sha256": "5f34db07e4a5efc42f6406a2a81f00198ad797f9dffb57ddcf56184d4244abc0",
+        "source_rows": 150000
+      },
+      {
+        "input_file": "data/raw/command_response_injection_attacks.csv",
+        "sha256": "ae14a45888f5b67b4c04479681324ba150cba2375e2481fbbee9b13921ede13f",
+        "source_rows": 192920
+      }
+    ],
+    "source_rows": 342920,
+    "retained_rows": 342920,
+    "removed_rows": 0,
+    "removal_reasons": {},
+    "label_distribution": {
+      "Normal": 247960,
+      "Command_Response_Injection": 94960
+    },
+    "group_methods": {
+      "inferred_frame_or_time_reset": 192920,
+      "supplied:file_source": 150000
+    },
+    "pair_status": {
+      "pending_at_observation": 209115,
+      "partial_transaction_match": 132455,
+      "unmatched_response": 1350
+    },
+    "feature_groups": {
+      "static": [
+        "function_code",
+        "is_read",
+        "is_write",
+        "address",
+        "value",
+        "word_count",
+        "bit_count",
+        "byte_count",
+        "unit_id",
+        "is_request",
+        "is_exception"
+      ],
+      "sequence": [
+        "previous_function_code",
+        "previous_operation",
+        "function_transition",
+        "read_to_write_transition",
+        "write_to_read_transition",
+        "recent_write_ratio_3",
+        "repeated_write_count_3",
+        "function_diversity_3",
+        "recent_write_ratio_5",
+        "repeated_write_count_5",
+        "function_diversity_5",
+        "recent_write_ratio_10",
+        "repeated_write_count_10",
+        "function_diversity_10"
+      ],
+      "pairing": [
+        "has_matching_pair",
+        "function_match",
+        "unit_match",
+        "transaction_match",
+        "response_delay",
+        "unexpected_response",
+        "expired_requests"
+      ],
+      "access": [
+        "previous_register",
+        "address_change",
+        "repeated_access",
+        "distinct_registers_3",
+        "repeated_access_count_3",
+        "distinct_registers_5",
+        "repeated_access_count_5",
+        "distinct_registers_10",
+        "repeated_access_count_10"
+      ],
+      "timing": [
+        "inter_arrival_time",
+        "previous_inter_arrival_time",
+        "rolling_mean_inter_arrival_3",
+        "rolling_std_inter_arrival_3",
+        "rolling_mean_inter_arrival_5",
+        "rolling_std_inter_arrival_5",
+        "rolling_mean_inter_arrival_10",
+        "rolling_std_inter_arrival_10"
+      ],
+      "value": [
+        "previous_value",
+        "value_delta",
+        "absolute_value_delta",
+        "value_direction",
+        "repeated_same_value",
+        "rolling_value_change_3",
+        "rolling_value_change_5",
+        "rolling_value_change_10"
+      ]
+    },
+    "split": {
+      "strategy": "group_holdout_with_class_coverage",
+      "allocation_attempt": 0,
+      "random_seed": 42,
+      "limitation": "Inferred reset groups are provisional; this is internal preliminary evaluation, not independent capture validation.",
+      "partitions": {
+        "train": {
+          "rows": 156376,
+          "groups": [
+            "data/raw/command_response_injection_attacks.csv:inferred:1",
+            "data/raw/command_response_injection_attacks.csv:inferred:3",
+            "data/raw/command_response_injection_attacks.csv:inferred:4",
+            "data/raw/command_response_injection_attacks.csv:inferred:5",
+            "data/raw/normal_traffic_baseline.csv:veth4edc015-normal-4.pcap",
+            "data/raw/normal_traffic_baseline.csv:vethd9e14c0-normal-4.pcap"
+          ],
+          "classes": {
+            "Normal": 127070,
+            "Command_Response_Injection": 29306
+          }
+        },
+        "validation": {
+          "rows": 70984,
+          "groups": [
+            "data/raw/command_response_injection_attacks.csv:inferred:2",
+            "data/raw/normal_traffic_baseline.csv:network-wide-normal-14.pcap",
+            "data/raw/normal_traffic_baseline.csv:veth5bbeaa2-normal-13.pcap"
+          ],
+          "classes": {
+            "Normal": 70886,
+            "Command_Response_Injection": 98
+          }
+        },
+        "test": {
+          "rows": 115560,
+          "groups": [
+            "data/raw/command_response_injection_attacks.csv:inferred:0",
+            "data/raw/normal_traffic_baseline.csv:veth5bbeaa2-normal-14.pcap",
+            "data/raw/normal_traffic_baseline.csv:veth8bc3408-normal-4.pcap"
+          ],
+          "classes": {
+            "Command_Response_Injection": 65556,
+            "Normal": 50004
+          }
+        }
+      }
+    },
+    "events_sha256": "90d6495496c58d4581cc06adf70a1ac8ac632310c6f2889c7b38f0cb125da753"
+  },
+  "python_version": "3.14.3",
+  "dependencies": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.8.0",
+    "joblib": "1.6.0",
+    "pyarrow": "26.0.0",
+    "streamlit": "1.66.0",
+    "PyYAML": "6.0.3"
+  },
+  "limitations": [
+    "Preliminary internal evaluation",
+    "Probabilities are uncalibrated RF vote fractions",
+    "No independent final three-class data or external validation"
+  ],
+  "artifact_sha256": "08539d07839dc0ffe8241ef297b06f536edcb6055f7cc7fdf233cd1499ce0479"
+}

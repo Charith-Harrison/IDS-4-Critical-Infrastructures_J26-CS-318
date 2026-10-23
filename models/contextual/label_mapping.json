@@ -1,6 +1,4 @@
 {
-  "classes": {
-    "0": "Normal",
-    "1": "Command Injection"
-  }
+  "0": "Command_Response_Injection",
+  "1": "Normal"
 }

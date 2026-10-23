@@ -1,0 +1,1698 @@
+[
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115492",
+    "timestamp": 1675223319.921801,
+    "prediction": "Normal",
+    "confidence": 0.9901774461,
+    "function_code": 3,
+    "address_or_register": 35,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115493",
+    "timestamp": 1675223319.922077,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 3,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115494",
+    "timestamp": 1675223319.942744,
+    "prediction": "Normal",
+    "confidence": 0.9888217372,
+    "function_code": 4,
+    "address_or_register": 5,
+    "evidence": [
+      "function_code=4.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115495",
+    "timestamp": 1675223319.944036,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 4,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=4.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115496",
+    "timestamp": 1675223319.965298,
+    "prediction": "Normal",
+    "confidence": 0.9938038641,
+    "function_code": 1,
+    "address_or_register": 25,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115497",
+    "timestamp": 1675223319.965616,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 1,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115498",
+    "timestamp": 1675223319.986841,
+    "prediction": "Normal",
+    "confidence": 0.9938038641,
+    "function_code": 1,
+    "address_or_register": 15,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115499",
+    "timestamp": 1675223319.987182,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 1,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115500",
+    "timestamp": 1675223320.008067,
+    "prediction": "Normal",
+    "confidence": 0.9929390713,
+    "function_code": 2,
+    "address_or_register": 5,
+    "evidence": [
+      "function_code=2.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115501",
+    "timestamp": 1675223320.00835,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 2,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=2.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115502",
+    "timestamp": 1675223325.012343,
+    "prediction": "Normal",
+    "confidence": 0.9901774461,
+    "function_code": 3,
+    "address_or_register": 35,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115503",
+    "timestamp": 1675223325.012718,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 3,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115504",
+    "timestamp": 1675223325.033418,
+    "prediction": "Normal",
+    "confidence": 0.9888217372,
+    "function_code": 4,
+    "address_or_register": 5,
+    "evidence": [
+      "function_code=4.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115505",
+    "timestamp": 1675223325.033745,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 4,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=4.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115506",
+    "timestamp": 1675223325.054768,
+    "prediction": "Normal",
+    "confidence": 0.9938038641,
+    "function_code": 1,
+    "address_or_register": 25,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115507",
+    "timestamp": 1675223325.055116,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 1,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115508",
+    "timestamp": 1675223325.075966,
+    "prediction": "Normal",
+    "confidence": 0.9938038641,
+    "function_code": 1,
+    "address_or_register": 15,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115509",
+    "timestamp": 1675223325.07641,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 1,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115510",
+    "timestamp": 1675223325.096927,
+    "prediction": "Normal",
+    "confidence": 0.9929390713,
+    "function_code": 2,
+    "address_or_register": 5,
+    "evidence": [
+      "function_code=2.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115511",
+    "timestamp": 1675223325.097194,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 2,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=2.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115512",
+    "timestamp": 1675223325.486435,
+    "prediction": "Normal",
+    "confidence": 0.9896425155,
+    "function_code": 3,
+    "address_or_register": 8,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115513",
+    "timestamp": 1675223325.635449,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 3,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115514",
+    "timestamp": 1675223325.65636,
+    "prediction": "Normal",
+    "confidence": 0.9901774461,
+    "function_code": 4,
+    "address_or_register": 8,
+    "evidence": [
+      "function_code=4.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115515",
+    "timestamp": 1675223325.66208,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 4,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=4.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115516",
+    "timestamp": 1675223325.663317,
+    "prediction": "Command_Response_Injection",
+    "confidence": 0.9558338315,
+    "function_code": 6,
+    "address_or_register": 8,
+    "evidence": [
+      "function_code=6.0",
+      "is_read=0.0",
+      "is_write=1.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115517",
+    "timestamp": 1675223326.049118,
+    "prediction": "Command_Response_Injection",
+    "confidence": 0.9943955567,
+    "function_code": 6,
+    "address_or_register": 8,
+    "evidence": [
+      "inter_arrival_time=0.385801 exceeds the training 99th percentile (0.30782)"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115518",
+    "timestamp": 1675223326.049853,
+    "prediction": "Normal",
+    "confidence": 0.9113227756,
+    "function_code": 1,
+    "address_or_register": 14,
+    "evidence": [
+      "Write-to-read transition observed"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115519",
+    "timestamp": 1675223328.589557,
+    "prediction": "Normal",
+    "confidence": 0.9896425155,
+    "function_code": 3,
+    "address_or_register": 8,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115520",
+    "timestamp": 1675223328.737687,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 3,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115521",
+    "timestamp": 1675223328.761091,
+    "prediction": "Normal",
+    "confidence": 0.9901774461,
+    "function_code": 4,
+    "address_or_register": 8,
+    "evidence": [
+      "function_code=4.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115522",
+    "timestamp": 1675223328.767446,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 4,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=4.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115523",
+    "timestamp": 1675223328.769266,
+    "prediction": "Command_Response_Injection",
+    "confidence": 0.9558338315,
+    "function_code": 6,
+    "address_or_register": 8,
+    "evidence": [
+      "function_code=6.0",
+      "is_read=0.0",
+      "is_write=1.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115524",
+    "timestamp": 1675223328.976652,
+    "prediction": "Command_Response_Injection",
+    "confidence": 0.9943955567,
+    "function_code": 6,
+    "address_or_register": 8,
+    "evidence": [
+      "function_code=6.0",
+      "is_read=0.0",
+      "is_write=1.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115525",
+    "timestamp": 1675223328.977372,
+    "prediction": "Normal",
+    "confidence": 0.9938038641,
+    "function_code": 1,
+    "address_or_register": 14,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115526",
+    "timestamp": 1675223328.979875,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 1,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115527",
+    "timestamp": 1675223329.001583,
+    "prediction": "Normal",
+    "confidence": 0.9935420534,
+    "function_code": 1,
+    "address_or_register": 13,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115528",
+    "timestamp": 1675223329.0175,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 1,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115529",
+    "timestamp": 1675223329.038799,
+    "prediction": "Normal",
+    "confidence": 0.9938753335,
+    "function_code": 2,
+    "address_or_register": 8,
+    "evidence": [
+      "function_code=2.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115530",
+    "timestamp": 1675223329.062024,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 2,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=2.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115531",
+    "timestamp": 1675223330.10054,
+    "prediction": "Normal",
+    "confidence": 0.9901774461,
+    "function_code": 3,
+    "address_or_register": 35,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115532",
+    "timestamp": 1675223330.100899,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 3,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115533",
+    "timestamp": 1675223330.121715,
+    "prediction": "Normal",
+    "confidence": 0.9888217372,
+    "function_code": 4,
+    "address_or_register": 5,
+    "evidence": [
+      "function_code=4.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115534",
+    "timestamp": 1675223330.122239,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 4,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=4.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115535",
+    "timestamp": 1675223330.143446,
+    "prediction": "Normal",
+    "confidence": 0.9938038641,
+    "function_code": 1,
+    "address_or_register": 25,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115536",
+    "timestamp": 1675223330.143799,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 1,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115537",
+    "timestamp": 1675223330.164413,
+    "prediction": "Normal",
+    "confidence": 0.9938038641,
+    "function_code": 1,
+    "address_or_register": 15,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115538",
+    "timestamp": 1675223330.164776,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 1,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115539",
+    "timestamp": 1675223330.18538,
+    "prediction": "Normal",
+    "confidence": 0.9929390713,
+    "function_code": 2,
+    "address_or_register": 5,
+    "evidence": [
+      "function_code=2.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115540",
+    "timestamp": 1675223330.185688,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 2,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=2.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115541",
+    "timestamp": 1675223334.064418,
+    "prediction": "Normal",
+    "confidence": 0.9896425155,
+    "function_code": 3,
+    "address_or_register": 8,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115542",
+    "timestamp": 1675223334.071264,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 3,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115543",
+    "timestamp": 1675223334.092144,
+    "prediction": "Normal",
+    "confidence": 0.9901774461,
+    "function_code": 4,
+    "address_or_register": 8,
+    "evidence": [
+      "function_code=4.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115544",
+    "timestamp": 1675223334.101039,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 4,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=4.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115545",
+    "timestamp": 1675223334.122343,
+    "prediction": "Normal",
+    "confidence": 0.9938038641,
+    "function_code": 1,
+    "address_or_register": 14,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115546",
+    "timestamp": 1675223334.125176,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 1,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115547",
+    "timestamp": 1675223334.145892,
+    "prediction": "Normal",
+    "confidence": 0.9935420534,
+    "function_code": 1,
+    "address_or_register": 13,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115548",
+    "timestamp": 1675223334.152779,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 1,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115549",
+    "timestamp": 1675223334.173915,
+    "prediction": "Normal",
+    "confidence": 0.9938753335,
+    "function_code": 2,
+    "address_or_register": 8,
+    "evidence": [
+      "function_code=2.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115550",
+    "timestamp": 1675223334.177814,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 2,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=2.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115551",
+    "timestamp": 1675223335.188224,
+    "prediction": "Normal",
+    "confidence": 0.9901774461,
+    "function_code": 3,
+    "address_or_register": 35,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115552",
+    "timestamp": 1675223335.188796,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 3,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115553",
+    "timestamp": 1675223335.209496,
+    "prediction": "Normal",
+    "confidence": 0.9888217372,
+    "function_code": 4,
+    "address_or_register": 5,
+    "evidence": [
+      "function_code=4.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115554",
+    "timestamp": 1675223335.209898,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 4,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=4.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115555",
+    "timestamp": 1675223335.230858,
+    "prediction": "Normal",
+    "confidence": 0.9938038641,
+    "function_code": 1,
+    "address_or_register": 25,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115556",
+    "timestamp": 1675223335.231409,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 1,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115557",
+    "timestamp": 1675223335.252184,
+    "prediction": "Normal",
+    "confidence": 0.9938038641,
+    "function_code": 1,
+    "address_or_register": 15,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115558",
+    "timestamp": 1675223335.252814,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 1,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115559",
+    "timestamp": 1675223335.273412,
+    "prediction": "Normal",
+    "confidence": 0.9929390713,
+    "function_code": 2,
+    "address_or_register": 5,
+    "evidence": [
+      "function_code=2.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115560",
+    "timestamp": 1675223335.273937,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 2,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=2.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115561",
+    "timestamp": 1675223339.181235,
+    "prediction": "Normal",
+    "confidence": 0.9896425155,
+    "function_code": 3,
+    "address_or_register": 8,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115562",
+    "timestamp": 1675223339.18477,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 3,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115563",
+    "timestamp": 1675223339.205662,
+    "prediction": "Normal",
+    "confidence": 0.9901774461,
+    "function_code": 4,
+    "address_or_register": 8,
+    "evidence": [
+      "function_code=4.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115564",
+    "timestamp": 1675223339.208162,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 4,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=4.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115565",
+    "timestamp": 1675223339.229052,
+    "prediction": "Normal",
+    "confidence": 0.9938038641,
+    "function_code": 1,
+    "address_or_register": 14,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115566",
+    "timestamp": 1675223339.235483,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 1,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115567",
+    "timestamp": 1675223339.256296,
+    "prediction": "Normal",
+    "confidence": 0.9935420534,
+    "function_code": 1,
+    "address_or_register": 13,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115568",
+    "timestamp": 1675223339.261018,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 1,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115569",
+    "timestamp": 1675223339.281671,
+    "prediction": "Normal",
+    "confidence": 0.9938753335,
+    "function_code": 2,
+    "address_or_register": 8,
+    "evidence": [
+      "function_code=2.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115570",
+    "timestamp": 1675223339.284154,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 2,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=2.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115571",
+    "timestamp": 1675223340.276225,
+    "prediction": "Normal",
+    "confidence": 0.9901774461,
+    "function_code": 3,
+    "address_or_register": 35,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115572",
+    "timestamp": 1675223340.276606,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 3,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115573",
+    "timestamp": 1675223340.297199,
+    "prediction": "Normal",
+    "confidence": 0.9888217372,
+    "function_code": 4,
+    "address_or_register": 5,
+    "evidence": [
+      "function_code=4.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115574",
+    "timestamp": 1675223340.297535,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 4,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=4.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115575",
+    "timestamp": 1675223340.319401,
+    "prediction": "Normal",
+    "confidence": 0.9938038641,
+    "function_code": 1,
+    "address_or_register": 25,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115576",
+    "timestamp": 1675223340.319737,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 1,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115577",
+    "timestamp": 1675223340.340499,
+    "prediction": "Normal",
+    "confidence": 0.9938038641,
+    "function_code": 1,
+    "address_or_register": 15,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115578",
+    "timestamp": 1675223340.340829,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 1,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115579",
+    "timestamp": 1675223340.361458,
+    "prediction": "Normal",
+    "confidence": 0.9929390713,
+    "function_code": 2,
+    "address_or_register": 5,
+    "evidence": [
+      "function_code=2.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115580",
+    "timestamp": 1675223340.361839,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 2,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=2.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115581",
+    "timestamp": 1675223344.288251,
+    "prediction": "Normal",
+    "confidence": 0.9896425155,
+    "function_code": 3,
+    "address_or_register": 8,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115582",
+    "timestamp": 1675223344.296005,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 3,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115583",
+    "timestamp": 1675223344.316715,
+    "prediction": "Normal",
+    "confidence": 0.9901774461,
+    "function_code": 4,
+    "address_or_register": 8,
+    "evidence": [
+      "function_code=4.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115584",
+    "timestamp": 1675223344.323157,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 4,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=4.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115585",
+    "timestamp": 1675223344.344121,
+    "prediction": "Normal",
+    "confidence": 0.9938038641,
+    "function_code": 1,
+    "address_or_register": 14,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115586",
+    "timestamp": 1675223344.349478,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 1,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115587",
+    "timestamp": 1675223344.370122,
+    "prediction": "Normal",
+    "confidence": 0.9935420534,
+    "function_code": 1,
+    "address_or_register": 13,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115588",
+    "timestamp": 1675223344.378726,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 1,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=1.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115589",
+    "timestamp": 1675223344.399446,
+    "prediction": "Normal",
+    "confidence": 0.9938753335,
+    "function_code": 2,
+    "address_or_register": 8,
+    "evidence": [
+      "function_code=2.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115590",
+    "timestamp": 1675223344.402426,
+    "prediction": "Normal",
+    "confidence": 1.0,
+    "function_code": 2,
+    "address_or_register": 0,
+    "evidence": [
+      "function_code=2.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  },
+  {
+    "event_id": "data/raw/command_response_injection_attacks.csv:115591",
+    "timestamp": 1675223345.364253,
+    "prediction": "Normal",
+    "confidence": 0.9901774461,
+    "function_code": 3,
+    "address_or_register": 35,
+    "evidence": [
+      "function_code=3.0",
+      "is_read=1.0",
+      "is_write=0.0"
+    ],
+    "model_version": "2.0.0-preliminary",
+    "model_mode": "temporary_binary",
+    "processing_status": "complete",
+    "invalid_reason": ""
+  }
+]

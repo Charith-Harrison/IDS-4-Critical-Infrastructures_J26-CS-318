@@ -1,0 +1,186 @@
+{
+  "evaluation_identity": {
+    "baseline": "75ffe7da81dc67d5dfec0d005e44ccbed6c117416263c1e5b55c78f17c72a9f8",
+    "contextual": "08539d07839dc0ffe8241ef297b06f536edcb6055f7cc7fdf233cd1499ce0479",
+    "events": "90d6495496c58d4581cc06adf70a1ac8ac632310c6f2889c7b38f0cb125da753"
+  },
+  "evaluation_scope": "preliminary internal grouped holdout",
+  "model_mode": "temporary_binary",
+  "split": {
+    "strategy": "group_holdout_with_class_coverage",
+    "allocation_attempt": 0,
+    "random_seed": 42,
+    "limitation": "Inferred reset groups are provisional; this is internal preliminary evaluation, not independent capture validation.",
+    "partitions": {
+      "train": {
+        "rows": 156376,
+        "groups": [
+          "data/raw/command_response_injection_attacks.csv:inferred:1",
+          "data/raw/command_response_injection_attacks.csv:inferred:3",
+          "data/raw/command_response_injection_attacks.csv:inferred:4",
+          "data/raw/command_response_injection_attacks.csv:inferred:5",
+          "data/raw/normal_traffic_baseline.csv:veth4edc015-normal-4.pcap",
+          "data/raw/normal_traffic_baseline.csv:vethd9e14c0-normal-4.pcap"
+        ],
+        "classes": {
+          "Normal": 127070,
+          "Command_Response_Injection": 29306
+        }
+      },
+      "validation": {
+        "rows": 70984,
+        "groups": [
+          "data/raw/command_response_injection_attacks.csv:inferred:2",
+          "data/raw/normal_traffic_baseline.csv:network-wide-normal-14.pcap",
+          "data/raw/normal_traffic_baseline.csv:veth5bbeaa2-normal-13.pcap"
+        ],
+        "classes": {
+          "Normal": 70886,
+          "Command_Response_Injection": 98
+        }
+      },
+      "test": {
+        "rows": 115560,
+        "groups": [
+          "data/raw/command_response_injection_attacks.csv:inferred:0",
+          "data/raw/normal_traffic_baseline.csv:veth5bbeaa2-normal-14.pcap",
+          "data/raw/normal_traffic_baseline.csv:veth8bc3408-normal-4.pcap"
+        ],
+        "classes": {
+          "Command_Response_Injection": 65556,
+          "Normal": 50004
+        }
+      }
+    }
+  },
+  "models": {
+    "baseline": {
+      "accuracy": 0.9961059190031153,
+      "confusion_matrix": [
+        [
+          65556,
+          0
+        ],
+        [
+          450,
+          49554
+        ]
+      ],
+      "classes": [
+        "Command_Response_Injection",
+        "Normal"
+      ],
+      "per_class": {
+        "Command_Response_Injection": {
+          "precision": 0.9931824379601855,
+          "recall": 1.0,
+          "f1-score": 0.9965795594472568,
+          "support": 65556.0
+        },
+        "Normal": {
+          "precision": 1.0,
+          "recall": 0.9910007199424046,
+          "f1-score": 0.9954800216958959,
+          "support": 50004.0
+        },
+        "accuracy": 0.9961059190031153,
+        "macro avg": {
+          "precision": 0.9965912189800927,
+          "recall": 0.9955003599712022,
+          "f1-score": 0.9960297905715764,
+          "support": 115560.0
+        },
+        "weighted avg": {
+          "precision": 0.9961324671418996,
+          "recall": 0.9961059190031153,
+          "f1-score": 0.9961037781585839,
+          "support": 115560.0
+        }
+      },
+      "macro_precision": 0.9965912189800927,
+      "macro_recall": 0.9955003599712022,
+      "macro_f1": 0.9960297905715764,
+      "weighted_precision": 0.9961324671418996,
+      "weighted_recall": 0.9961059190031153,
+      "weighted_f1": 0.9961037781585839,
+      "false_positive_rate": 0.008999280057595392,
+      "attack_recall": 1.0,
+      "roc_auc": 0.9999998741634626,
+      "pr_auc": 0.9999999038119249,
+      "auc_definition": "attack-class ROC AUC / average precision",
+      "binary_precision": 0.9931824379601855,
+      "binary_recall": 1.0,
+      "binary_f1": 0.9965795594472568,
+      "batch_inference_ms_per_event": 0.0028812824509903794,
+      "single_event_model_latency_ms_median": 29.802450007991865,
+      "latency_scope": "model-only; context construction excluded; hardware-dependent",
+      "feature_count": 22,
+      "training_seconds": 13.018097800028045
+    },
+    "contextual": {
+      "accuracy": 0.9961059190031153,
+      "confusion_matrix": [
+        [
+          65556,
+          0
+        ],
+        [
+          450,
+          49554
+        ]
+      ],
+      "classes": [
+        "Command_Response_Injection",
+        "Normal"
+      ],
+      "per_class": {
+        "Command_Response_Injection": {
+          "precision": 0.9931824379601855,
+          "recall": 1.0,
+          "f1-score": 0.9965795594472568,
+          "support": 65556.0
+        },
+        "Normal": {
+          "precision": 1.0,
+          "recall": 0.9910007199424046,
+          "f1-score": 0.9954800216958959,
+          "support": 50004.0
+        },
+        "accuracy": 0.9961059190031153,
+        "macro avg": {
+          "precision": 0.9965912189800927,
+          "recall": 0.9955003599712022,
+          "f1-score": 0.9960297905715764,
+          "support": 115560.0
+        },
+        "weighted avg": {
+          "precision": 0.9961324671418996,
+          "recall": 0.9961059190031153,
+          "f1-score": 0.9961037781585839,
+          "support": 115560.0
+        }
+      },
+      "macro_precision": 0.9965912189800927,
+      "macro_recall": 0.9955003599712022,
+      "macro_f1": 0.9960297905715764,
+      "weighted_precision": 0.9961324671418996,
+      "weighted_recall": 0.9961059190031153,
+      "weighted_f1": 0.9961037781585839,
+      "false_positive_rate": 0.008999280057595392,
+      "attack_recall": 1.0,
+      "roc_auc": 0.9999483791067902,
+      "pr_auc": 0.9999348196240685,
+      "auc_definition": "attack-class ROC AUC / average precision",
+      "binary_precision": 0.9931824379601855,
+      "binary_recall": 1.0,
+      "binary_f1": 0.9965795594472568,
+      "batch_inference_ms_per_event": 0.005016597438252742,
+      "single_event_model_latency_ms_median": 35.17705001286231,
+      "latency_scope": "model-only; context construction excluded; hardware-dependent",
+      "feature_count": 114,
+      "training_seconds": 98.61480889999075
+    }
+  },
+  "macro_f1_difference": 0.0,
+  "interpretation": "Contextual minus baseline macro F1: +0.000000. This split does not demonstrate a contextual macro-F1 improvement. A single provisional grouped split does not establish statistical significance or external validity. The legacy project previously evaluated these source data; this is not a pristine final research holdout."
+}

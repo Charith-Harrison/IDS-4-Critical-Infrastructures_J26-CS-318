@@ -1,0 +1,47 @@
+{
+  "strategy": "group_holdout_with_class_coverage",
+  "allocation_attempt": 0,
+  "random_seed": 42,
+  "limitation": "Inferred reset groups are provisional; this is internal preliminary evaluation, not independent capture validation.",
+  "partitions": {
+    "train": {
+      "rows": 156376,
+      "groups": [
+        "data/raw/command_response_injection_attacks.csv:inferred:1",
+        "data/raw/command_response_injection_attacks.csv:inferred:3",
+        "data/raw/command_response_injection_attacks.csv:inferred:4",
+        "data/raw/command_response_injection_attacks.csv:inferred:5",
+        "data/raw/normal_traffic_baseline.csv:veth4edc015-normal-4.pcap",
+        "data/raw/normal_traffic_baseline.csv:vethd9e14c0-normal-4.pcap"
+      ],
+      "classes": {
+        "Normal": 127070,
+        "Command_Response_Injection": 29306
+      }
+    },
+    "validation": {
+      "rows": 70984,
+      "groups": [
+        "data/raw/command_response_injection_attacks.csv:inferred:2",
+        "data/raw/normal_traffic_baseline.csv:network-wide-normal-14.pcap",
+        "data/raw/normal_traffic_baseline.csv:veth5bbeaa2-normal-13.pcap"
+      ],
+      "classes": {
+        "Normal": 70886,
+        "Command_Response_Injection": 98
+      }
+    },
+    "test": {
+      "rows": 115560,
+      "groups": [
+        "data/raw/command_response_injection_attacks.csv:inferred:0",
+        "data/raw/normal_traffic_baseline.csv:veth5bbeaa2-normal-14.pcap",
+        "data/raw/normal_traffic_baseline.csv:veth8bc3408-normal-4.pcap"
+      ],
+      "classes": {
+        "Command_Response_Injection": 65556,
+        "Normal": 50004
+      }
+    }
+  }
+}

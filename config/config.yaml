@@ -1,0 +1,34 @@
+project_id: J26-CS-318
+model_mode: temporary_binary
+random_seed: 42
+dataset:
+  files:
+    - data/raw/normal_traffic_baseline.csv
+    - data/raw/command_response_injection_attacks.csv
+  label_column: attack_category
+  label_scheme: canonical
+  verified_labels: false
+  label_evidence: ''
+  column_map: {}
+  group_column: auto
+  timestamp_unit: s
+  infer_reset_groups: true
+features:
+  windows: [3, 5, 10]
+  sequence: true
+  pairing: true
+  access: true
+  timing: true
+  value: true
+events:
+  session_idle_seconds: 60
+  response_timeout_seconds: 10
+split:
+  test_fraction: 0.2
+  validation_fraction: 0.2
+training:
+  n_estimators: 200
+  n_jobs: 2
+  candidates:
+    - {max_depth: 20, min_samples_leaf: 2, max_features: sqrt, class_weight: balanced}
+    - {max_depth: 10, min_samples_leaf: 5, max_features: sqrt, class_weight: balanced}

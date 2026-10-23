@@ -1,0 +1,63 @@
+{
+  "accuracy": 0.9961059190031153,
+  "confusion_matrix": [
+    [
+      65556,
+      0
+    ],
+    [
+      450,
+      49554
+    ]
+  ],
+  "classes": [
+    "Command_Response_Injection",
+    "Normal"
+  ],
+  "per_class": {
+    "Command_Response_Injection": {
+      "precision": 0.9931824379601855,
+      "recall": 1.0,
+      "f1-score": 0.9965795594472568,
+      "support": 65556.0
+    },
+    "Normal": {
+      "precision": 1.0,
+      "recall": 0.9910007199424046,
+      "f1-score": 0.9954800216958959,
+      "support": 50004.0
+    },
+    "accuracy": 0.9961059190031153,
+    "macro avg": {
+      "precision": 0.9965912189800927,
+      "recall": 0.9955003599712022,
+      "f1-score": 0.9960297905715764,
+      "support": 115560.0
+    },
+    "weighted avg": {
+      "precision": 0.9961324671418996,
+      "recall": 0.9961059190031153,
+      "f1-score": 0.9961037781585839,
+      "support": 115560.0
+    }
+  },
+  "macro_precision": 0.9965912189800927,
+  "macro_recall": 0.9955003599712022,
+  "macro_f1": 0.9960297905715764,
+  "weighted_precision": 0.9961324671418996,
+  "weighted_recall": 0.9961059190031153,
+  "weighted_f1": 0.9961037781585839,
+  "false_positive_rate": 0.008999280057595392,
+  "attack_recall": 1.0,
+  "roc_auc": 0.9999998741634626,
+  "pr_auc": 0.9999999038119249,
+  "auc_definition": "attack-class ROC AUC / average precision",
+  "binary_precision": 0.9931824379601855,
+  "binary_recall": 1.0,
+  "binary_f1": 0.9965795594472568,
+  "batch_inference_ms_per_event": 0.0028812824509903794,
+  "single_event_model_latency_ms_median": 29.802450007991865,
+  "latency_scope": "model-only; context construction excluded; hardware-dependent",
+  "feature_count": 22,
+  "training_seconds": 13.018097800028045
+}

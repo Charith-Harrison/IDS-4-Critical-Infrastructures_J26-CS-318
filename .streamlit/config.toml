@@ -1,0 +1,4 @@
+# Navigation is provided by the dashboard's five-page selector. The page modules
+# contain reusable render functions, not standalone Streamlit entry points.
+[client]
+showSidebarNavigation = false

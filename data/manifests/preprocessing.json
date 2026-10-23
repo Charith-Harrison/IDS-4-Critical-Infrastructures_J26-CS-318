@@ -1,0 +1,210 @@
+{
+  "created_at": "2026-10-23T09:23:42.500683+00:00",
+  "preprocessing_version": "direct-labels-v2",
+  "configuration_hash": "50c0c101a94ef91b00c550b880cc3c8d92fbbc73bb7e8725be86d70cd1bfe7bd",
+  "configuration": {
+    "project_id": "J26-CS-318",
+    "model_mode": "temporary_binary",
+    "random_seed": 42,
+    "dataset": {
+      "files": [
+        "data/raw/normal_traffic_baseline.csv",
+        "data/raw/command_response_injection_attacks.csv"
+      ],
+      "label_column": "attack_category",
+      "label_scheme": "canonical",
+      "verified_labels": false,
+      "label_evidence": "",
+      "column_map": {},
+      "group_column": "auto",
+      "timestamp_unit": "s",
+      "infer_reset_groups": true
+    },
+    "features": {
+      "windows": [
+        3,
+        5,
+        10
+      ],
+      "sequence": true,
+      "pairing": true,
+      "access": true,
+      "timing": true,
+      "value": true
+    },
+    "events": {
+      "session_idle_seconds": 60,
+      "response_timeout_seconds": 10
+    },
+    "split": {
+      "test_fraction": 0.2,
+      "validation_fraction": 0.2
+    },
+    "training": {
+      "n_estimators": 200,
+      "n_jobs": 2,
+      "candidates": [
+        {
+          "max_depth": 20,
+          "min_samples_leaf": 2,
+          "max_features": "sqrt",
+          "class_weight": "balanced"
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 5,
+          "max_features": "sqrt",
+          "class_weight": "balanced"
+        }
+      ]
+    }
+  },
+  "inputs": [
+    {
+      "input_file": "data/raw/normal_traffic_baseline.csv",
+      "sha256": "5f34db07e4a5efc42f6406a2a81f00198ad797f9dffb57ddcf56184d4244abc0",
+      "source_rows": 150000
+    },
+    {
+      "input_file": "data/raw/command_response_injection_attacks.csv",
+      "sha256": "ae14a45888f5b67b4c04479681324ba150cba2375e2481fbbee9b13921ede13f",
+      "source_rows": 192920
+    }
+  ],
+  "source_rows": 342920,
+  "retained_rows": 342920,
+  "removed_rows": 0,
+  "removal_reasons": {},
+  "label_distribution": {
+    "Normal": 247960,
+    "Command_Response_Injection": 94960
+  },
+  "group_methods": {
+    "inferred_frame_or_time_reset": 192920,
+    "supplied:file_source": 150000
+  },
+  "pair_status": {
+    "pending_at_observation": 209115,
+    "partial_transaction_match": 132455,
+    "unmatched_response": 1350
+  },
+  "feature_groups": {
+    "static": [
+      "function_code",
+      "is_read",
+      "is_write",
+      "address",
+      "value",
+      "word_count",
+      "bit_count",
+      "byte_count",
+      "unit_id",
+      "is_request",
+      "is_exception"
+    ],
+    "sequence": [
+      "previous_function_code",
+      "previous_operation",
+      "function_transition",
+      "read_to_write_transition",
+      "write_to_read_transition",
+      "recent_write_ratio_3",
+      "repeated_write_count_3",
+      "function_diversity_3",
+      "recent_write_ratio_5",
+      "repeated_write_count_5",
+      "function_diversity_5",
+      "recent_write_ratio_10",
+      "repeated_write_count_10",
+      "function_diversity_10"
+    ],
+    "pairing": [
+      "has_matching_pair",
+      "function_match",
+      "unit_match",
+      "transaction_match",
+      "response_delay",
+      "unexpected_response",
+      "expired_requests"
+    ],
+    "access": [
+      "previous_register",
+      "address_change",
+      "repeated_access",
+      "distinct_registers_3",
+      "repeated_access_count_3",
+      "distinct_registers_5",
+      "repeated_access_count_5",
+      "distinct_registers_10",
+      "repeated_access_count_10"
+    ],
+    "timing": [
+      "inter_arrival_time",
+      "previous_inter_arrival_time",
+      "rolling_mean_inter_arrival_3",
+      "rolling_std_inter_arrival_3",
+      "rolling_mean_inter_arrival_5",
+      "rolling_std_inter_arrival_5",
+      "rolling_mean_inter_arrival_10",
+      "rolling_std_inter_arrival_10"
+    ],
+    "value": [
+      "previous_value",
+      "value_delta",
+      "absolute_value_delta",
+      "value_direction",
+      "repeated_same_value",
+      "rolling_value_change_3",
+      "rolling_value_change_5",
+      "rolling_value_change_10"
+    ]
+  },
+  "split": {
+    "strategy": "group_holdout_with_class_coverage",
+    "allocation_attempt": 0,
+    "random_seed": 42,
+    "limitation": "Inferred reset groups are provisional; this is internal preliminary evaluation, not independent capture validation.",
+    "partitions": {
+      "train": {
+        "rows": 156376,
+        "groups": [
+          "data/raw/command_response_injection_attacks.csv:inferred:1",
+          "data/raw/command_response_injection_attacks.csv:inferred:3",
+          "data/raw/command_response_injection_attacks.csv:inferred:4",
+          "data/raw/command_response_injection_attacks.csv:inferred:5",
+          "data/raw/normal_traffic_baseline.csv:veth4edc015-normal-4.pcap",
+          "data/raw/normal_traffic_baseline.csv:vethd9e14c0-normal-4.pcap"
+        ],
+        "classes": {
+          "Normal": 127070,
+          "Command_Response_Injection": 29306
+        }
+      },
+      "validation": {
+        "rows": 70984,
+        "groups": [
+          "data/raw/command_response_injection_attacks.csv:inferred:2",
+          "data/raw/normal_traffic_baseline.csv:network-wide-normal-14.pcap",
+          "data/raw/normal_traffic_baseline.csv:veth5bbeaa2-normal-13.pcap"
+        ],
+        "classes": {
+          "Normal": 70886,
+          "Command_Response_Injection": 98
+        }
+      },
+      "test": {
+        "rows": 115560,
+        "groups": [
+          "data/raw/command_response_injection_attacks.csv:inferred:0",
+          "data/raw/normal_traffic_baseline.csv:veth5bbeaa2-normal-14.pcap",
+          "data/raw/normal_traffic_baseline.csv:veth8bc3408-normal-4.pcap"
+        ],
+        "classes": {
+          "Command_Response_Injection": 65556,
+          "Normal": 50004
+        }
+      }
+    }
+  },
+  "events_sha256": "90d6495496c58d4581cc06adf70a1ac8ac632310c6f2889c7b38f0cb125da753"
+}

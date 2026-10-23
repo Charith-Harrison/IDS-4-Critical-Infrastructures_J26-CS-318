@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-10-23T09:39:13.363887+00:00",
+  "checks": [
+    {
+      "model": "contextual",
+      "page": "Security Overview",
+      "passed": true
+    },
+    {
+      "model": "contextual",
+      "page": "Detection Events",
+      "passed": true
+    },
+    {
+      "model": "contextual",
+      "page": "Event Investigation",
+      "passed": true
+    },
+    {
+      "model": "contextual",
+      "page": "Model Performance",
+      "passed": true
+    },
+    {
+      "model": "contextual",
+      "page": "System Health",
+      "passed": true
+    },
+    {
+      "model": "baseline",
+      "page": "Security Overview",
+      "passed": true
+    },
+    {
+      "model": "baseline",
+      "page": "Detection Events",
+      "passed": true
+    },
+    {
+      "model": "baseline",
+      "page": "Event Investigation",
+      "passed": true
+    },
+    {
+      "model": "baseline",
+      "page": "Model Performance",
+      "passed": true
+    },
+    {
+      "model": "baseline",
+      "page": "System Health",
+      "passed": true
+    }
+  ]
+}

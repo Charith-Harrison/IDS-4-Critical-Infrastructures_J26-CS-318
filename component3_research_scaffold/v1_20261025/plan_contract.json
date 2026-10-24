@@ -1,0 +1,33 @@
+{
+  "status": "DESIGN_AND_SYNTHETIC_CHECKS_ONLY",
+  "version": "v1_20261025",
+  "real_data_preprocessing_authorized": false,
+  "model_training_authorized": false,
+  "collection_must_be_started_by_user": true,
+  "prerequisites_for_later_student_implementation": [
+    "ALL_104_VALIDATED and intact source, evidence and annotation seals",
+    "Capture loss resolved without weakening acceptance or silently changing frozen protocol",
+    "Academic testbed-primary objective agreed; acceptance is currently NOT_RECORDED",
+    "Student understands and separately authorizes or implements preprocessing",
+    "Training/validation/final roles and related groups retained from frozen roster",
+    "Public current-message and causal-history contracts agreed before final-test inspection"
+  ],
+  "models_planned_not_created": ["A_protocol_checks", "B_current_message_RF", "C_simple_causal_rules", "D_contextual_RF", "B_wire_RF", "D_wire_RF"],
+  "qualification_policy": "Pilots, Q and EQ captures never used for fitting, tuning, feature/threshold selection or scoring",
+  "cic_policy": "Preserve original CIC evidence separately; no CIC/derivative/MSU/external rows imported into testbed study",
+  "learner_hyperparameters": null,
+  "feature_set_selected": false,
+  "real_partition_files_created": false,
+  "synthetic_identifiers_prefix": "SYNTHETIC-",
+  "raw_outputs": "component3_collection_runs/main-frozen-v1-20261025",
+  "frozen_protocol": "component3_main_collection/v1_20261025/frozen/protocol.json",
+  "stop_conditions": [
+    "Repeated packet drops or missing evidence",
+    "Any altered sealed artifact, source or configuration identity",
+    "Unknown or untrusted causal anchor becomes a guessed class",
+    "Label or private/source/partition metadata enters predictors",
+    "Related or copied history crosses evaluation roles",
+    "Final test or qualification used to choose a model, threshold or features",
+    "A result would imply independent industrial campaigns or physical process success"
+  ]
+}

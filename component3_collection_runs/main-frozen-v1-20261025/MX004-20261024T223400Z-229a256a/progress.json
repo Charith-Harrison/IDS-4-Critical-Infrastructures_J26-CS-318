@@ -1,0 +1,6 @@
+{
+  "note": "Completed observed pairs are counted from the flushed application ledger; not capture-validated yet",
+  "phase": "CAPTURING",
+  "planned_transactions": 1136,
+  "updated_at_utc": "2026-10-24T22:34:06.489689+00:00"
+}

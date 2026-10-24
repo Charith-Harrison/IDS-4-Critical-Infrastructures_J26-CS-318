@@ -1,0 +1,34 @@
+{
+  "artifact_sha256": {
+    "application_ledger.jsonl": "ec5120ff000973e56cde9a035084ff6f9ad1da00f857f9d4daae00e04e455d6a",
+    "attempt_request.json": "c1987c2ec40986a27d10046b52ce67aa677be4c0d29e8bc12ed746a74de1f82f",
+    "capture.log": "e499f7cc70fc89636d51f68cc8d462236df5d6d2d327b0e3cf081078413b62ae",
+    "capture.pcap": "f329a9e2ab00c6510d68b75787ebcd1ab5a887ce5dad868da07890a7b060b318",
+    "docker_output.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host_execution.json": "a93ed14d8fe931a58f75cc582d50ab980cbaeea7f530636eee2c15c9de9be4e3",
+    "intervention_audit.jsonl": "40eec96cbe4e5a073889839d7fd6edd96554110073f1b1a78e3c64e59c96bac0",
+    "planned_run.json": "90c8633492b8b82539e3438910b3701fe51e667715b5a91fcf7592968d811add",
+    "progress.json": "4938526d10d5091a2405e4bc64a2465e1e3a94f8b742b03852fd43dc633bd1b5",
+    "run_manifest.json": "ea68e6728246e2ab63bb048e0aa6c9b804c9d6b212b76c0557de1ac51ac8bce4",
+    "runtime_result.json": "755b81dc29ff6ab6bf0011b861062dbe25169cc456e0f1a29aad5265e8ca867e",
+    "scenario_plan.json": "55f538a0dc60213c8392a295d4dcac53d90c93bae7d52816f258458ef1e0aa39",
+    "server_audit.jsonl": "8b344d4d2edc40015046ff73fed202bc00da50f1b202be3d0cf7f77ca85ae1a1",
+    "validation_report.json": "e979d2c083275cba2d4a15a5c4c64fb932c5dbbeec9b52eff1fe009d37ee7333",
+    "verified_labels.jsonl": "6d210e6c263f3a7ad6b0402b6ff3dda90af5f0b76b6a489c840e9241d26e7623"
+  },
+  "collection_id": "79e1c0ae419b4026a656f357edd1b24c",
+  "image_id": "sha256:4abe62902059561c7e2d383a301b6fa4cee8015a4f1ce76245177c0d76ed4ffd",
+  "label_counts": {
+    "command_injection": 9,
+    "normal": 2281,
+    "response_injection": 18
+  },
+  "ordered_adu_trace_sha256": "92cd042e9a8ab94d653d4f883b114baa6c8499cf70f9336b0b4778b12202102e",
+  "ordered_pdu_trace_sha256": "1c95174294957b2275afa3e24b011f3ad80803e2eec814c94ae767232fd13ddc",
+  "planned_run_id": "MX002",
+  "recovered_after_interrupt": false,
+  "source_bundle_id": "1fe2b0eb6f44807bc6759d3f3e998ce5064047516585d9e8e313f01b24050663",
+  "status": "VALIDATED",
+  "validated_at_utc": "2026-10-24T22:03:42.564538+00:00",
+  "wall_seconds": 82.31883649999872
+}

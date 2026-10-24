@@ -1,0 +1,1031 @@
+{
+  "source_immutability": true,
+  "source_hashes_rechecked": true,
+  "checks": [
+    {
+      "view": "benign_ied1b",
+      "record_invariants": true,
+      "accounting_checks": true,
+      "record_count_reconciled": true,
+      "annotation_membership_errors": 0,
+      "annotations_one_to_one_with_events": true
+    },
+    {
+      "view": "external_bridge",
+      "record_invariants": true,
+      "accounting_checks": true,
+      "record_count_reconciled": true,
+      "annotation_membership_errors": 0,
+      "annotations_one_to_one_with_events": true
+    },
+    {
+      "view": "ied_ied1b",
+      "record_invariants": true,
+      "accounting_checks": true,
+      "record_count_reconciled": true,
+      "annotation_membership_errors": 0,
+      "annotations_one_to_one_with_events": true
+    },
+    {
+      "view": "scada_ied1a",
+      "record_invariants": true,
+      "accounting_checks": true,
+      "record_count_reconciled": true,
+      "annotation_membership_errors": 0,
+      "annotations_one_to_one_with_events": true
+    }
+  ],
+  "views": [
+    {
+      "view_id": "benign_ied1b",
+      "counts": {
+        "records": 1404306,
+        "record_kind:adu": 1404306,
+        "parse_status:ok": 1404306,
+        "direction:c2s": 702153,
+        "segmented_records": 0,
+        "cross_chunk_records": 0,
+        "out_of_order_records": 0,
+        "direction:s2c": 702153
+      },
+      "function_raw_counts": {
+        "2": 279812,
+        "3": 279816,
+        "4": 279816,
+        "1": 559626,
+        "6": 3822,
+        "5": 1414
+      },
+      "zero_and_null_counts": {
+        "single_value_null": 1399070,
+        "byte_count_null": 704771,
+        "address_null": 699535,
+        "quantity_null": 699535
+      },
+      "emission_time_reversals": 0,
+      "class_parse_function_direction_distribution": [
+        {
+          "component_label": "normal",
+          "annotation_state": "supported_source_documentation",
+          "parse_status": "ok",
+          "function_code": 1,
+          "direction": "c2s",
+          "count": 279813
+        },
+        {
+          "component_label": "normal",
+          "annotation_state": "supported_source_documentation",
+          "parse_status": "ok",
+          "function_code": 1,
+          "direction": "s2c",
+          "count": 279813
+        },
+        {
+          "component_label": "normal",
+          "annotation_state": "supported_source_documentation",
+          "parse_status": "ok",
+          "function_code": 2,
+          "direction": "c2s",
+          "count": 139906
+        },
+        {
+          "component_label": "normal",
+          "annotation_state": "supported_source_documentation",
+          "parse_status": "ok",
+          "function_code": 2,
+          "direction": "s2c",
+          "count": 139906
+        },
+        {
+          "component_label": "normal",
+          "annotation_state": "supported_source_documentation",
+          "parse_status": "ok",
+          "function_code": 3,
+          "direction": "c2s",
+          "count": 139908
+        },
+        {
+          "component_label": "normal",
+          "annotation_state": "supported_source_documentation",
+          "parse_status": "ok",
+          "function_code": 3,
+          "direction": "s2c",
+          "count": 139908
+        },
+        {
+          "component_label": "normal",
+          "annotation_state": "supported_source_documentation",
+          "parse_status": "ok",
+          "function_code": 4,
+          "direction": "c2s",
+          "count": 139908
+        },
+        {
+          "component_label": "normal",
+          "annotation_state": "supported_source_documentation",
+          "parse_status": "ok",
+          "function_code": 4,
+          "direction": "s2c",
+          "count": 139908
+        },
+        {
+          "component_label": "normal",
+          "annotation_state": "supported_source_documentation",
+          "parse_status": "ok",
+          "function_code": 5,
+          "direction": "c2s",
+          "count": 707
+        },
+        {
+          "component_label": "normal",
+          "annotation_state": "supported_source_documentation",
+          "parse_status": "ok",
+          "function_code": 5,
+          "direction": "s2c",
+          "count": 707
+        },
+        {
+          "component_label": "normal",
+          "annotation_state": "supported_source_documentation",
+          "parse_status": "ok",
+          "function_code": 6,
+          "direction": "c2s",
+          "count": 1911
+        },
+        {
+          "component_label": "normal",
+          "annotation_state": "supported_source_documentation",
+          "parse_status": "ok",
+          "function_code": 6,
+          "direction": "s2c",
+          "count": 1911
+        }
+      ],
+      "accepted_response_injection_parse_status_counts": {},
+      "accepted_response_injection_shape_interpretation": "Counts distinguish malformed supported replies from structurally valid-looking replies; a structural status alone neither proves maliciousness nor establishes a need for machine learning.",
+      "ordering_note": "Decoder emission order can differ from event time due to buffered reassembly/finalization. Partition membership manifests explicitly sort completion times.",
+      "accounting": {
+        "frames_modbus_port": 7021524,
+        "payload_bytes_captured": 15732418,
+        "connections": 702152,
+        "bytes_delivered": 15732418,
+        "records_adu": 1404306,
+        "bytes_in_adu": 15732418,
+        "adu_status_ok": 1404306,
+        "conn_end:closed": 699832,
+        "frames_total": 7023161,
+        "conn_end:chain_end": 2320,
+        "nonmodbus_frames": {
+          "ipv6": 999,
+          "udp": 602,
+          "ipproto_2": 30,
+          "tcp_port_1099": 6
+        },
+        "per_chunk": [
+          {
+            "chunk": 4,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\benign\\ied1b\\ied1b-network-capture\\vethd9e14c0-normal-4.pcap",
+            "frames": 1164784
+          },
+          {
+            "chunk": 5,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\benign\\ied1b\\ied1b-network-capture\\vethd9e14c0-normal-5.pcap",
+            "frames": 1164781
+          },
+          {
+            "chunk": 6,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\benign\\ied1b\\ied1b-network-capture\\vethd9e14c0-normal-6.pcap",
+            "frames": 1164770
+          },
+          {
+            "chunk": 7,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\benign\\ied1b\\ied1b-network-capture\\vethd9e14c0-normal-7.pcap",
+            "frames": 1164779
+          },
+          {
+            "chunk": 8,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\benign\\ied1b\\ied1b-network-capture\\vethd9e14c0-normal-8.pcap",
+            "frames": 1164773
+          },
+          {
+            "chunk": 9,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\benign\\ied1b\\ied1b-network-capture\\vethd9e14c0-normal-9.pcap",
+            "frames": 1164780
+          },
+          {
+            "chunk": 10,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\benign\\ied1b\\ied1b-network-capture\\vethd9e14c0-normal-10.pcap",
+            "frames": 34494
+          }
+        ],
+        "elapsed_s": 360.81,
+        "check_bytes_captured_eq_dup_plus_delivered": true,
+        "check_bytes_delivered_eq_records": true,
+        "check_frames_accounted": true
+      }
+    },
+    {
+      "view_id": "external_bridge",
+      "counts": {
+        "records": 282101,
+        "record_kind:adu": 282100,
+        "parse_status:ok": 282096,
+        "direction:c2s": 173866,
+        "segmented_records": 0,
+        "cross_chunk_records": 0,
+        "out_of_order_records": 0,
+        "direction:s2c": 108235,
+        "parse_status:malformed": 4,
+        "record_kind:incomplete": 1,
+        "parse_status:incomplete": 1
+      },
+      "function_raw_counts": {
+        "3": 43202,
+        "4": 43219,
+        "1": 86347,
+        "2": 43192,
+        "6": 336,
+        "5": 65804,
+        "None": 1
+      },
+      "zero_and_null_counts": {
+        "single_value_null": 215961,
+        "byte_count_null": 174158,
+        "address_null": 107944,
+        "quantity_null": 107944,
+        "address_wire_zero": 65559,
+        "single_value_wire_zero": 21
+      },
+      "emission_time_reversals": 1,
+      "class_parse_function_direction_distribution": [
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "incomplete",
+          "function_code": null,
+          "direction": "c2s",
+          "count": 1
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "malformed",
+          "function_code": 1,
+          "direction": "c2s",
+          "count": 1
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "malformed",
+          "function_code": 2,
+          "direction": "c2s",
+          "count": 1
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "malformed",
+          "function_code": 3,
+          "direction": "c2s",
+          "count": 1
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "malformed",
+          "function_code": 4,
+          "direction": "c2s",
+          "count": 1
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 1,
+          "direction": "c2s",
+          "count": 43176
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 1,
+          "direction": "s2c",
+          "count": 43170
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 2,
+          "direction": "c2s",
+          "count": 21606
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 2,
+          "direction": "s2c",
+          "count": 21585
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 3,
+          "direction": "c2s",
+          "count": 21600
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 3,
+          "direction": "s2c",
+          "count": 21601
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 4,
+          "direction": "c2s",
+          "count": 21631
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 4,
+          "direction": "s2c",
+          "count": 21587
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 5,
+          "direction": "c2s",
+          "count": 65680
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 5,
+          "direction": "s2c",
+          "count": 124
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 6,
+          "direction": "c2s",
+          "count": 168
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 6,
+          "direction": "s2c",
+          "count": 168
+        }
+      ],
+      "accepted_response_injection_parse_status_counts": {},
+      "accepted_response_injection_shape_interpretation": "Counts distinguish malformed supported replies from structurally valid-looking replies; a structural status alone neither proves maliciousness nor establishes a need for machine learning.",
+      "ordering_note": "Decoder emission order can differ from event time due to buffered reassembly/finalization. Partition membership manifests explicitly sort completion times.",
+      "accounting": {
+        "frames_modbus_port": 1692775,
+        "payload_bytes_captured": 3212514,
+        "connections": 184020,
+        "bytes_delivered": 3212514,
+        "records_adu": 282100,
+        "bytes_in_adu": 3212502,
+        "adu_status_ok": 282096,
+        "adu_status_malformed": 4,
+        "conn_end:idle_timeout": 10190,
+        "conn_end:closed": 170195,
+        "records_incomplete": 1,
+        "bytes_in_incomplete": 12,
+        "frames_total": 1710508,
+        "conn_end:superseded_by_new_syn": 2450,
+        "conn_end:chain_end": 1185,
+        "nonmodbus_frames": {
+          "tcp_port_1099": 15279,
+          "arp": 2392,
+          "ipv6": 30,
+          "udp": 30,
+          "ipproto_2": 2
+        },
+        "per_chunk": [
+          {
+            "chunk": 0,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\external\\network-wide\\network-wide-normal-0.pcap",
+            "frames": 1163596,
+            "non_monotonic_frames": 2
+          },
+          {
+            "chunk": 1,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\external\\network-wide\\network-wide-normal-1.pcap",
+            "frames": 546912,
+            "non_monotonic_frames": 1
+          }
+        ],
+        "elapsed_s": 91.42,
+        "check_bytes_captured_eq_dup_plus_delivered": true,
+        "check_bytes_delivered_eq_records": true,
+        "check_frames_accounted": true
+      }
+    },
+    {
+      "view_id": "ied_ied1b",
+      "counts": {
+        "records": 1116921,
+        "record_kind:adu": 1116805,
+        "parse_status:ok": 1116752,
+        "direction:c2s": 557668,
+        "segmented_records": 0,
+        "cross_chunk_records": 0,
+        "out_of_order_records": 0,
+        "direction:s2c": 559253,
+        "record_kind:incomplete": 116,
+        "parse_status:incomplete": 116,
+        "parse_status:malformed": 53
+      },
+      "function_raw_counts": {
+        "2": 222120,
+        "1": 445351,
+        "4": 221768,
+        "3": 221766,
+        "5": 1054,
+        "6": 4746,
+        "None": 116
+      },
+      "zero_and_null_counts": {
+        "single_value_null": 1111121,
+        "byte_count_null": 560684,
+        "address_null": 556353,
+        "quantity_null": 556353
+      },
+      "emission_time_reversals": 85,
+      "class_parse_function_direction_distribution": [
+        {
+          "component_label": "response_injection",
+          "annotation_state": "supported_log_packet_mechanism",
+          "parse_status": "malformed",
+          "function_code": 1,
+          "direction": "s2c",
+          "count": 52
+        },
+        {
+          "component_label": "response_injection",
+          "annotation_state": "supported_log_packet_mechanism",
+          "parse_status": "malformed",
+          "function_code": 2,
+          "direction": "s2c",
+          "count": 1
+        },
+        {
+          "component_label": "response_injection",
+          "annotation_state": "supported_log_packet_mechanism",
+          "parse_status": "ok",
+          "function_code": 3,
+          "direction": "s2c",
+          "count": 1
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "incomplete",
+          "function_code": null,
+          "direction": "s2c",
+          "count": 116
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 1,
+          "direction": "c2s",
+          "count": 221941
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 1,
+          "direction": "s2c",
+          "count": 223358
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 2,
+          "direction": "c2s",
+          "count": 111060
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 2,
+          "direction": "s2c",
+          "count": 111059
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 3,
+          "direction": "c2s",
+          "count": 110883
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 3,
+          "direction": "s2c",
+          "count": 110882
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 4,
+          "direction": "c2s",
+          "count": 110884
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 4,
+          "direction": "s2c",
+          "count": 110884
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 5,
+          "direction": "c2s",
+          "count": 527
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 5,
+          "direction": "s2c",
+          "count": 527
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 6,
+          "direction": "c2s",
+          "count": 2373
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 6,
+          "direction": "s2c",
+          "count": 2373
+        }
+      ],
+      "accepted_response_injection_parse_status_counts": {
+        "malformed": 53,
+        "ok": 1
+      },
+      "accepted_response_injection_shape_interpretation": "Counts distinguish malformed supported replies from structurally valid-looking replies; a structural status alone neither proves maliciousness nor establishes a need for machine learning.",
+      "ordering_note": "Decoder emission order can differ from event time due to buffered reassembly/finalization. Partition membership manifests explicitly sort completion times.",
+      "accounting": {
+        "frames_modbus_port": 6124040,
+        "payload_bytes_captured": 12511888,
+        "connections": 558642,
+        "bytes_delivered": 12511888,
+        "records_adu": 1116805,
+        "bytes_in_adu": 12510953,
+        "adu_status_ok": 1116752,
+        "conn_end:superseded_by_new_syn": 12193,
+        "conn_end:idle_timeout": 70250,
+        "conn_end:closed": 473953,
+        "records_incomplete": 116,
+        "bytes_in_incomplete": 935,
+        "adu_status_malformed": 53,
+        "frames_total": 6125628,
+        "conn_end:chain_end": 2246,
+        "nonmodbus_frames": {
+          "ipproto_2": 6,
+          "ipv6": 1106,
+          "tcp_port_1099": 1,
+          "udp": 475
+        },
+        "per_chunk": [
+          {
+            "chunk": 0,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-ied\\ied1b\\ied1b-network-captures\\vethc76bd3f-0.pcap",
+            "frames": 1177238,
+            "non_monotonic_frames": 1
+          },
+          {
+            "chunk": 1,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-ied\\ied1b\\ied1b-network-captures\\vethc76bd3f-1.pcap",
+            "frames": 1178259,
+            "non_monotonic_frames": 1
+          },
+          {
+            "chunk": 2,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-ied\\ied1b\\ied1b-network-captures\\vethc76bd3f-2.pcap",
+            "frames": 1178302
+          },
+          {
+            "chunk": 3,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-ied\\ied1b\\ied1b-network-captures\\vethc76bd3f-3.pcap",
+            "frames": 1178340,
+            "non_monotonic_frames": 3
+          },
+          {
+            "chunk": 4,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-ied\\ied1b\\ied1b-network-captures\\vethc76bd3f-4.pcap",
+            "frames": 1178352,
+            "non_monotonic_frames": 3
+          },
+          {
+            "chunk": 5,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-ied\\ied1b\\ied1b-network-captures\\vethc76bd3f-5.pcap",
+            "frames": 235137
+          }
+        ],
+        "elapsed_s": 261.14,
+        "check_bytes_captured_eq_dup_plus_delivered": true,
+        "check_bytes_delivered_eq_records": true,
+        "check_frames_accounted": true
+      }
+    },
+    {
+      "view_id": "scada_ied1a",
+      "counts": {
+        "records": 964959,
+        "record_kind:adu": 964683,
+        "parse_status:ok": 911543,
+        "direction:c2s": 546615,
+        "segmented_records": 0,
+        "cross_chunk_records": 0,
+        "out_of_order_records": 0,
+        "direction:s2c": 418344,
+        "parse_status:exception": 147,
+        "record_kind:incomplete": 276,
+        "parse_status:incomplete": 276,
+        "parse_status:malformed": 52993
+      },
+      "function_raw_counts": {
+        "3": 192092,
+        "4": 167782,
+        "1": 334265,
+        "2": 167585,
+        "5": 99752,
+        "6": 3060,
+        "130": 5,
+        "131": 3,
+        "132": 1,
+        "129": 30,
+        "None": 276,
+        "133": 108
+      },
+      "zero_and_null_counts": {
+        "single_value_null": 862147,
+        "byte_count_null": 548754,
+        "address_null": 416628,
+        "quantity_null": 416628
+      },
+      "emission_time_reversals": 80,
+      "class_parse_function_direction_distribution": [
+        {
+          "component_label": "command_injection",
+          "annotation_state": "supported_log_packet_mechanism",
+          "parse_status": "malformed",
+          "function_code": 5,
+          "direction": "c2s",
+          "count": 98
+        },
+        {
+          "component_label": "command_injection",
+          "annotation_state": "supported_log_packet_mechanism",
+          "parse_status": "ok",
+          "function_code": 5,
+          "direction": "c2s",
+          "count": 2
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "out_of_scope",
+          "parse_status": "ok",
+          "function_code": 1,
+          "direction": "c2s",
+          "count": 2
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "out_of_scope",
+          "parse_status": "ok",
+          "function_code": 2,
+          "direction": "c2s",
+          "count": 1
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "out_of_scope",
+          "parse_status": "ok",
+          "function_code": 3,
+          "direction": "c2s",
+          "count": 1
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "out_of_scope",
+          "parse_status": "ok",
+          "function_code": 4,
+          "direction": "c2s",
+          "count": 1
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unknown_or_ambiguous",
+          "parse_status": "malformed",
+          "function_code": 5,
+          "direction": "c2s",
+          "count": 52895
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unknown_or_ambiguous",
+          "parse_status": "ok",
+          "function_code": 1,
+          "direction": "c2s",
+          "count": 340
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unknown_or_ambiguous",
+          "parse_status": "ok",
+          "function_code": 2,
+          "direction": "c2s",
+          "count": 309
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unknown_or_ambiguous",
+          "parse_status": "ok",
+          "function_code": 3,
+          "direction": "c2s",
+          "count": 309
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unknown_or_ambiguous",
+          "parse_status": "ok",
+          "function_code": 4,
+          "direction": "c2s",
+          "count": 309
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unknown_or_ambiguous",
+          "parse_status": "ok",
+          "function_code": 5,
+          "direction": "c2s",
+          "count": 45833
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "exception",
+          "function_code": 1,
+          "direction": "s2c",
+          "count": 30
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "exception",
+          "function_code": 2,
+          "direction": "s2c",
+          "count": 5
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "exception",
+          "function_code": 3,
+          "direction": "s2c",
+          "count": 3
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "exception",
+          "function_code": 4,
+          "direction": "s2c",
+          "count": 1
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "exception",
+          "function_code": 5,
+          "direction": "s2c",
+          "count": 108
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "incomplete",
+          "function_code": null,
+          "direction": "c2s",
+          "count": 276
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 1,
+          "direction": "c2s",
+          "count": 167357
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 1,
+          "direction": "s2c",
+          "count": 166566
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 2,
+          "direction": "c2s",
+          "count": 84093
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 2,
+          "direction": "s2c",
+          "count": 83182
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 3,
+          "direction": "c2s",
+          "count": 108539
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 3,
+          "direction": "s2c",
+          "count": 83243
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 4,
+          "direction": "c2s",
+          "count": 84258
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 4,
+          "direction": "s2c",
+          "count": 83214
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 5,
+          "direction": "c2s",
+          "count": 462
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 5,
+          "direction": "s2c",
+          "count": 462
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 6,
+          "direction": "c2s",
+          "count": 1530
+        },
+        {
+          "component_label": "unlabelled",
+          "annotation_state": "unlabelled",
+          "parse_status": "ok",
+          "function_code": 6,
+          "direction": "s2c",
+          "count": 1530
+        }
+      ],
+      "accepted_response_injection_parse_status_counts": {},
+      "accepted_response_injection_shape_interpretation": "Counts distinguish malformed supported replies from structurally valid-looking replies; a structural status alone neither proves maliciousness nor establishes a need for machine learning.",
+      "ordering_note": "Decoder emission order can differ from event time due to buffered reassembly/finalization. Partition membership manifests explicitly sort completion times.",
+      "accounting": {
+        "frames_modbus_port": 5686109,
+        "payload_bytes_captured": 10926498,
+        "connections": 682326,
+        "bytes_delivered": 10913550,
+        "records_adu": 964683,
+        "bytes_in_adu": 10911162,
+        "adu_status_ok": 911543,
+        "conn_end:superseded_by_new_syn": 18175,
+        "conn_end:idle_timeout": 200845,
+        "retrans_segments": 83,
+        "bytes_dup_dropped": 12948,
+        "adu_status_exception": 147,
+        "conn_end:closed": 461852,
+        "records_incomplete": 276,
+        "bytes_in_incomplete": 2388,
+        "adu_status_malformed": 52993,
+        "frames_total": 6064388,
+        "conn_end:chain_end": 1454,
+        "nonmodbus_frames": {
+          "tcp_port_1099": 365099,
+          "ipv6": 1186,
+          "arp": 11482,
+          "udp": 510,
+          "ipproto_2": 2
+        },
+        "per_chunk": [
+          {
+            "chunk": 0,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-scada\\ied1a\\ied1a-network-captures\\veth3614724-0.pcap",
+            "frames": 1087381,
+            "non_monotonic_frames": 2
+          },
+          {
+            "chunk": 1,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-scada\\ied1a\\ied1a-network-captures\\veth3614724-1.pcap",
+            "frames": 1084366,
+            "non_monotonic_frames": 2
+          },
+          {
+            "chunk": 2,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-scada\\ied1a\\ied1a-network-captures\\veth3614724-2.pcap",
+            "frames": 1139054,
+            "non_monotonic_frames": 1
+          },
+          {
+            "chunk": 3,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-scada\\ied1a\\ied1a-network-captures\\veth3614724-3.pcap",
+            "frames": 1114472,
+            "non_monotonic_frames": 3
+          },
+          {
+            "chunk": 4,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-scada\\ied1a\\ied1a-network-captures\\veth3614724-4.pcap",
+            "frames": 1142584,
+            "non_monotonic_frames": 3
+          },
+          {
+            "chunk": 5,
+            "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-scada\\ied1a\\ied1a-network-captures\\veth3614724-5.pcap",
+            "frames": 496531,
+            "non_monotonic_frames": 1
+          }
+        ],
+        "elapsed_s": 282.05,
+        "check_bytes_captured_eq_dup_plus_delivered": true,
+        "check_bytes_delivered_eq_records": true,
+        "check_frames_accounted": true
+      }
+    }
+  ],
+  "all_row_and_accounting_checks_pass": true,
+  "dataset_scope": "Only permitted original CIC sources. Old exports are diagnostic references only.",
+  "stage_boundary": "No model preprocessing, model features/windows/matrices, fitted transformations, balancing, normal profiles or training executed."
+}

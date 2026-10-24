@@ -15,9 +15,9 @@ from src.utils import ROOT, load_config
 
 
 def main():
-    st.set_page_config(page_title="J26-CS-318 | Modbus Detection", page_icon="🛡️", layout="wide")
+    st.set_page_config(page_title="Modbus Detection", page_icon="🛡️", layout="wide")
     st.title("Command and Response Injection Detection")
-    st.caption("J26-CS-318 · Context-Aware Modbus/TCP Command Analysis · Research prototype")
+    st.caption("· Context-Aware Modbus/TCP Command Analysis · Research prototype")
     cfg = load_config()
     ui_utils.banner(cfg["model_mode"])
     kind = st.sidebar.selectbox("Model", ["contextual", "baseline"])

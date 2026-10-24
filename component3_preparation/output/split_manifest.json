@@ -1,0 +1,235 @@
+{
+  "status": "CANDIDATE_ONLY_UNSUPPORTED_INDEPENDENT_THREE_CLASS_EXPERIMENT",
+  "strategy": "whole capture campaigns; fixed chronological scenario holdouts; never selected using model scores",
+  "requested_fraction": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "groups": [
+    {
+      "recording_id": "cic_benign_january",
+      "partition": "candidate_train",
+      "events": 1404306,
+      "labels": {
+        "normal": 1404306
+      },
+      "views": [
+        "benign_ied1b"
+      ],
+      "first_us": 1674468178561445,
+      "last_us": 1675182358037493
+    },
+    {
+      "recording_id": "cic_external_february",
+      "partition": "candidate_validation",
+      "events": 282101,
+      "labels": {
+        "unlabelled": 282101
+      },
+      "views": [
+        "external_bridge"
+      ],
+      "first_us": 1675223319921816,
+      "last_us": 1675260110737516
+    },
+    {
+      "recording_id": "cic_compromised_ied_march",
+      "partition": "candidate_test",
+      "events": 1116921,
+      "labels": {
+        "unlabelled": 1116867,
+        "response_injection": 54
+      },
+      "views": [
+        "ied_ied1b"
+      ],
+      "first_us": 1679538700940965,
+      "last_us": 1680106541372033
+    },
+    {
+      "recording_id": "cic_compromised_scada_march",
+      "partition": "candidate_train",
+      "events": 964959,
+      "labels": {
+        "unlabelled": 964859,
+        "command_injection": 100
+      },
+      "views": [
+        "scada_ied1a"
+      ],
+      "first_us": 1678845665333506,
+      "last_us": 1679457309417598
+    }
+  ],
+  "partitions": {
+    "candidate_test": {
+      "events": 1116921,
+      "recording_ids": [
+        "cic_compromised_ied_march"
+      ],
+      "membership_file": "partitions/candidate_test_membership.parquet",
+      "row_fraction": 0.29640019457116723,
+      "group_fraction": 0.25,
+      "class_counts": {
+        "normal": 0,
+        "command_injection": 0,
+        "response_injection": 54
+      }
+    },
+    "candidate_train": {
+      "events": 2369265,
+      "recording_ids": [
+        "cic_benign_january",
+        "cic_compromised_scada_march"
+      ],
+      "membership_file": "partitions/candidate_train_membership.parquet",
+      "row_fraction": 0.6287379384850464,
+      "group_fraction": 0.5,
+      "class_counts": {
+        "normal": 1404306,
+        "command_injection": 100,
+        "response_injection": 0
+      }
+    },
+    "candidate_validation": {
+      "events": 282101,
+      "recording_ids": [
+        "cic_external_february"
+      ],
+      "membership_file": "partitions/candidate_validation_membership.parquet",
+      "row_fraction": 0.0748618669437864,
+      "group_fraction": 0.25,
+      "class_counts": {
+        "normal": 0,
+        "command_injection": 0,
+        "response_injection": 0
+      }
+    }
+  },
+  "class_bearing_groups": {
+    "normal": [
+      "cic_benign_january"
+    ],
+    "command_injection": [
+      "cic_compromised_scada_march"
+    ],
+    "response_injection": [
+      "cic_compromised_ied_march"
+    ]
+  },
+  "source_tables": [
+    {
+      "view_id": "benign_ied1b",
+      "recording_id": "cic_benign_january",
+      "events": 1404306,
+      "events_path": "extraction/benign_ied1b/events.parquet",
+      "sha256": "7eb2bd3989c204878a1b32b3b177f5ca43904578fd50f3b08497f496357d18bf",
+      "annotation_path": "extraction/benign_ied1b/annotations.parquet",
+      "annotation_sha256": "7312ea7e7bd4df82ec309fc06cfd4478f494043bebe9ee8d152b47ef9c1cdd34",
+      "annotation_count": 1404306,
+      "source_paths": [
+        "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-4.pcap",
+        "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-5.pcap",
+        "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-6.pcap",
+        "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-7.pcap",
+        "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-8.pcap",
+        "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-9.pcap",
+        "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-10.pcap"
+      ]
+    },
+    {
+      "view_id": "external_bridge",
+      "recording_id": "cic_external_february",
+      "events": 282101,
+      "events_path": "extraction/external_bridge/events.parquet",
+      "sha256": "f6e631d2822f2fb28988f378f8c99b2778f27467b25a0f31e908e7968f6b82ad",
+      "annotation_path": "extraction/external_bridge/annotations.parquet",
+      "annotation_sha256": "32426f315d26aa81eb1d1bf42439e0edf61ff5eeb8f8ed9609ff5864c7f89cf3",
+      "annotation_count": 282101,
+      "source_paths": [
+        "attack/external/network-wide/network-wide-normal-0.pcap",
+        "attack/external/network-wide/network-wide-normal-1.pcap"
+      ]
+    },
+    {
+      "view_id": "ied_ied1b",
+      "recording_id": "cic_compromised_ied_march",
+      "events": 1116921,
+      "events_path": "extraction/ied_ied1b/events.parquet",
+      "sha256": "4bf5f1b849eedf9dd8820f6aced5e65c6114a047ececee1b908192021e2769ee",
+      "annotation_path": "extraction/ied_ied1b/annotations.parquet",
+      "annotation_sha256": "de03fb613aa85b69bee10ebe6f8962cb4e657a62bc35fc537bf1431136737256",
+      "annotation_count": 1116921,
+      "source_paths": [
+        "attack/compromised-ied/ied1b/ied1b-network-captures/vethc76bd3f-0.pcap",
+        "attack/compromised-ied/ied1b/ied1b-network-captures/vethc76bd3f-1.pcap",
+        "attack/compromised-ied/ied1b/ied1b-network-captures/vethc76bd3f-2.pcap",
+        "attack/compromised-ied/ied1b/ied1b-network-captures/vethc76bd3f-3.pcap",
+        "attack/compromised-ied/ied1b/ied1b-network-captures/vethc76bd3f-4.pcap",
+        "attack/compromised-ied/ied1b/ied1b-network-captures/vethc76bd3f-5.pcap"
+      ]
+    },
+    {
+      "view_id": "scada_ied1a",
+      "recording_id": "cic_compromised_scada_march",
+      "events": 964959,
+      "events_path": "extraction/scada_ied1a/events.parquet",
+      "sha256": "d1134394cc4ac4c01bef5b0b0bb5d653a08b80e0d703d02d0d92c86f688979ad",
+      "annotation_path": "extraction/scada_ied1a/annotations.parquet",
+      "annotation_sha256": "2f853f46341d03e2f533dbb8c9e794295cd50445291c2bf330897dc7d1e77316",
+      "annotation_count": 964959,
+      "source_paths": [
+        "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+        "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+        "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-2.pcap",
+        "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+        "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-4.pcap",
+        "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-5.pcap"
+      ]
+    }
+  ],
+  "pair_relations_checked": 1982133,
+  "pair_partition_crossings": 0,
+  "missing_pair_event_ids": 0,
+  "event_membership_count": 3768287,
+  "event_uid_ranges": {
+    "benign_ied1b": {
+      "recording_id": "cic_benign_january",
+      "partition": "candidate_train",
+      "events": 1404306
+    },
+    "external_bridge": {
+      "recording_id": "cic_external_february",
+      "partition": "candidate_validation",
+      "events": 282101
+    },
+    "ied_ied1b": {
+      "recording_id": "cic_compromised_ied_march",
+      "partition": "candidate_test",
+      "events": 1116921
+    },
+    "scada_ied1a": {
+      "recording_id": "cic_compromised_scada_march",
+      "partition": "candidate_train",
+      "events": 964959
+    }
+  },
+  "pair_membership_check": "Every event UID and contiguous per-view sequence checked exhaustively, then every pair/candidate endpoint checked against the exact canonical UID domain and its recording/view/partition. No per-endpoint SQLite queries.",
+  "annotations_one_to_one_with_events": true,
+  "duplicate_containment_report": "duplicate_containment.json",
+  "known_source_copy_relationships_contained": true,
+  "class_complete_each_partition": false,
+  "boundary_policy": "Reset at recording/view/connection generations and observed gaps; retain entire selected chains. No context crosses partitions. No history/window materialized.",
+  "future_horizons": {
+    "candidate_event_lookbacks": [
+      3,
+      5,
+      10
+    ],
+    "maximum_time_lookback": "not yet specified by researcher",
+    "label_horizon": "offline audit only; deployment decision contract must be selected later",
+    "purge": "no shared campaigns; any future temporal subdivision or horizon change requires new boundary validation"
+  },
+  "limitation": "Four source capture campaigns share a simulated testbed. Days, rotation files, endpoints and individual attack logs do not create independent replications. Class-complete independent training/validation/test is not supported."
+}

@@ -1,0 +1,113 @@
+{
+  "benign_ied1b": {},
+  "external_bridge": {},
+  "ied_ied1b": {
+    "response_injection": {
+      "events": 54,
+      "parse_status_counts": {
+        "malformed": 53,
+        "ok": 1
+      },
+      "pdu_hex_counts": {
+        "01abcd": 52,
+        "02abcd": 1,
+        "0302abcd": 1
+      },
+      "examples": [
+        {
+          "event_uid": "ied_ied1b:e98264",
+          "first_chunk": 0,
+          "first_frame": 531107,
+          "last_chunk": 0,
+          "last_frame": 531107,
+          "ts_complete_us": 1679588811798717,
+          "mbap_trans_id": 7485,
+          "func_code": 1,
+          "address": null,
+          "single_value": null,
+          "reg_values": null,
+          "parse_status": "malformed",
+          "shape_reason": "pdu_len:3!=173",
+          "client_ip": "185.175.0.2",
+          "server_ip": "185.175.0.5",
+          "adu_hex": "1d3d000000040101abcd"
+        },
+        {
+          "event_uid": "ied_ied1b:e938079",
+          "first_chunk": 4,
+          "first_frame": 431327,
+          "last_chunk": 4,
+          "last_frame": 431327,
+          "ts_complete_us": 1680015274440000,
+          "mbap_trans_id": 33533,
+          "func_code": 3,
+          "address": null,
+          "single_value": null,
+          "reg_values": [
+            43981
+          ],
+          "parse_status": "ok",
+          "shape_reason": null,
+          "client_ip": "185.175.0.2",
+          "server_ip": "185.175.0.5",
+          "adu_hex": "82fd00000005010302abcd"
+        }
+      ]
+    }
+  },
+  "scada_ied1a": {
+    "command_injection": {
+      "events": 100,
+      "parse_status_counts": {
+        "malformed": 98,
+        "ok": 2
+      },
+      "pdu_hex_counts": {
+        "05000dffff": 32,
+        "05000effff": 32,
+        "0500080001": 31,
+        "050001ff00": 2,
+        "050001ffff": 2,
+        "0500080008": 1
+      },
+      "examples": [
+        {
+          "event_uid": "scada_ied1a:e14564",
+          "first_chunk": 0,
+          "first_frame": 105675,
+          "last_chunk": 0,
+          "last_frame": 105675,
+          "ts_complete_us": 1678853337741779,
+          "mbap_trans_id": 5,
+          "func_code": 5,
+          "address": 13,
+          "single_value": 65535,
+          "reg_values": null,
+          "parse_status": "malformed",
+          "shape_reason": "coil_value_not_0000_or_ff00",
+          "client_ip": "185.175.0.3",
+          "server_ip": "185.175.0.4",
+          "adu_hex": "0005000000060105000dffff"
+        },
+        {
+          "event_uid": "scada_ied1a:e60349",
+          "first_chunk": 0,
+          "first_frame": 452727,
+          "last_chunk": 0,
+          "last_frame": 452727,
+          "ts_complete_us": 1678875775339875,
+          "mbap_trans_id": 5,
+          "func_code": 5,
+          "address": 1,
+          "single_value": 65280,
+          "reg_values": null,
+          "parse_status": "ok",
+          "shape_reason": null,
+          "client_ip": "185.175.0.3",
+          "server_ip": "185.175.0.4",
+          "adu_hex": "00050000000601050001ff00"
+        }
+      ]
+    }
+  }
+}

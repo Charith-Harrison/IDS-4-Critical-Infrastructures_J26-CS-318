@@ -1,0 +1,64 @@
+{
+  "scope": "Descriptive counts only, not trained/evaluated detector results.",
+  "accepted_endpoint_tuple_sets": {
+    "command_injection": [
+      [
+        "185.175.0.3",
+        "185.175.0.4"
+      ]
+    ],
+    "normal": [
+      [
+        "185.175.0.3",
+        "185.175.0.5"
+      ]
+    ],
+    "response_injection": [
+      [
+        "185.175.0.2",
+        "185.175.0.5"
+      ]
+    ]
+  },
+  "endpoint_sets_pairwise_disjoint": true,
+  "accepted_pdu_pattern_counts": {
+    "command_injection": 6,
+    "normal": 923,
+    "response_injection": 3
+  },
+  "ABCD_containing_accepted_adu_counts": {
+    "response_injection": 54
+  },
+  "normal_vs_command_fc5_addresses": {
+    "normal_FC5": [
+      15,
+      25
+    ],
+    "accepted_command_FC5": [
+      1,
+      8,
+      13,
+      14
+    ]
+  },
+  "malformed_accepted_attack_adus": 151,
+  "accepted_attack_adus": 154,
+  "diagnostic_1ms_ok_command_pattern": "050001ff00",
+  "simple_future_baselines": [
+    "Current-PDU specification checks (FC5 output word and function-specific response byte counts) already expose151 malformed accepted attack ADUs.",
+    "A literal ABCD reply signature covers the three observed response attack patterns; this is tool-marker recognition, not proof of deployment generalization.",
+    "Endpoint/campaign/time or address shortcuts can separate the frozen accepted cohort; they must not be represented as legitimate general-purpose predictors."
+  ],
+  "context_evidence_needed": [
+    "Syntactically plausible forged replies without a static marker, with independent expected-response/request/value evidence and varied repetitions.",
+    "Justified legitimate-versus-unauthorized command examples on comparable endpoints/objects and independently documented authorization/process semantics.",
+    "Causal request/response or historical dependency shown to add information beyond current-message protocol/signature checks on the same eligible cohort."
+  ],
+  "not_inferred": [
+    "Physical register units/signedness/scaling",
+    "Permission policy",
+    "Successful process manipulation",
+    "That parser-ok equals authorized or plausible",
+    "That unlabelled attack-campaign traffic is normal"
+  ]
+}

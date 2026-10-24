@@ -1,0 +1,121 @@
+{
+  "stage": "read_only_extraction_evidence_demonstration",
+  "normal_value_example": {
+    "event_uid": "pilot_benign:e2",
+    "recording_id": "benign",
+    "view_id": "pilot_benign",
+    "conn_uid": "pilot_benign:c1",
+    "first_chunk": 13,
+    "first_frame": 5,
+    "segment_refs": [
+      {
+        "chunk": 13,
+        "frame": 5,
+        "pcap_offset": 372,
+        "stream_start": 0,
+        "stream_end": 11,
+        "event_byte_start": 0,
+        "event_byte_end": 11,
+        "timestamp_us": 1674481924004676
+      }
+    ],
+    "ts_first_us": 1674481924004676,
+    "ts_complete_us": 1674481924004676,
+    "mbap_trans_id": 57464,
+    "func_raw": 3,
+    "address": null,
+    "quantity": null,
+    "reg_values": [
+      9
+    ],
+    "byte_count": 2,
+    "pdu_bytes": "03020009",
+    "parse_status": "ok"
+  },
+  "response_example": {
+    "event_uid": "ied_ied1b:e98264",
+    "recording_id": "cic_compromised_ied_march",
+    "view_id": "ied_ied1b",
+    "conn_uid": "ied_ied1b:c49207",
+    "first_chunk": 0,
+    "first_frame": 531107,
+    "segment_refs": [
+      {
+        "chunk": 0,
+        "frame": 531107,
+        "pcap_offset": 45165579,
+        "stream_start": 0,
+        "stream_end": 10,
+        "event_byte_start": 0,
+        "event_byte_end": 10,
+        "timestamp_us": 1679588811798717
+      }
+    ],
+    "ts_first_us": 1679588811798717,
+    "ts_complete_us": 1679588811798717,
+    "mbap_trans_id": 7485,
+    "func_raw": 1,
+    "address": null,
+    "quantity": null,
+    "reg_values": null,
+    "byte_count": 171,
+    "pdu_bytes": "01abcd",
+    "parse_status": "malformed"
+  },
+  "pair_audit_only": {
+    "recording_id": "cic_compromised_ied_march",
+    "view_id": "ied_ied1b",
+    "conn_uid": "ied_ied1b:c49207",
+    "request_uid": "ied_ied1b:e98263",
+    "response_uid": "ied_ied1b:e98264",
+    "candidate_request_uids": [],
+    "transaction_generation": 1,
+    "status": "matched_inconsistent",
+    "reasons": [
+      "response_byte_count_vs_request_quantity",
+      "response_parse_malformed"
+    ],
+    "request_complete_us": 1679588811792025,
+    "response_complete_us": 1679588811798717,
+    "elapsed_us_audit_only": 6692,
+    "request_address_audit_only": 15,
+    "request_quantity_audit_only": 1,
+    "expected_response_bytes_audit_only": 1,
+    "request_first_chunk": 0,
+    "request_last_chunk": 0,
+    "response_first_chunk": 0,
+    "response_last_chunk": 0
+  },
+  "evidence_annotation": {
+    "event_uid": "ied_ied1b:e98264",
+    "recording_id": "cic_compromised_ied_march",
+    "view_id": "ied_ied1b",
+    "component_label": "response_injection",
+    "annotation_state": "supported_log_packet_mechanism",
+    "label_method": "unique_log_target_tid_time_behavior_calibrated_zero_offset",
+    "label_evidence_refs": [
+      "log:ca897dda80caf52b9d7e6ab4"
+    ],
+    "original_attack_names": [
+      "False Data Injection Attack"
+    ],
+    "matched_log_signature_ids": [
+      "logsig:fa632c6ab308019ef90b2942"
+    ],
+    "candidate_log_signature_ids": [
+      "logsig:fa632c6ab308019ef90b2942"
+    ],
+    "associated_attack_request_uid": null,
+    "associated_response_attack_uid": null,
+    "reason": "Direct response modification log with observed request/reply lineage."
+  },
+  "candidate_membership": {
+    "event_uid": "ied_ied1b:e98264",
+    "recording_id": "cic_compromised_ied_march",
+    "view_id": "ied_ied1b",
+    "event_seq": 98264,
+    "ts_complete_us": 1679588811798717,
+    "partition": "candidate_test"
+  },
+  "claims": "Payload value9 is preserved; read response wire address remains null; log-linked malformed reply retains rawbytes. Candidate membership is not a class-complete independent experiment. No model preprocessing executed."
+}

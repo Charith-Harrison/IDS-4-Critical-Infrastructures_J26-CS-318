@@ -10,6 +10,8 @@ __pycache__/
 build/
 dist/
 
+references/
+
 # Test, lint, and coverage outputs
 .pytest_cache/
 .pytest_tmp/

@@ -1,0 +1,358 @@
+{
+  "policy_version": "cic-evidence-v1",
+  "tolerance_us": 25000,
+  "clock_offset_candidates_us": [
+    0,
+    -10800000000,
+    10800000000
+  ],
+  "clock_calibration": [
+    {
+      "recording_id": "cic_compromised_ied_march",
+      "family": "false_data_injection",
+      "offset_us": 0,
+      "unique_behavior_matches": 54,
+      "zero_offset_calibrated": true,
+      "residual_min_us": 267,
+      "residual_median_us": 969.5,
+      "residual_max_us": 5717,
+      "source_log_dates_candidate_utc": [
+        "2023-03-23",
+        "2023-03-24",
+        "2023-03-25",
+        "2023-03-26",
+        "2023-03-27",
+        "2023-03-28",
+        "2023-03-29"
+      ],
+      "tolerance_sensitivity_unique_candidates": {
+        "1000": 29,
+        "5000": 53,
+        "25000": 54
+      }
+    },
+    {
+      "recording_id": "cic_compromised_scada_march",
+      "family": "brute_force_or_specific_coil",
+      "offset_us": 0,
+      "unique_behavior_matches": 100,
+      "zero_offset_calibrated": true,
+      "residual_min_us": 32,
+      "residual_median_us": 540.0,
+      "residual_max_us": 1560,
+      "source_log_dates_candidate_utc": [
+        "2023-03-15",
+        "2023-03-16",
+        "2023-03-17",
+        "2023-03-18",
+        "2023-03-19",
+        "2023-03-21"
+      ],
+      "tolerance_sensitivity_unique_candidates": {
+        "1000": 97,
+        "5000": 100,
+        "25000": 100
+      }
+    }
+  ],
+  "strict_candidate_uniqueness_sensitivity": [
+    {
+      "recording_id": "cic_compromised_ied_march",
+      "family": "false_data_injection",
+      "tolerance_us": 1000,
+      "two_sided_unique_candidate_pairs": 29
+    },
+    {
+      "recording_id": "cic_compromised_ied_march",
+      "family": "false_data_injection",
+      "tolerance_us": 5000,
+      "two_sided_unique_candidate_pairs": 53
+    },
+    {
+      "recording_id": "cic_compromised_ied_march",
+      "family": "false_data_injection",
+      "tolerance_us": 25000,
+      "two_sided_unique_candidate_pairs": 54
+    },
+    {
+      "recording_id": "cic_compromised_scada_march",
+      "family": "brute_force_or_specific_coil",
+      "tolerance_us": 0,
+      "two_sided_unique_candidate_pairs": 82
+    },
+    {
+      "recording_id": "cic_compromised_scada_march",
+      "family": "brute_force_or_specific_coil",
+      "tolerance_us": 1000,
+      "two_sided_unique_candidate_pairs": 400
+    },
+    {
+      "recording_id": "cic_compromised_scada_march",
+      "family": "brute_force_or_specific_coil",
+      "tolerance_us": 5000,
+      "two_sided_unique_candidate_pairs": 187
+    },
+    {
+      "recording_id": "cic_compromised_scada_march",
+      "family": "brute_force_or_specific_coil",
+      "tolerance_us": 25000,
+      "two_sided_unique_candidate_pairs": 100
+    }
+  ],
+  "clock_scope_limit": "Zero offset accepted only for observed family/campaign with>=3unique behavior matches and more support than\u00b13hours; no claim for all logs/clocks.",
+  "source_log_counts": {
+    "source_rows": 1536126,
+    "completion_rows_not_direct_injection_labels": 763797,
+    "superseded_time_damaged_csv_rows": 8306,
+    "missing_time_target_or_valid_wire_tid": 65614,
+    "distinct_candidate_log_signatures": 285858
+  },
+  "signature_match_states": {
+    "unmatched_log_attempt_or_unverified_tid_semantics": 468,
+    "accepted_core_mechanism_event_evidence": 154,
+    "outside_selected_capture_interval_candidate_utc": 93969,
+    "outside_selected_endpoint_scope_not_absent_from_raw_dataset": 155227,
+    "candidate_only_or_ambiguous": 36040
+  },
+  "views": {
+    "benign_ied1b": {
+      "counts": {
+        "label:normal": 1404306,
+        "state:supported_source_documentation": 1404306,
+        "events": 1404306
+      },
+      "supported_log_packet_events_by_class": {},
+      "independence_policy": "Distinct log/packet events are NOT independent recordings. All campaign events remain in one parent group.",
+      "risk_connections_withheld_from_confident_labels": 0,
+      "candidate_edge_count": 0,
+      "contradictory_core_target_event_count": 0,
+      "conflict_policy": "No arbitrary target chosen for multiple supported log candidates; those events remain unknown_or_ambiguous.",
+      "multiple_individually_unique_core_log_candidates_event_count": 0,
+      "ambiguous_core_candidate_events_quarantined": 0,
+      "ambiguity_definition": "Core log association exists but a target is withheld; this includes many-to-many burst matches, not only multiple individually unique candidates."
+    },
+    "external_bridge": {
+      "counts": {
+        "label:unlabelled": 282101,
+        "state:unlabelled": 282101,
+        "events": 282101
+      },
+      "supported_log_packet_events_by_class": {},
+      "independence_policy": "Distinct log/packet events are NOT independent recordings. All campaign events remain in one parent group.",
+      "risk_connections_withheld_from_confident_labels": 0,
+      "candidate_edge_count": 0,
+      "contradictory_core_target_event_count": 0,
+      "conflict_policy": "No arbitrary target chosen for multiple supported log candidates; those events remain unknown_or_ambiguous.",
+      "multiple_individually_unique_core_log_candidates_event_count": 0,
+      "ambiguous_core_candidate_events_quarantined": 0,
+      "ambiguity_definition": "Core log association exists but a target is withheld; this includes many-to-many burst matches, not only multiple individually unique candidates."
+    },
+    "ied_ied1b": {
+      "counts": {
+        "label:unlabelled": 1116867,
+        "state:unlabelled": 1116867,
+        "events": 1116921,
+        "label:response_injection": 54,
+        "state:supported_log_packet_mechanism": 54
+      },
+      "supported_log_packet_events_by_class": {
+        "response_injection": 54
+      },
+      "independence_policy": "Distinct log/packet events are NOT independent recordings. All campaign events remain in one parent group.",
+      "risk_connections_withheld_from_confident_labels": 0,
+      "candidate_edge_count": 54,
+      "contradictory_core_target_event_count": 0,
+      "conflict_policy": "No arbitrary target chosen for multiple supported log candidates; those events remain unknown_or_ambiguous.",
+      "multiple_individually_unique_core_log_candidates_event_count": 0,
+      "ambiguous_core_candidate_events_quarantined": 0,
+      "ambiguity_definition": "Core log association exists but a target is withheld; this includes many-to-many burst matches, not only multiple individually unique candidates."
+    },
+    "scada_ied1a": {
+      "counts": {
+        "label:unlabelled": 964859,
+        "state:unlabelled": 864859,
+        "events": 964959,
+        "state:unknown_or_ambiguous": 99995,
+        "label:command_injection": 100,
+        "state:supported_log_packet_mechanism": 100,
+        "state:out_of_scope": 5
+      },
+      "supported_log_packet_events_by_class": {
+        "command_injection": 100
+      },
+      "independence_policy": "Distinct log/packet events are NOT independent recordings. All campaign events remain in one parent group.",
+      "risk_connections_withheld_from_confident_labels": 0,
+      "candidate_edge_count": 2568490,
+      "contradictory_core_target_event_count": 0,
+      "conflict_policy": "No arbitrary target chosen for multiple supported log candidates; those events remain unknown_or_ambiguous.",
+      "multiple_individually_unique_core_log_candidates_event_count": 0,
+      "ambiguous_core_candidate_events_quarantined": 98728,
+      "ambiguity_definition": "Core log association exists but a target is withheld; this includes many-to-many burst matches, not only multiple individually unique candidates."
+    }
+  },
+  "selected_endpoint_scope": {
+    "cic_benign_january": {
+      "server_ips": [
+        "185.175.0.5"
+      ],
+      "client_ips": [
+        "185.175.0.3"
+      ],
+      "first_ts_us": 1674468178561445,
+      "last_ts_us": 1675182358037493
+    },
+    "cic_external_february": {
+      "server_ips": [
+        "185.175.0.4",
+        "185.175.0.5",
+        "185.175.0.8"
+      ],
+      "client_ips": [
+        "185.175.0.3",
+        "185.175.0.7"
+      ],
+      "first_ts_us": 1675223319921816,
+      "last_ts_us": 1675260110737516
+    },
+    "cic_compromised_ied_march": {
+      "server_ips": [
+        "185.175.0.5"
+      ],
+      "client_ips": [
+        "185.175.0.2"
+      ],
+      "first_ts_us": 1679538700940965,
+      "last_ts_us": 1680106541372033
+    },
+    "cic_compromised_scada_march": {
+      "server_ips": [
+        "185.175.0.4"
+      ],
+      "client_ips": [
+        "185.175.0.3"
+      ],
+      "first_ts_us": 1678845665333506,
+      "last_ts_us": 1679457309417598
+    }
+  },
+  "limitations": [
+    "Naive log timezone is not independently documented.",
+    "Brute-force log TID5/completion65535 semantics not assumed to enumerate literal wire TIDs.",
+    "Other attack mechanisms remain candidate evidence, not fabricated core labels.",
+    "Distinct event evidence does not establish independent episodes or campaigns."
+  ],
+  "elapsed_s": 189.538,
+  "accepted_target_shape_audit": {
+    "benign_ied1b": {},
+    "external_bridge": {},
+    "ied_ied1b": {
+      "response_injection": {
+        "events": 54,
+        "parse_status_counts": {
+          "malformed": 53,
+          "ok": 1
+        },
+        "pdu_hex_counts": {
+          "01abcd": 52,
+          "02abcd": 1,
+          "0302abcd": 1
+        },
+        "examples": [
+          {
+            "event_uid": "ied_ied1b:e98264",
+            "first_chunk": 0,
+            "first_frame": 531107,
+            "last_chunk": 0,
+            "last_frame": 531107,
+            "ts_complete_us": 1679588811798717,
+            "mbap_trans_id": 7485,
+            "func_code": 1,
+            "address": null,
+            "single_value": null,
+            "reg_values": null,
+            "parse_status": "malformed",
+            "shape_reason": "pdu_len:3!=173",
+            "client_ip": "185.175.0.2",
+            "server_ip": "185.175.0.5",
+            "adu_hex": "1d3d000000040101abcd"
+          },
+          {
+            "event_uid": "ied_ied1b:e938079",
+            "first_chunk": 4,
+            "first_frame": 431327,
+            "last_chunk": 4,
+            "last_frame": 431327,
+            "ts_complete_us": 1680015274440000,
+            "mbap_trans_id": 33533,
+            "func_code": 3,
+            "address": null,
+            "single_value": null,
+            "reg_values": [
+              43981
+            ],
+            "parse_status": "ok",
+            "shape_reason": null,
+            "client_ip": "185.175.0.2",
+            "server_ip": "185.175.0.5",
+            "adu_hex": "82fd00000005010302abcd"
+          }
+        ]
+      }
+    },
+    "scada_ied1a": {
+      "command_injection": {
+        "events": 100,
+        "parse_status_counts": {
+          "malformed": 98,
+          "ok": 2
+        },
+        "pdu_hex_counts": {
+          "05000dffff": 32,
+          "05000effff": 32,
+          "0500080001": 31,
+          "050001ff00": 2,
+          "050001ffff": 2,
+          "0500080008": 1
+        },
+        "examples": [
+          {
+            "event_uid": "scada_ied1a:e14564",
+            "first_chunk": 0,
+            "first_frame": 105675,
+            "last_chunk": 0,
+            "last_frame": 105675,
+            "ts_complete_us": 1678853337741779,
+            "mbap_trans_id": 5,
+            "func_code": 5,
+            "address": 13,
+            "single_value": 65535,
+            "reg_values": null,
+            "parse_status": "malformed",
+            "shape_reason": "coil_value_not_0000_or_ff00",
+            "client_ip": "185.175.0.3",
+            "server_ip": "185.175.0.4",
+            "adu_hex": "0005000000060105000dffff"
+          },
+          {
+            "event_uid": "scada_ied1a:e60349",
+            "first_chunk": 0,
+            "first_frame": 452727,
+            "last_chunk": 0,
+            "last_frame": 452727,
+            "ts_complete_us": 1678875775339875,
+            "mbap_trans_id": 5,
+            "func_code": 5,
+            "address": 1,
+            "single_value": 65280,
+            "reg_values": null,
+            "parse_status": "ok",
+            "shape_reason": null,
+            "client_ip": "185.175.0.3",
+            "server_ip": "185.175.0.4",
+            "adu_hex": "00050000000601050001ff00"
+          }
+        ]
+      }
+    }
+  }
+}

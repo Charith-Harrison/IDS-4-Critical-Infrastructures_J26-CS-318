@@ -1,0 +1,4650 @@
+{
+  "outcome_counts": [
+    {
+      "class": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "observed_counterpart_exception_code": null,
+      "accepted_adus": 53
+    },
+    {
+      "class": "response_injection",
+      "pair_state": "matched",
+      "observed_counterpart_exception_code": null,
+      "accepted_adus": 1
+    },
+    {
+      "class": "command_injection",
+      "pair_state": "matched_exception",
+      "observed_counterpart_exception_code": 3,
+      "accepted_adus": 82
+    },
+    {
+      "class": "command_injection",
+      "pair_state": "pending_at_connection_end",
+      "observed_counterpart_exception_code": null,
+      "accepted_adus": 18
+    }
+  ],
+  "relations": [
+    {
+      "accepted_event_uid": "ied_ied1b:e98264",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e98263",
+        "conn_uid": "ied_ied1b:c49207",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679588811792025,
+        "first_chunk": 0,
+        "first_frame": 531105,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 531105,
+            "pcap_offset": 45165403,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679588811792025
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e116751",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e116750",
+        "conn_uid": "ied_ied1b:c58441",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679598248729122,
+        "first_chunk": 0,
+        "first_frame": 632600,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 632600,
+            "pcap_offset": 53779045,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679598248729122
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e166273",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e166272",
+        "conn_uid": "ied_ied1b:c83214",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679623436153235,
+        "first_chunk": 0,
+        "first_frame": 904683,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 904683,
+            "pcap_offset": 76868703,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679623436153235
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e169459",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e169458",
+        "conn_uid": "ied_ied1b:c84808",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679625058036736,
+        "first_chunk": 0,
+        "first_frame": 922183,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 922183,
+            "pcap_offset": 78353944,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679625058036736
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e187576",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e187575",
+        "conn_uid": "ied_ied1b:c93872",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679634255750346,
+        "first_chunk": 0,
+        "first_frame": 1021810,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 1021810,
+            "pcap_offset": 86808953,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679634255750346
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e190412",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e190411",
+        "conn_uid": "ied_ied1b:c95290",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679635699128412,
+        "first_chunk": 0,
+        "first_frame": 1037159,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 1037159,
+            "pcap_offset": 88112952,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679635699128412
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e273318",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e273317",
+        "conn_uid": "ied_ied1b:c136735",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679677898234383,
+        "first_chunk": 1,
+        "first_frame": 315240,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 315240,
+            "pcap_offset": 26753489,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679677898234383
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e276841",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e276840",
+        "conn_uid": "ied_ied1b:c138501",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679679704550309,
+        "first_chunk": 1,
+        "first_frame": 334546,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 334546,
+            "pcap_offset": 28391978,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679679704550309
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e278841",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e278840",
+        "conn_uid": "ied_ied1b:c139501",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679680725099321,
+        "first_chunk": 1,
+        "first_frame": 345561,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 345561,
+            "pcap_offset": 29327000,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679680725099321
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e291307",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e291306",
+        "conn_uid": "ied_ied1b:c145703",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679687036460012,
+        "first_chunk": 1,
+        "first_frame": 413702,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 413702,
+            "pcap_offset": 35110129,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679687036460012
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e307407",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e307406",
+        "conn_uid": "ied_ied1b:c153743",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679695154577957,
+        "first_chunk": 1,
+        "first_frame": 502123,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 502123,
+            "pcap_offset": 42614092,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679695154577957
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e326081",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e326080",
+        "conn_uid": "ied_ied1b:c163090",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679704531738148,
+        "first_chunk": 1,
+        "first_frame": 604540,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 604540,
+            "pcap_offset": 51308194,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679704531738148
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e359420",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e359419",
+        "conn_uid": "ied_ied1b:c179785",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679721477657543,
+        "first_chunk": 1,
+        "first_frame": 787939,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 787939,
+            "pcap_offset": 66872011,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679721477657543
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e372920",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e372919",
+        "conn_uid": "ied_ied1b:c186536",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679728331628609,
+        "first_chunk": 1,
+        "first_frame": 862170,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 862170,
+            "pcap_offset": 73171150,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679728331628609
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e441306",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e441305",
+        "conn_uid": "ied_ied1b:c220729",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679762911162273,
+        "first_chunk": 2,
+        "first_frame": 59320,
+        "segment_refs": [
+          {
+            "chunk": 2,
+            "frame": 59320,
+            "pcap_offset": 5032682,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679762911162273
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e455100",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e455099",
+        "conn_uid": "ied_ied1b:c227627",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679769946300454,
+        "first_chunk": 2,
+        "first_frame": 135140,
+        "segment_refs": [
+          {
+            "chunk": 2,
+            "frame": 135140,
+            "pcap_offset": 11466665,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679769946300454
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e462769",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e462768",
+        "conn_uid": "ied_ied1b:c231474",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679773854594728,
+        "first_chunk": 2,
+        "first_frame": 177129,
+        "segment_refs": [
+          {
+            "chunk": 2,
+            "frame": 177129,
+            "pcap_offset": 15031037,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679773854594728
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e469126",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e469125",
+        "conn_uid": "ied_ied1b:c234658",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679777103836945,
+        "first_chunk": 2,
+        "first_frame": 212071,
+        "segment_refs": [
+          {
+            "chunk": 2,
+            "frame": 212071,
+            "pcap_offset": 17996745,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679777103836945
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e487367",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e487366",
+        "conn_uid": "ied_ied1b:c243785",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679786362856546,
+        "first_chunk": 2,
+        "first_frame": 312530,
+        "segment_refs": [
+          {
+            "chunk": 2,
+            "frame": 312530,
+            "pcap_offset": 26521346,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679786362856546
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e499474",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e499473",
+        "conn_uid": "ied_ied1b:c249817",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679792371276130,
+        "first_chunk": 2,
+        "first_frame": 378564,
+        "segment_refs": [
+          {
+            "chunk": 2,
+            "frame": 378564,
+            "pcap_offset": 32128449,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679792371276130
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e566238",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e566237",
+        "conn_uid": "ied_ied1b:c283202",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679826085116905,
+        "first_chunk": 2,
+        "first_frame": 745442,
+        "segment_refs": [
+          {
+            "chunk": 2,
+            "frame": 745442,
+            "pcap_offset": 63264661,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679826085116905
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e579141",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e579140",
+        "conn_uid": "ied_ied1b:c289641",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679832637430019,
+        "first_chunk": 2,
+        "first_frame": 816244,
+        "segment_refs": [
+          {
+            "chunk": 2,
+            "frame": 816244,
+            "pcap_offset": 69272808,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679832637430019
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e591270",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e591269",
+        "conn_uid": "ied_ied1b:c295713",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679838832140692,
+        "first_chunk": 2,
+        "first_frame": 882899,
+        "segment_refs": [
+          {
+            "chunk": 2,
+            "frame": 882899,
+            "pcap_offset": 74929627,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679838832140692
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e603040",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e603039",
+        "conn_uid": "ied_ied1b:c301591",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679844724979005,
+        "first_chunk": 2,
+        "first_frame": 947250,
+        "segment_refs": [
+          {
+            "chunk": 2,
+            "frame": 947250,
+            "pcap_offset": 80392597,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679844724979005
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e633079",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e633078",
+        "conn_uid": "ied_ied1b:c316629",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679860052394569,
+        "first_chunk": 2,
+        "first_frame": 1112626,
+        "segment_refs": [
+          {
+            "chunk": 2,
+            "frame": 1112626,
+            "pcap_offset": 94425355,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679860052394569
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e690822",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e690821",
+        "conn_uid": "ied_ied1b:c345537",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679889508401603,
+        "first_chunk": 3,
+        "first_frame": 251495,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 251495,
+            "pcap_offset": 21342783,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679889508401603
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e705533",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e705532",
+        "conn_uid": "ied_ied1b:c352912",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679897020702354,
+        "first_chunk": 3,
+        "first_frame": 332369,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 332369,
+            "pcap_offset": 28206063,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679897020702354
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e725048",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e725047",
+        "conn_uid": "ied_ied1b:c362692",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679906997707627,
+        "first_chunk": 3,
+        "first_frame": 439753,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 439753,
+            "pcap_offset": 37318115,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679906997707627
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e727522",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e727521",
+        "conn_uid": "ied_ied1b:c363929",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679908262420992,
+        "first_chunk": 3,
+        "first_frame": 453188,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 453188,
+            "pcap_offset": 38459368,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679908262420992
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e736372",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e736371",
+        "conn_uid": "ied_ied1b:c368357",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679912772119877,
+        "first_chunk": 3,
+        "first_frame": 501914,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 501914,
+            "pcap_offset": 42594050,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679912772119877
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e744872",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e744871",
+        "conn_uid": "ied_ied1b:c372608",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679917101460642,
+        "first_chunk": 3,
+        "first_frame": 548776,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 548776,
+            "pcap_offset": 46570091,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679917101460642
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e759326",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e759325",
+        "conn_uid": "ied_ied1b:c379828",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679924440743358,
+        "first_chunk": 3,
+        "first_frame": 628128,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 628128,
+            "pcap_offset": 53304601,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679924440743358
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e764398",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e764397",
+        "conn_uid": "ied_ied1b:c382362",
+        "protocol_role": "request",
+        "func_raw": 2,
+        "exception_code": null,
+        "address": 5,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "0200050001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679927028457672,
+        "first_chunk": 3,
+        "first_frame": 655826,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 655826,
+            "pcap_offset": 55656192,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679927028457672
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e774176",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e774175",
+        "conn_uid": "ied_ied1b:c387255",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679932016288789,
+        "first_chunk": 3,
+        "first_frame": 709575,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 709575,
+            "pcap_offset": 60217233,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679932016288789
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e785958",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e785957",
+        "conn_uid": "ied_ied1b:c393156",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679938026059991,
+        "first_chunk": 3,
+        "first_frame": 774371,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 774371,
+            "pcap_offset": 65715994,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679938026059991
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e829507",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e829506",
+        "conn_uid": "ied_ied1b:c414903",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679960085870414,
+        "first_chunk": 3,
+        "first_frame": 1013348,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 1013348,
+            "pcap_offset": 85997691,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679960085870414
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e857725",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e857724",
+        "conn_uid": "ied_ied1b:c429005",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679974448670822,
+        "first_chunk": 3,
+        "first_frame": 1168381,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 1168381,
+            "pcap_offset": 99154267,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679974448670822
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e863851",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e863850",
+        "conn_uid": "ied_ied1b:c432068",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679977572584989,
+        "first_chunk": 4,
+        "first_frame": 23646,
+        "segment_refs": [
+          {
+            "chunk": 4,
+            "frame": 23646,
+            "pcap_offset": 2006642,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679977572584989
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e874464",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e874463",
+        "conn_uid": "ied_ied1b:c437387",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679982988012412,
+        "first_chunk": 4,
+        "first_frame": 82054,
+        "segment_refs": [
+          {
+            "chunk": 4,
+            "frame": 82054,
+            "pcap_offset": 6963419,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679982988012412
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e887183",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e887182",
+        "conn_uid": "ied_ied1b:c443751",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1679989484505824,
+        "first_chunk": 4,
+        "first_frame": 151912,
+        "segment_refs": [
+          {
+            "chunk": 4,
+            "frame": 151912,
+            "pcap_offset": 12892024,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1679989484505824
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e910266",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e910265",
+        "conn_uid": "ied_ied1b:c455283",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1680001267654076,
+        "first_chunk": 4,
+        "first_frame": 278646,
+        "segment_refs": [
+          {
+            "chunk": 4,
+            "frame": 278646,
+            "pcap_offset": 23647430,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1680001267654076
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e927346",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e927345",
+        "conn_uid": "ied_ied1b:c463825",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1680009927919024,
+        "first_chunk": 4,
+        "first_frame": 372383,
+        "segment_refs": [
+          {
+            "chunk": 4,
+            "frame": 372383,
+            "pcap_offset": 31603181,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1680009927919024
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e938079",
+      "label": "response_injection",
+      "pair_state": "matched",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e938078",
+        "conn_uid": "ied_ied1b:c469205",
+        "protocol_role": "request",
+        "func_raw": 3,
+        "exception_code": null,
+        "address": 35,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "0300230001",
+        "parse_status": "ok",
+        "ts_complete_us": 1680015274438977,
+        "first_chunk": 4,
+        "first_frame": 431325,
+        "segment_refs": [
+          {
+            "chunk": 4,
+            "frame": 431325,
+            "pcap_offset": 36606624,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1680015274438977
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e953634",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e953633",
+        "conn_uid": "ied_ied1b:c476987",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1680023212685023,
+        "first_chunk": 4,
+        "first_frame": 516782,
+        "segment_refs": [
+          {
+            "chunk": 4,
+            "frame": 516782,
+            "pcap_offset": 43858540,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1680023212685023
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e960608",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e960607",
+        "conn_uid": "ied_ied1b:c480468",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1680026757260621,
+        "first_chunk": 4,
+        "first_frame": 554950,
+        "segment_refs": [
+          {
+            "chunk": 4,
+            "frame": 554950,
+            "pcap_offset": 47097988,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1680026757260621
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e985968",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e985967",
+        "conn_uid": "ied_ied1b:c493166",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1680039678036589,
+        "first_chunk": 4,
+        "first_frame": 694368,
+        "segment_refs": [
+          {
+            "chunk": 4,
+            "frame": 694368,
+            "pcap_offset": 58929464,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1680039678036589
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e989252",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e989251",
+        "conn_uid": "ied_ied1b:c494815",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1680041360362443,
+        "first_chunk": 4,
+        "first_frame": 712604,
+        "segment_refs": [
+          {
+            "chunk": 4,
+            "frame": 712604,
+            "pcap_offset": 60475960,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1680041360362443
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e1012687",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e1012686",
+        "conn_uid": "ied_ied1b:c506534",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1680053323079369,
+        "first_chunk": 4,
+        "first_frame": 841222,
+        "segment_refs": [
+          {
+            "chunk": 4,
+            "frame": 841222,
+            "pcap_offset": 71391200,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1680053323079369
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e1014681",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e1014680",
+        "conn_uid": "ied_ied1b:c507531",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1680054345094492,
+        "first_chunk": 4,
+        "first_frame": 852208,
+        "segment_refs": [
+          {
+            "chunk": 4,
+            "frame": 852208,
+            "pcap_offset": 72323312,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1680054345094492
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e1018095",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e1018094",
+        "conn_uid": "ied_ied1b:c509239",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1680056088944904,
+        "first_chunk": 4,
+        "first_frame": 871024,
+        "segment_refs": [
+          {
+            "chunk": 4,
+            "frame": 871024,
+            "pcap_offset": 73919865,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1680056088944904
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e1044490",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e1044489",
+        "conn_uid": "ied_ied1b:c522434",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1680069556271287,
+        "first_chunk": 4,
+        "first_frame": 1015776,
+        "segment_refs": [
+          {
+            "chunk": 4,
+            "frame": 1015776,
+            "pcap_offset": 86204945,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1680069556271287
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e1049866",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e1049865",
+        "conn_uid": "ied_ied1b:c525126",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1680072322503452,
+        "first_chunk": 4,
+        "first_frame": 1045433,
+        "segment_refs": [
+          {
+            "chunk": 4,
+            "frame": 1045433,
+            "pcap_offset": 88720814,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1680072322503452
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e1110994",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e1110993",
+        "conn_uid": "ied_ied1b:c555677",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1680103519450572,
+        "first_chunk": 5,
+        "first_frame": 202704,
+        "segment_refs": [
+          {
+            "chunk": 5,
+            "frame": 202704,
+            "pcap_offset": 17202351,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1680103519450572
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "ied_ied1b:e1115827",
+      "label": "response_injection",
+      "pair_state": "matched_inconsistent",
+      "counterpart": {
+        "event_uid": "ied_ied1b:e1115826",
+        "conn_uid": "ied_ied1b:c558095",
+        "protocol_role": "request",
+        "func_raw": 1,
+        "exception_code": null,
+        "address": 15,
+        "quantity": 1,
+        "single_value": null,
+        "pdu_bytes": "01000f0001",
+        "parse_status": "ok",
+        "ts_complete_us": 1680105985019078,
+        "first_chunk": 5,
+        "first_frame": 229342,
+        "segment_refs": [
+          {
+            "chunk": 5,
+            "frame": 229342,
+            "pcap_offset": 19462647,
+            "stream_start": 0,
+            "stream_end": 12,
+            "event_byte_start": 0,
+            "event_byte_end": 12,
+            "timestamp_us": 1680105985019078
+          }
+        ]
+      },
+      "interpretation": "Pair/shape evidence only; physical impact and authorization not inferred"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e14564",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e14572",
+        "conn_uid": "scada_ied1a:c11241",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678853337829341,
+        "first_chunk": 0,
+        "first_frame": 105731,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 105731,
+            "pcap_offset": 9914360,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678853337829341
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e14565",
+      "label": "command_injection",
+      "pair_state": "pending_at_connection_end",
+      "counterpart": null,
+      "interpretation": "Reply not observed; neither success nor failure established"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e14566",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e14573",
+        "conn_uid": "scada_ied1a:c11243",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678853337887036,
+        "first_chunk": 0,
+        "first_frame": 105733,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 105733,
+            "pcap_offset": 9914521,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678853337887036
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e60349",
+      "label": "command_injection",
+      "pair_state": "pending_at_connection_end",
+      "counterpart": null,
+      "interpretation": "Reply not observed; neither success nor failure established"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e68275",
+      "label": "command_injection",
+      "pair_state": "pending_at_connection_end",
+      "counterpart": null,
+      "interpretation": "Reply not observed; neither success nor failure established"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e69748",
+      "label": "command_injection",
+      "pair_state": "pending_at_connection_end",
+      "counterpart": null,
+      "interpretation": "Reply not observed; neither success nor failure established"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e75722",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e75731",
+        "conn_uid": "scada_ied1a:c62505",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678885126509355,
+        "first_chunk": 0,
+        "first_frame": 568637,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 568637,
+            "pcap_offset": 52636455,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678885126509355
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e75723",
+      "label": "command_injection",
+      "pair_state": "pending_at_connection_end",
+      "counterpart": null,
+      "interpretation": "Reply not observed; neither success nor failure established"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e75724",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e75730",
+        "conn_uid": "scada_ied1a:c62507",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678885126483672,
+        "first_chunk": 0,
+        "first_frame": 568628,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 568628,
+            "pcap_offset": 52635448,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678885126483672
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e77138",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e77146",
+        "conn_uid": "scada_ied1a:c63541",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678886446542316,
+        "first_chunk": 0,
+        "first_frame": 577730,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 577730,
+            "pcap_offset": 53545639,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678886446542316
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e77139",
+      "label": "command_injection",
+      "pair_state": "pending_at_connection_end",
+      "counterpart": null,
+      "interpretation": "Reply not observed; neither success nor failure established"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e77140",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e77147",
+        "conn_uid": "scada_ied1a:c63543",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678886446550042,
+        "first_chunk": 0,
+        "first_frame": 577736,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 577736,
+            "pcap_offset": 53546128,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678886446550042
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e95415",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e95416",
+        "conn_uid": "scada_ied1a:c79696",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678902516759609,
+        "first_chunk": 0,
+        "first_frame": 709963,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 709963,
+            "pcap_offset": 65054641,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678902516759609
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e95417",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e95425",
+        "conn_uid": "scada_ied1a:c79697",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678902516773142,
+        "first_chunk": 0,
+        "first_frame": 710024,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 710024,
+            "pcap_offset": 65060136,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678902516773142
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e95418",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e95424",
+        "conn_uid": "scada_ied1a:c79698",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678902516770792,
+        "first_chunk": 0,
+        "first_frame": 710010,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 710010,
+            "pcap_offset": 65058719,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678902516770792
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e128080",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e128090",
+        "conn_uid": "scada_ied1a:c103984",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678922582637837,
+        "first_chunk": 0,
+        "first_frame": 921631,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 921631,
+            "pcap_offset": 84475734,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678922582637837
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e128081",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e128089",
+        "conn_uid": "scada_ied1a:c103985",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678922582617063,
+        "first_chunk": 0,
+        "first_frame": 921624,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 921624,
+            "pcap_offset": 84474620,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678922582617063
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e128082",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e128088",
+        "conn_uid": "scada_ied1a:c103986",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678922582609925,
+        "first_chunk": 0,
+        "first_frame": 921620,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 921620,
+            "pcap_offset": 84474295,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678922582609925
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e145461",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e145469",
+        "conn_uid": "scada_ied1a:c118515",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678933786945254,
+        "first_chunk": 0,
+        "first_frame": 1042770,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 1042770,
+            "pcap_offset": 95599437,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678933786945254
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e145462",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e145470",
+        "conn_uid": "scada_ied1a:c118516",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678933786948793,
+        "first_chunk": 0,
+        "first_frame": 1042772,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 1042772,
+            "pcap_offset": 95599598,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678933786948793
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e145463",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e145471",
+        "conn_uid": "scada_ied1a:c118517",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678933786962406,
+        "first_chunk": 0,
+        "first_frame": 1042780,
+        "segment_refs": [
+          {
+            "chunk": 0,
+            "frame": 1042780,
+            "pcap_offset": 95600251,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678933786962406
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e156635",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e156644",
+        "conn_uid": "scada_ied1a:c126826",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678940807037489,
+        "first_chunk": 1,
+        "first_frame": 29346,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 29346,
+            "pcap_offset": 2897443,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678940807037489
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e156636",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e156643",
+        "conn_uid": "scada_ied1a:c126827",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678940807010606,
+        "first_chunk": 1,
+        "first_frame": 29337,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 29337,
+            "pcap_offset": 2896708,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678940807010606
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e156637",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e156645",
+        "conn_uid": "scada_ied1a:c126828",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678940807041424,
+        "first_chunk": 1,
+        "first_frame": 29348,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 29348,
+            "pcap_offset": 2897604,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678940807041424
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e184778",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e184779",
+        "conn_uid": "scada_ied1a:c152826",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678974260689279,
+        "first_chunk": 1,
+        "first_frame": 237256,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 237256,
+            "pcap_offset": 21213707,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678974260689279
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e184780",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e184787",
+        "conn_uid": "scada_ied1a:c152827",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678974260692890,
+        "first_chunk": 1,
+        "first_frame": 237301,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 237301,
+            "pcap_offset": 21217590,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678974260692890
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e184781",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e184789",
+        "conn_uid": "scada_ied1a:c152828",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678974260709168,
+        "first_chunk": 1,
+        "first_frame": 237307,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 237307,
+            "pcap_offset": 21218349,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678974260709168
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e186412",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e186420",
+        "conn_uid": "scada_ied1a:c154179",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678975640696545,
+        "first_chunk": 1,
+        "first_frame": 247273,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 247273,
+            "pcap_offset": 22127514,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678975640696545
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e186413",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e186421",
+        "conn_uid": "scada_ied1a:c154180",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678975640698607,
+        "first_chunk": 1,
+        "first_frame": 247278,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 247278,
+            "pcap_offset": 22128192,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678975640698607
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e186414",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e186424",
+        "conn_uid": "scada_ied1a:c154181",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678975640729111,
+        "first_chunk": 1,
+        "first_frame": 247286,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 247286,
+            "pcap_offset": 22129113,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678975640729111
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e189579",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e189587",
+        "conn_uid": "scada_ied1a:c156539",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678978880745379,
+        "first_chunk": 1,
+        "first_frame": 266751,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 266751,
+            "pcap_offset": 23912324,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678978880745379
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e189580",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e189589",
+        "conn_uid": "scada_ied1a:c156540",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678978880758448,
+        "first_chunk": 1,
+        "first_frame": 266757,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 266757,
+            "pcap_offset": 23913082,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678978880758448
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e189581",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e189588",
+        "conn_uid": "scada_ied1a:c156541",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678978880758405,
+        "first_chunk": 1,
+        "first_frame": 266755,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 266755,
+            "pcap_offset": 23912921,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678978880758405
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e195538",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e195546",
+        "conn_uid": "scada_ied1a:c160822",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678982540772462,
+        "first_chunk": 1,
+        "first_frame": 303713,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 303713,
+            "pcap_offset": 27425470,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678982540772462
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e195539",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e195547",
+        "conn_uid": "scada_ied1a:c160823",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678982540794536,
+        "first_chunk": 1,
+        "first_frame": 303718,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 303718,
+            "pcap_offset": 27426148,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678982540794536
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e195540",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e195548",
+        "conn_uid": "scada_ied1a:c160824",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678982540801701,
+        "first_chunk": 1,
+        "first_frame": 303720,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 303720,
+            "pcap_offset": 27426309,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678982540801701
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e206750",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e206758",
+        "conn_uid": "scada_ied1a:c168981",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678991600942994,
+        "first_chunk": 1,
+        "first_frame": 375228,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 375228,
+            "pcap_offset": 34299044,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678991600942994
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e206751",
+      "label": "command_injection",
+      "pair_state": "pending_at_connection_end",
+      "counterpart": null,
+      "interpretation": "Reply not observed; neither success nor failure established"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e206752",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e206759",
+        "conn_uid": "scada_ied1a:c168983",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1678991600966698,
+        "first_chunk": 1,
+        "first_frame": 375232,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 375232,
+            "pcap_offset": 34299388,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1678991600966698
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e231493",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e231502",
+        "conn_uid": "scada_ied1a:c189946",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679020057322660,
+        "first_chunk": 1,
+        "first_frame": 543585,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 543585,
+            "pcap_offset": 49070982,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679020057322660
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e231494",
+      "label": "command_injection",
+      "pair_state": "pending_at_connection_end",
+      "counterpart": null,
+      "interpretation": "Reply not observed; neither success nor failure established"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e231495",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e231501",
+        "conn_uid": "scada_ied1a:c189948",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679020057316123,
+        "first_chunk": 1,
+        "first_frame": 543578,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 543578,
+            "pcap_offset": 49070159,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679020057316123
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e237634",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e237642",
+        "conn_uid": "scada_ied1a:c195445",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679022178244397,
+        "first_chunk": 1,
+        "first_frame": 592873,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 592873,
+            "pcap_offset": 53351097,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679022178244397
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e237635",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e237643",
+        "conn_uid": "scada_ied1a:c195446",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679022178245422,
+        "first_chunk": 1,
+        "first_frame": 592875,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 592875,
+            "pcap_offset": 53351258,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679022178245422
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e237636",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e237644",
+        "conn_uid": "scada_ied1a:c195447",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679022178245848,
+        "first_chunk": 1,
+        "first_frame": 592877,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 592877,
+            "pcap_offset": 53351419,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679022178245848
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e256212",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e256213",
+        "conn_uid": "scada_ied1a:c208750",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679036158325280,
+        "first_chunk": 1,
+        "first_frame": 710074,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 710074,
+            "pcap_offset": 64462137,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679036158325280
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e256214",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e256222",
+        "conn_uid": "scada_ied1a:c208751",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679036158346265,
+        "first_chunk": 1,
+        "first_frame": 710121,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 710121,
+            "pcap_offset": 64466193,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679036158346265
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e256215",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e256221",
+        "conn_uid": "scada_ied1a:c208752",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679036158345894,
+        "first_chunk": 1,
+        "first_frame": 710119,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 710119,
+            "pcap_offset": 64466032,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679036158345894
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e259191",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e259201",
+        "conn_uid": "scada_ied1a:c210793",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679038798368313,
+        "first_chunk": 1,
+        "first_frame": 729028,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 729028,
+            "pcap_offset": 66318283,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679038798368313
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e259192",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e259200",
+        "conn_uid": "scada_ied1a:c210794",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679038798367065,
+        "first_chunk": 1,
+        "first_frame": 729026,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 729026,
+            "pcap_offset": 66318122,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679038798367065
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e259193",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e259202",
+        "conn_uid": "scada_ied1a:c210795",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679038798389717,
+        "first_chunk": 1,
+        "first_frame": 729034,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 729034,
+            "pcap_offset": 66319043,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679038798389717
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e259996",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e260004",
+        "conn_uid": "scada_ied1a:c211625",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679039758385654,
+        "first_chunk": 1,
+        "first_frame": 734409,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 734409,
+            "pcap_offset": 66830163,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679039758385654
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e259997",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e260005",
+        "conn_uid": "scada_ied1a:c211626",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679039758453611,
+        "first_chunk": 1,
+        "first_frame": 734421,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 734421,
+            "pcap_offset": 66831415,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679039758453611
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e259998",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e260007",
+        "conn_uid": "scada_ied1a:c211627",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679039758460398,
+        "first_chunk": 1,
+        "first_frame": 734425,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 734425,
+            "pcap_offset": 66831738,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679039758460398
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e267993",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e268002",
+        "conn_uid": "scada_ied1a:c217084",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679046058452516,
+        "first_chunk": 1,
+        "first_frame": 786349,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 786349,
+            "pcap_offset": 71899113,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679046058452516
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e267994",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e268003",
+        "conn_uid": "scada_ied1a:c217085",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679046058486075,
+        "first_chunk": 1,
+        "first_frame": 786354,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 786354,
+            "pcap_offset": 71899791,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679046058486075
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e267995",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e268004",
+        "conn_uid": "scada_ied1a:c217086",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679046058521902,
+        "first_chunk": 1,
+        "first_frame": 786356,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 786356,
+            "pcap_offset": 71899952,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679046058521902
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e306704",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e306705",
+        "conn_uid": "scada_ied1a:c243781",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679076058969205,
+        "first_chunk": 1,
+        "first_frame": 1021981,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 1021981,
+            "pcap_offset": 93996356,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679076058969205
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e306706",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e306714",
+        "conn_uid": "scada_ied1a:c243782",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679076059015898,
+        "first_chunk": 1,
+        "first_frame": 1022028,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 1022028,
+            "pcap_offset": 94000412,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679076059015898
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e306707",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e306713",
+        "conn_uid": "scada_ied1a:c243783",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679076059012978,
+        "first_chunk": 1,
+        "first_frame": 1022026,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 1022026,
+            "pcap_offset": 94000251,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679076059012978
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e307509",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e307519",
+        "conn_uid": "scada_ied1a:c244576",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679077019066694,
+        "first_chunk": 1,
+        "first_frame": 1027312,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 1027312,
+            "pcap_offset": 94506167,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679077019066694
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e307511",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e307521",
+        "conn_uid": "scada_ied1a:c244577",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679077019123674,
+        "first_chunk": 1,
+        "first_frame": 1027323,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 1027323,
+            "pcap_offset": 94507335,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679077019123674
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e307512",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e307520",
+        "conn_uid": "scada_ied1a:c244578",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679077019104269,
+        "first_chunk": 1,
+        "first_frame": 1027316,
+        "segment_refs": [
+          {
+            "chunk": 1,
+            "frame": 1027316,
+            "pcap_offset": 94506492,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679077019104269
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e334739",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e334776",
+        "conn_uid": "scada_ied1a:c265588",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679095890813458,
+        "first_chunk": 2,
+        "first_frame": 127200,
+        "segment_refs": [
+          {
+            "chunk": 2,
+            "frame": 127200,
+            "pcap_offset": 11878166,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679095890813458
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e342812",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e342822",
+        "conn_uid": "scada_ied1a:c272251",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679099046589278,
+        "first_chunk": 2,
+        "first_frame": 190106,
+        "segment_refs": [
+          {
+            "chunk": 2,
+            "frame": 190106,
+            "pcap_offset": 17523418,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679099046589278
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e342813",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e342821",
+        "conn_uid": "scada_ied1a:c272252",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679099046585285,
+        "first_chunk": 2,
+        "first_frame": 190104,
+        "segment_refs": [
+          {
+            "chunk": 2,
+            "frame": 190104,
+            "pcap_offset": 17523257,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679099046585285
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e342814",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e342820",
+        "conn_uid": "scada_ied1a:c272253",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679099046576933,
+        "first_chunk": 2,
+        "first_frame": 190102,
+        "segment_refs": [
+          {
+            "chunk": 2,
+            "frame": 190102,
+            "pcap_offset": 17523096,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679099046576933
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e348158",
+      "label": "command_injection",
+      "pair_state": "pending_at_connection_end",
+      "counterpart": null,
+      "interpretation": "Reply not observed; neither success nor failure established"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e348159",
+      "label": "command_injection",
+      "pair_state": "pending_at_connection_end",
+      "counterpart": null,
+      "interpretation": "Reply not observed; neither success nor failure established"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e348160",
+      "label": "command_injection",
+      "pair_state": "pending_at_connection_end",
+      "counterpart": null,
+      "interpretation": "Reply not observed; neither success nor failure established"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e348526",
+      "label": "command_injection",
+      "pair_state": "pending_at_connection_end",
+      "counterpart": null,
+      "interpretation": "Reply not observed; neither success nor failure established"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e348527",
+      "label": "command_injection",
+      "pair_state": "pending_at_connection_end",
+      "counterpart": null,
+      "interpretation": "Reply not observed; neither success nor failure established"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e348528",
+      "label": "command_injection",
+      "pair_state": "pending_at_connection_end",
+      "counterpart": null,
+      "interpretation": "Reply not observed; neither success nor failure established"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e522582",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e522590",
+        "conn_uid": "scada_ied1a:c390670",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679197514388250,
+        "first_chunk": 3,
+        "first_frame": 101922,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 101922,
+            "pcap_offset": 8785621,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679197514388250
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e522583",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e522592",
+        "conn_uid": "scada_ied1a:c390671",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679197514393124,
+        "first_chunk": 3,
+        "first_frame": 101932,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 101932,
+            "pcap_offset": 8786435,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679197514393124
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e522584",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e522591",
+        "conn_uid": "scada_ied1a:c390672",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679197514390888,
+        "first_chunk": 3,
+        "first_frame": 101924,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 101924,
+            "pcap_offset": 8785782,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679197514390888
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e544524",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e544532",
+        "conn_uid": "scada_ied1a:c406710",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679210909335005,
+        "first_chunk": 3,
+        "first_frame": 243198,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 243198,
+            "pcap_offset": 21166020,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679210909335005
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e544525",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e544533",
+        "conn_uid": "scada_ied1a:c406711",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679210909355634,
+        "first_chunk": 3,
+        "first_frame": 243207,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 243207,
+            "pcap_offset": 21166755,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679210909355634
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e544526",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e544534",
+        "conn_uid": "scada_ied1a:c406712",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679210909366279,
+        "first_chunk": 3,
+        "first_frame": 243209,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 243209,
+            "pcap_offset": 21166916,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679210909366279
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e547078",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e547086",
+        "conn_uid": "scada_ied1a:c408665",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679213309342632,
+        "first_chunk": 3,
+        "first_frame": 259036,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 259036,
+            "pcap_offset": 22647070,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679213309342632
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e547079",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e547087",
+        "conn_uid": "scada_ied1a:c408666",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679213309354482,
+        "first_chunk": 3,
+        "first_frame": 259041,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 259041,
+            "pcap_offset": 22647748,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679213309354482
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e547080",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e547088",
+        "conn_uid": "scada_ied1a:c408667",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679213309377912,
+        "first_chunk": 3,
+        "first_frame": 259049,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 259049,
+            "pcap_offset": 22648401,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679213309377912
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e553907",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e553915",
+        "conn_uid": "scada_ied1a:c413847",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679218949362686,
+        "first_chunk": 3,
+        "first_frame": 301648,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 301648,
+            "pcap_offset": 26627267,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679218949362686
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e553908",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e553916",
+        "conn_uid": "scada_ied1a:c413848",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679218949369414,
+        "first_chunk": 3,
+        "first_frame": 301653,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 301653,
+            "pcap_offset": 26627945,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679218949369414
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e553909",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e553918",
+        "conn_uid": "scada_ied1a:c413849",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679218949383228,
+        "first_chunk": 3,
+        "first_frame": 301659,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 301659,
+            "pcap_offset": 26628704,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679218949383228
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e554840",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e554848",
+        "conn_uid": "scada_ied1a:c414419",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679219969376424,
+        "first_chunk": 3,
+        "first_frame": 307292,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 307292,
+            "pcap_offset": 27153848,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679219969376424
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e554841",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e554850",
+        "conn_uid": "scada_ied1a:c414420",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679219969381434,
+        "first_chunk": 3,
+        "first_frame": 307297,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 307297,
+            "pcap_offset": 27154505,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679219969381434
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e554842",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e554849",
+        "conn_uid": "scada_ied1a:c414421",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679219969376590,
+        "first_chunk": 3,
+        "first_frame": 307294,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 307294,
+            "pcap_offset": 27154009,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679219969376590
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e587584",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e587592",
+        "conn_uid": "scada_ied1a:c439155",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679242400487502,
+        "first_chunk": 3,
+        "first_frame": 525599,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 525599,
+            "pcap_offset": 47739286,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679242400487502
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e587585",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e587593",
+        "conn_uid": "scada_ied1a:c439156",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679242400555592,
+        "first_chunk": 3,
+        "first_frame": 525611,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 525611,
+            "pcap_offset": 47740538,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679242400555592
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e587586",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e587594",
+        "conn_uid": "scada_ied1a:c439157",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679242400555620,
+        "first_chunk": 3,
+        "first_frame": 525612,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 525612,
+            "pcap_offset": 47740629,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679242400555620
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e601504",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e601512",
+        "conn_uid": "scada_ied1a:c449162",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679253980655769,
+        "first_chunk": 3,
+        "first_frame": 616738,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 616738,
+            "pcap_offset": 56647590,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679253980655769
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e601505",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e601513",
+        "conn_uid": "scada_ied1a:c449163",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679253980851875,
+        "first_chunk": 3,
+        "first_frame": 616740,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 616740,
+            "pcap_offset": 56647751,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679253980851875
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e601506",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e601515",
+        "conn_uid": "scada_ied1a:c449164",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679253980893928,
+        "first_chunk": 3,
+        "first_frame": 616747,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 616747,
+            "pcap_offset": 56648592,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679253980893928
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e602517",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e602527",
+        "conn_uid": "scada_ied1a:c449851",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679255600681317,
+        "first_chunk": 3,
+        "first_frame": 623155,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 623155,
+            "pcap_offset": 57269474,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679255600681317
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e602519",
+      "label": "command_injection",
+      "pair_state": "pending_at_connection_end",
+      "counterpart": null,
+      "interpretation": "Reply not observed; neither success nor failure established"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e602520",
+      "label": "command_injection",
+      "pair_state": "matched_exception",
+      "counterpart": {
+        "event_uid": "scada_ied1a:e602526",
+        "conn_uid": "scada_ied1a:c449853",
+        "protocol_role": "response",
+        "func_raw": 133,
+        "exception_code": 3,
+        "address": null,
+        "quantity": null,
+        "single_value": null,
+        "pdu_bytes": "8503",
+        "parse_status": "exception",
+        "ts_complete_us": 1679255600663276,
+        "first_chunk": 3,
+        "first_frame": 623143,
+        "segment_refs": [
+          {
+            "chunk": 3,
+            "frame": 623143,
+            "pcap_offset": 57268493,
+            "stream_start": 0,
+            "stream_end": 9,
+            "event_byte_start": 0,
+            "event_byte_end": 9,
+            "timestamp_us": 1679255600663276
+          }
+        ]
+      },
+      "interpretation": "Documented injection attempt; exception/rejection observed, no demonstrated state change"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e873064",
+      "label": "command_injection",
+      "pair_state": "pending_at_connection_end",
+      "counterpart": null,
+      "interpretation": "Reply not observed; neither success nor failure established"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e873065",
+      "label": "command_injection",
+      "pair_state": "pending_at_connection_end",
+      "counterpart": null,
+      "interpretation": "Reply not observed; neither success nor failure established"
+    },
+    {
+      "accepted_event_uid": "scada_ied1a:e873066",
+      "label": "command_injection",
+      "pair_state": "pending_at_connection_end",
+      "counterpart": null,
+      "interpretation": "Reply not observed; neither success nor failure established"
+    }
+  ],
+  "separation_rules": [
+    "Attack log records attempted behavior; it is not process outcome instrumentation.",
+    "A valid exception can reject a request; no reply is not proof of failure.",
+    "A genuine acknowledgement associated with a command stays an acknowledgement, not forged response.",
+    "Parser-ok is syntactic only. No units, register meaning, expected values, authorization policy or process impact established."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "version": "c3-evidence-reassessment-v1",
+  "baseline": "component3_preparation",
+  "raw_root": "data/raw/Modbus Dataset",
+  "review": "references/COMPONENT3_REVIEW_AND_NEXT_STEPS/review",
+  "diagnostic_windows_us": [0, 1000, 5000, 25000],
+  "baseline_acceptance_window_us": 25000,
+  "new_labels_authorized": false,
+  "boundary_frames_per_side": 96,
+  "target_window_halfwidth_us": 250000,
+  "max_frames_per_target_window": 2000,
+  "max_bytes_per_target_window": 524288,
+  "proposed_warmup_event_counts_only": [3, 5, 10],
+  "full_expanded_extraction_authorized": false,
+  "model_preprocessing_authorized": false
+}

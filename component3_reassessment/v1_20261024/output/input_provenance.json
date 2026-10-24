@@ -1,0 +1,47 @@
+{
+  "raw_root_verified": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset",
+  "raw_identity": "CIC Modbus Dataset 2023 per original README; publisher checksums unavailable",
+  "review_inputs": [
+    {
+      "path": "references/COMPONENT3_REVIEW_AND_NEXT_STEPS/review/accepted_original_bytes_check.json",
+      "sha256": "d635861920a46e9c2fd517e533479d08bacb77da4c4a8cdd391811864f7cf08a"
+    },
+    {
+      "path": "references/COMPONENT3_REVIEW_AND_NEXT_STEPS/review/audit_cohort.py",
+      "sha256": "12dd909c0d4b490980e51d5824538c39e65e7b41d5c2fb3c8fc4c6dcbeb54263"
+    },
+    {
+      "path": "references/COMPONENT3_REVIEW_AND_NEXT_STEPS/review/audit_scope_and_pairs.py",
+      "sha256": "042d472acde851991334c0c8e9ebe893c1b1c8f04c24547baa11f032d716b5c1"
+    },
+    {
+      "path": "references/COMPONENT3_REVIEW_AND_NEXT_STEPS/review/cohort_audit.json",
+      "sha256": "9e4d0985c61e17a356c9a6cbb7f4c89e28ecff030247c679d677cd1b5f80ad83"
+    },
+    {
+      "path": "references/COMPONENT3_REVIEW_AND_NEXT_STEPS/review/COMPONENT3_PREPARATION_REVIEW.md",
+      "sha256": "11ead5cabe1a63af7218a008653cf01f2b5aa09f595ac64a6530bea0bae48f7c"
+    },
+    {
+      "path": "references/COMPONENT3_REVIEW_AND_NEXT_STEPS/review/FOLLOWUP_FOR_HER_CODEX.txt",
+      "sha256": "7eb482218b3260d96b5a31ef42e6ad9d704fece63fa38ef934ddc6f91008e52c"
+    },
+    {
+      "path": "references/COMPONENT3_REVIEW_AND_NEXT_STEPS/review/independent_review_checks.json",
+      "sha256": "fe270942991ea4c1c28b2314409300c79b4fea15f3ac4c6f39ec53c4bbd81873"
+    },
+    {
+      "path": "references/COMPONENT3_REVIEW_AND_NEXT_STEPS/review/scope_and_pairs_audit.json",
+      "sha256": "46ab27c0956ecf64170fd5ffe2e46893414d6d24e37dfac8f863e33c445abcd4"
+    },
+    {
+      "path": "references/COMPONENT3_REVIEW_AND_NEXT_STEPS/review/validate_accepted_bytes.py",
+      "sha256": "0837bf34d74a0c5cf4dd17da096796ea2f081deca7f5750f6572c977cbe4c9c8"
+    }
+  ],
+  "baseline_files_hashed": 136,
+  "raw_files_metadata_rechecked": 207,
+  "all_raw_sizes_match_inventory": true,
+  "raw_mtime_differences": [],
+  "raw_hash_policy": "Reuse original source inventory/checkpoints; hash actual log files and sampled byte ranges only. No whole raw rehash or full extraction."
+}

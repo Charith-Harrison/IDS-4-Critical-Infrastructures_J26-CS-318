@@ -1,0 +1,2679 @@
+{
+  "scope": "Bounded matching of TCP tuple/sequence/ack/flags/payload plus<=1000us; no rows merged or removed.",
+  "scada_hmi_vs_current_ied1a": [
+    {
+      "day": 1678852358778000,
+      "log_signature_id": "logsig:e8a2e62fb680f803c459a81b",
+      "matched_observation_copies": 261,
+      "copy_examples": [
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-0.pcap",
+            "pcap_record_header_offset": 23505818,
+            "timestamp_us": 1678852358778548,
+            "frame_sha256": "fe74f822570e253c1ba11ff7739a9138b90ff53333ab1b7970523125c0a7347c"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+            "pcap_record_header_offset": 5904138,
+            "timestamp_us": 1678852358778555,
+            "frame_sha256": "fe74f822570e253c1ba11ff7739a9138b90ff53333ab1b7970523125c0a7347c"
+          },
+          "hmi_minus_ied_us": -7,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-0.pcap",
+            "pcap_record_header_offset": 23506572,
+            "timestamp_us": 1678852358779375,
+            "frame_sha256": "1fa5fabd01754b3c98a711a8061605dd1d794ae228e2c052ca80b97e580c21b1"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+            "pcap_record_header_offset": 5904892,
+            "timestamp_us": 1678852358779381,
+            "frame_sha256": "1fa5fabd01754b3c98a711a8061605dd1d794ae228e2c052ca80b97e580c21b1"
+          },
+          "hmi_minus_ied_us": -6,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-0.pcap",
+            "pcap_record_header_offset": 23507092,
+            "timestamp_us": 1678852358779782,
+            "frame_sha256": "842a93695084ce0ff623014849df5d71404630f8ef4234ca5a0447aae379a61b"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+            "pcap_record_header_offset": 5905412,
+            "timestamp_us": 1678852358779788,
+            "frame_sha256": "842a93695084ce0ff623014849df5d71404630f8ef4234ca5a0447aae379a61b"
+          },
+          "hmi_minus_ied_us": -6,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-0.pcap",
+            "pcap_record_header_offset": 23507612,
+            "timestamp_us": 1678852358780184,
+            "frame_sha256": "78a2aee5917d41b628a4c946ada50b31741e1be79ab2065055ca53e86254c727"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+            "pcap_record_header_offset": 5905932,
+            "timestamp_us": 1678852358780190,
+            "frame_sha256": "78a2aee5917d41b628a4c946ada50b31741e1be79ab2065055ca53e86254c727"
+          },
+          "hmi_minus_ied_us": -6,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-0.pcap",
+            "pcap_record_header_offset": 23508132,
+            "timestamp_us": 1678852358780581,
+            "frame_sha256": "d55dce1a9804567215deec9496732cbcbc90bd97674ccceeb2a45ca9a9718072"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+            "pcap_record_header_offset": 5906452,
+            "timestamp_us": 1678852358780587,
+            "frame_sha256": "d55dce1a9804567215deec9496732cbcbc90bd97674ccceeb2a45ca9a9718072"
+          },
+          "hmi_minus_ied_us": -6,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        }
+      ],
+      "clock_skews_us": {
+        "n": 261,
+        "min": -19,
+        "p05": -8,
+        "median": -6,
+        "p95": -6,
+        "max": -6,
+        "quantile_method": "p05/p95 lower empirical order statistic; median averages central values for even n"
+      },
+      "other_view_window": {
+        "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+        "target_us": 1678852358778000,
+        "status": "bounded_inspection",
+        "selection_halfwidth_us": 250000,
+        "start_offset": 5894424,
+        "end_offset": 6066552,
+        "record_bytes_read": 172128,
+        "records_visited": 2000,
+        "limit_reached": true,
+        "selection_complete_under_search_assumption": false,
+        "decoded_status_counts": {
+          "tcp": 1890
+        },
+        "probes": [
+          {
+            "offset": 50000058,
+            "timestamp_us": 1678881892782977
+          },
+          {
+            "offset": 25000140,
+            "timestamp_us": 1678861696886780
+          },
+          {
+            "offset": 12500159,
+            "timestamp_us": 1678855807696177
+          },
+          {
+            "offset": 6250106,
+            "timestamp_us": 1678852359205230
+          },
+          {
+            "offset": 3125212,
+            "timestamp_us": 1678849313040744
+          },
+          {
+            "offset": 4687662,
+            "timestamp_us": 1678851113220396
+          },
+          {
+            "offset": 5468938,
+            "timestamp_us": 1678851760704363
+          },
+          {
+            "offset": 5859719,
+            "timestamp_us": 1678852065136640
+          },
+          {
+            "offset": 6054936,
+            "timestamp_us": 1678852358964407
+          },
+          {
+            "offset": 5957392,
+            "timestamp_us": 1678852358851290
+          },
+          {
+            "offset": 5908626,
+            "timestamp_us": 1678852358782814
+          },
+          {
+            "offset": 5884250,
+            "timestamp_us": 1678852201550587
+          },
+          {
+            "offset": 5896488,
+            "timestamp_us": 1678852297278290
+          },
+          {
+            "offset": 5902590,
+            "timestamp_us": 1678852347519768
+          }
+        ],
+        "search_limit": "Timestamp-guided structural seek assumes approximate monotonicity. Existing inventory records reversals; bounded observations prove presence only, never full-view absence."
+      }
+    },
+    {
+      "day": 1678931642681000,
+      "log_signature_id": "logsig:f8f4f90daaf9456729450e26",
+      "matched_observation_copies": 274,
+      "copy_examples": [
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-2.pcap",
+            "pcap_record_header_offset": 35898848,
+            "timestamp_us": 1678931642681615,
+            "frame_sha256": "474b93d040bfe70f930413492cc1c30c7863bec4772e672f0d1da6ef33ad852a"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+            "pcap_record_header_offset": 90555253,
+            "timestamp_us": 1678931642681621,
+            "frame_sha256": "474b93d040bfe70f930413492cc1c30c7863bec4772e672f0d1da6ef33ad852a"
+          },
+          "hmi_minus_ied_us": -6,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-2.pcap",
+            "pcap_record_header_offset": 35899368,
+            "timestamp_us": 1678931642682102,
+            "frame_sha256": "9e5be0e5a328a8913fb316bd25e6c5c391a0be48c8219eee846dab128b9a9398"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+            "pcap_record_header_offset": 90555773,
+            "timestamp_us": 1678931642682109,
+            "frame_sha256": "9e5be0e5a328a8913fb316bd25e6c5c391a0be48c8219eee846dab128b9a9398"
+          },
+          "hmi_minus_ied_us": -7,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-2.pcap",
+            "pcap_record_header_offset": 35899888,
+            "timestamp_us": 1678931642682457,
+            "frame_sha256": "319ce8b3b6b317f525c42aceee0b59c99c3f6ecab61fd9d2863daf484c81c2dd"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+            "pcap_record_header_offset": 90556293,
+            "timestamp_us": 1678931642682463,
+            "frame_sha256": "319ce8b3b6b317f525c42aceee0b59c99c3f6ecab61fd9d2863daf484c81c2dd"
+          },
+          "hmi_minus_ied_us": -6,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-2.pcap",
+            "pcap_record_header_offset": 35900408,
+            "timestamp_us": 1678931642682805,
+            "frame_sha256": "54377b6ba4670287886f2dbceec5352d10c2a533fa861b5285e2fe1a2f0ba89e"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+            "pcap_record_header_offset": 90556813,
+            "timestamp_us": 1678931642682811,
+            "frame_sha256": "54377b6ba4670287886f2dbceec5352d10c2a533fa861b5285e2fe1a2f0ba89e"
+          },
+          "hmi_minus_ied_us": -6,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-2.pcap",
+            "pcap_record_header_offset": 35900928,
+            "timestamp_us": 1678931642683123,
+            "frame_sha256": "b2074e5119dbc0ac7530d08fe5add429fca6a9fb1e7f2dffb82541d942b1613d"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+            "pcap_record_header_offset": 90557333,
+            "timestamp_us": 1678931642683129,
+            "frame_sha256": "b2074e5119dbc0ac7530d08fe5add429fca6a9fb1e7f2dffb82541d942b1613d"
+          },
+          "hmi_minus_ied_us": -6,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        }
+      ],
+      "clock_skews_us": {
+        "n": 274,
+        "min": -19,
+        "p05": -7,
+        "median": -6.0,
+        "p95": -6,
+        "max": 10,
+        "quantile_method": "p05/p95 lower empirical order statistic; median averages central values for even n"
+      },
+      "other_view_window": {
+        "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+        "target_us": 1678931642681000,
+        "status": "bounded_inspection",
+        "selection_halfwidth_us": 250000,
+        "start_offset": 90544116,
+        "end_offset": 90717883,
+        "record_bytes_read": 173767,
+        "records_visited": 2000,
+        "limit_reached": true,
+        "selection_complete_under_search_assumption": false,
+        "decoded_status_counts": {
+          "tcp": 1889
+        },
+        "probes": [
+          {
+            "offset": 50000058,
+            "timestamp_us": 1678881892782977
+          },
+          {
+            "offset": 75000088,
+            "timestamp_us": 1678911751786827
+          },
+          {
+            "offset": 87500087,
+            "timestamp_us": 1678927954486705
+          },
+          {
+            "offset": 93750072,
+            "timestamp_us": 1678931851193510
+          },
+          {
+            "offset": 90625083,
+            "timestamp_us": 1678931642772230
+          },
+          {
+            "offset": 89062596,
+            "timestamp_us": 1678929876090233
+          },
+          {
+            "offset": 89843846,
+            "timestamp_us": 1678931108483355
+          },
+          {
+            "offset": 90234497,
+            "timestamp_us": 1678931407061965
+          },
+          {
+            "offset": 90429861,
+            "timestamp_us": 1678931586561291
+          },
+          {
+            "offset": 90527483,
+            "timestamp_us": 1678931612824118
+          },
+          {
+            "offset": 90576367,
+            "timestamp_us": 1678931642715325
+          },
+          {
+            "offset": 90551983,
+            "timestamp_us": 1678931639193183
+          },
+          {
+            "offset": 90564243,
+            "timestamp_us": 1678931642699642
+          },
+          {
+            "offset": 90558201,
+            "timestamp_us": 1678931642683677
+          }
+        ],
+        "search_limit": "Timestamp-guided structural seek assumes approximate monotonicity. Existing inventory records reversals; bounded observations prove presence only, never full-view absence."
+      }
+    },
+    {
+      "day": 1679013016351000,
+      "log_signature_id": "logsig:b99f113203caed2df51416b3",
+      "matched_observation_copies": 249,
+      "copy_examples": [
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-4.pcap",
+            "pcap_record_header_offset": 27470667,
+            "timestamp_us": 1679013016351681,
+            "frame_sha256": "e5c25e719e1671652d6613dc7adf2aa263fea00622e37bf4dd1f9a71560c1de5"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+            "pcap_record_header_offset": 40812152,
+            "timestamp_us": 1679013016351688,
+            "frame_sha256": "e5c25e719e1671652d6613dc7adf2aa263fea00622e37bf4dd1f9a71560c1de5"
+          },
+          "hmi_minus_ied_us": -7,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-4.pcap",
+            "pcap_record_header_offset": 27471187,
+            "timestamp_us": 1679013016353233,
+            "frame_sha256": "b4533bb9ec11f8c2b48a3fc54cf913a4133ffc7d0fdb4a0bb1fa0bf614d9cd76"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+            "pcap_record_header_offset": 40812672,
+            "timestamp_us": 1679013016353240,
+            "frame_sha256": "b4533bb9ec11f8c2b48a3fc54cf913a4133ffc7d0fdb4a0bb1fa0bf614d9cd76"
+          },
+          "hmi_minus_ied_us": -7,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-4.pcap",
+            "pcap_record_header_offset": 27471707,
+            "timestamp_us": 1679013016353912,
+            "frame_sha256": "488292c51f918b09982eed53151061fdeb12b731473ac1d5cfa9ceb9ed3b6722"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+            "pcap_record_header_offset": 40813192,
+            "timestamp_us": 1679013016353918,
+            "frame_sha256": "488292c51f918b09982eed53151061fdeb12b731473ac1d5cfa9ceb9ed3b6722"
+          },
+          "hmi_minus_ied_us": -6,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-4.pcap",
+            "pcap_record_header_offset": 27472227,
+            "timestamp_us": 1679013016354672,
+            "frame_sha256": "e2a970aa3a918230496a750b2bd60e4f6a3921cad4cc51a5431d45f958106253"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+            "pcap_record_header_offset": 40813712,
+            "timestamp_us": 1679013016354678,
+            "frame_sha256": "e2a970aa3a918230496a750b2bd60e4f6a3921cad4cc51a5431d45f958106253"
+          },
+          "hmi_minus_ied_us": -6,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-4.pcap",
+            "pcap_record_header_offset": 27472747,
+            "timestamp_us": 1679013016355339,
+            "frame_sha256": "943b1647f47de17a9e1ad0f20d8ceb310abdf165e2a395b671debff80ad0de2a"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+            "pcap_record_header_offset": 40814232,
+            "timestamp_us": 1679013016355345,
+            "frame_sha256": "943b1647f47de17a9e1ad0f20d8ceb310abdf165e2a395b671debff80ad0de2a"
+          },
+          "hmi_minus_ied_us": -6,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        }
+      ],
+      "clock_skews_us": {
+        "n": 249,
+        "min": -16,
+        "p05": -7,
+        "median": -6,
+        "p95": -6,
+        "max": 11,
+        "quantile_method": "p05/p95 lower empirical order statistic; median averages central values for even n"
+      },
+      "other_view_window": {
+        "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+        "target_us": 1679013016351000,
+        "status": "bounded_inspection",
+        "selection_halfwidth_us": 250000,
+        "start_offset": 40800334,
+        "end_offset": 40972143,
+        "record_bytes_read": 171809,
+        "records_visited": 2000,
+        "limit_reached": true,
+        "selection_complete_under_search_assumption": false,
+        "decoded_status_counts": {
+          "tcp": 1866
+        },
+        "probes": [
+          {
+            "offset": 50000056,
+            "timestamp_us": 1679021197725218
+          },
+          {
+            "offset": 25000047,
+            "timestamp_us": 1678980418701178
+          },
+          {
+            "offset": 37500112,
+            "timestamp_us": 1679007506808910
+          },
+          {
+            "offset": 43750139,
+            "timestamp_us": 1679013037144544
+          },
+          {
+            "offset": 40625160,
+            "timestamp_us": 1679012855081188
+          },
+          {
+            "offset": 42187673,
+            "timestamp_us": 1679013024851688
+          },
+          {
+            "offset": 41406505,
+            "timestamp_us": 1679013017118716
+          },
+          {
+            "offset": 41015911,
+            "timestamp_us": 1679013016648171
+          },
+          {
+            "offset": 40820551,
+            "timestamp_us": 1679013016364003
+          },
+          {
+            "offset": 40722860,
+            "timestamp_us": 1679012962553784
+          },
+          {
+            "offset": 40771730,
+            "timestamp_us": 1679012962585416
+          },
+          {
+            "offset": 40796198,
+            "timestamp_us": 1679012993273179
+          },
+          {
+            "offset": 40808446,
+            "timestamp_us": 1679013013602808
+          },
+          {
+            "offset": 40814580,
+            "timestamp_us": 1679013016355932
+          }
+        ],
+        "search_limit": "Timestamp-guided structural seek assumes approximate monotonicity. Existing inventory records reversals; bounded observations prove presence only, never full-view absence."
+      }
+    },
+    {
+      "day": 1679099046513000,
+      "log_signature_id": "logsig:e2f96ec96e5140b978606fc5",
+      "matched_observation_copies": 11,
+      "copy_examples": [
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-6.pcap",
+            "pcap_record_header_offset": 51783669,
+            "timestamp_us": 1679099046513620,
+            "frame_sha256": "5fd6e29db752df40bec61c7d6e1c14fe3a541c5c1c08b0a6aad987d30e825b20"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-2.pcap",
+            "pcap_record_header_offset": 17517860,
+            "timestamp_us": 1679099046513627,
+            "frame_sha256": "5fd6e29db752df40bec61c7d6e1c14fe3a541c5c1c08b0a6aad987d30e825b20"
+          },
+          "hmi_minus_ied_us": -7,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "05000dffff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-6.pcap",
+            "pcap_record_header_offset": 51784189,
+            "timestamp_us": 1679099046514075,
+            "frame_sha256": "81f20033a0f49d6c0c08d97b91ba98d29cbdf99a5445a0aef3dc2636e4862f8b"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-2.pcap",
+            "pcap_record_header_offset": 17518380,
+            "timestamp_us": 1679099046514081,
+            "frame_sha256": "81f20033a0f49d6c0c08d97b91ba98d29cbdf99a5445a0aef3dc2636e4862f8b"
+          },
+          "hmi_minus_ied_us": -6,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "05000effff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-6.pcap",
+            "pcap_record_header_offset": 51784709,
+            "timestamp_us": 1679099046514602,
+            "frame_sha256": "1f264dccb311b0125ed2db313b4958b54d8685f2f7a771ce64a5400ddc200099"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-2.pcap",
+            "pcap_record_header_offset": 17518900,
+            "timestamp_us": 1679099046514608,
+            "frame_sha256": "1f264dccb311b0125ed2db313b4958b54d8685f2f7a771ce64a5400ddc200099"
+          },
+          "hmi_minus_ied_us": -6,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "0500080001"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-6.pcap",
+            "pcap_record_header_offset": 51785229,
+            "timestamp_us": 1679099046514916,
+            "frame_sha256": "befd3d3d0f88d06f4ef42aaaf24b0a6ce8fbf6a59525436ba44855e444bdbd2a"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-2.pcap",
+            "pcap_record_header_offset": 17519420,
+            "timestamp_us": 1679099046514922,
+            "frame_sha256": "befd3d3d0f88d06f4ef42aaaf24b0a6ce8fbf6a59525436ba44855e444bdbd2a"
+          },
+          "hmi_minus_ied_us": -6,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "0200080001"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-6.pcap",
+            "pcap_record_header_offset": 51785749,
+            "timestamp_us": 1679099046515231,
+            "frame_sha256": "99bd3ee1d82d213750cf2b7984da8c06ed900bfd18237ddb1e53dcc7d290e8fc"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-2.pcap",
+            "pcap_record_header_offset": 17519940,
+            "timestamp_us": 1679099046515237,
+            "frame_sha256": "99bd3ee1d82d213750cf2b7984da8c06ed900bfd18237ddb1e53dcc7d290e8fc"
+          },
+          "hmi_minus_ied_us": -6,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "01000d0001"
+          ]
+        }
+      ],
+      "clock_skews_us": {
+        "n": 11,
+        "min": -7,
+        "p05": -7,
+        "median": -6,
+        "p95": 10,
+        "max": 10,
+        "quantile_method": "p05/p95 lower empirical order statistic; median averages central values for even n"
+      },
+      "other_view_window": {
+        "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-2.pcap",
+        "target_us": 1679099046513000,
+        "status": "bounded_inspection",
+        "selection_halfwidth_us": 250000,
+        "start_offset": 17509400,
+        "end_offset": 17524235,
+        "record_bytes_read": 14925,
+        "records_visited": 153,
+        "limit_reached": false,
+        "selection_complete_under_search_assumption": true,
+        "decoded_status_counts": {
+          "tcp": 75
+        },
+        "probes": [
+          {
+            "offset": 49999976,
+            "timestamp_us": 1679139639731696
+          },
+          {
+            "offset": 25000023,
+            "timestamp_us": 1679113867527255
+          },
+          {
+            "offset": 12500092,
+            "timestamp_us": 1679095891375183
+          },
+          {
+            "offset": 18750092,
+            "timestamp_us": 1679100008173275
+          },
+          {
+            "offset": 15625384,
+            "timestamp_us": 1679096921453582
+          },
+          {
+            "offset": 17187781,
+            "timestamp_us": 1679098779993401
+          },
+          {
+            "offset": 17968945,
+            "timestamp_us": 1679099966311960
+          },
+          {
+            "offset": 17578441,
+            "timestamp_us": 1679099489953367
+          },
+          {
+            "offset": 17383177,
+            "timestamp_us": 1679098916149173
+          },
+          {
+            "offset": 17480837,
+            "timestamp_us": 1679099010841775
+          },
+          {
+            "offset": 17529641,
+            "timestamp_us": 1679099087505521
+          },
+          {
+            "offset": 17505254,
+            "timestamp_us": 1679099031793199
+          },
+          {
+            "offset": 17517516,
+            "timestamp_us": 1679099042261197
+          },
+          {
+            "offset": 17523579,
+            "timestamp_us": 1679099046613252
+          }
+        ],
+        "search_limit": "Timestamp-guided structural seek assumes approximate monotonicity. Existing inventory records reversals; bounded observations prove presence only, never full-view absence."
+      }
+    },
+    {
+      "day": 1679194979668000,
+      "log_signature_id": "logsig:7e4a6823c982e9ab3263f431",
+      "matched_observation_copies": 121,
+      "copy_examples": [
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-9.pcap",
+            "pcap_record_header_offset": 35105684,
+            "timestamp_us": 1679194979668763,
+            "frame_sha256": "6181fa2a7e6782f77a4bfbb2e4540e8d89d975334bfb45ba4dab2ba48aa45b4e"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+            "pcap_record_header_offset": 4207610,
+            "timestamp_us": 1679194979668772,
+            "frame_sha256": "6181fa2a7e6782f77a4bfbb2e4540e8d89d975334bfb45ba4dab2ba48aa45b4e"
+          },
+          "hmi_minus_ied_us": -9,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-9.pcap",
+            "pcap_record_header_offset": 35105860,
+            "timestamp_us": 1679194979669995,
+            "frame_sha256": "871aaca7d1838a66b08f8b83500077159c01b3f3081a9ee825b0008a62e9d778"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+            "pcap_record_header_offset": 4207786,
+            "timestamp_us": 1679194979669987,
+            "frame_sha256": "871aaca7d1838a66b08f8b83500077159c01b3f3081a9ee825b0008a62e9d778"
+          },
+          "hmi_minus_ied_us": 8,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "8503"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-9.pcap",
+            "pcap_record_header_offset": 35106619,
+            "timestamp_us": 1679194979685714,
+            "frame_sha256": "0321d7f31b0be2aac3c8522044bead6bdfe9aa61c3218c4070f9ca208d29dd93"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+            "pcap_record_header_offset": 4209063,
+            "timestamp_us": 1679194979685722,
+            "frame_sha256": "0321d7f31b0be2aac3c8522044bead6bdfe9aa61c3218c4070f9ca208d29dd93"
+          },
+          "hmi_minus_ied_us": -8,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-9.pcap",
+            "pcap_record_header_offset": 35107545,
+            "timestamp_us": 1679194979697391,
+            "frame_sha256": "e9cce0dcab8862cbf2f1b8c6b2e38b2cab0394b1d04256edf10921307a6e95cf"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+            "pcap_record_header_offset": 4209989,
+            "timestamp_us": 1679194979697408,
+            "frame_sha256": "e9cce0dcab8862cbf2f1b8c6b2e38b2cab0394b1d04256edf10921307a6e95cf"
+          },
+          "hmi_minus_ied_us": -17,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-9.pcap",
+            "pcap_record_header_offset": 35108065,
+            "timestamp_us": 1679194979698193,
+            "frame_sha256": "348b47b2413b2ad3b7005b7bbf64ff3d750c073200c960acb7eaa88bf93f3ec7"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+            "pcap_record_header_offset": 4210509,
+            "timestamp_us": 1679194979698200,
+            "frame_sha256": "348b47b2413b2ad3b7005b7bbf64ff3d750c073200c960acb7eaa88bf93f3ec7"
+          },
+          "hmi_minus_ied_us": -7,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        }
+      ],
+      "clock_skews_us": {
+        "n": 121,
+        "min": -18,
+        "p05": -9,
+        "median": -7,
+        "p95": -6,
+        "max": 8,
+        "quantile_method": "p05/p95 lower empirical order statistic; median averages central values for even n"
+      },
+      "other_view_window": {
+        "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+        "target_us": 1679194979668000,
+        "status": "bounded_inspection",
+        "selection_halfwidth_us": 250000,
+        "start_offset": 4197530,
+        "end_offset": 4289665,
+        "record_bytes_read": 92225,
+        "records_visited": 1075,
+        "limit_reached": false,
+        "selection_complete_under_search_assumption": true,
+        "decoded_status_counts": {
+          "tcp": 960
+        },
+        "probes": [
+          {
+            "offset": 50000027,
+            "timestamp_us": 1679245902230615
+          },
+          {
+            "offset": 25000101,
+            "timestamp_us": 1679217005189177
+          },
+          {
+            "offset": 12500130,
+            "timestamp_us": 1679199028699155
+          },
+          {
+            "offset": 6250153,
+            "timestamp_us": 1679194987654211
+          },
+          {
+            "offset": 3125147,
+            "timestamp_us": 1679193832371169
+          },
+          {
+            "offset": 4687665,
+            "timestamp_us": 1679194980389306
+          },
+          {
+            "offset": 3906436,
+            "timestamp_us": 1679194637484023
+          },
+          {
+            "offset": 4297091,
+            "timestamp_us": 1679194979934897
+          },
+          {
+            "offset": 4101806,
+            "timestamp_us": 1679194856502653
+          },
+          {
+            "offset": 4199502,
+            "timestamp_us": 1679194968857182
+          },
+          {
+            "offset": 4248327,
+            "timestamp_us": 1679194979808802
+          },
+          {
+            "offset": 4223927,
+            "timestamp_us": 1679194979742606
+          },
+          {
+            "offset": 4211795,
+            "timestamp_us": 1679194979708665
+          },
+          {
+            "offset": 4205714,
+            "timestamp_us": 1679194979010063
+          }
+        ],
+        "search_limit": "Timestamp-guided structural seek assumes approximate monotonicity. Existing inventory records reversals; bounded observations prove presence only, never full-view absence."
+      }
+    },
+    {
+      "day": 1679401978802000,
+      "log_signature_id": "logsig:746f9d18ca7a996c59f4289a",
+      "matched_observation_copies": 134,
+      "copy_examples": [
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-14.pcap",
+            "pcap_record_header_offset": 95628663,
+            "timestamp_us": 1679401978802420,
+            "frame_sha256": "35b632f044b7ab81d9b95a93dd2d492f9df4b1dffed0a8cf0bd99e40d925e315"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-4.pcap",
+            "pcap_record_header_offset": 85495399,
+            "timestamp_us": 1679401978802427,
+            "frame_sha256": "35b632f044b7ab81d9b95a93dd2d492f9df4b1dffed0a8cf0bd99e40d925e315"
+          },
+          "hmi_minus_ied_us": -7,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-14.pcap",
+            "pcap_record_header_offset": 95629183,
+            "timestamp_us": 1679401978824245,
+            "frame_sha256": "8600e44f9ad1c41ca15836cccc2c144a1f85ca2ce22e80c6f04e1c29de6478d4"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-4.pcap",
+            "pcap_record_header_offset": 85496437,
+            "timestamp_us": 1679401978824251,
+            "frame_sha256": "8600e44f9ad1c41ca15836cccc2c144a1f85ca2ce22e80c6f04e1c29de6478d4"
+          },
+          "hmi_minus_ied_us": -6,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-14.pcap",
+            "pcap_record_header_offset": 95629703,
+            "timestamp_us": 1679401978825125,
+            "frame_sha256": "8d2bdafea469e471dcab94494f3d00ce4917a221cb88884a5ad294b03ef680f7"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-4.pcap",
+            "pcap_record_header_offset": 85496957,
+            "timestamp_us": 1679401978825131,
+            "frame_sha256": "8d2bdafea469e471dcab94494f3d00ce4917a221cb88884a5ad294b03ef680f7"
+          },
+          "hmi_minus_ied_us": -6,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-14.pcap",
+            "pcap_record_header_offset": 95630223,
+            "timestamp_us": 1679401978825880,
+            "frame_sha256": "18dab8027977476095545b0b5c3eae721eaa51251de6696525f3b5d7e809fd03"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-4.pcap",
+            "pcap_record_header_offset": 85497477,
+            "timestamp_us": 1679401978825886,
+            "frame_sha256": "18dab8027977476095545b0b5c3eae721eaa51251de6696525f3b5d7e809fd03"
+          },
+          "hmi_minus_ied_us": -6,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        },
+        {
+          "hmi": {
+            "source_path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-14.pcap",
+            "pcap_record_header_offset": 95630743,
+            "timestamp_us": 1679401978826635,
+            "frame_sha256": "506f8312e268c7660ea6c9377bcbec6e329be8f6191c4fe1e3375d26eba7a595"
+          },
+          "ied": {
+            "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-4.pcap",
+            "pcap_record_header_offset": 85497997,
+            "timestamp_us": 1679401978826642,
+            "frame_sha256": "506f8312e268c7660ea6c9377bcbec6e329be8f6191c4fe1e3375d26eba7a595"
+          },
+          "hmi_minus_ied_us": -7,
+          "same_tcp_tuple_sequence_ack_flags_payload": true,
+          "whole_frame_sha256_equal": true,
+          "adu_patterns": [
+            "050001ffff"
+          ]
+        }
+      ],
+      "clock_skews_us": {
+        "n": 134,
+        "min": -16,
+        "p05": -13,
+        "median": -7.0,
+        "p95": -6,
+        "max": 10,
+        "quantile_method": "p05/p95 lower empirical order statistic; median averages central values for even n"
+      },
+      "other_view_window": {
+        "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-4.pcap",
+        "target_us": 1679401978802000,
+        "status": "bounded_inspection",
+        "selection_halfwidth_us": 250000,
+        "start_offset": 85484022,
+        "end_offset": 85579654,
+        "record_bytes_read": 95722,
+        "records_visited": 1112,
+        "limit_reached": false,
+        "selection_complete_under_search_assumption": true,
+        "decoded_status_counts": {
+          "tcp": 982
+        },
+        "probes": [
+          {
+            "offset": 49999998,
+            "timestamp_us": 1679365540137638
+          },
+          {
+            "offset": 74999984,
+            "timestamp_us": 1679391032477503
+          },
+          {
+            "offset": 87500016,
+            "timestamp_us": 1679401990221236
+          },
+          {
+            "offset": 81250001,
+            "timestamp_us": 1679397051933180
+          },
+          {
+            "offset": 84375019,
+            "timestamp_us": 1679400308165413
+          },
+          {
+            "offset": 85937570,
+            "timestamp_us": 1679401979811268
+          },
+          {
+            "offset": 85156336,
+            "timestamp_us": 1679401631508795
+          },
+          {
+            "offset": 85546956,
+            "timestamp_us": 1679401978967102
+          },
+          {
+            "offset": 85351704,
+            "timestamp_us": 1679401867218986
+          },
+          {
+            "offset": 85449403,
+            "timestamp_us": 1679401918482025
+          },
+          {
+            "offset": 85498255,
+            "timestamp_us": 1679401978827270
+          },
+          {
+            "offset": 85473897,
+            "timestamp_us": 1679401949225297
+          },
+          {
+            "offset": 85486095,
+            "timestamp_us": 1679401964557247
+          },
+          {
+            "offset": 85492212,
+            "timestamp_us": 1679401974733202
+          }
+        ],
+        "search_limit": "Timestamp-guided structural seek assumes approximate monotonicity. Existing inventory records reversals; bounded observations prove presence only, never full-view absence."
+      }
+    }
+  ],
+  "benign_hmi_vs_current_ied1b": [
+    {
+      "source_event_uid": "benign_ied1b:e27975",
+      "pdu_hex": "05000fff00",
+      "endpoint_frame": {
+        "source_path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-4.pcap",
+        "source_frame": 139904,
+        "pcap_record_header_offset": 12011150,
+        "timestamp_us": 1674482417866928,
+        "capture_length": 78,
+        "wire_length": 78,
+        "frame_sha256": "66cb5a68e3cc42cd6d739377ea06ffe6aab57571f7c0a61c728cc2457529c999",
+        "decoded": {
+          "status": "tcp",
+          "source_ip": "185.175.0.3",
+          "destination_ip": "185.175.0.5",
+          "source_port": 35564,
+          "destination_port": 502,
+          "tcp_sequence": 1502220366,
+          "tcp_ack": 1378062591,
+          "tcp_flags": 24,
+          "tcp_payload_hex": "e25f000000060105000fff00",
+          "captured_payload_bytes": 12,
+          "ip_truncated": false,
+          "adus": [
+            {
+              "adu_hex": "e25f000000060105000fff00",
+              "pdu_hex": "05000fff00",
+              "transaction_id": 57951,
+              "unit": 1,
+              "function_raw": 5,
+              "function": 5,
+              "exception": false,
+              "payload_byte_offset": 0,
+              "role_by_port": "request",
+              "address": 15,
+              "word_or_quantity": 65280,
+              "fc5_value_spec_valid": true,
+              "fc5_pdu_shape_ok": true
+            }
+          ]
+        }
+      },
+      "hmi_same_observation_count": 1,
+      "hmi_copies": [
+        {
+          "source_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-13.pcap",
+          "source_frame": null,
+          "frame_number_status": "unknown_without_prefix_scan",
+          "relative_frame_in_bounded_read": 185,
+          "pcap_record_header_offset": 1271434,
+          "timestamp_us": 1674482417866921,
+          "frame_sha256": "66cb5a68e3cc42cd6d739377ea06ffe6aab57571f7c0a61c728cc2457529c999",
+          "decoded": {
+            "status": "tcp",
+            "source_ip": "185.175.0.3",
+            "destination_ip": "185.175.0.5",
+            "source_port": 35564,
+            "destination_port": 502,
+            "tcp_sequence": 1502220366,
+            "tcp_ack": 1378062591,
+            "tcp_flags": 24,
+            "tcp_payload_hex": "e25f000000060105000fff00",
+            "captured_payload_bytes": 12,
+            "ip_truncated": false,
+            "adus": [
+              {
+                "adu_hex": "e25f000000060105000fff00",
+                "pdu_hex": "05000fff00",
+                "transaction_id": 57951,
+                "unit": 1,
+                "function_raw": 5,
+                "function": 5,
+                "exception": false,
+                "payload_byte_offset": 0,
+                "role_by_port": "request",
+                "address": 15,
+                "word_or_quantity": 65280,
+                "fc5_value_spec_valid": true,
+                "fc5_pdu_shape_ok": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_event_uid": "benign_ied1b:e28097",
+      "pdu_hex": "050019ff00",
+      "endpoint_frame": {
+        "source_path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-4.pcap",
+        "source_frame": 140514,
+        "pcap_record_header_offset": 12063514,
+        "timestamp_us": 1674482478978289,
+        "capture_length": 78,
+        "wire_length": 78,
+        "frame_sha256": "517aa29dd1a94d0592e10db65dbb35966bf2ac53f7b2fbe345767f2b4f2a30e6",
+        "decoded": {
+          "status": "tcp",
+          "source_ip": "185.175.0.3",
+          "destination_ip": "185.175.0.5",
+          "source_port": 35694,
+          "destination_port": 502,
+          "tcp_sequence": 3599500253,
+          "tcp_ack": 3968803190,
+          "tcp_flags": 24,
+          "tcp_payload_hex": "e29c0000000601050019ff00",
+          "captured_payload_bytes": 12,
+          "ip_truncated": false,
+          "adus": [
+            {
+              "adu_hex": "e29c0000000601050019ff00",
+              "pdu_hex": "050019ff00",
+              "transaction_id": 58012,
+              "unit": 1,
+              "function_raw": 5,
+              "function": 5,
+              "exception": false,
+              "payload_byte_offset": 0,
+              "role_by_port": "request",
+              "address": 25,
+              "word_or_quantity": 65280,
+              "fc5_value_spec_valid": true,
+              "fc5_pdu_shape_ok": true
+            }
+          ]
+        }
+      },
+      "hmi_same_observation_count": 1,
+      "hmi_copies": [
+        {
+          "source_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-13.pcap",
+          "source_frame": null,
+          "frame_number_status": "unknown_without_prefix_scan",
+          "relative_frame_in_bounded_read": 166,
+          "pcap_record_header_offset": 1465062,
+          "timestamp_us": 1674482478978284,
+          "frame_sha256": "517aa29dd1a94d0592e10db65dbb35966bf2ac53f7b2fbe345767f2b4f2a30e6",
+          "decoded": {
+            "status": "tcp",
+            "source_ip": "185.175.0.3",
+            "destination_ip": "185.175.0.5",
+            "source_port": 35694,
+            "destination_port": 502,
+            "tcp_sequence": 3599500253,
+            "tcp_ack": 3968803190,
+            "tcp_flags": 24,
+            "tcp_payload_hex": "e29c0000000601050019ff00",
+            "captured_payload_bytes": 12,
+            "ip_truncated": false,
+            "adus": [
+              {
+                "adu_hex": "e29c0000000601050019ff00",
+                "pdu_hex": "050019ff00",
+                "transaction_id": 58012,
+                "unit": 1,
+                "function_raw": 5,
+                "function": 5,
+                "exception": false,
+                "payload_byte_offset": 0,
+                "role_by_port": "request",
+                "address": 25,
+                "word_or_quantity": 65280,
+                "fc5_value_spec_valid": true,
+                "fc5_pdu_shape_ok": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_event_uid": "benign_ied1b:e96923",
+      "pdu_hex": "05000fff00",
+      "endpoint_frame": {
+        "source_path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-4.pcap",
+        "source_frame": 484734,
+        "pcap_record_header_offset": 41615988,
+        "timestamp_us": 1674518550010890,
+        "capture_length": 78,
+        "wire_length": 78,
+        "frame_sha256": "ecdacb01db8d5d805b634916ea479ae262009ba18879c70d89888521d608d6fe",
+        "decoded": {
+          "status": "tcp",
+          "source_ip": "185.175.0.3",
+          "destination_ip": "185.175.0.5",
+          "source_port": 52386,
+          "destination_port": 502,
+          "tcp_sequence": 3160068332,
+          "tcp_ack": 731725886,
+          "tcp_flags": 24,
+          "tcp_payload_hex": "2059000000060105000fff00",
+          "captured_payload_bytes": 12,
+          "ip_truncated": false,
+          "adus": [
+            {
+              "adu_hex": "2059000000060105000fff00",
+              "pdu_hex": "05000fff00",
+              "transaction_id": 8281,
+              "unit": 1,
+              "function_raw": 5,
+              "function": 5,
+              "exception": false,
+              "payload_byte_offset": 0,
+              "role_by_port": "request",
+              "address": 15,
+              "word_or_quantity": 65280,
+              "fc5_value_spec_valid": true,
+              "fc5_pdu_shape_ok": true
+            }
+          ]
+        }
+      },
+      "hmi_same_observation_count": 1,
+      "hmi_copies": [
+        {
+          "source_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-13.pcap",
+          "source_frame": null,
+          "frame_number_status": "unknown_without_prefix_scan",
+          "relative_frame_in_bounded_read": 178,
+          "pcap_record_header_offset": 94544581,
+          "timestamp_us": 1674518550010883,
+          "frame_sha256": "ecdacb01db8d5d805b634916ea479ae262009ba18879c70d89888521d608d6fe",
+          "decoded": {
+            "status": "tcp",
+            "source_ip": "185.175.0.3",
+            "destination_ip": "185.175.0.5",
+            "source_port": 52386,
+            "destination_port": 502,
+            "tcp_sequence": 3160068332,
+            "tcp_ack": 731725886,
+            "tcp_flags": 24,
+            "tcp_payload_hex": "2059000000060105000fff00",
+            "captured_payload_bytes": 12,
+            "ip_truncated": false,
+            "adus": [
+              {
+                "adu_hex": "2059000000060105000fff00",
+                "pdu_hex": "05000fff00",
+                "transaction_id": 8281,
+                "unit": 1,
+                "function_raw": 5,
+                "function": 5,
+                "exception": false,
+                "payload_byte_offset": 0,
+                "role_by_port": "request",
+                "address": 15,
+                "word_or_quantity": 65280,
+                "fc5_value_spec_valid": true,
+                "fc5_pdu_shape_ok": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_event_uid": "benign_ied1b:e97045",
+      "pdu_hex": "050019ff00",
+      "endpoint_frame": {
+        "source_path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-4.pcap",
+        "source_frame": 485344,
+        "pcap_record_header_offset": 41668352,
+        "timestamp_us": 1674518611119283,
+        "capture_length": 78,
+        "wire_length": 78,
+        "frame_sha256": "2cf2e20d7a771dc26cd0580f2b141d6940128982310bb7ec18ca45927fd24d55",
+        "decoded": {
+          "status": "tcp",
+          "source_ip": "185.175.0.3",
+          "destination_ip": "185.175.0.5",
+          "source_port": 52518,
+          "destination_port": 502,
+          "tcp_sequence": 2641828489,
+          "tcp_ack": 2022676648,
+          "tcp_flags": 24,
+          "tcp_payload_hex": "20960000000601050019ff00",
+          "captured_payload_bytes": 12,
+          "ip_truncated": false,
+          "adus": [
+            {
+              "adu_hex": "20960000000601050019ff00",
+              "pdu_hex": "050019ff00",
+              "transaction_id": 8342,
+              "unit": 1,
+              "function_raw": 5,
+              "function": 5,
+              "exception": false,
+              "payload_byte_offset": 0,
+              "role_by_port": "request",
+              "address": 25,
+              "word_or_quantity": 65280,
+              "fc5_value_spec_valid": true,
+              "fc5_pdu_shape_ok": true
+            }
+          ]
+        }
+      },
+      "hmi_same_observation_count": 1,
+      "hmi_copies": [
+        {
+          "source_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-13.pcap",
+          "source_frame": null,
+          "frame_number_status": "unknown_without_prefix_scan",
+          "relative_frame_in_bounded_read": 165,
+          "pcap_record_header_offset": 94690113,
+          "timestamp_us": 1674518611119277,
+          "frame_sha256": "2cf2e20d7a771dc26cd0580f2b141d6940128982310bb7ec18ca45927fd24d55",
+          "decoded": {
+            "status": "tcp",
+            "source_ip": "185.175.0.3",
+            "destination_ip": "185.175.0.5",
+            "source_port": 52518,
+            "destination_port": 502,
+            "tcp_sequence": 2641828489,
+            "tcp_ack": 2022676648,
+            "tcp_flags": 24,
+            "tcp_payload_hex": "20960000000601050019ff00",
+            "captured_payload_bytes": 12,
+            "ip_truncated": false,
+            "adus": [
+              {
+                "adu_hex": "20960000000601050019ff00",
+                "pdu_hex": "050019ff00",
+                "transaction_id": 8342,
+                "unit": 1,
+                "function_raw": 5,
+                "function": 5,
+                "exception": false,
+                "payload_byte_offset": 0,
+                "role_by_port": "request",
+                "address": 25,
+                "word_or_quantity": 65280,
+                "fc5_value_spec_valid": true,
+                "fc5_pdu_shape_ok": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_event_uid": "benign_ied1b:e267089",
+      "pdu_hex": "05000fff00",
+      "endpoint_frame": {
+        "source_path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-5.pcap",
+        "source_frame": 170997,
+        "pcap_record_header_offset": 14680586,
+        "timestamp_us": 1674605204910614,
+        "capture_length": 78,
+        "wire_length": 78,
+        "frame_sha256": "d68634cd82db45fbee1f3cb7c02724574c2275b155b9684f8ecfd8eb9d369f5c",
+        "decoded": {
+          "status": "tcp",
+          "source_ip": "185.175.0.3",
+          "destination_ip": "185.175.0.5",
+          "source_port": 35896,
+          "destination_port": 502,
+          "tcp_sequence": 1464960807,
+          "tcp_ack": 49509574,
+          "tcp_flags": 24,
+          "tcp_payload_hex": "6d2a000000060105000fff00",
+          "captured_payload_bytes": 12,
+          "ip_truncated": false,
+          "adus": [
+            {
+              "adu_hex": "6d2a000000060105000fff00",
+              "pdu_hex": "05000fff00",
+              "transaction_id": 27946,
+              "unit": 1,
+              "function_raw": 5,
+              "function": 5,
+              "exception": false,
+              "payload_byte_offset": 0,
+              "role_by_port": "request",
+              "address": 15,
+              "word_or_quantity": 65280,
+              "fc5_value_spec_valid": true,
+              "fc5_pdu_shape_ok": true
+            }
+          ]
+        }
+      },
+      "hmi_same_observation_count": 1,
+      "hmi_copies": [
+        {
+          "source_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-16.pcap",
+          "source_frame": null,
+          "frame_number_status": "unknown_without_prefix_scan",
+          "relative_frame_in_bounded_read": 130,
+          "pcap_record_header_offset": 21450992,
+          "timestamp_us": 1674605204910608,
+          "frame_sha256": "d68634cd82db45fbee1f3cb7c02724574c2275b155b9684f8ecfd8eb9d369f5c",
+          "decoded": {
+            "status": "tcp",
+            "source_ip": "185.175.0.3",
+            "destination_ip": "185.175.0.5",
+            "source_port": 35896,
+            "destination_port": 502,
+            "tcp_sequence": 1464960807,
+            "tcp_ack": 49509574,
+            "tcp_flags": 24,
+            "tcp_payload_hex": "6d2a000000060105000fff00",
+            "captured_payload_bytes": 12,
+            "ip_truncated": false,
+            "adus": [
+              {
+                "adu_hex": "6d2a000000060105000fff00",
+                "pdu_hex": "05000fff00",
+                "transaction_id": 27946,
+                "unit": 1,
+                "function_raw": 5,
+                "function": 5,
+                "exception": false,
+                "payload_byte_offset": 0,
+                "role_by_port": "request",
+                "address": 15,
+                "word_or_quantity": 65280,
+                "fc5_value_spec_valid": true,
+                "fc5_pdu_shape_ok": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_event_uid": "benign_ied1b:e267211",
+      "pdu_hex": "050019ff00",
+      "endpoint_frame": {
+        "source_path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-5.pcap",
+        "source_frame": 171607,
+        "pcap_record_header_offset": 14732950,
+        "timestamp_us": 1674605266002814,
+        "capture_length": 78,
+        "wire_length": 78,
+        "frame_sha256": "556fb84b53a203bfa0ec53609136920d86edb3e396e92a2962e3da68dc7aa022",
+        "decoded": {
+          "status": "tcp",
+          "source_ip": "185.175.0.3",
+          "destination_ip": "185.175.0.5",
+          "source_port": 36030,
+          "destination_port": 502,
+          "tcp_sequence": 2484493592,
+          "tcp_ack": 1801684155,
+          "tcp_flags": 24,
+          "tcp_payload_hex": "6d670000000601050019ff00",
+          "captured_payload_bytes": 12,
+          "ip_truncated": false,
+          "adus": [
+            {
+              "adu_hex": "6d670000000601050019ff00",
+              "pdu_hex": "050019ff00",
+              "transaction_id": 28007,
+              "unit": 1,
+              "function_raw": 5,
+              "function": 5,
+              "exception": false,
+              "payload_byte_offset": 0,
+              "role_by_port": "request",
+              "address": 25,
+              "word_or_quantity": 65280,
+              "fc5_value_spec_valid": true,
+              "fc5_pdu_shape_ok": true
+            }
+          ]
+        }
+      },
+      "hmi_same_observation_count": 1,
+      "hmi_copies": [
+        {
+          "source_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-16.pcap",
+          "source_frame": null,
+          "frame_number_status": "unknown_without_prefix_scan",
+          "relative_frame_in_bounded_read": 128,
+          "pcap_record_header_offset": 21597302,
+          "timestamp_us": 1674605266002808,
+          "frame_sha256": "556fb84b53a203bfa0ec53609136920d86edb3e396e92a2962e3da68dc7aa022",
+          "decoded": {
+            "status": "tcp",
+            "source_ip": "185.175.0.3",
+            "destination_ip": "185.175.0.5",
+            "source_port": 36030,
+            "destination_port": 502,
+            "tcp_sequence": 2484493592,
+            "tcp_ack": 1801684155,
+            "tcp_flags": 24,
+            "tcp_payload_hex": "6d670000000601050019ff00",
+            "captured_payload_bytes": 12,
+            "ip_truncated": false,
+            "adus": [
+              {
+                "adu_hex": "6d670000000601050019ff00",
+                "pdu_hex": "050019ff00",
+                "transaction_id": 28007,
+                "unit": 1,
+                "function_raw": 5,
+                "function": 5,
+                "exception": false,
+                "payload_byte_offset": 0,
+                "role_by_port": "request",
+                "address": 25,
+                "word_or_quantity": 65280,
+                "fc5_value_spec_valid": true,
+                "fc5_pdu_shape_ok": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_event_uid": "benign_ied1b:e438145",
+      "pdu_hex": "05000fff00",
+      "endpoint_frame": {
+        "source_path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-5.pcap",
+        "source_frame": 1026471,
+        "pcap_record_header_offset": 88125591,
+        "timestamp_us": 1674692182402365,
+        "capture_length": 78,
+        "wire_length": 78,
+        "frame_sha256": "aafe3f98269d1749f0ac1211809b048c04c2362b3240dba285bc1a2c0df341b1",
+        "decoded": {
+          "status": "tcp",
+          "source_ip": "185.175.0.3",
+          "destination_ip": "185.175.0.5",
+          "source_port": 48332,
+          "destination_port": 502,
+          "tcp_sequence": 278312482,
+          "tcp_ack": 3978097126,
+          "tcp_flags": 24,
+          "tcp_payload_hex": "bb79000000060105000fff00",
+          "captured_payload_bytes": 12,
+          "ip_truncated": false,
+          "adus": [
+            {
+              "adu_hex": "bb79000000060105000fff00",
+              "pdu_hex": "05000fff00",
+              "transaction_id": 47993,
+              "unit": 1,
+              "function_raw": 5,
+              "function": 5,
+              "exception": false,
+              "payload_byte_offset": 0,
+              "role_by_port": "request",
+              "address": 15,
+              "word_or_quantity": 65280,
+              "fc5_value_spec_valid": true,
+              "fc5_pdu_shape_ok": true
+            }
+          ]
+        }
+      },
+      "hmi_same_observation_count": 1,
+      "hmi_copies": [
+        {
+          "source_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-18.pcap",
+          "source_frame": null,
+          "frame_number_status": "unknown_without_prefix_scan",
+          "relative_frame_in_bounded_read": 136,
+          "pcap_record_header_offset": 52707761,
+          "timestamp_us": 1674692182402360,
+          "frame_sha256": "aafe3f98269d1749f0ac1211809b048c04c2362b3240dba285bc1a2c0df341b1",
+          "decoded": {
+            "status": "tcp",
+            "source_ip": "185.175.0.3",
+            "destination_ip": "185.175.0.5",
+            "source_port": 48332,
+            "destination_port": 502,
+            "tcp_sequence": 278312482,
+            "tcp_ack": 3978097126,
+            "tcp_flags": 24,
+            "tcp_payload_hex": "bb79000000060105000fff00",
+            "captured_payload_bytes": 12,
+            "ip_truncated": false,
+            "adus": [
+              {
+                "adu_hex": "bb79000000060105000fff00",
+                "pdu_hex": "05000fff00",
+                "transaction_id": 47993,
+                "unit": 1,
+                "function_raw": 5,
+                "function": 5,
+                "exception": false,
+                "payload_byte_offset": 0,
+                "role_by_port": "request",
+                "address": 15,
+                "word_or_quantity": 65280,
+                "fc5_value_spec_valid": true,
+                "fc5_pdu_shape_ok": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_event_uid": "benign_ied1b:e438267",
+      "pdu_hex": "050019ff00",
+      "endpoint_frame": {
+        "source_path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-5.pcap",
+        "source_frame": 1027081,
+        "pcap_record_header_offset": 88177955,
+        "timestamp_us": 1674692243486450,
+        "capture_length": 78,
+        "wire_length": 78,
+        "frame_sha256": "2ef4502ceb13edccb6c46f637b0ae7318b5b5a195feb0005719a771bab6b99aa",
+        "decoded": {
+          "status": "tcp",
+          "source_ip": "185.175.0.3",
+          "destination_ip": "185.175.0.5",
+          "source_port": 48454,
+          "destination_port": 502,
+          "tcp_sequence": 2405675593,
+          "tcp_ack": 29954442,
+          "tcp_flags": 24,
+          "tcp_payload_hex": "bbb60000000601050019ff00",
+          "captured_payload_bytes": 12,
+          "ip_truncated": false,
+          "adus": [
+            {
+              "adu_hex": "bbb60000000601050019ff00",
+              "pdu_hex": "050019ff00",
+              "transaction_id": 48054,
+              "unit": 1,
+              "function_raw": 5,
+              "function": 5,
+              "exception": false,
+              "payload_byte_offset": 0,
+              "role_by_port": "request",
+              "address": 25,
+              "word_or_quantity": 65280,
+              "fc5_value_spec_valid": true,
+              "fc5_pdu_shape_ok": true
+            }
+          ]
+        }
+      },
+      "hmi_same_observation_count": 1,
+      "hmi_copies": [
+        {
+          "source_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-18.pcap",
+          "source_frame": null,
+          "frame_number_status": "unknown_without_prefix_scan",
+          "relative_frame_in_bounded_read": 171,
+          "pcap_record_header_offset": 52918119,
+          "timestamp_us": 1674692243486445,
+          "frame_sha256": "2ef4502ceb13edccb6c46f637b0ae7318b5b5a195feb0005719a771bab6b99aa",
+          "decoded": {
+            "status": "tcp",
+            "source_ip": "185.175.0.3",
+            "destination_ip": "185.175.0.5",
+            "source_port": 48454,
+            "destination_port": 502,
+            "tcp_sequence": 2405675593,
+            "tcp_ack": 29954442,
+            "tcp_flags": 24,
+            "tcp_payload_hex": "bbb60000000601050019ff00",
+            "captured_payload_bytes": 12,
+            "ip_truncated": false,
+            "adus": [
+              {
+                "adu_hex": "bbb60000000601050019ff00",
+                "pdu_hex": "050019ff00",
+                "transaction_id": 48054,
+                "unit": 1,
+                "function_raw": 5,
+                "function": 5,
+                "exception": false,
+                "payload_byte_offset": 0,
+                "role_by_port": "request",
+                "address": 25,
+                "word_or_quantity": 65280,
+                "fc5_value_spec_valid": true,
+                "fc5_pdu_shape_ok": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_event_uid": "benign_ied1b:e609757",
+      "pdu_hex": "05000fff00",
+      "endpoint_frame": {
+        "source_path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-6.pcap",
+        "source_frame": 719946,
+        "pcap_record_header_offset": 61809866,
+        "timestamp_us": 1674779348842578,
+        "capture_length": 78,
+        "wire_length": 78,
+        "frame_sha256": "30fdd98e2f2556efcf196592a1485dd63d47ec88a9f22faa091c2a09091be2da",
+        "decoded": {
+          "status": "tcp",
+          "source_ip": "185.175.0.3",
+          "destination_ip": "185.175.0.5",
+          "source_port": 33196,
+          "destination_port": 502,
+          "tcp_sequence": 3866834898,
+          "tcp_ack": 414084394,
+          "tcp_flags": 24,
+          "tcp_payload_hex": "0af3000000060105000fff00",
+          "captured_payload_bytes": 12,
+          "ip_truncated": false,
+          "adus": [
+            {
+              "adu_hex": "0af3000000060105000fff00",
+              "pdu_hex": "05000fff00",
+              "transaction_id": 2803,
+              "unit": 1,
+              "function_raw": 5,
+              "function": 5,
+              "exception": false,
+              "payload_byte_offset": 0,
+              "role_by_port": "request",
+              "address": 15,
+              "word_or_quantity": 65280,
+              "fc5_value_spec_valid": true,
+              "fc5_pdu_shape_ok": true
+            }
+          ]
+        }
+      },
+      "hmi_same_observation_count": 1,
+      "hmi_copies": [
+        {
+          "source_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-20.pcap",
+          "source_frame": null,
+          "frame_number_status": "unknown_without_prefix_scan",
+          "relative_frame_in_bounded_read": 158,
+          "pcap_record_header_offset": 84166932,
+          "timestamp_us": 1674779348842572,
+          "frame_sha256": "30fdd98e2f2556efcf196592a1485dd63d47ec88a9f22faa091c2a09091be2da",
+          "decoded": {
+            "status": "tcp",
+            "source_ip": "185.175.0.3",
+            "destination_ip": "185.175.0.5",
+            "source_port": 33196,
+            "destination_port": 502,
+            "tcp_sequence": 3866834898,
+            "tcp_ack": 414084394,
+            "tcp_flags": 24,
+            "tcp_payload_hex": "0af3000000060105000fff00",
+            "captured_payload_bytes": 12,
+            "ip_truncated": false,
+            "adus": [
+              {
+                "adu_hex": "0af3000000060105000fff00",
+                "pdu_hex": "05000fff00",
+                "transaction_id": 2803,
+                "unit": 1,
+                "function_raw": 5,
+                "function": 5,
+                "exception": false,
+                "payload_byte_offset": 0,
+                "role_by_port": "request",
+                "address": 15,
+                "word_or_quantity": 65280,
+                "fc5_value_spec_valid": true,
+                "fc5_pdu_shape_ok": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_event_uid": "benign_ied1b:e609879",
+      "pdu_hex": "050019ff00",
+      "endpoint_frame": {
+        "source_path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-6.pcap",
+        "source_frame": 720556,
+        "pcap_record_header_offset": 61862230,
+        "timestamp_us": 1674779409948524,
+        "capture_length": 78,
+        "wire_length": 78,
+        "frame_sha256": "e12338bef5a33859820b46828063e5d2c6300d268546f7187d037d490b4e23af",
+        "decoded": {
+          "status": "tcp",
+          "source_ip": "185.175.0.3",
+          "destination_ip": "185.175.0.5",
+          "source_port": 33320,
+          "destination_port": 502,
+          "tcp_sequence": 1824510618,
+          "tcp_ack": 3975953886,
+          "tcp_flags": 24,
+          "tcp_payload_hex": "0b300000000601050019ff00",
+          "captured_payload_bytes": 12,
+          "ip_truncated": false,
+          "adus": [
+            {
+              "adu_hex": "0b300000000601050019ff00",
+              "pdu_hex": "050019ff00",
+              "transaction_id": 2864,
+              "unit": 1,
+              "function_raw": 5,
+              "function": 5,
+              "exception": false,
+              "payload_byte_offset": 0,
+              "role_by_port": "request",
+              "address": 25,
+              "word_or_quantity": 65280,
+              "fc5_value_spec_valid": true,
+              "fc5_pdu_shape_ok": true
+            }
+          ]
+        }
+      },
+      "hmi_same_observation_count": 1,
+      "hmi_copies": [
+        {
+          "source_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-20.pcap",
+          "source_frame": null,
+          "frame_number_status": "unknown_without_prefix_scan",
+          "relative_frame_in_bounded_read": 147,
+          "pcap_record_header_offset": 84312464,
+          "timestamp_us": 1674779409948516,
+          "frame_sha256": "e12338bef5a33859820b46828063e5d2c6300d268546f7187d037d490b4e23af",
+          "decoded": {
+            "status": "tcp",
+            "source_ip": "185.175.0.3",
+            "destination_ip": "185.175.0.5",
+            "source_port": 33320,
+            "destination_port": 502,
+            "tcp_sequence": 1824510618,
+            "tcp_ack": 3975953886,
+            "tcp_flags": 24,
+            "tcp_payload_hex": "0b300000000601050019ff00",
+            "captured_payload_bytes": 12,
+            "ip_truncated": false,
+            "adus": [
+              {
+                "adu_hex": "0b300000000601050019ff00",
+                "pdu_hex": "050019ff00",
+                "transaction_id": 2864,
+                "unit": 1,
+                "function_raw": 5,
+                "function": 5,
+                "exception": false,
+                "payload_byte_offset": 0,
+                "role_by_port": "request",
+                "address": 25,
+                "word_or_quantity": 65280,
+                "fc5_value_spec_valid": true,
+                "fc5_pdu_shape_ok": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_event_uid": "benign_ied1b:e778805",
+      "pdu_hex": "05000fff00",
+      "endpoint_frame": {
+        "source_path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-7.pcap",
+        "source_frame": 400615,
+        "pcap_record_header_offset": 34394048,
+        "timestamp_us": 1674865105741923,
+        "capture_length": 78,
+        "wire_length": 78,
+        "frame_sha256": "476d610deb9e1e45e2d6b19a130135de5726d50f9417cb97df751843fc7245b1",
+        "decoded": {
+          "status": "tcp",
+          "source_ip": "185.175.0.3",
+          "destination_ip": "185.175.0.5",
+          "source_port": 43572,
+          "destination_port": 502,
+          "tcp_sequence": 3277056926,
+          "tcp_ack": 679996637,
+          "tcp_flags": 24,
+          "tcp_payload_hex": "5574000000060105000fff00",
+          "captured_payload_bytes": 12,
+          "ip_truncated": false,
+          "adus": [
+            {
+              "adu_hex": "5574000000060105000fff00",
+              "pdu_hex": "05000fff00",
+              "transaction_id": 21876,
+              "unit": 1,
+              "function_raw": 5,
+              "function": 5,
+              "exception": false,
+              "payload_byte_offset": 0,
+              "role_by_port": "request",
+              "address": 15,
+              "word_or_quantity": 65280,
+              "fc5_value_spec_valid": true,
+              "fc5_pdu_shape_ok": true
+            }
+          ]
+        }
+      },
+      "hmi_same_observation_count": 1,
+      "hmi_copies": [
+        {
+          "source_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-23.pcap",
+          "source_frame": null,
+          "frame_number_status": "unknown_without_prefix_scan",
+          "relative_frame_in_bounded_read": 165,
+          "pcap_record_header_offset": 11895809,
+          "timestamp_us": 1674865105741918,
+          "frame_sha256": "476d610deb9e1e45e2d6b19a130135de5726d50f9417cb97df751843fc7245b1",
+          "decoded": {
+            "status": "tcp",
+            "source_ip": "185.175.0.3",
+            "destination_ip": "185.175.0.5",
+            "source_port": 43572,
+            "destination_port": 502,
+            "tcp_sequence": 3277056926,
+            "tcp_ack": 679996637,
+            "tcp_flags": 24,
+            "tcp_payload_hex": "5574000000060105000fff00",
+            "captured_payload_bytes": 12,
+            "ip_truncated": false,
+            "adus": [
+              {
+                "adu_hex": "5574000000060105000fff00",
+                "pdu_hex": "05000fff00",
+                "transaction_id": 21876,
+                "unit": 1,
+                "function_raw": 5,
+                "function": 5,
+                "exception": false,
+                "payload_byte_offset": 0,
+                "role_by_port": "request",
+                "address": 15,
+                "word_or_quantity": 65280,
+                "fc5_value_spec_valid": true,
+                "fc5_pdu_shape_ok": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_event_uid": "benign_ied1b:e778927",
+      "pdu_hex": "050019ff00",
+      "endpoint_frame": {
+        "source_path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-7.pcap",
+        "source_frame": 401225,
+        "pcap_record_header_offset": 34446412,
+        "timestamp_us": 1674865166842761,
+        "capture_length": 78,
+        "wire_length": 78,
+        "frame_sha256": "3a60c92347dd9dc65b6f2c6a0526fd46cf329a0f6a5bddb0a534adc3c1a5d3d6",
+        "decoded": {
+          "status": "tcp",
+          "source_ip": "185.175.0.3",
+          "destination_ip": "185.175.0.5",
+          "source_port": 43702,
+          "destination_port": 502,
+          "tcp_sequence": 2829294585,
+          "tcp_ack": 974282408,
+          "tcp_flags": 24,
+          "tcp_payload_hex": "55b10000000601050019ff00",
+          "captured_payload_bytes": 12,
+          "ip_truncated": false,
+          "adus": [
+            {
+              "adu_hex": "55b10000000601050019ff00",
+              "pdu_hex": "050019ff00",
+              "transaction_id": 21937,
+              "unit": 1,
+              "function_raw": 5,
+              "function": 5,
+              "exception": false,
+              "payload_byte_offset": 0,
+              "role_by_port": "request",
+              "address": 25,
+              "word_or_quantity": 65280,
+              "fc5_value_spec_valid": true,
+              "fc5_pdu_shape_ok": true
+            }
+          ]
+        }
+      },
+      "hmi_same_observation_count": 1,
+      "hmi_copies": [
+        {
+          "source_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-23.pcap",
+          "source_frame": null,
+          "frame_number_status": "unknown_without_prefix_scan",
+          "relative_frame_in_bounded_read": 215,
+          "pcap_record_header_offset": 12089425,
+          "timestamp_us": 1674865166842756,
+          "frame_sha256": "3a60c92347dd9dc65b6f2c6a0526fd46cf329a0f6a5bddb0a534adc3c1a5d3d6",
+          "decoded": {
+            "status": "tcp",
+            "source_ip": "185.175.0.3",
+            "destination_ip": "185.175.0.5",
+            "source_port": 43702,
+            "destination_port": 502,
+            "tcp_sequence": 2829294585,
+            "tcp_ack": 974282408,
+            "tcp_flags": 24,
+            "tcp_payload_hex": "55b10000000601050019ff00",
+            "captured_payload_bytes": 12,
+            "ip_truncated": false,
+            "adus": [
+              {
+                "adu_hex": "55b10000000601050019ff00",
+                "pdu_hex": "050019ff00",
+                "transaction_id": 21937,
+                "unit": 1,
+                "function_raw": 5,
+                "function": 5,
+                "exception": false,
+                "payload_byte_offset": 0,
+                "role_by_port": "request",
+                "address": 25,
+                "word_or_quantity": 65280,
+                "fc5_value_spec_valid": true,
+                "fc5_pdu_shape_ok": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_event_uid": "benign_ied1b:e947139",
+      "pdu_hex": "05000fff00",
+      "endpoint_frame": {
+        "source_path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-8.pcap",
+        "source_frame": 77696,
+        "pcap_record_header_offset": 6670279,
+        "timestamp_us": 1674950706134069,
+        "capture_length": 78,
+        "wire_length": 78,
+        "frame_sha256": "525c3a60e98eedb4c1c1d9c7a6e13330b49036c389b5ab21a26ac47ecee8e067",
+        "decoded": {
+          "status": "tcp",
+          "source_ip": "185.175.0.3",
+          "destination_ip": "185.175.0.5",
+          "source_port": 53024,
+          "destination_port": 502,
+          "tcp_sequence": 2514740983,
+          "tcp_ack": 499141536,
+          "tcp_flags": 24,
+          "tcp_payload_hex": "9e45000000060105000fff00",
+          "captured_payload_bytes": 12,
+          "ip_truncated": false,
+          "adus": [
+            {
+              "adu_hex": "9e45000000060105000fff00",
+              "pdu_hex": "05000fff00",
+              "transaction_id": 40517,
+              "unit": 1,
+              "function_raw": 5,
+              "function": 5,
+              "exception": false,
+              "payload_byte_offset": 0,
+              "role_by_port": "request",
+              "address": 15,
+              "word_or_quantity": 65280,
+              "fc5_value_spec_valid": true,
+              "fc5_pdu_shape_ok": true
+            }
+          ]
+        }
+      },
+      "hmi_same_observation_count": 1,
+      "hmi_copies": [
+        {
+          "source_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-25.pcap",
+          "source_frame": null,
+          "frame_number_status": "unknown_without_prefix_scan",
+          "relative_frame_in_bounded_read": 127,
+          "pcap_record_header_offset": 40103180,
+          "timestamp_us": 1674950706134063,
+          "frame_sha256": "525c3a60e98eedb4c1c1d9c7a6e13330b49036c389b5ab21a26ac47ecee8e067",
+          "decoded": {
+            "status": "tcp",
+            "source_ip": "185.175.0.3",
+            "destination_ip": "185.175.0.5",
+            "source_port": 53024,
+            "destination_port": 502,
+            "tcp_sequence": 2514740983,
+            "tcp_ack": 499141536,
+            "tcp_flags": 24,
+            "tcp_payload_hex": "9e45000000060105000fff00",
+            "captured_payload_bytes": 12,
+            "ip_truncated": false,
+            "adus": [
+              {
+                "adu_hex": "9e45000000060105000fff00",
+                "pdu_hex": "05000fff00",
+                "transaction_id": 40517,
+                "unit": 1,
+                "function_raw": 5,
+                "function": 5,
+                "exception": false,
+                "payload_byte_offset": 0,
+                "role_by_port": "request",
+                "address": 15,
+                "word_or_quantity": 65280,
+                "fc5_value_spec_valid": true,
+                "fc5_pdu_shape_ok": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_event_uid": "benign_ied1b:e947261",
+      "pdu_hex": "050019ff00",
+      "endpoint_frame": {
+        "source_path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-8.pcap",
+        "source_frame": 78306,
+        "pcap_record_header_offset": 6722643,
+        "timestamp_us": 1674950767214701,
+        "capture_length": 78,
+        "wire_length": 78,
+        "frame_sha256": "bf2a4118c9df3a54a1ee5a234a18e3c8a084c949376d47456d2fc4efaed25037",
+        "decoded": {
+          "status": "tcp",
+          "source_ip": "185.175.0.3",
+          "destination_ip": "185.175.0.5",
+          "source_port": 53158,
+          "destination_port": 502,
+          "tcp_sequence": 4027761397,
+          "tcp_ack": 39177777,
+          "tcp_flags": 24,
+          "tcp_payload_hex": "9e820000000601050019ff00",
+          "captured_payload_bytes": 12,
+          "ip_truncated": false,
+          "adus": [
+            {
+              "adu_hex": "9e820000000601050019ff00",
+              "pdu_hex": "050019ff00",
+              "transaction_id": 40578,
+              "unit": 1,
+              "function_raw": 5,
+              "function": 5,
+              "exception": false,
+              "payload_byte_offset": 0,
+              "role_by_port": "request",
+              "address": 25,
+              "word_or_quantity": 65280,
+              "fc5_value_spec_valid": true,
+              "fc5_pdu_shape_ok": true
+            }
+          ]
+        }
+      },
+      "hmi_same_observation_count": 1,
+      "hmi_copies": [
+        {
+          "source_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-25.pcap",
+          "source_frame": null,
+          "frame_number_status": "unknown_without_prefix_scan",
+          "relative_frame_in_bounded_read": 170,
+          "pcap_record_header_offset": 40296050,
+          "timestamp_us": 1674950767214695,
+          "frame_sha256": "bf2a4118c9df3a54a1ee5a234a18e3c8a084c949376d47456d2fc4efaed25037",
+          "decoded": {
+            "status": "tcp",
+            "source_ip": "185.175.0.3",
+            "destination_ip": "185.175.0.5",
+            "source_port": 53158,
+            "destination_port": 502,
+            "tcp_sequence": 4027761397,
+            "tcp_ack": 39177777,
+            "tcp_flags": 24,
+            "tcp_payload_hex": "9e820000000601050019ff00",
+            "captured_payload_bytes": 12,
+            "ip_truncated": false,
+            "adus": [
+              {
+                "adu_hex": "9e820000000601050019ff00",
+                "pdu_hex": "050019ff00",
+                "transaction_id": 40578,
+                "unit": 1,
+                "function_raw": 5,
+                "function": 5,
+                "exception": false,
+                "payload_byte_offset": 0,
+                "role_by_port": "request",
+                "address": 25,
+                "word_or_quantity": 65280,
+                "fc5_value_spec_valid": true,
+                "fc5_pdu_shape_ok": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_event_uid": "benign_ied1b:e1122623",
+      "pdu_hex": "05000fff00",
+      "endpoint_frame": {
+        "source_path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-8.pcap",
+        "source_frame": 955313,
+        "pcap_record_header_offset": 82016919,
+        "timestamp_us": 1675039497172755,
+        "capture_length": 78,
+        "wire_length": 78,
+        "frame_sha256": "5c0ca40d004235f38ef72b86b282e42c75c77ba249e44f421bc1dcca89b0afa8",
+        "decoded": {
+          "status": "tcp",
+          "source_ip": "185.175.0.3",
+          "destination_ip": "185.175.0.5",
+          "source_port": 41898,
+          "destination_port": 502,
+          "tcp_sequence": 4020206436,
+          "tcp_ack": 1582541543,
+          "tcp_flags": 24,
+          "tcp_payload_hex": "f50d000000060105000fff00",
+          "captured_payload_bytes": 12,
+          "ip_truncated": false,
+          "adus": [
+            {
+              "adu_hex": "f50d000000060105000fff00",
+              "pdu_hex": "05000fff00",
+              "transaction_id": 62733,
+              "unit": 1,
+              "function_raw": 5,
+              "function": 5,
+              "exception": false,
+              "payload_byte_offset": 0,
+              "role_by_port": "request",
+              "address": 15,
+              "word_or_quantity": 65280,
+              "fc5_value_spec_valid": true,
+              "fc5_pdu_shape_ok": true
+            }
+          ]
+        }
+      },
+      "hmi_same_observation_count": 1,
+      "hmi_copies": [
+        {
+          "source_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-27.pcap",
+          "source_frame": null,
+          "frame_number_status": "unknown_without_prefix_scan",
+          "relative_frame_in_bounded_read": 122,
+          "pcap_record_header_offset": 77102226,
+          "timestamp_us": 1675039497172750,
+          "frame_sha256": "5c0ca40d004235f38ef72b86b282e42c75c77ba249e44f421bc1dcca89b0afa8",
+          "decoded": {
+            "status": "tcp",
+            "source_ip": "185.175.0.3",
+            "destination_ip": "185.175.0.5",
+            "source_port": 41898,
+            "destination_port": 502,
+            "tcp_sequence": 4020206436,
+            "tcp_ack": 1582541543,
+            "tcp_flags": 24,
+            "tcp_payload_hex": "f50d000000060105000fff00",
+            "captured_payload_bytes": 12,
+            "ip_truncated": false,
+            "adus": [
+              {
+                "adu_hex": "f50d000000060105000fff00",
+                "pdu_hex": "05000fff00",
+                "transaction_id": 62733,
+                "unit": 1,
+                "function_raw": 5,
+                "function": 5,
+                "exception": false,
+                "payload_byte_offset": 0,
+                "role_by_port": "request",
+                "address": 15,
+                "word_or_quantity": 65280,
+                "fc5_value_spec_valid": true,
+                "fc5_pdu_shape_ok": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_event_uid": "benign_ied1b:e1122745",
+      "pdu_hex": "050019ff00",
+      "endpoint_frame": {
+        "source_path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-8.pcap",
+        "source_frame": 955922,
+        "pcap_record_header_offset": 82069201,
+        "timestamp_us": 1675039558283879,
+        "capture_length": 78,
+        "wire_length": 78,
+        "frame_sha256": "c2e978d801c6f70bdb403cfdee38e4475b0baf7fc74ba15200661e76bb304214",
+        "decoded": {
+          "status": "tcp",
+          "source_ip": "185.175.0.3",
+          "destination_ip": "185.175.0.5",
+          "source_port": 42038,
+          "destination_port": 502,
+          "tcp_sequence": 2033114281,
+          "tcp_ack": 2859083945,
+          "tcp_flags": 24,
+          "tcp_payload_hex": "f54a0000000601050019ff00",
+          "captured_payload_bytes": 12,
+          "ip_truncated": false,
+          "adus": [
+            {
+              "adu_hex": "f54a0000000601050019ff00",
+              "pdu_hex": "050019ff00",
+              "transaction_id": 62794,
+              "unit": 1,
+              "function_raw": 5,
+              "function": 5,
+              "exception": false,
+              "payload_byte_offset": 0,
+              "role_by_port": "request",
+              "address": 25,
+              "word_or_quantity": 65280,
+              "fc5_value_spec_valid": true,
+              "fc5_pdu_shape_ok": true
+            }
+          ]
+        }
+      },
+      "hmi_same_observation_count": 1,
+      "hmi_copies": [
+        {
+          "source_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-27.pcap",
+          "source_frame": null,
+          "frame_number_status": "unknown_without_prefix_scan",
+          "relative_frame_in_bounded_read": 180,
+          "pcap_record_header_offset": 77247594,
+          "timestamp_us": 1675039558283874,
+          "frame_sha256": "c2e978d801c6f70bdb403cfdee38e4475b0baf7fc74ba15200661e76bb304214",
+          "decoded": {
+            "status": "tcp",
+            "source_ip": "185.175.0.3",
+            "destination_ip": "185.175.0.5",
+            "source_port": 42038,
+            "destination_port": 502,
+            "tcp_sequence": 2033114281,
+            "tcp_ack": 2859083945,
+            "tcp_flags": 24,
+            "tcp_payload_hex": "f54a0000000601050019ff00",
+            "captured_payload_bytes": 12,
+            "ip_truncated": false,
+            "adus": [
+              {
+                "adu_hex": "f54a0000000601050019ff00",
+                "pdu_hex": "050019ff00",
+                "transaction_id": 62794,
+                "unit": 1,
+                "function_raw": 5,
+                "function": 5,
+                "exception": false,
+                "payload_byte_offset": 0,
+                "role_by_port": "request",
+                "address": 25,
+                "word_or_quantity": 65280,
+                "fc5_value_spec_valid": true,
+                "fc5_pdu_shape_ok": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_event_uid": "benign_ied1b:e1297335",
+      "pdu_hex": "05000fff00",
+      "endpoint_frame": {
+        "source_path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-9.pcap",
+        "source_frame": 664294,
+        "pcap_record_header_offset": 57031778,
+        "timestamp_us": 1675127943651102,
+        "capture_length": 78,
+        "wire_length": 78,
+        "frame_sha256": "fb77b42b0a48ba6cbbdb9860b8385ed38fadc838a4180496f96b33dd9dca26cd",
+        "decoded": {
+          "status": "tcp",
+          "source_ip": "185.175.0.3",
+          "destination_ip": "185.175.0.5",
+          "source_port": 58308,
+          "destination_port": 502,
+          "tcp_sequence": 2415786013,
+          "tcp_ack": 1370673019,
+          "tcp_flags": 24,
+          "tcp_payload_hex": "4a5d000000060105000fff00",
+          "captured_payload_bytes": 12,
+          "ip_truncated": false,
+          "adus": [
+            {
+              "adu_hex": "4a5d000000060105000fff00",
+              "pdu_hex": "05000fff00",
+              "transaction_id": 19037,
+              "unit": 1,
+              "function_raw": 5,
+              "function": 5,
+              "exception": false,
+              "payload_byte_offset": 0,
+              "role_by_port": "request",
+              "address": 15,
+              "word_or_quantity": 65280,
+              "fc5_value_spec_valid": true,
+              "fc5_pdu_shape_ok": true
+            }
+          ]
+        }
+      },
+      "hmi_same_observation_count": 1,
+      "hmi_copies": [
+        {
+          "source_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-30.pcap",
+          "source_frame": null,
+          "frame_number_status": "unknown_without_prefix_scan",
+          "relative_frame_in_bounded_read": 124,
+          "pcap_record_header_offset": 13564846,
+          "timestamp_us": 1675127943651094,
+          "frame_sha256": "fb77b42b0a48ba6cbbdb9860b8385ed38fadc838a4180496f96b33dd9dca26cd",
+          "decoded": {
+            "status": "tcp",
+            "source_ip": "185.175.0.3",
+            "destination_ip": "185.175.0.5",
+            "source_port": 58308,
+            "destination_port": 502,
+            "tcp_sequence": 2415786013,
+            "tcp_ack": 1370673019,
+            "tcp_flags": 24,
+            "tcp_payload_hex": "4a5d000000060105000fff00",
+            "captured_payload_bytes": 12,
+            "ip_truncated": false,
+            "adus": [
+              {
+                "adu_hex": "4a5d000000060105000fff00",
+                "pdu_hex": "05000fff00",
+                "transaction_id": 19037,
+                "unit": 1,
+                "function_raw": 5,
+                "function": 5,
+                "exception": false,
+                "payload_byte_offset": 0,
+                "role_by_port": "request",
+                "address": 15,
+                "word_or_quantity": 65280,
+                "fc5_value_spec_valid": true,
+                "fc5_pdu_shape_ok": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_event_uid": "benign_ied1b:e1297457",
+      "pdu_hex": "050019ff00",
+      "endpoint_frame": {
+        "source_path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-9.pcap",
+        "source_frame": 664905,
+        "pcap_record_header_offset": 57084245,
+        "timestamp_us": 1675128004744080,
+        "capture_length": 78,
+        "wire_length": 78,
+        "frame_sha256": "7d54f84860fc3f36328717684792abfb15d92641cc4ac60788e2c9c03c534ed4",
+        "decoded": {
+          "status": "tcp",
+          "source_ip": "185.175.0.3",
+          "destination_ip": "185.175.0.5",
+          "source_port": 58440,
+          "destination_port": 502,
+          "tcp_sequence": 1583121358,
+          "tcp_ack": 3721386925,
+          "tcp_flags": 24,
+          "tcp_payload_hex": "4a9a0000000601050019ff00",
+          "captured_payload_bytes": 12,
+          "ip_truncated": false,
+          "adus": [
+            {
+              "adu_hex": "4a9a0000000601050019ff00",
+              "pdu_hex": "050019ff00",
+              "transaction_id": 19098,
+              "unit": 1,
+              "function_raw": 5,
+              "function": 5,
+              "exception": false,
+              "payload_byte_offset": 0,
+              "role_by_port": "request",
+              "address": 25,
+              "word_or_quantity": 65280,
+              "fc5_value_spec_valid": true,
+              "fc5_pdu_shape_ok": true
+            }
+          ]
+        }
+      },
+      "hmi_same_observation_count": 1,
+      "hmi_copies": [
+        {
+          "source_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-30.pcap",
+          "source_frame": null,
+          "frame_number_status": "unknown_without_prefix_scan",
+          "relative_frame_in_bounded_read": 156,
+          "pcap_record_header_offset": 13805553,
+          "timestamp_us": 1675128004744074,
+          "frame_sha256": "7d54f84860fc3f36328717684792abfb15d92641cc4ac60788e2c9c03c534ed4",
+          "decoded": {
+            "status": "tcp",
+            "source_ip": "185.175.0.3",
+            "destination_ip": "185.175.0.5",
+            "source_port": 58440,
+            "destination_port": 502,
+            "tcp_sequence": 1583121358,
+            "tcp_ack": 3721386925,
+            "tcp_flags": 24,
+            "tcp_payload_hex": "4a9a0000000601050019ff00",
+            "captured_payload_bytes": 12,
+            "ip_truncated": false,
+            "adus": [
+              {
+                "adu_hex": "4a9a0000000601050019ff00",
+                "pdu_hex": "050019ff00",
+                "transaction_id": 19098,
+                "unit": 1,
+                "function_raw": 5,
+                "function": 5,
+                "exception": false,
+                "payload_byte_offset": 0,
+                "role_by_port": "request",
+                "address": 25,
+                "word_or_quantity": 65280,
+                "fc5_value_spec_valid": true,
+                "fc5_pdu_shape_ok": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "additional_record_bytes_read": 720576,
+  "interpretation": "These copies support one canonical campaign view. They are not additional independent episodes. A repeated PDU at a distinct genuine stream position is not duplicate observation."
+}

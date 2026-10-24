@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-24",
+  "timezone": "Asia/Colombo",
+  "scope": "Original CIC extraction, evidence annotation, pair audit, whole-campaign candidate partitions only",
+  "completed_stages": [
+    {"stage": "inventory", "executed_entry_point": "inventory.run_inventory", "evidence": "inventory.json"},
+    {"stage": "original_csv_and_xlsx_logs", "executed_entry_point": "logs.run_logs", "evidence": "log_summary.json"},
+    {"stage": "independent_parsing_pilot_before_bulk_extraction", "executed_entry_point": "pilot.run_pilot", "evidence": "pilot/pilot_report.json"},
+    {"stage": "complete_selected_endpoint_chains", "executed_entry_point": "run_extraction --workers 2", "evidence": "extraction/*/checkpoint.json"},
+    {"stage": "pairing", "executed_command": "./.venv/Scripts/python.exe -m component3_preparation.c3prep.cli pair", "evidence": "pair_report.json"},
+    {"stage": "evidence_annotation", "executed_entry_point": "labels.run_labels with augment_annotation_quality", "evidence": "label_report.json"},
+    {"stage": "candidate_membership", "executed_command": "./.venv/Scripts/python.exe -m component3_preparation.c3prep.cli split", "evidence": "split_manifest.json"},
+    {"stage": "full_source_hash_and_record_verification", "executed_command": "./.venv/Scripts/python.exe -m component3_preparation.c3prep.cli verify", "evidence": "quality_report.json and source_preservation.json"},
+    {"stage": "real_record_lineage_demonstration", "executed_command": "./.venv/Scripts/python.exe -m component3_preparation.c3prep.demo", "evidence": "demonstration.json"},
+    {"stage": "independent_accepted_command_review", "executed_entry_point": "Direct original-PCAP struct decode and original CSV/XLSX row comparison", "evidence": "accepted_command_review.json", "events_checked": 100, "failed": 0},
+    {"stage": "report_generation", "executed_command": "./.venv/Scripts/python.exe -m component3_preparation.c3prep.cli reports", "evidence": "INVENTORY.md, FEASIBILITY.md, SPLIT_VALIDATION.md, quality_report.md and environment.json"}
+  ],
+  "resume_checks": {
+    "executed_extraction_command": "./.venv/Scripts/python.exe -m component3_preparation.c3prep.cli extract",
+    "executed_pairing_command": "./.venv/Scripts/python.exe -m component3_preparation.c3prep.cli pair",
+    "result": "All four extraction and pair outputs reused after verifying source/config/code and output digests; no appended rows"
+  },
+  "tests": {
+    "command": "./.venv/Scripts/python.exe -m pytest component3_preparation/tests -q --basetemp component3_preparation/output/test_tmp_root",
+    "passed": 30,
+    "failed": 0,
+    "fixture_scope": "Offline parser, evidence ambiguity/version/sentinel, pair reuse/mismatch, membership/copy containment and checkpoint integrity; never network attack generation"
+  },
+  "verification_result": "Raw hashes unchanged; all record/annotation/frame/byte checks passed; no pair crossings; known observation copies contained",
+  "partition_status": "CANDIDATE_ONLY_UNSUPPORTED_INDEPENDENT_THREE_CLASS_EXPERIMENT",
+  "excluded": ["External datasets", "Old derivative rows as final data", "Engineered context features", "Model preprocessing", "Sequence windows", "X/y matrices", "Normal profile fitting", "Training"],
+  "coordination_note": "An overlapping pair-audit invocation was rejected by the Windows file lock. Completed pair tables were verified and reused, and CLI audit publication now uses an OS lock. No raw file or published event data changed."
+}

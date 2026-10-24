@@ -1,0 +1,18 @@
+{
+  "input_records": 282101,
+  "relation_counts": {
+    "matched": 108230,
+    "pending_at_connection_end": 65635,
+    "unpairable_record": 1,
+    "orphan_response": 5
+  },
+  "pair_chunk_boundaries": {
+    "matched_relations": 108230,
+    "request_response_cross_chunk": 0
+  },
+  "timeout_sensitivity_audit": {
+    "matched_over_5s": 18
+  },
+  "timeout_policy": "No time expiry. Explicit bounded outstanding capacity per connection.",
+  "max_pending_per_connection": 8192
+}

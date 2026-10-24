@@ -1,0 +1,24 @@
+{
+  "verification": "independent TShark 4.6.0 offline read of original endpoint capture",
+  "endpoint_source": "attack/compromised-ied/ied1b/ied1b-network-captures/vethc76bd3f-0.pcap",
+  "comparison_source": "attack/compromised-ied/trust-scada-hmi/trust-scada-network-captures/veth3efd353-1.pcap",
+  "five_tuple": ["185.175.0.2", 53144, "185.175.0.5", 502, "TCP"],
+  "transaction_id": 7485,
+  "request": {
+    "endpoint_frame": 531105,
+    "endpoint_epoch_seconds": "1679588811.792025000",
+    "comparison_frame": 833140,
+    "comparison_epoch_seconds": "1679588811.792015000",
+    "identical_tcp_payload_hex": "1d3d000000060101000f0001"
+  },
+  "response": {
+    "endpoint_frame": 531107,
+    "endpoint_epoch_seconds": "1679588811.798717000",
+    "comparison_frame": 833142,
+    "comparison_epoch_seconds": "1679588811.798726000",
+    "identical_tcp_payload_hex": "1d3d000000040101abcd"
+  },
+  "scope": "This proves the specified transaction is observed in both views; full-recording equivalence is not inferred.",
+  "tshark_display_filter": "frame.time_epoch >= 1679588811.790 && frame.time_epoch <= 1679588811.800 && tcp.port == 53144",
+  "fields": ["frame.number", "frame.time_epoch", "ip.src", "ip.dst", "tcp.srcport", "tcp.dstport", "tcp.payload"]
+}

@@ -1,0 +1,178 @@
+{
+  "policy": "Complete available canonical endpoint chains; all rotations retained with TCP state. One view per campaign. Other raw files inventoried only, not silently merged.",
+  "sources": [
+    {
+      "chunk": 4,
+      "path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-4.pcap",
+      "bytes": 100000062,
+      "sha256": "594cc4b98e2948335746437613cd7a0e590d6620801613cc1d8342d731b05bcc",
+      "view_id": "benign_ied1b",
+      "recording_id": "cic_benign_january"
+    },
+    {
+      "chunk": 5,
+      "path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-5.pcap",
+      "bytes": 100000020,
+      "sha256": "5f7806e8a49a665a524cb3a8fe68f65898ca7bce2d1d274fe057e09c7c0ff8c3",
+      "view_id": "benign_ied1b",
+      "recording_id": "cic_benign_january"
+    },
+    {
+      "chunk": 6,
+      "path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-6.pcap",
+      "bytes": 100000025,
+      "sha256": "6449ca85e65c963f5c7d1e622a8e0d68e31874b151469280216d4abce34135cb",
+      "view_id": "benign_ied1b",
+      "recording_id": "cic_benign_january"
+    },
+    {
+      "chunk": 7,
+      "path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-7.pcap",
+      "bytes": 100000052,
+      "sha256": "c03df02a5c6fc9b43f99c5f729d7ee28d456903e47eda95892e2b7449f0f1911",
+      "view_id": "benign_ied1b",
+      "recording_id": "cic_benign_january"
+    },
+    {
+      "chunk": 8,
+      "path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-8.pcap",
+      "bytes": 100000053,
+      "sha256": "d849fdf0a4bc88d83bef2604f111c7dd82e7854a504f482920eae24e9ecb34e4",
+      "view_id": "benign_ied1b",
+      "recording_id": "cic_benign_january"
+    },
+    {
+      "chunk": 9,
+      "path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-9.pcap",
+      "bytes": 100000032,
+      "sha256": "a473b9076fe1eb8b7fa7bb336d836a41a271185e3e3c2719d0ac4d38c5ac02da",
+      "view_id": "benign_ied1b",
+      "recording_id": "cic_benign_january"
+    },
+    {
+      "chunk": 10,
+      "path": "benign/ied1b/ied1b-network-capture/vethd9e14c0-normal-10.pcap",
+      "bytes": 2961609,
+      "sha256": "1efab209fb48db0ef2751d320a79fe034aae14f0fcbaa27e17dd9e6606a80838",
+      "view_id": "benign_ied1b",
+      "recording_id": "cic_benign_january"
+    },
+    {
+      "chunk": 0,
+      "path": "attack/external/network-wide/network-wide-normal-0.pcap",
+      "bytes": 100000001,
+      "sha256": "76d3d7774e22e91675aa458d1137c119d4b1a033820ec5ececfbfcd76bd3027b",
+      "view_id": "external_bridge",
+      "recording_id": "cic_external_february"
+    },
+    {
+      "chunk": 1,
+      "path": "attack/external/network-wide/network-wide-normal-1.pcap",
+      "bytes": 46790881,
+      "sha256": "492dc72186794775b854fad2680d9682780ee946fc8cfe958ed3ff1168d9ad1d",
+      "view_id": "external_bridge",
+      "recording_id": "cic_external_february"
+    },
+    {
+      "chunk": 0,
+      "path": "attack/compromised-ied/ied1b/ied1b-network-captures/vethc76bd3f-0.pcap",
+      "bytes": 100000057,
+      "sha256": "f7a453f2a844c990f6d7afb2f3d39e77575f4ad0579dbb0301c9caea7d7787d2",
+      "view_id": "ied_ied1b",
+      "recording_id": "cic_compromised_ied_march"
+    },
+    {
+      "chunk": 1,
+      "path": "attack/compromised-ied/ied1b/ied1b-network-captures/vethc76bd3f-1.pcap",
+      "bytes": 100000037,
+      "sha256": "d9e5ff4fb79e1efd46ebd4037b9a408392c1a0b1841c359b16f790c917eabb6d",
+      "view_id": "ied_ied1b",
+      "recording_id": "cic_compromised_ied_march"
+    },
+    {
+      "chunk": 2,
+      "path": "attack/compromised-ied/ied1b/ied1b-network-captures/vethc76bd3f-2.pcap",
+      "bytes": 100000012,
+      "sha256": "f447c75974e0618b91cb87d8d8f62dbef034221545cdd21b0bada1b4f0384d09",
+      "view_id": "ied_ied1b",
+      "recording_id": "cic_compromised_ied_march"
+    },
+    {
+      "chunk": 3,
+      "path": "attack/compromised-ied/ied1b/ied1b-network-captures/vethc76bd3f-3.pcap",
+      "bytes": 100000028,
+      "sha256": "af5050c46c4a7bcbe58b75a495c2aaf9334900f1c6b19f6c943709a2244ae2b1",
+      "view_id": "ied_ied1b",
+      "recording_id": "cic_compromised_ied_march"
+    },
+    {
+      "chunk": 4,
+      "path": "attack/compromised-ied/ied1b/ied1b-network-captures/vethc76bd3f-4.pcap",
+      "bytes": 100000054,
+      "sha256": "0e5c8ba0555067f356f464a54ac1c15e6ba033d241c6adff6a7b283b8c03f152",
+      "view_id": "ied_ied1b",
+      "recording_id": "cic_compromised_ied_march"
+    },
+    {
+      "chunk": 5,
+      "path": "attack/compromised-ied/ied1b/ied1b-network-captures/vethc76bd3f-5.pcap",
+      "bytes": 19956043,
+      "sha256": "62ae79bef89f60919fedc950d8b57cce50ea12c48e1d0fb4c218659b7be64a58",
+      "view_id": "ied_ied1b",
+      "recording_id": "cic_compromised_ied_march"
+    },
+    {
+      "chunk": 0,
+      "path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "bytes": 100000036,
+      "sha256": "740e6fcb4013747d5ec7f23927774f2b32042064acbd65a3bc4ceec660b44e9e",
+      "view_id": "scada_ied1a",
+      "recording_id": "cic_compromised_scada_march"
+    },
+    {
+      "chunk": 1,
+      "path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "bytes": 100000038,
+      "sha256": "e5593f8092b2cba20fc6cb5a354901a7c4f8c24bf6625f1a64474ad28b27b2be",
+      "view_id": "scada_ied1a",
+      "recording_id": "cic_compromised_scada_march"
+    },
+    {
+      "chunk": 2,
+      "path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-2.pcap",
+      "bytes": 100000007,
+      "sha256": "5772f554aa1d8701e93aa090dce8fe1e82ae8305163728467c1b5d88b4e6e482",
+      "view_id": "scada_ied1a",
+      "recording_id": "cic_compromised_scada_march"
+    },
+    {
+      "chunk": 3,
+      "path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "bytes": 100000037,
+      "sha256": "85792548b11b02862bf476998f9c47149ab4cec9b6fef0ce9ca4473549ac50ee",
+      "view_id": "scada_ied1a",
+      "recording_id": "cic_compromised_scada_march"
+    },
+    {
+      "chunk": 4,
+      "path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-4.pcap",
+      "bytes": 100000041,
+      "sha256": "694ac1bb5d34051325857d1383145dec2324338178d73be5a22aa3c640a4240a",
+      "view_id": "scada_ied1a",
+      "recording_id": "cic_compromised_scada_march"
+    },
+    {
+      "chunk": 5,
+      "path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-5.pcap",
+      "bytes": 46226939,
+      "sha256": "795e28792720a7a209a3c56d9e670db5b358a82a8e8d432fd2affa805111edd6",
+      "view_id": "scada_ied1a",
+      "recording_id": "cic_compromised_scada_march"
+    }
+  ],
+  "selected_captures": 21,
+  "selected_source_bytes": 1815936064,
+  "source_groups_file": "group_sources.json",
+  "raw_inventory_file": "inventory.json",
+  "endpoint_limits": "Benign and compromised-IED endpoint .5; compromised-SCADA endpoint .4; external bridge. Conclusions do not cover all devices/traffic in unselected views."
+}

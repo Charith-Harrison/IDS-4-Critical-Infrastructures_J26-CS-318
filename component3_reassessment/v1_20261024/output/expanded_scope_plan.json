@@ -1,0 +1,426 @@
+{
+  "state": "PROPOSED_NOT_EXECUTED_REQUIRES_OBJECTIVE_AGREEMENT_AND_SEPARATE_AUTHORIZATION",
+  "single_best_next_action": "Agree the academic objective: a CIC-only within-testbed temporal/evidence study, or retain the independent-campaign claim as unsupported. Do this before authorizing expanded extraction.",
+  "canonical_replacements": [
+    {
+      "campaign": "cic_compromised_scada_march",
+      "replace_baseline_view": "scada_ied1a",
+      "candidate_view": "scada_hmi",
+      "sources": [
+        {
+          "path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-0.pcap",
+          "bytes": 100000032,
+          "recorded_sha256": "a17daaa93177e0287282dcf5898a2ba2352b381608136d0ff61a32087c260ce3",
+          "first_ts_us": 1678845668009340,
+          "last_ts_us": 1678875720209986,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 2
+        },
+        {
+          "path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-1.pcap",
+          "bytes": 100000004,
+          "recorded_sha256": "be9409cdf315b429addfa2eecb76391ad11d1c7736ad66b6bb1c8c082af45138",
+          "first_ts_us": 1678875720210023,
+          "last_ts_us": 1678912686677539,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 4
+        },
+        {
+          "path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-2.pcap",
+          "bytes": 100000036,
+          "recorded_sha256": "969ff2ed175ce812a9249dd28e339cdea142e72dc8b184d9ee3d26a4ecff4e15",
+          "first_ts_us": 1678912686725324,
+          "last_ts_us": 1678960543403790,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 3
+        },
+        {
+          "path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-3.pcap",
+          "bytes": 100000002,
+          "recorded_sha256": "daf6749ec8dbc7d40e60bea77dc3d7d39ec382856f626ebea9ecc9fbc4888070",
+          "first_ts_us": 1678960543403824,
+          "last_ts_us": 1679000510428618,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 4
+        },
+        {
+          "path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-4.pcap",
+          "bytes": 100000040,
+          "recorded_sha256": "49628220f973757f0ee3a6b5be119ed339442c8e87118fa82a9d985528c0ae89",
+          "first_ts_us": 1679000510428778,
+          "last_ts_us": 1679039264757669,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 1
+        },
+        {
+          "path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-5.pcap",
+          "bytes": 100000060,
+          "recorded_sha256": "3cb2cd33549bb018c697b6ee6d74a2fbc5aea29739e01bf71277411628c01a8c",
+          "first_ts_us": 1679039264757673,
+          "last_ts_us": 1679080596517991,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 2
+        },
+        {
+          "path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-6.pcap",
+          "bytes": 100000072,
+          "recorded_sha256": "2d550d2c5d053dfddd2a81feaade70364e4d954222a8cc0c0c95eadfa5e96b8b",
+          "first_ts_us": 1679080596518007,
+          "last_ts_us": 1679117241385863,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 2
+        },
+        {
+          "path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-7.pcap",
+          "bytes": 100000054,
+          "recorded_sha256": "424b89bf89d9b1cffe67d3940687e7c14db05bb887f200423853af6c52062f01",
+          "first_ts_us": 1679117241385939,
+          "last_ts_us": 1679152224576356,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 0
+        },
+        {
+          "path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-8.pcap",
+          "bytes": 100000003,
+          "recorded_sha256": "b51f4a7aa1ccb9cf3dc68782a52f307634f3b4a5f6992fdc79ab9bad952854b8",
+          "first_ts_us": 1679152224576474,
+          "last_ts_us": 1679183993760475,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 2
+        },
+        {
+          "path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-9.pcap",
+          "bytes": 100000052,
+          "recorded_sha256": "293619fd6012de3ba98d6b05734da50306f3d76586363de989df8cd82080fb47",
+          "first_ts_us": 1679183993760488,
+          "last_ts_us": 1679221601126248,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 2
+        },
+        {
+          "path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-10.pcap",
+          "bytes": 100000037,
+          "recorded_sha256": "eeaf4243ef143051dfffe4da52fe39cf083dcc3b15b8fa063f25938feb3df424",
+          "first_ts_us": 1679221603157760,
+          "last_ts_us": 1679260862059079,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 3
+        },
+        {
+          "path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-11.pcap",
+          "bytes": 100000052,
+          "recorded_sha256": "c9b5c465fe89791ac3a81aff425b03e86ba04b8519c0f9fa96cba361334b4785",
+          "first_ts_us": 1679260863789201,
+          "last_ts_us": 1679303418400200,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 2
+        },
+        {
+          "path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-12.pcap",
+          "bytes": 100000009,
+          "recorded_sha256": "826a69f3ef8f72c6757d718dff8ed2e616363f81e215f6bd6c4d58f8d80a6c2e",
+          "first_ts_us": 1679303418400225,
+          "last_ts_us": 1679337456313316,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 4
+        },
+        {
+          "path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-13.pcap",
+          "bytes": 100000055,
+          "recorded_sha256": "ed8cb549df171e8858b5b2ae187000bb5adb827bc2ffcdae61f9d4da4bd93f10",
+          "first_ts_us": 1679337456313330,
+          "last_ts_us": 1679368356292507,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 7
+        },
+        {
+          "path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-14.pcap",
+          "bytes": 100000040,
+          "recorded_sha256": "97b240bb084c279ef0b60b08febbebf30e3e703c138631a2709d36b3411283ea",
+          "first_ts_us": 1679368356292697,
+          "last_ts_us": 1679402624137948,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 0
+        },
+        {
+          "path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-15.pcap",
+          "bytes": 100000006,
+          "recorded_sha256": "7f9cebbb92aa46a77bdb7cf4dfb0f9f3bb9268c34220b09565b1ed8b6ee84ecd",
+          "first_ts_us": 1679402624161303,
+          "last_ts_us": 1679435389381784,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 2
+        },
+        {
+          "path": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-16.pcap",
+          "bytes": 64744458,
+          "recorded_sha256": "163d9339a7fb18b932cca71c72219d4cf85a4ffe8af01abbf4a3370208773559",
+          "first_ts_us": 1679435389382196,
+          "last_ts_us": 1679457379501223,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 3
+        }
+      ],
+      "files": 17,
+      "bytes": 1664745012,
+      "frames_in_existing_inventory": 19552351
+    },
+    {
+      "campaign": "cic_benign_january",
+      "replace_baseline_view": "benign_ied1b",
+      "candidate_view": "benign_hmi",
+      "sources": [
+        {
+          "path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-13.pcap",
+          "bytes": 100000059,
+          "recorded_sha256": "64d569e47bd9a4e0d03d34a426b57b2e3d07698daf7594f6499fafb0bcc22c18",
+          "first_ts_us": 1674481924004077,
+          "last_ts_us": 1674520586656313,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 7
+        },
+        {
+          "path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-14.pcap",
+          "bytes": 100000038,
+          "recorded_sha256": "0792a25357f036e2d5349e0ff69b1b722cb8e99b2678bb0c7709aef586f9b161",
+          "first_ts_us": 1674520586656338,
+          "last_ts_us": 1674559327297408,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 3
+        },
+        {
+          "path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-15.pcap",
+          "bytes": 100000071,
+          "recorded_sha256": "5968d38c5cc52c7e469d94abae41a542ed6f19065c5b845e2b4cc4e80f4d0333",
+          "first_ts_us": 1674559327297431,
+          "last_ts_us": 1674597094577235,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 2
+        },
+        {
+          "path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-16.pcap",
+          "bytes": 100000085,
+          "recorded_sha256": "eb72855d4244ae04604cff1acc6165091d5196b458d3f7f74331631810a538b0",
+          "first_ts_us": 1674597094577256,
+          "last_ts_us": 1674634737120617,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 2
+        },
+        {
+          "path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-17.pcap",
+          "bytes": 100000040,
+          "recorded_sha256": "4dcb9e8dcad706afe6a00f9523a311c96a2f5c94d1e880cfc55d9f2dace9db69",
+          "first_ts_us": 1674634737120631,
+          "last_ts_us": 1674672358596522,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 5
+        },
+        {
+          "path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-18.pcap",
+          "bytes": 100000035,
+          "recorded_sha256": "aa2f042380664957286ba33d0fb43ef6c71e2246d58e68e155006c07b2c48820",
+          "first_ts_us": 1674672358596694,
+          "last_ts_us": 1674709914528235,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 1
+        },
+        {
+          "path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-19.pcap",
+          "bytes": 100000064,
+          "recorded_sha256": "54b77f2897c27ad105e6ab16a247dbe97019387c8be7605c07178f1363ae5664",
+          "first_ts_us": 1674709914528431,
+          "last_ts_us": 1674747502930191,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 3
+        },
+        {
+          "path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-20.pcap",
+          "bytes": 100000020,
+          "recorded_sha256": "c7b69bc0836b3bf50b59f95807c6dcca731691dc65a8acee388b7a3644e3ea15",
+          "first_ts_us": 1674747502930205,
+          "last_ts_us": 1674785386985690,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 8
+        },
+        {
+          "path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-21.pcap",
+          "bytes": 100000017,
+          "recorded_sha256": "f6f6a227854a2be55c6e3274c8895aae7d21551329e7065c672a5c2ae9e688f2",
+          "first_ts_us": 1674785386985716,
+          "last_ts_us": 1674822925886371,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 2
+        },
+        {
+          "path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-22.pcap",
+          "bytes": 100000025,
+          "recorded_sha256": "88d00bf1086de851316bd533b96ec9da9324b2ed6fce48b5523a8a35555be900",
+          "first_ts_us": 1674822925886524,
+          "last_ts_us": 1674860632614714,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 8
+        },
+        {
+          "path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-23.pcap",
+          "bytes": 100000077,
+          "recorded_sha256": "378118a8df1dd235c23bc0100aa7217281e5d67c2df10ea56b898c1de2371e23",
+          "first_ts_us": 1674860632614724,
+          "last_ts_us": 1674898027968996,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 1
+        },
+        {
+          "path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-24.pcap",
+          "bytes": 100000024,
+          "recorded_sha256": "53e72d9d12aae2f38e96e75caf2769821103120b04bc99f198d6c2d895f3d89b",
+          "first_ts_us": 1674898027969014,
+          "last_ts_us": 1674935659133612,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 7
+        },
+        {
+          "path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-25.pcap",
+          "bytes": 100000054,
+          "recorded_sha256": "9f0d79289502255c6e8be4fbeb2276f36f63a58902263a4b7bc4edde539ad17e",
+          "first_ts_us": 1674935659134820,
+          "last_ts_us": 1674973053087832,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 3
+        },
+        {
+          "path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-26.pcap",
+          "bytes": 100000089,
+          "recorded_sha256": "de1523e67c46b1acd1371678e30e16dd756f174831ec5fd9f14bdd1ed8c8d52d",
+          "first_ts_us": 1674973053087951,
+          "last_ts_us": 1675010521956109,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 6
+        },
+        {
+          "path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-27.pcap",
+          "bytes": 100000069,
+          "recorded_sha256": "4e27d0b715c15a7827d86a07f61f03a8426b5195a3806ba01bed8a83dd39da3e",
+          "first_ts_us": 1675010521956160,
+          "last_ts_us": 1675048098434747,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 6
+        },
+        {
+          "path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-28.pcap",
+          "bytes": 100000008,
+          "recorded_sha256": "1f5d374b1bf9c4246b991f3e87f9a5724eff23fb3f81d187e10a832ff005b112",
+          "first_ts_us": 1675048098434851,
+          "last_ts_us": 1675085572509364,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 0
+        },
+        {
+          "path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-29.pcap",
+          "bytes": 100000015,
+          "recorded_sha256": "a012e61f9d4a9778640f477c52c7f5b2f376dd2cf307338744e69acea6afe8db",
+          "first_ts_us": 1675085572509384,
+          "last_ts_us": 1675122904795887,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 3
+        },
+        {
+          "path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-30.pcap",
+          "bytes": 100000036,
+          "recorded_sha256": "574554570bcfd801012820e21af8fb574077fb2e1326091e11d64c86369c04d9",
+          "first_ts_us": 1675122904796723,
+          "last_ts_us": 1675160323121106,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 4
+        },
+        {
+          "path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-31.pcap",
+          "bytes": 58747332,
+          "recorded_sha256": "a4e7cd3038acaa2ff61ed9067fce292b0574155f1fa477bef254d8ae55b2b196",
+          "first_ts_us": 1675160323121312,
+          "last_ts_us": 1675182542040469,
+          "inventory_record_chain": "verified_complete_record_chain",
+          "inventory_truncated_frames": 0,
+          "inventory_backwards_timestamps": 4
+        }
+      ],
+      "files": 19,
+      "bytes": 1858748158,
+      "frames_in_existing_inventory": 21867981
+    }
+  ],
+  "retained_separate_campaigns": [
+    "cic_compromised_ied_march: existing IED1b response evidence remains one campaign",
+    "cic_external_february: timestamp-only logs still cannot establish packet-level core labels"
+  ],
+  "estimated_source_bytes": 3523493170,
+  "estimated_sequential_extraction_seconds_range": [
+    1819,
+    2108
+  ],
+  "estimated_event_connection_output_bytes_range": [
+    570923663,
+    734770263
+  ],
+  "estimated_peak_worker_bytes_basis": "Existing complete extraction workers observed approximately248\u2013252MB. Allow at least1GB per worker for variable parsing and subsequent audit states. These are estimates, not measurements of expanded extraction.",
+  "disk_plan": "Reserve at least5GB free for independent versioned events, audit sorts, annotations and checkpoints in addition to the immutable baseline; measure pilot expansion before committing a full run.",
+  "resource_limit": "Measured rates from existing endpoint views differ from HMI traffic mix and host contention; no guaranteed runtime or output size.",
+  "dedup_contract": [
+    "Never append HMI events to overlapping endpoint events as independent observations. Replace canonical view within the SAME campaign in a NEW extraction version.",
+    "Keep original chunk/frame/PCAP-byte-offset, endpoint tuple, observed SYN/reconnect generation, TCP direction/sequence-byte range and exact payload.",
+    "Only merge suppressions when same observation is established by packet/stream lineage and justified capture-clock skew, preserving copy relations.",
+    "Payload equality alone is insufficient: identical polls/writes at different genuine stream positions remain separate application events.",
+    "A full expanded canonical stream can introduce extra competing log matches; re-audit identity and uniqueness from scratch against unchanged originals, not by transferring old targets."
+  ],
+  "continuity_and_risk_gates": [
+    "Use chronological same-interface rotations only; do not concatenate compromised-SCADA substation0 March23 with March15\u201322 files.",
+    "All candidate chain chunks have complete record chains in the frozen inventory; this does not prove no TCP loss.",
+    "Bounded boundary TCP sequence observations exist but do not validate all stream continuity; carry state and audit segmentation/retransmission/gaps under a separately authorized pilot.",
+    "Reject/hold labels with conflicting/unverified overlap bytes, missing identity, ambiguous connection generation or incomplete log timing evidence.",
+    "Confirm comparable benign endpoint/function/address controls; current broader benign pilot proves reads to all three IEDs but observed FC5 controls remain at .5addresses15/25, not attack address1.",
+    "Do not promise response diversity recovery: all54 current FDIexamples retain ABCD, three patterns, onecampaign; command expansion does not repair this."
+  ],
+  "stop_conditions": [
+    "Independent-campaign claim remains required but no extra independent CIC class-bearing campaigns can be established.",
+    "Original attacker timing/identity semantics cannot justify a revised event acceptance contract.",
+    "Expanded views lack required target/time coverage, introduce unresolved copying/loss or lack comparable benign controls.",
+    "A temporal design still lacks supported classes or valid-looking diversity after justified burst/connection/pair purges.",
+    "Any raw/baseline fingerprint changes, resource gate fails, or work would cross into unapproved preprocessing/training."
+  ],
+  "full_expanded_extraction_performed": false,
+  "labels_transferred_or_changed": false
+}

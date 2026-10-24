@@ -1,0 +1,3 @@
+#mbtcp.desegment: TRUE
+#tcp.desegment_tcp_streams: TRUE
+#tcp.reassemble_out_of_order: FALSE

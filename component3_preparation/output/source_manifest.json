@@ -1,0 +1,18 @@
+{
+  "scope": "Original locally supplied CICModbusDataset2023 only; no external datasets or old derivative rows",
+  "raw_inventory": {
+    "path": "inventory.json",
+    "sha256": "786eecf65a31acb9c52f3c79060ddac32b91c65fb9079749343c02984bf5a601",
+    "files": 207,
+    "bytes": 15761969012
+  },
+  "recording_view_chunk_mapping": {
+    "path": "group_sources.json",
+    "sha256": "4cb18afae66bea265b42616284caf9527349f461b96826ff661a4b41afeadc26"
+  },
+  "decoded_source_membership": {
+    "path": "selected_source_manifest.json",
+    "sha256": "f7539ac2016d45df1254586285c043bf5702aded56c805826f9469c31fc16cbe"
+  },
+  "preservation_check": "source_preservation.json"
+}

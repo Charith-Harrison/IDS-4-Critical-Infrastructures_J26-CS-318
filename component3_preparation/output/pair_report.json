@@ -1,0 +1,73 @@
+{
+  "benign_ied1b": {
+    "input_records": 1404306,
+    "relation_counts": {
+      "matched": 702153
+    },
+    "pair_chunk_boundaries": {
+      "matched_relations": 702153,
+      "request_response_cross_chunk": 2
+    },
+    "timeout_sensitivity_audit": {},
+    "timeout_policy": "No time expiry. Explicit bounded outstanding capacity per connection.",
+    "max_pending_per_connection": 8192
+  },
+  "external_bridge": {
+    "input_records": 282101,
+    "relation_counts": {
+      "matched": 108230,
+      "pending_at_connection_end": 65635,
+      "unpairable_record": 1,
+      "orphan_response": 5
+    },
+    "pair_chunk_boundaries": {
+      "matched_relations": 108230,
+      "request_response_cross_chunk": 0
+    },
+    "timeout_sensitivity_audit": {
+      "matched_over_5s": 18
+    },
+    "timeout_policy": "No time expiry. Explicit bounded outstanding capacity per connection.",
+    "max_pending_per_connection": 8192
+  },
+  "ied_ied1b": {
+    "input_records": 1116921,
+    "relation_counts": {
+      "matched": 557544,
+      "late_or_duplicate_response_candidate": 1540,
+      "unpairable_record": 116,
+      "pending_at_connection_end": 71,
+      "matched_inconsistent": 53
+    },
+    "pair_chunk_boundaries": {
+      "matched_relations": 557597,
+      "request_response_cross_chunk": 2
+    },
+    "timeout_sensitivity_audit": {
+      "matched_over_5s": 50
+    },
+    "timeout_policy": "No time expiry. Explicit bounded outstanding capacity per connection.",
+    "max_pending_per_connection": 8192
+  },
+  "scada_ied1a": {
+    "input_records": 964959,
+    "relation_counts": {
+      "matched": 418028,
+      "pending_at_connection_end": 128164,
+      "unpairable_record": 276,
+      "matched_exception": 146,
+      "ambiguous_reused_transaction": 169,
+      "pending_at_capture_end": 1,
+      "orphan_response": 1
+    },
+    "pair_chunk_boundaries": {
+      "matched_relations": 418174,
+      "request_response_cross_chunk": 2
+    },
+    "timeout_sensitivity_audit": {
+      "matched_over_5s": 2
+    },
+    "timeout_policy": "No time expiry. Explicit bounded outstanding capacity per connection.",
+    "max_pending_per_connection": 8192
+  }
+}

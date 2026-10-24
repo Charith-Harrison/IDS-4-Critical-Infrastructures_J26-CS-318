@@ -1,0 +1,172 @@
+{
+  "status": "READY_FOR_MANUAL_EXECUTION",
+  "preparation_date_local": "2026-10-25",
+  "timezone": "Asia/Colombo",
+  "user_scope": "Prepare, freeze, check and give instructions only; user manually runs Start",
+  "agent_executed_main_start": false,
+  "main_output_exists": false,
+  "new_main_captures": 0,
+  "academic_supervisor_acceptance": "NOT_RECORDED",
+  "frozen_total": 104,
+  "source_bundle_id": "1fe2b0eb6f44807bc6759d3f3e998ce5064047516585d9e8e313f01b24050663",
+  "protocol_sha256": "7634b3187e53c029db5d4755c6c3cf9df6a7985ab8ad1c67d3ebf00662a43c48",
+  "roster_sha256": "6d689dcc9c22faf49347082a55890ad76591fde2fa7652a4f5bf5bf61ecf11ad",
+  "frozen_image_id": "sha256:4abe62902059561c7e2d383a301b6fa4cee8015a4f1ce76245177c0d76ed4ffd",
+  "image_receipt_sha256": "27ce0fa40993e007b660d6cabf90caf964cadb29bf31edcfeff81984451c1b46",
+  "source_engine": "Unchanged qualified v0.3 engine files; exact receipt hashes reproduced",
+  "offline_tests": {
+    "windows_host": 24,
+    "linux_image_with_repository_layout": 24,
+    "status": "PASSED",
+    "configuration_composition_cells": 36,
+    "fresh_engineering_seeds_only": true,
+    "synthetic_fixtures_not_research_recordings": true
+  },
+  "signal_check": {
+    "status": "PASSED",
+    "test": "Protocol-free Docker SIGINT forwarding",
+    "traffic_generated": false,
+    "captures_created": 0,
+    "background_service_left": false,
+    "commands": [
+      [
+        "docker",
+        "run",
+        "--rm",
+        "--pull",
+        "never",
+        "--init",
+        "--name",
+        "c3manual-signal-test-ea93868a",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--label",
+        "component3.collection=TEST_ONLY_NO_TRAFFIC",
+        "sha256:4abe62902059561c7e2d383a301b6fa4cee8015a4f1ce76245177c0d76ed4ffd",
+        "python",
+        "-B",
+        "-m",
+        "tools.lifecycle_probe"
+      ],
+      [
+        "docker",
+        "stop",
+        "--signal",
+        "SIGINT",
+        "--timeout",
+        "10",
+        "c3manual-signal-test-ea93868a"
+      ]
+    ]
+  },
+  "prior_qualification_readonly_revalidation": {
+    "status": "PASSED",
+    "preserved_recordings_revalidated": 14,
+    "new_captures": 0,
+    "input_read_only": true,
+    "results": [
+      {
+        "recording": "EQ01-20261024T195129Z-6b89b0d8",
+        "status": "PASSED",
+        "errors": []
+      },
+      {
+        "recording": "EQ02-20261024T195219Z-7dffb6c7",
+        "status": "PASSED",
+        "errors": []
+      },
+      {
+        "recording": "EQ03-20261024T195359Z-79823848",
+        "status": "PASSED",
+        "errors": []
+      },
+      {
+        "recording": "EQ04-20261024T195535Z-3e6cffa4",
+        "status": "PASSED",
+        "errors": []
+      },
+      {
+        "recording": "EQ05-20261024T195617Z-e6e31fae",
+        "status": "PASSED",
+        "errors": []
+      },
+      {
+        "recording": "EQ06-20261024T195700Z-038662b0",
+        "status": "PASSED",
+        "errors": []
+      },
+      {
+        "recording": "EQ07-20261024T195845Z-135b50f9",
+        "status": "PASSED",
+        "errors": []
+      },
+      {
+        "recording": "EQ08-20261024T195929Z-324fbc55",
+        "status": "PASSED",
+        "errors": []
+      },
+      {
+        "recording": "EQ09-20261024T200116Z-59cfb8b3",
+        "status": "PASSED",
+        "errors": []
+      },
+      {
+        "recording": "EQ10-20261024T200352Z-2c4eb685",
+        "status": "PASSED",
+        "errors": []
+      },
+      {
+        "recording": "EQ11-20261024T200637Z-f57cd9ac",
+        "status": "PASSED",
+        "errors": []
+      },
+      {
+        "recording": "EQ12-20261024T200717Z-73279988",
+        "status": "PASSED",
+        "errors": []
+      },
+      {
+        "recording": "EQ13-20261024T200857Z-31914ae2",
+        "status": "PASSED",
+        "errors": []
+      },
+      {
+        "recording": "EQ14-20261024T200942Z-b7a00201",
+        "status": "PASSED",
+        "errors": []
+      }
+    ]
+  },
+  "preflight_observed": {
+    "status": "READY_FOR_MANUAL_START",
+    "validated_completed": 0,
+    "traffic_generated": false,
+    "required_shared_host_bytes": 9292430536,
+    "observed_host_free_bytes": 126590861312,
+    "observed_docker_guest_free_bytes": 1024330240000,
+    "estimated_remaining_hours": 2.3080536955555564,
+    "command": ".\\component3_main_collection\\v1_20261025\\collect-main.ps1 -Preflight"
+  },
+  "initial_container_test_layout": "Flat /main_collection layout triggered two host-path guard tests. Correct repository-style read-only mount passed all 24; frozen source was unchanged.",
+  "preserved_prior_files": {
+    "status": "PASSED",
+    "files": 494,
+    "changed": [],
+    "new_main_captures": 0
+  },
+  "runtime_archive": {
+    "file": "evidence/manual-runtime.tar",
+    "bytes": 45318144,
+    "sha256": "2630bc09d1124842ef356be58c341003ac1256117f99f45fdbdab0aa63257ed1"
+  },
+  "limitations": [
+    "Main Start with traffic was deliberately not tested or executed",
+    "14 combinations have measured qualification, while 36 intended cells pass offline composition checks with unchanged factors; no claim all 36 were physically captured",
+    "No additional network qualification was needed for unchanged wire/decoder semantics; lifecycle changes were tested using mocks and a protocol-free signal probe",
+    "Source/configuration freeze is hash-enforced. Operational output location/margins are user-configurable and recorded.",
+    "No independence of industrial campaigns or model benefit follows; academic methodology acceptance remains unrecorded"
+  ]
+}

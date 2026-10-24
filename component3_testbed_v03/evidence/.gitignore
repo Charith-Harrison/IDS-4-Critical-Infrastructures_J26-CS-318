@@ -1,0 +1,2 @@
+# Optional exact runtime image archive remains local for handover.
+*.tar

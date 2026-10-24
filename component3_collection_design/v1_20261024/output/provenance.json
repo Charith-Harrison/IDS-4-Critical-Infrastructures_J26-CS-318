@@ -1,0 +1,27 @@
+{
+  "design_id": "c3-controlled-collection-v1-20261024",
+  "date": "2026-10-24",
+  "timezone": "Asia/Colombo",
+  "exact_reproduction_command": "./.venv/Scripts/python.exe -X utf8 -B component3_collection_design/v1_20261024/check_design.py",
+  "source_references": {
+    "component3_testbed_pilot/docs/EXPERIMENT.md": "c09099fbccf498f22d59c0d05750f0af6cef3b477cbf6f430c191e7583a2442d",
+    "component3_testbed_pilot/DATASET_CARD.md": "473df05c370dd085f1a25b9775fc8a33a46c6ae370416c4aca7fb559d72a9073",
+    "component3_preparation/REFERENCE_AUDIT.md": "bfa3f95f2782d4dc7b3f273563ecdb4c2abe978952e2327c2814a5c063e73606",
+    "component3_reassessment/v1_20261024/DECISION_REPORT.md": "776b38b03819264ab8f00bb904735c3bbbf3fd75a1d2b320322189689fcbb9f1",
+    "references/component3_reference/IT4010-TAF-2026 J26-CS-318 (1).pdf": "896c5fbfbce3b4e00c8e4b68c72ef1623f4436342bff399b3a8a57e0db0a1744",
+    "references/component3_reference/IT23150270_Rathnayaka K.H..pdf": "e32e468897e075b75f6f30998fa17647fc5ce30ac63ddf84ee078732da097bf5"
+  },
+  "design_files_sha256": {
+    ".gitignore": "4f49ffbe3eabe66f97f91bde902cd8a95b5943cfcba10570d48dd91ea2484deb",
+    "check_design.py": "032e4527e847f3e949322ded3ceabca084e99080e2c57f01c700e78157de96eb",
+    "collection_design.json": "b64203cd2ee13403ac07ac5d441fe803f2b7623723a3c77ef73ae09447186954",
+    "COLLECTION_PROTOCOL.md": "082f1c691581ef6d32c7d548dbb0809c116ffe8e36caecc08c6cca6e1a05c02b",
+    "IMPLEMENTATION_BACKLOG.md": "9e2cfd6b51ebf236eb6cc43d6ec0181ca7c10b1fd5c0fae74103e6a24591df67",
+    "LOCAL_PILOT_CARD.md": "ba068076a9fb8e9e9e56a7118791f8cbb3c0f4bc9eace9fa8d4e6fb9c75e1286",
+    "PROSPECTIVE_RUN_ROSTER.csv": "1d0d1b2384b55c70e5420508b10b2e351f741a5e4c9f47e39ced2602143b54a3",
+    "README.md": "4835f29413eb7e30ac13beb2618f048b726a511423475bd65cee651e94b20b69",
+    "RESEARCH_ALIGNMENT.md": "97ceb561b5ff554adcad769a75e58eaeeaf6bd466eb2b0e71bb45c071d414cc1"
+  },
+  "protected_snapshot_sha256": "ac0e7a7b0ababf06b6fd485c3870e0dfb47a5ee4e78e4a28ec1af48efdddc832",
+  "raw_cic_rehash_performed": false
+}

@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "design_id": "c3-controlled-collection-v1-20261024",
+  "status": "PROPOSED_COLLECTION_PROTOCOL_NOT_A_COLLECTED_DATASET",
+  "research_claim": "Within-testbed comparison of causal protocol context for normal, command-injection and response-injection events in a declared Modbus/TCP software process",
+  "academic_source_change": "Testbed-primary methodology proposed; supervisor approval not asserted",
+  "existing_local_pilot": "component3_testbed_pilot/outputs/pilot-20261024T170840Z-d137ea97",
+  "existing_simulator_version": "0.1.0",
+  "future_generator_version": "0.2.0-proposed",
+  "collection_output_root": "component3_collection_runs/design-v1",
+  "source_policy": {
+    "primary": "New measured PCAPs of the isolated controlled Modbus/TCP testbed, only after the relevant stage gates",
+    "cic": "Frozen separate evidence/case study; never silently pool CIC and lab rows",
+    "external_datasets": "Excluded, including MSU, New Gas Pipeline and water-storage",
+    "old_derivative_csvs": "Diagnostic history only; no source of records or target truth"
+  },
+  "limits": {
+    "network": "Docker network_mode:none, loopback only, no published host ports",
+    "port": 15020,
+    "unit_id": 1,
+    "function_codes": [1, 3, 5, 6],
+    "read_quantity": 1,
+    "one_outstanding_request_per_connection": true,
+    "multiple_clients_or_hidden_writers": false,
+    "autonomous_setpoint_changes": false,
+    "process_units": "Unsigned raw lab words; no physical unit or industrial fidelity claim"
+  },
+  "policy": {
+    "id": "lab-policy-v1",
+    "mode_values": {"0": "pump ON not permitted", "1": "pump ON permitted"},
+    "pump_off": "Permitted in both modes",
+    "setpoint_writes": "Permitted in both modes; do not retroactively relabel v0.1 mode-0 setup writes",
+    "stored_setpoint": "Changes only through an observed successful FC6 write and acknowledgement",
+    "normal_ack_of_injected_command": "normal association, never response_injection"
+  },
+  "maps": [
+    {"id": "M0", "mode_register": 0, "setpoint_register": 1, "pump_coil": 1, "implementation": "existing v0.1 map"},
+    {"id": "M1", "mode_register": 10, "setpoint_register": 11, "pump_coil": 7, "implementation": "proposed; new protocol/state/validator support required"},
+    {"id": "M2", "mode_register": 40, "setpoint_register": 41, "pump_coil": 21, "implementation": "proposed held-out map; new protocol/state/validator support required"}
+  ],
+  "value_profiles": [
+    {"id": "V0", "minimum": 20, "maximum": 180, "units": "raw lab words", "pair_policy": "sample distinct a,b; both appear as genuine and forged reported values"},
+    {"id": "V1", "minimum": 1000, "maximum": 1160, "units": "raw lab words", "pair_policy": "held-out numerical range, balanced across normal/attack roles; not a safety threshold"}
+  ],
+  "schedules": [
+    {"id": "S0", "description": "Common bounded template compatible with the original nine-exchange pilot; add required normal-control families without changing policy", "implementation": "partly implemented; extra normal families pending"},
+    {"id": "S1", "description": "Interleave 0, 1 or 2 complete benign polling exchanges at dependency-safe positions; vary target position across all families, not by label. Insert before anchors or refresh the visible anchor so no qualification target has more than six intervening ADUs.", "implementation": "proposed"},
+    {"id": "S2", "description": "Held-out legal ordering and polling mix under the same causal policy; no hidden writers or unobserved state changes", "implementation": "proposed held-out condition"}
+  ],
+  "scenarios": [
+    {"id": "N_PERMITTED_ON", "label_family": "normal", "observable_dependency": "Mode 1 is observed before pump ON", "control_for": ["C_BLOCKED_ON"], "implementation": "core behavior already demonstrated"},
+    {"id": "N_INHIBITED_IDLE", "label_family": "normal", "observable_dependency": "Mode 0 with lawful pump OFF and polling; no unauthorized ON", "control_for": ["C_BLOCKED_ON"], "implementation": "dedicated family proposed"},
+    {"id": "N_AUTHORIZED_UPDATE", "label_family": "normal", "observable_dependency": "A visible acknowledged FC6 update changes the expected readback in either mode", "control_for": ["R_CHANGED_READBACK"], "implementation": "broader update family proposed"},
+    {"id": "N_REPEAT_WRITE", "label_family": "normal", "observable_dependency": "Repeated permitted ON in mode 1, OFF in either mode, and same-value FC6 writes are separate legitimate messages", "control_for": ["C_BLOCKED_ON", "R_CHANGED_READBACK"], "implementation": "dedicated family proposed"},
+    {"id": "N_MODE_TRANSITION", "label_family": "normal", "observable_dependency": "Visible 0-to-1 and 1-to-0 mode transitions; allowed ON follows a current mode-1 observation", "control_for": ["C_BLOCKED_ON"], "implementation": "dedicated family proposed"},
+    {"id": "N_GENUINE_READBACK", "label_family": "normal", "observable_dependency": "Reply agrees with the last acknowledged write; values a and b both occur normally", "control_for": ["R_CHANGED_READBACK"], "implementation": "core behavior already demonstrated"},
+    {"id": "C_BLOCKED_ON", "label_family": "command_injection", "target": "Only the direct FC5 pump-ON request after observed mode 0", "matched_controls": ["N_PERMITTED_ON", "N_INHIBITED_IDLE", "N_REPEAT_WRITE", "N_MODE_TRANSITION"], "pdu_overlap_required": true, "implementation": "core behavior already demonstrated"},
+    {"id": "R_CHANGED_READBACK", "label_family": "response_injection", "target": "Only the modified FC3 setpoint response, reporting b instead of a or a instead of b", "matched_controls": ["N_GENUINE_READBACK", "N_AUTHORIZED_UPDATE", "N_REPEAT_WRITE"], "variants": ["a_to_b", "b_to_a"], "pdu_overlap_required": true, "implementation": "core behavior already demonstrated"}
+  ],
+  "causal_contract": {
+    "command_decision": "Complete request arrival; only earlier wire-visible state is eligible",
+    "response_decision": "Complete response arrival; earlier requests and acknowledged writes are eligible",
+    "qualification_max_intervening_adus_from_anchor": 6,
+    "lookbacks_for_later_student_work_only": [3, 5, 10],
+    "cut_boundaries": ["run", "connection generation", "unresolved byte gap", "unrecoverable pairing ambiguity"],
+    "episode_ids": "Audit grouping only; not detector-visible reset flags unless an explicit reset is on wire",
+    "warmup_and_purge": "Declare maximum event/time lookback and delayed-decision horizon before later scoring; never borrow context across partitions"
+  },
+  "evidence_requirements": [
+    "actual capture.pcap and recorder readiness/drop statistics",
+    "exact ADU-to-connection/stream/frame/file-byte lineage",
+    "application ledger and separate private before/after/intervention audit",
+    "hashes of code, policy, map, schedule, planned run, image and artifacts",
+    "mechanism target separated from protocol shape, pair outcome and simulated state effect",
+    "all directly labelled targets independently decoded and checked against actual bytes",
+    "paired normal controls share target role and PDU patterns",
+    "every proposed target label withheld when intervention/bytes/state evidence cannot be reconciled"
+  ],
+  "qualification": {
+    "purpose": "Engineering acceptance only; excluded from model development and final scoring",
+    "planned_runs": 4,
+    "seeds": [60001, 60002, 60003, 60004],
+    "map": "M0",
+    "value_profile": "V0",
+    "schedule": "S1",
+    "required_scenarios": ["N_PERMITTED_ON", "N_INHIBITED_IDLE", "N_AUTHORIZED_UPDATE", "N_REPEAT_WRITE", "N_MODE_TRANSITION", "N_GENUINE_READBACK", "C_BLOCKED_ON", "R_CHANGED_READBACK"],
+    "minimum_direct_command_targets_per_run": 2,
+    "minimum_direct_response_targets_per_run": 2,
+    "minimum_bidirectional_forgery_variants_per_run": 2,
+    "capture_drops_allowed": 0,
+    "validation_errors_allowed": 0,
+    "ready_now": false,
+    "reason_not_ready": "Generator and validator must implement and pass the proposed scenarios and schedule first; source-change academic approval is not recorded"
+  },
+  "prospective_main_roster": {
+    "status": "DRAFT_BUDGET_NOT_POWER_ANALYSIS_OR_ACTUAL_SPLIT",
+    "qualification_runs_included": false,
+    "cells": [
+      {"role": "development", "maps": ["M0", "M1"], "schedules": ["S0", "S1"], "values": "V0", "repetitions_per_cell": 4, "seed_start": 61001},
+      {"role": "validation", "maps": ["M0", "M1"], "schedules": ["S0", "S1"], "values": "V0", "repetitions_per_cell": 2, "seed_start": 62001},
+      {"role": "test_repeat", "maps": ["M0", "M1"], "schedules": ["S0", "S1"], "values": "V0", "repetitions_per_cell": 2, "seed_start": 63001},
+      {"role": "test_values", "maps": ["M0", "M1"], "schedules": ["S0", "S1"], "values": "V1", "repetitions_per_cell": 2, "seed_start": 64001},
+      {"role": "test_map", "maps": ["M2"], "schedules": ["S0", "S1"], "values": "V0", "repetitions_per_cell": 2, "seed_start": 65001},
+      {"role": "test_schedule", "maps": ["M0", "M1"], "schedules": ["S2"], "values": "V0", "repetitions_per_cell": 2, "seed_start": 66001}
+    ],
+    "minimum_scenarios_per_run": "All eight families, including both response-forgery directions and their normal controls",
+    "independence_limit": "Fresh captures are experimental replications within one simulator; seeds, groups, PCs and connections are not new industrial campaigns",
+    "sample_size_decision": "Review engineering yield, coverage and cost after qualification; revise this draft prospectively before final collection/test inspection. No arbitrary row-count or accuracy target."
+  },
+  "later_comparisons": ["protocol-validity checks", "simple causal contextual rules", "isolated-event Random Forest", "same-family contextual Random Forest with ablations"],
+  "later_evaluation_contract": {
+    "primary_task_cohort": "Predeclare pump-ON request and setpoint-readback response task eligibility using public protocol/object roles, never scenario flags; same supported cohort for every comparison",
+    "secondary_coverage": "All validated messages with unsupported/insufficient-context dispositions visible",
+    "request_derived_response_fields": "Audit/context only; not current-response baseline inputs",
+    "metrics": ["macro precision/recall/F1", "per-class support and recall", "false-positive rate", "confusion matrices", "decision latency", "run-level uncertainty"],
+    "transforms": "Future student-owned implementation; fit on training only; no feature matrices or transforms in this stage",
+    "test_handling": "Freeze source versions, roles and conditions before inspecting held-out captures or scores; no tuning on tests"
+  },
+  "forbidden_predictor_metadata": ["true label", "scenario", "step", "episode ID", "run ID", "seed", "planned role", "file name", "private state", "intervention flag", "expected genuine reply from server audit", "future acknowledgement or recovery read"],
+  "gates": {
+    "G0": "Local 216-message pilot verified; existing evidence preserved",
+    "G1": "Methodology change and bounded research claim agreed with supervisor; not asserted here",
+    "G2": "New generator and independent validator implement the design without changing v0.1",
+    "G3": "All four qualification captures meet evidence/control/isolation requirements",
+    "G4": "Main roster, label policy, observability, source versions and prospective hold-outs frozen before main collection",
+    "G5": "Later student preprocessing and evaluation separately authorized"
+  },
+  "stop_conditions": ["private truth is not observable to the declared detector and no supported task can be defined", "normal-control overlap or evidence checks fail", "capture gaps/drops or protocol/pair ambiguity cannot be resolved", "labels correlate with source identity, template position or static markers without adequate controls", "a held-out condition has been used for tuning", "work would enter unapproved larger collection or model preprocessing"]
+}

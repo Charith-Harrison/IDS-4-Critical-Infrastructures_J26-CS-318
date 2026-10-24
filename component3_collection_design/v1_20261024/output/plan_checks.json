@@ -1,0 +1,35 @@
+{
+  "status": "DESIGN_VALID_IMPLEMENTATION_AND_QUALIFICATION_PENDING",
+  "errors": [],
+  "plan_sha256": "b64203cd2ee13403ac07ac5d441fe803f2b7623723a3c77ef73ae09447186954",
+  "checker_sha256": "032e4527e847f3e949322ded3ceabca084e99080e2c57f01c700e78157de96eb",
+  "prospective_roster_sha256": "1d0d1b2384b55c70e5420508b10b2e351f741a5e4c9f47e39ced2602143b54a3",
+  "prospective_counts": {
+    "qualification_unscored": 4,
+    "development": 16,
+    "validation": 8,
+    "test_repeat": 8,
+    "test_values": 8,
+    "test_map": 4,
+    "test_schedule": 4
+  },
+  "prospective_qualification_runs": 4,
+  "prospective_main_runs": 48,
+  "actual_new_captures_collected": 0,
+  "actual_new_model_partitions_created": 0,
+  "existing_pilot_readonly_checks": true,
+  "protected_files_checked": 202,
+  "protected_existing_files_unchanged": true,
+  "changed_protected_files": [],
+  "implementation_gaps": [
+    "new normal scenario families",
+    "configurable M1/M2 object maps",
+    "S1/S2 dependency-safe scheduling",
+    "expanded independent validator and per-run control audits",
+    "versioned collection launcher and role/condition gate"
+  ],
+  "academic_source_change_approval_recorded": false,
+  "ready_for_bulk_collection": false,
+  "next_technical_stage": "Implement a separate generator/validator version against this protocol, then four unscored qualification captures",
+  "no_model_preprocessing_or_training": true
+}

@@ -1,0 +1,1240 @@
+{
+  "status": "REVIEW_REPRODUCED_QUALIFICATION_WITH_LIMITED_SCOPE",
+  "review_date_local": "2026-10-25",
+  "timezone": "Asia/Colombo",
+  "total_counts": {
+    "adus": 1846,
+    "transactions": 923,
+    "episodes": 80,
+    "frames": 2063
+  },
+  "label_counts": {
+    "normal": 1822,
+    "command_injection": 8,
+    "response_injection": 16
+  },
+  "successful_measured_captures": 4,
+  "measured_configurations": [
+    "M0/V0/S1"
+  ],
+  "runs": [
+    {
+      "planned_run_id": "Q01",
+      "source": "component3_collection_runs/design-v1/Q01-20261024T180517Z-1a6f7c4b",
+      "label_counts": {
+        "normal": 448,
+        "command_injection": 2,
+        "response_injection": 4
+      },
+      "adus": 454,
+      "transactions": 227,
+      "episodes": 20,
+      "frames": 470,
+      "config": {
+        "design_id": "c3-controlled-collection-v1-20261024",
+        "design_sha256": "b64203cd2ee13403ac07ac5d441fe803f2b7623723a3c77ef73ae09447186954",
+        "map": "M0",
+        "planned_run_id": "Q01",
+        "policy_id": "lab-policy-v1",
+        "purpose": "qualification_unscored",
+        "replication_in_cell": "",
+        "roster_sha256": "1d0d1b2384b55c70e5420508b10b2e351f741a5e4c9f47e39ced2602143b54a3",
+        "schedule": "S1",
+        "seed": 60001,
+        "status": "NOT_COLLECTED",
+        "values": "V0"
+      },
+      "kernel_drops": 0,
+      "frozen_validator_reexecuted_readonly": "PASSED",
+      "independent_byte_state_intervention_and_anchor_replay": "PASSED",
+      "genuine_command_ack_ids": [
+        "Q01-20261024T180517Z-1a6f7c4b:e67",
+        "Q01-20261024T180517Z-1a6f7c4b:e427"
+      ],
+      "target_anchor_intervening_adus": [
+        0,
+        1
+      ],
+      "application_span_seconds": 4.715970712,
+      "capture_payload_span_seconds": 4.715052,
+      "launch_until_next_launch_or_ledger_end_seconds": 8.03168,
+      "client_interexchange_gap_ms": {
+        "min": 11.03195,
+        "median": 16.717486,
+        "max": 161.886033
+      },
+      "actual_tid_schedule": {
+        "first": 55040,
+        "last": 55266,
+        "sequential_transitions": 226,
+        "total_transitions": 226
+      },
+      "attack_transaction_positions_within_episode": {
+        "response_injection": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "command_injection": [
+          6,
+          8
+        ]
+      },
+      "episode_transaction_length_counts": {
+        "10": 9,
+        "11": 3,
+        "12": 2,
+        "9": 1,
+        "16": 1,
+        "14": 3,
+        "13": 1
+      },
+      "ordered_direction_pdu_trace_sha256": "b76c5445c6ee0fb4bd845e9894360b1ba7414ed7cdd532e3c46ba99303c30158",
+      "all_artifact_bytes": 1223439,
+      "pcap_bytes": 43890,
+      "scenario_message_counts": {
+        "N_MODE_TRANSITION": 60,
+        "N_AUTHORIZED_UPDATE": 46,
+        "C_BLOCKED_ON": 44,
+        "R_CHANGED_READBACK": 80,
+        "N_INHIBITED_IDLE": 38,
+        "N_GENUINE_READBACK": 88,
+        "N_REPEAT_WRITE": 56,
+        "N_PERMITTED_ON": 42
+      },
+      "image_id": "sha256:c8c06ba2f25647e880bc5a7262436169be752d4d0d174c0afbfc72137cf74385",
+      "artifact_sha256": {
+        "application_ledger.jsonl": "c205c5faa3d7cb8bbd2b882c2597de018c45728951affee4a9f52ae708d1124a",
+        "capture.log": "3c7c47416d12800448b9dc1ee5d555d4a6d59304914581b7b70bcd5f05f82353",
+        "capture.pcap": "521afbe829c0a26654e7cd2df02a58a8ad5c0cde82fec4f1ef312df3bce9597d",
+        "host_execution.json": "d48cfcd4e9981864edd56ee8411f60e2f375a6854e10ded0b7bd7e1b07df6d5e",
+        "intervention_audit.jsonl": "f82c291dd4f86ea5e1ba2536cd3c73b671fc76f4318f636cb9489f089d96aec8",
+        "planned_run.json": "6187b9f890630bb92ac91916d286f38307d59158a39d28ef8eb688a19c861cda",
+        "run_manifest.json": "8f7653f8e4293989c411f9e2645493907926a026ed79d7f0c3d337a12397d2a2",
+        "scenario_plan.json": "756530bc38aad1441ad8f8fe3cae81adb6684979ff10bf8285aa704bd6f28e14",
+        "server_audit.jsonl": "27874505f459e41372835f48b3753e26cd8df53c305eaf99957e08af7a5be20c",
+        "validation_report.json": "2b1506a1a738f109e59e871d0b8036f93f29b8d865c82d4260de511d7060d624",
+        "verified_labels.jsonl": "dc27aa3d69fec8fe5ec4ac01bbc53951fc2ad6b6e6666fb6cdcb9243961337ca"
+      }
+    },
+    {
+      "planned_run_id": "Q02",
+      "source": "component3_collection_runs/design-v1/Q02-20261024T180527Z-89646902",
+      "label_counts": {
+        "normal": 460,
+        "response_injection": 4,
+        "command_injection": 2
+      },
+      "adus": 466,
+      "transactions": 233,
+      "episodes": 20,
+      "frames": 567,
+      "config": {
+        "design_id": "c3-controlled-collection-v1-20261024",
+        "design_sha256": "b64203cd2ee13403ac07ac5d441fe803f2b7623723a3c77ef73ae09447186954",
+        "map": "M0",
+        "planned_run_id": "Q02",
+        "policy_id": "lab-policy-v1",
+        "purpose": "qualification_unscored",
+        "replication_in_cell": "",
+        "roster_sha256": "1d0d1b2384b55c70e5420508b10b2e351f741a5e4c9f47e39ced2602143b54a3",
+        "schedule": "S1",
+        "seed": 60002,
+        "status": "NOT_COLLECTED",
+        "values": "V0"
+      },
+      "kernel_drops": 0,
+      "frozen_validator_reexecuted_readonly": "PASSED",
+      "independent_byte_state_intervention_and_anchor_replay": "PASSED",
+      "genuine_command_ack_ids": [
+        "Q02-20261024T180527Z-89646902:e223",
+        "Q02-20261024T180527Z-89646902:e275"
+      ],
+      "target_anchor_intervening_adus": [
+        0,
+        1
+      ],
+      "application_span_seconds": 9.122881955,
+      "capture_payload_span_seconds": 9.122695,
+      "launch_until_next_launch_or_ledger_end_seconds": 14.639539,
+      "client_interexchange_gap_ms": {
+        "min": 12.214857,
+        "median": 27.906952500000003,
+        "max": 290.392409
+      },
+      "actual_tid_schedule": {
+        "first": 31359,
+        "last": 31591,
+        "sequential_transitions": 232,
+        "total_transitions": 232
+      },
+      "attack_transaction_positions_within_episode": {
+        "command_injection": [
+          7,
+          8
+        ],
+        "response_injection": [
+          4,
+          4,
+          5,
+          6
+        ]
+      },
+      "episode_transaction_length_counts": {
+        "12": 4,
+        "11": 7,
+        "10": 5,
+        "15": 1,
+        "16": 1,
+        "13": 1,
+        "14": 1
+      },
+      "ordered_direction_pdu_trace_sha256": "03b6f301c591523299a3c63fbf7f237e2d8981e4ac1b3a7f377d18766099a6a3",
+      "all_artifact_bytes": 1261340,
+      "pcap_bytes": 51972,
+      "scenario_message_counts": {
+        "N_GENUINE_READBACK": 88,
+        "N_REPEAT_WRITE": 56,
+        "N_AUTHORIZED_UPDATE": 44,
+        "R_CHANGED_READBACK": 86,
+        "N_PERMITTED_ON": 44,
+        "N_INHIBITED_IDLE": 42,
+        "N_MODE_TRANSITION": 60,
+        "C_BLOCKED_ON": 46
+      },
+      "image_id": "sha256:c8c06ba2f25647e880bc5a7262436169be752d4d0d174c0afbfc72137cf74385",
+      "artifact_sha256": {
+        "application_ledger.jsonl": "8b87baabe8dc8800168e3347bb85feab1fecdc8d75a5c048678c6fe5e88438f0",
+        "capture.log": "0520bf28f275eb90f25cf93efdee6e41043fbf4b6d43e75a8d3a7de60cc4ad9a",
+        "capture.pcap": "23f90cdc1c5cda44eb07b1f8424f4b047d4ba525552d8a03308df44e125dfd20",
+        "host_execution.json": "33fe624ed0f741fe18a397aacbb164429e9283f572f472e8fe1e54ccc96f81f7",
+        "intervention_audit.jsonl": "b5509da37be95d6593d90f540b76748fa93b9e9c473fe62cc8aeddbef1b43b7f",
+        "planned_run.json": "73d717a44f89e29861435a94063b17bff8a7ce5482df7f31af4a163689e42475",
+        "run_manifest.json": "6d4355a9325175a656fe440a5aa024b22ff65b7ce5af717d720f9655d7b14795",
+        "scenario_plan.json": "f1186dc22aa0f9d23cd55a9c0bf2c69f4090a97190b5089335d98e4d93559df3",
+        "server_audit.jsonl": "6bafc36c40a401a6a7e7022a61a62c10d326189221b742c3892d42b89df9eae3",
+        "validation_report.json": "cde767391b6cd18ffb45362fd4e772758f436d9007a4464d8725f309740d1c8f",
+        "verified_labels.jsonl": "b61ab106bd659cbe2c263905a597be0685c6f61459f3d90964cd74d2a40f13b0"
+      }
+    },
+    {
+      "planned_run_id": "Q03",
+      "source": "component3_collection_runs/design-v1/Q03-20261024T180540Z-5163f9af",
+      "label_counts": {
+        "normal": 460,
+        "command_injection": 2,
+        "response_injection": 4
+      },
+      "adus": 466,
+      "transactions": 233,
+      "episodes": 20,
+      "frames": 499,
+      "config": {
+        "design_id": "c3-controlled-collection-v1-20261024",
+        "design_sha256": "b64203cd2ee13403ac07ac5d441fe803f2b7623723a3c77ef73ae09447186954",
+        "map": "M0",
+        "planned_run_id": "Q03",
+        "policy_id": "lab-policy-v1",
+        "purpose": "qualification_unscored",
+        "replication_in_cell": "",
+        "roster_sha256": "1d0d1b2384b55c70e5420508b10b2e351f741a5e4c9f47e39ced2602143b54a3",
+        "schedule": "S1",
+        "seed": 60003,
+        "status": "NOT_COLLECTED",
+        "values": "V0"
+      },
+      "kernel_drops": 0,
+      "frozen_validator_reexecuted_readonly": "PASSED",
+      "independent_byte_state_intervention_and_anchor_replay": "PASSED",
+      "genuine_command_ack_ids": [
+        "Q03-20261024T180540Z-5163f9af:e15",
+        "Q03-20261024T180540Z-5163f9af:e263"
+      ],
+      "target_anchor_intervening_adus": [
+        0,
+        1
+      ],
+      "application_span_seconds": 6.11367325,
+      "capture_payload_span_seconds": 6.112755,
+      "launch_until_next_launch_or_ledger_end_seconds": 9.545465,
+      "client_interexchange_gap_ms": {
+        "min": 11.504217,
+        "median": 18.4721255,
+        "max": 134.983555
+      },
+      "actual_tid_schedule": {
+        "first": 42336,
+        "last": 42568,
+        "sequential_transitions": 232,
+        "total_transitions": 232
+      },
+      "attack_transaction_positions_within_episode": {
+        "response_injection": [
+          4,
+          4,
+          5,
+          6
+        ],
+        "command_injection": [
+          7,
+          8
+        ]
+      },
+      "episode_transaction_length_counts": {
+        "11": 9,
+        "12": 3,
+        "10": 4,
+        "15": 3,
+        "13": 1
+      },
+      "ordered_direction_pdu_trace_sha256": "e44e4329068dc7d79856aa3bed9bbf20e87c6cabb8ad40fbb0e3a29201d7f316",
+      "all_artifact_bytes": 1255986,
+      "pcap_bytes": 46397,
+      "scenario_message_counts": {
+        "C_BLOCKED_ON": 46,
+        "N_GENUINE_READBACK": 90,
+        "R_CHANGED_READBACK": 86,
+        "N_PERMITTED_ON": 42,
+        "N_INHIBITED_IDLE": 44,
+        "N_MODE_TRANSITION": 60,
+        "N_AUTHORIZED_UPDATE": 42,
+        "N_REPEAT_WRITE": 56
+      },
+      "image_id": "sha256:c8c06ba2f25647e880bc5a7262436169be752d4d0d174c0afbfc72137cf74385",
+      "artifact_sha256": {
+        "application_ledger.jsonl": "6bb37e043dafb7377e1556c927eba12b8d37d2df100b35d590fc565c13117f68",
+        "capture.log": "667194ec6bb59cf0387228c353c5e600d8e3fa5abedc402f146a5a020b5f6ffd",
+        "capture.pcap": "12e88531988259e158441ac82c2548bf0b92758ff25fe57187a8f4ea5f42c12e",
+        "host_execution.json": "7b4b1f586a53b09ee9b43acc8f8d3d1edc7abf74ddc554d8933d1bd7c574a057",
+        "intervention_audit.jsonl": "07e892c59883c04563735ae52ea95cf3b9daaad8d64b150aa6451fadd0f255a8",
+        "planned_run.json": "aaa14a8941bbba3cd67aca497327b30ded77278abfabbd5064ee71736a2c90e0",
+        "run_manifest.json": "526caf78f37daac99ebf6440aece2a5d2bb3f8028646067c88e7deea269f394b",
+        "scenario_plan.json": "e8dcb8e4abe0181446439566da585e6bc789dfc4e88cf6fabc9c67935564d4c1",
+        "server_audit.jsonl": "3c7aed4c394021172e377958a52c783005bb406ffba1e894904faa16ade417e5",
+        "validation_report.json": "1a39df9296980f5955af50a5335b906b5b5cd9df876cca3e392b19d15d5c83ff",
+        "verified_labels.jsonl": "5e9a51a1adc3ccf925e648bf7962a762595162652671dddf39ceb3cf17be58c0"
+      }
+    },
+    {
+      "planned_run_id": "Q04",
+      "source": "component3_collection_runs/design-v1/Q04-20261024T180550Z-4ed64387",
+      "label_counts": {
+        "normal": 454,
+        "response_injection": 4,
+        "command_injection": 2
+      },
+      "adus": 460,
+      "transactions": 230,
+      "episodes": 20,
+      "frames": 527,
+      "config": {
+        "design_id": "c3-controlled-collection-v1-20261024",
+        "design_sha256": "b64203cd2ee13403ac07ac5d441fe803f2b7623723a3c77ef73ae09447186954",
+        "map": "M0",
+        "planned_run_id": "Q04",
+        "policy_id": "lab-policy-v1",
+        "purpose": "qualification_unscored",
+        "replication_in_cell": "",
+        "roster_sha256": "1d0d1b2384b55c70e5420508b10b2e351f741a5e4c9f47e39ced2602143b54a3",
+        "schedule": "S1",
+        "seed": 60004,
+        "status": "NOT_COLLECTED",
+        "values": "V0"
+      },
+      "kernel_drops": 0,
+      "frozen_validator_reexecuted_readonly": "PASSED",
+      "independent_byte_state_intervention_and_anchor_replay": "PASSED",
+      "genuine_command_ack_ids": [
+        "Q04-20261024T180550Z-4ed64387:e79",
+        "Q04-20261024T180550Z-4ed64387:e389"
+      ],
+      "target_anchor_intervening_adus": [
+        0,
+        1
+      ],
+      "application_span_seconds": 7.830294326,
+      "capture_payload_span_seconds": 7.830113,
+      "launch_until_next_launch_or_ledger_end_seconds": 12.623138,
+      "client_interexchange_gap_ms": {
+        "min": 10.996331,
+        "median": 21.242115,
+        "max": 175.2213
+      },
+      "actual_tid_schedule": {
+        "first": 5299,
+        "last": 5528,
+        "sequential_transitions": 229,
+        "total_transitions": 229
+      },
+      "attack_transaction_positions_within_episode": {
+        "response_injection": [
+          4,
+          5,
+          5,
+          6
+        ],
+        "command_injection": [
+          6,
+          7
+        ]
+      },
+      "episode_transaction_length_counts": {
+        "14": 3,
+        "12": 4,
+        "10": 7,
+        "11": 5,
+        "15": 1
+      },
+      "ordered_direction_pdu_trace_sha256": "5da9dd29836b132bdb1fa3e046f8c5e77c348022299c6a17e08448a8bab9ba76",
+      "all_artifact_bytes": 1241761,
+      "pcap_bytes": 48628,
+      "scenario_message_counts": {
+        "R_CHANGED_READBACK": 88,
+        "N_PERMITTED_ON": 48,
+        "N_GENUINE_READBACK": 86,
+        "C_BLOCKED_ON": 42,
+        "N_MODE_TRANSITION": 56,
+        "N_INHIBITED_IDLE": 40,
+        "N_REPEAT_WRITE": 58,
+        "N_AUTHORIZED_UPDATE": 42
+      },
+      "image_id": "sha256:c8c06ba2f25647e880bc5a7262436169be752d4d0d174c0afbfc72137cf74385",
+      "artifact_sha256": {
+        "application_ledger.jsonl": "add282e92b72a109bebfba97e9c7e1ada98f0daf9fc898aa88b74a6266a32e49",
+        "capture.log": "cecb407431c155c26f3831e5855d14b1539bc50010c024ae6c5d6bb08c8d867d",
+        "capture.pcap": "f1adaf4797abffa013eea0f999109e3b2ea7b2367b4979c9393557b6bdd67315",
+        "host_execution.json": "4eb2c558d022c7e4fd1d42469b90e2d737933b30a2fcda9196dd5682b861380e",
+        "intervention_audit.jsonl": "d4d4d3921100fd8d3e0a1fcd5030bfe84a872fa8c20ff763360b15134a963667",
+        "planned_run.json": "fbbf5268a53a4804253a2494ccf7f7128ca63219609ecfcf5ef97b23d5201136",
+        "run_manifest.json": "bf774731a20486b396a1f90a00bd4cadf3fb8985e3305d9b0fd03c9492246b75",
+        "scenario_plan.json": "4d0b10aa3b5a83e338194f4125f6c5b60ab794908fd1df4efc1ae15edd0e7daf",
+        "server_audit.jsonl": "b52bdf2140ad00fad3c63d00f3243293d5f0595d960bc86a54c12794e19c6253",
+        "validation_report.json": "4ba0564a44df0e38abb8578340e37ba0dee70585efc223ce98ff77b5f5007bc1",
+        "verified_labels.jsonl": "65173db2d8e76a9cfba399c9d7ead27ddb22f514a3b8768303f30cb897fde1f5"
+      }
+    }
+  ],
+  "representative_direct_checks": [
+    {
+      "planned_run_id": "Q01",
+      "source": "component3_collection_runs/design-v1/Q01-20261024T180517Z-1a6f7c4b",
+      "label": "command_injection",
+      "target": {
+        "event_id": "Q01-20261024T180517Z-1a6f7c4b:e66",
+        "transaction_index": 33,
+        "role": "request",
+        "label": "command_injection",
+        "adu_hex": "d7210000000601050001ff00",
+        "pdu_hex": "050001ff00",
+        "direction": "client_to_server",
+        "stream_offset": 396,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865118379784000,
+            "frame_byte_offset": 66,
+            "frame_number": 72,
+            "length": 12,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 6717
+          }
+        ]
+      },
+      "earlier_anchor": {
+        "event_id": "Q01-20261024T180517Z-1a6f7c4b:e65",
+        "transaction_index": 32,
+        "role": "response",
+        "label": "normal",
+        "adu_hex": "d720000000050103020000",
+        "pdu_hex": "03020000",
+        "direction": "server_to_client",
+        "stream_offset": 366,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865118359085000,
+            "frame_byte_offset": 66,
+            "frame_number": 71,
+            "length": 11,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 6624
+          }
+        ]
+      },
+      "intervening_adus": 0,
+      "matching_normal": {
+        "event_id": "Q01-20261024T180517Z-1a6f7c4b:e20",
+        "transaction_index": 10,
+        "role": "request",
+        "label": "normal",
+        "adu_hex": "d70a0000000601050001ff00",
+        "pdu_hex": "050001ff00",
+        "direction": "client_to_server",
+        "stream_offset": 120,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865117956826000,
+            "frame_byte_offset": 66,
+            "frame_number": 26,
+            "length": 12,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 2408
+          }
+        ]
+      },
+      "normal_earlier_anchor": {
+        "event_id": "Q01-20261024T180517Z-1a6f7c4b:e19",
+        "transaction_index": 9,
+        "role": "response",
+        "label": "normal",
+        "adu_hex": "d709000000050103020001",
+        "pdu_hex": "03020001",
+        "direction": "server_to_client",
+        "stream_offset": 105,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865117936808000,
+            "frame_byte_offset": 66,
+            "frame_number": 25,
+            "length": 11,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 2315
+          }
+        ]
+      }
+    },
+    {
+      "planned_run_id": "Q01",
+      "source": "component3_collection_runs/design-v1/Q01-20261024T180517Z-1a6f7c4b",
+      "label": "response_injection",
+      "target": {
+        "event_id": "Q01-20261024T180517Z-1a6f7c4b:e103",
+        "transaction_index": 51,
+        "role": "response",
+        "label": "response_injection",
+        "adu_hex": "d7330000000501030200ac",
+        "pdu_hex": "030200ac",
+        "direction": "server_to_client",
+        "stream_offset": 583,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865118698675000,
+            "frame_byte_offset": 66,
+            "frame_number": 109,
+            "length": 11,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 10185
+          }
+        ]
+      },
+      "earlier_anchor": {
+        "event_id": "Q01-20261024T180517Z-1a6f7c4b:e101",
+        "transaction_index": 50,
+        "role": "response",
+        "label": "normal",
+        "adu_hex": "d7320000000601060001009d",
+        "pdu_hex": "060001009d",
+        "direction": "server_to_client",
+        "stream_offset": 571,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865118678979000,
+            "frame_byte_offset": 66,
+            "frame_number": 107,
+            "length": 12,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 9997
+          }
+        ]
+      },
+      "intervening_adus": 1,
+      "matching_normal": {
+        "event_id": "Q01-20261024T180517Z-1a6f7c4b:e43",
+        "transaction_index": 21,
+        "role": "response",
+        "label": "normal",
+        "adu_hex": "d7150000000501030200ac",
+        "pdu_hex": "030200ac",
+        "direction": "server_to_client",
+        "stream_offset": 241,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865118159899000,
+            "frame_byte_offset": 66,
+            "frame_number": 49,
+            "length": 11,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 4563
+          }
+        ]
+      },
+      "normal_earlier_anchor": {
+        "event_id": "Q01-20261024T180517Z-1a6f7c4b:e41",
+        "transaction_index": 20,
+        "role": "response",
+        "label": "normal",
+        "adu_hex": "d714000000060106000100ac",
+        "pdu_hex": "06000100ac",
+        "direction": "server_to_client",
+        "stream_offset": 229,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865118144434000,
+            "frame_byte_offset": 66,
+            "frame_number": 47,
+            "length": 12,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 4375
+          }
+        ]
+      }
+    },
+    {
+      "planned_run_id": "Q02",
+      "source": "component3_collection_runs/design-v1/Q02-20261024T180527Z-89646902",
+      "label": "response_injection",
+      "target": {
+        "event_id": "Q02-20261024T180527Z-89646902:e77",
+        "transaction_index": 38,
+        "role": "response",
+        "label": "response_injection",
+        "adu_hex": "7aa500000005010302009e",
+        "pdu_hex": "0302009e",
+        "direction": "server_to_client",
+        "stream_offset": 437,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865130364517000,
+            "frame_byte_offset": 66,
+            "frame_number": 111,
+            "length": 11,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 10047
+          }
+        ]
+      },
+      "earlier_anchor": {
+        "event_id": "Q02-20261024T180527Z-89646902:e75",
+        "transaction_index": 37,
+        "role": "response",
+        "label": "normal",
+        "adu_hex": "7aa400000006010600010026",
+        "pdu_hex": "0600010026",
+        "direction": "server_to_client",
+        "stream_offset": 425,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865130326734000,
+            "frame_byte_offset": 66,
+            "frame_number": 108,
+            "length": 12,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 9777
+          }
+        ]
+      },
+      "intervening_adus": 1,
+      "matching_normal": {
+        "event_id": "Q02-20261024T180527Z-89646902:e57",
+        "transaction_index": 28,
+        "role": "response",
+        "label": "normal",
+        "adu_hex": "7a9b00000005010302009e",
+        "pdu_hex": "0302009e",
+        "direction": "server_to_client",
+        "stream_offset": 323,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865129620496000,
+            "frame_byte_offset": 66,
+            "frame_number": 80,
+            "length": 11,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 7271
+          }
+        ]
+      },
+      "normal_earlier_anchor": {
+        "event_id": "Q02-20261024T180527Z-89646902:e55",
+        "transaction_index": 27,
+        "role": "response",
+        "label": "normal",
+        "adu_hex": "7a9a0000000601060001009e",
+        "pdu_hex": "060001009e",
+        "direction": "server_to_client",
+        "stream_offset": 311,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865129553234000,
+            "frame_byte_offset": 66,
+            "frame_number": 77,
+            "length": 12,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 7001
+          }
+        ]
+      }
+    },
+    {
+      "planned_run_id": "Q02",
+      "source": "component3_collection_runs/design-v1/Q02-20261024T180527Z-89646902",
+      "label": "command_injection",
+      "target": {
+        "event_id": "Q02-20261024T180527Z-89646902:e222",
+        "transaction_index": 111,
+        "role": "request",
+        "label": "command_injection",
+        "adu_hex": "7aee0000000601050001ff00",
+        "pdu_hex": "050001ff00",
+        "direction": "client_to_server",
+        "stream_offset": 1332,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865132640075000,
+            "frame_byte_offset": 66,
+            "frame_number": 271,
+            "length": 12,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 24856
+          }
+        ]
+      },
+      "earlier_anchor": {
+        "event_id": "Q02-20261024T180527Z-89646902:e221",
+        "transaction_index": 110,
+        "role": "response",
+        "label": "normal",
+        "adu_hex": "7aed000000050103020000",
+        "pdu_hex": "03020000",
+        "direction": "server_to_client",
+        "stream_offset": 1251,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865132610533000,
+            "frame_byte_offset": 66,
+            "frame_number": 270,
+            "length": 11,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 24763
+          }
+        ]
+      },
+      "intervening_adus": 0,
+      "matching_normal": {
+        "event_id": "Q02-20261024T180527Z-89646902:e12",
+        "transaction_index": 6,
+        "role": "request",
+        "label": "normal",
+        "adu_hex": "7a850000000601050001ff00",
+        "pdu_hex": "050001ff00",
+        "direction": "client_to_server",
+        "stream_offset": 72,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865128229453000,
+            "frame_byte_offset": 66,
+            "frame_number": 22,
+            "length": 12,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 1985
+          }
+        ]
+      },
+      "normal_earlier_anchor": {
+        "event_id": "Q02-20261024T180527Z-89646902:e11",
+        "transaction_index": 5,
+        "role": "response",
+        "label": "normal",
+        "adu_hex": "7a84000000050103020001",
+        "pdu_hex": "03020001",
+        "direction": "server_to_client",
+        "stream_offset": 58,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865128204726000,
+            "frame_byte_offset": 66,
+            "frame_number": 21,
+            "length": 11,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 1892
+          }
+        ]
+      }
+    },
+    {
+      "planned_run_id": "Q03",
+      "source": "component3_collection_runs/design-v1/Q03-20261024T180540Z-5163f9af",
+      "label": "command_injection",
+      "target": {
+        "event_id": "Q03-20261024T180540Z-5163f9af:e14",
+        "transaction_index": 7,
+        "role": "request",
+        "label": "command_injection",
+        "adu_hex": "a5670000000601050001ff00",
+        "pdu_hex": "050001ff00",
+        "direction": "client_to_server",
+        "stream_offset": 84,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865141044597000,
+            "frame_byte_offset": 66,
+            "frame_number": 20,
+            "length": 12,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 1844
+          }
+        ]
+      },
+      "earlier_anchor": {
+        "event_id": "Q03-20261024T180540Z-5163f9af:e13",
+        "transaction_index": 6,
+        "role": "response",
+        "label": "normal",
+        "adu_hex": "a566000000050103020000",
+        "pdu_hex": "03020000",
+        "direction": "server_to_client",
+        "stream_offset": 69,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865141026183000,
+            "frame_byte_offset": 66,
+            "frame_number": 19,
+            "length": 11,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 1751
+          }
+        ]
+      },
+      "intervening_adus": 0,
+      "matching_normal": {
+        "event_id": "Q03-20261024T180540Z-5163f9af:e38",
+        "transaction_index": 19,
+        "role": "request",
+        "label": "normal",
+        "adu_hex": "a5730000000601050001ff00",
+        "pdu_hex": "050001ff00",
+        "direction": "client_to_server",
+        "stream_offset": 228,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865141255229000,
+            "frame_byte_offset": 66,
+            "frame_number": 44,
+            "length": 12,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 4091
+          }
+        ]
+      },
+      "normal_earlier_anchor": {
+        "event_id": "Q03-20261024T180540Z-5163f9af:e37",
+        "transaction_index": 18,
+        "role": "response",
+        "label": "normal",
+        "adu_hex": "a572000000050103020001",
+        "pdu_hex": "03020001",
+        "direction": "server_to_client",
+        "stream_offset": 204,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865141235885000,
+            "frame_byte_offset": 66,
+            "frame_number": 43,
+            "length": 11,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 3998
+          }
+        ]
+      }
+    },
+    {
+      "planned_run_id": "Q03",
+      "source": "component3_collection_runs/design-v1/Q03-20261024T180540Z-5163f9af",
+      "label": "response_injection",
+      "target": {
+        "event_id": "Q03-20261024T180540Z-5163f9af:e101",
+        "transaction_index": 50,
+        "role": "response",
+        "label": "response_injection",
+        "adu_hex": "a592000000050103020049",
+        "pdu_hex": "03020049",
+        "direction": "server_to_client",
+        "stream_offset": 568,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865142165079000,
+            "frame_byte_offset": 66,
+            "frame_number": 113,
+            "length": 11,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 10486
+          }
+        ]
+      },
+      "earlier_anchor": {
+        "event_id": "Q03-20261024T180540Z-5163f9af:e99",
+        "transaction_index": 49,
+        "role": "response",
+        "label": "normal",
+        "adu_hex": "a5910000000601060001009f",
+        "pdu_hex": "060001009f",
+        "direction": "server_to_client",
+        "stream_offset": 556,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865142138933000,
+            "frame_byte_offset": 66,
+            "frame_number": 111,
+            "length": 12,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 10298
+          }
+        ]
+      },
+      "intervening_adus": 1,
+      "matching_normal": {
+        "event_id": "Q03-20261024T180540Z-5163f9af:e151",
+        "transaction_index": 75,
+        "role": "response",
+        "label": "normal",
+        "adu_hex": "a5ab000000050103020049",
+        "pdu_hex": "03020049",
+        "direction": "server_to_client",
+        "stream_offset": 852,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865143165574000,
+            "frame_byte_offset": 66,
+            "frame_number": 172,
+            "length": 11,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 15908
+          }
+        ]
+      },
+      "normal_earlier_anchor": {
+        "event_id": "Q03-20261024T180540Z-5163f9af:e139",
+        "transaction_index": 69,
+        "role": "response",
+        "label": "normal",
+        "adu_hex": "a5a500000006010600010049",
+        "pdu_hex": "0600010049",
+        "direction": "server_to_client",
+        "stream_offset": 784,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865143029480000,
+            "frame_byte_offset": 66,
+            "frame_number": 160,
+            "length": 12,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 14784
+          }
+        ]
+      }
+    },
+    {
+      "planned_run_id": "Q04",
+      "source": "component3_collection_runs/design-v1/Q04-20261024T180550Z-4ed64387",
+      "label": "response_injection",
+      "target": {
+        "event_id": "Q04-20261024T180550Z-4ed64387:e11",
+        "transaction_index": 5,
+        "role": "response",
+        "label": "response_injection",
+        "adu_hex": "14b800000005010302001d",
+        "pdu_hex": "0302001d",
+        "direction": "server_to_client",
+        "stream_offset": 58,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865150838379000,
+            "frame_byte_offset": 66,
+            "frame_number": 20,
+            "length": 11,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 1810
+          }
+        ]
+      },
+      "earlier_anchor": {
+        "event_id": "Q04-20261024T180550Z-4ed64387:e9",
+        "transaction_index": 4,
+        "role": "response",
+        "label": "normal",
+        "adu_hex": "14b700000006010600010078",
+        "pdu_hex": "0600010078",
+        "direction": "server_to_client",
+        "stream_offset": 46,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865150794620000,
+            "frame_byte_offset": 66,
+            "frame_number": 17,
+            "length": 12,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 1540
+          }
+        ]
+      },
+      "intervening_adus": 1,
+      "matching_normal": {
+        "event_id": "Q04-20261024T180550Z-4ed64387:e35",
+        "transaction_index": 17,
+        "role": "response",
+        "label": "normal",
+        "adu_hex": "14c400000005010302001d",
+        "pdu_hex": "0302001d",
+        "direction": "server_to_client",
+        "stream_offset": 192,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865151108768000,
+            "frame_byte_offset": 66,
+            "frame_number": 44,
+            "length": 11,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 4056
+          }
+        ]
+      },
+      "normal_earlier_anchor": {
+        "event_id": "Q04-20261024T180550Z-4ed64387:e33",
+        "transaction_index": 16,
+        "role": "response",
+        "label": "normal",
+        "adu_hex": "14c30000000601060001001d",
+        "pdu_hex": "060001001d",
+        "direction": "server_to_client",
+        "stream_offset": 180,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865151079033000,
+            "frame_byte_offset": 66,
+            "frame_number": 42,
+            "length": 12,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 3868
+          }
+        ]
+      }
+    },
+    {
+      "planned_run_id": "Q04",
+      "source": "component3_collection_runs/design-v1/Q04-20261024T180550Z-4ed64387",
+      "label": "command_injection",
+      "target": {
+        "event_id": "Q04-20261024T180550Z-4ed64387:e78",
+        "transaction_index": 39,
+        "role": "request",
+        "label": "command_injection",
+        "adu_hex": "14da0000000601050001ff00",
+        "pdu_hex": "050001ff00",
+        "direction": "client_to_server",
+        "stream_offset": 468,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865151660427000,
+            "frame_byte_offset": 66,
+            "frame_number": 89,
+            "length": 12,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 8248
+          }
+        ]
+      },
+      "earlier_anchor": {
+        "event_id": "Q04-20261024T180550Z-4ed64387:e77",
+        "transaction_index": 38,
+        "role": "response",
+        "label": "normal",
+        "adu_hex": "14d9000000050103020000",
+        "pdu_hex": "03020000",
+        "direction": "server_to_client",
+        "stream_offset": 431,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865151642642000,
+            "frame_byte_offset": 66,
+            "frame_number": 88,
+            "length": 11,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 8155
+          }
+        ]
+      },
+      "intervening_adus": 0,
+      "matching_normal": {
+        "event_id": "Q04-20261024T180550Z-4ed64387:e14",
+        "transaction_index": 7,
+        "role": "request",
+        "label": "normal",
+        "adu_hex": "14ba0000000601050001ff00",
+        "pdu_hex": "050001ff00",
+        "direction": "client_to_server",
+        "stream_offset": 84,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865150892291000,
+            "frame_byte_offset": 66,
+            "frame_number": 23,
+            "length": 12,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 2090
+          }
+        ]
+      },
+      "normal_earlier_anchor": {
+        "event_id": "Q04-20261024T180550Z-4ed64387:e13",
+        "transaction_index": 6,
+        "role": "response",
+        "label": "normal",
+        "adu_hex": "14b9000000050103020001",
+        "pdu_hex": "03020001",
+        "direction": "server_to_client",
+        "stream_offset": 69,
+        "frame_byte_references": [
+          {
+            "capture_timestamp_ns": 1792865150868636000,
+            "frame_byte_offset": 66,
+            "frame_number": 22,
+            "length": 11,
+            "message_byte_offset": 0,
+            "pcap_file_byte_offset": 1997
+          }
+        ]
+      }
+    }
+  ],
+  "existing_evidence_examples_checked": 24,
+  "preserved_failed_attempt": {
+    "source": "component3_collection_runs/design-v1/Q01-20261024T180347Z-35f1f35c",
+    "observed_adus": 0,
+    "accepted_annotations_present": false,
+    "included_in_accepted_totals": false
+  },
+  "checks_independently_reproduced_in_this_review": [
+    "SHA256 of every run artifact against summary, all frozen source hashes through read-only validator",
+    "Independent review PCAP frame/stream/file-byte reconciliation for all 1846 ADUs",
+    "Independent review private-state/intervention/label replay for all 923 transactions",
+    "All 24 attack anchors and same-run role/PDU matched normal controls; all 8 command ACKs remain normal",
+    "Existing coverage CSV exactly equals annotation census; all 24 supplied evidence examples match actual rows",
+    "Preserved failed attempt excluded; four whole capture hashes distinct; earlier 201 protected files unchanged"
+  ],
+  "reexecuted_existing_checks": [
+    "Frozen v0.2 validator, write=False, on all four captures; results match saved reports"
+  ],
+  "supported_only_by_existing_reports": [
+    "28 offline adversarial tests previously passed; test suite inspected but not rerun",
+    "Original Docker build/execution success and network-none setup; execution records inspected, no current Docker daemon check"
+  ],
+  "checks_not_performed": [
+    "No recapture, Docker build, simulator execution or fresh live isolation test",
+    "No independent hardware/operator attestation or fresh physical process observation",
+    "No rerender/re-extraction of TAF/proposal PDFs; selected existing cached page text read and source PDFs hashed",
+    "No statistical shortcut classifier, preprocessing, fitted profiles, feature matrices or model scores",
+    "No rehash/re-extraction of original multi-GB CIC raw sources; no writes to that tree"
+  ],
+  "coverage_csv_rows": 670,
+  "current_pdu_overlap": {
+    "command_injection": {
+      "events": 8,
+      "distinct_pdus": 1,
+      "all_have_within_run_role_pdu_normal": true,
+      "unique_current_tids": 8,
+      "tid_min": 5338,
+      "tid_max": 55253
+    },
+    "response_injection": {
+      "events": 16,
+      "distinct_pdus": 14,
+      "all_have_within_run_role_pdu_normal": true,
+      "unique_current_tids": 16,
+      "tid_min": 5304,
+      "tid_max": 55216
+    }
+  },
+  "intervention_mechanisms": [
+    "Compromised-controller protocol-valid FC5 ON while observed mode is 0",
+    "Compromised-server replacement of one FC3 setpoint response, a-to-b or b-to-a"
+  ],
+  "normal_families": 6,
+  "attack_families": 2,
+  "independent_industrial_campaigns_demonstrated": 0,
+  "experimental_environment_count": 1,
+  "timing_measurements": {
+    "capture_payload_span_seconds": {
+      "min": 4.715052,
+      "median": 6.971434,
+      "max": 9.122695
+    },
+    "launch_to_next_or_end_seconds": {
+      "min": 8.03168,
+      "median": 11.0843015,
+      "max": 14.639539
+    },
+    "complete_successful_execution_seconds": 56.995392,
+    "caveat": "Launch intervals include Docker startup, capture drain, validation and host recording; intervals are not isolated simulator CPU time"
+  },
+  "storage_measurements": {
+    "run_artifact_bytes": {
+      "min": 1223439,
+      "median": 1248873.5,
+      "max": 1261340
+    },
+    "total_successful_run_bytes": 4982526,
+    "pcap_bytes": 190887
+  },
+  "collection_machine_identity": {
+    "machine": "DESKTOP-QT93GAU (Microsoft Windows NT 10.0.26200.0)",
+    "provenance": "Self-reported collection transcript, corroborated by the host execution record; hardware/operator identity not independently attested",
+    "image_ids": [
+      "sha256:c8c06ba2f25647e880bc5a7262436169be752d4d0d174c0afbfc72137cf74385"
+    ],
+    "runtime": "Linux Docker container; loopback only",
+    "collector_username": "DESKTOP-QT93GAU\\ASUS"
+  },
+  "preservation": {
+    "status": "PASSED",
+    "files_compared": 290,
+    "changed_files": [],
+    "snapshot": "_support/protected_sources.json",
+    "snapshot_sha256": "4ebc8e252e44b8cf308cb929a99eeabcebc85e2cc35006d8f849f6294f52f4a3"
+  },
+  "academic_acceptance": {
+    "status": "NOT_RECORDED_IN_REVIEWED_MATERIAL",
+    "searched_scope": [
+      "TAF cached pages 6,7,9,10; individual proposal cached pages 21,22",
+      "Original design alignment/protocol and v0.2 decision/README/implementation notes",
+      "Supplied historical CIC decision/review background"
+    ],
+    "caveat": "This bounded repository review cannot establish that no external conversation occurred"
+  },
+  "unresolved_assumptions": [
+    "No hidden writer/autonomous setpoint changes in the declared process",
+    "Private intervention hooks accurately report actual interventions; byte/state checks provide internal consistency, not external attestation",
+    "Observable history can be recovered without packet loss for future runs",
+    "Existing matched PDUs do not establish absence of ordering/timing/TID cues"
+  ],
+  "provenance": {
+    "repository_root_at_review": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318",
+    "reviewer_code": "_support/review_evidence.py",
+    "reviewer_code_sha256": "ea0ef0004ca25a6d1ef9e1e8ea83f07fe45a2435ff50c72a330ac7c2b700a9a5",
+    "portable_paths": "All source references are repository-relative except recorded original execution arguments",
+    "exact_review_command": ".\\.venv\\Scripts\\python.exe -X utf8 -B component3_main_design/v1_20261025/_support/review_evidence.py"
+  },
+  "prohibited_work_performed": false,
+  "reference_input_sha256": {
+    "component3_testbed_v02/QUALIFICATION_REPORT.md": "30facbaab4275a4e5a2b0f69416ebb4eaa1196693c6cf59797e192e7019d8938",
+    "component3_testbed_v02/evidence/qualification_summary.json": "62c7c29a7f2b9f4970a0e550d17bc986cd9e8a3444bc5975dfddff9c03c2a27b",
+    "component3_testbed_v02/evidence/evidence_examples.json": "6fe8b92df01231b53590d627de75293faa47dbe6dcc14720b3f9cdd5c22dd93f",
+    "component3_testbed_v02/evidence/coverage_counts.csv": "967d1fed48445f1d02efb3657c64d53248eb842f1eb3c14d7ece796736ca75a6",
+    "component3_testbed_v02/evidence/protected_after.json": "6b2d8500e42851e637d1194799e8ff82ab366e4089725fe8996377d19d13beb1",
+    "component3_testbed_v02/evidence/IMPLEMENTATION_NOTES.md": "4b7c14652cf9a0ff223d68f1f560fc840a0fae6972b17104cb8450ac0dbc14a9",
+    "component3_collection_design/v1_20261024/collection_design.json": "b64203cd2ee13403ac07ac5d441fe803f2b7623723a3c77ef73ae09447186954",
+    "component3_collection_design/v1_20261024/RESEARCH_ALIGNMENT.md": "97ceb561b5ff554adcad769a75e58eaeeaf6bd466eb2b0e71bb45c071d414cc1",
+    "component3_preparation/output/reference_review/IT23150270_Rathnayaka K.H..json": "5ceed906ee347a28cfdd001d70eac86f0fc7a7d7f39d5436f5e65121a3280965",
+    "component3_preparation/output/reference_review/IT4010-TAF-2026 J26-CS-318 (1).json": "cb322dcdb0e3adb09185a636878fe9be4c48977b56944834dbffe223bdf3865d",
+    "references/component3_reference/IT23150270_Rathnayaka K.H..pdf": "e32e468897e075b75f6f30998fa17647fc5ce30ac63ddf84ee078732da097bf5",
+    "references/component3_reference/IT4010-TAF-2026 J26-CS-318 (1).pdf": "896c5fbfbce3b4e00c8e4b68c72ef1623f4436342bff399b3a8a57e0db0a1744"
+  }
+}

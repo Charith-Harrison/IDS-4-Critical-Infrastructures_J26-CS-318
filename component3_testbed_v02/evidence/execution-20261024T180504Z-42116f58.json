@@ -1,0 +1,363 @@
+﻿{
+    "purpose":  "QUALIFICATION_UNSCORED_NOT_MODEL_DATA",
+    "requested":  [
+                      "Q01",
+                      "Q02",
+                      "Q03",
+                      "Q04"
+                  ],
+    "started_at_utc":  "2026-10-24T18:05:04.5916751Z",
+    "status":  "PASSED",
+    "commands":  [
+                     {
+                         "argv":  [
+                                      "docker",
+                                      "image",
+                                      "inspect",
+                                      "kaveesha-c3-pilot:0.1.0"
+                                  ],
+                         "started_at_utc":  "2026-10-24T18:05:05.0140834Z",
+                         "exit_code":  0
+                     },
+                     {
+                         "argv":  [
+                                      "docker",
+                                      "compose",
+                                      "-f",
+                                      "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3_testbed_v02\\compose.yaml",
+                                      "build",
+                                      "--pull=false",
+                                      "qualification"
+                                  ],
+                         "started_at_utc":  "2026-10-24T18:05:05.6428136Z",
+                         "exit_code":  0
+                     },
+                     {
+                         "argv":  [
+                                      "docker",
+                                      "image",
+                                      "inspect",
+                                      "c3-qualification:0.2.0"
+                                  ],
+                         "started_at_utc":  "2026-10-24T18:05:10.4647559Z",
+                         "exit_code":  0
+                     },
+                     {
+                         "argv":  [
+                                      "docker",
+                                      "compose",
+                                      "-f",
+                                      "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3_testbed_v02\\compose.yaml",
+                                      "run",
+                                      "--rm",
+                                      "--no-deps",
+                                      "qualification",
+                                      "python",
+                                      "-B",
+                                      "-m",
+                                      "c3qual",
+                                      "identity"
+                                  ],
+                         "started_at_utc":  "2026-10-24T18:05:10.8061474Z",
+                         "exit_code":  0
+                     },
+                     {
+                         "argv":  [
+                                      "docker",
+                                      "compose",
+                                      "-f",
+                                      "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3_testbed_v02\\compose.yaml",
+                                      "run",
+                                      "--rm",
+                                      "--no-deps",
+                                      "qualification",
+                                      "python",
+                                      "-B",
+                                      "-m",
+                                      "unittest",
+                                      "discover",
+                                      "-s",
+                                      "tests",
+                                      "-v"
+                                  ],
+                         "started_at_utc":  "2026-10-24T18:05:13.0145646Z",
+                         "exit_code":  0
+                     },
+                     {
+                         "argv":  [
+                                      "docker",
+                                      "compose",
+                                      "-f",
+                                      "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3_testbed_v02\\compose.yaml",
+                                      "run",
+                                      "--rm",
+                                      "--no-deps",
+                                      "qualification",
+                                      "python",
+                                      "-B",
+                                      "-m",
+                                      "c3qual",
+                                      "run",
+                                      "--output",
+                                      "/output",
+                                      "--planned-run",
+                                      "Q01"
+                                  ],
+                         "started_at_utc":  "2026-10-24T18:05:16.7472454Z",
+                         "exit_code":  0
+                     },
+                     {
+                         "argv":  [
+                                      "docker",
+                                      "compose",
+                                      "-f",
+                                      "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3_testbed_v02\\compose.yaml",
+                                      "run",
+                                      "--rm",
+                                      "--no-deps",
+                                      "qualification",
+                                      "python",
+                                      "-B",
+                                      "-m",
+                                      "c3qual",
+                                      "run",
+                                      "--output",
+                                      "/output",
+                                      "--planned-run",
+                                      "Q02"
+                                  ],
+                         "started_at_utc":  "2026-10-24T18:05:24.7789254Z",
+                         "exit_code":  0
+                     },
+                     {
+                         "argv":  [
+                                      "docker",
+                                      "compose",
+                                      "-f",
+                                      "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3_testbed_v02\\compose.yaml",
+                                      "run",
+                                      "--rm",
+                                      "--no-deps",
+                                      "qualification",
+                                      "python",
+                                      "-B",
+                                      "-m",
+                                      "c3qual",
+                                      "run",
+                                      "--output",
+                                      "/output",
+                                      "--planned-run",
+                                      "Q03"
+                                  ],
+                         "started_at_utc":  "2026-10-24T18:05:39.4184646Z",
+                         "exit_code":  0
+                     },
+                     {
+                         "argv":  [
+                                      "docker",
+                                      "compose",
+                                      "-f",
+                                      "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3_testbed_v02\\compose.yaml",
+                                      "run",
+                                      "--rm",
+                                      "--no-deps",
+                                      "qualification",
+                                      "python",
+                                      "-B",
+                                      "-m",
+                                      "c3qual",
+                                      "run",
+                                      "--output",
+                                      "/output",
+                                      "--planned-run",
+                                      "Q04"
+                                  ],
+                         "started_at_utc":  "2026-10-24T18:05:48.9639291Z",
+                         "exit_code":  0
+                     }
+                 ],
+    "host_script_sha256":  "a23c897bc4823f5740d70974705e8d93ebd48ca0f6e5593aadc6f7b12f933812",
+    "no_model_preprocessing_or_training":  true,
+    "base_image":  {
+                       "value":  [
+                                     {
+                                         "Id":  "sha256:aab7f7a3ca0ccad43c9e2c26a6ad43d33795802ddee03f15539d048c231e31a5",
+                                         "RepoTags":  [
+                                                          "kaveesha-c3-pilot:0.1.0"
+                                                      ],
+                                         "RepoDigests":  [
+                                                             "kaveesha-c3-pilot@sha256:aab7f7a3ca0ccad43c9e2c26a6ad43d33795802ddee03f15539d048c231e31a5"
+                                                         ],
+                                         "Comment":  "buildkit.dockerfile.v0",
+                                         "Created":  "2026-10-24T17:08:35.506973606Z",
+                                         "Config":  {
+                                                        "Env":  [
+                                                                    "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                                                                    "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                                                                    "PYTHON_VERSION=3.13.17",
+                                                                    "PYTHON_SHA256=6020bd10aff3bf4821be16f088ebb1591beb7b811dcd8fab1da8f7c22a7b27e7",
+                                                                    "PYTHONDONTWRITEBYTECODE=1",
+                                                                    "PYTHONUNBUFFERED=1"
+                                                                ],
+                                                        "Cmd":  [
+                                                                    "python",
+                                                                    "-B",
+                                                                    "-m",
+                                                                    "c3lab",
+                                                                    "run",
+                                                                    "--output",
+                                                                    "/output"
+                                                                ],
+                                                        "WorkingDir":  "/app",
+                                                        "Labels":  {
+                                                                       "com.docker.compose.project":  "kaveesha-c3-pilot",
+                                                                       "com.docker.compose.service":  "lab",
+                                                                       "com.docker.compose.version":  "5.1.4"
+                                                                   },
+                                                        "ArgsEscaped":  true
+                                                    },
+                                         "Architecture":  "amd64",
+                                         "Os":  "linux",
+                                         "Size":  45120923,
+                                         "RootFS":  {
+                                                        "Type":  "layers",
+                                                        "Layers":  [
+                                                                       "sha256:9b35de7893378218e365c34c2c735fb0032a859112fb7345ca8ea73f9aa1db70",
+                                                                       "sha256:d4c43825326664c9c63a40a35fb3c9d6bcaec8036f29fb01a20fad5fc7d21f88",
+                                                                       "sha256:0a599021925b67f98f44b40892432f4a4601a21251c310b392a8b8cab7a29c2c",
+                                                                       "sha256:695ce0068eaf39fc9b618331038ec946c98981bf3e92d89c8378d78f10bda2a4",
+                                                                       "sha256:4e6255ad05c2b58d8c6a5d6c4953b23cbc7258f27240ee3108b6029cf7a844e3",
+                                                                       "sha256:5ee114426d5570a9b9691e725009282a870991a8c596f4ad77df633a396b44b0",
+                                                                       "sha256:2c83ff455d9d7cc311f87500b12bee0b2c9ff6e3268a5050993d863edc9c70cd",
+                                                                       "sha256:63698b1913d6ee498b7b6807b7f61a787f48138b7a3f1dcaab352a000add2fc6"
+                                                                   ]
+                                                    },
+                                         "Metadata":  {
+                                                          "LastTagTime":  "2026-10-24T17:08:36.048993683Z"
+                                                      },
+                                         "Descriptor":  {
+                                                            "mediaType":  "application/vnd.oci.image.index.v1+json",
+                                                            "digest":  "sha256:aab7f7a3ca0ccad43c9e2c26a6ad43d33795802ddee03f15539d048c231e31a5",
+                                                            "size":  856
+                                                        },
+                                         "Identity":  {
+                                                          "Pull":  [
+                                                                       {
+                                                                           "Repository":  "docker.io/library/kaveesha-c3-pilot"
+                                                                       }
+                                                                   ],
+                                                          "Build":  [
+                                                                        {
+                                                                            "Ref":  "nvuuubtkdoxqg3srmuwysrbb7",
+                                                                            "CreatedAt":  "2026-10-24T17:08:36.221020537Z"
+                                                                        }
+                                                                    ]
+                                                      }
+                                     }
+                                 ],
+                       "Count":  1
+                   },
+    "image":  {
+                  "value":  [
+                                {
+                                    "Id":  "sha256:c8c06ba2f25647e880bc5a7262436169be752d4d0d174c0afbfc72137cf74385",
+                                    "RepoTags":  [
+                                                     "c3-qualification:0.2.0"
+                                                 ],
+                                    "RepoDigests":  [
+                                                        "c3-qualification@sha256:c8c06ba2f25647e880bc5a7262436169be752d4d0d174c0afbfc72137cf74385"
+                                                    ],
+                                    "Comment":  "buildkit.dockerfile.v0",
+                                    "Created":  "2026-10-24T18:05:09.121173074Z",
+                                    "Config":  {
+                                                   "Env":  [
+                                                               "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                                                               "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                                                               "PYTHON_VERSION=3.13.17",
+                                                               "PYTHON_SHA256=6020bd10aff3bf4821be16f088ebb1591beb7b811dcd8fab1da8f7c22a7b27e7",
+                                                               "PYTHONDONTWRITEBYTECODE=1",
+                                                               "PYTHONUNBUFFERED=1"
+                                                           ],
+                                                   "Cmd":  [
+                                                               "python",
+                                                               "-B",
+                                                               "-m",
+                                                               "c3qual",
+                                                               "check",
+                                                               "--planned-run",
+                                                               "Q01"
+                                                           ],
+                                                   "WorkingDir":  "/qualification",
+                                                   "Labels":  {
+                                                                  "com.docker.compose.project":  "c3-qualification-v02",
+                                                                  "com.docker.compose.service":  "qualification",
+                                                                  "com.docker.compose.version":  "5.1.4"
+                                                              },
+                                                   "ArgsEscaped":  true
+                                               },
+                                    "Architecture":  "amd64",
+                                    "Os":  "linux",
+                                    "Size":  45157717,
+                                    "RootFS":  {
+                                                   "Type":  "layers",
+                                                   "Layers":  [
+                                                                  "sha256:9b35de7893378218e365c34c2c735fb0032a859112fb7345ca8ea73f9aa1db70",
+                                                                  "sha256:d4c43825326664c9c63a40a35fb3c9d6bcaec8036f29fb01a20fad5fc7d21f88",
+                                                                  "sha256:0a599021925b67f98f44b40892432f4a4601a21251c310b392a8b8cab7a29c2c",
+                                                                  "sha256:695ce0068eaf39fc9b618331038ec946c98981bf3e92d89c8378d78f10bda2a4",
+                                                                  "sha256:4e6255ad05c2b58d8c6a5d6c4953b23cbc7258f27240ee3108b6029cf7a844e3",
+                                                                  "sha256:5ee114426d5570a9b9691e725009282a870991a8c596f4ad77df633a396b44b0",
+                                                                  "sha256:2c83ff455d9d7cc311f87500b12bee0b2c9ff6e3268a5050993d863edc9c70cd",
+                                                                  "sha256:63698b1913d6ee498b7b6807b7f61a787f48138b7a3f1dcaab352a000add2fc6",
+                                                                  "sha256:c62c2e5ff42725150c17de7efe526fd87747cc33169b243c809f2243b7de4abc",
+                                                                  "sha256:eb408887f008bd986766998cbf3283c78d88d02eb5e173795f21240e786a592a",
+                                                                  "sha256:ad0fab3ec25803838c277430bfaf0beb56bebd565686441aa18b61ed450739fe",
+                                                                  "sha256:4e6152570507054b391728058171f807067684eb5e8b6b125231971a6c061551",
+                                                                  "sha256:c00692bac5389c7b2d4d34b726c28fc7a7f725af9a41b03e0ff3899625e59ae1",
+                                                                  "sha256:2170f6d4d2e2a569e3e8598a5febbb0363db43e17b717bdf369404c7915feef3"
+                                                              ]
+                                               },
+                                    "Metadata":  {
+                                                     "LastTagTime":  "2026-10-24T18:05:09.596851522Z"
+                                                 },
+                                    "Descriptor":  {
+                                                       "mediaType":  "application/vnd.oci.image.index.v1+json",
+                                                       "digest":  "sha256:c8c06ba2f25647e880bc5a7262436169be752d4d0d174c0afbfc72137cf74385",
+                                                       "size":  856
+                                                   },
+                                    "Identity":  {
+                                                     "Build":  [
+                                                                   {
+                                                                       "Ref":  "lfbnb7mhm7uf8z51fou8eis24",
+                                                                       "CreatedAt":  "2026-10-24T18:05:09.774638062Z"
+                                                                   }
+                                                               ]
+                                                 }
+                                }
+                            ],
+                  "Count":  1
+              },
+    "image_source_sha256":  {
+                                ".dockerignore":  "5d0ac539c29f1cc3f5dda7f17706260325a7a8a793d5e4693eefb897ba80062b",
+                                ".gitignore":  "1de148d9335ca30ea6b76e5deb00be4c9c9a614fcd70dfd08bb32b2da6f61baa",
+                                "Dockerfile":  "0d9fa27aa6663d679cb6f93cfd602cde8ddb38b1e718796909d67be983e1b425",
+                                "audit_workspace.py":  "6ec52c2ac077b6ad2e5cd7b3bf5b5e511a0a2108902ad73e2a752f474b6d4afd",
+                                "c3qual/__init__.py":  "f6a52ebc795fa909d195491a25b078521131319b4251c4dcbd41006f86056c02",
+                                "c3qual/__main__.py":  "cfc1d2de5146db0c4098ac8051dad170ca258f153de6d64c9c7b09ef8b53b61a",
+                                "c3qual/config.py":  "4daf5c70a1b8234f30fb0748267fb97fa51460dca3d32611403e38373a3a6f93",
+                                "c3qual/protocol.py":  "a4f1862382bd9be3988d4e90753f6ca46567a381da87a04cea7c214fe7b25d61",
+                                "c3qual/recorder.py":  "ac20a02a964cbc4161aab8231408f5cedd834b7edd4948be4b5a642faf7eb6a4",
+                                "c3qual/runner.py":  "cb6fd3d46f447fdda04acaab290ce9cf2465461f52cc0de91a4184efd9a7664f",
+                                "c3qual/scenarios.py":  "ed79d563c4418c5d83e7b37813c6b3869d1ae01d1245238893673ec0e881825e",
+                                "c3qual/transport.py":  "bd1bdf2acabeb26c5dff7fd3e677f68ce7029d1196b10f4cdd6ef2c839b479d6",
+                                "c3qual/validation.py":  "73ff48bd92a84c224ef1e29b243bb6d415bb1b12d65c1f2f0e039ae65c527044",
+                                "compose.yaml":  "f35aa9cfe8600e54223c39f5af4b099f7e0ca16e306a4fce52aed847d963aa57",
+                                "design/PROSPECTIVE_RUN_ROSTER.csv":  "1d0d1b2384b55c70e5420508b10b2e351f741a5e4c9f47e39ced2602143b54a3",
+                                "design/collection_design.json":  "b64203cd2ee13403ac07ac5d441fe803f2b7623723a3c77ef73ae09447186954",
+                                "start-qualification.ps1":  "a23c897bc4823f5740d70974705e8d93ebd48ca0f6e5593aadc6f7b12f933812",
+                                "summarize_qualification.py":  "63f80e16caefa47926e9ce4fe7d6176902839c4851e2fd0962d8aef61bb61c38",
+                                "tests/pcap_fixtures.py":  "ed3b0160ac50269937f945d5165f44aae6569de8d3fa56e3e634e934830812f1",
+                                "tests/test_qualification.py":  "933ac03fb0478635d6fa5f48f0445aa2824fad305971ea5075506972731ac598"
+                            },
+    "ended_at_utc":  "2026-10-24T18:06:01.5870677Z"
+}

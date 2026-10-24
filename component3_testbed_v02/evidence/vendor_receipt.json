@@ -1,0 +1,39 @@
+[
+  {
+    "source": "component3_testbed_pilot/c3lab/capture_validation.py",
+    "source_sha256": "f6fc7dd33fbdc8887fb242b4d0f2e575fa9a0c46ebf67c110e5086517afceae8",
+    "destination": "c3qual/transport.py",
+    "sha256": "bd1bdf2acabeb26c5dff7fd3e677f68ce7029d1196b10f4cdd6ef2c839b479d6",
+    "definitions": [
+      "ValidationError",
+      "_check",
+      "_message_refs",
+      "_read_pcap"
+    ],
+    "changes": "Definitions unchanged; imports/header only"
+  },
+  {
+    "source": "component3_testbed_pilot/c3lab/pilot.py",
+    "source_sha256": "65a17e97c7114ad1ca76f046ba321844bbb9eb7df2f25dfd147a50f55d2b6a38",
+    "destination": "c3qual/recorder.py",
+    "sha256": "ac20a02a964cbc4161aab8231408f5cedd834b7edd4948be4b5a642faf7eb6a4",
+    "definitions": [
+      "Capture",
+      "JsonLines"
+    ],
+    "changes": "Definitions unchanged; import/header includes json. Initial missing import failed before any application message; corrected and tested.",
+    "initial_destination_sha256": "203c32a1301ca5949c9f7d72ac2d0a0319fc3b4b8b67d4e36b4debeb2e4c005a"
+  },
+  {
+    "source": "component3_testbed_pilot/tests/test_capture_validation.py",
+    "source_sha256": "6895e5e783ff604ade1a3291a6068f16f7eb44937873b19d7f182be1638071e4",
+    "destination": "tests/pcap_fixtures.py",
+    "sha256": "ed3b0160ac50269937f945d5165f44aae6569de8d3fa56e3e634e934830812f1",
+    "definitions": [
+      "jsonl",
+      "packet",
+      "write_pcap"
+    ],
+    "changes": "Definitions unchanged; imports/header only"
+  }
+]

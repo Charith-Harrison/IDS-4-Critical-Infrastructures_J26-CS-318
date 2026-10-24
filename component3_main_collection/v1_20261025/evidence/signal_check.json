@@ -1,0 +1,40 @@
+{
+  "status": "PASSED",
+  "test": "Protocol-free Docker SIGINT forwarding",
+  "traffic_generated": false,
+  "captures_created": 0,
+  "background_service_left": false,
+  "commands": [
+    [
+      "docker",
+      "run",
+      "--rm",
+      "--pull",
+      "never",
+      "--init",
+      "--name",
+      "c3manual-signal-test-ea93868a",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--label",
+      "component3.collection=TEST_ONLY_NO_TRAFFIC",
+      "sha256:4abe62902059561c7e2d383a301b6fa4cee8015a4f1ce76245177c0d76ed4ffd",
+      "python",
+      "-B",
+      "-m",
+      "tools.lifecycle_probe"
+    ],
+    [
+      "docker",
+      "stop",
+      "--signal",
+      "SIGINT",
+      "--timeout",
+      "10",
+      "c3manual-signal-test-ea93868a"
+    ]
+  ]
+}

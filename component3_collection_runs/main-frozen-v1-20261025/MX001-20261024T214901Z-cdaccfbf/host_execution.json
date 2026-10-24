@@ -1,0 +1,195 @@
+{
+  "argv": [
+    "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3_main_collection\\v1_20261025\\runtime\\launcher.py",
+    "--start",
+    "--safety-factor",
+    "2",
+    "--planned-copies",
+    "2",
+    "--reserve-gib",
+    "2",
+    "--docker-reserve-gib",
+    "2"
+  ],
+  "attempt_id": "MX001-20261024T214901Z-cdaccfbf",
+  "attempt_started_at_utc": "2026-10-24T21:49:02.120224+00:00",
+  "clock_note": "Self-reported, no independent clock attestation",
+  "clock_utc": "2026-10-24T21:48:54.797930+00:00",
+  "collection_id": "79e1c0ae419b4026a656f357edd1b24c",
+  "container_name": "c3main-79e1c0ae-mx001-20261024t214901z-cdaccfbf",
+  "docker": {
+    "compose_version": "5.1.4",
+    "context_endpoint": "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "docker_guest_free": 1024330223616,
+    "docker_version": {
+      "Client": {
+        "ApiVersion": "1.54",
+        "Arch": "amd64",
+        "BuildTime": "Wed Jun  3 18:03:06 2026",
+        "Context": "desktop-linux",
+        "DefaultAPIVersion": "1.54",
+        "GitCommit": "d1c06ef",
+        "GoVersion": "go1.26.4",
+        "Os": "windows",
+        "Version": "29.5.3"
+      },
+      "Server": {
+        "ApiVersion": "1.54",
+        "Arch": "amd64",
+        "BuildTime": "2026-06-03T17:59:56.000000000+00:00",
+        "Components": [
+          {
+            "Details": {
+              "ApiVersion": "1.54",
+              "Arch": "amd64",
+              "BuildTime": "Wed Jun  3 17:59:56 2026",
+              "Experimental": "false",
+              "GitCommit": "285b471",
+              "GoVersion": "go1.26.4",
+              "KernelVersion": "6.18.54.1-microsoft-standard-WSL2",
+              "MinAPIVersion": "1.40",
+              "Module": "github.com/moby/moby/v2",
+              "ModuleVersion": "v2.0.0+unknown",
+              "Os": "linux"
+            },
+            "Name": "Engine",
+            "Version": "29.5.3"
+          },
+          {
+            "Details": {
+              "GitCommit": "193637f7ee8ae5f5aa5248f49e7baa3e6164966e"
+            },
+            "Name": "containerd",
+            "Version": "v2.2.4"
+          },
+          {
+            "Details": {
+              "GitCommit": "v1.3.5-0-g488fc13e"
+            },
+            "Name": "runc",
+            "Version": "1.3.5"
+          },
+          {
+            "Details": {
+              "GitCommit": "de40ad0"
+            },
+            "Name": "docker-init",
+            "Version": "0.19.0"
+          }
+        ],
+        "GitCommit": "285b471",
+        "GoVersion": "go1.26.4",
+        "KernelVersion": "6.18.54.1-microsoft-standard-WSL2",
+        "MinAPIVersion": "1.40",
+        "Os": "linux",
+        "Platform": {
+          "Name": "Docker Desktop 4.78.0 (229452)"
+        },
+        "Version": "29.5.3"
+      }
+    },
+    "engine": {
+      "Architecture": "x86_64",
+      "DockerRootDir": "/var/lib/docker",
+      "ID": "a13acee3-39d1-4dba-a972-ea2bda96d92a",
+      "KernelVersion": "6.18.54.1-microsoft-standard-WSL2",
+      "Name": "docker-desktop",
+      "OSType": "linux",
+      "OperatingSystem": "Docker Desktop (containerized)",
+      "ServerVersion": "29.5.3"
+    },
+    "image_id": "sha256:4abe62902059561c7e2d383a301b6fa4cee8015a4f1ce76245177c0d76ed4ffd",
+    "source_bundle_id": "1fe2b0eb6f44807bc6759d3f3e998ce5064047516585d9e8e313f01b24050663"
+  },
+  "docker_argv": [
+    "docker",
+    "run",
+    "--rm",
+    "--pull",
+    "never",
+    "--init",
+    "--name",
+    "c3main-79e1c0ae-mx001-20261024t214901z-cdaccfbf",
+    "--network",
+    "none",
+    "--read-only",
+    "--cap-drop",
+    "ALL",
+    "--cap-add",
+    "NET_RAW",
+    "--cap-add",
+    "SETGID",
+    "--security-opt",
+    "no-new-privileges:true",
+    "--tmpfs",
+    "/tmp:size=32m",
+    "--memory",
+    "256m",
+    "--cpus",
+    "1",
+    "--pids-limit",
+    "64",
+    "--label",
+    "component3.collection=79e1c0ae419b4026a656f357edd1b24c",
+    "--label",
+    "component3.planned_run=MX001",
+    "--mount",
+    "type=bind,source=C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3_collection_runs\\main-frozen-v1-20261025,target=/output",
+    "--env",
+    "C3_MAIN_MANUAL_CONTAINER=1",
+    "sha256:4abe62902059561c7e2d383a301b6fa4cee8015a4f1ce76245177c0d76ed4ffd",
+    "python",
+    "-B",
+    "-m",
+    "runtime.collector",
+    "--folder",
+    "/output/MX001-20261024T214901Z-cdaccfbf",
+    "--run-id",
+    "MX001"
+  ],
+  "docker_exit_code": 0,
+  "finished_at_utc": "2026-10-24T21:49:40.942688+00:00",
+  "host_os": "Windows-11-10.0.26200-SP0",
+  "host_python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "image_id": "sha256:4abe62902059561c7e2d383a301b6fa4cee8015a4f1ce76245177c0d76ed4ffd",
+  "limits": {
+    "docker_reserve_gib": 2.0,
+    "planned_copies": 2,
+    "reserve_gib": 2.0,
+    "safety_factor": 2.0
+  },
+  "local_clock": "2026-10-25T03:18:54.797946+05:30",
+  "machine": "DESKTOP-QT93GAU",
+  "planned_run_id": "MX001",
+  "source_bundle_id": "1fe2b0eb6f44807bc6759d3f3e998ce5064047516585d9e8e313f01b24050663",
+  "space_before_run": {
+    "copy_note": "Headroom reserved; backup copies are not automatically created",
+    "docker_guest_free": 1024330223616,
+    "failures": [],
+    "host_filesystems": [
+      {
+        "free": 126492491776,
+        "paths": [
+          "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3_collection_runs\\main-frozen-v1-20261025",
+          "C:\\Users\\ASUS\\AppData\\Local\\Docker\\wsl\\disk"
+        ],
+        "required": 9292430536,
+        "roles": [
+          "output originals, planned copies, temporary/retry allowance and reserve",
+          "Docker backing storage reserve"
+        ],
+        "total": 526617931776
+      }
+    ],
+    "limits": {
+      "docker_reserve_gib": 2.0,
+      "planned_copies": 2,
+      "reserve_gib": 2.0,
+      "safety_factor": 2.0
+    },
+    "output_required_bytes": 7144946888,
+    "status": "PASSED",
+    "upper_per_run_bytes": 11898722
+  },
+  "started_at_utc": "2026-10-24T21:48:54.656644+00:00"
+}

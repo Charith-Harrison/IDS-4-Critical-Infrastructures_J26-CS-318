@@ -1,0 +1,236 @@
+{
+  "event_map": {
+    "rows": 158,
+    "rows_matched_to_packet_by_timestamp_src_dst": 158,
+    "matched_packet_label_counts": {
+      "1": 158
+    },
+    "func_code_agreement": 1.0,
+    "quantity_agreement": 1.0,
+    "file_source_agreement": 1.0,
+    "files_covered": [
+      "substation-10.pcap",
+      "substation-2.pcap"
+    ],
+    "event_mapped_packets_that_are_requests_from_185.175.0.3": 81,
+    "per_log_entry_offsets_minutes": [
+      {
+        "file_source": "substation-10.pcap",
+        "log_attack": "Recon. Complete",
+        "log_timestamp": "2023-03-19T06:13:51.074000",
+        "n": 30,
+        "offset_utc_min_min": -191.06632116666665,
+        "offset_utc_min_max": -191.03761971666665
+      },
+      {
+        "file_source": "substation-10.pcap",
+        "log_attack": "Recon. Range: 2000",
+        "log_timestamp": "2023-03-19T06:32:51.081000",
+        "n": 21,
+        "offset_utc_min_min": -209.98154831666668,
+        "offset_utc_min_max": -209.9524574
+      },
+      {
+        "file_source": "substation-2.pcap",
+        "log_attack": "Recon. Complete",
+        "log_timestamp": "2023-03-15T17:27:36.753000",
+        "n": 21,
+        "offset_utc_min_min": 141.47534331666665,
+        "offset_utc_min_max": 141.48763583333334
+      },
+      {
+        "file_source": "substation-2.pcap",
+        "log_attack": "Recon. Complete",
+        "log_timestamp": "2023-03-15T18:13:36.789000",
+        "n": 14,
+        "offset_utc_min_min": 130.04887663333332,
+        "offset_utc_min_max": 130.09498105
+      },
+      {
+        "file_source": "substation-2.pcap",
+        "log_attack": "Recon. Complete",
+        "log_timestamp": "2023-03-15T19:49:09.044000",
+        "n": 20,
+        "offset_utc_min_min": 60.53909225,
+        "offset_utc_min_max": 60.577966933333336
+      },
+      {
+        "file_source": "substation-2.pcap",
+        "log_attack": "Recon. Range: 2000",
+        "log_timestamp": "2023-03-15T18:13:36.789000",
+        "n": 12,
+        "offset_utc_min_min": 95.5582753,
+        "offset_utc_min_max": 95.57060841666667
+      },
+      {
+        "file_source": "substation-2.pcap",
+        "log_attack": "Recon. Range: 2000",
+        "log_timestamp": "2023-03-15T19:49:09.043000",
+        "n": 20,
+        "offset_utc_min_min": 34.5953082,
+        "offset_utc_min_max": 34.642394816666666
+      },
+      {
+        "file_source": "substation-2.pcap",
+        "log_attack": "Recon. Range: 2000",
+        "log_timestamp": "2023-03-15T21:03:02.490000",
+        "n": 20,
+        "offset_utc_min_min": -13.264967316666667,
+        "offset_utc_min_max": -13.227852983333333
+      }
+    ],
+    "offset_utc_minus_log_minutes_range": [
+      -209.98154831666668,
+      141.48763583333334
+    ],
+    "interpretation_note": "Packet-minus-log offsets are not constant across log entries (see per_log_entry_offsets_minutes), so the mapping is not a fixed clock shift; how packets were assigned to log entries is [VERIFY: mapping procedure]."
+  },
+  "positive_category_counts": {
+    "fc5_len3_response": 8400,
+    "event_mapped": 158,
+    "nonroutine_quantity_read": 116,
+    "len3_response_fc1_4": 13,
+    "external_attached_flow_no_date": 12
+  },
+  "positive_categories_by_file": {
+    "attached_recon_flows.csv": {
+      "external_attached_flow_no_date": 12
+    },
+    "substation-1.pcap": {
+      "fc5_len3_response": 2001
+    },
+    "substation-10.pcap": {
+      "event_mapped": 51,
+      "fc5_len3_response": 2129,
+      "len3_response_fc1_4": 1,
+      "nonroutine_quantity_read": 4
+    },
+    "substation-14.pcap": {
+      "fc5_len3_response": 2125
+    },
+    "substation-2.pcap": {
+      "event_mapped": 107,
+      "fc5_len3_response": 5,
+      "len3_response_fc1_4": 12,
+      "nonroutine_quantity_read": 12
+    },
+    "substation-4.pcap": {
+      "fc5_len3_response": 2140
+    },
+    "veth4edc015-0.pcap": {
+      "nonroutine_quantity_read": 50
+    },
+    "veth665f3cf-0.pcap": {
+      "nonroutine_quantity_read": 50
+    }
+  },
+  "shortcut_checks": {
+    "packets_with_modbus_len_3": 8413,
+    "positive_rate_given_modbus_len_3": 1.0,
+    "fraction_of_positives_with_modbus_len_3": 0.967122657776756,
+    "packets_fc5_len3": 8400,
+    "positive_rate_given_fc5_len3": 1.0,
+    "fraction_of_positives_fc5_len3": 0.9656282331302448,
+    "fc5_len3_by_src_dst": {
+      "185.175.0.4->185.175.0.3": 6,
+      "185.175.0.5->185.175.0.3": 8384,
+      "185.175.0.8->185.175.0.3": 10
+    },
+    "fc5_len3_files": {
+      "substation-4.pcap": 2140,
+      "substation-10.pcap": 2129,
+      "substation-14.pcap": 2125,
+      "substation-1.pcap": 2001,
+      "substation-2.pcap": 5
+    },
+    "fc5_requests_preceding_are_labelled_0": true
+  },
+  "label_support_by_file": {
+    "attached_recon_flows.csv": {
+      "positives": 12,
+      "event_mapped_positives": 0,
+      "has_event_map_rows": false
+    },
+    "substation-1.pcap": {
+      "positives": 2001,
+      "event_mapped_positives": 0,
+      "has_event_map_rows": false
+    },
+    "substation-10.pcap": {
+      "positives": 2185,
+      "event_mapped_positives": 51,
+      "has_event_map_rows": true
+    },
+    "substation-14.pcap": {
+      "positives": 2125,
+      "event_mapped_positives": 0,
+      "has_event_map_rows": false
+    },
+    "substation-2.pcap": {
+      "positives": 136,
+      "event_mapped_positives": 107,
+      "has_event_map_rows": true
+    },
+    "substation-4.pcap": {
+      "positives": 2140,
+      "event_mapped_positives": 0,
+      "has_event_map_rows": false
+    },
+    "veth3efd353-0.pcap": {
+      "positives": 0,
+      "event_mapped_positives": 0,
+      "has_event_map_rows": false
+    },
+    "veth3efd353-1.pcap": {
+      "positives": 0,
+      "event_mapped_positives": 0,
+      "has_event_map_rows": false
+    },
+    "veth4edc015-0.pcap": {
+      "positives": 50,
+      "event_mapped_positives": 0,
+      "has_event_map_rows": false
+    },
+    "veth4edc015-normal-4.pcap": {
+      "positives": 0,
+      "event_mapped_positives": 0,
+      "has_event_map_rows": false
+    },
+    "veth5bbeaa2-0.pcap": {
+      "positives": 0,
+      "event_mapped_positives": 0,
+      "has_event_map_rows": false
+    },
+    "veth5bbeaa2-normal-13.pcap": {
+      "positives": 0,
+      "event_mapped_positives": 0,
+      "has_event_map_rows": false
+    },
+    "veth665f3cf-0.pcap": {
+      "positives": 50,
+      "event_mapped_positives": 0,
+      "has_event_map_rows": false
+    },
+    "veth8bc3408-0.pcap": {
+      "positives": 0,
+      "event_mapped_positives": 0,
+      "has_event_map_rows": false
+    },
+    "vethd9e14c0-0.pcap": {
+      "positives": 0,
+      "event_mapped_positives": 0,
+      "has_event_map_rows": false
+    }
+  },
+  "external_attached_flows": {
+    "rows": 14,
+    "timestamp_examples": [
+      "00:31:01.700000",
+      "00:31:02.800000",
+      "00:31:10.600000",
+      "00:31:11.600000"
+    ],
+    "note": "Time-of-day only (no date/offset), different subnet (192.168.10.x), sessions of 2-4 packets (< window length 20). Cannot be placed chronologically or windowed."
+  },
+  "label_creation_procedure": "[VERIFY: how packet labels were generated is not documented in the supplied files]"
+}

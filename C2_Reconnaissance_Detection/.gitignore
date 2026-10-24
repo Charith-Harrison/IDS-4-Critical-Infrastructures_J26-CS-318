@@ -1,0 +1,43 @@
+# =============================================================================
+# C2_Reconnaissance_Detection .gitignore
+# =============================================================================
+
+# Python virtual environments & caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+
+# Frontend dependencies & build bundle
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+
+# Generated working CSV/NPY dataset copies (reproducible via src/run_all.py)
+data/raw/*.csv
+data/processed/*.csv
+data/rebuilt_sequences/*.csv
+data/rebuilt_sequences/*.npy
+
+# Large generated prediction tables & binary packet streams
+# (Reproducible via src/explain.py and src/export_dashboard_data.py)
+artifacts/predictions.csv
+artifacts/baseline_oof_predictions.csv
+artifacts/lstm_oof_predictions.csv
+artifacts/whole_network_packets.bin
+artifacts/dashboard_data.json
+artifacts/tables/packet_signature_flags.csv
+frontend/public/whole_network_packets.bin
+frontend/public/dashboard_data.json
+
+# Environment & OS files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db

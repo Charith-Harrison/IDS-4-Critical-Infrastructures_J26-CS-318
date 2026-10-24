@@ -1,0 +1,47 @@
+{
+  "original_dataset_dir": "D:\\Github\\IDS-4-Critical-Infrastructures_J26-CS-318\\Dataset",
+  "files": [
+    {
+      "original_sha256_before": "865ee1ef879076c297dc4e3e7ea8d0d991e17a26ed2d4a13b20c62ab4a7af354",
+      "original_size": 19321,
+      "original_mtime": 1789206720.081582,
+      "source": "D:\\Github\\IDS-4-Critical-Infrastructures_J26-CS-318\\Dataset\\attack_events_mapped.xlsx",
+      "sheets": [
+        "attack_events_mapped"
+      ],
+      "rows_including_header": 159,
+      "output": "D:\\Github\\IDS-4-Critical-Infrastructures_J26-CS-318\\C2_Reconnaissance_Detection\\data\\raw\\attack_events_mapped.csv",
+      "seconds": 0.0,
+      "original_sha256_after": "865ee1ef879076c297dc4e3e7ea8d0d991e17a26ed2d4a13b20c62ab4a7af354",
+      "copy_sha256": "a21d1470b5cd75e849dce5a4be7c3f1a9fff21f5edaf39f2139b35f4a0c5478b"
+    },
+    {
+      "original_sha256_before": "34f24c30b0004ba1a1d209113aade7f7b44e486de2380c33ae0ea79227c1f904",
+      "original_size": 55804545,
+      "original_mtime": 1789206468.0898707,
+      "source": "D:\\Github\\IDS-4-Critical-Infrastructures_J26-CS-318\\Dataset\\recon_labeled_packets_ALL.csv.xlsx",
+      "sheets": [
+        "recon_labeled_packets_ALL"
+      ],
+      "rows_including_header": 879226,
+      "output": "D:\\Github\\IDS-4-Critical-Infrastructures_J26-CS-318\\C2_Reconnaissance_Detection\\data\\raw\\recon_labeled_packets_ALL.csv",
+      "seconds": 72.4,
+      "original_sha256_after": "34f24c30b0004ba1a1d209113aade7f7b44e486de2380c33ae0ea79227c1f904",
+      "copy_sha256": "1a09b417a450e18b4828a63be8a1437317340db38e42b4ad2e8cf5f60ec4bd55"
+    },
+    {
+      "original_sha256_before": "249a6e57ff943d14ce69b855676f98a722f885e692688cc4af652a88df82b399",
+      "original_size": 13383761,
+      "original_mtime": 1789206309.9489,
+      "source": "D:\\Github\\IDS-4-Critical-Infrastructures_J26-CS-318\\Dataset\\recon_sequences_ALL.csv.xlsx",
+      "sheets": [
+        "recon_sequences_ALL"
+      ],
+      "rows_including_header": 175801,
+      "output": "D:\\Github\\IDS-4-Critical-Infrastructures_J26-CS-318\\C2_Reconnaissance_Detection\\data\\raw\\recon_sequences_ALL.csv",
+      "seconds": 14.9,
+      "original_sha256_after": "249a6e57ff943d14ce69b855676f98a722f885e692688cc4af652a88df82b399",
+      "copy_sha256": "49e31cf37f0768e4244ba12a2f59e431d18ba95bbe066b350ed73319a6413cf5"
+    }
+  ]
+}

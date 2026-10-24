@@ -1,0 +1,155 @@
+{
+  "hardware_and_environment": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "python_version": "3.14.3",
+    "torch_version": "2.14.1+cpu",
+    "device": "cpu",
+    "n_warmup_windows": 50,
+    "n_timed_windows": 500
+  },
+  "proposal_target_ms": 100.0,
+  "single_window_preprocessing_ms": {
+    "sequence_feature_extraction_and_scaling": {
+      "n_runs": 500,
+      "mean_ms": 16.385927397292107,
+      "std_ms": 4.617258265051992,
+      "median_ms": 15.430399915203452,
+      "p95_ms": 23.295570025220506,
+      "p99_ms": 29.574359070975323,
+      "min_ms": 8.580500027164817,
+      "max_ms": 59.113699942827225,
+      "meets_100ms_target_p99": true
+    },
+    "window_aggregate_extraction_and_scaling": {
+      "n_runs": 500,
+      "mean_ms": 17.45486200414598,
+      "std_ms": 4.879256036889264,
+      "median_ms": 16.36614988092333,
+      "p95_ms": 24.780045077204704,
+      "p99_ms": 31.793641110416495,
+      "min_ms": 9.280500002205372,
+      "max_ms": 61.5509997587651,
+      "meets_100ms_target_p99": true
+    }
+  },
+  "single_window_inference_only_ms": {
+    "Model_A_Packet_LogReg": {
+      "n_runs": 500,
+      "mean_ms": 0.3345907973125577,
+      "std_ms": 0.15669586792157958,
+      "median_ms": 0.2879500389099121,
+      "p95_ms": 0.5812149960547686,
+      "p99_ms": 0.8494000602513547,
+      "min_ms": 0.20350003615021706,
+      "max_ms": 2.4957999121397734,
+      "meets_100ms_target_p99": true
+    },
+    "Model_A_Packet_DT": {
+      "n_runs": 500,
+      "mean_ms": 0.2266843942925334,
+      "std_ms": 0.10780264989262944,
+      "median_ms": 0.1989499432966113,
+      "p95_ms": 0.3781199688091874,
+      "p99_ms": 0.49037412274628855,
+      "min_ms": 0.121300108730793,
+      "max_ms": 1.9205999560654163,
+      "meets_100ms_target_p99": true
+    },
+    "Model_B_Window_RF": {
+      "n_runs": 500,
+      "mean_ms": 35.02986099477857,
+      "std_ms": 6.248132720735378,
+      "median_ms": 34.38694996293634,
+      "p95_ms": 45.73461505351587,
+      "p99_ms": 50.75318082934241,
+      "min_ms": 19.776599947363138,
+      "max_ms": 80.20190009847283,
+      "meets_100ms_target_p99": true
+    },
+    "Model_C_LSTM_Full": {
+      "n_runs": 500,
+      "mean_ms": 1.7002321952022612,
+      "std_ms": 0.9828614804471407,
+      "median_ms": 1.4906999422237277,
+      "p95_ms": 2.9358849977143096,
+      "p99_ms": 4.556282996200024,
+      "min_ms": 0.84279989823699,
+      "max_ms": 17.319999868050218,
+      "meets_100ms_target_p99": true
+    },
+    "Model_D_LSTM_NoTiming": {
+      "n_runs": 500,
+      "mean_ms": 1.375403402838856,
+      "std_ms": 0.8175126009053951,
+      "median_ms": 1.182599924504757,
+      "p95_ms": 2.5433349306695163,
+      "p99_ms": 4.384123971685767,
+      "min_ms": 0.4950000438839197,
+      "max_ms": 12.572200037539005,
+      "meets_100ms_target_p99": true
+    }
+  },
+  "single_window_end_to_end_ms": {
+    "Model_B_Window_RF": {
+      "n_runs": 500,
+      "mean_ms": 52.48472299892455,
+      "std_ms": 10.065212825029162,
+      "median_ms": 50.95659988000989,
+      "p95_ms": 70.67948472686112,
+      "p99_ms": 84.11097494885313,
+      "min_ms": 29.336099745705724,
+      "max_ms": 109.7023996990174,
+      "meets_100ms_target_p99": true
+    },
+    "Model_C_LSTM_Full": {
+      "n_runs": 500,
+      "mean_ms": 18.08615959249437,
+      "std_ms": 5.086852040151279,
+      "median_ms": 16.898600035347044,
+      "p95_ms": 25.633469945751127,
+      "p99_ms": 34.50895788380876,
+      "min_ms": 9.753899881616235,
+      "max_ms": 62.451899982988834,
+      "meets_100ms_target_p99": true
+    }
+  },
+  "batch_inference_benchmarks": {
+    "batch_1": {
+      "batch_size": 1,
+      "Model_C_LSTM_batch_mean_ms": 2.3830699967220426,
+      "Model_C_LSTM_per_window_ms": 2.3830699967220426,
+      "Model_C_LSTM_throughput_windows_per_sec": 419.62678451556974,
+      "Model_B_RF_batch_mean_ms": 42.15213667290906,
+      "Model_B_RF_per_window_ms": 42.15213667290906,
+      "Model_B_RF_throughput_windows_per_sec": 23.723589808976264
+    },
+    "batch_32": {
+      "batch_size": 32,
+      "Model_C_LSTM_batch_mean_ms": 3.6555666709318757,
+      "Model_C_LSTM_per_window_ms": 0.11423645846662112,
+      "Model_C_LSTM_throughput_windows_per_sec": 8753.772774671505,
+      "Model_B_RF_batch_mean_ms": 43.128546668837465,
+      "Model_B_RF_per_window_ms": 1.3477670834011708,
+      "Model_B_RF_throughput_windows_per_sec": 741.9679648774625
+    },
+    "batch_256": {
+      "batch_size": 256,
+      "Model_C_LSTM_batch_mean_ms": 7.429610006511211,
+      "Model_C_LSTM_per_window_ms": 0.02902191408793442,
+      "Model_C_LSTM_throughput_windows_per_sec": 34456.72111667302,
+      "Model_B_RF_batch_mean_ms": 50.55966999692222,
+      "Model_B_RF_per_window_ms": 0.1974987109254774,
+      "Model_B_RF_throughput_windows_per_sec": 5063.32418735296
+    },
+    "batch_1024": {
+      "batch_size": 1024,
+      "Model_C_LSTM_batch_mean_ms": 21.720050003690023,
+      "Model_C_LSTM_per_window_ms": 0.021210986331728538,
+      "Model_C_LSTM_throughput_windows_per_sec": 47145.37949157725,
+      "Model_B_RF_batch_mean_ms": 65.47169664409012,
+      "Model_B_RF_per_window_ms": 0.06393720375399425,
+      "Model_B_RF_throughput_windows_per_sec": 15640.3461722789
+    }
+  }
+}

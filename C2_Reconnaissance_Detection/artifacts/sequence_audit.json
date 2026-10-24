@@ -1,0 +1,178 @@
+{
+  "n_sequences": 175800,
+  "tensor_shape": [
+    175800,
+    20,
+    7
+  ],
+  "feature_position_candidates_first_window": {
+    "0": [
+      "unit_id"
+    ],
+    "1": [
+      "func_code"
+    ],
+    "2": [
+      "modbus_len"
+    ],
+    "3": [
+      "register_start"
+    ],
+    "4": [
+      "quantity"
+    ],
+    "5": [
+      "packet_size"
+    ],
+    "6": [
+      "time_delta"
+    ]
+  },
+  "stride_match_rate_sample": {
+    "1": 0.02,
+    "2": 0.02,
+    "3": 0.02,
+    "4": 0.02,
+    "5": 1.0,
+    "6": 0.02,
+    "7": 0.02,
+    "8": 0.02,
+    "9": 0.02,
+    "10": 0.02,
+    "11": 0.02,
+    "12": 0.02,
+    "13": 0.02,
+    "14": 0.02,
+    "15": 0.02,
+    "16": 0.02,
+    "17": 0.02,
+    "18": 0.02,
+    "19": 0.02,
+    "20": 0.02
+  },
+  "inferred_stride": 5,
+  "feature_order_verified": [
+    "unit_id",
+    "func_code",
+    "modbus_len",
+    "register_start",
+    "quantity",
+    "packet_size",
+    "time_delta"
+  ],
+  "windows_matching_packet_rows_with_inferred_stride": 175800,
+  "label_rule_agreement": {
+    "any_positive": 1.0,
+    "last_packet": 0.9057622298065984,
+    "majority": 0.8957337883959045,
+    "first_packet": 0.9054493742889648
+  },
+  "window_start_time_equals_first_packet_timestamp": 1.0,
+  "window_end_time_equals_last_packet_timestamp": 1.0,
+  "windows_with_any_backward_time_step": 174708,
+  "windows_with_start_after_end": 67489,
+  "windows_spanning_multiple_file_sources": 171080,
+  "positive_packets_per_positive_window": {
+    "count": 18338.0,
+    "mean": 1.8939360889955283,
+    "std": 1.10071703672358,
+    "min": 1.0,
+    "25%": 1.0,
+    "50%": 2.0,
+    "75%": 2.0,
+    "max": 20.0
+  },
+  "windows_per_session": {
+    "185.175.0.2_185.175.0.4_u1_s0010": {
+      "packets": 11670,
+      "windows": 2331,
+      "expected_full_windows": 2331,
+      "dropped_tail_packets": 0
+    },
+    "185.175.0.2_185.175.0.5_u1_s0008": {
+      "packets": 11701,
+      "windows": 2337,
+      "expected_full_windows": 2337,
+      "dropped_tail_packets": 1
+    },
+    "185.175.0.2_185.175.0.8_u1_s0012": {
+      "packets": 11630,
+      "windows": 2323,
+      "expected_full_windows": 2323,
+      "dropped_tail_packets": 0
+    },
+    "185.175.0.3_185.175.0.4_u1_s0001": {
+      "packets": 130572,
+      "windows": 26111,
+      "expected_full_windows": 26111,
+      "dropped_tail_packets": 2
+    },
+    "185.175.0.3_185.175.0.5_u1_s0003": {
+      "packets": 122607,
+      "windows": 24518,
+      "expected_full_windows": 24518,
+      "dropped_tail_packets": 2
+    },
+    "185.175.0.3_185.175.0.8_u1_s0005": {
+      "packets": 94865,
+      "windows": 18970,
+      "expected_full_windows": 18970,
+      "dropped_tail_packets": 0
+    },
+    "185.175.0.4_185.175.0.2_u1_s0011": {
+      "packets": 11670,
+      "windows": 2331,
+      "expected_full_windows": 2331,
+      "dropped_tail_packets": 0
+    },
+    "185.175.0.4_185.175.0.3_u1_s0002": {
+      "packets": 115787,
+      "windows": 23154,
+      "expected_full_windows": 23154,
+      "dropped_tail_packets": 2
+    },
+    "185.175.0.5_185.175.0.2_u1_s0009": {
+      "packets": 11701,
+      "windows": 2337,
+      "expected_full_windows": 2337,
+      "dropped_tail_packets": 1
+    },
+    "185.175.0.5_185.175.0.3_u1_s0004": {
+      "packets": 122531,
+      "windows": 24503,
+      "expected_full_windows": 24503,
+      "dropped_tail_packets": 1
+    },
+    "185.175.0.7_185.175.0.4_u1_s0007": {
+      "packets": 131220,
+      "windows": 26241,
+      "expected_full_windows": 26241,
+      "dropped_tail_packets": 0
+    },
+    "185.175.0.8_185.175.0.2_u1_s0013": {
+      "packets": 11628,
+      "windows": 2322,
+      "expected_full_windows": 2322,
+      "dropped_tail_packets": 3
+    },
+    "185.175.0.8_185.175.0.3_u1_s0006": {
+      "packets": 91629,
+      "windows": 18322,
+      "expected_full_windows": 18322,
+      "dropped_tail_packets": 4
+    }
+  },
+  "overlap_packets_between_consecutive_windows": 15,
+  "overlap_fraction": 0.75,
+  "window_time_span_days": {
+    "count": 175800.0,
+    "mean": 39.998496865659874,
+    "std": 22.589896859840405,
+    "min": 6.017777777777778e-09,
+    "25%": 43.47366983368,
+    "50%": 47.65076492703704,
+    "75%": 56.17963895105481,
+    "max": 57.65577867361185
+  },
+  "windows_spanning_more_than_1_hour": 146243
+}

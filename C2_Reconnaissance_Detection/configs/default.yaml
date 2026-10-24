@@ -1,0 +1,36 @@
+# C2 / RP2 reconnaissance detection - default experiment configuration.
+# Paths are relative to C2_Reconnaissance_Detection/ unless absolute.
+paths:
+  original_dataset_dir: ../Dataset          # supplied data - READ ONLY
+  raw_copy_dir: data/raw                    # CSV working copies of the supplied xlsx files
+  processed_dir: data/processed
+  rebuilt_dir: data/rebuilt_sequences
+  artifacts_dir: artifacts
+
+seed: 42
+
+windowing:
+  window_length: 20         # proposal preliminary default
+  stride: 5                 # verified stride of the supplied sequence file (artifacts/sequence_audit.json)
+  label_rule: any_positive  # verified supplied rule: window positive if >=1 constituent packet label==1
+  stream_key: [capture_group, session_id]   # windows never cross capture or directional host-pair boundaries
+
+# Independent capture groups (decision D-02, docs/C2_DECISIONS.md).
+# A group = one capture episode. The five 2023-02-01 veth pcaps are simultaneous views of the
+# same Docker network (310k cross-file near-duplicates within <=1 ms), so they form ONE group.
+capture_groups:
+  G01_0122_normal4:   [veth4edc015-normal-4.pcap]
+  G02_0123_normal13:  [veth5bbeaa2-normal-13.pcap]
+  G03_0201_veth:      [veth5bbeaa2-0.pcap, vethd9e14c0-0.pcap, veth4edc015-0.pcap, veth8bc3408-0.pcap, veth665f3cf-0.pcap]
+  G04_0315_sub1:      [substation-1.pcap]
+  G05_0315_sub2:      [substation-2.pcap]
+  G06_0316_sub4:      [substation-4.pcap]
+  G07_0319_sub10:     [substation-10.pcap]
+  G08_0320_sub14:     [substation-14.pcap]
+  G09_0323_veth3e0:   [veth3efd353-0.pcap]
+  G10_0323_veth3e1:   [veth3efd353-1.pcap]
+excluded_files:
+  attached_recon_flows.csv: "time-of-day-only timestamps (no date), different subnet, 2-4 packet sessions < window length"
+duplicate_views:
+  policy: keep_largest_file_per_session   # within a multi-file group, keep one interface view per session_id
+  near_duplicate_tolerance_ns: 1000000

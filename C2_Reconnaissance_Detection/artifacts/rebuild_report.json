@@ -1,0 +1,709 @@
+{
+  "window_length": 20,
+  "stride": 5,
+  "label_rule": "any_positive",
+  "packets_input": 879225,
+  "packets_kept": 597135,
+  "exclusions": {
+    "duplicate_interface_view": 282076,
+    "excluded_file": 14
+  },
+  "duplicate_view_report": {
+    "G03_0201_veth|185.175.0.3_185.175.0.4_u1_s0001": {
+      "file_counts": {
+        "veth4edc015-0.pcap": 35967,
+        "veth5bbeaa2-0.pcap": 35963
+      },
+      "kept_file": "veth4edc015-0.pcap",
+      "dropped_packets": 35963,
+      "dropped_with_near_duplicate_in_kept": 35963,
+      "dropped_positive_packets": 0,
+      "dropped_positive_with_positive_duplicate": 0,
+      "label_disagreement_with_duplicate": 0
+    },
+    "G03_0201_veth|185.175.0.3_185.175.0.5_u1_s0003": {
+      "file_counts": {
+        "vethd9e14c0-0.pcap": 36287,
+        "veth5bbeaa2-0.pcap": 36262
+      },
+      "kept_file": "vethd9e14c0-0.pcap",
+      "dropped_packets": 36262,
+      "dropped_with_near_duplicate_in_kept": 36262,
+      "dropped_positive_packets": 0,
+      "dropped_positive_with_positive_duplicate": 0,
+      "label_disagreement_with_duplicate": 0
+    },
+    "G03_0201_veth|185.175.0.3_185.175.0.8_u1_s0005": {
+      "file_counts": {
+        "veth8bc3408-0.pcap": 36009,
+        "veth5bbeaa2-0.pcap": 36007
+      },
+      "kept_file": "veth8bc3408-0.pcap",
+      "dropped_packets": 36007,
+      "dropped_with_near_duplicate_in_kept": 36007,
+      "dropped_positive_packets": 0,
+      "dropped_positive_with_positive_duplicate": 0,
+      "label_disagreement_with_duplicate": 0
+    },
+    "G03_0201_veth|185.175.0.4_185.175.0.3_u1_s0002": {
+      "file_counts": {
+        "veth4edc015-0.pcap": 35966,
+        "veth5bbeaa2-0.pcap": 35964
+      },
+      "kept_file": "veth4edc015-0.pcap",
+      "dropped_packets": 35964,
+      "dropped_with_near_duplicate_in_kept": 35964,
+      "dropped_positive_packets": 0,
+      "dropped_positive_with_positive_duplicate": 0,
+      "label_disagreement_with_duplicate": 0
+    },
+    "G03_0201_veth|185.175.0.5_185.175.0.3_u1_s0004": {
+      "file_counts": {
+        "vethd9e14c0-0.pcap": 36287,
+        "veth5bbeaa2-0.pcap": 36262
+      },
+      "kept_file": "vethd9e14c0-0.pcap",
+      "dropped_packets": 36262,
+      "dropped_with_near_duplicate_in_kept": 36262,
+      "dropped_positive_packets": 0,
+      "dropped_positive_with_positive_duplicate": 0,
+      "label_disagreement_with_duplicate": 0
+    },
+    "G03_0201_veth|185.175.0.7_185.175.0.4_u1_s0007": {
+      "file_counts": {
+        "veth665f3cf-0.pcap": 65610,
+        "veth4edc015-0.pcap": 65610
+      },
+      "kept_file": "veth4edc015-0.pcap",
+      "dropped_packets": 65610,
+      "dropped_with_near_duplicate_in_kept": 65610,
+      "dropped_positive_packets": 50,
+      "dropped_positive_with_positive_duplicate": 50,
+      "label_disagreement_with_duplicate": 0
+    },
+    "G03_0201_veth|185.175.0.8_185.175.0.3_u1_s0006": {
+      "file_counts": {
+        "veth8bc3408-0.pcap": 36009,
+        "veth5bbeaa2-0.pcap": 36008
+      },
+      "kept_file": "veth8bc3408-0.pcap",
+      "dropped_packets": 36008,
+      "dropped_with_near_duplicate_in_kept": 36008,
+      "dropped_positive_packets": 0,
+      "dropped_positive_with_positive_duplicate": 0,
+      "label_disagreement_with_duplicate": 0
+    }
+  },
+  "timing_audit": {
+    "supplied_order_by_session_raw": {
+      "agree_within_1us": 0.32300460192129643,
+      "compared": 879198
+    },
+    "supplied_order_by_session_clip0": {
+      "agree_within_1us": 0.46704837818102407,
+      "compared": 879198
+    },
+    "supplied_order_by_session_file_clip0": {
+      "agree_within_1us": 0.21721143652718314,
+      "compared": 879148
+    },
+    "chronological_by_session": {
+      "agree_within_1us": 0.32149185962661425,
+      "compared": 879198
+    },
+    "supplied_time_delta_zero_fraction": 0.6770001740196608,
+    "supplied_time_delta_max_s": 4.801097,
+    "units_inference": "Supplied time_delta matches nanosecond-timestamp differences expressed in SECONDS where they agree (e.g. 5e-06 == 5 microseconds between consecutive rows)."
+  },
+  "rebuilt_dt_vs_supplied_time_delta": {
+    "agree_within_1us": 0.0009395741602032561,
+    "median_abs_diff_s": 0.021908992,
+    "rebuilt_dt_quantiles_s": {
+      "0.0": 2.5088e-05,
+      "0.01": 0.000208896,
+      "0.25": 0.021124096,
+      "0.5": 0.021908992,
+      "0.75": 0.025793024,
+      "0.99": 5.02329178112,
+      "1.0": 58155.337022976
+    }
+  },
+  "windows": 119237,
+  "window_label_counts": {
+    "0": 117359,
+    "1": 1878
+  },
+  "windows_cross_stream_boundary": 0,
+  "per_group": [
+    {
+      "capture_group": "G01_0122_normal4",
+      "packets": 35000,
+      "recon_packets": 0,
+      "fc5_len3_packets": 0,
+      "n_streams": 2,
+      "windows": 6994,
+      "recon_windows": 0,
+      "windows_with_fc5_len3": 0,
+      "start_utc": "2023-01-22 04:10:36.658912+00:00",
+      "end_utc": "2023-01-23 01:18:11.998005+00:00"
+    },
+    {
+      "capture_group": "G02_0123_normal13",
+      "packets": 35000,
+      "recon_packets": 0,
+      "fc5_len3_packets": 0,
+      "n_streams": 6,
+      "windows": 6980,
+      "recon_windows": 0,
+      "windows_with_fc5_len3": 0,
+      "start_utc": "2023-01-23 13:52:04.004201+00:00",
+      "end_utc": "2023-01-23 15:31:33.205086+00:00"
+    },
+    {
+      "capture_group": "G03_0201_veth",
+      "packets": 282135,
+      "recon_packets": 50,
+      "fc5_len3_packets": 0,
+      "n_streams": 7,
+      "windows": 56403,
+      "recon_windows": 10,
+      "windows_with_fc5_len3": 0,
+      "start_utc": "2023-02-01 03:48:39.921812+00:00",
+      "end_utc": "2023-02-01 14:01:50.737508+00:00"
+    },
+    {
+      "capture_group": "G04_0315_sub1",
+      "packets": 35000,
+      "recon_packets": 2001,
+      "fc5_len3_packets": 2001,
+      "n_streams": 5,
+      "windows": 6983,
+      "recon_windows": 415,
+      "windows_with_fc5_len3": 415,
+      "start_utc": "2023-03-15 08:53:29.791436+00:00",
+      "end_utc": "2023-03-15 11:00:08.655967+00:00"
+    },
+    {
+      "capture_group": "G05_0315_sub2",
+      "packets": 35000,
+      "recon_packets": 136,
+      "fc5_len3_packets": 5,
+      "n_streams": 6,
+      "windows": 6979,
+      "recon_windows": 86,
+      "windows_with_fc5_len3": 9,
+      "start_utc": "2023-03-15 19:02:50.918917+00:00",
+      "end_utc": "2023-03-15 20:56:16.659313+00:00"
+    },
+    {
+      "capture_group": "G06_0316_sub4",
+      "packets": 35000,
+      "recon_packets": 2140,
+      "fc5_len3_packets": 2140,
+      "n_streams": 6,
+      "windows": 6980,
+      "recon_windows": 454,
+      "windows_with_fc5_len3": 454,
+      "start_utc": "2023-03-16 17:23:27.185458+00:00",
+      "end_utc": "2023-03-16 18:54:32.113512+00:00"
+    },
+    {
+      "capture_group": "G07_0319_sub10",
+      "packets": 35000,
+      "recon_packets": 2185,
+      "fc5_len3_packets": 2129,
+      "n_streams": 6,
+      "windows": 6979,
+      "recon_windows": 470,
+      "windows_with_fc5_len3": 448,
+      "start_utc": "2023-03-19 01:56:44.444617+00:00",
+      "end_utc": "2023-03-19 03:03:09.884694+00:00"
+    },
+    {
+      "capture_group": "G08_0320_sub14",
+      "packets": 35000,
+      "recon_packets": 2125,
+      "fc5_len3_packets": 2125,
+      "n_streams": 6,
+      "windows": 6981,
+      "recon_windows": 443,
+      "windows_with_fc5_len3": 443,
+      "start_utc": "2023-03-20 18:41:35.636468+00:00",
+      "end_utc": "2023-03-20 19:57:04.268510+00:00"
+    },
+    {
+      "capture_group": "G09_0323_veth3e0",
+      "packets": 35000,
+      "recon_packets": 0,
+      "fc5_len3_packets": 0,
+      "n_streams": 6,
+      "windows": 6978,
+      "recon_windows": 0,
+      "windows_with_fc5_len3": 0,
+      "start_utc": "2023-03-23 02:31:40.940955+00:00",
+      "end_utc": "2023-03-23 04:11:05.198011+00:00"
+    },
+    {
+      "capture_group": "G10_0323_veth3e1",
+      "packets": 35000,
+      "recon_packets": 0,
+      "fc5_len3_packets": 0,
+      "n_streams": 6,
+      "windows": 6980,
+      "recon_windows": 0,
+      "windows_with_fc5_len3": 0,
+      "start_utc": "2023-03-23 10:10:37.200544+00:00",
+      "end_utc": "2023-03-23 11:49:42.813745+00:00"
+    }
+  ],
+  "per_stream": [
+    {
+      "capture_group": "G01_0122_normal4",
+      "session_id": "185.175.0.3_185.175.0.4_u1_s0001",
+      "packets": 17500,
+      "recon_packets": 0,
+      "windows": 3497,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G01_0122_normal4",
+      "session_id": "185.175.0.4_185.175.0.3_u1_s0002",
+      "packets": 17500,
+      "recon_packets": 0,
+      "windows": 3497,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G02_0123_normal13",
+      "session_id": "185.175.0.3_185.175.0.4_u1_s0001",
+      "packets": 5815,
+      "recon_packets": 0,
+      "windows": 1160,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G02_0123_normal13",
+      "session_id": "185.175.0.3_185.175.0.5_u1_s0003",
+      "packets": 5871,
+      "recon_packets": 0,
+      "windows": 1171,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G02_0123_normal13",
+      "session_id": "185.175.0.3_185.175.0.8_u1_s0005",
+      "packets": 5814,
+      "recon_packets": 0,
+      "windows": 1159,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G02_0123_normal13",
+      "session_id": "185.175.0.4_185.175.0.3_u1_s0002",
+      "packets": 5816,
+      "recon_packets": 0,
+      "windows": 1160,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G02_0123_normal13",
+      "session_id": "185.175.0.5_185.175.0.3_u1_s0004",
+      "packets": 5871,
+      "recon_packets": 0,
+      "windows": 1171,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G02_0123_normal13",
+      "session_id": "185.175.0.8_185.175.0.3_u1_s0006",
+      "packets": 5813,
+      "recon_packets": 0,
+      "windows": 1159,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G03_0201_veth",
+      "session_id": "185.175.0.3_185.175.0.4_u1_s0001",
+      "packets": 35967,
+      "recon_packets": 0,
+      "windows": 7190,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G03_0201_veth",
+      "session_id": "185.175.0.3_185.175.0.5_u1_s0003",
+      "packets": 36287,
+      "recon_packets": 0,
+      "windows": 7254,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G03_0201_veth",
+      "session_id": "185.175.0.3_185.175.0.8_u1_s0005",
+      "packets": 36009,
+      "recon_packets": 0,
+      "windows": 7198,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G03_0201_veth",
+      "session_id": "185.175.0.4_185.175.0.3_u1_s0002",
+      "packets": 35966,
+      "recon_packets": 0,
+      "windows": 7190,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G03_0201_veth",
+      "session_id": "185.175.0.5_185.175.0.3_u1_s0004",
+      "packets": 36287,
+      "recon_packets": 0,
+      "windows": 7254,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G03_0201_veth",
+      "session_id": "185.175.0.7_185.175.0.4_u1_s0007",
+      "packets": 65610,
+      "recon_packets": 50,
+      "windows": 13119,
+      "recon_windows": 10
+    },
+    {
+      "capture_group": "G03_0201_veth",
+      "session_id": "185.175.0.8_185.175.0.3_u1_s0006",
+      "packets": 36009,
+      "recon_packets": 0,
+      "windows": 7198,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G04_0315_sub1",
+      "session_id": "185.175.0.3_185.175.0.4_u1_s0001",
+      "packets": 8634,
+      "recon_packets": 0,
+      "windows": 1723,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G04_0315_sub1",
+      "session_id": "185.175.0.3_185.175.0.5_u1_s0003",
+      "packets": 11320,
+      "recon_packets": 0,
+      "windows": 2261,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G04_0315_sub1",
+      "session_id": "185.175.0.3_185.175.0.8_u1_s0005",
+      "packets": 58,
+      "recon_packets": 0,
+      "windows": 8,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G04_0315_sub1",
+      "session_id": "185.175.0.4_185.175.0.3_u1_s0002",
+      "packets": 3743,
+      "recon_packets": 1,
+      "windows": 745,
+      "recon_windows": 4
+    },
+    {
+      "capture_group": "G04_0315_sub1",
+      "session_id": "185.175.0.5_185.175.0.3_u1_s0004",
+      "packets": 11245,
+      "recon_packets": 2000,
+      "windows": 2246,
+      "recon_windows": 411
+    },
+    {
+      "capture_group": "G05_0315_sub2",
+      "session_id": "185.175.0.3_185.175.0.4_u1_s0001",
+      "packets": 9495,
+      "recon_packets": 19,
+      "windows": 1896,
+      "recon_windows": 16
+    },
+    {
+      "capture_group": "G05_0315_sub2",
+      "session_id": "185.175.0.3_185.175.0.5_u1_s0003",
+      "packets": 6698,
+      "recon_packets": 38,
+      "windows": 1336,
+      "recon_windows": 18
+    },
+    {
+      "capture_group": "G05_0315_sub2",
+      "session_id": "185.175.0.3_185.175.0.8_u1_s0005",
+      "packets": 4943,
+      "recon_packets": 10,
+      "windows": 985,
+      "recon_windows": 6
+    },
+    {
+      "capture_group": "G05_0315_sub2",
+      "session_id": "185.175.0.4_185.175.0.3_u1_s0002",
+      "packets": 4968,
+      "recon_packets": 18,
+      "windows": 990,
+      "recon_windows": 15
+    },
+    {
+      "capture_group": "G05_0315_sub2",
+      "session_id": "185.175.0.5_185.175.0.3_u1_s0004",
+      "packets": 6702,
+      "recon_packets": 38,
+      "windows": 1337,
+      "recon_windows": 20
+    },
+    {
+      "capture_group": "G05_0315_sub2",
+      "session_id": "185.175.0.8_185.175.0.3_u1_s0006",
+      "packets": 2194,
+      "recon_packets": 13,
+      "windows": 435,
+      "recon_windows": 11
+    },
+    {
+      "capture_group": "G06_0316_sub4",
+      "session_id": "185.175.0.3_185.175.0.4_u1_s0001",
+      "packets": 5580,
+      "recon_packets": 0,
+      "windows": 1113,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G06_0316_sub4",
+      "session_id": "185.175.0.3_185.175.0.5_u1_s0003",
+      "packets": 9524,
+      "recon_packets": 0,
+      "windows": 1901,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G06_0316_sub4",
+      "session_id": "185.175.0.3_185.175.0.8_u1_s0005",
+      "packets": 3669,
+      "recon_packets": 0,
+      "windows": 730,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G06_0316_sub4",
+      "session_id": "185.175.0.4_185.175.0.3_u1_s0002",
+      "packets": 3465,
+      "recon_packets": 3,
+      "windows": 690,
+      "recon_windows": 5
+    },
+    {
+      "capture_group": "G06_0316_sub4",
+      "session_id": "185.175.0.5_185.175.0.3_u1_s0004",
+      "packets": 9515,
+      "recon_packets": 2131,
+      "windows": 1900,
+      "recon_windows": 443
+    },
+    {
+      "capture_group": "G06_0316_sub4",
+      "session_id": "185.175.0.8_185.175.0.3_u1_s0006",
+      "packets": 3247,
+      "recon_packets": 6,
+      "windows": 646,
+      "recon_windows": 6
+    },
+    {
+      "capture_group": "G07_0319_sub10",
+      "session_id": "185.175.0.3_185.175.0.4_u1_s0001",
+      "packets": 7163,
+      "recon_packets": 10,
+      "windows": 1429,
+      "recon_windows": 6
+    },
+    {
+      "capture_group": "G07_0319_sub10",
+      "session_id": "185.175.0.3_185.175.0.5_u1_s0003",
+      "packets": 8058,
+      "recon_packets": 10,
+      "windows": 1608,
+      "recon_windows": 5
+    },
+    {
+      "capture_group": "G07_0319_sub10",
+      "session_id": "185.175.0.3_185.175.0.8_u1_s0005",
+      "packets": 3909,
+      "recon_packets": 10,
+      "windows": 778,
+      "recon_windows": 2
+    },
+    {
+      "capture_group": "G07_0319_sub10",
+      "session_id": "185.175.0.4_185.175.0.3_u1_s0002",
+      "packets": 3910,
+      "recon_packets": 11,
+      "windows": 779,
+      "recon_windows": 4
+    },
+    {
+      "capture_group": "G07_0319_sub10",
+      "session_id": "185.175.0.5_185.175.0.3_u1_s0004",
+      "packets": 8058,
+      "recon_packets": 2138,
+      "windows": 1608,
+      "recon_windows": 452
+    },
+    {
+      "capture_group": "G07_0319_sub10",
+      "session_id": "185.175.0.8_185.175.0.3_u1_s0006",
+      "packets": 3902,
+      "recon_packets": 6,
+      "windows": 777,
+      "recon_windows": 1
+    },
+    {
+      "capture_group": "G08_0320_sub14",
+      "session_id": "185.175.0.3_185.175.0.4_u1_s0001",
+      "packets": 4455,
+      "recon_packets": 0,
+      "windows": 888,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G08_0320_sub14",
+      "session_id": "185.175.0.3_185.175.0.5_u1_s0003",
+      "packets": 8587,
+      "recon_packets": 0,
+      "windows": 1714,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G08_0320_sub14",
+      "session_id": "185.175.0.3_185.175.0.8_u1_s0005",
+      "packets": 4456,
+      "recon_packets": 0,
+      "windows": 888,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G08_0320_sub14",
+      "session_id": "185.175.0.4_185.175.0.3_u1_s0002",
+      "packets": 4455,
+      "recon_packets": 0,
+      "windows": 888,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G08_0320_sub14",
+      "session_id": "185.175.0.5_185.175.0.3_u1_s0004",
+      "packets": 8591,
+      "recon_packets": 2125,
+      "windows": 1715,
+      "recon_windows": 443
+    },
+    {
+      "capture_group": "G08_0320_sub14",
+      "session_id": "185.175.0.8_185.175.0.3_u1_s0006",
+      "packets": 4456,
+      "recon_packets": 0,
+      "windows": 888,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G09_0323_veth3e0",
+      "session_id": "185.175.0.2_185.175.0.4_u1_s0010",
+      "packets": 5839,
+      "recon_packets": 0,
+      "windows": 1164,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G09_0323_veth3e0",
+      "session_id": "185.175.0.2_185.175.0.5_u1_s0008",
+      "packets": 5863,
+      "recon_packets": 0,
+      "windows": 1169,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G09_0323_veth3e0",
+      "session_id": "185.175.0.2_185.175.0.8_u1_s0012",
+      "packets": 5799,
+      "recon_packets": 0,
+      "windows": 1156,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G09_0323_veth3e0",
+      "session_id": "185.175.0.4_185.175.0.2_u1_s0011",
+      "packets": 5839,
+      "recon_packets": 0,
+      "windows": 1164,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G09_0323_veth3e0",
+      "session_id": "185.175.0.5_185.175.0.2_u1_s0009",
+      "packets": 5863,
+      "recon_packets": 0,
+      "windows": 1169,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G09_0323_veth3e0",
+      "session_id": "185.175.0.8_185.175.0.2_u1_s0013",
+      "packets": 5797,
+      "recon_packets": 0,
+      "windows": 1156,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G10_0323_veth3e1",
+      "session_id": "185.175.0.2_185.175.0.4_u1_s0010",
+      "packets": 5831,
+      "recon_packets": 0,
+      "windows": 1163,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G10_0323_veth3e1",
+      "session_id": "185.175.0.2_185.175.0.5_u1_s0008",
+      "packets": 5838,
+      "recon_packets": 0,
+      "windows": 1164,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G10_0323_veth3e1",
+      "session_id": "185.175.0.2_185.175.0.8_u1_s0012",
+      "packets": 5831,
+      "recon_packets": 0,
+      "windows": 1163,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G10_0323_veth3e1",
+      "session_id": "185.175.0.4_185.175.0.2_u1_s0011",
+      "packets": 5831,
+      "recon_packets": 0,
+      "windows": 1163,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G10_0323_veth3e1",
+      "session_id": "185.175.0.5_185.175.0.2_u1_s0009",
+      "packets": 5838,
+      "recon_packets": 0,
+      "windows": 1164,
+      "recon_windows": 0
+    },
+    {
+      "capture_group": "G10_0323_veth3e1",
+      "session_id": "185.175.0.8_185.175.0.2_u1_s0013",
+      "packets": 5831,
+      "recon_packets": 0,
+      "windows": 1163,
+      "recon_windows": 0
+    }
+  ]
+}

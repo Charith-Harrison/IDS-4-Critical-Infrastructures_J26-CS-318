@@ -1,0 +1,411 @@
+{
+  "prohibited_identifier_columns": [
+    "row_index",
+    "timestamp",
+    "ts_ns",
+    "src_ip",
+    "dst_ip",
+    "session_id",
+    "sequence_position",
+    "file_source",
+    "capture_group",
+    "stream_id",
+    "sequence_id",
+    "window_id",
+    "window_start_time",
+    "window_end_time",
+    "window_start_utc",
+    "window_end_utc",
+    "start_ns",
+    "end_ns",
+    "first_row_index",
+    "last_row_index",
+    "unit_id"
+  ],
+  "identifier_leakage": {
+    "session_id_positive_rates": {
+      "185.175.0.2_185.175.0.4_u1_s0010": {
+        "count": 11670,
+        "sum": 0,
+        "mean": 0.0
+      },
+      "185.175.0.2_185.175.0.5_u1_s0008": {
+        "count": 11701,
+        "sum": 0,
+        "mean": 0.0
+      },
+      "185.175.0.2_185.175.0.8_u1_s0012": {
+        "count": 11630,
+        "sum": 0,
+        "mean": 0.0
+      },
+      "185.175.0.3_185.175.0.4_u1_s0001": {
+        "count": 130572,
+        "sum": 29,
+        "mean": 0.00022209968446527587
+      },
+      "185.175.0.3_185.175.0.5_u1_s0003": {
+        "count": 122607,
+        "sum": 48,
+        "mean": 0.0003914947759915829
+      },
+      "185.175.0.3_185.175.0.8_u1_s0005": {
+        "count": 94865,
+        "sum": 20,
+        "mean": 0.000210825910504401
+      },
+      "185.175.0.4_185.175.0.2_u1_s0011": {
+        "count": 11670,
+        "sum": 0,
+        "mean": 0.0
+      },
+      "185.175.0.4_185.175.0.3_u1_s0002": {
+        "count": 115787,
+        "sum": 33,
+        "mean": 0.0002850060887664418
+      },
+      "185.175.0.5_185.175.0.2_u1_s0009": {
+        "count": 11701,
+        "sum": 0,
+        "mean": 0.0
+      },
+      "185.175.0.5_185.175.0.3_u1_s0004": {
+        "count": 122531,
+        "sum": 8432,
+        "mean": 0.06881523859268267
+      },
+      "185.175.0.7_185.175.0.4_u1_s0007": {
+        "count": 131220,
+        "sum": 100,
+        "mean": 0.0007620789513793629
+      },
+      "185.175.0.8_185.175.0.2_u1_s0013": {
+        "count": 11628,
+        "sum": 0,
+        "mean": 0.0
+      },
+      "185.175.0.8_185.175.0.3_u1_s0006": {
+        "count": 91629,
+        "sum": 25,
+        "mean": 0.00027283938491089063
+      },
+      "192.168.10.112_224.0.0.251_u1_s0017": {
+        "count": 4,
+        "sum": 4,
+        "mean": 1.0
+      },
+      "192.168.10.112_255.255.255.255_u1_s0015": {
+        "count": 4,
+        "sum": 4,
+        "mean": 1.0
+      },
+      "192.168.10.112_255.255.255.255_u1_s0016": {
+        "count": 4,
+        "sum": 4,
+        "mean": 1.0
+      },
+      "192.168.10.1_192.168.10.102_u1_s0014": {
+        "count": 2,
+        "sum": 0,
+        "mean": 0.0
+      }
+    },
+    "file_source_positive_rates": {
+      "attached_recon_flows.csv": {
+        "count": 14,
+        "sum": 12,
+        "mean": 0.8571428571428571
+      },
+      "substation-1.pcap": {
+        "count": 35000,
+        "sum": 2001,
+        "mean": 0.057171428571428574
+      },
+      "substation-10.pcap": {
+        "count": 35000,
+        "sum": 2185,
+        "mean": 0.06242857142857143
+      },
+      "substation-14.pcap": {
+        "count": 35000,
+        "sum": 2125,
+        "mean": 0.060714285714285714
+      },
+      "substation-2.pcap": {
+        "count": 35000,
+        "sum": 136,
+        "mean": 0.0038857142857142857
+      },
+      "substation-4.pcap": {
+        "count": 35000,
+        "sum": 2140,
+        "mean": 0.061142857142857145
+      },
+      "veth3efd353-0.pcap": {
+        "count": 35000,
+        "sum": 0,
+        "mean": 0.0
+      },
+      "veth3efd353-1.pcap": {
+        "count": 35000,
+        "sum": 0,
+        "mean": 0.0
+      },
+      "veth4edc015-0.pcap": {
+        "count": 137543,
+        "sum": 50,
+        "mean": 0.00036352268018001644
+      },
+      "veth4edc015-normal-4.pcap": {
+        "count": 35000,
+        "sum": 0,
+        "mean": 0.0
+      },
+      "veth5bbeaa2-0.pcap": {
+        "count": 216466,
+        "sum": 0,
+        "mean": 0.0
+      },
+      "veth5bbeaa2-normal-13.pcap": {
+        "count": 35000,
+        "sum": 0,
+        "mean": 0.0
+      },
+      "veth665f3cf-0.pcap": {
+        "count": 65610,
+        "sum": 50,
+        "mean": 0.0007620789513793629
+      },
+      "veth8bc3408-0.pcap": {
+        "count": 72018,
+        "sum": 0,
+        "mean": 0.0
+      },
+      "vethd9e14c0-0.pcap": {
+        "count": 72574,
+        "sum": 0,
+        "mean": 0.0
+      }
+    },
+    "host_pair_positive_rates": {
+      "185.175.0.2->185.175.0.4": {
+        "count": 11670,
+        "sum": 0,
+        "mean": 0.0
+      },
+      "185.175.0.2->185.175.0.5": {
+        "count": 11701,
+        "sum": 0,
+        "mean": 0.0
+      },
+      "185.175.0.2->185.175.0.8": {
+        "count": 11630,
+        "sum": 0,
+        "mean": 0.0
+      },
+      "185.175.0.3->185.175.0.4": {
+        "count": 130572,
+        "sum": 29,
+        "mean": 0.00022209968446527587
+      },
+      "185.175.0.3->185.175.0.5": {
+        "count": 122607,
+        "sum": 48,
+        "mean": 0.0003914947759915829
+      },
+      "185.175.0.3->185.175.0.8": {
+        "count": 94865,
+        "sum": 20,
+        "mean": 0.000210825910504401
+      },
+      "185.175.0.4->185.175.0.2": {
+        "count": 11670,
+        "sum": 0,
+        "mean": 0.0
+      },
+      "185.175.0.4->185.175.0.3": {
+        "count": 115787,
+        "sum": 33,
+        "mean": 0.0002850060887664418
+      },
+      "185.175.0.5->185.175.0.2": {
+        "count": 11701,
+        "sum": 0,
+        "mean": 0.0
+      },
+      "185.175.0.5->185.175.0.3": {
+        "count": 122531,
+        "sum": 8432,
+        "mean": 0.06881523859268267
+      },
+      "185.175.0.7->185.175.0.4": {
+        "count": 131220,
+        "sum": 100,
+        "mean": 0.0007620789513793629
+      },
+      "185.175.0.8->185.175.0.2": {
+        "count": 11628,
+        "sum": 0,
+        "mean": 0.0
+      },
+      "185.175.0.8->185.175.0.3": {
+        "count": 91629,
+        "sum": 25,
+        "mean": 0.00027283938491089063
+      },
+      "192.168.10.1->192.168.10.102": {
+        "count": 2,
+        "sum": 0,
+        "mean": 0.0
+      },
+      "192.168.10.112->224.0.0.251": {
+        "count": 4,
+        "sum": 4,
+        "mean": 1.0
+      },
+      "192.168.10.112->255.255.255.255": {
+        "count": 8,
+        "sum": 8,
+        "mean": 1.0
+      }
+    },
+    "concentration_summary": {
+      "fraction_of_raw_positives_in_single_session_s0004": 0.9693068168755029,
+      "fraction_of_as_provided_positive_windows_in_s0004": 0.966681208419675,
+      "fraction_of_rebuilt_positive_windows_in_s0004": 0.9419595314164004
+    }
+  },
+  "duplicate_interface_capture_leakage": {
+    "affected_date": "2023-02-01",
+    "files": [
+      "veth5bbeaa2-0.pcap",
+      "veth4edc015-0.pcap",
+      "vethd9e14c0-0.pcap",
+      "veth8bc3408-0.pcap",
+      "veth665f3cf-0.pcap"
+    ],
+    "duplicate_packets_removed_in_rebuilt": 282076,
+    "positive_duplicate_packets_removed": 50,
+    "explanation": "veth665f3cf-0.pcap (65,610 packets, 50 positives) is a simultaneous virtual-interface capture of the exact same traffic recorded in veth4edc015-0.pcap for session s0007 (100% packet match within <=1 ms). Treating pcaps as independent groups without deduplication would leak identical positive windows across train and test."
+  },
+  "overlapping_window_leakage": {
+    "as_provided_sequences": {
+      "n_windows": 175800,
+      "window_length": 20,
+      "pairs_of_consecutive_windows_sharing_packets": 175787,
+      "mean_shared_packets_when_overlapping": 15.0,
+      "random_80_20_test_windows": 35160,
+      "test_windows_sharing_ge1_packet_with_train": 35158,
+      "test_windows_sharing_ge1_packet_fraction": 0.9999431171786121,
+      "test_windows_sharing_ge15_packets_with_train": 35044,
+      "test_windows_sharing_ge15_packets_fraction": 0.9967007963594995,
+      "mean_test_window_packets_already_in_train": 19.860779294653014,
+      "mean_test_window_overlap_fraction_with_train": 0.9930389647326507,
+      "positive_test_windows_sharing_ge1_packet_fraction": 1.0,
+      "positive_test_windows_sharing_ge15_packets_fraction": 0.9975456776656667,
+      "test_windows_with_identical_20x7_feature_matrix_in_train": 1765,
+      "test_windows_with_identical_20x7_feature_matrix_fraction": 0.05019908987485779
+    },
+    "rebuilt_sequences": {
+      "n_windows": 119237,
+      "window_length": 20,
+      "pairs_of_consecutive_windows_sharing_packets": 119181,
+      "mean_shared_packets_when_overlapping": 15.0,
+      "random_80_20_test_windows": 23848,
+      "test_windows_sharing_ge1_packet_with_train": 23846,
+      "test_windows_sharing_ge1_packet_fraction": 0.9999161355249916,
+      "test_windows_sharing_ge15_packets_with_train": 23739,
+      "test_windows_sharing_ge15_packets_fraction": 0.9954293861120429,
+      "mean_test_window_packets_already_in_train": 19.82157832941966,
+      "mean_test_window_overlap_fraction_with_train": 0.9910789164709829,
+      "positive_test_windows_sharing_ge1_packet_fraction": 1.0,
+      "positive_test_windows_sharing_ge15_packets_fraction": 0.9920212765957447,
+      "group_split_shared_packets_between_train_and_test": 0
+    }
+  },
+  "protocol_field_shortcut_risk": {
+    "description": "In the supplied labels, 100% of packets with modbus_len==3 (all of which also have packet_size==75) are labelled 1, accounting for 96.71% of raw positive packets and 94.99% (1,784/1,878) of rebuilt positive windows. A static single-feature rule 'any packet in window has modbus_len==3' achieves Precision=1.0000, Recall=0.9499, F1=0.9743 on rebuilt windows without using any sequence or timing information.",
+    "trivial_rule_any_modbus_len_eq_3_on_rebuilt_windows": {
+      "tp": 1784,
+      "fp": 0,
+      "fn": 94,
+      "tn": 117359,
+      "precision": 1.0,
+      "recall": 0.9499467518636848,
+      "f1": 0.9743309666848717
+    },
+    "per_group_breakdown": {
+      "G01_0122_normal4": {
+        "windows": 6994,
+        "positive_windows": 0,
+        "positive_windows_with_modbus_len3": 0,
+        "positive_windows_with_fc5_len3": 0,
+        "positive_windows_without_modbus_len3": 0
+      },
+      "G02_0123_normal13": {
+        "windows": 6980,
+        "positive_windows": 0,
+        "positive_windows_with_modbus_len3": 0,
+        "positive_windows_with_fc5_len3": 0,
+        "positive_windows_without_modbus_len3": 0
+      },
+      "G03_0201_veth": {
+        "windows": 56403,
+        "positive_windows": 10,
+        "positive_windows_with_modbus_len3": 0,
+        "positive_windows_with_fc5_len3": 0,
+        "positive_windows_without_modbus_len3": 10
+      },
+      "G04_0315_sub1": {
+        "windows": 6983,
+        "positive_windows": 415,
+        "positive_windows_with_modbus_len3": 415,
+        "positive_windows_with_fc5_len3": 415,
+        "positive_windows_without_modbus_len3": 0
+      },
+      "G05_0315_sub2": {
+        "windows": 6979,
+        "positive_windows": 86,
+        "positive_windows_with_modbus_len3": 24,
+        "positive_windows_with_fc5_len3": 9,
+        "positive_windows_without_modbus_len3": 62
+      },
+      "G06_0316_sub4": {
+        "windows": 6980,
+        "positive_windows": 454,
+        "positive_windows_with_modbus_len3": 454,
+        "positive_windows_with_fc5_len3": 454,
+        "positive_windows_without_modbus_len3": 0
+      },
+      "G07_0319_sub10": {
+        "windows": 6979,
+        "positive_windows": 470,
+        "positive_windows_with_modbus_len3": 448,
+        "positive_windows_with_fc5_len3": 448,
+        "positive_windows_without_modbus_len3": 22
+      },
+      "G08_0320_sub14": {
+        "windows": 6981,
+        "positive_windows": 443,
+        "positive_windows_with_modbus_len3": 443,
+        "positive_windows_with_fc5_len3": 443,
+        "positive_windows_without_modbus_len3": 0
+      },
+      "G09_0323_veth3e0": {
+        "windows": 6978,
+        "positive_windows": 0,
+        "positive_windows_with_modbus_len3": 0,
+        "positive_windows_with_fc5_len3": 0,
+        "positive_windows_without_modbus_len3": 0
+      },
+      "G10_0323_veth3e1": {
+        "windows": 6980,
+        "positive_windows": 0,
+        "positive_windows_with_modbus_len3": 0,
+        "positive_windows_with_fc5_len3": 0,
+        "positive_windows_without_modbus_len3": 0
+      }
+    },
+    "mitigation_in_experiments": "Preserve the verified protocol features in the primary comparison (Models A, B, C, D) AND run a dedicated size/length-shortcut ablation removing modbus_len and packet_size to test whether temporal modelling helps when the trivial frame-length rule is unavailable."
+  }
+}

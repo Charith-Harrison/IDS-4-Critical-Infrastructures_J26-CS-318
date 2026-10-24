@@ -1,0 +1,813 @@
+{
+  "primary_scheme": "locgo_10fold",
+  "secondary_scheme": "sgkf_5fold",
+  "diagnostic_schemes": [
+    "loso_session_5fold",
+    "random_5fold_rebuilt"
+  ],
+  "locgo_10fold": {
+    "description": "Leave-One-Capture-Group-Out across all 10 independent capture episodes (G01..G10). 6 capture groups contain positive + normal windows; 4 contain normal-only traffic. Inner group-independent validation (1 positive + 1 normal group) selects early stopping and operational threshold (targeting validation FPR < 0.05).",
+    "leakage_verification": {
+      "all_folds_zero_packet_overlap": true,
+      "fold_checks": [
+        {
+          "fold_id": "LOCGO_00_G01_0122_normal4",
+          "fit_packets": 492045,
+          "val_packets": 69980,
+          "test_packets": 35000,
+          "shared_fit_test_packets": 0,
+          "shared_val_test_packets": 0,
+          "shared_fit_val_packets": 0
+        },
+        {
+          "fold_id": "LOCGO_01_G02_0123_normal13",
+          "fit_packets": 492070,
+          "val_packets": 69965,
+          "test_packets": 34990,
+          "shared_fit_test_packets": 0,
+          "shared_val_test_packets": 0,
+          "shared_fit_val_packets": 0
+        },
+        {
+          "fold_id": "LOCGO_02_G03_0201_veth",
+          "fit_packets": 244935,
+          "val_packets": 69970,
+          "test_packets": 282120,
+          "shared_fit_test_packets": 0,
+          "shared_val_test_packets": 0,
+          "shared_fit_val_packets": 0
+        },
+        {
+          "fold_id": "LOCGO_03_G04_0315_sub1",
+          "fit_packets": 492050,
+          "val_packets": 69985,
+          "test_packets": 34990,
+          "shared_fit_test_packets": 0,
+          "shared_val_test_packets": 0,
+          "shared_fit_val_packets": 0
+        },
+        {
+          "fold_id": "LOCGO_04_G05_0315_sub2",
+          "fit_packets": 492050,
+          "val_packets": 69990,
+          "test_packets": 34985,
+          "shared_fit_test_packets": 0,
+          "shared_val_test_packets": 0,
+          "shared_fit_val_packets": 0
+        },
+        {
+          "fold_id": "LOCGO_05_G06_0316_sub4",
+          "fit_packets": 492060,
+          "val_packets": 69975,
+          "test_packets": 34990,
+          "shared_fit_test_packets": 0,
+          "shared_val_test_packets": 0,
+          "shared_fit_val_packets": 0
+        },
+        {
+          "fold_id": "LOCGO_06_G07_0319_sub10",
+          "fit_packets": 492070,
+          "val_packets": 69970,
+          "test_packets": 34985,
+          "shared_fit_test_packets": 0,
+          "shared_val_test_packets": 0,
+          "shared_fit_val_packets": 0
+        },
+        {
+          "fold_id": "LOCGO_07_G08_0320_sub14",
+          "fit_packets": 492055,
+          "val_packets": 69975,
+          "test_packets": 34995,
+          "shared_fit_test_packets": 0,
+          "shared_val_test_packets": 0,
+          "shared_fit_val_packets": 0
+        },
+        {
+          "fold_id": "LOCGO_08_G09_0323_veth3e0",
+          "fit_packets": 492070,
+          "val_packets": 69975,
+          "test_packets": 34980,
+          "shared_fit_test_packets": 0,
+          "shared_val_test_packets": 0,
+          "shared_fit_val_packets": 0
+        },
+        {
+          "fold_id": "LOCGO_09_G10_0323_veth3e1",
+          "fit_packets": 492040,
+          "val_packets": 69995,
+          "test_packets": 34990,
+          "shared_fit_test_packets": 0,
+          "shared_val_test_packets": 0,
+          "shared_fit_val_packets": 0
+        }
+      ]
+    },
+    "folds": [
+      {
+        "fold_id": "LOCGO_00_G01_0122_normal4",
+        "fold_index": 0,
+        "test_groups": [
+          "G01_0122_normal4"
+        ],
+        "val_groups": [
+          "G02_0123_normal13",
+          "G04_0315_sub1"
+        ],
+        "fit_groups": [
+          "G03_0201_veth",
+          "G05_0315_sub2",
+          "G06_0316_sub4",
+          "G07_0319_sub10",
+          "G08_0320_sub14",
+          "G09_0323_veth3e0",
+          "G10_0323_veth3e1"
+        ],
+        "n_fit": 98280,
+        "n_fit_pos": 1463,
+        "n_fit_neg": 96817,
+        "n_val": 13963,
+        "n_val_pos": 415,
+        "n_val_neg": 13548,
+        "n_test": 6994,
+        "n_test_pos": 0,
+        "n_test_neg": 6994,
+        "test_is_single_class": true,
+        "test_class_note": "Normal-only capture group (0 positive windows); ROC-AUC, PR-AUC, Recall, Precision, F1 are undefined (None) on this fold alone; evaluate False Positive Rate (FPR) and specificity, and include in pooled OOF evaluation."
+      },
+      {
+        "fold_id": "LOCGO_01_G02_0123_normal13",
+        "fold_index": 1,
+        "test_groups": [
+          "G02_0123_normal13"
+        ],
+        "val_groups": [
+          "G05_0315_sub2",
+          "G09_0323_veth3e0"
+        ],
+        "fit_groups": [
+          "G01_0122_normal4",
+          "G03_0201_veth",
+          "G04_0315_sub1",
+          "G06_0316_sub4",
+          "G07_0319_sub10",
+          "G08_0320_sub14",
+          "G10_0323_veth3e1"
+        ],
+        "n_fit": 98300,
+        "n_fit_pos": 1792,
+        "n_fit_neg": 96508,
+        "n_val": 13957,
+        "n_val_pos": 86,
+        "n_val_neg": 13871,
+        "n_test": 6980,
+        "n_test_pos": 0,
+        "n_test_neg": 6980,
+        "test_is_single_class": true,
+        "test_class_note": "Normal-only capture group (0 positive windows); ROC-AUC, PR-AUC, Recall, Precision, F1 are undefined (None) on this fold alone; evaluate False Positive Rate (FPR) and specificity, and include in pooled OOF evaluation."
+      },
+      {
+        "fold_id": "LOCGO_02_G03_0201_veth",
+        "fold_index": 2,
+        "test_groups": [
+          "G03_0201_veth"
+        ],
+        "val_groups": [
+          "G06_0316_sub4",
+          "G09_0323_veth3e0"
+        ],
+        "fit_groups": [
+          "G01_0122_normal4",
+          "G02_0123_normal13",
+          "G04_0315_sub1",
+          "G05_0315_sub2",
+          "G07_0319_sub10",
+          "G08_0320_sub14",
+          "G10_0323_veth3e1"
+        ],
+        "n_fit": 48876,
+        "n_fit_pos": 1414,
+        "n_fit_neg": 47462,
+        "n_val": 13958,
+        "n_val_pos": 454,
+        "n_val_neg": 13504,
+        "n_test": 56403,
+        "n_test_pos": 10,
+        "n_test_neg": 56393,
+        "test_is_single_class": false,
+        "test_class_note": "Contains both positive and normal windows."
+      },
+      {
+        "fold_id": "LOCGO_03_G04_0315_sub1",
+        "fold_index": 3,
+        "test_groups": [
+          "G04_0315_sub1"
+        ],
+        "val_groups": [
+          "G08_0320_sub14",
+          "G10_0323_veth3e1"
+        ],
+        "fit_groups": [
+          "G01_0122_normal4",
+          "G02_0123_normal13",
+          "G03_0201_veth",
+          "G05_0315_sub2",
+          "G06_0316_sub4",
+          "G07_0319_sub10",
+          "G09_0323_veth3e0"
+        ],
+        "n_fit": 98293,
+        "n_fit_pos": 1020,
+        "n_fit_neg": 97273,
+        "n_val": 13961,
+        "n_val_pos": 443,
+        "n_val_neg": 13518,
+        "n_test": 6983,
+        "n_test_pos": 415,
+        "n_test_neg": 6568,
+        "test_is_single_class": false,
+        "test_class_note": "Contains both positive and normal windows."
+      },
+      {
+        "fold_id": "LOCGO_04_G05_0315_sub2",
+        "fold_index": 4,
+        "test_groups": [
+          "G05_0315_sub2"
+        ],
+        "val_groups": [
+          "G01_0122_normal4",
+          "G04_0315_sub1"
+        ],
+        "fit_groups": [
+          "G02_0123_normal13",
+          "G03_0201_veth",
+          "G06_0316_sub4",
+          "G07_0319_sub10",
+          "G08_0320_sub14",
+          "G09_0323_veth3e0",
+          "G10_0323_veth3e1"
+        ],
+        "n_fit": 98281,
+        "n_fit_pos": 1377,
+        "n_fit_neg": 96904,
+        "n_val": 13977,
+        "n_val_pos": 415,
+        "n_val_neg": 13562,
+        "n_test": 6979,
+        "n_test_pos": 86,
+        "n_test_neg": 6893,
+        "test_is_single_class": false,
+        "test_class_note": "Contains both positive and normal windows."
+      },
+      {
+        "fold_id": "LOCGO_05_G06_0316_sub4",
+        "fold_index": 5,
+        "test_groups": [
+          "G06_0316_sub4"
+        ],
+        "val_groups": [
+          "G02_0123_normal13",
+          "G05_0315_sub2"
+        ],
+        "fit_groups": [
+          "G01_0122_normal4",
+          "G03_0201_veth",
+          "G04_0315_sub1",
+          "G07_0319_sub10",
+          "G08_0320_sub14",
+          "G09_0323_veth3e0",
+          "G10_0323_veth3e1"
+        ],
+        "n_fit": 98298,
+        "n_fit_pos": 1338,
+        "n_fit_neg": 96960,
+        "n_val": 13959,
+        "n_val_pos": 86,
+        "n_val_neg": 13873,
+        "n_test": 6980,
+        "n_test_pos": 454,
+        "n_test_neg": 6526,
+        "test_is_single_class": false,
+        "test_class_note": "Contains both positive and normal windows."
+      },
+      {
+        "fold_id": "LOCGO_06_G07_0319_sub10",
+        "fold_index": 6,
+        "test_groups": [
+          "G07_0319_sub10"
+        ],
+        "val_groups": [
+          "G06_0316_sub4",
+          "G09_0323_veth3e0"
+        ],
+        "fit_groups": [
+          "G01_0122_normal4",
+          "G02_0123_normal13",
+          "G03_0201_veth",
+          "G04_0315_sub1",
+          "G05_0315_sub2",
+          "G08_0320_sub14",
+          "G10_0323_veth3e1"
+        ],
+        "n_fit": 98300,
+        "n_fit_pos": 954,
+        "n_fit_neg": 97346,
+        "n_val": 13958,
+        "n_val_pos": 454,
+        "n_val_neg": 13504,
+        "n_test": 6979,
+        "n_test_pos": 470,
+        "n_test_neg": 6509,
+        "test_is_single_class": false,
+        "test_class_note": "Contains both positive and normal windows."
+      },
+      {
+        "fold_id": "LOCGO_07_G08_0320_sub14",
+        "fold_index": 7,
+        "test_groups": [
+          "G08_0320_sub14"
+        ],
+        "val_groups": [
+          "G07_0319_sub10",
+          "G10_0323_veth3e1"
+        ],
+        "fit_groups": [
+          "G01_0122_normal4",
+          "G02_0123_normal13",
+          "G03_0201_veth",
+          "G04_0315_sub1",
+          "G05_0315_sub2",
+          "G06_0316_sub4",
+          "G09_0323_veth3e0"
+        ],
+        "n_fit": 98297,
+        "n_fit_pos": 965,
+        "n_fit_neg": 97332,
+        "n_val": 13959,
+        "n_val_pos": 470,
+        "n_val_neg": 13489,
+        "n_test": 6981,
+        "n_test_pos": 443,
+        "n_test_neg": 6538,
+        "test_is_single_class": false,
+        "test_class_note": "Contains both positive and normal windows."
+      },
+      {
+        "fold_id": "LOCGO_08_G09_0323_veth3e0",
+        "fold_index": 8,
+        "test_groups": [
+          "G09_0323_veth3e0"
+        ],
+        "val_groups": [
+          "G07_0319_sub10",
+          "G10_0323_veth3e1"
+        ],
+        "fit_groups": [
+          "G01_0122_normal4",
+          "G02_0123_normal13",
+          "G03_0201_veth",
+          "G04_0315_sub1",
+          "G05_0315_sub2",
+          "G06_0316_sub4",
+          "G08_0320_sub14"
+        ],
+        "n_fit": 98300,
+        "n_fit_pos": 1408,
+        "n_fit_neg": 96892,
+        "n_val": 13959,
+        "n_val_pos": 470,
+        "n_val_neg": 13489,
+        "n_test": 6978,
+        "n_test_pos": 0,
+        "n_test_neg": 6978,
+        "test_is_single_class": true,
+        "test_class_note": "Normal-only capture group (0 positive windows); ROC-AUC, PR-AUC, Recall, Precision, F1 are undefined (None) on this fold alone; evaluate False Positive Rate (FPR) and specificity, and include in pooled OOF evaluation."
+      },
+      {
+        "fold_id": "LOCGO_09_G10_0323_veth3e1",
+        "fold_index": 9,
+        "test_groups": [
+          "G10_0323_veth3e1"
+        ],
+        "val_groups": [
+          "G01_0122_normal4",
+          "G08_0320_sub14"
+        ],
+        "fit_groups": [
+          "G02_0123_normal13",
+          "G03_0201_veth",
+          "G04_0315_sub1",
+          "G05_0315_sub2",
+          "G06_0316_sub4",
+          "G07_0319_sub10",
+          "G09_0323_veth3e0"
+        ],
+        "n_fit": 98282,
+        "n_fit_pos": 1435,
+        "n_fit_neg": 96847,
+        "n_val": 13975,
+        "n_val_pos": 443,
+        "n_val_neg": 13532,
+        "n_test": 6980,
+        "n_test_pos": 0,
+        "n_test_neg": 6980,
+        "test_is_single_class": true,
+        "test_class_note": "Normal-only capture group (0 positive windows); ROC-AUC, PR-AUC, Recall, Precision, F1 are undefined (None) on this fold alone; evaluate False Positive Rate (FPR) and specificity, and include in pooled OOF evaluation."
+      }
+    ]
+  },
+  "sgkf_5fold": {
+    "description": "5-fold group-independent cross-validation pairing positive and normal capture groups so that every fold contains both classes and has zero shared packets across fit/val/test.",
+    "leakage_verification": {
+      "all_folds_zero_packet_overlap": true,
+      "fold_checks": [
+        {
+          "fold_id": "SGKF5_00",
+          "fit_packets": 457055,
+          "val_packets": 69980,
+          "test_packets": 69990,
+          "shared_fit_test_packets": 0,
+          "shared_val_test_packets": 0,
+          "shared_fit_val_packets": 0
+        },
+        {
+          "fold_id": "SGKF5_01",
+          "fit_packets": 457080,
+          "val_packets": 69965,
+          "test_packets": 69980,
+          "shared_fit_test_packets": 0,
+          "shared_val_test_packets": 0,
+          "shared_fit_val_packets": 0
+        },
+        {
+          "fold_id": "SGKF5_02",
+          "fit_packets": 457075,
+          "val_packets": 69985,
+          "test_packets": 69965,
+          "shared_fit_test_packets": 0,
+          "shared_val_test_packets": 0,
+          "shared_fit_val_packets": 0
+        },
+        {
+          "fold_id": "SGKF5_03",
+          "fit_packets": 209935,
+          "val_packets": 317105,
+          "test_packets": 69985,
+          "shared_fit_test_packets": 0,
+          "shared_val_test_packets": 0,
+          "shared_fit_val_packets": 0
+        },
+        {
+          "fold_id": "SGKF5_04",
+          "fit_packets": 209930,
+          "val_packets": 69990,
+          "test_packets": 317105,
+          "shared_fit_test_packets": 0,
+          "shared_val_test_packets": 0,
+          "shared_fit_val_packets": 0
+        }
+      ]
+    },
+    "folds": [
+      {
+        "fold_id": "SGKF5_00",
+        "fold_index": 0,
+        "test_groups": [
+          "G01_0122_normal4",
+          "G04_0315_sub1"
+        ],
+        "val_groups": [
+          "G02_0123_normal13",
+          "G06_0316_sub4"
+        ],
+        "fit_groups": [
+          "G03_0201_veth",
+          "G05_0315_sub2",
+          "G07_0319_sub10",
+          "G08_0320_sub14",
+          "G09_0323_veth3e0",
+          "G10_0323_veth3e1"
+        ],
+        "n_fit": 91300,
+        "n_fit_pos": 1009,
+        "n_fit_neg": 90291,
+        "n_val": 13960,
+        "n_val_pos": 454,
+        "n_val_neg": 13506,
+        "n_test": 13977,
+        "n_test_pos": 415,
+        "n_test_neg": 13562,
+        "test_is_single_class": false
+      },
+      {
+        "fold_id": "SGKF5_01",
+        "fold_index": 1,
+        "test_groups": [
+          "G02_0123_normal13",
+          "G06_0316_sub4"
+        ],
+        "val_groups": [
+          "G07_0319_sub10",
+          "G09_0323_veth3e0"
+        ],
+        "fit_groups": [
+          "G01_0122_normal4",
+          "G03_0201_veth",
+          "G04_0315_sub1",
+          "G05_0315_sub2",
+          "G08_0320_sub14",
+          "G10_0323_veth3e1"
+        ],
+        "n_fit": 91320,
+        "n_fit_pos": 954,
+        "n_fit_neg": 90366,
+        "n_val": 13957,
+        "n_val_pos": 470,
+        "n_val_neg": 13487,
+        "n_test": 13960,
+        "n_test_pos": 454,
+        "n_test_neg": 13506,
+        "test_is_single_class": false
+      },
+      {
+        "fold_id": "SGKF5_02",
+        "fold_index": 2,
+        "test_groups": [
+          "G07_0319_sub10",
+          "G09_0323_veth3e0"
+        ],
+        "val_groups": [
+          "G08_0320_sub14",
+          "G10_0323_veth3e1"
+        ],
+        "fit_groups": [
+          "G01_0122_normal4",
+          "G02_0123_normal13",
+          "G03_0201_veth",
+          "G04_0315_sub1",
+          "G05_0315_sub2",
+          "G06_0316_sub4"
+        ],
+        "n_fit": 91319,
+        "n_fit_pos": 965,
+        "n_fit_neg": 90354,
+        "n_val": 13961,
+        "n_val_pos": 443,
+        "n_val_neg": 13518,
+        "n_test": 13957,
+        "n_test_pos": 470,
+        "n_test_neg": 13487,
+        "test_is_single_class": false
+      },
+      {
+        "fold_id": "SGKF5_03",
+        "fold_index": 3,
+        "test_groups": [
+          "G08_0320_sub14",
+          "G10_0323_veth3e1"
+        ],
+        "val_groups": [
+          "G03_0201_veth",
+          "G05_0315_sub2"
+        ],
+        "fit_groups": [
+          "G01_0122_normal4",
+          "G02_0123_normal13",
+          "G04_0315_sub1",
+          "G06_0316_sub4",
+          "G07_0319_sub10",
+          "G09_0323_veth3e0"
+        ],
+        "n_fit": 41894,
+        "n_fit_pos": 1339,
+        "n_fit_neg": 40555,
+        "n_val": 63382,
+        "n_val_pos": 96,
+        "n_val_neg": 63286,
+        "n_test": 13961,
+        "n_test_pos": 443,
+        "n_test_neg": 13518,
+        "test_is_single_class": false
+      },
+      {
+        "fold_id": "SGKF5_04",
+        "fold_index": 4,
+        "test_groups": [
+          "G03_0201_veth",
+          "G05_0315_sub2"
+        ],
+        "val_groups": [
+          "G01_0122_normal4",
+          "G04_0315_sub1"
+        ],
+        "fit_groups": [
+          "G02_0123_normal13",
+          "G06_0316_sub4",
+          "G07_0319_sub10",
+          "G08_0320_sub14",
+          "G09_0323_veth3e0",
+          "G10_0323_veth3e1"
+        ],
+        "n_fit": 41878,
+        "n_fit_pos": 1367,
+        "n_fit_neg": 40511,
+        "n_val": 13977,
+        "n_val_pos": 415,
+        "n_val_neg": 13562,
+        "n_test": 63382,
+        "n_test_pos": 96,
+        "n_test_neg": 63286,
+        "test_is_single_class": false
+      }
+    ]
+  },
+  "loso_session_5fold": {
+    "description": "Diagnostic 5-fold StratifiedGroupKFold grouped strictly by session_id (directional host pair). Included to show the impact of host-pair holdout when 94.20% (1,769/1,878) of positive windows belong to a single directional flow (185.175.0.5_185.175.0.3_u1_s0004).",
+    "folds": [
+      {
+        "fold_id": "SESSION_GROUP_00",
+        "fold_index": 0,
+        "test_session_ids": [
+          "185.175.0.3_185.175.0.4_u1_s0001",
+          "185.175.0.4_185.175.0.2_u1_s0011"
+        ],
+        "train_session_ids": [
+          "185.175.0.2_185.175.0.4_u1_s0010",
+          "185.175.0.2_185.175.0.5_u1_s0008",
+          "185.175.0.2_185.175.0.8_u1_s0012",
+          "185.175.0.3_185.175.0.5_u1_s0003",
+          "185.175.0.3_185.175.0.8_u1_s0005",
+          "185.175.0.4_185.175.0.3_u1_s0002",
+          "185.175.0.5_185.175.0.2_u1_s0009",
+          "185.175.0.5_185.175.0.3_u1_s0004",
+          "185.175.0.7_185.175.0.4_u1_s0007",
+          "185.175.0.8_185.175.0.2_u1_s0013",
+          "185.175.0.8_185.175.0.3_u1_s0006"
+        ],
+        "n_train": 98014,
+        "n_train_pos": 1856,
+        "n_test": 21223,
+        "n_test_pos": 22,
+        "test_is_single_class": false,
+        "train_is_single_class": false
+      },
+      {
+        "fold_id": "SESSION_GROUP_01",
+        "fold_index": 1,
+        "test_session_ids": [
+          "185.175.0.2_185.175.0.8_u1_s0012",
+          "185.175.0.3_185.175.0.5_u1_s0003",
+          "185.175.0.5_185.175.0.2_u1_s0009"
+        ],
+        "train_session_ids": [
+          "185.175.0.2_185.175.0.4_u1_s0010",
+          "185.175.0.2_185.175.0.5_u1_s0008",
+          "185.175.0.3_185.175.0.4_u1_s0001",
+          "185.175.0.3_185.175.0.8_u1_s0005",
+          "185.175.0.4_185.175.0.2_u1_s0011",
+          "185.175.0.4_185.175.0.3_u1_s0002",
+          "185.175.0.5_185.175.0.3_u1_s0004",
+          "185.175.0.7_185.175.0.4_u1_s0007",
+          "185.175.0.8_185.175.0.2_u1_s0013",
+          "185.175.0.8_185.175.0.3_u1_s0006"
+        ],
+        "n_train": 97340,
+        "n_train_pos": 1855,
+        "n_test": 21897,
+        "n_test_pos": 23,
+        "test_is_single_class": false,
+        "train_is_single_class": false
+      },
+      {
+        "fold_id": "SESSION_GROUP_02",
+        "fold_index": 2,
+        "test_session_ids": [
+          "185.175.0.4_185.175.0.3_u1_s0002",
+          "185.175.0.8_185.175.0.3_u1_s0006"
+        ],
+        "train_session_ids": [
+          "185.175.0.2_185.175.0.4_u1_s0010",
+          "185.175.0.2_185.175.0.5_u1_s0008",
+          "185.175.0.2_185.175.0.8_u1_s0012",
+          "185.175.0.3_185.175.0.4_u1_s0001",
+          "185.175.0.3_185.175.0.5_u1_s0003",
+          "185.175.0.3_185.175.0.8_u1_s0005",
+          "185.175.0.4_185.175.0.2_u1_s0011",
+          "185.175.0.5_185.175.0.2_u1_s0009",
+          "185.175.0.5_185.175.0.3_u1_s0004",
+          "185.175.0.7_185.175.0.4_u1_s0007",
+          "185.175.0.8_185.175.0.2_u1_s0013"
+        ],
+        "n_train": 92195,
+        "n_train_pos": 1832,
+        "n_test": 27042,
+        "n_test_pos": 46,
+        "test_is_single_class": false,
+        "train_is_single_class": false
+      },
+      {
+        "fold_id": "SESSION_GROUP_03",
+        "fold_index": 3,
+        "test_session_ids": [
+          "185.175.0.2_185.175.0.4_u1_s0010",
+          "185.175.0.2_185.175.0.5_u1_s0008",
+          "185.175.0.5_185.175.0.3_u1_s0004",
+          "185.175.0.8_185.175.0.2_u1_s0013"
+        ],
+        "train_session_ids": [
+          "185.175.0.2_185.175.0.8_u1_s0012",
+          "185.175.0.3_185.175.0.4_u1_s0001",
+          "185.175.0.3_185.175.0.5_u1_s0003",
+          "185.175.0.3_185.175.0.8_u1_s0005",
+          "185.175.0.4_185.175.0.2_u1_s0011",
+          "185.175.0.4_185.175.0.3_u1_s0002",
+          "185.175.0.5_185.175.0.2_u1_s0009",
+          "185.175.0.7_185.175.0.4_u1_s0007",
+          "185.175.0.8_185.175.0.3_u1_s0006"
+        ],
+        "n_train": 95027,
+        "n_train_pos": 109,
+        "n_test": 24210,
+        "n_test_pos": 1769,
+        "test_is_single_class": false,
+        "train_is_single_class": false
+      },
+      {
+        "fold_id": "SESSION_GROUP_04",
+        "fold_index": 4,
+        "test_session_ids": [
+          "185.175.0.3_185.175.0.8_u1_s0005",
+          "185.175.0.7_185.175.0.4_u1_s0007"
+        ],
+        "train_session_ids": [
+          "185.175.0.2_185.175.0.4_u1_s0010",
+          "185.175.0.2_185.175.0.5_u1_s0008",
+          "185.175.0.2_185.175.0.8_u1_s0012",
+          "185.175.0.3_185.175.0.4_u1_s0001",
+          "185.175.0.3_185.175.0.5_u1_s0003",
+          "185.175.0.4_185.175.0.2_u1_s0011",
+          "185.175.0.4_185.175.0.3_u1_s0002",
+          "185.175.0.5_185.175.0.2_u1_s0009",
+          "185.175.0.5_185.175.0.3_u1_s0004",
+          "185.175.0.8_185.175.0.2_u1_s0013",
+          "185.175.0.8_185.175.0.3_u1_s0006"
+        ],
+        "n_train": 94372,
+        "n_train_pos": 1860,
+        "n_test": 24865,
+        "n_test_pos": 18,
+        "test_is_single_class": false,
+        "train_is_single_class": false
+      }
+    ]
+  },
+  "random_5fold_rebuilt": {
+    "description": "Diagnostic-only 5-fold StratifiedKFold random split across overlapping windows. Demonstrates optimistic bias from ~99.99% of test windows sharing packets with train.",
+    "folds": [
+      {
+        "fold_id": "RANDOM5_00",
+        "fold_index": 0,
+        "n_train": 95389,
+        "n_test": 23848,
+        "n_test_pos": 376,
+        "shared_packets_between_train_and_test": 350435,
+        "fraction_of_test_windows_sharing_ge1_packet_with_train": 0.9999161355249916
+      },
+      {
+        "fold_id": "RANDOM5_01",
+        "fold_index": 1,
+        "n_train": 95389,
+        "n_test": 23848,
+        "n_test_pos": 376,
+        "shared_packets_between_train_and_test": 350725,
+        "fraction_of_test_windows_sharing_ge1_packet_with_train": 0.9999161355249916
+      },
+      {
+        "fold_id": "RANDOM5_02",
+        "fold_index": 2,
+        "n_train": 95390,
+        "n_test": 23847,
+        "n_test_pos": 375,
+        "shared_packets_between_train_and_test": 350115,
+        "fraction_of_test_windows_sharing_ge1_packet_with_train": 0.999916132008219
+      },
+      {
+        "fold_id": "RANDOM5_03",
+        "fold_index": 3,
+        "n_train": 95390,
+        "n_test": 23847,
+        "n_test_pos": 375,
+        "shared_packets_between_train_and_test": 351125,
+        "fraction_of_test_windows_sharing_ge1_packet_with_train": 0.9999580660041095
+      },
+      {
+        "fold_id": "RANDOM5_04",
+        "fold_index": 4,
+        "n_train": 95390,
+        "n_test": 23847,
+        "n_test_pos": 376,
+        "shared_packets_between_train_and_test": 352540,
+        "fraction_of_test_windows_sharing_ge1_packet_with_train": 0.999916132008219
+      }
+    ]
+  }
+}

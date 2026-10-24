@@ -1,0 +1,392 @@
+{
+  "raw_files": [
+    {
+      "original_sha256_before": "865ee1ef879076c297dc4e3e7ea8d0d991e17a26ed2d4a13b20c62ab4a7af354",
+      "original_size": 19321,
+      "original_mtime": 1789206720.081582,
+      "source": "D:\\Github\\IDS-4-Critical-Infrastructures_J26-CS-318\\Dataset\\attack_events_mapped.xlsx",
+      "sheets": [
+        "attack_events_mapped"
+      ],
+      "rows_including_header": 159,
+      "output": "D:\\Github\\IDS-4-Critical-Infrastructures_J26-CS-318\\C2_Reconnaissance_Detection\\data\\raw\\attack_events_mapped.csv",
+      "seconds": 0.0,
+      "original_sha256_after": "865ee1ef879076c297dc4e3e7ea8d0d991e17a26ed2d4a13b20c62ab4a7af354",
+      "copy_sha256": "a21d1470b5cd75e849dce5a4be7c3f1a9fff21f5edaf39f2139b35f4a0c5478b"
+    },
+    {
+      "original_sha256_before": "34f24c30b0004ba1a1d209113aade7f7b44e486de2380c33ae0ea79227c1f904",
+      "original_size": 55804545,
+      "original_mtime": 1789206468.0898707,
+      "source": "D:\\Github\\IDS-4-Critical-Infrastructures_J26-CS-318\\Dataset\\recon_labeled_packets_ALL.csv.xlsx",
+      "sheets": [
+        "recon_labeled_packets_ALL"
+      ],
+      "rows_including_header": 879226,
+      "output": "D:\\Github\\IDS-4-Critical-Infrastructures_J26-CS-318\\C2_Reconnaissance_Detection\\data\\raw\\recon_labeled_packets_ALL.csv",
+      "seconds": 72.4,
+      "original_sha256_after": "34f24c30b0004ba1a1d209113aade7f7b44e486de2380c33ae0ea79227c1f904",
+      "copy_sha256": "1a09b417a450e18b4828a63be8a1437317340db38e42b4ad2e8cf5f60ec4bd55"
+    },
+    {
+      "original_sha256_before": "249a6e57ff943d14ce69b855676f98a722f885e692688cc4af652a88df82b399",
+      "original_size": 13383761,
+      "original_mtime": 1789206309.9489,
+      "source": "D:\\Github\\IDS-4-Critical-Infrastructures_J26-CS-318\\Dataset\\recon_sequences_ALL.csv.xlsx",
+      "sheets": [
+        "recon_sequences_ALL"
+      ],
+      "rows_including_header": 175801,
+      "output": "D:\\Github\\IDS-4-Critical-Infrastructures_J26-CS-318\\C2_Reconnaissance_Detection\\data\\raw\\recon_sequences_ALL.csv",
+      "seconds": 14.9,
+      "original_sha256_after": "249a6e57ff943d14ce69b855676f98a722f885e692688cc4af652a88df82b399",
+      "copy_sha256": "49e31cf37f0768e4244ba12a2f59e431d18ba95bbe066b350ed73319a6413cf5"
+    }
+  ],
+  "note_format": "Supplied files are named *.csv.xlsx but are OOXML workbooks (zip magic 'PK'); one sheet each. CSV working copies were streamed with openpyxl; originals verified unchanged by SHA-256 before/after.",
+  "packets": {
+    "rows": 879225,
+    "columns": [
+      "timestamp",
+      "src_ip",
+      "dst_ip",
+      "unit_id",
+      "func_code",
+      "modbus_len",
+      "register_start",
+      "quantity",
+      "packet_size",
+      "time_delta",
+      "session_id",
+      "sequence_position",
+      "label",
+      "file_source"
+    ],
+    "column_profile": {
+      "timestamp": {
+        "dtype": "string",
+        "missing": 0,
+        "n_unique": 879148
+      },
+      "src_ip": {
+        "dtype": "string",
+        "missing": 0,
+        "n_unique": 8,
+        "value_counts": {
+          "185.175.0.3": 348044,
+          "185.175.0.5": 134232,
+          "185.175.0.7": 131220,
+          "185.175.0.4": 127457,
+          "185.175.0.8": 103257,
+          "185.175.0.2": 35001,
+          "192.168.10.112": 12,
+          "192.168.10.1": 2
+        }
+      },
+      "dst_ip": {
+        "dtype": "string",
+        "missing": 0,
+        "n_unique": 8,
+        "value_counts": {
+          "185.175.0.3": 329947,
+          "185.175.0.4": 273462,
+          "185.175.0.5": 134308,
+          "185.175.0.8": 106495,
+          "185.175.0.2": 34999,
+          "255.255.255.255": 8,
+          "224.0.0.251": 4,
+          "192.168.10.102": 2
+        }
+      },
+      "unit_id": {
+        "dtype": "int64",
+        "missing": 0,
+        "n_unique": 1,
+        "min": 1,
+        "max": 1,
+        "mean": 1.0,
+        "std": 0.0,
+        "value_counts": {
+          "1": 879225
+        }
+      },
+      "func_code": {
+        "dtype": "int64",
+        "missing": 0,
+        "n_unique": 7,
+        "min": 1,
+        "max": 8,
+        "mean": 2.7783923341579233,
+        "std": 1.5366050810072844,
+        "value_counts": {
+          "1": 278412,
+          "5": 179527,
+          "3": 141655,
+          "4": 139371,
+          "2": 139312,
+          "6": 936,
+          "8": 12
+        }
+      },
+      "modbus_len": {
+        "dtype": "int64",
+        "missing": 0,
+        "n_unique": 5,
+        "min": 3,
+        "max": 43,
+        "mean": 5.341528050271546,
+        "std": 0.9372746155861815,
+        "value_counts": {
+          "6": 522880,
+          "4": 208662,
+          "5": 139194,
+          "3": 8413,
+          "43": 76
+        }
+      },
+      "register_start": {
+        "dtype": "int64",
+        "missing": 0,
+        "n_unique": 10,
+        "min": 0,
+        "max": 35,
+        "mean": 5.049923512184026,
+        "std": 7.857338576603368,
+        "value_counts": {
+          "0": 487570,
+          "8": 140847,
+          "5": 47037,
+          "14": 46305,
+          "13": 46292,
+          "1": 39800,
+          "35": 24049,
+          "25": 23668,
+          "15": 23651,
+          "2": 6
+        }
+      },
+      "quantity": {
+        "dtype": "int64",
+        "missing": 0,
+        "n_unique": 11,
+        "min": 0,
+        "max": 65535,
+        "mean": 1.0267792658307031,
+        "std": 197.77429291403746,
+        "value_counts": {
+          "0": 528501,
+          "1": 350136,
+          "20": 496,
+          "4": 42,
+          "100": 12,
+          "2000": 8,
+          "125": 8,
+          "65535": 8,
+          "5": 8,
+          "2": 4,
+          "9": 2
+        }
+      },
+      "packet_size": {
+        "dtype": "int64",
+        "missing": 0,
+        "n_unique": 24,
+        "min": 40,
+        "max": 402,
+        "mean": 77.34894253461856,
+        "std": 1.5052317777355797,
+        "value_counts": {
+          "78": 522789,
+          "76": 208662,
+          "77": 139194,
+          "75": 8413,
+          "115": 76,
+          "83": 28,
+          "126": 18,
+          "222": 14,
+          "65": 6,
+          "101": 4,
+          "162": 3,
+          "342": 3,
+          "282": 2,
+          "378": 2,
+          "43": 2,
+          "150": 1,
+          "354": 1,
+          "390": 1,
+          "294": 1,
+          "114": 1,
+          "234": 1,
+          "402": 1,
+          "40": 1,
+          "227": 1
+        }
+      },
+      "time_delta": {
+        "dtype": "float64",
+        "missing": 0,
+        "n_unique": 1577,
+        "min": 0.0,
+        "max": 88.430949,
+        "mean": 0.003171289133043305,
+        "std": 0.12919775758955834
+      },
+      "session_id": {
+        "dtype": "string",
+        "missing": 0,
+        "n_unique": 17,
+        "value_counts": {
+          "185.175.0.7_185.175.0.4_u1_s0007": 131220,
+          "185.175.0.3_185.175.0.4_u1_s0001": 130572,
+          "185.175.0.3_185.175.0.5_u1_s0003": 122607,
+          "185.175.0.5_185.175.0.3_u1_s0004": 122531,
+          "185.175.0.4_185.175.0.3_u1_s0002": 115787,
+          "185.175.0.3_185.175.0.8_u1_s0005": 94865,
+          "185.175.0.8_185.175.0.3_u1_s0006": 91629,
+          "185.175.0.2_185.175.0.5_u1_s0008": 11701,
+          "185.175.0.5_185.175.0.2_u1_s0009": 11701,
+          "185.175.0.2_185.175.0.4_u1_s0010": 11670,
+          "185.175.0.4_185.175.0.2_u1_s0011": 11670,
+          "185.175.0.2_185.175.0.8_u1_s0012": 11630,
+          "185.175.0.8_185.175.0.2_u1_s0013": 11628,
+          "192.168.10.112_255.255.255.255_u1_s0015": 4,
+          "192.168.10.112_255.255.255.255_u1_s0016": 4,
+          "192.168.10.112_224.0.0.251_u1_s0017": 4,
+          "192.168.10.1_192.168.10.102_u1_s0014": 2
+        }
+      },
+      "sequence_position": {
+        "dtype": "int64",
+        "missing": 0,
+        "n_unique": 131220,
+        "min": 0,
+        "max": 131219,
+        "mean": 54554.7055315761,
+        "std": 36441.32977822804
+      },
+      "label": {
+        "dtype": "int64",
+        "missing": 0,
+        "n_unique": 2,
+        "value_counts": {
+          "0": 870526,
+          "1": 8699
+        }
+      },
+      "file_source": {
+        "dtype": "string",
+        "missing": 0,
+        "n_unique": 15,
+        "value_counts": {
+          "veth5bbeaa2-0.pcap": 216466,
+          "veth4edc015-0.pcap": 137543,
+          "vethd9e14c0-0.pcap": 72574,
+          "veth8bc3408-0.pcap": 72018,
+          "veth665f3cf-0.pcap": 65610,
+          "veth4edc015-normal-4.pcap": 35000,
+          "veth5bbeaa2-normal-13.pcap": 35000,
+          "substation-2.pcap": 35000,
+          "substation-4.pcap": 35000,
+          "substation-1.pcap": 35000,
+          "substation-10.pcap": 35000,
+          "substation-14.pcap": 35000,
+          "veth3efd353-0.pcap": 35000,
+          "veth3efd353-1.pcap": 35000,
+          "attached_recon_flows.csv": 14
+        }
+      }
+    },
+    "unparseable_timestamps": 14,
+    "unparseable_timestamp_examples": [
+      "00:31:01.700000",
+      "00:31:02.800000",
+      "00:31:10.600000",
+      "00:31:11.600000",
+      "00:31:14.100000"
+    ],
+    "unparseable_timestamp_files": {
+      "attached_recon_flows.csv": 14
+    },
+    "exact_duplicate_rows_excluding_index_cols": 0,
+    "duplicate_content_same_timestamp": 0,
+    "label_counts": {
+      "0": 870526,
+      "1": 8699
+    },
+    "n_session_id": 17,
+    "n_file_source": 15,
+    "session_ids_with_ge20_packets": 13,
+    "negative_time_steps_in_supplied_order_within_session": 126643,
+    "sequence_position_is_0..n-1_per_session": true,
+    "timestamp_offsets_seen": {
+      "+0530": 879211,
+      "": 14
+    }
+  },
+  "sequences": {
+    "rows": 175800,
+    "columns": [
+      "sequence_id",
+      "session_id",
+      "window_start_time",
+      "window_end_time",
+      "window_length",
+      "label",
+      "features_json"
+    ],
+    "features_tensor_shape": [
+      175800,
+      20,
+      7
+    ],
+    "window_length_values": {
+      "20": 175800
+    },
+    "label_counts": {
+      "0": 157462,
+      "1": 18338
+    },
+    "n_session_id": 13,
+    "window_start_after_end": 67489,
+    "duplicate_sequence_id": 0,
+    "duplicate_feature_matrices": 6917
+  },
+  "events": {
+    "rows": 158,
+    "columns": [
+      "packet_timestamp",
+      "packet_epoch",
+      "src_ip",
+      "dst_ip",
+      "func_code",
+      "quantity",
+      "file_source",
+      "log_attack",
+      "log_timestamp",
+      "log_file"
+    ],
+    "log_attack_counts": {
+      "Recon. Complete": 85,
+      "Recon. Range: 2000": 73
+    },
+    "file_source_counts": {
+      "substation-2.pcap": 107,
+      "substation-10.pcap": 51
+    },
+    "log_file_counts": {
+      "attack\\compromised-scada\\attack logs\\03-15-2023\\03-15-2023-1.csv": 107,
+      "attack\\compromised-scada\\attack logs\\03-19-2023\\03-19-2023-1.csv": 51
+    }
+  },
+  "proposal_claims_check": {
+    "claimed_windowed_sequences": 175800,
+    "observed_sequences": 175800,
+    "claimed_timesteps": 20,
+    "observed_timesteps": 20,
+    "claimed_features_per_timestep": 7,
+    "observed_features_per_timestep": 7,
+    "claimed_sessions": 13,
+    "observed_session_ids_in_sequences": 13,
+    "observed_session_ids_in_packets": 17
+  }
+}

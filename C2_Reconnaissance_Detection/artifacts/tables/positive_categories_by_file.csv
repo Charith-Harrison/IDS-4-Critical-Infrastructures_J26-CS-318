@@ -1,0 +1,9 @@
+file_source,event_mapped,external_attached_flow_no_date,fc5_len3_response,len3_response_fc1_4,nonroutine_quantity_read
+attached_recon_flows.csv,0,12,0,0,0
+substation-1.pcap,0,0,2001,0,0
+substation-10.pcap,51,0,2129,1,4
+substation-14.pcap,0,0,2125,0,0
+substation-2.pcap,107,0,5,12,12
+substation-4.pcap,0,0,2140,0,0
+veth4edc015-0.pcap,0,0,0,0,50
+veth665f3cf-0.pcap,0,0,0,0,50

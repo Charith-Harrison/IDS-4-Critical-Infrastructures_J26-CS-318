@@ -1,3 +1,4 @@
+# Record and compare file hashes when checking that a bundle was preserved intact.
 """Record/verify an intact relocation. Does not move or delete anything."""
 import argparse
 import hashlib
@@ -8,10 +9,12 @@ import subprocess
 ROOT = Path(__file__).resolve().parents[2]
 RECORD = ROOT / 'component3/reports/preservation.json'
 
+# Calculate a SHA-256 digest of the file bytes.
 def sha(path):
     with path.open('rb') as handle:
         return hashlib.file_digest(handle, 'sha256').hexdigest()
 
+# Record paths, sizes, and hashes before checking preservation.
 def snapshot():
     if RECORD.exists():
         raise ValueError('Preservation record already exists; refusing to overwrite')
@@ -43,6 +46,7 @@ def snapshot():
               'command': 'python -B component3/tools/preservation.py snapshot', 'moves': moves}
     RECORD.write_text(json.dumps(record, indent=2) + '\n', encoding='utf-8')
 
+# Compare current file bytes against the recorded preservation snapshot.
 def verify():
     record = json.loads(RECORD.read_text(encoding='utf-8'))
     errors, count = [], 0

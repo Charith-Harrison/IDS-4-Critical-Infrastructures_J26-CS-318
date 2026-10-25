@@ -1,3 +1,4 @@
+# Read source CSVs and describe their columns without changing the source files.
 """Read-only CSV ingestion and machine-readable schema discovery."""
 
 from __future__ import annotations
@@ -7,6 +8,7 @@ import pandas as pd
 from src.utils import ROOT, checksum, now, project_path, save_json
 
 
+# Read a CSV using the configured input rules.
 def load_csv(path) -> pd.DataFrame:
     path = project_path(path)
     if path.suffix.lower() != ".csv":
@@ -14,6 +16,7 @@ def load_csv(path) -> pd.DataFrame:
     return pd.read_csv(path, low_memory=False)
 
 
+# Record available files, columns, and sample information for input inspection.
 def inspect_datasets(cfg: dict) -> dict:
     from src.experiments import archive_if_changed
 

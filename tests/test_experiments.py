@@ -1,7 +1,9 @@
+# Check experiments behavior using software fixtures and existing evidence.
 from src.experiments import archive_if_changed
 from src.utils import checksum, config_digest, save_json
 
 
+# Check that dataset switch archives outputs but preserves raw and docs.
 def test_dataset_switch_archives_outputs_but_preserves_raw_and_docs(cfg, tmp_path):
     raw = tmp_path / "data/raw/original.csv"
     raw.parent.mkdir(parents=True)

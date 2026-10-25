@@ -1,3 +1,4 @@
+# Summarize training feature ranges for explanations, without using target labels.
 """Optional training-only reference summaries for explanations, never label rules."""
 
 from __future__ import annotations
@@ -5,6 +6,7 @@ from __future__ import annotations
 import pandas as pd
 
 
+# Learn descriptive feature quantiles from training rows only.
 def fit_reference_profile(features: pd.DataFrame) -> dict:
     """Fit descriptive quantiles on training rows only, without reading targets."""
     profile = {}

@@ -1,3 +1,4 @@
+# Inspect a selected event using the older application's feature and explanation helpers.
 """Inspect an event with the same causal feature builder used for inference."""
 
 import streamlit as st
@@ -6,6 +7,7 @@ from src.explainability import explain_event
 from src.feature_engineering import build_features
 
 
+# Inspect a selected event using the older application's feature and explanation helpers.
 def render(events, artifact, health):
     st.header("Event Investigation")
     valid = events[events.prediction.notna()].copy()

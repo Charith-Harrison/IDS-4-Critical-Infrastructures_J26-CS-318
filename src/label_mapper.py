@@ -1,3 +1,4 @@
+# Interpret supplied labels in the older configurable pipeline; do not infer truth from traffic direction.
 """Targets come exclusively from supplied labels, never from protocol direction."""
 
 from __future__ import annotations
@@ -18,10 +19,12 @@ MSU_MAPPING = {
 }
 
 
+# Return the permitted target classes for the configured task.
 def class_names(cfg: dict) -> list[str]:
     return CLASSES[cfg["model_mode"]].copy()
 
 
+# Translate explicit source labels and reject unsupported or conflicting truth.
 def map_labels(frame: pd.DataFrame, cfg: dict, required: bool = True) -> pd.DataFrame:
     """Reject unknown labels; explicitly exclude MSU 6/7, retaining their audit rows."""
     out = frame.copy()

@@ -1,3 +1,4 @@
+# Start the older configurable dashboard; the current Component 3 page is component3/frontend.py.
 """Run with streamlit run app/dashboard.py from the project root."""
 
 import sys
@@ -14,6 +15,7 @@ from src.inference import predict_csv
 from src.utils import ROOT, load_config
 
 
+# Load the older saved model and render the selected dashboard page.
 def main():
     st.set_page_config(page_title="Modbus Detection", page_icon="🛡️", layout="wide")
     st.title("Command and Response Injection Detection")

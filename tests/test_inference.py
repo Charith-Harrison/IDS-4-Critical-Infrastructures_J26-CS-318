@@ -1,3 +1,4 @@
+# Check inference behavior using software fixtures and existing evidence.
 import copy
 
 import joblib
@@ -12,6 +13,7 @@ from src.preprocessing import preprocess_frame
 from src.training import fit_model, save_model
 
 
+# Check that training reload inference and invalid rows.
 @pytest.mark.parametrize("kind", ["baseline", "contextual"])
 def test_training_reload_inference_and_invalid_rows(events, raw, cfg, tmp_path, kind):
     artifact = fit_model(events, events.copy(), cfg, kind)
@@ -35,6 +37,7 @@ def test_training_reload_inference_and_invalid_rows(events, raw, cfg, tmp_path, 
     assert prediction_records(predicted)[0]["confidence"] is None
 
 
+# Check that three class pipeline without architecture change.
 def test_three_class_pipeline_without_architecture_change(raw, cfg):
     final = copy.deepcopy(cfg)
     final["model_mode"] = "final_three_class"
@@ -49,6 +52,7 @@ def test_three_class_pipeline_without_architecture_change(raw, cfg):
     assert output.model_mode.eq("final_three_class").all()
 
 
+# Check that imputer is fitted only on training.
 def test_imputer_is_fitted_only_on_training(events, cfg):
     train, val = events.copy(), events.copy()
     train["modbus_val"] = np.nan

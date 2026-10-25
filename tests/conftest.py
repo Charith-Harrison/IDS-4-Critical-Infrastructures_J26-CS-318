@@ -1,3 +1,4 @@
+# Create small synthetic fixtures for software tests, not research measurements.
 """Small synthetic protocol fixtures for software checks, never reported as research data."""
 
 import copy
@@ -11,6 +12,7 @@ from src.preprocessing import preprocess_frame
 from src.utils import load_config
 
 
+# Create an isolated test configuration instead of changing the real project settings.
 @pytest.fixture
 def cfg():
     config = copy.deepcopy(load_config())
@@ -23,6 +25,7 @@ def cfg():
     return config
 
 
+# Build a small synthetic CSV-style fixture for software tests.
 @pytest.fixture
 def raw():
     n = 48
@@ -50,6 +53,7 @@ def raw():
     )
 
 
+# Prepare the synthetic fixture as events for downstream software checks.
 @pytest.fixture
 def events(raw, cfg):
     return build_events(preprocess_frame(raw, cfg, "fixture.csv"), cfg)

@@ -1,3 +1,4 @@
+# Use one feature definition for the older pipeline's training and prediction routes.
 """One feature implementation for training, evaluation, and inference."""
 
 from __future__ import annotations
@@ -31,6 +32,7 @@ PAIRING = [
 ]
 
 
+# List the enabled groups of predictors for this configuration.
 def feature_groups(cfg: dict) -> dict[str, list[str]]:
     groups = {
         "static": STATIC.copy(),
@@ -54,6 +56,7 @@ def feature_groups(cfg: dict) -> dict[str, list[str]]:
     return groups
 
 
+# Return the declared predictor order for the selected model kind.
 def feature_names(cfg: dict, kind: str) -> list[str]:
     if kind not in {"baseline", "contextual"}:
         raise ValueError("Model kind must be baseline or contextual")
@@ -66,6 +69,7 @@ def feature_names(cfg: dict, kind: str) -> list[str]:
     return names + [name + "_missing" for name in names]
 
 
+# Construct only the selected current/context columns using the shared feature definitions.
 def build_features(events: pd.DataFrame, cfg: dict, kind: str = "contextual") -> pd.DataFrame:
     if events.empty:
         return pd.DataFrame(columns=feature_names(cfg, kind), index=events.index, dtype=float)

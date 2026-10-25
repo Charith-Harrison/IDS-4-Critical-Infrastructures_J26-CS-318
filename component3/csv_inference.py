@@ -1,3 +1,4 @@
+# Validate observation CSVs and pass their public message fields to the existing detector.
 """Strict ordered-observation CSV adapter. No fitting or feature-CSV ingestion."""
 from collections import Counter,defaultdict
 import csv
@@ -21,18 +22,21 @@ MAX_BYTES=20*1024*1024
 MAX_ROWS=100000
 SOURCE=HERE/'data/collection'
 
+# Read the unchanged public address maps used by the saved experiment.
 def maps():
     path=HERE/'history/component3_main_collection/v1_20261025/frozen/protocol.json'
     if sha(path)!='7634b3187e53c029db5d4755c6c3cf9df6a7985ab8ad1c67d3ebf00662a43c48':
         raise ValueError('Public configuration changed')
     return {m['id']:m for m in read(path)['public_configuration']['maps']}
 
+# Parse an exact nonnegative integer without rounding timestamps through floating point.
 def integer(value,name,row):
     if not re.fullmatch(r'[0-9]+',value): raise ValueError(f'Row {row}: {name} must be a nonnegative integer')
     number=int(value)
     if number>2**63-1: raise ValueError(f'Row {row}: {name} exceeds int64')
     return number
 
+# Check the input columns, types, bytes, and IDs before any prediction is attempted.
 def parse_csv(data):
     if isinstance(data,str): data=data.encode('utf-8')
     if len(data)>MAX_BYTES: raise ValueError('CSV exceeds 20 MiB')
@@ -44,6 +48,7 @@ def parse_csv(data):
     missing=set(REQUIRED)-set(headers)
     if missing:
         raise ValueError('This CSV does not contain the fields required to reconstruct Component 3 context. Missing: '+', '.join(sorted(missing)))
+    # Reject unrelated/private columns rather than guessing which ones might be predictors.
     unknown=set(headers)-set(REQUIRED+OPTIONAL+LABEL_COLUMNS)
     if unknown: raise ValueError('Unsupported columns: '+', '.join(sorted(unknown))+'. Use the observation template, not features or prediction reports.')
     labels=[key for key in LABEL_COLUMNS if key in headers]
@@ -91,6 +96,7 @@ def parse_csv(data):
     if not rows: raise ValueError('CSV has no observations')
     return {'rows':rows,'ground_truth_column':labels[0] if labels else None,'sha256':hashlib.sha256(data).hexdigest()}
 
+# Keep each run/connection separate and repair order only when timestamps make it unambiguous.
 def ordered_streams(rows):
     groups=defaultdict(list)
     for row in rows: groups[(row['run_id'],row['connection_id'])].append(row)
@@ -106,6 +112,7 @@ def ordered_streams(rows):
         accepted.append((key,stream))
     return accepted,rejected,moved
 
+# Read membership and trace hashes from metadata, without opening final-test traffic.
 def manifest_registry(source=SOURCE):
     """Metadata-only matching. Never opens final capture/application payloads."""
     source=Path(source)
@@ -130,6 +137,7 @@ def manifest_registry(source=SOURCE):
                         'map_id':plans[planned]['map'],'trace':item['ordered_adu_trace_sha256']})
     return entries
 
+# Describe known experiment membership; an uploaded name alone does not verify its content.
 def partition_status(run_id,rows,registry):
     trace=hashlib.sha256('\n'.join(r['direction']+':'+r['adu_hex'] for r in rows).encode()).hexdigest()
     exact=[r for r in registry if r['trace']==trace and all(row['map_id']==r['map_id'] for row in rows)]
@@ -144,6 +152,7 @@ def partition_status(run_id,rows,registry):
     if match=='run_id_only': note+=' Run ID matched; uploaded content is unverified or partial.'
     return {'run_id':run_id,'role':role,'match':match,'badge':badge,'note':note,'matched_run_id':selected[0]['run_id']}
 
+# Build fresh context per stream, predict first, and attach any supplied labels afterward.
 def analyze_csv(data,models=None,registry=None,*,trusted_single_writer=False):
     if trusted_single_writer is not True:
         raise ValueError('CSV inference requires the declared single-writer/trusted-anchor testbed policy')
@@ -151,6 +160,7 @@ def analyze_csv(data,models=None,registry=None,*,trusted_single_writer=False):
     public_maps=maps(); registry=manifest_registry() if registry is None else registry
     models=load_locked_models() if models is None else models
     records=[]
+    # A new detector per connection prevents history from leaking between independent streams.
     for (run,connection),rows in streams:
         try:
             # Each (run, connection generation) owns a fresh state machine.
@@ -191,6 +201,7 @@ def analyze_csv(data,models=None,registry=None,*,trusted_single_writer=False):
     # Partition claims never affect feature construction or predictions.
     run_rows=defaultdict(list)
     for row in parsed['rows']: run_rows[row['run_id']].append(row)
+    # Membership affects the evaluation warning only; it cannot change a model decision.
     statuses=[partition_status(run,sorted(rows,key=lambda r:(r['connection_id'],r['observed_at_ns'],r['source_row'])),registry)
               for run,rows in run_rows.items()]
     counts=Counter(r['prediction'] for r in records if r['prediction'] is not None)
@@ -203,6 +214,7 @@ def analyze_csv(data,models=None,registry=None,*,trusted_single_writer=False):
         'partition_status':statuses,'ground_truth_column':parsed['ground_truth_column'],
         'labels_used_for_prediction':False,'training_executed':False,'final_evaluation_executed':False}
 
+# Score existing predictions against optional labels and disclose unscored messages.
 def evaluate_predictions(result):
     from c3model.experiment import metrics
     labelled=[r for r in result['records'] if r['ground_truth']]
@@ -220,6 +232,7 @@ def evaluate_predictions(result):
                   missing_classes=[c for c in CLASSES if not any(r['ground_truth']==c for r in scored)])
     return report
 
+# Export a prediction report; this output is not the observation input format.
 def prediction_csv(result):
     columns=('source_row','event_id','observed_at_ns','run_id','connection_id','function','unit','tid','wire_address','wire_word','quantity',
              'address_or_register','prediction','confidence','eligible','context_available','processing_status','ground_truth','correct','reason')
@@ -227,6 +240,7 @@ def prediction_csv(result):
     for record in result['records']: writer.writerow({k:record.get(k) for k in columns})
     return output.getvalue().encode('utf-8')
 
+# Export the public observation fields needed to replay the same messages through CSV.
 def observations_csv(rows,run_id=None,map_id=None):
     """Lossless public-observation export, distinct from a prediction report."""
     columns=REQUIRED+ENDPOINTS
@@ -238,6 +252,7 @@ def observations_csv(rows,run_id=None,map_id=None):
         writer.writerow(item)
     return output.getvalue().encode('utf-8')
 
+# Create four synthetic format examples; these rows are not experimental results.
 def template_csv():
     # Synthetic format examples, not recorded research/evaluation data.
     pdus=['060001001e','060001001e','0300010001','0302001e']

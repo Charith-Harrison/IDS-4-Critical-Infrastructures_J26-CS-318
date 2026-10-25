@@ -1,3 +1,4 @@
+# Fit the older pipeline on training rows and choose candidates using validation scores.
 """Fair RF-family comparison with training-only imputation and validation selection."""
 
 from __future__ import annotations
@@ -33,6 +34,7 @@ from src.utils import (
 )
 
 
+# Verify prepared data and configuration hashes, then check that partition groups do not overlap.
 def load_prepared(cfg: dict) -> tuple[pd.DataFrame, dict]:
     manifest = read_json(ROOT / "data/manifests/preprocessing.json")
     if manifest["configuration_hash"] != config_digest(cfg):
@@ -51,6 +53,7 @@ def load_prepared(cfg: dict) -> tuple[pd.DataFrame, dict]:
     return events, manifest
 
 
+# Create the older training pipeline: missing-value imputer followed by Random Forest.
 def make_pipeline(cfg: dict, parameters: dict) -> Pipeline:
     return Pipeline(
         [
@@ -68,6 +71,7 @@ def make_pipeline(cfg: dict, parameters: dict) -> Pipeline:
     )
 
 
+# Fit candidates on training rows and select using validation macro F1, never test scores.
 def fit_model(
     train: pd.DataFrame, validation: pd.DataFrame, cfg: dict, kind: str, provenance: dict | None = None
 ) -> dict:
@@ -83,6 +87,7 @@ def fit_model(
         log.info("Training %s RF: %s", kind, parameters)
         pipeline = make_pipeline(cfg, parameters)
         trial_start = time.perf_counter()
+        # Only training features and targets fit the imputer and classifier.
         pipeline.fit(x_train, train.target)
         metrics, _, _ = predict_and_score(pipeline, x_val, validation.target)
         trials.append({"parameters": parameters, "validation": metrics, "seconds": time.perf_counter() - trial_start})
@@ -130,6 +135,7 @@ def fit_model(
     return {"pipeline": best, "metadata": metadata, "reference_profile": fit_reference_profile(x_train)}
 
 
+# Save the fitted pipeline together with its feature names, metadata, and checksum.
 def save_model(artifact: dict, directory) -> None:
     directory.mkdir(parents=True, exist_ok=True)
     joblib.dump(artifact, directory / "model.joblib")
@@ -143,6 +149,7 @@ def save_model(artifact: dict, directory) -> None:
     ).to_csv(directory / "feature_importance.csv", index=False)
 
 
+# Train the older baseline and contextual models only when the holdout guard allows it.
 def train_models(cfg: dict) -> dict:
     if (ROOT / "results/metrics/comparison.json").exists():
         raise ValueError(

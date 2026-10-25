@@ -1,3 +1,4 @@
+# Compare the active adapter with the original development implementation and measure inference time.
 """Development-only adapter equivalence, saved preprocessing and latency checks."""
 import json
 from pathlib import Path
@@ -10,6 +11,7 @@ HERE=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(HERE))
 from runtime import Detector,load_locked_models,LOCKED,VERSION
 
+# Replay accepted development observations and compare adapter outputs and saved-model behavior.
 def run(source,artifacts,output):
     import numpy as np
     import pandas as pd

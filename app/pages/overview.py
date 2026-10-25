@@ -1,3 +1,4 @@
+# Summarize the batch currently loaded by the older dashboard.
 """Observed traffic and predicted alert summary for the loaded batch."""
 
 import pandas as pd
@@ -6,6 +7,7 @@ import streamlit as st
 from app.ui_utils import render_table
 
 
+# Summarize the batch currently loaded by the older dashboard.
 def render(events, artifact, health):
     st.header("Security Overview")
     valid = events[events.prediction.notna()]

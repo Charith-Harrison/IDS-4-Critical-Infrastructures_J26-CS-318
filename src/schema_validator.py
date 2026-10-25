@@ -1,3 +1,4 @@
+# Normalize known column aliases and mark invalid records instead of inventing missing values.
 """Schema normalization and transparent record-level quality checks."""
 
 from __future__ import annotations
@@ -39,6 +40,7 @@ RANGES = {
 }
 
 
+# Map recognized aliases to canonical names and reject name collisions.
 def normalize_columns(frame: pd.DataFrame, column_map: dict | None = None) -> pd.DataFrame:
     out = frame.rename(columns=column_map or {}).copy()
     out.columns = [re.sub(r"[^a-z0-9]+", "_", str(c).strip().lower()).strip("_") for c in out.columns]
@@ -51,6 +53,7 @@ def normalize_columns(frame: pd.DataFrame, column_map: dict | None = None) -> pd
     return out
 
 
+# Check supplied field values and mark invalid records while preserving genuine missingness.
 def validate_records(frame: pd.DataFrame, cfg: dict) -> pd.DataFrame:
     """Missing optional fields remain NaN; malformed supplied values are quarantined."""
     out = frame.copy()

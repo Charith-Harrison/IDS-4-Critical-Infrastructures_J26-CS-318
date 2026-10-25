@@ -1,3 +1,4 @@
+# Show the PCAP and CSV inference controls, predictions, and optional upload metrics.
 """Offline traffic analysis controls. All learned transforms stay frozen."""
 import hashlib
 import pandas as pd
@@ -9,12 +10,14 @@ from csv_inference import (REQUIRED,OPTIONAL,LABEL_COLUMNS,SCHEMA,parse_csv,anal
 NAMES={'normal':'Normal','command_injection':'Command injection','response_injection':'Response injection',
        'abstain':'Insufficient context','out_of_scope':'Out of scope',None:'Rejected stream'}
 
+# Display the source membership and whether its content was actually matched.
 def show_partition(statuses):
     for status in statuses:
         st.markdown('**'+status['badge']+'**')
         st.write(status['note'])
         st.caption(status['run_id']+' · '+status['match'].replace('_',' '))
 
+# Show predictions, exclusions, earlier anchors, exports, and optional label-based scoring.
 def show_csv_result(result):
     st.subheader('Detection results')
     show_partition(result['partition_status'])
@@ -101,6 +104,7 @@ def show_csv_result(result):
                     st.dataframe(pd.DataFrame(report['confusion'],index=report['labels'],columns=report['labels']),width='stretch')
                     st.caption(f"Rows: true class. Columns: prediction. Normal denominator: {report['normal_denominator']}. Labelled abstentions: {report['labelled_abstentions']}; out of scope: {report['labelled_out_of_scope']}; rejected: {report['labelled_rejected']}.")
 
+# Validate an uploaded observation file and run inference only after the user requests it.
 def render_csv():
     st.subheader('Analyze CSV traffic')
     st.write('Uses the saved preprocessing and model. Nothing is retrained.')
@@ -137,6 +141,7 @@ def render_csv():
     result=st.session_state.get('csv_result')
     if result and result['source_sha256']==digest: show_csv_result(result)
 
+# Keep the captured-byte replay route available alongside CSV inference.
 def render_pcap():
     st.write('Reconstruct captured TCP bytes and run the saved RF now.')
     try:
@@ -173,6 +178,7 @@ def render_pcap():
         st.download_button('Download observations (CSV input)',observations_csv(replay['observations']),file_name=selected+'_observations.csv',mime='text/csv',key='download_observations')
     except (ValueError,OSError,KeyError) as exc: st.error(f'Capture replay unavailable: {exc}')
 
+# Let the user choose PCAP or CSV while explaining where their inference routes join.
 def render_analyze_traffic():
     st.divider(); st.subheader('Analyze traffic')
     source=st.radio('Input source',['Recorded PCAP','CSV'],horizontal=True,key='traffic_source')

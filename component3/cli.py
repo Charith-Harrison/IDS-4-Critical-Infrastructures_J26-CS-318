@@ -1,3 +1,4 @@
+# Choose a verification or development-demo command; this entry point does not train models.
 import argparse
 from datetime import datetime,timezone
 import json
@@ -10,6 +11,7 @@ import uuid
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parent
 
+# Parse the command and run only the requested inspection or development action.
 def main():
     p=argparse.ArgumentParser(description='Component 3: inspect preserved evidence and demonstrate label-free inference. Never trains or evaluates final sets.')
     p.add_argument('action',choices=['check','audit','test','demo','replay-check'])

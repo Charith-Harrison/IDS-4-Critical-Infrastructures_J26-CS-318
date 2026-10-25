@@ -1,3 +1,4 @@
+# Run the older saved-model evaluation command from a portable project path.
 """Run evaluate_models from any working directory."""
 
 import argparse
@@ -9,6 +10,7 @@ from src.evaluate import evaluate_models
 from src.utils import load_config
 
 
+# Load the older configuration and explicitly invoke its evaluation command.
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", type=Path, default=None)

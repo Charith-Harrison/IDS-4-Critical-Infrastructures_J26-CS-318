@@ -1,3 +1,4 @@
+# Build the current research dashboard; visible examples and metrics come from saved evidence.
 """Component 3 research demo: saved comparisons with captured-byte evidence."""
 from html import escape
 from pathlib import Path
@@ -15,14 +16,16 @@ from traffic_ui import render_analyze_traffic
 NAMES={'normal':'Normal','command_injection':'Command injection',
        'response_injection':'Response injection','abstain':'Abstain','out_of_scope':'Out of scope'}
 
-st.set_page_config(page_title='Component 3 · Modbus context',page_icon='↔',layout='wide')
+st.set_page_config(page_title='TCP/MODBUS Attack Detection',page_icon='↔',layout='wide')
 st.markdown('<style>'+ (HERE/'frontend.css').read_text(encoding='utf-8')+'</style>',unsafe_allow_html=True)
-st.title('Same message. Different earlier history.')
-st.markdown('<div class="component-subtitle"><strong>Component 3 · Command and Response Injection Detection</strong><span class="testbed-badge">Controlled Modbus/TCP testbed</span></div>',unsafe_allow_html=True)
+st.title('TCP/MODBUS Attack Detection')
+st.markdown('<div class="component-subtitle"><strong>Command and Response Injection Detection</strong><span class="testbed-badge">Controlled Modbus/TCP testbed</span></div>',unsafe_allow_html=True)
 
+# Cache the verified demonstration data for this dashboard session.
 @st.cache_data(show_spinner='Loading captured examples…')
 def demonstration(): return load_demo(saved_predictions_only=True)
 
+# Cache the saved experiment reports used by the results page.
 @st.cache_data(show_spinner=False)
 def saved_results(): return load_results()
 
@@ -40,8 +43,10 @@ except (OSError,ValueError,KeyError) as exc:
 
 demo_tab,how_tab,results_tab,evidence_tab,scope_tab=st.tabs(['Demo','How it works','Results','Evidence','Dataset & scope'])
 
+# Escape text before placing it inside dashboard HTML.
 def text(value): return escape(str(value))
 
+# Present fields actually carried by the current Modbus message.
 def current_fields(case):
     f=case['decision']['features']
     valid='Yes' if case['annotation']['parse_state']=='parser_ok' else 'No'
@@ -51,16 +56,19 @@ def current_fields(case):
     return [('Function','Read Holding Registers · reply'),('Returned value',int(f['current_wire_word'])),
             ('Address','Not carried in reply'),('Protocol valid',valid)]
 
+# Display the selected current message and its raw bytes.
 def message_card(case):
     fields=''.join(f'<div><span>{text(label)}</span><strong>{text(value)}</strong></div>'
                    for label,value in current_fields(case))
     st.markdown(f'<div class="message-grid">{fields}</div>',unsafe_allow_html=True)
 
+# Show the earlier observable communication relevant to this example.
 def timeline(steps):
     content=''.join(f'<div class="history-step"><span class="history-dot"></span><div><span>{text(label)}</span><strong>{text(value)}</strong></div></div>'
                     for label,value in steps)
     st.markdown('<div class="history">'+content+'</div>',unsafe_allow_html=True)
 
+# Compare the saved predictions for the same example without inventing confidence values.
 def model_table(case):
     rows=[]
     for method,name in [('B','Packet-only RF'),('D','Context-aware RF')]:
@@ -73,6 +81,7 @@ def model_table(case):
                      'Confidence':'Not saved' if confidence is None else f'{confidence:.1%}'})
     st.dataframe(pd.DataFrame(rows),hide_index=True,width='stretch')
 
+# Display one verified case with optional history and its saved prediction.
 def show_case(case,number,reveal):
     decision=case['decision']; f=decision['features']; label=case['annotation']['label']
     tone='normal' if label=='normal' else 'injection'
@@ -144,6 +153,7 @@ with how_tab:
             st.write('Decision:',NAMES.get(case['decision']['prediction'],case['decision']['prediction']))
             st.caption('An imputed value cannot replace missing communication history. This example is available in Evidence.')
 
+# Present saved per-class metrics and confusion counts for the selected condition.
 def metric_table(report,methods):
     rows=comparison_rows(report,methods)
     for row in rows:
@@ -204,6 +214,7 @@ with evidence_tab:
     else:
         current=[c for pair in demo['pairs'].values() for c in pair]
         cases=current+demo['reference_cases']+[demo['abstention']]
+        # Give an evidence example a readable selector label.
         def case_name(i):
             case=cases[i]
             kind='Saved comparison' if i<len(current) else 'Original example' if i<len(cases)-1 else 'Missing context'

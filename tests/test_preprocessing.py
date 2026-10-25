@@ -1,9 +1,11 @@
+# Check preprocessing behavior using software fixtures and existing evidence.
 import pandas as pd
 
 from src.event_builder import build_events
 from src.preprocessing import preprocess_frame, split_events
 
 
+# Check that chronological sort and original ids.
 def test_chronological_sort_and_original_ids(raw, cfg):
     raw = raw.iloc[::-1].copy()
     events = build_events(preprocess_frame(raw, cfg, "fixture"), cfg)
@@ -11,6 +13,7 @@ def test_chronological_sort_and_original_ids(raw, cfg):
     assert events.iloc[0].source_row == len(raw) - 1
 
 
+# Check that groups do not overlap.
 def test_groups_do_not_overlap(cfg, raw):
     frames = []
     for i in range(12):
@@ -27,6 +30,7 @@ def test_groups_do_not_overlap(cfg, raw):
     assert manifest["strategy"].startswith("group")
 
 
+# Check that reset groups are marked inferred.
 def test_reset_groups_are_marked_inferred(raw, cfg):
     raw = raw.drop(columns="file_source")
     raw.loc[24:, "frame_number"] -= 24

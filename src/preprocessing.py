@@ -1,3 +1,4 @@
+# Validate, group, and partition the older CSV workflow; this is separate from the frozen testbed experiment.
 """Read-only preprocessing, quarantines, group splits, and provenance manifests."""
 
 from __future__ import annotations
@@ -13,6 +14,7 @@ from src.schema_validator import normalize_columns, validate_records
 from src.utils import PREPROCESSING_VERSION, ROOT, checksum, config_digest, now, project_path, save_json
 
 
+# Normalize the schema, assign source IDs, validate rows, and keep target handling separate.
 def preprocess_frame(frame: pd.DataFrame, cfg: dict, source: str, labelled: bool = True) -> pd.DataFrame:
     out = normalize_columns(frame, cfg["dataset"].get("column_map"))
     if not labelled:
@@ -31,6 +33,7 @@ def preprocess_frame(frame: pd.DataFrame, cfg: dict, source: str, labelled: bool
     return out
 
 
+# Keep groups whole; use the existing chronological fallback only when its checks pass.
 def split_events(frame: pd.DataFrame, cfg: dict) -> tuple[pd.DataFrame, dict]:
     """Keep groups whole; use chronological blocks only when grouping is inadequate.
 
@@ -114,6 +117,7 @@ def split_events(frame: pd.DataFrame, cfg: dict) -> tuple[pd.DataFrame, dict]:
     return out, summary
 
 
+# Prepare configured inputs and write their partition and provenance records.
 def prepare_data(cfg: dict) -> dict:
     from src.experiments import archive_if_changed
 

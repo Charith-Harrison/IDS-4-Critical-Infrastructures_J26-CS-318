@@ -1,3 +1,4 @@
+# Read saved experiment metrics for display without running another evaluation.
 """Read-only, human-readable views of existing saved experiment results."""
 from pathlib import Path
 from demo_data import HERE,LOCKED,read,sha
@@ -18,6 +19,7 @@ METHOD_NAMES={
     'D-wire':'Context-aware RF + wire headers',
 }
 
+# Load existing result reports and their saved denominators.
 def load_results():
     audit=read(HERE/'reports/audit_final_20261025/audit.json')
     preservation=read(HERE/'reports/preservation.json')
@@ -35,6 +37,7 @@ def load_results():
     environment_count=read(protocol_path)['grouping']['environment_count']
     return {'audit':audit,'conditions':reports,'environment_count':environment_count}
 
+# Format saved methods on the same supported cohort; do not pool new scores.
 def comparison_rows(report,methods=('B','D')):
     """Same saved common cohort throughout; no pooling or model evaluation."""
     output=[]

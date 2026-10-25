@@ -1,3 +1,4 @@
+# Inspect the older workflow's configured input files without training.
 """Run inspect_datasets from any working directory."""
 
 import argparse
@@ -9,6 +10,7 @@ from src.data_loader import inspect_datasets
 from src.utils import load_config
 
 
+# Inspect the configured input paths and report their schema.
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", type=Path, default=None)

@@ -1,3 +1,4 @@
+# Load the older application's saved model and predict without refitting it.
 """Mode-independent prediction API with explicit invalid-record outcomes."""
 
 from __future__ import annotations
@@ -16,6 +17,7 @@ from src.preprocessing import preprocess_frame
 from src.utils import ROOT, checksum, config_digest, read_json
 
 
+# Check the older model's integrity, class schema, and feature names before using it.
 def load_model(kind: str = "contextual", cfg: dict | None = None) -> dict:
     if kind not in {"baseline", "contextual"}:
         raise ValueError("Unknown model kind")
@@ -35,6 +37,7 @@ def load_model(kind: str = "contextual", cfg: dict | None = None) -> dict:
     return artifact
 
 
+# Predict reconstructed events with the saved pipeline and retain IDs for inspection.
 def predict_events(events: pd.DataFrame, artifact: dict, explain: bool = True) -> pd.DataFrame:
     """Predict already reconstructed events, retaining identifiers for investigation."""
     metadata = artifact["metadata"]
@@ -60,6 +63,7 @@ def predict_events(events: pd.DataFrame, artifact: dict, explain: bool = True) -
     return output
 
 
+# Remove labels, rebuild the batch history, and leave malformed rows without a predicted class.
 def predict_csv(
     frame: pd.DataFrame, artifact: dict, source: str = "upload.csv", explain: bool = True
 ) -> tuple[pd.DataFrame, dict]:
@@ -88,6 +92,7 @@ def predict_csv(
     }
 
 
+# Convert prediction rows to the stable JSON-safe output fields.
 def prediction_records(frame: pd.DataFrame) -> list[dict]:
     """Return JSON-safe stable API records, including invalid rows without a class."""
     import json

@@ -1,3 +1,4 @@
+# Inspect saved coverage and feature evidence for the audit; this is not model training.
 """Audit-only coverage, shortcut and saved-model representation inspection."""
 from collections import Counter,defaultdict
 import csv
@@ -9,6 +10,7 @@ HERE=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(HERE))
 from runtime import load_locked_models
 
+# Read existing audit/model artifacts and write the additional inspection report.
 def main():
     source=HERE/'data/collection'; out=HERE/'reports/audit_final_20261025'
     index=json.loads((source/'collection_complete.json').read_text())

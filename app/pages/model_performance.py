@@ -1,3 +1,4 @@
+# Display saved model measurements in the older dashboard.
 """Display measured results without training or evaluating from the dashboard."""
 
 import pandas as pd
@@ -7,6 +8,7 @@ from app.ui_utils import optional_json
 from src.utils import ROOT
 
 
+# Display saved model measurements in the older dashboard.
 def render(events, artifact, health):
     st.header("Model Performance")
     metadata = artifact["metadata"]

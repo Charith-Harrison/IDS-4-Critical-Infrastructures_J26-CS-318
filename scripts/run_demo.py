@@ -1,3 +1,4 @@
+# Run the older saved model on a small validation batch.
 """Load a saved model and produce predictions on a small validation batch."""
 
 import argparse
@@ -12,6 +13,7 @@ from src.inference import load_model, predict_events, prediction_records
 from src.utils import ROOT, load_config, save_json
 
 
+# Load an existing older model and predict a small validation batch.
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--model", choices=["baseline", "contextual"], default="contextual")

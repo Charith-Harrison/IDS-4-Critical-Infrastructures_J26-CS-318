@@ -1,3 +1,4 @@
+# Check frontend behavior using software fixtures and existing evidence.
 """Optional local frontend integration test; development examples only."""
 import hashlib
 import importlib.util
@@ -12,8 +13,10 @@ READY=(importlib.util.find_spec('streamlit') is not None and
        (HERE/'data/collection/collection_complete.json').is_file() and
        (HERE/'locked/v1_20261025/artifacts/models/D.joblib').is_file())
 
+# Group the related software checks and their shared test helpers.
 @unittest.skipUnless(READY,'Frontend needs optional Streamlit and local evidence/models')
 class FrontendTests(unittest.TestCase):
+    # Check that demonstrations and saved results are read only.
     def test_demonstrations_and_saved_results_are_read_only(self):
         from streamlit.testing.v1 import AppTest
         artifacts=HERE/'locked/v1_20261025/artifacts'
@@ -27,6 +30,7 @@ class FrontendTests(unittest.TestCase):
         self.assertFalse(page.toggle[0].value)
         self.assertTrue(any('Can the current message alone' in item.value for item in page.markdown))
         page.toggle[0].set_value(True).run(); self.assertFalse(page.exception)
+        # Return the controlled example selection used by this frontend test.
         def examples():
             return [item.value for item in page.dataframe if list(item.value.columns)==['Model','Prediction','Confidence']]
         command=examples()
@@ -49,12 +53,14 @@ class FrontendTests(unittest.TestCase):
         next(c for c in page.button if c.label=='Recheck evidence and reload').click().run(); self.assertFalse(page.exception)
         self.assertEqual(before,{str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in protected})
 
+    # Check that saved outputs and public features are separate.
     def test_saved_outputs_and_public_features_are_separate(self):
         import pandas as pd
         from demo_data import load_demo,read,LOCKED
         from runtime import Detector,CURRENT,CONTEXT
         seen=[]
         original=Detector.observe
+        # Record detector input keys so the test can check that private fields were excluded.
         def observe(detector,row):
             seen.append(set(row)); return original(detector,row)
         with (patch('demo_data.predict_batch',side_effect=AssertionError('Fresh predictions forbidden')),
@@ -84,6 +90,7 @@ class FrontendTests(unittest.TestCase):
                 i,n,j=ref['pcap_file_byte_offset'],ref['length'],ref['message_byte_offset']
                 self.assertEqual(raw[i:i+n],bytes.fromhex(case['observation']['adu_hex'])[j:j+n])
 
+    # Check that results labels and denominators match saved reports.
     def test_results_labels_and_denominators_match_saved_reports(self):
         from demo_results import load_results,comparison_rows
         data=load_results()
@@ -98,9 +105,11 @@ class FrontendTests(unittest.TestCase):
                 matrix=saved['confusion']
                 self.assertEqual(row['False-alarm rate'],sum(matrix[0][1:])/sum(matrix[0]))
 
+    # Check that missing saved predictions do not trigger live inference.
     def test_missing_saved_predictions_do_not_trigger_live_inference(self):
         from demo_data import load_demo
         is_file=Path.is_file
+        # Control which files appear present for this missing-artifact test.
         def present(path):
             return False if path.name=='validation_predictions.parquet' else is_file(path)
         with (patch.object(Path,'is_file',present),
@@ -113,6 +122,7 @@ class FrontendTests(unittest.TestCase):
                 self.assertIsNone(case['predictions']['B']['prediction'])
                 self.assertIsNone(case['predictions']['B']['confidence'])
 
+    # Check that pcap button runs detection and metrics include confusion.
     def test_pcap_button_runs_detection_and_metrics_include_confusion(self):
         from streamlit.testing.v1 import AppTest
         page=AppTest.from_file(str(HERE/'frontend.py'),default_timeout=60).run()

@@ -1,3 +1,4 @@
+# Build the older pipeline's session groups and conservative request-response associations.
 """Causal protocol events: one valid CSV record, enriched only with available history.
 
 Requests are not backfilled with future responses. A response may reference an
@@ -10,6 +11,7 @@ import numpy as np
 import pandas as pd
 
 
+# Use supplied group information when available and record when boundaries are only inferred.
 def assign_groups(frame: pd.DataFrame, cfg: dict) -> pd.DataFrame:
     out = frame.copy()
     requested = cfg["dataset"].get("group_column", "auto")
@@ -32,6 +34,7 @@ def assign_groups(frame: pd.DataFrame, cfg: dict) -> pd.DataFrame:
     return out
 
 
+# Order records within groups and match only earlier, unambiguous request candidates.
 def build_events(frame: pd.DataFrame, cfg: dict) -> pd.DataFrame:
     """Construct bidirectional TCP sessions and conservative partial pair evidence."""
     out = frame.sort_values(["group_id", "timestamp", "source_row"], kind="stable", na_position="last").copy()

@@ -1,3 +1,4 @@
+# Preserve earlier generated outputs when the older experiment configuration or input changes.
 """Preserve prior experiments automatically when configuration or source data changes."""
 
 from __future__ import annotations
@@ -11,6 +12,7 @@ import yaml
 from src.utils import ROOT, checksum, config_digest, read_json, save_json
 
 
+# Archive generated outputs when their inputs change; leave raw data and project code in place.
 def archive_if_changed(cfg: dict, root: Path = ROOT) -> Path | None:
     """Move generated outputs only; raw inputs, docs, code and Git are never moved.
 

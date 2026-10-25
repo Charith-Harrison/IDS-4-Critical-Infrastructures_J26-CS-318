@@ -1,3 +1,4 @@
+# Check csv inference behavior using software fixtures and existing evidence.
 """CSV contract, causality, partition and real PCAP-route equivalence checks."""
 import csv
 import io
@@ -12,25 +13,32 @@ from csv_inference import (parse_csv,analyze_csv,template_csv,observations_csv,
     evaluate_predictions,prediction_csv,manifest_registry,partition_status)
 from runtime import load_locked_models,Detector
 
+# Read a CSV fixture into dictionaries for a test.
 def table(data): return list(csv.DictReader(io.StringIO(data.decode('utf-8'))))
+# Serialize test rows back into a CSV upload.
 def encode(rows):
     text=io.StringIO(newline=''); writer=csv.DictWriter(text,fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
     return text.getvalue().encode()
 
+# Group the related software checks and their shared test helpers.
 class CsvSchemaTests(unittest.TestCase):
+    # Check that template is exact complete wire observation schema.
     def test_template_is_exact_complete_wire_observation_schema(self):
         parsed=parse_csv(template_csv())
         self.assertEqual(len(parsed['rows']),4)
         self.assertEqual(parsed['rows'][0]['observed_at_ns'],1000000000)
+    # Check that missing column generic flow and precomputed features rejected.
     def test_missing_column_generic_flow_and_precomputed_features_rejected(self):
         for data in [b'flow_id,label\na,normal\n',b'current_function,earlier_observed_mode\n5,0\n']:
             with self.assertRaisesRegex(ValueError,'required to reconstruct'): parse_csv(data)
+    # Check that wrong type unknown private column and inconsistent decoding rejected.
     def test_wrong_type_unknown_private_column_and_inconsistent_decoding_rejected(self):
         for column,value in [('observed_at_ns','1.0'),('stream_offset','-1'),('scenario','attack'),
                              ('unit','2'),('role','response'),('adu_hex','00')]:
             rows=table(template_csv())
             for row in rows: row[column]=value
             with self.subTest(column=column),self.assertRaises(ValueError): parse_csv(encode(rows))
+    # Check that duplicate ids partial endpoints schema version rejected.
     def test_duplicate_ids_partial_endpoints_schema_version_rejected(self):
         for kind in ('ids','endpoints','version'):
             rows=table(template_csv())
@@ -40,20 +48,25 @@ class CsvSchemaTests(unittest.TestCase):
             if kind=='version':
                 for row in rows: row['observation_schema']='unknown-v2'
             with self.subTest(kind=kind),self.assertRaises(ValueError): parse_csv(encode(rows))
+    # Check that one ground truth alias only.
     def test_one_ground_truth_alias_only(self):
         rows=table(template_csv())
         for row in rows: row.update(label='normal',ground_truth='normal')
         with self.assertRaisesRegex(ValueError,'only one'): parse_csv(encode(rows))
 
+# Group the related software checks and their shared test helpers.
 @unittest.skipUnless((HERE/'data/collection/collection_complete.json').is_file(),'Local experiment required')
 class CsvInferenceTests(unittest.TestCase):
+    # Load shared development evidence or saved models once for this test class.
     @classmethod
     def setUpClass(cls):
         cls.models=load_locked_models(); cls.registry=manifest_registry()
 
+    # Run the CSV test helper with already loaded models and test membership metadata.
     def analyze(self,data,registry=None):
         return analyze_csv(data,self.models,self.registry if registry is None else registry,trusted_single_writer=True)
 
+    # Check that template predicts and missing context abstains before imputation.
     def test_template_predicts_and_missing_context_abstains_before_imputation(self):
         result=self.analyze(template_csv())
         self.assertEqual(result['predictions_produced'],1)
@@ -62,6 +75,7 @@ class CsvInferenceTests(unittest.TestCase):
         partial=self.analyze(encode(rows))
         self.assertEqual(partial['records'][1]['prediction'],'abstain')
         self.assertFalse(partial['records'][1]['context_available'])
+    # Check that unique timestamps restore order without float rounding.
     def test_unique_timestamps_restore_order_without_float_rounding(self):
         rows=table(template_csv()); rows.reverse()
         result=self.analyze(encode(rows))
@@ -69,6 +83,7 @@ class CsvInferenceTests(unittest.TestCase):
         expected=self.analyze(template_csv())
         self.assertEqual([r['prediction'] for r in result['records']],[r['prediction'] for r in expected['records']])
         self.assertEqual([r['observed_at_ns'] for r in result['records']],[1000000000,1001000000,1002000000,1003000000])
+    # Check that ambiguous timestamp stream and byte gaps are rejected.
     def test_ambiguous_timestamp_stream_and_byte_gaps_are_rejected(self):
         for kind in ('time','gap'):
             rows=table(template_csv())
@@ -79,6 +94,7 @@ class CsvInferenceTests(unittest.TestCase):
             self.assertEqual(result['rejected_rows'],4)
             self.assertEqual(result['predictions_produced'],0)
             self.assertTrue(all(r['prediction'] is None for r in result['records']))
+    # Check that runs and connections cannot share anchor.
     def test_runs_and_connections_cannot_share_anchor(self):
         for boundary in ('run_id','connection_id'):
             rows=table(template_csv())
@@ -87,6 +103,7 @@ class CsvInferenceTests(unittest.TestCase):
             reply=next(r for r in result['records'] if r['event_id']=='example-e3')
             self.assertEqual(reply['prediction'],'abstain')
             self.assertFalse(reply['context_available'])
+    # Check that future mutation does not change past features or predictions.
     def test_future_mutation_does_not_change_past_features_or_predictions(self):
         from observation_inference import infer_observations
         from csv_inference import maps
@@ -104,12 +121,14 @@ class CsvInferenceTests(unittest.TestCase):
         import pandas as pd
         pd.testing.assert_frame_equal(pd.DataFrame([r['features'] for r in before[:4]]),pd.DataFrame([r['features'] for r in after[:4]]))
         self.assertEqual([r['prediction'] for r in pred_before['D'][:4]],[r['prediction'] for r in pred_after['D'][:4]])
+    # Check that no fit or fit transform and labels never enter observe.
     def test_no_fit_or_fit_transform_and_labels_never_enter_observe(self):
         from sklearn.pipeline import Pipeline
         from sklearn.impute import SimpleImputer
         rows=table(template_csv())
         for row in rows: row['label']='command_injection'
         seen=[]; observe=Detector.observe
+        # Observe a dependency call during the test while forwarding to the original implementation.
         def spy(detector,row): seen.append(set(row)); return observe(detector,row)
         with (patch.object(Pipeline,'fit',side_effect=AssertionError('fit forbidden')),
               patch.object(Pipeline,'fit_transform',side_effect=AssertionError('fit_transform forbidden')),
@@ -122,15 +141,18 @@ class CsvInferenceTests(unittest.TestCase):
         self.assertTrue(all(not key & {'label','run_id','class','ground_truth','_ground_truth','map_id'} for key in seen))
         self.assertFalse(result['labels_used_for_prediction'])
         self.assertEqual(evaluate_predictions(result)['support'],1)
+    # Check that csv report is not reaccepted as input.
     def test_csv_report_is_not_reaccepted_as_input(self):
         result=self.analyze(template_csv())
         with self.assertRaises(ValueError): parse_csv(prediction_csv(result))
+    # Check that ground truth validation is after prediction.
     def test_ground_truth_validation_is_after_prediction(self):
         rows=table(template_csv())
         for row in rows: row['label']='0'
         result=self.analyze(encode(rows))
         self.assertEqual(result['predictions_produced'],1)
         with self.assertRaisesRegex(ValueError,'Unsupported ground-truth'): evaluate_predictions(result)
+    # Check that partition badges conservative and id alone cannot prove independence.
     def test_partition_badges_conservative_and_id_alone_cannot_prove_independence(self):
         rows=parse_csv(template_csv())['rows']
         for planned,expected in [('MX001','TRAINING RUN'),('MX025','VALIDATION RUN'),('MX069','HELD-OUT TEST RUN'),('unmatched','EXTERNAL / UNKNOWN')]:
@@ -138,11 +160,13 @@ class CsvInferenceTests(unittest.TestCase):
             self.assertEqual(status['badge'],expected)
             self.assertNotEqual(status['match'],'complete_byte_trace')
         self.assertIn('already-observed',partition_status('MX069',rows,self.registry)['note'].lower())
+    # Check that pcap csv equivalence and full trace provenance.
     def test_pcap_csv_equivalence_and_full_trace_provenance(self):
         from capture_replay import replay_capture
         import observation_inference
         import pandas as pd
         original=observation_inference.predict_batch; features=[]
+        # Observe a dependency call during the test while forwarding to the original implementation.
         def spy(rows,models,name):
             features.append(pd.DataFrame([r['features'] for r in rows])); return original(rows,models,name)
         with patch('observation_inference.predict_batch',spy):

@@ -1,3 +1,4 @@
+# Run preparation for the older configurable CSV workflow.
 """Run prepare_data from any working directory."""
 
 import argparse
@@ -9,6 +10,7 @@ from src.preprocessing import prepare_data
 from src.utils import load_config
 
 
+# Load the older configuration and invoke its data preparation command.
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", type=Path, default=None)

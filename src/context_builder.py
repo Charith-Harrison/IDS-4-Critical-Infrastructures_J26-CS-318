@@ -1,3 +1,4 @@
+# Build the older pipeline's history features separately within each context group.
 """Past-only context; input must already be partitioned into capture/session groups."""
 
 from __future__ import annotations
@@ -6,6 +7,7 @@ import numpy as np
 import pandas as pd
 
 
+# Calculate rolling summaries inside each group from values that were already shifted into the past.
 def rolling_by_group(values: pd.Series, groups: pd.Series, window: int, operation: str) -> pd.Series:
     """Calculate a bounded rolling statistic on already-lagged values."""
     rolled = values.groupby(groups, sort=False).rolling(window, min_periods=1)
@@ -16,9 +18,11 @@ def rolling_by_group(values: pd.Series, groups: pd.Series, window: int, operatio
     return result.reset_index(level=0, drop=True).reindex(values.index)
 
 
+# Compare current values with earlier values; shift history before computing rolling summaries.
 def build_context(events: pd.DataFrame, static: pd.DataFrame, cfg: dict) -> pd.DataFrame:
     result = pd.DataFrame(index=events.index)
     groups = events.context_id
+    # Shift by one row first, so later rows never enter an earlier history window.
     past = static.groupby(groups, sort=False).shift(1)
     result["previous_function_code"] = past.function_code
     result["previous_operation"] = past.is_write

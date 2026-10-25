@@ -1,3 +1,4 @@
+# Show processing failures and model provenance in the older dashboard.
 """Artifact provenance and visible processing failures."""
 
 import streamlit as st
@@ -5,6 +6,7 @@ import streamlit as st
 from app.ui_utils import optional_json
 
 
+# Show processing failures and model provenance in the older dashboard.
 def render(events, artifact, health):
     st.header("System Health")
     metadata = artifact["metadata"]

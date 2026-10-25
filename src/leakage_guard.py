@@ -1,3 +1,4 @@
+# Allow only declared predictors into the older model; exclude labels and identifying metadata.
 """An exact whitelist prevents metadata and target leakage at every model boundary."""
 
 from __future__ import annotations
@@ -35,6 +36,7 @@ FORBIDDEN = {
 }
 
 
+# Reject predictors outside the exact allowlist, including target or source metadata.
 def validate_features(features: pd.DataFrame, cfg: dict, kind: str) -> None:
     expected = feature_names(cfg, kind)
     unknown = set(features.columns) - set(expected)

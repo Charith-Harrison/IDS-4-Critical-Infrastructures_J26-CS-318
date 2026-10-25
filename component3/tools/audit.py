@@ -1,3 +1,4 @@
+# Independently check collection evidence and saved scores without training or rerunning final predictions.
 """Independent evidence/metric audit, not training or another final evaluation.
 
 The PCAP reader and label replay below do not import the generator/validator.
@@ -20,21 +21,26 @@ LOCKED = ROOT/'component3/locked/v1_20261025'
 sys.path.insert(0, str(LOCKED))
 CLASSES = ['normal', 'command_injection', 'response_injection']
 
+# Stop the audit when a required evidence condition is false.
 def need(ok, message):
     if not ok:
         raise ValueError(message)
 
+# Read the JSON evidence used by this helper.
 def read(path):
     return json.loads(path.read_text(encoding='utf-8-sig'))
 
+# Read JSON objects from a line-delimited evidence file.
 def rows(path):
     with path.open(encoding='utf-8-sig') as stream:
         return [json.loads(line) for line in stream if line.strip()]
 
+# Calculate a SHA-256 digest of the file bytes.
 def sha(path):
     with path.open('rb') as stream:
         return hashlib.file_digest(stream, 'sha256').hexdigest()
 
+# Read bounded TCP packet evidence and reconstruct stream positions independently of the generator.
 def pcap(path):
     """Bounded classic-PCAP IPv4/TCP reader with SYN-based byte identity.
 
@@ -94,6 +100,7 @@ def pcap(path):
         need(len(values) == max(values)+1, 'TCP byte gap')
     return blob, frames, {k:bytes(v[i] for i in range(len(v))) for k,v in streams.items()}, retransmitted
 
+# Recalculate metrics from saved true/predicted labels for an independent audit.
 def independent_metrics(truth, prediction):
     table = [[0]*3 for _ in CLASSES]
     for y, p in zip(truth, prediction, strict=True):
@@ -106,6 +113,7 @@ def independent_metrics(truth, prediction):
             'confusion': table, 'macro_f1_fixed_three_classes': sum(f1)/3,
             'unsupported_classes': [c for c,n in zip(CLASSES,support) if n == 0]}
 
+# Check accepted collection evidence and saved evaluation claims without regenerating final predictions.
 def audit(source, output):
     import numpy as np
     import pandas as pd

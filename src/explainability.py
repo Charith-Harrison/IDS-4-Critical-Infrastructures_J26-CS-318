@@ -1,3 +1,4 @@
+# Describe feature values and model importance; these are not proof of an attack's cause.
 """Descriptive evidence, explicitly separated from causal attribution."""
 
 from __future__ import annotations
@@ -6,12 +7,14 @@ import math
 from functools import lru_cache
 
 
+# Read feature importance from the fitted forest once for later explanations.
 @lru_cache(maxsize=8)
 def ranked_features(classifier, names: tuple[str, ...]) -> tuple:
     """RF importance aggregates every tree; compute once per loaded model, not per row."""
     return tuple(sorted(zip(names, classifier.feature_importances_), key=lambda item: item[1], reverse=True))
 
 
+# Report observed feature values and training-range comparisons, not invented causal reasons.
 def explain_event(values, artifact: dict) -> dict:
     """Surface actual feature values and training-range context, not invented reasons."""
     names = artifact["metadata"]["feature_names"]

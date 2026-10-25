@@ -1,3 +1,4 @@
+# Display and filter the older application's prediction records.
 """Searchable predictions and stable API export."""
 
 import json
@@ -8,6 +9,7 @@ from app.ui_utils import render_table
 from src.inference import prediction_records
 
 
+# Display and filter the older application's prediction records.
 def render(events, artifact, health):
     st.header("Detection Events")
     classes = artifact["metadata"]["classes"]

@@ -1,3 +1,4 @@
+# Score the older pipeline's predictions and guard its saved holdout evaluation.
 """Explicit binary/multiclass metrics and one frozen holdout comparison."""
 
 from __future__ import annotations
@@ -18,6 +19,7 @@ from sklearn.metrics import (
 from src.utils import ROOT, checksum, read_json, save_json
 
 
+# Calculate classification metrics with explicit class names and denominators.
 def score_predictions(actual, predicted, probabilities: np.ndarray, classes: list[str]) -> dict:
     actual, predicted = np.asarray(actual), np.asarray(predicted)
     metrics = {
@@ -63,6 +65,7 @@ def score_predictions(actual, predicted, probabilities: np.ndarray, classes: lis
     return metrics
 
 
+# Use a fitted pipeline to predict a feature table, then compare with the supplied targets.
 def predict_and_score(pipeline, features: pd.DataFrame, labels) -> tuple[dict, np.ndarray, np.ndarray]:
     start = time.perf_counter()
     probabilities = pipeline.predict_proba(features)
@@ -82,6 +85,7 @@ def predict_and_score(pipeline, features: pd.DataFrame, labels) -> tuple[dict, n
     return scores, predictions, probabilities
 
 
+# Check the saved experiment state before evaluating the older models on held-out rows.
 def evaluate_models(cfg: dict) -> dict:
     from src.feature_engineering import build_features
     from src.inference import load_model

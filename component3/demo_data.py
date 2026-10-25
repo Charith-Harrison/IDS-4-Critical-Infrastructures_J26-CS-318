@@ -1,3 +1,4 @@
+# Load verified demonstration examples and trace them back to the original evidence.
 """Read-only PP1 demonstration data. Only accepted development runs are replayed."""
 import hashlib
 import json
@@ -6,15 +7,19 @@ from runtime import Detector,load_locked_models,predict_batch,LOCKED
 
 HERE=Path(__file__).resolve().parent
 
+# Read the JSON evidence used by this helper.
 def read(path): return json.loads(path.read_text(encoding='utf-8-sig'))
+# Calculate a SHA-256 digest of the file bytes.
 def sha(path):
     with path.open('rb') as stream: return hashlib.file_digest(stream,'sha256').hexdigest()
 
+# Resolve an evidence path and refuse paths that leave the intended source directory.
 def checked_child(root,name):
     target=(root/name).resolve()
     if not target.is_relative_to(root.resolve()): raise ValueError('Unsafe evidence path')
     return target
 
+# Find saved validation cases with identical current bytes and different verified classes.
 def _saved_examples():
     """Select byte-identical validation pairs; never refit or predict.
 
@@ -49,6 +54,7 @@ def _saved_examples():
         else: raise ValueError('No matched saved validation examples: '+task)
     return examples,saved.set_index('event_id').to_dict(orient='index')
 
+# Verify the evidence and prepare read-only examples for the dashboard.
 def load_demo(source=None, *, saved_predictions_only=False):
     source=Path(source or HERE/'data/collection').resolve()
     models=None if saved_predictions_only else load_locked_models()

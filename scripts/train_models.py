@@ -1,3 +1,4 @@
+# Start training for the older configurable workflow; dashboard inference does not call this script.
 """Run train_models from any working directory."""
 
 import argparse
@@ -9,6 +10,7 @@ from src.training import train_models
 from src.utils import load_config
 
 
+# Load the older configuration and explicitly invoke its training command.
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", type=Path, default=None)

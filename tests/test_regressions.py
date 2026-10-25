@@ -1,3 +1,4 @@
+# Check regressions behavior using software fixtures and existing evidence.
 import copy
 
 import pandas as pd
@@ -11,6 +12,7 @@ from src.training import fit_model
 from src.utils import load_config
 
 
+# Check that inference ignores aliased labels.
 def test_inference_ignores_aliased_labels(raw, events, cfg):
     cfg["dataset"]["column_map"] = {"Original Label": "attack_category"}
     artifact = fit_model(events, events.copy(), cfg, "baseline")
@@ -21,6 +23,7 @@ def test_inference_ignores_aliased_labels(raw, events, cfg):
     assert output.prediction.notna().all()
 
 
+# Check that same capture across files stays together.
 def test_same_capture_across_files_stays_together(raw, cfg):
     frames = []
     for capture in range(12):
@@ -32,6 +35,7 @@ def test_same_capture_across_files_stays_together(raw, cfg):
     assert result.groupby("file_source").partition.nunique().eq(1).all()
 
 
+# Check that scenarios reset context without splitting capture.
 def test_scenarios_reset_context_without_splitting_capture(raw, cfg):
     raw["scenario_id"] = ["first"] * 24 + ["second"] * 24
     prepared = preprocess_frame(raw, cfg, "fixture")
@@ -40,6 +44,7 @@ def test_scenarios_reset_context_without_splitting_capture(raw, cfg):
     assert events.context_id.nunique() == 2
 
 
+# Check that final mode requires label evidence.
 def test_final_mode_requires_label_evidence(cfg, tmp_path):
     final = copy.deepcopy(cfg)
     final["model_mode"] = "final_three_class"
@@ -49,6 +54,7 @@ def test_final_mode_requires_label_evidence(cfg, tmp_path):
         load_config(path)
 
 
+# Check that all malformed input has no predictions.
 def test_all_malformed_input_has_no_predictions(raw, events, cfg):
     artifact = fit_model(events, events.copy(), cfg, "baseline")
     raw["modbus_func_code"] = 999

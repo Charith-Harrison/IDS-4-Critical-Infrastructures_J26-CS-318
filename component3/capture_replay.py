@@ -1,3 +1,4 @@
+# Turn an accepted development PCAP into observations, then run the saved models.
 """Unscored development-PCAP inference with the original saved RF models.
 
 No application ledger, labels, server state or intervention log is read. The
@@ -18,6 +19,7 @@ LOCK_SHA='f59f8e8922de62afd28f610a2521d9c45c0ebc46cec35b587210f4da0c6181c9'
 PROTOCOL_SHA='7634b3187e53c029db5d4755c6c3cf9df6a7985ab8ad1c67d3ebf00662a43c48'
 TRANSPORT_SHA='bd1bdf2acabeb26c5dff7fd3e677f68ce7029d1196b10f4cdd6ef2c839b479d6'
 
+# Read the accepted-run index and offer only training and validation captures.
 def development_captures(source=SOURCE):
     source=Path(source).resolve()
     lock_path=LOCKED/'artifacts/experiment_lock.json'
@@ -29,6 +31,7 @@ def development_captures(source=SOURCE):
     return {name:entry for name,entry in index['completed'].items()
             if entry['intended_evaluation_role'] in ('train','validation')}
 
+# Load the original TCP reader only after its recorded hash matches.
 def _transport(source):
     path=source/'_handover/source/collector/engine/c3qual/transport.py'
     if sha(path)!=TRANSPORT_SHA: raise ValueError('Qualified PCAP reader changed')
@@ -36,6 +39,7 @@ def _transport(source):
     module=importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
     return module
 
+# Reassemble complete Modbus messages and retain their exact packet-byte references.
 def wire_observations(capture,client_port,transport):
     """Read every ADU at its first complete wire observation, before filtering."""
     streams,lineage,statistics=transport._read_pcap(capture,15020,client_port)
@@ -70,6 +74,7 @@ def wire_observations(capture,client_port,transport):
         row['event_id']=f'pcap:{capture_sha[:16]}:e{ordinal}'
     return pending,statistics
 
+# Verify one recording, reconstruct its messages, and predict without reading labels.
 def replay_capture(planned_id,source=SOURCE,models=None):
     source=Path(source).resolve()
     entries=development_captures(source)

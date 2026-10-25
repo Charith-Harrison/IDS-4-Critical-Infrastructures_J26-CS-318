@@ -1,3 +1,4 @@
+# Check recorded CSV/browser test results and confirm protected files kept their original bytes.
 """Recheck protected evidence and record the CSV adapter delivery checks."""
 import hashlib
 import json
@@ -7,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[2]
 C3 = ROOT / 'component3'
 
 
+# Calculate a file hash for an integrity comparison.
 def digest(path):
     value = hashlib.sha256()
     with path.open('rb') as handle:

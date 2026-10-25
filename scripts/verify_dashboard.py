@@ -1,3 +1,4 @@
+# Smoke-test the older dashboard against its existing local model artifacts.
 """Integration smoke check of all pages using real saved model artifacts.
 
 Run separately from the small-fixture unit suite. Streamlit's test runner needs
@@ -15,6 +16,7 @@ from streamlit.testing.v1 import AppTest
 from src.utils import ROOT, now, save_json
 
 
+# Open the older dashboard in the test runner and check that its pages render.
 def main():
     faulthandler.dump_traceback_later(45)
     app = AppTest.from_file(str(ROOT / "app/dashboard.py"), default_timeout=90).run()

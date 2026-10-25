@@ -1,3 +1,4 @@
+# Remember earlier wire messages, build allowed features, and apply frozen models.
 """v2 label-free complete-ADU inference adapter. Experimental engineering version.
 
 Consumes ordered, reassembled wire observations from a trusted transport adapter.
@@ -20,14 +21,17 @@ from c3model.records import decode, CURRENT, CONTEXT, WIRE
 
 NAN = float('nan')
 
+# Keep connection state and turn ordered public messages into model features.
 class Detector:
     """One detector per public map; no simulator transaction/episode IDs used."""
+    # Require the declared trust policy and start with empty connection history.
     def __init__(self, mapping, *, trusted_single_writer=False):
         if trusted_single_writer is not True:
             raise ValueError('This adapter requires the declared trusted-anchor/single-writer testbed contract')
         self.connections = {}
         self.set_map(mapping)
 
+    # Validate the public addresses and clear context because the address meanings have changed.
     def set_map(self,mapping):
         keys = ('mode_register','setpoint_register','pump_coil')
         if not all(type(mapping.get(k)) is int and 0 <= mapping[k] <= 65535 for k in keys):
@@ -37,15 +41,18 @@ class Detector:
         self.mapping = {k:mapping[k] for k in keys}
         self.connections.clear()  # Explicit public configuration boundary.
 
+    # Start a connection with no mode, setpoint, pending request, or consumed bytes.
     @staticmethod
     def fresh():
         return {'ordinal':0,'mode':None,'setpoint':None,'pending':None,
                 'offsets':{'client_to_server':0,'server_to_client':0}}
 
+    # Discard this connection's remembered history after transport or trust is lost.
     def invalidate(self,connection):
         """Transport must call this on loss, reconnect, timeout, or trust loss."""
         self.connections.pop(connection,None)
 
+    # Decide using the current message and existing history before updating state for later messages.
     def observe(self,row):
         connection = row.get('connection_id')
         base = {'schema_version':2,'adapter_version':VERSION,'event_id':row.get('event_id'),
@@ -57,6 +64,7 @@ class Detector:
             self.invalidate(connection)
             base['reason'] = 'Event ID and integer observation timestamp are required'; return base
         state = self.connections.setdefault(connection,self.fresh())
+        # Clear unsafe state and return an explicit failure status instead of a normal prediction.
         def fail(reason,status='invalid_input'):
             self.invalidate(connection)
             base.update(processing_status=status,reason=reason)
@@ -84,6 +92,7 @@ class Detector:
                 'setpoint' if fc in (3,6) and addr == m['setpoint_register'] else None) if request else None
         if request and (role is None or (fc == 6 and role == 'mode' and word not in (0,1))):
             return fail('Operation outside declared public map/policy','unsupported_input')
+        # Pair with the outstanding request; a reused TID alone is not a transaction identity.
         pending = state['pending']
         if request and pending is not None:
             return fail('Concurrent outstanding request; identity ambiguous','ambiguous_pair')
@@ -99,8 +108,10 @@ class Detector:
             pair_role = pending['role']
             if fc == 3 and pair_role == 'mode' and not decoded['exception'] and word not in (0,1):
                 return fail('Mode outside declared public policy','unsupported_input')
+        # Public function/address policy selects the task; ground-truth labels do not select it.
         task = ('command' if request and fc == 5 and word == 0xff00 else
                 'response' if not request and fc == 3 and pair_role == 'setpoint' and not decoded['exception'] else '')
+        # Use an earlier observation only while it is within the allowed message-distance limit.
         def anchor(key):
             item=state[key]
             return item if item is not None and 0 <= ordinal-item['ordinal']-1 <= 6 else None
@@ -115,6 +126,7 @@ class Detector:
         number=lambda value: NAN if value is None else value
         try:
             ip=lambda name: NAN if row.get(name) is None else int(ipaddress.ip_address(row[name]))
+            # Keep absent wire fields as NaN; a real zero remains a real zero.
             features={
                 'current_function':fc,'current_unit':decoded['unit'],'current_is_request':int(request),
                 'current_pdu_length':decoded['pdu_length'],'current_wire_address':number(addr),
@@ -131,6 +143,7 @@ class Detector:
                 'context_available':available}
         except (ValueError,TypeError) as exc:
             return fail(str(exc))
+        # Keep public eligibility, usable history, and the prediction status as separate fields.
         base.update(eligible=bool(task),context_available=available,task=task,prediction=rule,features=features,
                     function_code=fc,wire_address=addr,
                     address_or_register=addr if request else pending['decoded']['address'],
@@ -154,11 +167,13 @@ class Detector:
                     state['setpoint']={'value':word,'ordinal':ordinal,'event_id':row.get('event_id')}
         return base
 
+# Verify the lock, original code, model bytes, and feature order before loading saved models.
 def load_locked_models(artifacts=None):
     """Hash-check locally trusted models BEFORE deserialization. No fitting."""
     import joblib
     artifacts=Path(artifacts or LOCKED/'artifacts')
     lock=json.loads((artifacts/'experiment_lock.json').read_text(encoding='utf-8-sig'))
+    # Calculate a file hash for an integrity comparison.
     def digest(path):
         with path.open('rb') as stream: return hashlib.file_digest(stream,'sha256').hexdigest()
     if digest(artifacts/'experiment_lock.json') != 'f59f8e8922de62afd28f610a2521d9c45c0ebc46cec35b587210f4da0c6181c9':
@@ -175,6 +190,7 @@ def load_locked_models(artifacts=None):
         models[name]=model
     return models
 
+# Select supported rows and apply saved preprocessing and RF without fitting anything.
 def predict_batch(observations,models,method='D'):
     """Apply the original saved imputer/RF; never fit a replacement transform.
 
@@ -185,6 +201,7 @@ def predict_batch(observations,models,method='D'):
     from c3model.experiment import METHODS,feature_frame
     if method not in METHODS: raise ValueError('Unknown method')
     result=[{k:v for k,v in row.items() if k != 'features'} for row in observations]
+    # Contextual models abstain before imputation if their earlier anchors are unavailable.
     indices=[i for i,r in enumerate(observations) if r.get('eligible') is True and r.get('features') is not None
              and (not method.startswith('D') or r['context_available'])]
     for item in result:
@@ -196,6 +213,7 @@ def predict_batch(observations,models,method='D'):
         frame=pd.DataFrame([observations[i]['features'] for i in indices])
         if method.endswith('wire') and frame[WIRE].isna().any().any():
             raise ValueError('Wire model requires all endpoint/header fields')
+        # Use the saved feature allowlist and ordering, not the incoming dictionary order.
         x=feature_frame(frame,METHODS[method])
         labels=models[method].predict(x); probabilities=models[method].predict_proba(x)
         for i,label,probability in zip(indices,labels,probabilities,strict=True):

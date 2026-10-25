@@ -1,0 +1,10 @@
+{
+  "raw_observation_matches": 8731,
+  "unique_positive_worksheet_rows": 8687,
+  "func_code_disagreements": 0,
+  "length_disagreements": 0,
+  "packet_size_disagreements": 0,
+  "requested_address_disagreements": 0,
+  "requested_quantity_disagreements": 0,
+  "limits": "Positive rows only. Matching raw observations may be nonunique. Response register/quantity defaults do not denote request addresses."
+}

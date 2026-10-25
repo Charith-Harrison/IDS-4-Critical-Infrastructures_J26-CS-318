@@ -1,0 +1,371 @@
+{
+  "original_rebuilt_dataset_validation": {
+    "status": "NOT AVAILABLE",
+    "reason": "Neither requested Pre-processed/Pre-processed/rebuilt_sequences nor any packets_rebuilt.csv, packet_exclusions.csv, windows.csv, window_index.npy existed among supplied source files. Historical JSON is an unverified claim. New diagnostic outputs are segregated below.",
+    "directly_validated_windows": 0
+  },
+  "new_diagnostic_reconstruction": {
+    "status": "STRUCTURAL PASS / SESSION AND CAMPAIGN CONDITIONAL",
+    "files_relative_to_review": "evidence/diagnostic_reconstruction/",
+    "population_accounting": {
+      "original_rows": 879225,
+      "retained_rows": 597135,
+      "excluded_rows": 282090,
+      "sum_equals_population": true,
+      "retained_duplicate_original_ids": 0,
+      "excluded_duplicate_original_ids": 0,
+      "retained_excluded_overlap": 0,
+      "missing_original_ids": 0,
+      "unknown_original_ids": 0,
+      "reason_counts": {
+        "duplicate_interface_view": 282076,
+        "excluded_file": 14
+      },
+      "exclusion_sources": [
+        {
+          "reason": "duplicate_interface_view",
+          "file_source": "veth5bbeaa2-0.pcap",
+          "rows": 216466
+        },
+        {
+          "reason": "duplicate_interface_view",
+          "file_source": "veth665f3cf-0.pcap",
+          "rows": 65610
+        },
+        {
+          "reason": "excluded_file",
+          "file_source": "attached_recon_flows.csv",
+          "rows": 14
+        }
+      ],
+      "retained_source_value_disagreements": {
+        "timestamp": 0,
+        "src_ip": 0,
+        "dst_ip": 0,
+        "unit_id": 0,
+        "func_code": 0,
+        "modbus_len": 0,
+        "register_start": 0,
+        "quantity": 0,
+        "packet_size": 0,
+        "time_delta": 0,
+        "session_id": 0,
+        "label": 0,
+        "file_source": 0
+      }
+    },
+    "duplicate_interface_verification": {
+      "scope": "processed feature equality only; this check does not compare PCAP bytes, frame identity or TCP state",
+      "excluded_rows": 282076,
+      "matches": 282076,
+      "unmatched": 0,
+      "label_disagreements": 0,
+      "abs_timestamp_delta_ns": {
+        "n": 282076,
+        "min": 2000,
+        "p01": 3000.0,
+        "p25": 5000.0,
+        "median": 6000.0,
+        "mean": 7265.903515364654,
+        "p75": 9000.0,
+        "p95": 13000.0,
+        "p99": 18000.0,
+        "max": 535000
+      },
+      "signed_timestamp_delta_ns": {
+        "n": 282076,
+        "min": -535000,
+        "p01": -10000.0,
+        "p25": -5000.0,
+        "median": -4000.0,
+        "mean": 601.2528538408088,
+        "p75": 9000.0,
+        "p95": 13000.0,
+        "p99": 17000.0,
+        "max": 304000
+      },
+      "unique_retained_matches": 282076,
+      "per_stream": [
+        {
+          "capture_group": "G03_0201_veth",
+          "session_id": "185.175.0.3_185.175.0.4_u1_s0001",
+          "keep_file": "veth4edc015-0.pcap",
+          "file_counts": {
+            "veth4edc015-0.pcap": 35967,
+            "veth5bbeaa2-0.pcap": 35963
+          },
+          "dropped": 35963,
+          "matched_with_content_and_tolerance": 35963,
+          "label_disagreements": 0,
+          "absolute_delta_ns": {
+            "n": 35963,
+            "min": 2000,
+            "p01": 4000.0,
+            "p25": 5000.0,
+            "median": 5000.0,
+            "mean": 5925.395545421683,
+            "p75": 6000.0,
+            "p95": 9000.0,
+            "p99": 12000.0,
+            "max": 207000
+          }
+        },
+        {
+          "capture_group": "G03_0201_veth",
+          "session_id": "185.175.0.3_185.175.0.5_u1_s0003",
+          "keep_file": "vethd9e14c0-0.pcap",
+          "file_counts": {
+            "vethd9e14c0-0.pcap": 36287,
+            "veth5bbeaa2-0.pcap": 36262
+          },
+          "dropped": 36262,
+          "matched_with_content_and_tolerance": 36262,
+          "label_disagreements": 0,
+          "absolute_delta_ns": {
+            "n": 36262,
+            "min": 2000,
+            "p01": 4000.0,
+            "p25": 5000.0,
+            "median": 5000.0,
+            "mean": 6055.20931002151,
+            "p75": 6000.0,
+            "p95": 9000.0,
+            "p99": 13000.0,
+            "max": 369000
+          }
+        },
+        {
+          "capture_group": "G03_0201_veth",
+          "session_id": "185.175.0.3_185.175.0.8_u1_s0005",
+          "keep_file": "veth8bc3408-0.pcap",
+          "file_counts": {
+            "veth8bc3408-0.pcap": 36009,
+            "veth5bbeaa2-0.pcap": 36007
+          },
+          "dropped": 36007,
+          "matched_with_content_and_tolerance": 36007,
+          "label_disagreements": 0,
+          "absolute_delta_ns": {
+            "n": 36007,
+            "min": 2000,
+            "p01": 4000.0,
+            "p25": 5000.0,
+            "median": 5000.0,
+            "mean": 5851.306690365762,
+            "p75": 6000.0,
+            "p95": 9000.0,
+            "p99": 11000.0,
+            "max": 535000
+          }
+        },
+        {
+          "capture_group": "G03_0201_veth",
+          "session_id": "185.175.0.4_185.175.0.3_u1_s0002",
+          "keep_file": "veth4edc015-0.pcap",
+          "file_counts": {
+            "veth4edc015-0.pcap": 35966,
+            "veth5bbeaa2-0.pcap": 35964
+          },
+          "dropped": 35964,
+          "matched_with_content_and_tolerance": 35964,
+          "label_disagreements": 0,
+          "absolute_delta_ns": {
+            "n": 35964,
+            "min": 3000,
+            "p01": 7000.0,
+            "p25": 10000.0,
+            "median": 11000.0,
+            "mean": 11224.029585140695,
+            "p75": 12000.0,
+            "p95": 16000.0,
+            "p99": 24000.0,
+            "max": 304000
+          }
+        },
+        {
+          "capture_group": "G03_0201_veth",
+          "session_id": "185.175.0.5_185.175.0.3_u1_s0004",
+          "keep_file": "vethd9e14c0-0.pcap",
+          "file_counts": {
+            "vethd9e14c0-0.pcap": 36287,
+            "veth5bbeaa2-0.pcap": 36262
+          },
+          "dropped": 36262,
+          "matched_with_content_and_tolerance": 36262,
+          "label_disagreements": 0,
+          "absolute_delta_ns": {
+            "n": 36262,
+            "min": 4000,
+            "p01": 5000.0,
+            "p25": 7000.0,
+            "median": 7000.0,
+            "mean": 8552.75495008549,
+            "p75": 10000.0,
+            "p95": 13000.0,
+            "p99": 18000.0,
+            "max": 276000
+          }
+        },
+        {
+          "capture_group": "G03_0201_veth",
+          "session_id": "185.175.0.7_185.175.0.4_u1_s0007",
+          "keep_file": "veth4edc015-0.pcap",
+          "file_counts": {
+            "veth665f3cf-0.pcap": 65610,
+            "veth4edc015-0.pcap": 65610
+          },
+          "dropped": 65610,
+          "matched_with_content_and_tolerance": 65610,
+          "label_disagreements": 0,
+          "absolute_delta_ns": {
+            "n": 65610,
+            "min": 2000,
+            "p01": 3000.0,
+            "p25": 4000.0,
+            "median": 4000.0,
+            "mean": 4520.835238530712,
+            "p75": 5000.0,
+            "p95": 6000.0,
+            "p99": 9000.0,
+            "max": 31000
+          }
+        },
+        {
+          "capture_group": "G03_0201_veth",
+          "session_id": "185.175.0.8_185.175.0.3_u1_s0006",
+          "keep_file": "veth8bc3408-0.pcap",
+          "file_counts": {
+            "veth8bc3408-0.pcap": 36009,
+            "veth5bbeaa2-0.pcap": 36008
+          },
+          "dropped": 36008,
+          "matched_with_content_and_tolerance": 36008,
+          "label_disagreements": 0,
+          "absolute_delta_ns": {
+            "n": 36008,
+            "min": 3000,
+            "p01": 7000.0,
+            "p25": 9000.0,
+            "median": 10000.0,
+            "mean": 10991.085314374583,
+            "p75": 12000.0,
+            "p95": 15000.0,
+            "p99": 23000.0,
+            "max": 246000
+          }
+        }
+      ],
+      "interpretation": "Whole-file/session deletion is fully corroborated at the available processed feature level only. Equal features near in time are not proof of byte-identical packets or retransmission identity."
+    },
+    "stream_count": 56,
+    "source_file_count": 12,
+    "session_id_count": 13,
+    "capture_group_count": 10,
+    "streams_with_backwards_time": 0,
+    "negative_dt_s": 0,
+    "expected_first_dt_missing": 56,
+    "unexpected_missing_dt": 0,
+    "window_validation": {
+      "window_count": 119237,
+      "index_shape": [
+        119237,
+        20
+      ],
+      "all_windows_exactly_20": true,
+      "all_index_ranges_valid": true,
+      "all_windows_have_20_distinct_contiguous_indices": true,
+      "all_intra_stream_strides_5": true,
+      "windows_cross_capture_group": 0,
+      "windows_cross_session_id": 0,
+      "windows_with_backwards_timestamp": 0,
+      "start_metadata_mismatches": 0,
+      "end_metadata_mismatches": 0,
+      "first_source_row_mismatches": 0,
+      "last_source_row_mismatches": 0,
+      "positive_count_mismatches": 0,
+      "positive_fraction_mismatches": 0,
+      "any_positive_label_mismatches": 0,
+      "fc5_len3_count_mismatches": 0,
+      "label_counts": {
+        "0": 117359,
+        "1": 1878
+      },
+      "duration_seconds": {
+        "n": 119237,
+        "min": 0.000952,
+        "p01": 0.004539,
+        "p25": 15.361765,
+        "median": 20.346471,
+        "mean": 21.129968139327556,
+        "p75": 20.364458,
+        "p95": 20.6002516,
+        "p99": 21.83601768,
+        "max": 58170.755657
+      },
+      "max_intra_window_gap_seconds": {
+        "n": 119237,
+        "min": 0.000189,
+        "p01": 0.000334,
+        "p25": 5.005656,
+        "median": 5.006739,
+        "mean": 9.108108865394131,
+        "p75": 5.00848,
+        "p95": 5.039046,
+        "p99": 5.150463,
+        "max": 58155.337023
+      },
+      "windows_span_gt_60s": 509,
+      "windows_span_gt_300s": 88,
+      "windows_span_gt_3600s": 11,
+      "windows_with_gap_gt_60s": 91,
+      "windows_with_gap_gt_300s": 76,
+      "windows_with_gap_gt_3600s": 11,
+      "true_tcp_connection_boundary_crossing": "NOT VERIFIABLE FROM PROCESSED ROWS: ports, SYN/FIN/RST and TCP generation absent",
+      "independent_campaign_boundary_crossing": "NOT VERIFIABLE: capture groups configured from filenames, campaign ledger absent",
+      "inference_context_boundary": "dt_s at first timestep can depend on preceding packet outside window; historical feature script must explicitly reset first-step transitions.",
+      "noninitial_dt_mismatches_gt_1ns": 0
+    },
+    "supplied_vs_recomputed_timing": {
+      "compared_rows": 597079,
+      "matches_within_1us": 561,
+      "median_abs_difference_s": 0.021909,
+      "interpretation": "Supplied time_delta is not a reliable inter-message gap in the chronological stream."
+    },
+    "historical_groupby_diff_precision": {
+      "historical_expression": "groupby([capture_group,session_id]).ts_ns.diff() / 1e9",
+      "issue": "nullable shift promotes epoch nanoseconds to float64 before subtraction in this pandas runtime",
+      "rows_differing_over_1ns": 579064,
+      "absolute_error_ns": {
+        "n": 597079,
+        "min": 0.0,
+        "p01": 0.0,
+        "p25": 32.000000000503846,
+        "median": 72.0000000002663,
+        "mean": 85.41918239016815,
+        "p75": 127.99999999984699,
+        "p95": 199.99999999881223,
+        "p99": 231.9999999993161,
+        "max": 256.0000007534313
+      },
+      "new_method": "Subtract adjacent int64 timestamps within stream, then convert gap to float seconds",
+      "scientific_impact": "Submicrosecond numerical error; does not explain the severe legacy ordering failure or static shortcuts."
+    }
+  },
+  "historical_summary_comparison": {
+    "historical_report_path": "C2_Reconnaissance_Detection/artifacts/rebuild_report.json",
+    "historical_report_is_source_claim_only": true,
+    "claimed_packets_kept": 597135,
+    "new_packets_kept": 597135,
+    "claimed_windows": 119237,
+    "new_windows": 119237,
+    "claimed_label_counts": {
+      "0": 117359,
+      "1": 1878
+    },
+    "new_label_counts": {
+      "0": 117359,
+      "1": 1878
+    },
+    "interpretation": "Matching summary counts reproduce visible transformation rules, not file equality or validation of absent historical datasets."
+  }
+}

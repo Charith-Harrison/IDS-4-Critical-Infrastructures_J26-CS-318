@@ -1,0 +1,213 @@
+{
+  "counts": {
+    "frames": 21867981,
+    "read_requests": 2042925,
+    "context_rows_saved": 20458,
+    "logical_context_resets": 16
+  },
+  "files": [
+    {
+      "source": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-13.pcap",
+      "min_timestamp_us": 1674481924004077,
+      "max_timestamp_us": 1674520586656313,
+      "counts": {
+        "frames": 1176355,
+        "read_requests": 109999,
+        "context_rows_saved": 1128,
+        "logical_context_resets": 6
+      }
+    },
+    {
+      "source": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-14.pcap",
+      "min_timestamp_us": 1674520586656338,
+      "max_timestamp_us": 1674559327297408,
+      "counts": {
+        "frames": 1175307,
+        "read_requests": 110147,
+        "context_rows_saved": 1101,
+        "logical_context_resets": 4
+      }
+    },
+    {
+      "source": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-15.pcap",
+      "min_timestamp_us": 1674559327297431,
+      "max_timestamp_us": 1674597094577235,
+      "counts": {
+        "frames": 1176591,
+        "read_requests": 109813,
+        "context_rows_saved": 1099,
+        "logical_context_resets": 3
+      }
+    },
+    {
+      "source": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-16.pcap",
+      "min_timestamp_us": 1674597094577256,
+      "max_timestamp_us": 1674634737120617,
+      "counts": {
+        "frames": 1176552,
+        "read_requests": 110128,
+        "context_rows_saved": 1101
+      }
+    },
+    {
+      "source": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-17.pcap",
+      "min_timestamp_us": 1674634737120631,
+      "max_timestamp_us": 1674672358596522,
+      "counts": {
+        "frames": 1176527,
+        "read_requests": 109949,
+        "context_rows_saved": 1100
+      }
+    },
+    {
+      "source": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-18.pcap",
+      "min_timestamp_us": 1674672358596694,
+      "max_timestamp_us": 1674709914528235,
+      "counts": {
+        "frames": 1176487,
+        "read_requests": 109815,
+        "context_rows_saved": 1098
+      }
+    },
+    {
+      "source": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-19.pcap",
+      "min_timestamp_us": 1674709914528431,
+      "max_timestamp_us": 1674747502930191,
+      "counts": {
+        "frames": 1176527,
+        "read_requests": 109814,
+        "context_rows_saved": 1098
+      }
+    },
+    {
+      "source": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-20.pcap",
+      "min_timestamp_us": 1674747502930205,
+      "max_timestamp_us": 1674785386985690,
+      "counts": {
+        "frames": 1176585,
+        "read_requests": 110132,
+        "context_rows_saved": 1102,
+        "logical_context_resets": 2
+      }
+    },
+    {
+      "source": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-21.pcap",
+      "min_timestamp_us": 1674785386985716,
+      "max_timestamp_us": 1674822925886371,
+      "counts": {
+        "frames": 1176558,
+        "read_requests": 109757,
+        "context_rows_saved": 1097
+      }
+    },
+    {
+      "source": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-22.pcap",
+      "min_timestamp_us": 1674822925886524,
+      "max_timestamp_us": 1674860632614714,
+      "counts": {
+        "frames": 1176583,
+        "read_requests": 110014,
+        "context_rows_saved": 1100,
+        "logical_context_resets": 1
+      }
+    },
+    {
+      "source": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-23.pcap",
+      "min_timestamp_us": 1674860632614724,
+      "max_timestamp_us": 1674898027968996,
+      "counts": {
+        "frames": 1176681,
+        "read_requests": 109398,
+        "context_rows_saved": 1094
+      }
+    },
+    {
+      "source": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-24.pcap",
+      "min_timestamp_us": 1674898027969014,
+      "max_timestamp_us": 1674935659133612,
+      "counts": {
+        "frames": 1176535,
+        "read_requests": 110166,
+        "context_rows_saved": 1102
+      }
+    },
+    {
+      "source": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-25.pcap",
+      "min_timestamp_us": 1674935659134820,
+      "max_timestamp_us": 1674973053087832,
+      "counts": {
+        "frames": 1176565,
+        "read_requests": 109684,
+        "context_rows_saved": 1097
+      }
+    },
+    {
+      "source": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-26.pcap",
+      "min_timestamp_us": 1674973053087951,
+      "max_timestamp_us": 1675010521956109,
+      "counts": {
+        "frames": 1176549,
+        "read_requests": 110135,
+        "context_rows_saved": 1101
+      }
+    },
+    {
+      "source": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-27.pcap",
+      "min_timestamp_us": 1675010521956160,
+      "max_timestamp_us": 1675048098434747,
+      "counts": {
+        "frames": 1176544,
+        "read_requests": 110072,
+        "context_rows_saved": 1101
+      }
+    },
+    {
+      "source": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-28.pcap",
+      "min_timestamp_us": 1675048098434851,
+      "max_timestamp_us": 1675085572509364,
+      "counts": {
+        "frames": 1176470,
+        "read_requests": 109814,
+        "context_rows_saved": 1098
+      }
+    },
+    {
+      "source": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-29.pcap",
+      "min_timestamp_us": 1675085572509384,
+      "max_timestamp_us": 1675122904795887,
+      "counts": {
+        "frames": 1176518,
+        "read_requests": 109782,
+        "context_rows_saved": 1097
+      }
+    },
+    {
+      "source": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-30.pcap",
+      "min_timestamp_us": 1675122904796723,
+      "max_timestamp_us": 1675160323121106,
+      "counts": {
+        "frames": 1176665,
+        "read_requests": 109725,
+        "context_rows_saved": 1099
+      }
+    },
+    {
+      "source": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-31.pcap",
+      "min_timestamp_us": 1675160323121312,
+      "max_timestamp_us": 1675182542040469,
+      "counts": {
+        "frames": 691382,
+        "read_requests": 64581,
+        "context_rows_saved": 645
+      }
+    }
+  ],
+  "wall_s": 191.71900000001187,
+  "limitations": [
+    "one canonical benign HMI NIC view, all its rotation chunks",
+    "single-segment complete ADUs; no guessed TCP reassembly",
+    "60s gap-aware logical endpoint/unit history crosses TCP connections by design; never asserts independent sessions",
+    "documented benign scenario labels, rather than normality inferred from absence of an attack log",
+    "all current-message shapes counted; causal temporal contexts saved every100th request per logical stream plus first3 shape exemplars; temporal distributions use systematic rows only"
+  ]
+}

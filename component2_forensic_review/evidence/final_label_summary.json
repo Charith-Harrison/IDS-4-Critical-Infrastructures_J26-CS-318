@@ -1,0 +1,19 @@
+{
+  "all_original_positive_rows": 8699,
+  "label_state_counts": {
+    "attack_associated_response": 8400,
+    "unsupported_heuristic": 127,
+    "ambiguous": 106,
+    "supported_contextual": 66
+  },
+  "raw_verified_positive_rows": 8687,
+  "mapped_packet_rows": 158,
+  "mapped_original_source_join_rows": 263,
+  "mapped_rows_original_target_not_on_packet_endpoints": 131,
+  "mapped_rows_original_target_on_packet_endpoints": 27,
+  "raw_positive_request_response_roles": {
+    "request": 197,
+    "response": 8490
+  },
+  "unique_raw_positive_matching_rows": 8687
+}

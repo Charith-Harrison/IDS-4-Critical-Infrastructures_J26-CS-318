@@ -1,0 +1,186 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "required_output_FULL_FINDINGS_REPORT.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "required_output_source_manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "required_output_requirements_matrix.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "required_output_REQUIREMENTS_MATRIX.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "required_output_DATA_LINEAGE.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "required_output_legacy_sequence_audit.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "required_output_rebuilt_sequence_audit.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "required_output_WINDOW_INTEGRITY_REPORT.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "required_output_label_provenance.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "required_output_recon_request_candidates.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "required_output_shortcut_analysis.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "required_output_capture_campaign_summary.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "required_output_split_feasibility.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "required_output_UNRESOLVED_ASSUMPTIONS.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "source_immutability",
+      "passed": true,
+      "detail": {
+        "files": 313,
+        "verification_utc": "2026-10-25T13:40:42.532974+00:00"
+      }
+    },
+    {
+      "check": "source_hash_schema",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_capture_inventory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "candidate_population",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "ambiguity_not_positive",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_supported_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_request_hex_strings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_response_hex_strings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all_positive_provenance_rows",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "campaign_population_total",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "campaign_window_total",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "honest_split_feasibility",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "log_reference_population",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "benign_census",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "temporal_population",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_final_models_created",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "one_final_next_action",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "verdict_complete",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "preserved_parser_copy",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "strict_json_missing_value_normalizations": [],
+  "versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.5.4",
+    "pandas": "3.0.1",
+    "openpyxl": "3.1.5",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "pyarrow": "26.0.0",
+    "scapy": "2.8.0"
+  },
+  "no_final_training": true,
+  "scope": "Forensic review completion; PASS does not mean research dataset validity or independent evaluation readiness."
+}

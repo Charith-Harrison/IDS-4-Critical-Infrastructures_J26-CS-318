@@ -1,0 +1,6 @@
+{
+  "response_rows": 269,
+  "all_response_bytes_verified_from_original_frames": true,
+  "numeric_text_coercion_repaired_from_immutable_raw_source": 269,
+  "instruction": "Always read hex-byte CSV columns with explicit string dtype; never infer numbers"
+}

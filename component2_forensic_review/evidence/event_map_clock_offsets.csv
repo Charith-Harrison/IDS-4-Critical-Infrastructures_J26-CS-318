@@ -1,0 +1,9 @@
+log_file,log_attack,log_timestamp,mapped_rows,min_delta_seconds,max_delta_seconds
+attack\compromised-scada\attack logs\03-15-2023\03-15-2023-1.csv,Recon. Complete,2023-03-15T17:27:36.753000,21,8488.520599,8489.25815
+attack\compromised-scada\attack logs\03-15-2023\03-15-2023-1.csv,Recon. Complete,2023-03-15T18:13:36.789000,14,7802.932598,7805.698863
+attack\compromised-scada\attack logs\03-15-2023\03-15-2023-1.csv,Recon. Complete,2023-03-15T19:49:09.044000,20,3632.345535,3634.678016
+attack\compromised-scada\attack logs\03-15-2023\03-15-2023-1.csv,Recon. Range: 2000,2023-03-15T18:13:36.789000,12,5733.496518,5734.236505
+attack\compromised-scada\attack logs\03-15-2023\03-15-2023-1.csv,Recon. Range: 2000,2023-03-15T19:49:09.043000,20,2075.718492,2078.543689
+attack\compromised-scada\attack logs\03-15-2023\03-15-2023-1.csv,Recon. Range: 2000,2023-03-15T21:03:02.490000,20,-795.898039,-793.671179
+attack\compromised-scada\attack logs\03-19-2023\03-19-2023-1.csv,Recon. Complete,2023-03-19T06:13:51.074000,30,-11463.97927,-11462.257183
+attack\compromised-scada\attack logs\03-19-2023\03-19-2023-1.csv,Recon. Range: 2000,2023-03-19T06:32:51.081000,21,-12598.892899,-12597.147444

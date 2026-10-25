@@ -1,0 +1,158 @@
+{
+  "status": "UNSUPPORTED",
+  "question": "Can the currently reconstructed CIC evidence support a class-complete independent fit/validation/test experiment for temporal reconnaissance?",
+  "scope": "Completed source-byte candidate recovery in this review; no claim that the entire CIC archive has been exhausted by a bounded extractor",
+  "reason": "Raw contextual requests are recovered, but no source-backed independent run/campaign boundary within the recording families has been established. PCAP rotations, mirrors, dates, static sessions and repeated log invocations cannot supply manufactured independence.",
+  "raw_recon_request_evidence": {
+    "raw_source_verified_candidate_rows": 468,
+    "label_state_counts": {
+      "ambiguous": 320,
+      "supported_contextual": 148
+    },
+    "supported_request_candidates_excluding_ambiguous": 148,
+    "ambiguous_request_candidates_not_final_positive_labels": 320,
+    "supported_requests_by_recording_family": {
+      "compromised_SCADA_March_recording": 116,
+      "external_February_recording": 32
+    },
+    "candidate_rows_by_conservative_recording_family": {
+      "compromised_SCADA_March_recording": 436,
+      "external_February_recording": 32
+    },
+    "observed_positive_recording_families": 2,
+    "candidate_rows_by_capture_chunk": {
+      "substation-2.pcap": 56,
+      "substation-3.pcap": 52,
+      "substation-10.pcap": 48,
+      "substation-11.pcap": 44,
+      "substation-6.pcap": 40,
+      "substation-5.pcap": 36,
+      "veth665f3cf-0.pcap": 32,
+      "substation-4.pcap": 24,
+      "substation-8.pcap": 24,
+      "substation-15.pcap": 20,
+      "substation-1.pcap": 16,
+      "substation-12.pcap": 16,
+      "veth291ab9a-0.pcap": 12,
+      "substation-7.pcap": 12,
+      "substation-14.pcap": 12,
+      "substation-17.pcap": 12,
+      "substation-13.pcap": 8,
+      "substation-16.pcap": 4
+    },
+    "candidate_observation_dates": [
+      "2023-02-01",
+      "2023-03-15",
+      "2023-03-16",
+      "2023-03-17",
+      "2023-03-18",
+      "2023-03-19",
+      "2023-03-20",
+      "2023-03-21",
+      "2023-03-22"
+    ],
+    "candidate_dates_by_recording_family": {
+      "compromised_SCADA_March_recording": [
+        "2023-03-15",
+        "2023-03-16",
+        "2023-03-17",
+        "2023-03-18",
+        "2023-03-19",
+        "2023-03-20",
+        "2023-03-21",
+        "2023-03-22"
+      ],
+      "external_February_recording": [
+        "2023-02-01"
+      ]
+    },
+    "supported_candidate_observation_dates": [
+      "2023-02-01",
+      "2023-03-15",
+      "2023-03-16",
+      "2023-03-17",
+      "2023-03-18",
+      "2023-03-19",
+      "2023-03-20",
+      "2023-03-21",
+      "2023-03-22"
+    ],
+    "distinct_original_log_row_references_attached_to_candidates": 411,
+    "all_source_recon_log_rows": 1453,
+    "all_source_valid_distinct_start_signatures": 643,
+    "counts_are_independent_campaigns": false,
+    "final_target_labels_frozen": false
+  },
+  "independence": {
+    "verified_independent_attack_campaign_count": null,
+    "unknown_is_not_zero_campaigns": true,
+    "minimum_distinct_class_bearing_units_for_three_disjoint_partitions": 3,
+    "minimum_unit_count_is_not_sample_size_justification": true,
+    "independent_train_validation_test_supported": false,
+    "run_reset_or_acquisition_ledger_available_for_recovered_CIC_units": false,
+    "configured_capture_groups_are_verified_campaigns": false,
+    "SCADA_chunks_in_source_time_order": [
+      "attack/compromised-scada/substation-wide-capture/substation-1.pcap",
+      "attack/compromised-scada/substation-wide-capture/substation-2.pcap",
+      "attack/compromised-scada/substation-wide-capture/substation-3.pcap",
+      "attack/compromised-scada/substation-wide-capture/substation-4.pcap",
+      "attack/compromised-scada/substation-wide-capture/substation-5.pcap",
+      "attack/compromised-scada/substation-wide-capture/substation-6.pcap",
+      "attack/compromised-scada/substation-wide-capture/substation-7.pcap",
+      "attack/compromised-scada/substation-wide-capture/substation-8.pcap",
+      "attack/compromised-scada/substation-wide-capture/substation-9.pcap",
+      "attack/compromised-scada/substation-wide-capture/substation-10.pcap",
+      "attack/compromised-scada/substation-wide-capture/substation-11.pcap",
+      "attack/compromised-scada/substation-wide-capture/substation-12.pcap",
+      "attack/compromised-scada/substation-wide-capture/substation-13.pcap",
+      "attack/compromised-scada/substation-wide-capture/substation-14.pcap",
+      "attack/compromised-scada/substation-wide-capture/substation-15.pcap",
+      "attack/compromised-scada/substation-wide-capture/substation-16.pcap",
+      "attack/compromised-scada/substation-wide-capture/substation-17.pcap",
+      "attack/compromised-scada/substation-wide-capture/substation-0.pcap"
+    ],
+    "SCADA_adjacent_chunk_boundaries_with_gap_at_most_1_second": 16,
+    "SCADA_continuous_rotation_evidence": "See evidence/rotation_continuity_independent_check.csv; canonical source boundaries computed independently from observed first/last frame times, not inferred from names.",
+    "conservative_dependency_unit": "Whole scenario recording family until finer independence is supported by source acquisition/episode evidence",
+    "rotation_rule": "All sequential chunks from a continuous capture remain together",
+    "mirror_rule": "Canonical and mirrored observations, including byte/sequence/time matches, remain together",
+    "episode_rule": "All requests/responses, tool-invocation context and overlapping windows from an episode remain together"
+  },
+  "current_possible_analyses": [
+    "Descriptive raw-request mechanism and temporal distributions versus documented benign source traffic",
+    "Historical supplied-label static shortcut diagnostics, explicitly not recon-ground-truth model validation",
+    "Exploratory recording-family-held-out diagnostics only when valid labels and both classes exist; never presented as confirmatory independent three-way evaluation"
+  ],
+  "prohibited_shortcuts": [
+    "Random row or window splitting",
+    "Separating rotated chunks, mirrors or the same attack episode across partitions",
+    "Calling each date, TCP connection, static endpoint tuple or log row an independent campaign",
+    "Using labels, audit state, confidence, log references or group identity as model predictors",
+    "Treating absence of a nearby attack log as benign truth",
+    "Fitting scaler, imputer, encoding, class rebalance or threshold outside training/validation discipline"
+  ],
+  "future_split_contract": {
+    "partition_assignment_file": null,
+    "frozen_predictor_schema": null,
+    "same_target_event_ids_across_all_models": true,
+    "same_campaign_partitions_across_all_models": true,
+    "target_context": "Prespecified current request t and its causal last20 context, or explicitly frozen any-positive windows, identical for all models",
+    "fit_preprocessing_on": "training groups only",
+    "choose_threshold_and_early_stop_on": "validation groups only",
+    "test_access": "once after prespecification and validity gate",
+    "required_zero_overlap": [
+      "original messages",
+      "mirrored views",
+      "TCP retransmissions",
+      "window dependencies",
+      "attack episodes",
+      "capture campaigns"
+    ]
+  },
+  "normal_lookalike_truth": "See temporal/normal-lookalike evidence. Benign-source requests are legitimate controls; attack-recording no-match samples are unlabelled lookalikes, not automatic negatives.",
+  "CIC_archive_globally_insufficient_claimed_by_this_file": false,
+  "testbed_supplement_design": "TESTBED_SUPPLEMENT_DESIGN.md; conditional on completed full-report suitability verdict",
+  "final_preprocessing_performed": false,
+  "final_LSTM_trained": false,
+  "random_split_performed": false
+}

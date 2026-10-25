@@ -1,0 +1,338 @@
+{
+  "source_kind": "direct audit of attached XLSX values via hash-checked extraction",
+  "packet_rows": 879225,
+  "sequence_windows": 175800,
+  "packet_label_counts": {
+    "0": 870526,
+    "1": 8699
+  },
+  "sequence_label_counts": {
+    "0": 157462,
+    "1": 18338
+  },
+  "unparseable_packet_timestamps": 14,
+  "sequence_schema": [
+    "sequence_id",
+    "session_id",
+    "window_start_time",
+    "window_end_time",
+    "window_length",
+    "label",
+    "features_json"
+  ],
+  "feature_order": [
+    "unit_id",
+    "func_code",
+    "modbus_len",
+    "register_start",
+    "quantity",
+    "packet_size",
+    "time_delta"
+  ],
+  "window_length_observed": [
+    20
+  ],
+  "stride_inference": [
+    {
+      "stride": 1,
+      "matches": 1,
+      "tested": 10
+    },
+    {
+      "stride": 2,
+      "matches": 1,
+      "tested": 10
+    },
+    {
+      "stride": 3,
+      "matches": 1,
+      "tested": 10
+    },
+    {
+      "stride": 4,
+      "matches": 1,
+      "tested": 10
+    },
+    {
+      "stride": 5,
+      "matches": 10,
+      "tested": 10
+    },
+    {
+      "stride": 6,
+      "matches": 1,
+      "tested": 10
+    },
+    {
+      "stride": 7,
+      "matches": 1,
+      "tested": 10
+    },
+    {
+      "stride": 8,
+      "matches": 1,
+      "tested": 10
+    },
+    {
+      "stride": 9,
+      "matches": 1,
+      "tested": 10
+    },
+    {
+      "stride": 10,
+      "matches": 1,
+      "tested": 10
+    },
+    {
+      "stride": 11,
+      "matches": 1,
+      "tested": 10
+    },
+    {
+      "stride": 12,
+      "matches": 1,
+      "tested": 10
+    },
+    {
+      "stride": 13,
+      "matches": 1,
+      "tested": 10
+    },
+    {
+      "stride": 14,
+      "matches": 1,
+      "tested": 10
+    },
+    {
+      "stride": 15,
+      "matches": 1,
+      "tested": 10
+    },
+    {
+      "stride": 16,
+      "matches": 1,
+      "tested": 10
+    },
+    {
+      "stride": 17,
+      "matches": 1,
+      "tested": 10
+    },
+    {
+      "stride": 18,
+      "matches": 1,
+      "tested": 10
+    },
+    {
+      "stride": 19,
+      "matches": 1,
+      "tested": 10
+    },
+    {
+      "stride": 20,
+      "matches": 1,
+      "tested": 10
+    }
+  ],
+  "inferred_stride": 5,
+  "all_feature_cells_match": 175800,
+  "start_timestamp_match": 175800,
+  "end_timestamp_match": 175800,
+  "any_positive_rule_match": 175800,
+  "first_packet_rule_match": 159178,
+  "last_packet_rule_match": 159233,
+  "majority_rule_match": 157470,
+  "windows_with_backward_transition": 174708,
+  "windows_end_before_start": 67489,
+  "windows_cross_source_file": 171080,
+  "windows_cross_capture_group": 144180,
+  "windows_cross_session": 0,
+  "windows_span_gt_60s": 164701,
+  "windows_span_gt_300s": 148845,
+  "windows_span_gt_3600s": 146243,
+  "packet_backward_transitions_within_supplied_session_order": 126643,
+  "window_actual_span_seconds": {
+    "n": 175800,
+    "min": 0.00052,
+    "p01": 32.84284196,
+    "p25": 3756125.07363,
+    "median": 4117026.0896960003,
+    "mean": 3455870.129193013,
+    "p75": 4853920.805371,
+    "p95": 4916553.99131085,
+    "p99": 4978406.45063739,
+    "max": 4981459.2774
+  },
+  "window_signed_end_minus_start_seconds": {
+    "n": 175800,
+    "min": -4981444.009657,
+    "p01": -4543401.40814764,
+    "p25": -13594.81586625,
+    "median": 0.0666625,
+    "mean": 1468.4262836368205,
+    "p75": 13594.06836525,
+    "p95": 3961682.01172975,
+    "p99": 4545511.917650511,
+    "max": 4981016.373621
+  },
+  "session_profiles": [
+    {
+      "session_id": "185.175.0.3_185.175.0.4_u1_s0001",
+      "packets": 130572,
+      "windows": 26111,
+      "backward_transitions": 14115,
+      "source_files": 9,
+      "capture_groups": 8,
+      "span_days": 57.657253853993055,
+      "sequence_position_is_0_based_cumcount": true,
+      "original_row_indices_contiguous": true
+    },
+    {
+      "session_id": "185.175.0.4_185.175.0.3_u1_s0002",
+      "packets": 115787,
+      "windows": 23154,
+      "backward_transitions": 14114,
+      "source_files": 9,
+      "capture_groups": 8,
+      "span_days": 57.6572538491088,
+      "sequence_position_is_0_based_cumcount": true,
+      "original_row_indices_contiguous": true
+    },
+    {
+      "session_id": "185.175.0.3_185.175.0.5_u1_s0003",
+      "packets": 122607,
+      "windows": 24518,
+      "backward_transitions": 14078,
+      "source_files": 8,
+      "capture_groups": 7,
+      "span_days": 56.25342055122685,
+      "sequence_position_is_0_based_cumcount": true,
+      "original_row_indices_contiguous": true
+    },
+    {
+      "session_id": "185.175.0.5_185.175.0.3_u1_s0004",
+      "packets": 122531,
+      "windows": 24503,
+      "backward_transitions": 14078,
+      "source_files": 8,
+      "capture_groups": 7,
+      "span_days": 56.2534205512037,
+      "sequence_position_is_0_based_cumcount": true,
+      "original_row_indices_contiguous": true
+    },
+    {
+      "session_id": "185.175.0.3_185.175.0.8_u1_s0005",
+      "packets": 94865,
+      "windows": 18970,
+      "backward_transitions": 14040,
+      "source_files": 8,
+      "capture_groups": 7,
+      "span_days": 56.25343870758102,
+      "sequence_position_is_0_based_cumcount": true,
+      "original_row_indices_contiguous": true
+    },
+    {
+      "session_id": "185.175.0.8_185.175.0.3_u1_s0006",
+      "packets": 91629,
+      "windows": 18322,
+      "backward_transitions": 14029,
+      "source_files": 7,
+      "capture_groups": 6,
+      "span_days": 56.25343844800926,
+      "sequence_position_is_0_based_cumcount": true,
+      "original_row_indices_contiguous": true
+    },
+    {
+      "session_id": "185.175.0.7_185.175.0.4_u1_s0007",
+      "packets": 131220,
+      "windows": 26241,
+      "backward_transitions": 25344,
+      "source_files": 2,
+      "capture_groups": 1,
+      "span_days": 0.3962472982638889,
+      "sequence_position_is_0_based_cumcount": true,
+      "original_row_indices_contiguous": true
+    },
+    {
+      "session_id": "185.175.0.2_185.175.0.5_u1_s0008",
+      "packets": 11701,
+      "windows": 2337,
+      "backward_transitions": 2748,
+      "source_files": 2,
+      "capture_groups": 2,
+      "span_days": 0.3875215946643519,
+      "sequence_position_is_0_based_cumcount": true,
+      "original_row_indices_contiguous": true
+    },
+    {
+      "session_id": "185.175.0.5_185.175.0.2_u1_s0009",
+      "packets": 11701,
+      "windows": 2337,
+      "backward_transitions": 2748,
+      "source_files": 2,
+      "capture_groups": 2,
+      "span_days": 0.3875216726157407,
+      "sequence_position_is_0_based_cumcount": true,
+      "original_row_indices_contiguous": true
+    },
+    {
+      "session_id": "185.175.0.2_185.175.0.4_u1_s0010",
+      "packets": 11670,
+      "windows": 2331,
+      "backward_transitions": 2811,
+      "source_files": 2,
+      "capture_groups": 2,
+      "span_days": 0.38734024409722223,
+      "sequence_position_is_0_based_cumcount": true,
+      "original_row_indices_contiguous": true
+    },
+    {
+      "session_id": "185.175.0.4_185.175.0.2_u1_s0011",
+      "packets": 11670,
+      "windows": 2331,
+      "backward_transitions": 2811,
+      "source_files": 2,
+      "capture_groups": 2,
+      "span_days": 0.3873397133101852,
+      "sequence_position_is_0_based_cumcount": true,
+      "original_row_indices_contiguous": true
+    },
+    {
+      "session_id": "185.175.0.2_185.175.0.8_u1_s0012",
+      "packets": 11630,
+      "windows": 2323,
+      "backward_transitions": 2864,
+      "source_files": 2,
+      "capture_groups": 2,
+      "span_days": 0.38720451046296295,
+      "sequence_position_is_0_based_cumcount": true,
+      "original_row_indices_contiguous": true
+    },
+    {
+      "session_id": "185.175.0.8_185.175.0.2_u1_s0013",
+      "packets": 11628,
+      "windows": 2322,
+      "backward_transitions": 2863,
+      "source_files": 2,
+      "capture_groups": 2,
+      "span_days": 0.38682329938657406,
+      "sequence_position_is_0_based_cumcount": true,
+      "original_row_indices_contiguous": true
+    }
+  ],
+  "consecutive_window_shared_packets": 15,
+  "overlap_fraction": 0.75,
+  "total_source_file_transitions_within_sessions": 784977,
+  "total_capture_group_transitions_within_sessions": 298908,
+  "backward_transitions_even_within_file_session_order": 296879,
+  "supplied_time_delta_zero_rows": 595227,
+  "supplied_session_order_time_delta_agreement_within_1us": {
+    "n": 879198,
+    "matches": 283985
+  },
+  "supplied_session_order_clip_zero_time_delta_agreement_within_1us": {
+    "n": 879198,
+    "matches": 410628
+  },
+  "duplicate_sequence_ids": 0
+}

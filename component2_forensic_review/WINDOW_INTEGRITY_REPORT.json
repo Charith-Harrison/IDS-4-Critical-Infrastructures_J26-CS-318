@@ -1,0 +1,73 @@
+{
+  "original_rebuilt_dataset": {
+    "status": "NOT AVAILABLE",
+    "reason": "Neither requested Pre-processed/Pre-processed/rebuilt_sequences nor any packets_rebuilt.csv, packet_exclusions.csv, windows.csv, window_index.npy existed among supplied source files. Historical JSON is an unverified claim. New diagnostic outputs are segregated below.",
+    "directly_validated_windows": 0
+  },
+  "new_diagnostic_reconstruction": {
+    "window_count": 119237,
+    "index_shape": [
+      119237,
+      20
+    ],
+    "all_windows_exactly_20": true,
+    "all_index_ranges_valid": true,
+    "all_windows_have_20_distinct_contiguous_indices": true,
+    "all_intra_stream_strides_5": true,
+    "windows_cross_capture_group": 0,
+    "windows_cross_session_id": 0,
+    "windows_with_backwards_timestamp": 0,
+    "start_metadata_mismatches": 0,
+    "end_metadata_mismatches": 0,
+    "first_source_row_mismatches": 0,
+    "last_source_row_mismatches": 0,
+    "positive_count_mismatches": 0,
+    "positive_fraction_mismatches": 0,
+    "any_positive_label_mismatches": 0,
+    "fc5_len3_count_mismatches": 0,
+    "label_counts": {
+      "0": 117359,
+      "1": 1878
+    },
+    "duration_seconds": {
+      "n": 119237,
+      "min": 0.000952,
+      "p01": 0.004539,
+      "p25": 15.361765,
+      "median": 20.346471,
+      "mean": 21.129968139327556,
+      "p75": 20.364458,
+      "p95": 20.6002516,
+      "p99": 21.83601768,
+      "max": 58170.755657
+    },
+    "max_intra_window_gap_seconds": {
+      "n": 119237,
+      "min": 0.000189,
+      "p01": 0.000334,
+      "p25": 5.005656,
+      "median": 5.006739,
+      "mean": 9.108108865394131,
+      "p75": 5.00848,
+      "p95": 5.039046,
+      "p99": 5.150463,
+      "max": 58155.337023
+    },
+    "windows_span_gt_60s": 509,
+    "windows_span_gt_300s": 88,
+    "windows_span_gt_3600s": 11,
+    "windows_with_gap_gt_60s": 91,
+    "windows_with_gap_gt_300s": 76,
+    "windows_with_gap_gt_3600s": 11,
+    "true_tcp_connection_boundary_crossing": "NOT VERIFIABLE FROM PROCESSED ROWS: ports, SYN/FIN/RST and TCP generation absent",
+    "independent_campaign_boundary_crossing": "NOT VERIFIABLE: capture groups configured from filenames, campaign ledger absent",
+    "inference_context_boundary": "dt_s at first timestep can depend on preceding packet outside window; historical feature script must explicitly reset first-step transitions.",
+    "noninitial_dt_mismatches_gt_1ns": 0
+  },
+  "limitations": [
+    "Capture-group identity is not proven campaign independence.",
+    "A directional IP/unit tuple is not a TCP connection.",
+    "No maximum inactivity gap is imposed.",
+    "Source labels are preserved for diagnostics, not validated ground truth."
+  ]
+}

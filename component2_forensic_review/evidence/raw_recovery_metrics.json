@@ -1,0 +1,544 @@
+{
+  "canonical_sources": 19,
+  "extra_views_for_old_label_reconciliation": 1,
+  "original_log_rows_recon": 1453,
+  "distinct_recon_start_signatures": 643,
+  "candidate_requests": 468,
+  "label_states": {
+    "ambiguous": 320,
+    "supported_contextual": 148
+  },
+  "candidate_campaigns": {
+    "compromised_SCADA_March_recording": 436,
+    "external_February_recording": 32
+  },
+  "candidate_function_codes": {
+    "2": 131,
+    "1": 114,
+    "4": 112,
+    "3": 111
+  },
+  "candidate_quantities": {
+    "2000": 218,
+    "125": 218,
+    "4": 21,
+    "65535": 4,
+    "5": 4,
+    "2": 1,
+    "9": 1,
+    "20": 1
+  },
+  "candidate_addresses": {
+    "1": 459,
+    "0": 4,
+    "2": 3,
+    "5": 2
+  },
+  "candidates_with_response": 269,
+  "raw_positive_matches": 8731,
+  "unique_original_positive_rows_matched": 8687,
+  "raw_positive_wire_function_distribution": {
+    "133": 8400,
+    "4": 120,
+    "2": 80,
+    "1": 76,
+    "3": 42,
+    "129": 4,
+    "130": 3,
+    "131": 3,
+    "132": 3
+  },
+  "raw_positive_exception_code_distribution": {
+    "3.0": 8400,
+    "2.0": 13
+  },
+  "raw_positive_nearest_nonrecon_log_labels": {
+    "Brute force or specific - Complete": 4745,
+    "Brute force or specific coil. Address: 1": 3732,
+    "Brute force or specific coil. Address: 13": 9,
+    "Brute force or specific coil. Address: 8": 3,
+    "Brute force or specific coil. Address: 14": 1
+  },
+  "controls_saved": 5281,
+  "file_reports": [
+    {
+      "source": "attack/external/external-attacker/external-attacker-network-capture/veth665f3cf-0.pcap",
+      "canonical": true,
+      "size": 45982488,
+      "min_timestamp_us": 1675223319921372,
+      "max_timestamp_us": 1675260119915864,
+      "counts": {
+        "frames": 538875,
+        "modbus_tcp_segments": 538649,
+        "complete_segment_adus": 65632,
+        "incomplete_single_segment_adu": 1
+      }
+    },
+    {
+      "source": "attack/compromised-scada/substation-wide-capture/substation-0.pcap",
+      "canonical": true,
+      "size": 20006,
+      "min_timestamp_us": 1679537520885275,
+      "max_timestamp_us": 1679537743529226,
+      "counts": {
+        "frames": 164
+      }
+    },
+    {
+      "source": "attack/compromised-scada/substation-wide-capture/substation-1.pcap",
+      "canonical": true,
+      "size": 100000031,
+      "min_timestamp_us": 1678870408842227,
+      "max_timestamp_us": 1678906970918790,
+      "counts": {
+        "frames": 1124353,
+        "modbus_tcp_segments": 1075614,
+        "complete_segment_adus": 196013,
+        "incomplete_single_segment_adu": 28,
+        "trailing_short_payload_bytes": 200
+      }
+    },
+    {
+      "source": "attack/compromised-scada/substation-wide-capture/substation-2.pcap",
+      "canonical": true,
+      "size": 100000063,
+      "min_timestamp_us": 1678906970918814,
+      "max_timestamp_us": 1678945921394959,
+      "counts": {
+        "frames": 1108474,
+        "modbus_tcp_segments": 1044720,
+        "complete_segment_adus": 187131,
+        "incomplete_single_segment_adu": 68,
+        "trailing_short_payload_bytes": 240
+      }
+    },
+    {
+      "source": "attack/compromised-scada/substation-wide-capture/substation-3.pcap",
+      "canonical": true,
+      "size": 100000099,
+      "min_timestamp_us": 1678945921394996,
+      "max_timestamp_us": 1678987407181417,
+      "counts": {
+        "frames": 1135584,
+        "modbus_tcp_segments": 1097632,
+        "complete_segment_adus": 208369,
+        "incomplete_single_segment_adu": 56,
+        "trailing_short_payload_bytes": 200
+      }
+    },
+    {
+      "source": "attack/compromised-scada/substation-wide-capture/substation-4.pcap",
+      "canonical": true,
+      "size": 100000037,
+      "min_timestamp_us": 1678987407181704,
+      "max_timestamp_us": 1679024085698324,
+      "counts": {
+        "frames": 1128487,
+        "modbus_tcp_segments": 1083896,
+        "complete_segment_adus": 199657,
+        "trailing_short_payload_bytes": 220,
+        "incomplete_single_segment_adu": 40
+      }
+    },
+    {
+      "source": "attack/compromised-scada/substation-wide-capture/substation-5.pcap",
+      "canonical": true,
+      "size": 100000054,
+      "min_timestamp_us": 1679024085698421,
+      "max_timestamp_us": 1679061470723675,
+      "counts": {
+        "frames": 1114984,
+        "modbus_tcp_segments": 1058010,
+        "complete_segment_adus": 198617,
+        "incomplete_single_segment_adu": 32,
+        "trailing_short_payload_bytes": 200
+      }
+    },
+    {
+      "source": "attack/compromised-scada/substation-wide-capture/substation-6.pcap",
+      "canonical": true,
+      "size": 100000028,
+      "min_timestamp_us": 1679061470723708,
+      "max_timestamp_us": 1679093194410013,
+      "counts": {
+        "frames": 1091548,
+        "modbus_tcp_segments": 1012281,
+        "complete_segment_adus": 191830,
+        "incomplete_single_segment_adu": 24,
+        "trailing_short_payload_bytes": 140
+      }
+    },
+    {
+      "source": "attack/compromised-scada/substation-wide-capture/substation-7.pcap",
+      "canonical": true,
+      "size": 100000026,
+      "min_timestamp_us": 1679093194414504,
+      "max_timestamp_us": 1679127966355388,
+      "counts": {
+        "frames": 1134691,
+        "modbus_tcp_segments": 1094488,
+        "complete_segment_adus": 203806,
+        "trailing_short_payload_bytes": 140,
+        "incomplete_single_segment_adu": 8
+      }
+    },
+    {
+      "source": "attack/compromised-scada/substation-wide-capture/substation-8.pcap",
+      "canonical": true,
+      "size": 100000015,
+      "min_timestamp_us": 1679127966355410,
+      "max_timestamp_us": 1679159368196495,
+      "counts": {
+        "frames": 1155132,
+        "modbus_tcp_segments": 1132845,
+        "complete_segment_adus": 220152,
+        "trailing_short_payload_bytes": 80,
+        "incomplete_single_segment_adu": 12
+      }
+    },
+    {
+      "source": "attack/compromised-scada/substation-wide-capture/substation-9.pcap",
+      "canonical": true,
+      "size": 100000072,
+      "min_timestamp_us": 1679159368197752,
+      "max_timestamp_us": 1679191004437043,
+      "counts": {
+        "frames": 1156957,
+        "modbus_tcp_segments": 1136224,
+        "complete_segment_adus": 221087,
+        "incomplete_single_segment_adu": 8
+      }
+    },
+    {
+      "source": "attack/compromised-scada/substation-wide-capture/substation-10.pcap",
+      "canonical": true,
+      "size": 100000004,
+      "min_timestamp_us": 1679191004437060,
+      "max_timestamp_us": 1679228365627633,
+      "counts": {
+        "frames": 1132696,
+        "modbus_tcp_segments": 1092048,
+        "complete_segment_adus": 205409,
+        "trailing_short_payload_bytes": 240,
+        "incomplete_single_segment_adu": 36,
+        "dedup_cache_reset": 1
+      }
+    },
+    {
+      "source": "attack/compromised-scada/substation-wide-capture/substation-11.pcap",
+      "canonical": true,
+      "size": 100000068,
+      "min_timestamp_us": 1679228365627665,
+      "max_timestamp_us": 1679264712605208,
+      "counts": {
+        "frames": 1122549,
+        "modbus_tcp_segments": 1072975,
+        "complete_segment_adus": 190863,
+        "incomplete_single_segment_adu": 24,
+        "trailing_short_payload_bytes": 160
+      }
+    },
+    {
+      "source": "attack/compromised-scada/substation-wide-capture/substation-12.pcap",
+      "canonical": true,
+      "size": 100000017,
+      "min_timestamp_us": 1679264712605230,
+      "max_timestamp_us": 1679304794388385,
+      "counts": {
+        "frames": 1161262,
+        "modbus_tcp_segments": 1144245,
+        "complete_segment_adus": 213104,
+        "incomplete_single_segment_adu": 24,
+        "trailing_short_payload_bytes": 200
+      }
+    },
+    {
+      "source": "attack/compromised-scada/substation-wide-capture/substation-13.pcap",
+      "canonical": true,
+      "size": 100000042,
+      "min_timestamp_us": 1679304794408356,
+      "max_timestamp_us": 1679337695635621,
+      "counts": {
+        "frames": 1157512,
+        "modbus_tcp_segments": 1137163,
+        "complete_segment_adus": 219341,
+        "incomplete_single_segment_adu": 32,
+        "trailing_short_payload_bytes": 60
+      }
+    },
+    {
+      "source": "attack/compromised-scada/substation-wide-capture/substation-14.pcap",
+      "canonical": true,
+      "size": 100000035,
+      "min_timestamp_us": 1679337695635637,
+      "max_timestamp_us": 1679367447181898,
+      "counts": {
+        "frames": 1159752,
+        "modbus_tcp_segments": 1142160,
+        "complete_segment_adus": 225687,
+        "incomplete_single_segment_adu": 16,
+        "trailing_short_payload_bytes": 20
+      }
+    },
+    {
+      "source": "attack/compromised-scada/substation-wide-capture/substation-15.pcap",
+      "canonical": true,
+      "size": 100000082,
+      "min_timestamp_us": 1679367447182093,
+      "max_timestamp_us": 1679400159591538,
+      "counts": {
+        "frames": 1136553,
+        "modbus_tcp_segments": 1098602,
+        "complete_segment_adus": 207065,
+        "trailing_short_payload_bytes": 100,
+        "incomplete_single_segment_adu": 24
+      }
+    },
+    {
+      "source": "attack/compromised-scada/substation-wide-capture/substation-16.pcap",
+      "canonical": true,
+      "size": 100000041,
+      "min_timestamp_us": 1679400159591556,
+      "max_timestamp_us": 1679429464353892,
+      "counts": {
+        "frames": 1115585,
+        "modbus_tcp_segments": 1059466,
+        "complete_segment_adus": 203053,
+        "incomplete_single_segment_adu": 16,
+        "trailing_short_payload_bytes": 100
+      }
+    },
+    {
+      "source": "attack/compromised-scada/substation-wide-capture/substation-17.pcap",
+      "canonical": true,
+      "size": 94462784,
+      "min_timestamp_us": 1679429464361192,
+      "max_timestamp_us": 1679457379501226,
+      "counts": {
+        "frames": 1043887,
+        "modbus_tcp_segments": 981461,
+        "complete_segment_adus": 188886,
+        "trailing_short_payload_bytes": 40,
+        "incomplete_single_segment_adu": 4
+      }
+    },
+    {
+      "source": "attack/external/ied1a/ied1a-network-capture/veth4edc015-0.pcap",
+      "canonical": false,
+      "size": 80838668,
+      "min_timestamp_us": 1675223319921383,
+      "max_timestamp_us": 1675260124979889,
+      "counts": {
+        "frames": 943353,
+        "modbus_tcp_segments": 934171,
+        "complete_segment_adus": 137565,
+        "incomplete_single_segment_adu": 1
+      }
+    }
+  ],
+  "limitations": [
+    "Single-segment complete ADUs only; incomplete/unframed payload counts retained, no full TCP reassembly",
+    "25ms contextual log join is sensitivity-bounded evidence, not proof of global logger clock synchronization",
+    "No independent-run claim from capture rotations or repeated tool invocations",
+    "Controls from attack recording are unlabeled local lookalikes, not automatically benign"
+  ],
+  "wall_seconds": 515.625,
+  "scope": "full original logs; canonical external-attacker capture plus all18 SCADA bridge files and non-overlap early HMI prefix; extra interfaces only reconcile legacy rows",
+  "hmi_prefix_supplement": {
+    "canonical_sources": 1,
+    "extra_views_for_old_label_reconciliation": 0,
+    "original_log_rows_recon": 1453,
+    "distinct_recon_start_signatures": 643,
+    "candidate_requests": 12,
+    "label_states": {
+      "supported_contextual": 12
+    },
+    "candidate_campaigns": {
+      "compromised_SCADA_March_recording": 12
+    },
+    "candidate_function_codes": {
+      "1": 3,
+      "2": 3,
+      "3": 3,
+      "4": 3
+    },
+    "candidate_quantities": {
+      "2000": 6,
+      "125": 6
+    },
+    "candidate_addresses": {
+      "1": 12
+    },
+    "candidates_with_response": 6,
+    "raw_positive_matches": 0,
+    "unique_original_positive_rows_matched": 0,
+    "raw_positive_wire_function_distribution": {},
+    "raw_positive_exception_code_distribution": {},
+    "raw_positive_nearest_nonrecon_log_labels": {},
+    "controls_saved": 882,
+    "file_reports": [
+      {
+        "source": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-0.pcap",
+        "canonical": true,
+        "size": 100000032,
+        "min_timestamp_us": 1678845668009340,
+        "max_timestamp_us": 1678875720209986,
+        "counts": {
+          "frames": 1172759,
+          "modbus_tcp_segments": 1077436,
+          "complete_segment_adus": 188389,
+          "trailing_short_payload_bytes": 120,
+          "incomplete_single_segment_adu": 24,
+          "post_primary_bridge_start_frames_omitted_to_avoid_mirrors": 94792
+        }
+      }
+    ],
+    "limitations": [
+      "Single-segment complete ADUs only; incomplete/unframed payload counts retained, no full TCP reassembly",
+      "25ms contextual log join is sensitivity-bounded evidence, not proof of global logger clock synchronization",
+      "No independent-run claim from capture rotations or repeated tool invocations",
+      "Controls from attack recording are unlabeled local lookalikes, not automatically benign"
+    ],
+    "wall_seconds": 55.46899999999732
+  },
+  "unambiguous_contextual_requests": 148,
+  "ambiguous_exact_event_attribution_requests": 320,
+  "unambiguous_contextual_requests_by_campaign": {
+    "compromised_SCADA_March_recording": 116,
+    "external_February_recording": 32
+  },
+  "candidate_current_shapes": [
+    {
+      "func_code": 1,
+      "address": 0,
+      "quantity_value": 65535,
+      "modbus_len": 6,
+      "packet_size": 78,
+      "n": 1
+    },
+    {
+      "func_code": 1,
+      "address": 1,
+      "quantity_value": 5,
+      "modbus_len": 6,
+      "packet_size": 78,
+      "n": 2
+    },
+    {
+      "func_code": 1,
+      "address": 1,
+      "quantity_value": 20,
+      "modbus_len": 6,
+      "packet_size": 78,
+      "n": 1
+    },
+    {
+      "func_code": 1,
+      "address": 1,
+      "quantity_value": 2000,
+      "modbus_len": 6,
+      "packet_size": 78,
+      "n": 109
+    },
+    {
+      "func_code": 1,
+      "address": 2,
+      "quantity_value": 5,
+      "modbus_len": 6,
+      "packet_size": 78,
+      "n": 1
+    },
+    {
+      "func_code": 2,
+      "address": 0,
+      "quantity_value": 65535,
+      "modbus_len": 6,
+      "packet_size": 78,
+      "n": 1
+    },
+    {
+      "func_code": 2,
+      "address": 1,
+      "quantity_value": 4,
+      "modbus_len": 6,
+      "packet_size": 78,
+      "n": 20
+    },
+    {
+      "func_code": 2,
+      "address": 1,
+      "quantity_value": 2000,
+      "modbus_len": 6,
+      "packet_size": 78,
+      "n": 109
+    },
+    {
+      "func_code": 2,
+      "address": 2,
+      "quantity_value": 2,
+      "modbus_len": 6,
+      "packet_size": 78,
+      "n": 1
+    },
+    {
+      "func_code": 3,
+      "address": 0,
+      "quantity_value": 65535,
+      "modbus_len": 6,
+      "packet_size": 78,
+      "n": 1
+    },
+    {
+      "func_code": 3,
+      "address": 1,
+      "quantity_value": 125,
+      "modbus_len": 6,
+      "packet_size": 78,
+      "n": 109
+    },
+    {
+      "func_code": 3,
+      "address": 5,
+      "quantity_value": 9,
+      "modbus_len": 6,
+      "packet_size": 78,
+      "n": 1
+    },
+    {
+      "func_code": 4,
+      "address": 0,
+      "quantity_value": 65535,
+      "modbus_len": 6,
+      "packet_size": 78,
+      "n": 1
+    },
+    {
+      "func_code": 4,
+      "address": 1,
+      "quantity_value": 125,
+      "modbus_len": 6,
+      "packet_size": 78,
+      "n": 109
+    },
+    {
+      "func_code": 4,
+      "address": 2,
+      "quantity_value": 4,
+      "modbus_len": 6,
+      "packet_size": 78,
+      "n": 1
+    },
+    {
+      "func_code": 4,
+      "address": 5,
+      "quantity_value": 5,
+      "modbus_len": 6,
+      "packet_size": 78,
+      "n": 1
+    }
+  ],
+  "unique_attack_log_source_rows_referenced": 411,
+  "signed_log_delta_us_min": -22861.0,
+  "signed_log_delta_us_max": 23914.0,
+  "supported_exact_count": 0
+}

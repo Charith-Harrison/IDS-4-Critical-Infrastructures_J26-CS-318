@@ -1,0 +1,28 @@
+{
+  "candidate_rows": 468,
+  "candidate_ids_unique": true,
+  "duplicate_raw_adu_identities": 0,
+  "duplicate_same_tcp_generation_sequence_payload_identities": 0,
+  "counts": {
+    "request_adus_source_checked": 468,
+    "response_adus_source_checked": 269,
+    "original_log_references_checked": 788,
+    "original_source_log_rows_checked": 411
+  },
+  "logical_candidate_streams": 4,
+  "distinct_original_log_row_references": 411,
+  "label_states": {
+    "ambiguous": 320,
+    "supported_contextual": 148
+  },
+  "errors": [],
+  "all_performed_checks_pass": true,
+  "candidate_file_sha256_before": "b3c158c6becf1c2665d10e4440b0351a1b7cdf7356898a8b2c25d393ba919a76",
+  "candidate_file_sha256_after": "b3c158c6becf1c2665d10e4440b0351a1b7cdf7356898a8b2c25d393ba919a76",
+  "limitations": [
+    "Frame ordinals were not independently recounted; exact record-offset bytes were independently read.",
+    "TCP generation and uniqueness of response attribution are not proven by endpoint/TID matching.",
+    "The global logger clock contract remains unverified; contextual labels are not exact ground truth.",
+    "Causal history construction is reviewed in code; this bounded check does not rescan all preceding requests."
+  ]
+}

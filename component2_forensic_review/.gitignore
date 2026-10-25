@@ -1,0 +1,21 @@
+# Isolated audit dependencies and Python caches
+.deps/
+__pycache__/
+scripts/__pycache__/
+
+# Large, reproducible workbook extractions
+/evidence/recon_labeled_packets_ALL.csv
+/evidence/recon_sequences_ALL.csv
+
+# Diagnostic packet/window datasets and recovered membership arrays
+/evidence/diagnostic_reconstruction/*.csv
+/evidence/diagnostic_reconstruction/*.npy
+/evidence/*.npy
+
+# Bulk per-observation intermediate evidence (retain summary reports and scripts)
+/evidence/duplicate_interface_verification.csv
+/evidence/benign_read_request_evidence.csv
+/evidence/raw_positive_packet_matches.csv
+/evidence/normal_request_context.csv
+/evidence/hmi_prefix_normal_request_context.csv
+/evidence/short_response_predecessor_candidates.csv

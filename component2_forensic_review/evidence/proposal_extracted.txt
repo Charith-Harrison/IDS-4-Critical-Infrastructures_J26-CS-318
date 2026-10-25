@@ -1,0 +1,879 @@
+=== PDF PAGE 1 ===
+1 
+Protocol-Aware ML Framework for Intelligent Modbus 
+Attack Detection and Incident Analysis 
+ 
+Individual Component: Reconnaissance Attack Detection Using 
+Temporal Behavior Analysis 
+ 
+Project ID: J26-CS-318 
+Project Proposal Report 
+Charith H. - IT23269002 
+B.Sc. (Hons) Degree in Information Technology Specialized in Cyber Security 
+ 
+Department of Computer Systems Engineering 
+Sri Lanka Institute of Information Technology, Sri Lanka 
+September 2026 
+  
+
+=== PDF PAGE 2 ===
+2 
+DECLARATION 
+I declare that this is my own work, and this proposal does not knowingly incorporate any material 
+previously submitted for a degree or diploma at any other university or higher education institution, nor 
+does it contain any material that has been previously published or written by another person apart from 
+where proper acknowledgment is given in the text. 
+ 
+Name Student ID Signature 
+Charith H. IT23269002 
+ 
+ 
+The above candidate is conducting research for their undergraduate Dissertation under my supervision. 
+ 
+Name Date Signature 
+Mr. Amila Senarathna 15 / 09 / 2026 
+ 
+  
+
+
+=== PDF PAGE 3 ===
+3 
+ABSTRACT 
+Industrial Control Systems (ICS) and Supervisory Control and Data Acquisition (SCADA) 
+environments underpin critical infrastructure such as power generation, water treatment and 
+manufacturing, and a large proportion of them communicate using the Modbus/TCP  protocol 
+[1], [4]. Because Modbus was designed decades ago for reliability rather than security, it 
+provides no native authentication, encryption or integrity checking, so any device that can reach 
+the network can read data, issue control commands or impersonate a legitimate master or slave 
+[8], [9], [11]. As these networks become increasingly connected to corporate IT and the internet, 
+adversaries can launch Denial -of-Service attacks, reconnaissance scans, command/response 
+injection and replay attacks, wh ile conventional signature -based intrusion detection systems 
+(IDS) rely on generic network -flow features that ignore Modbus protocol semantics and 
+therefore miss novel or protocol-valid attacks [1], [6], [15]. 
+This individual component addresses reconnaissance: attackers sequentially scan Modbus 
+registers and devices to map a network before a targeted attack, yet this scanning rarely changes 
+overall traffic volume, so packet -level and volume -based detectors do n ot notice it [3], [18]. 
+The literature confirms that reconnaissance is distinguished by subtle temporal behavior rather 
+than packet content, yet few Modbus IDS studies explicitly model this temporal dimension 
+within a unified multi-attack framework - the specific gap this research addresses. 
+The proposed contribution is a temporal  behavior-analysis component that builds time -
+windowed, sequential features from Modbus/TCP communication - register/coil access order, 
+polling-rate drift and inter -request timing - and trains a Long Short -Term Memory (LSTM) 
+model to classify normal versus reconnaissance behavior. The component will be developed 
+using a controlled Modbus/TCP testbed (ICSSIM) supplemented with public ICS/SCADA 
+datasets, following a quantitative, exper imental methodology, and an iterative, experiment -
+driven development approach. Performance will be benchmarked against packet-level and non-
+temporal baselines using precision, recall, F1 -score, false -positive rate, ROC -AUC and 
+detection latency, validated through session -independent evaluation to avoid data leakage. 
+Within the overall protocol -aware detection framework, this component supplies a 
+reconnaissance classification, confidence score and explanation to the shared decision -fusion 
+and incident-analysis layer, contributing to a unified, cost-effective Modbus intrusion detection 
+and incident-analysis solution for industrial control systems. 
+Keywords: Modbus/TCP, reconnaissance detection, temporal behavior analysis, LSTM, 
+intrusion detection, industrial control systems. 
+  
+
+=== PDF PAGE 4 ===
+4 
+ACKNOWLEDGEMENT 
+I would like to express my sincere gratitude to my supervisor, Mr. Amila Senarathna, for his guidance, 
+feedback and support throughout the development of this research proposal. I also appreciate the support 
+provided by the co -supervisor and the academic s taff of the Department of Computer Systems 
+Engineering, Sri Lanka Institute of Information Technology, in refining the research direction and 
+methodology. I am grateful to my project group members, Rathnayake H.M.S.R, Rathnayaka K.H and 
+Ilankoon I.M.D.S, for their collaboration on the shared protocol -aware Modbus intrusion -detection 
+framework, testbed, common feature repository and integration plan. Finally, I acknowledge the authors 
+and maintainers of the public ICS/SCADA datasets and open -source tools used as the basis for this 
+academic research. 
+  
+
+=== PDF PAGE 5 ===
+5 
+TABLE OF CONTENTS 
+ 
+DECLARATION .....................................................................................................................................................2 
+ABSTRACT .............................................................................................................................................................3 
+ACKNOWLEDGEMENT .......................................................................................................................................4 
+TABLE OF CONTENTS .........................................................................................................................................5 
+LIST OF TABLES ...................................................................................................................................................6 
+LIST OF FIGURES .................................................................................................................................................7 
+LIST OF ABBREVIATIONS ..................................................................................................................................8 
+LIST OF APPENDICES ..........................................................................................................................................9 
+1. INTRODUCTION ............................................................................................................................................. 10 
+1.1 Background and Context ............................................................................................................................. 10 
+1.2 Literature Review ........................................................................................................................................ 11 
+1.3 Research Gap ............................................................................................................................................... 12 
+2. OBJECTIVE ...................................................................................................................................................... 13 
+2.1 Main Objective ............................................................................................................................................ 13 
+2.2 Specific Objectives ...................................................................................................................................... 13 
+3. METHODOLOGY ............................................................................................................................................. 14 
+3.1 Research Methodology / Design .................................................................................................................. 14 
+3.2 Data / Participants / Experimental Inputs .................................................................................................... 14 
+3.3 Baseline / Benchmark .................................................................................................................................. 14 
+3.4 Evaluation Metrics ....................................................................................................................................... 15 
+3.5 Validation Strategy ...................................................................................................................................... 15 
+3.6 Development Approach ............................................................................................................................... 15 
+4. HIGH-LEVEL SYSTEM ARCHITECTURE .................................................................................................... 16 
+Individual Component within the Architecture ................................................................................................. 17 
+Overall Integration ............................................................................................................................................. 17 
+5. USER REQUIREMENTS .................................................................................................................................. 18 
+Functional Requirements ................................................................................................................................... 18 
+Non-Functional Requirements ........................................................................................................................... 18 
+6. COMMERCIALIZATION PLAN ..................................................................................................................... 19 
+7. BUDGET AND JUSTIFICATION .................................................................................................................... 20 
+8. WORK BREAKDOWN STRUCTURE (WBS) ................................................................................................ 21 
+9. GANTT CHART ................................................................................................................................................ 22 
+10. REFERENCES LIST ....................................................................................................................................... 23 
+11. APPENDICES ................................................................................................................................................. 25 
+ 
+ 
+  
+
+=== PDF PAGE 6 ===
+6 
+LIST OF TABLES 
+Table 1: Evaluation metrics for the reconnaissance detection component ............................................ 15 
+ 
+Table 2: Individual responsibility boundary .......................................................................................... 17 
+ 
+Table 3: Budget and justification .......................................................................................................... 20 
+ 
+Table 4: Work breakdown structure (RP2 - Reconnaissance component) ............................................ 21 
+  
+
+=== PDF PAGE 7 ===
+7 
+LIST OF FIGURES 
+Figure 1: High-level system architecture .............................................................................................. 16 
+ 
+Figure 2: Proposed project timeline - Reconnaissance Detection Component (RP2) ........................... 22 
+  
+
+=== PDF PAGE 8 ===
+8 
+LIST OF ABBREVIATIONS 
+• ICS - Industrial Control System 
+• SCADA - Supervisory Control and Data Acquisition 
+• PLC - Programmable Logic Controller 
+• HMI - Human-Machine Interface 
+• IDS - Intrusion Detection System 
+• ML/DL - Machine Learning / Deep Learning 
+• LSTM - Long Short-Term Memory (recurrent neural network) 
+• DoS - Denial of Service 
+• TCP/IP - Transmission Control Protocol / Internet Protocol 
+• MBAP - Modbus Application Protocol header 
+• ROC-AUC - Receiver Operating Characteristic - Area Under Curve 
+• XAI - Explainable Artificial Intelligence 
+• RP1-RP4 - Research Product / individual component 1 to 4 within this group project 
+• OT - Operational Technology 
+• SOC - Security Operations Centre 
+• WBS - Work Breakdown Structure 
+  
+
+=== PDF PAGE 9 ===
+9 
+LIST OF APPENDICES 
+Appendix 1: Mandatory Proposal Evidence and Decision Log 
+Appendix 2: AI Use Disclosure 
+  
+
+=== PDF PAGE 10 ===
+10 
+1. INTRODUCTION 
+1.1 Background and Context 
+Industrial Control Systems (ICS) and Supervisory Control and Data Acquisition (SCADA) 
+environments form the backbone of modern critical infrastructure, including power generation, water 
+treatment, manufacturing and oil and gas pipelines [1], [4]. A large p roportion of these systems 
+communicate using the Modbus/TCP protocol, which was designed decades ago for reliability and 
+simplicity rather than for security [8], [9]. Modbus has no native authentication, no encryption and no 
+integrity checking, so any devi ce able to reach the network can read process data, issue control 
+commands, or impersonate a legitimate master or slave [11], [13]. 
+As ICS networks are increasingly connected to corporate networks and the internet to enable remote 
+monitoring, the attack surface has expanded dramatically [4], [11]. Adversaries can now launch Denial-
+of-Service (DoS) attacks that flood Programmable Logic Controllers (PLCs) with malformed or high -
+frequency requests, reconnaissance scans that quietly map registers and devices, command and response 
+injection that forges process commands, and replay attacks that re -transmit previously captured 
+legitimate packets [13]. Conventional intrusion detection systems (IDS) deployed in these networks rely 
+mainly on signature-based or static rule-based methods and on generic network-flow features that ignore 
+the semantics of the Modbus protocol [1], [6], [15]. As a result, they fail to detect novel, low-volume or 
+protocol-valid attacks, and they produce high false-positive rates that overwhelm operators [10], [15]. 
+The wider group project therefore investigates a unified, protocol -aware machine learning framework 
+that detects and explains four distinct classes of Modbus attack  - DoS, reconnaissance, 
+command/response injection and replay - each through a methodology tailored to the behavioral 
+signature of that attack, integrated into a single intelligent detection and incident-analysis pipeline. The 
+impact of leaving this problem unaddressed is significant across several dimensions. Operati onally, 
+undetected attacks on PLCs and field devices can cause incorrect actuator behavior, equipment damage, 
+process disruption and even physical safety hazards for personnel and the public [4], [13]. Technically, 
+existing IDS cannot model protocol semant ics or temporal behavior and degrade against zero -day or 
+protocol-valid attacks [1], [6], [15]. Economically, downtime in critical infrastructure, recovery costs 
+and regulatory penalties are extremely high, while specialized commercial OT -security appliances are 
+costly and difficult to adapt [4], [11]. From a privacy and trust perspective, manipulation or exfiltration 
+of process data undermines the integrity and trustworthiness of national infrastructure and the data it 
+generates [7], [11]. 
+Most operational deployments currently protect Modbus networks with perimeter firewalls, industrial 
+demilitarized zones and signature-based sensors such as Snort with hand-written ICS rule sets, or with 
+commercial OT-security platforms that provide deep-packet inspection but are expensive, largely rule-
+driven and tuned to known signatures [15]. Research testbeds such as the Mississippi State University 
+gas-pipeline and water-storage datasets [2], [8] and recent Modbus attack-emulation testbeds [13], [18] 
+have been used to generate labelled normal and attack traffic, and these resources are used across all 
+four components of this project. The proposed group solution is a protocol -aware machine learning 
+framework that captures live and recorded Modbus/TCP traffic, parses it into a shared, protocol-aware 
+feature repository, and routes those features to four parallel detection modules - one per attack class - 
+before fusing their outputs into a single incident-analysis and reporting layer, rather than treating every 
+attack with one generic model. 
+This project aligns with the AIMS (Autonomous Intelligent Machines and Systems) research group and 
+the Cyber Security specialization, within the Cyber Security and Network Engineering / Software 
+
+=== PDF PAGE 11 ===
+11 
+Systems and Technologies (SST) research cluster, focusing on protocol-aware, machine-learning-based 
+intrusion detection and incident -analysis software for operational technology networks. Its relevant 
+industry verticals are Critical Infrastructure Protecti on, Operational Technology (OT) / ICS -SCADA 
+Security, Energy and Utilities, and Smart Manufacturing (Industry 4.0). The work contributes to three 
+Sustainable Development Goals: SDG 9 (Industry, Innovation and Infrastructure), by strengthening the 
+resilience and reliability of industrial infrastructure through detecting and explaining cyber -attacks 
+against Modbus-based control systems; SDG 7 (Affordable and Clean Energy), by helping to protect 
+energy generation and distribution systems that frequently rely o n Modbus from disruption; and SDG 
+11 (Sustainable Cities and Communities), by contributing to safe and resilient water, transport and utility 
+services that depend on secure industrial control systems. 
+1.2 Literature Review 
+This review is scoped to the individual research problem investigated in this component - reconnaissance 
+detection - rather than the wider group problem: the sub-objective is to model Modbus communication 
+patterns over time, rather than analyzing packets independently, because reconnaissance rarely changes 
+traffic volume and is instead revealed through temporal behavior , sequential register access and 
+abnormal polling frequency that volume-based detectors miss. 
+Gao and Morris [15] provide a systematic evaluation of signature-based IDS for Modbus and show that 
+packet-level signatures cannot detect protocol -valid or low -volume attacks such as reconnaissance 
+scanning; this finding is the central piece of evidence mo tivating a temporal, behavior-based approach 
+for this component rather than a further signature- or packet-based one. Chu, Lai and Liu [3] proposed 
+a hybrid GoogLeNet -LSTM architecture for multi -classification ICS intrusion detection, combining 
+spatial and temporal feature extraction on labelled ICS traffic; their method demonstrates that a recurrent 
+(LSTM) component can capture sequential communication patterns, which directly supports the choice 
+of an LSTM -based approach for this component. However, their evaluation does not isolate 
+reconnaissance/scanning behavior as a distinct class, does not report session-independent generalization, 
+and does not evaluate a dedicated reconnaissance feature set - limitations this research addresses directly. 
+Attack-emulation testbeds such as those used by Bashendy  et al. [13] and in real -time cyber-physical 
+testbed studies [18] demonstrate practical methods for generating and capturing labelled 
+reconnaissance/scanning traffic against Modbus/TCP, and this component draws on the same class of 
+testbed tooling (ICSSIM and Modbus attack -emulation utilities) for primary data collection. 
+Explainable-AI methods applied to Modbus and ICS IDS decisions by Tawfik et al. [6] and Aslam et al. 
+[7] make IDS output interpretable to operators; their findings directly influence the e xplainability 
+requirement placed on this component's output - that a reconnaissance alert must expose the contributing 
+behavioral features rather than a bare classification - even though neither study targets reconnaissance 
+specifically. 
+Existing products that attempt to address Modbus reconnaissance are largely signature- and perimeter-
+based: commercial OT-security platforms provide deep-packet inspection and asset discovery, but are 
+expensive, rule-driven and tuned to known attack signatures rather than to behavioral scanning patterns 
+[15]. None of the reviewed products or systems provide a dedicated, temporal -behavior-based 
+reconnaissance detector; this component addresses that limitation directly by modelling communication 
+behavior over time rather than relying on per-packet signatures or volumetric thresholds. 
+ 
+ 
+
+=== PDF PAGE 12 ===
+12 
+1.3 Research Gap 
+Reconnaissance scans rarely change overall traffic volume, so packet-level and volume-based detectors 
+miss the subtle temporal behavior that distinguishes scanning from normal polling [3], [18]. Existing 
+Modbus IDS studies either evaluate generic flow -based classifiers that are not designed to model 
+ordering and timing [1], [6], [15], or apply temporal/recurrent models without isolating reconnaissance 
+as a distinct class or testing session-independent generalization [3]. 
+The specific research gap this component investigates is therefore: there is currently no validated, 
+protocol-aware temporal-sequence model that reliably distinguishes Modbus reconnaissance scanning 
+from normal polling behavior without relying on traffic -volume anomalies, and no such detector has 
+been integrated into a unified, multi-attack Modbus incident-analysis pipeline. 
+  
+
+=== PDF PAGE 13 ===
+13 
+2. OBJECTIVE 
+2.1 Main Objective 
+To design and validate an LSTM -based temporal behavior analysis approach for detecting Modbus 
+reconnaissance and scanning activity that produces no traffic -volume anomaly, and to integrate this 
+detection capability into the shared protocol -aware Modbus int rusion detection and incident -analysis 
+framework. 
+2.2 Specific Objectives 
+• To capture and label reconnaissance/scanning traffic exhibiting sequential register scanning and 
+polling-rate changes, using a controlled Modbus/TCP testbed. 
+• To construct time -windowed and sequential features that represent Modbus communication 
+behavior over time, including register/coil access order, polling-rate drift, request counts and inter-
+request timing. 
+• To design and train time -series/LSTM models capable of detecting subtle temporal scanning 
+patterns from these windowed sequences. 
+• To validate that session -independent temporal modelling outperforms packet -level and non -
+temporal baseline detection. 
+• To evaluate detection performance (precision, recall, F1-score, false-positive rate, ROC-AUC) and 
+real-time detection latency against defined targets. 
+• To integrate the reconnaissance detection module's output - classification, confidence score and 
+explanation - into the shared decision-fusion and incident-analysis layer. 
+  
+
+=== PDF PAGE 14 ===
+14 
+3. METHODOLOGY 
+3.1 Research Methodology / Design 
+A quantitative, experimental research design is appropriate for this component. The research question - 
+whether temporal, protocol -aware sequence modelling can distinguish reconnaissance from normal 
+Modbus polling more reliably than packet-level analysis - is a measurable classification problem rather 
+than an exploratory or attitudinal one. The available data is structured, timestamped network traffic that 
+can be windowed into fixed-length sequences, which suits a supervised time-series classification design. 
+The experimental requirements - a controlled testbed, labelled attack and normal traffic, and a defined 
+baseline for comparison - are all achievable within the shared group testbed. This design is consistent 
+with related work such as Chu et al. [3], who evaluated a recurrent architecture experimentally against 
+baseline classifiers on labelled ICS traffic. The selected methodology is  therefore a quantitative, 
+experimental research design combining controlled data collection with comparative model evaluation. 
+3.2 Data / Participants / Experimental Inputs 
+No human participants are involved; the experimental inputs are Modbus/TCP network traffic 
+sequences. Primary data will be generated from a controlled Modbus/TCP testbed using ICSSIM and 
+Modbus attack-emulation tools, in which reconnaissance/scanning traffic (sequential register scanning, 
+polling-rate changes) is executed alongside normal master -slave polling traffic and captured via port 
+mirroring [13], [18]. As preliminary evidence of data availability, a first-pass primary dataset of 175,800 
+windowed sequences (20 timesteps by 7 protocol -aware features per window, spanning 13 captured 
+sessions) has already been assembled from an initial testbed run, confirming that the required data 
+pipeline (capture → protocol parsing → windowing → labelling) is achievable. 
+Secondary data will be drawn from established public ICS/SCADA datasets, including the Mississippi 
+State University gas-pipeline and water-storage datasets [2], [8] and recent Modbus -specific anomaly 
+detection datasets [17], to benchmark the models and imp rove generalization. Collected traffic will be 
+parsed, cleaned, labelled and split into training and testing sets within the shared common feature 
+repository. 
+A specific data -quality issue identified during preliminary analysis is that positive (reconnaissance) 
+labels in the first -pass dataset are concentrated in very few sessions, which risks session -specific 
+overfitting rather than genuinely generalizable scan detection. The data-preparation phase will therefore 
+explicitly prioritize capturing reconnaissance traffic across a wider and more balanced set of sessions, 
+and all evaluation will be performed using a session-independent split (Section 3.5) to detect and report 
+this risk honestly rather than mask it. 
+3.3 Baseline / Benchmark 
+The proposed temporal LSTM approach will be compared against two baselines: (1) a packet -level / 
+static-feature detector representative of conventional signature - and flow-based IDS approaches [15], 
+and (2) a non-temporal machine-learning baseline (Random Forest trained on the same protocol-aware 
+features, flattened across the window) to isolate the specific benefit of modelling the temporal sequence 
+rather than the benefit of protocol -aware features alone. This two -baseline design directly tests the 
+novelty claim of this component: that temporal modelling, not just protocol awareness, is required to 
+detect reconnaissance. 
+ 
+
+=== PDF PAGE 15 ===
+15 
+3.4 Evaluation Metrics 
+The following metrics will be used to measure success (Table 1): 
+Metric Why Relevant Target / Comparison 
+Precision / Recall / 
+F1-score 
+Balances missed scans (false negatives) 
+against alert fatigue (false positives) for SOC 
+operators 
+Outperform packet-level baseline on 
+all three metrics 
+False-Positive Rate 
+(FPR) 
+Reconnaissance is a low-prevalence class; a 
+high FPR overwhelms operators and erodes 
+trust in alerts 
+Target FPR below 5% on session-
+independent test folds 
+ROC-AUC Threshold-independent measure of 
+separability between normal and 
+reconnaissance sequences 
+Report per-fold AUC; comparing 
+temporal vs. non-temporal features 
+Detection Latency The module must classify each new window 
+quickly enough to support near-real-time 
+SOC monitoring 
+Target latency in the order of seconds 
+per window 
+Session-independent 
+generalization 
+Prevents data leakage across near-duplicate 
+sliding windows from the same capture 
+session 
+GroupKFold (leave-session-out) mean 
+AUC, compared against a naive 
+random-split result 
+Table 1: Evaluation metrics for the reconnaissance detection component 
+3.5 Validation Strategy 
+Results will be validated using GroupKFold (leave -one-session-out) cross -validation, grouped by 
+capture session, to prevent near -duplicate sliding-window sequences from the same session leaking 
+across the train/test split - a recognized risk in windowed network -traffic datasets. To make this risk 
+explicit rather than assumed, session -independent results will be reported alongside a naive random -
+split result for the same data, demonstrating the size of any leakage effect. Thi s approach follows 
+accepted evaluation practice in the ICS intrusion -detection literature, which emphasizes accuracy, 
+precision, recall, F1 -score, false-positive rate and ROC -AUC as standard comparison metrics against 
+baselines [5], [6], [10]. 
+ 
+3.6 Development Approach 
+An iterative, experiment -driven development approach (short cycles of feature engineering, model 
+training, evaluation and refinement) is appropriate given the exploratory, research -heavy nature of 
+model development and the need for the component to integra te continuously with the shared feature 
+repository used by the other three detection modules. Each iteration will produce a working, evaluable 
+version of the detector, allowing early and frequent validation against the metrics in Table 1 and early 
+detection of integration issues with the shared repository and decision-fusion layer. 
+ 
+  
+
+=== PDF PAGE 16 ===
+16 
+4. HIGH-LEVEL SYSTEM ARCHITECTURE 
+The proposed group solution is a seven -layer, protocol-aware machine learning framework (Table 5). 
+Layer 1 is the Modbus/TCP ICS testbed environment, where normal and adversarial (DoS, 
+reconnaissance, injection and replay) traffic is generated. Layer 2 acquires this traffic through live packet 
+capture and public Modbus datasets. Layer 3 parses  the traffic into a shared, protocol -aware common 
+feature repository, handling cleaning, labelling and the train/test split used by every detection module. 
+Layer 4 contains four parallel detection modules - RP1 (DoS), RP2 (Reconnaissance, this component), 
+RP3 (Injection) and RP4 (Replay) - each applying the methodology best matched to the behavioral 
+signature of its target attack. Layer 5 fuses the per -module anomaly scores into a unified verdict and 
+correlates alerts across modules. Layer 6 adds attack -type classification, severity ranking  and 
+explainable-AI attribution, and Layer 7 presents real -time visualization, alerts and analysis reports 
+through a unified incident dashboard. Data flows sequentially from Layer 1 through to Layer 7, with a 
+feedback loop from the incident-analysis layer back to the detection modules to support periodic model 
+retraining. 
+ 
+Figure 1: High-level system architecture (protocol-aware Modbus intrusion-detection framework), with the individual 
+reconnaissance component (RP2) shown in Layer 4 
+
+
+=== PDF PAGE 17 ===
+17 
+Individual Component within the Architecture 
+Within this architecture, the reconnaissance component (RP2) sits in Layer 4 as one of four parallel 
+detection modules. It consumes protocol-aware features from the shared Layer 3 repository - function-
+code buckets, register/coil addresses, transaction IDs and read/write behavior - and constructs time -
+windowed sequences from them. It trains and applies an LSTM model to classify each window as 
+Normal or Reconnaissance/Scanning, and outputs a class, a confidence score and the contributing 
+behavioral features to the Layer 5 decision-fusion layer, which combines this output with the other three 
+modules' scores before Layer 6 adds explanation and severity ranking for the operator-facing dashboard 
+in Layer 7. 
+Overall Integration 
+The four components integrate through the shared common feature repository (Layer 3) and a common 
+internal data contract: each detection module reads a standardized, protocol-aware feature record keyed 
+by session ID and timestamp, and publishes a standardi zed output record (module identifier, predicted 
+class, confidence score and contributing features) to the decision -fusion layer (Layer 5). This avoids 
+duplicated preprocessing, ensures all four modules share a consistent view of the traffic, and supports 
+cross-module correlation - for example, a reconnaissance alert immediately followed by an injection 
+alert on the same session can be correlated into a single multi -stage incident. The planned integration 
+method is therefore a shared-repository, contract-based integration rather than direct module-to-module 
+calls, which keeps each research component - including this one - independently developable and 
+testable. 
+In line with the scope of an individual component, this document does not provide detailed technical 
+descriptions of the DoS, injection or replay modules; it focuses on how the reconnaissance component 
+connects to the shared repository and fusion layer. Table 2 sets out the responsibility boundary for this 
+component. 
+Activity / Deliverable My 
+Responsibility 
+Shared 
+Responsibility Other Member 
+Modbus protocol parser & common feature 
+repository 
+ ✓  
+Reconnaissance feature engineering 
+(temporal/time-windowed) 
+✓   
+LSTM model design, training and tuning ✓   
+Reconnaissance module evaluation & 
+validation 
+✓   
+DoS detection (protocol-aware features + 
+autoencoder) 
+  Rathnayake 
+H.M.S.R 
+Command/response injection detection 
+(context-aware) 
+  Rathnayaka K.H 
+Replay detection (transaction consistency 
+analysis) 
+  Ilankoon I.M.D.S 
+Decision-fusion & alert-correlation layer  ✓  
+Unified incident dashboard & reporting  ✓  
+Table 2: Individual responsibility boundary   
+
+=== PDF PAGE 18 ===
+18 
+5. USER REQUIREMENTS 
+The primary users of this component are Security Operations Centre (SOC) analysts and OT/ICS 
+engineers who monitor Modbus -based networks. Because the group's ethical clearance restricts this 
+project to traffic generated in an isolated testbed and public da tasets, with no human -subject data 
+collected, requirements were not elicited through direct stakeholder interviews at proposal stage; instead 
+they were derived from the literature on ICS/SOC alert handling [6], [7], [15], the gap identified in 
+Section 1.3, and discussion with academic supervisors regarding realistic SOC operating constraints 
+(alert volume, false -positive tolerance, and the need for explainable output). These findings were 
+translated into the functional and non -functional requirements below,  which will be reviewed with 
+supervisors and, where possible, domain practitioners as the project proceeds. 
+Functional Requirements 
+• FR1: The system shall classify each windowed Modbus communication sequence as Normal or 
+Reconnaissance/Scanning. 
+• FR2: The system shall output a confidence score with each classification. 
+• FR3: The system shall identify the behavioral features that most contributed to a reconnaissance 
+classification, to support the shared explainable-AI layer. 
+• FR4: The system shall log detected reconnaissance events with a timestamp, source session 
+identifier and confidence score to support forensic review. 
+• FR5: The system shall publish its classification output to the shared decision -fusion layer in the 
+agreed common data format. 
+• FR6: The system shall support retraining on newly captured or relabeled sessions without requiring 
+changes to the shared feature repository scheme. 
+ 
+Non-Functional Requirements 
+• NFR1 (Performance): The system shall classify a new sequence window within a detection-latency 
+budget suitable for near-real-time SOC monitoring (target: on the order of seconds per window), 
+measured under test load. 
+• NFR2 (Reliability): The system shall achieve a false-positive rate below a defined threshold (target: 
+under 5% on session-independent evaluation) to avoid alert fatigue. 
+• NFR3 (Security): All development and testing traffic shall be captured and processed within the 
+isolated testbed environment, with no access to live production ICS networks. 
+• NFR4 (Scalability): The system shall be able to process traffic from multiple concurrent Modbus 
+sessions without a proportional loss of detection accuracy. 
+• NFR5 (Usability / Explainability): The system's output shall integrate into the shared incident 
+dashboard using a consistent schema and  shall be interpretable enough for a SOC analyst to 
+understand why an alert was raised without inspecting raw model internals. 
+  
+
+=== PDF PAGE 19 ===
+19 
+6. COMMERCIALIZATION PLAN 
+• Target market and customer persona: OT/ICS -SCADA security teams, managed security service 
+providers (MSSPs), and critical-infrastructure operators in energy and utilities, water treatment and 
+smart manufacturing; the primary persona is a SOC analyst or OT security engineer responsible 
+for monitoring Modbus-based networks. 
+• Value proposition: an affordable, protocol -aware, explainable reconnaissance detector that 
+identifies scanning behavior missed by signature-based and volume-based tools, without requiring 
+proprietary deep-packet-inspection hardware [15]. 
+• Revenue model: offered as a licensed detection module within the unified four -attack-class 
+framework, priced per monitored device/session, or released with an open -source core and paid 
+enterprise support and integration services. 
+• Cost estimation: dominated by model development, training computing and ongoing retraining; 
+deployment cost is low because the framework relies on open-source tooling rather than proprietary 
+appliances. 
+• Pricing strategy: tiered subscription aligned to the number of monitored Modbus devices or 
+sessions, consistent with typical OT-security SaaS pricing. 
+• Competitive advantage: temporal, protocol -aware modelling of reconnaissance behavior that 
+generic signature-based competitors do not offer, combined with integration into a unified multi -
+attack-class framework rather than a single-purpose point tool. 
+• Intellectual property considerations: the novelty lies in the temporal feature-engineering approach 
+and its integration into the shared framework; underlying open -source components (Python, 
+TensorFlow/Keras, ICSSIM) remain under their existing open-source licenses, while the resulting 
+trained models, feature schema and integration code would be the project's own work product. 
+ 
+Pricing Strategy and Commercialization 
+Service option Billing structure Inclusion and scope 
+Complete module subscription Recurring (LKR 80K / gateway / 
+year) 
+All 4 detection modules (DoS, Recon, 
+Injection, Replay), fusion dashboard, 
+quarterly model re-tuning, and 
+priority patch updates. 
+Perpetual software license One-time (LKR 70K - 100K / 
+installation) 
+Lifetime on-premises deployment of 
+the four-module engine and 
+visualisation dashboard. 
+Annual Maintenance Contract 
+(AMC) 
+Annual (LKR 60K – 120K / year) Essential security patches, software 
+bug fixes, OS compatibility updates, 
+and Tier-2 technical support. 
+Onboarding and tuning services One time fixed fee (LKR 50K – 
+70K) 
+Network capture analysis, baseline 
+traffic profiling, anomaly threshold 
+tuning, and operator training. 
+ 
+  
+
+=== PDF PAGE 20 ===
+20 
+ 
+7. BUDGET AND JUSTIFICATION 
+Consistent with the group project's use of public datasets, a controlled software-based testbed and open-
+source tools, the proposed reconnaissance component is expected to require no additional direct 
+expenditure (Table 3). 
+Category Item Description & 
+Breakdown Justification Estimated Cost 
+(LKR / USD) 
+Hardware Personal laptop / desktop 
+workstation 
+A standard personal computer is 
+sufficient to run preprocessing 
+and model training, as the 
+dataset scale does not require 
+high-end specialized clusters. 
+LKR 0 
+Software & 
+Licenses 
+Python, PyTorch/TensorFlow, 
+scikit-learn, Wireshark, TShark, 
+Scapy 
+All core libraries, feature 
+extraction tools, and machine 
+learning development 
+frameworks are free and open-
+source. 
+LKR 0 
+Cloud 
+Computing 
+Google Colab / Kaggle 
+Notebooks 
+Free-tier GPU/TPU 
+environments serve as a backup 
+for high-epoch training runs or 
+memory-intensive feature 
+extraction. 
+LKR 0 
+Dataset Access CIC Modbus 2023 & 
+MSU/ORNL Gas Pipeline 
+Freely accessible public 
+benchmark datasets available 
+under academic research 
+licenses. 
+LKR 0 
+Documentation 
+& Printing 
+Interim progress reports, 
+proposal hard copies, logbooks, 
+final dissertation binding, and 
+project presentation posters 
+Required for official academic 
+submissions, progress 
+presentations, and hard-copy 
+archival at the department 
+library: 
+• Proposal & 
+Progress draft copies: 
+LKR 2,500. 
+ 
+• Final project report 
+hard binding (3 
+copies): LKR 9,000. 
+Table 3: Budget and justification 
+  
+
+=== PDF PAGE 21 ===
+21 
+8. WORK BREAKDOWN STRUCTURE (WBS) 
+Table 4 breaks this component down into nine work packages (WP1–WP9), covering the literature, data, 
+feature-engineering, modelling, evaluation, integration and reporting work required for the 
+reconnaissance detection module. WP1–WP7 and WP9 are this student's individual responsibility; WP8 
+(Integration & Testing) is carried out jointly with the other three group members through the shared 
+common feature repository and decision -fusion layer. The breakdown is aligned with the timeline in 
+Section 9 and distributes the workload evenly across all phases of the module. 
+Work Package Key Tasks Deliverables 
+WP1 - Research 
+Planning 
+Review literature, define the research gap, objectives, 
+and methodology for temporal reconnaissance 
+detection. 
+Final research plan and 
+literature review. 
+WP2 - Testbed Setup Build the Modbus/TCP master–slave environment and 
+capture normal baseline polling traffic. 
+Working testbed and 
+normal-traffic dataset. 
+WP3 - Reconnaissance 
+Attack Generation 
+Create controlled reconnaissance/scanning traffic 
+(sequential register scanning, polling-rate changes) and 
+label the captured traffic. 
+Labelled normal and 
+reconnaissance dataset. 
+WP4 - Windowed 
+Sequence Construction 
+Parse packets and construct time-windowed Modbus 
+communication sequences from the shared protocol 
+parser output. 
+Clean, time-windowed 
+sequence dataset. 
+WP5 - Feature 
+Engineering 
+Extract register/coil access order, polling-rate drift, 
+request counts, inter-request timing and other protocol-
+aware features. 
+Temporal behavior 
+feature set. 
+WP6 - Model 
+Development 
+Train and tune the LSTM reconnaissance-detection 
+model and the non-temporal baseline models. 
+Trained reconnaissance 
+LSTM classifier. 
+WP7 - Evaluation Measure precision, recall, F1-score, false-positive rate 
+and latency; test session-independent generalization. 
+Model performance 
+results and baseline 
+comparison. 
+WP8 - Integration & 
+Testing 
+Connect RP2 outputs to the shared common feature 
+repository and the decision-fusion / incident-analysis 
+layer. 
+Integrated and tested RP2 
+module. 
+WP9 - Documentation 
+& Final Delivery 
+Analyze results and prepare the final report, 
+presentation, and supporting evidence. 
+Final report and 
+presentation materials. 
+Table 4: Work breakdown structure (RP2 - Reconnaissance component) 
+  
+
+=== PDF PAGE 22 ===
+22 
+9. GANTT CHART 
+Table 6 shows the proposed timeline for this component, covering literature work, research design, data 
+preparation, experiments, development, prototype work, testing, integration, evaluation, analysis and 
+report preparation, aligned with the work breakdow n structure in Table 4. Shaded cells indicate the 
+month(s) during which each task is active. 
+Figure 2: Proposed project timeline — Reconnaissance Detection Component (RP2) 
+  
+
+
+=== PDF PAGE 23 ===
+23 
+10. REFERENCES LIST 
+References are presented in IEEE style, matching the numbering used throughout this document and the 
+approved Topic Assessment Form for project J26-CS-318. 
+[1] M. Çelebi, A. Özbilen and U. Yavanoğlu, “An intrusion detection system for critical infrastructures: A 
+Modbus approach,” Engineering Applications of Artificial Intelligence, 2025. 
+[2] T. Morris and W. Gao, “Industrial control system traffic data sets for intrusion detection research,” in 
+Critical Infrastructure Protection VIII, Springer, 2014. 
+[3] A. Chu, Y. Lai, and J. Liu, “Industrial control intrusion detection approach based on multiclassification 
+GoogLeNet-LSTM model,” Security and Communication Networks, vol. 2019, Art. no. 6757685, pp. 
+1–11, Dec. 2019, doi: 10.1155/2019/6757685. 
+[4] H. Qu, J. Qin, W. Liu and H. Chen, “Instruction Detection in SCADA/Modbus Network Based on 
+Machine Learning,” in Machine Learning and Intelligent Communications, Springer, 2018. 
+[5] F. Alharbi, “IoT intrusion detection system for Modbus networks with explainable AI,” Journal of 
+Advances in Information Technology, vol. 16, no. 7, pp. 973 –979, Jul. 2025, doi: 
+10.12720/jait.16.7.973-979. 
+[6] M. Tawfik et al., “Trustworthy AI for Modbus/TCP intrusion detection in industrial control systems,” 
+in Proc. 12th Int. Conf. Intelligent Computing and Information Systems (ICICIS), 2025. 
+[7] Authors, “An improved autoencoder -based approach for anomaly detection in industrial control 
+systems,” Systems Science & Control Engineering, Taylor & Francis, 2024. 
+[8] W. Yusheng, K. Fan, Y. Lai et al., “Intrusion Detection of Industrial Control System Based on Modbus 
+TCP Protocol,” in Proc. IEEE 13th Int. Symp. on Autonomous Decentralized Systems, 2017. 
+[9] S. Kwon et al., “Anomaly Detection for SCADA System Security Based on Unsupervised Learning and 
+Function Codes Analysis in the DNP3 Protocol,” Electronics, MDPI, vol. 11, no. 14, 2184, 2022. 
+[10] L. et al., “Detection and Blocking of Replay, False Command, and False Access Injection Commands 
+in SCADA Systems with Modbus Protocol,” Security and Communication Networks, vol. 2021, 
+Hindawi, 2021. 
+[11] I. N. Fovino et al., “Design and implementation of a secure Modbus protocol,” in Critical Infrastructure 
+Protection III, Springer, 2009. 
+[12] M. Altaha, J. -M. Lee, M. Aslam, and S. Hong, “An autoencoder -based network intrusion detection 
+system for the SCADA system,” Journal of Communications, vol. 16, no. 6, pp. 210 –216, Jun. 2021, 
+doi: 10.12720/jcm.16.6.210-216. 
+[13] M. Bashendy, S. Eltanbouly, A. Tantawy and A. Erradi, “Design and Implementation of Cyber-Physical 
+Attacks on Modbus/TCP Protocol,” in World Congress on Industrial Control Systems Security 
+(WCICSS-2020), 2020. 
+[14] B. Stewart et al., “A novel intrusion detection mechanism for SCADA systems which automatically 
+adapts to network topology changes,” EAI Endorsed Trans. on Industrial Networks and Intelligent 
+Systems, 2017. 
+[15] Authors, “On Cyber Attacks and Signature Based Intrusion Detection for Modbus Based Industrial 
+Control Systems,” Journal of Digital Forensics, Security and Law, 2014. 
+[16] N. Goldenberg and A. Wool, “Accurate modeling of Modbus/TCP for intrusion detection in SCADA 
+systems,” International Journal of Critical Infrastructure Protection, vol. 6, no. 2, pp. 63–75, 2013. 
+
+=== PDF PAGE 24 ===
+24 
+[17] A. Dehlaghi-Ghadim et al., “Anomaly detection dataset for industrial control systems,” IEEE Access, 
+vol. 11, pp. 107951–107973, 2023, doi: 10.1109/ACCESS.2023.3320928. 
+[18] Authors, “Implementing Attacks for Modbus/TCP Protocol in a Real -Time Cyber Physical System 
+Testbed,” in Proc. IEEE Int. Workshop on Communications Quality and Reliability (CQR), 2015. 
+  
+
+=== PDF PAGE 25 ===
+25 
+11. APPENDICES 
+Appendix 1 - Mandatory Proposal Evidence and Decision Log 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+=== PDF PAGE 26 ===
+26 
+Appendix 2 - AI Use Disclosure 
+Generative AI tools used during proposal preparation are disclosed below, as required. 
+AI Tool Purpose of Use What Was Generated 
+/ Assisted 
+How Output Was 
+Verified 
+Final Student 
+Contribution 
+Claude Information 
+gathering and 
+document 
+structuring 
+Assisted with 
+organizing the proposal 
+structure and refining 
+the Background and 
+Context section. 
+Information and 
+technical claims were 
+checked against the cited 
+literature, the approved 
+TAF, and project 
+documents before 
+inclusion. 
+The student reviewed, 
+revised, and finalized the 
+content and retained 
+responsibility for all 
+research decisions and 
+submitted work. 
+ChatGPT Literature 
+support and 
+document 
+review 
+Assisted with 
+literature-review 
+drafting, wording 
+improvements, and 
+reviewing the proposal 
+against feedback and 
+requirements. 
+Outputs were cross-
+checked with the original 
+sources and project 
+evidence. Unsupported 
+or inaccurate content was 
+corrected or removed. 
+The student selected the 
+sources, made the final 
+technical and 
+methodological 
+decisions, edited the text, 
+and finalized the report. 
+ 
+ 
+ 
+ 

@@ -1,0 +1,3 @@
+recording_family,candidate_requests,supported_contextual_unique_event_requests,ambiguous_exact_event_correspondence,source_chunks_with_candidates,UTC_dates_with_candidates,first_timestamp,last_timestamp,verified_independent_campaigns,independence_evidence
+compromised_SCADA_March_recording,436,116,320,17,8,2023-03-15T03:06:38.773816+00:00,2023-03-22T02:04:39.467831+00:00,UNKNOWN,continuous/rotated recordings; independent reset ledger absent
+external_February_recording,32,32,0,1,1,2023-02-01T03:51:37.648697+00:00,2023-02-01T04:37:34.142204+00:00,UNKNOWN,continuous/rotated recordings; independent reset ledger absent

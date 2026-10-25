@@ -1,0 +1,57 @@
+{
+  "canonical_sources": 1,
+  "extra_views_for_old_label_reconciliation": 0,
+  "original_log_rows_recon": 1453,
+  "distinct_recon_start_signatures": 643,
+  "candidate_requests": 12,
+  "label_states": {
+    "supported_contextual": 12
+  },
+  "candidate_campaigns": {
+    "compromised_SCADA_March_recording": 12
+  },
+  "candidate_function_codes": {
+    "1": 3,
+    "2": 3,
+    "3": 3,
+    "4": 3
+  },
+  "candidate_quantities": {
+    "2000": 6,
+    "125": 6
+  },
+  "candidate_addresses": {
+    "1": 12
+  },
+  "candidates_with_response": 6,
+  "raw_positive_matches": 0,
+  "unique_original_positive_rows_matched": 0,
+  "raw_positive_wire_function_distribution": {},
+  "raw_positive_exception_code_distribution": {},
+  "raw_positive_nearest_nonrecon_log_labels": {},
+  "controls_saved": 882,
+  "file_reports": [
+    {
+      "source": "attack/compromised-scada/scada-hmi/scada-hmi-network-capture/veth291ab9a-0.pcap",
+      "canonical": true,
+      "size": 100000032,
+      "min_timestamp_us": 1678845668009340,
+      "max_timestamp_us": 1678875720209986,
+      "counts": {
+        "frames": 1172759,
+        "modbus_tcp_segments": 1077436,
+        "complete_segment_adus": 188389,
+        "trailing_short_payload_bytes": 120,
+        "incomplete_single_segment_adu": 24,
+        "post_primary_bridge_start_frames_omitted_to_avoid_mirrors": 94792
+      }
+    }
+  ],
+  "limitations": [
+    "Single-segment complete ADUs only; incomplete/unframed payload counts retained, no full TCP reassembly",
+    "25ms contextual log join is sensitivity-bounded evidence, not proof of global logger clock synchronization",
+    "No independent-run claim from capture rotations or repeated tool invocations",
+    "Controls from attack recording are unlabeled local lookalikes, not automatically benign"
+  ],
+  "wall_seconds": 55.46899999999732
+}

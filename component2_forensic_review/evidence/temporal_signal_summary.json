@@ -1,0 +1,54 @@
+{
+  "candidate_requests": 468,
+  "supported_contextual_requests": 148,
+  "ambiguous_or_other_candidates": 320,
+  "contextual_candidates_by_family": {
+    "compromised_SCADA_March_recording": 116,
+    "external_February_recording": 32
+  },
+  "candidate_states": {
+    "ambiguous": 320,
+    "supported_contextual": 148
+  },
+  "benign_all_read_requests": 2042925,
+  "benign_saved_contexts": 20458,
+  "benign_systematic_contexts": 20428,
+  "candidate_requests_with_exact_shape_benign_overlap": 0,
+  "candidate_requests_without_exact_shape_benign_overlap": 148,
+  "candidate_full_previous20_contexts": 114,
+  "candidate_partial_previous20_contexts": 34,
+  "candidate_unit_ids": [
+    1
+  ],
+  "candidate_target_ips": [
+    "185.175.0.4",
+    "185.175.0.5",
+    "185.175.0.8"
+  ],
+  "candidate_start_addresses": {
+    "1": 139,
+    "0": 4,
+    "2": 3,
+    "5": 2
+  },
+  "candidate_quantities": {
+    "125": 100,
+    "4": 21,
+    "2000": 16,
+    "65535": 4,
+    "5": 4,
+    "2": 1,
+    "9": 1,
+    "20": 1
+  },
+  "unit_enumeration_observed": false,
+  "current_message_shape_normalization": "exact FC,quantity,MBAP length,captured frame length,unit; address overlap additionally reported",
+  "evidence_limits": [
+    "contextual log matches are not exact ground truth",
+    "normal packet shape counts are complete within canonical benign HMI view",
+    "benign temporal distributions are deterministic every100 request sample; shape exemplars excluded from distributions",
+    "raw temporal history is logical actor/target/unit, not one TCP connection; gap limit60s chosen for diagnosis",
+    "all history excludes future events; no train preprocessing, classification, tuning or LSTM here",
+    "marginal or shape-matched timing differences do not prove generalization across independent runs"
+  ]
+}

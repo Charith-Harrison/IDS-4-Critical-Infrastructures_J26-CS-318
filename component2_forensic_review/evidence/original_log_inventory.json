@@ -1,0 +1,147 @@
+{
+  "files": [
+    {
+      "path": "attack/compromised-ied/attack logs/03-23-2023/03-23-2023-1.csv",
+      "rows": 66
+    },
+    {
+      "path": "attack/compromised-ied/attack logs/03-24-2023/03-24-2023-1.csv",
+      "rows": 113
+    },
+    {
+      "path": "attack/compromised-ied/attack logs/03-25-2023/03-25-2023-1.csv",
+      "rows": 102
+    },
+    {
+      "path": "attack/compromised-ied/attack logs/03-26-2023/03-26-2023-1.csv",
+      "rows": 109
+    },
+    {
+      "path": "attack/compromised-ied/attack logs/03-27-2023/03-27-2023-1.csv",
+      "rows": 109
+    },
+    {
+      "path": "attack/compromised-ied/attack logs/03-28-2023/03-28-2023-1.csv",
+      "rows": 106
+    },
+    {
+      "path": "attack/compromised-ied/attack logs/03-29-2023/03-29-2023-1.csv",
+      "rows": 71
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-12-2023/03-12-2023-1.csv",
+      "rows": 107770
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-12-2023/03-12-2023-2.csv",
+      "rows": 33566
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-12-2023/03-12-2023-3.csv",
+      "rows": 41618
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-13-2023/03-13-2023-1.csv",
+      "rows": 106092
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-13-2023/03-13-2023-2.csv",
+      "rows": 49776
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-14-2023/03-14-2023-1.csv",
+      "rows": 141042
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-14-2023/03-14-2023-2.csv",
+      "rows": 99536
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-14-2023/03-14-2023-3.csv",
+      "rows": 30888
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-15-2023/03-15-2023-1.csv",
+      "rows": 101863
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-15-2023/03-15-2023-2.csv",
+      "rows": 74794
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-15-2023/03-15-2023-3.csv",
+      "rows": 14784
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-16-2023/03-16-2023-1.csv",
+      "rows": 51786
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-16-2023/03-16-2023-2.csv",
+      "rows": 33555
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-16-2023/03-16-2023-3.csv",
+      "rows": 66536
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-17-2023/03-17-2023-1.csv",
+      "rows": 21134
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-17-2023/03-17-2023-2.csv",
+      "rows": 8878
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-18-2023/03-18-2023-1.csv",
+      "rows": 74754
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-19-2023/03-19-2023-1.csv",
+      "rows": 138314
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-20-2023/03-20-2023-1.csv",
+      "rows": 74829
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-21-2023/03-21-2023-1-original.csv",
+      "rows": 8306
+    },
+    {
+      "path": "attack/compromised-scada/attack logs/03-22-2023/03-22-2023-1.csv",
+      "rows": 8338
+    },
+    {
+      "path": "attack/external/external-attacker/attacker logs/01-01-2023/01-01-2023-1.csv",
+      "rows": 1
+    },
+    {
+      "path": "attack/external/external-attacker/attacker logs/01-02-2023/01-02-2023-1.csv",
+      "rows": 2
+    },
+    {
+      "path": "attack/external/external-attacker/attacker logs/01-17-2023/01-17-2023-1.csv",
+      "rows": 6
+    },
+    {
+      "path": "attack/external/external-attacker/attacker logs/02-01-2023/02-01-2023-1.csv",
+      "rows": 131187
+    },
+    {
+      "path": "attack/external/external-attacker/attacker logs/12-29-2022/12-29-2022-1.csv",
+      "rows": 1
+    },
+    {
+      "path": "attack/external/external-attacker/attacker logs/12-30-2022/12-30-2022-1.csv",
+      "rows": 10
+    }
+  ],
+  "counts": {
+    "csv_rows": 1420042,
+    "xlsx_rows": 116084
+  },
+  "recon_rows": 1453,
+  "distinct_start_signatures": 643,
+  "other_brute_specific_rows": 1402377
+}

@@ -1,0 +1,74 @@
+{
+  "scope": "All original processed workbook rows; no inherited rebuilt rows assumed",
+  "packet_rows": 879225,
+  "positive_rows": 8699,
+  "positive_cohort_counts": {
+    "fc5_short_response_shape": 8400,
+    "mapped_workbook_association": 158,
+    "nonroutine_read_quantity_shape": 116,
+    "other_short_response_shape": 13,
+    "external_time_only_snippet": 12
+  },
+  "positive_label_state_counts": {
+    "unsupported_heuristic": 8541,
+    "ambiguous": 158
+  },
+  "positive_role_shape_counts": {
+    "slave_to_master_response_shape": 8490,
+    "read_request_shape": 197,
+    "unverified_role": 12
+  },
+  "event_map_rows": 158,
+  "event_map_distinct_log_signatures": 8,
+  "map_join_rows": 158,
+  "mapped_observations_found": 158,
+  "map_function_disagreements": 0,
+  "map_quantity_disagreements": 0,
+  "map_packet_label_counts": {
+    "1": 158
+  },
+  "map_utc_minus_log_seconds": {
+    "n": 158,
+    "0": -12598.892899,
+    "0.01": -12598.88049146,
+    "0.25": -11462.319626,
+    "0.5": 2075.8928825000003,
+    "0.75": 5733.69448925,
+    "0.99": 8489.24377021,
+    "1": 8489.25815
+  },
+  "map_log_clock_timezone_proven": false,
+  "candidate_read_request_rows": 197,
+  "candidate_read_requests_by_cohort": {
+    "nonroutine_read_quantity_shape": 116,
+    "mapped_workbook_association": 81
+  },
+  "evidence_supported_recon_request_rows": 0,
+  "short_response_rows": 8413,
+  "short_responses_with_preceding_same_key_request_within_10ms": 8026,
+  "close_predecessor_delta_seconds": {
+    "n": 8026,
+    "0": 0.0,
+    "0.01": 9e-06,
+    "0.25": 0.000179,
+    "0.5": 0.000264,
+    "0.75": 0.000564,
+    "0.99": 0.00913,
+    "1": 0.009998
+  },
+  "close_predecessor_label_counts": {
+    "0": 8017,
+    "1": 9
+  },
+  "close_predecessors_with_multiple_candidates_10ms": 7923,
+  "exact_transaction_pairings_verified": 0,
+  "original_pcap_bytes_available": false,
+  "original_attack_logs_available": false,
+  "stage": "pre-raw derivative-stage snapshot; raw outputs supersede source-absence interpretations",
+  "superseded_by": [
+    "evidence/raw_recovery_metrics.json",
+    "evidence/raw_positive_packet_matches.csv",
+    "label_provenance.csv"
+  ],
+  "raw_original_sources_now_available": true
+}

@@ -1,0 +1,115 @@
+{
+  "candidate_rows": 468,
+  "supported_contextual_rows": 148,
+  "ambiguous_rows": 320,
+  "benign_census_read_requests": 2042925,
+  "benign_saved_context_rows": 20458,
+  "benign_systematic_rows": 20428,
+  "benign_full20_systematic_rows": 20427,
+  "source_byte_sample_files": 19,
+  "source_byte_samples": [
+    {
+      "source_relative_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-13.pcap",
+      "frame_identity": 588919,
+      "pcap_record_offset": 50058739
+    },
+    {
+      "source_relative_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-14.pcap",
+      "frame_identity": 585422,
+      "pcap_record_offset": 49862879
+    },
+    {
+      "source_relative_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-15.pcap",
+      "frame_identity": 588910,
+      "pcap_record_offset": 50051126
+    },
+    {
+      "source_relative_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-16.pcap",
+      "frame_identity": 588361,
+      "pcap_record_offset": 50003689
+    },
+    {
+      "source_relative_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-17.pcap",
+      "frame_identity": 587867,
+      "pcap_record_offset": 49962266
+    },
+    {
+      "source_relative_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-18.pcap",
+      "frame_identity": 587168,
+      "pcap_record_offset": 49907760
+    },
+    {
+      "source_relative_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-19.pcap",
+      "frame_identity": 588961,
+      "pcap_record_offset": 50055632
+    },
+    {
+      "source_relative_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-20.pcap",
+      "frame_identity": 589652,
+      "pcap_record_offset": 50114334
+    },
+    {
+      "source_relative_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-21.pcap",
+      "frame_identity": 587681,
+      "pcap_record_offset": 49950602
+    },
+    {
+      "source_relative_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-22.pcap",
+      "frame_identity": 588921,
+      "pcap_record_offset": 50050587
+    },
+    {
+      "source_relative_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-23.pcap",
+      "frame_identity": 588017,
+      "pcap_record_offset": 49976263
+    },
+    {
+      "source_relative_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-24.pcap",
+      "frame_identity": 588680,
+      "pcap_record_offset": 50030646
+    },
+    {
+      "source_relative_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-25.pcap",
+      "frame_identity": 589467,
+      "pcap_record_offset": 50101193
+    },
+    {
+      "source_relative_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-26.pcap",
+      "frame_identity": 588736,
+      "pcap_record_offset": 50038326
+    },
+    {
+      "source_relative_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-27.pcap",
+      "frame_identity": 588268,
+      "pcap_record_offset": 49998865
+    },
+    {
+      "source_relative_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-28.pcap",
+      "frame_identity": 589721,
+      "pcap_record_offset": 50121568
+    },
+    {
+      "source_relative_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-29.pcap",
+      "frame_identity": 587806,
+      "pcap_record_offset": 49962082
+    },
+    {
+      "source_relative_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-30.pcap",
+      "frame_identity": 588535,
+      "pcap_record_offset": 50010603
+    },
+    {
+      "source_relative_path": "benign/scada-hmi/scada-hmi-network-capture/veth5bbeaa2-normal-31.pcap",
+      "frame_identity": 345906,
+      "pcap_record_offset": 29394110
+    }
+  ],
+  "temporal_distribution_rows": 60,
+  "errors": [],
+  "all_performed_checks_pass": true,
+  "limitations": [
+    "Benign population counts are checked against extracted per-file totals; this bounded QA does not independently rescan 21.9 million frames.",
+    "Temporal context causality was reviewed in extraction code; full histories are not independently reconstructed here.",
+    "No matched normal current-message shapes were found in this canonical census, so the temporal novelty comparison remains unsupported."
+  ]
+}

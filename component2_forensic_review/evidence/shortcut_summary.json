@@ -1,0 +1,22 @@
+{
+  "legacy": {
+    "packets": 879225,
+    "positives": 8699,
+    "windows": 175800,
+    "positive_windows": 18338,
+    "len3_positive_packets": 8413,
+    "len3_normal_packets": 0,
+    "len3_positive_windows": 17761,
+    "len3_normal_windows": 0
+  },
+  "diagnostic_reconstruction": {
+    "packets": 597135,
+    "positives": 8637,
+    "windows": 119237,
+    "positive_windows": 1878,
+    "len3_positive_packets": 8413,
+    "len3_normal_packets": 0,
+    "len3_positive_windows": 1784,
+    "len3_normal_windows": 0
+  }
+}

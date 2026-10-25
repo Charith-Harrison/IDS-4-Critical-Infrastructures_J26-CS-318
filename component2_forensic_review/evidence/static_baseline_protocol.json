@@ -1,0 +1,6 @@
+{
+  "status": "completed",
+  "sklearn_version": "1.9.1",
+  "scope": "Descriptive inherited-label diagnostic. Source-family holdouts prevent known file/view/window overlap; do not prove independent campaigns or valid targets.",
+  "estimators": "DecisionTree(max_depth=3,random_state=42); StandardScaler(train only)+LogisticRegression(C=1,max_iter=250,random_state=42); no tuning, balancing, SMOTE or exported estimators."
+}

@@ -1,12 +1,25 @@
 {
   "academic_supervisor_approval": "NOT_RECORDED",
+  "capture_exit_code": 0,
   "capture_required": true,
+  "client_port": 47920,
   "collection_id": "79e1c0ae419b4026a656f357edd1b24c",
   "connection_id": "MX004-20261024T223400Z-229a256a:connection-0",
   "created_at_utc": "2026-10-24T22:34:04.986281+00:00",
   "episodes": 90,
+  "input_sha256": {
+    "application_ledger.jsonl": "5c111cbc2cc1d0aa258bf279bb5c1cd0554db9efa1d3a23bd7bc66028757bd2c",
+    "attempt_request.json": "d93eeb26e551afaf43b21e28325f57ea7b85dc13eb0d07c4fa0d55c0cce12544",
+    "capture.log": "0d02937c2ad745cc9c939af845cfa89fa77afb0adcb006d2fa57bf6d261ded1e",
+    "capture.pcap": "09492c4b4d6356b45ca272ab9ea4a8778ad5be782178a83ffd0df22a83f6775c",
+    "intervention_audit.jsonl": "0675517035bf62a30c53b9744d8172822d63635047b33116c47bb2d82d11633b",
+    "planned_run.json": "9939c619a629629b87d59109c6f72328b0c20d34a09cf5f4e5e3c7e3cc764e51",
+    "scenario_plan.json": "8f629fd96ab4e5e3a9981f2fbf82aab3c9e81f8c952d5c675133657ecd97f662",
+    "server_audit.jsonl": "30a54ca5a45050ac01f5972b8bdc78b2ed97b59c4180e65920e200948b8e8009"
+  },
   "isolation": "docker-network-none",
   "no_model_preprocessing_or_training": true,
+  "observed_application_messages": 2272,
   "planned_run": {
     "actual_partition_membership": null,
     "actual_recording_id": null,
@@ -41,6 +54,11 @@
     "values": "V0"
   },
   "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+  "proposed_label_counts_not_yet_verified": {
+    "command_injection": 9,
+    "normal": 2245,
+    "response_injection": 18
+  },
   "purpose": "FROZEN_MAIN_RAW_EVIDENCE_NOT_MODEL_DATA",
   "python": "3.13.17 (main, Oct 21 2026, 22:34:13) [GCC 12.2.0]",
   "run_id": "MX004-20261024T223400Z-229a256a",
@@ -86,6 +104,6 @@
     "tools/lifecycle_probe.py": "e8275ac64bc340e73f61a1c840cbc83cfd9132c88164827e5f958297fdb4d682",
     "tools/prepare_protocol.py": "17c831e253326b1190c9ca1881c7c3a85f568573b6112de3abf1332949155388"
   },
-  "status": "STARTED",
+  "status": "CAPTURE_COLLECTED",
   "version": "manual-v1/qualified-engine-0.3.0"
 }

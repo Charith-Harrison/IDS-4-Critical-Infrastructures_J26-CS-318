@@ -1,10 +1,6 @@
 {
-  "completed": {
-    "MX001": "MX001-20261024T214901Z-cdaccfbf",
-    "MX002": "MX002-20261024T220214Z-7a737be7",
-    "MX003": "MX003-20261024T223154Z-8d6b9235"
-  },
-  "status": "RUNNING",
-  "updated_at_utc": "2026-10-24T22:33:49.522249+00:00",
-  "validated_completed": 3
+  "error": "MX005 stopped with exit 2; inspect run_manifest.json, capture.log and validation_report.json",
+  "status": "STOPPED",
+  "updated_at_utc": "2026-10-24T22:40:10.989001+00:00",
+  "validated_completed": 4
 }

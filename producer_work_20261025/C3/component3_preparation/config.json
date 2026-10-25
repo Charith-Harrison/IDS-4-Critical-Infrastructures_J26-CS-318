@@ -1,0 +1,11 @@
+{
+  "modbus_ports": [502],
+  "conn_idle_timeout_s": 300,
+  "closed_linger_s": 2,
+  "max_open_connections": 20000,
+  "max_ooo_segments": 128,
+  "max_ooo_bytes": 262144,
+  "max_pending_bytes": 70000,
+  "max_frame_refs": 1000,
+  "row_batch_size": 10000
+}

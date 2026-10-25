@@ -1,0 +1,3894 @@
+{
+  "source": "G:\\modbus cic 2023\\Modbus Dataset",
+  "operation": "read_only_log_and_readme_audit",
+  "timestamp_policy": "Preserve text; timezone unknown; truncated times not repaired.",
+  "csv_files": 34,
+  "csv_bytes": 109651156,
+  "rows": 1420042,
+  "attack_counts": {
+    "Baseline Replay: In position": 83,
+    "Starting Payload Injection... ": 45,
+    "Payload Injection.. Complete": 45,
+    "Delay Response Attack: Delaying response by 8267 milliseconds": 1,
+    "Delay response: Sending response to client": 50,
+    "False Data Injection Attack": 54,
+    "Starting Query flooding.. ": 63,
+    "Starting Length manipulation... ": 71,
+    "Length manipulation.. Complete": 71,
+    "Delay Response Attack: Delaying response by 7734 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 9390 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 5439 milliseconds": 2,
+    "Query flooding.. Complete": 28,
+    "Starting Frame Stacking... ": 58,
+    "Frame Stacking... Complete": 58,
+    "Delay Response Attack: Delaying response by 7481 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 6610 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 5928 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 5077 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 9242 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 7564 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 6104 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 5305 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 9300 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 8633 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 9645 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 6713 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 8280 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 5245 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 8890 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 5508 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 6865 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 9702 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 9017 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 9525 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 7038 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 8344 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 9478 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 7101 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 5421 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 7288 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 9755 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 5561 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 6146 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 9190 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 8332 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 7209 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 6291 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 5149 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 6438 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 6743 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 7056 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 7167 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 9609 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 6203 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 8622 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 8634 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 5665 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 6210 milliseconds": 1,
+    "Delay Response Attack: Delaying response by 9461 milliseconds": 1,
+    "Brute force or specific coil. Address: 13": 189,
+    "Brute force or specific - Complete": 705315,
+    "Brute force or specific coil. Address: 14": 188,
+    "Brute force or specific coil. Address: 8": 188,
+    "Replay": 941,
+    "Replay - Complete": 941,
+    "Query Flooding": 712,
+    "Query flooding. Complete": 672,
+    "Stacked Modbus Frames": 713,
+    "Stacked Modbus Frames - Complete": 713,
+    "Brute force or specific coil. Address: 1": 639195,
+    "Length manipulation": 657,
+    "Length manipulation - Complete": 657,
+    "Payload injection": 665,
+    "Payload injection - Complete": 665,
+    "Recon. Range: 2000": 331,
+    "Recon. Complete": 693,
+    "Recon. Range: 125": 330,
+    "Recon. Range: 65535": 12,
+    "Brute force or specific coil. Address: 0": 65558,
+    "Recon. Range: 5": 4,
+    "Recon. Range: 2": 1,
+    "Recon. Range: 9": 1,
+    "Recon. Range: 20": 1,
+    "Recon. Range: 4": 21,
+    "Recon. Range: 1": 3
+  },
+  "family_counts": {
+    "baseline_replay": 1965,
+    "loading_payloads": 1420,
+    "delay_response": 100,
+    "false_data_injection": 54,
+    "query_flooding": 1475,
+    "length_manipulation": 1456,
+    "stacking_frames": 1542,
+    "brute_force_or_specific_coil": 1410633,
+    "reconnaissance": 1397
+  },
+  "timestamp_dates": {
+    "2023-03-23": 66,
+    "2023-03-24": 113,
+    "2023-03-25": 102,
+    "2023-03-26": 109,
+    "2023-03-27": 109,
+    "2023-03-28": 106,
+    "2023-03-29": 71,
+    "2023-03-12": 107770,
+    "2023-03-13": 181276,
+    "2023-03-14": 190818,
+    "2023-03-15": 232287,
+    "2023-03-16": 141364,
+    "2023-03-17": 121225,
+    "2023-03-18": 83632,
+    "2023-03-19": 138314,
+    "2023-03-20": 74829,
+    "2023-03-22": 8338,
+    "2023-01-01": 1,
+    "2023-01-02": 2,
+    "2023-01-17": 6,
+    "2023-02-01": 131187,
+    "2022-12-29": 1,
+    "2022-12-30": 10
+  },
+  "targets": {
+    "185.175.0.2": 676,
+    "185.175.0.4": 305840,
+    "185.175.0.5": 639786,
+    "185.175.0.8": 342533,
+    "<missing>": 131207
+  },
+  "transaction_id_status_by_family": {
+    "baseline_replay": {
+      "integer_uint16": 1963,
+      "missing": 2
+    },
+    "loading_payloads": {
+      "integer_uint16": 754,
+      "integer_outside_uint16": 664,
+      "missing": 2
+    },
+    "delay_response": {
+      "integer_uint16": 100
+    },
+    "false_data_injection": {
+      "integer_uint16": 54
+    },
+    "query_flooding": {
+      "integer_uint16": 795,
+      "integer_outside_uint16": 671,
+      "missing": 9
+    },
+    "length_manipulation": {
+      "integer_uint16": 798,
+      "integer_outside_uint16": 656,
+      "missing": 2
+    },
+    "stacking_frames": {
+      "integer_uint16": 828,
+      "integer_outside_uint16": 712,
+      "missing": 2
+    },
+    "brute_force_or_specific_coil": {
+      "integer_uint16": 1279518,
+      "missing": 131115
+    },
+    "reconnaissance": {
+      "integer_uint16": 661,
+      "integer_outside_uint16": 661,
+      "missing": 75
+    }
+  },
+  "duplicate_exact_event_excess_across_all_logs": 806142,
+  "representative_rows_by_family": {
+    "baseline_replay": [
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+        "line": 2,
+        "Timestamp": "2023-03-23 05:09:22.829",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Baseline Replay: In position",
+        "TransactionID": "1"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+        "line": 3,
+        "Timestamp": "2023-03-23 05:30:24.984",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Baseline Replay: In position",
+        "TransactionID": "1238"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+        "line": 4,
+        "Timestamp": "2023-03-23 05:51:26.274",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Baseline Replay: In position",
+        "TransactionID": "2479"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-24-2023\\03-24-2023-1.csv",
+        "line": 32,
+        "Timestamp": "2023-03-24 06:36:29.91",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Baseline Replay: In position",
+        "TransactionID": "57509"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-25-2023\\03-25-2023-1.csv",
+        "line": 10,
+        "Timestamp": "2023-03-25 02:15:39.463",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Baseline Replay: In position",
+        "TransactionID": "61512"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-26-2023\\03-26-2023-1.csv",
+        "line": 4,
+        "Timestamp": "2023-03-26 00:33:30.785",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Baseline Replay: In position",
+        "TransactionID": "9537"
+      }
+    ],
+    "loading_payloads": [
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+        "line": 29,
+        "Timestamp": "2023-03-23 15:14:43.534",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Payload Injection... ",
+        "TransactionID": "3241"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+        "line": 30,
+        "Timestamp": "2023-03-23 15:14:43.534",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Payload Injection.. Complete",
+        "TransactionID": "3241"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+        "line": 31,
+        "Timestamp": "2023-03-23 15:31:44.009",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Payload Injection... ",
+        "TransactionID": "4244"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-24-2023\\03-24-2023-1.csv",
+        "line": 2,
+        "Timestamp": "2023-03-24 00:02:42.164",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Payload Injection... ",
+        "TransactionID": "34313"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-25-2023\\03-25-2023-1.csv",
+        "line": 30,
+        "Timestamp": "2023-03-25 07:56:16.875",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Payload Injection... ",
+        "TransactionID": "16106"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-26-2023\\03-26-2023-1.csv",
+        "line": 10,
+        "Timestamp": "2023-03-26 02:21:39.341",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Payload Injection... ",
+        "TransactionID": "16194"
+      }
+    ],
+    "delay_response": [
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+        "line": 33,
+        "Timestamp": "2023-03-23 15:59:47.182",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Delay Response Attack: Delaying response by 8267 milliseconds",
+        "TransactionID": "5895"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+        "line": 34,
+        "Timestamp": "2023-03-23 15:59:55.45",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Delay response: Sending response to client",
+        "TransactionID": "5895"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+        "line": 40,
+        "Timestamp": "2023-03-23 17:50:56.35",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Delay Response Attack: Delaying response by 7734 milliseconds",
+        "TransactionID": "12426"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-24-2023\\03-24-2023-1.csv",
+        "line": 4,
+        "Timestamp": "2023-03-24 00:24:42.861",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Delay Response Attack: Delaying response by 7481 milliseconds",
+        "TransactionID": "35612"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-25-2023\\03-25-2023-1.csv",
+        "line": 25,
+        "Timestamp": "2023-03-25 06:23:04.447",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Delay Response Attack: Delaying response by 8633 milliseconds",
+        "TransactionID": "10632"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-26-2023\\03-26-2023-1.csv",
+        "line": 6,
+        "Timestamp": "2023-03-26 01:28:35.81",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Delay Response Attack: Delaying response by 5508 milliseconds",
+        "TransactionID": "12839"
+      }
+    ],
+    "false_data_injection": [
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+        "line": 35,
+        "Timestamp": "2023-03-23 16:26:51.793",
+        "TargetIP": "185.175.0.2",
+        "Attack": "False Data Injection Attack",
+        "TransactionID": "7485"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+        "line": 46,
+        "Timestamp": "2023-03-23 19:04:08.729",
+        "TargetIP": "185.175.0.2",
+        "Attack": "False Data Injection Attack",
+        "TransactionID": "16712"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-24-2023\\03-24-2023-1.csv",
+        "line": 13,
+        "Timestamp": "2023-03-24 02:03:56.153",
+        "TargetIP": "185.175.0.2",
+        "Attack": "False Data Injection Attack",
+        "TransactionID": "41435"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-25-2023\\03-25-2023-1.csv",
+        "line": 4,
+        "Timestamp": "2023-03-25 00:35:31.738",
+        "TargetIP": "185.175.0.2",
+        "Attack": "False Data Injection Attack",
+        "TransactionID": "55640"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-26-2023\\03-26-2023-1.csv",
+        "line": 5,
+        "Timestamp": "2023-03-26 00:59:31.278",
+        "TargetIP": "185.175.0.2",
+        "Attack": "False Data Injection Attack",
+        "TransactionID": "11129"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-27-2023\\03-27-2023-1.csv",
+        "line": 22,
+        "Timestamp": "2023-03-27 03:58:28.401",
+        "TargetIP": "185.175.0.2",
+        "Attack": "False Data Injection Attack",
+        "TransactionID": "41136"
+      }
+    ],
+    "query_flooding": [
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+        "line": 36,
+        "Timestamp": "2023-03-23 16:52:52.009",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Query flooding.. ",
+        "TransactionID": "9015"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+        "line": 39,
+        "Timestamp": "2023-03-23 17:28:54.872",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Query flooding.. ",
+        "TransactionID": "11130"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+        "line": 47,
+        "Timestamp": "2023-03-23 19:28:12.29",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Query flooding.. ",
+        "TransactionID": "18125"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-24-2023\\03-24-2023-1.csv",
+        "line": 6,
+        "Timestamp": "2023-03-24 00:40:46.831",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Query flooding.. ",
+        "TransactionID": "36552"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-25-2023\\03-25-2023-1.csv",
+        "line": 5,
+        "Timestamp": "2023-03-25 00:57:32.625",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Query flooding.. ",
+        "TransactionID": "56933"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-26-2023\\03-26-2023-1.csv",
+        "line": 2,
+        "Timestamp": "2023-03-26 00:13:27.217",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Query flooding.. ",
+        "TransactionID": "8356"
+      }
+    ],
+    "length_manipulation": [
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+        "line": 37,
+        "Timestamp": "2023-03-23 17:10:53.728",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Length manipulation... ",
+        "TransactionID": "10076"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+        "line": 38,
+        "Timestamp": "2023-03-23 17:10:53.729",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Length manipulation.. Complete",
+        "TransactionID": "10076"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+        "line": 42,
+        "Timestamp": "2023-03-23 18:09:59.174",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Length manipulation... ",
+        "TransactionID": "13540"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-24-2023\\03-24-2023-1.csv",
+        "line": 11,
+        "Timestamp": "2023-03-24 01:34:51.832",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Length manipulation... ",
+        "TransactionID": "39730"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-25-2023\\03-25-2023-1.csv",
+        "line": 6,
+        "Timestamp": "2023-03-25 01:26:37.622",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Length manipulation... ",
+        "TransactionID": "58645"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-26-2023\\03-26-2023-1.csv",
+        "line": 8,
+        "Timestamp": "2023-03-26 01:54:36.719",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Length manipulation... ",
+        "TransactionID": "14528"
+      }
+    ],
+    "stacking_frames": [
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+        "line": 58,
+        "Timestamp": "2023-03-23 21:53:24.972",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Frame Stacking... ",
+        "TransactionID": "26657"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+        "line": 59,
+        "Timestamp": "2023-03-23 21:53:24.972",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Frame Stacking... Complete",
+        "TransactionID": "26657"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+        "line": 62,
+        "Timestamp": "2023-03-23 23:02:31.3",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Frame Stacking... ",
+        "TransactionID": "30773"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-24-2023\\03-24-2023-1.csv",
+        "line": 7,
+        "Timestamp": "2023-03-24 00:57:47.177",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Frame Stacking... ",
+        "TransactionID": "37552"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-25-2023\\03-25-2023-1.csv",
+        "line": 2,
+        "Timestamp": "2023-03-25 00:08:29.948",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Frame Stacking... ",
+        "TransactionID": "54048"
+      },
+      {
+        "file": "attack\\compromised-ied\\attack logs\\03-26-2023\\03-26-2023-1.csv",
+        "line": 17,
+        "Timestamp": "2023-03-26 03:35:48.741",
+        "TargetIP": "185.175.0.2",
+        "Attack": "Starting Frame Stacking... ",
+        "TransactionID": "20548"
+      }
+    ],
+    "brute_force_or_specific_coil": [
+      {
+        "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+        "line": 2,
+        "Timestamp": "2023-03-12 16:12:27.761",
+        "TargetIP": "185.175.0.4",
+        "Attack": "Brute force or specific coil. Address: 13",
+        "TransactionID": "5"
+      },
+      {
+        "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+        "line": 3,
+        "Timestamp": "2023-03-12 16:12:27.773",
+        "TargetIP": "185.175.0.4",
+        "Attack": "Brute force or specific - Complete",
+        "TransactionID": "65535"
+      },
+      {
+        "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+        "line": 4,
+        "Timestamp": "2023-03-12 16:12:27.774",
+        "TargetIP": "185.175.0.4",
+        "Attack": "Brute force or specific coil. Address: 14",
+        "TransactionID": "5"
+      },
+      {
+        "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-2.csv",
+        "line": 10,
+        "Timestamp": "2023-03-13 00:28:48.885",
+        "TargetIP": "185.175.0.4",
+        "Attack": "Brute force or specific coil. Address: 1",
+        "TransactionID": "5"
+      },
+      {
+        "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-3.csv",
+        "line": 10,
+        "Timestamp": "2023-03-13 00:39:07.545",
+        "TargetIP": "185.175.0.8",
+        "Attack": "Brute force or specific coil. Address: 13",
+        "TransactionID": "5"
+      },
+      {
+        "file": "attack\\compromised-scada\\attack logs\\03-13-2023\\03-13-2023-1.csv",
+        "line": 18,
+        "Timestamp": "2023-03-13 01:09:18.061",
+        "TargetIP": "185.175.0.5",
+        "Attack": "Brute force or specific coil. Address: 1",
+        "TransactionID": "5"
+      }
+    ],
+    "reconnaissance": [
+      {
+        "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+        "line": 33106,
+        "Timestamp": "2023-03-12 17:46:58.006",
+        "TargetIP": "185.175.0.8",
+        "Attack": "Recon. Range: 2000",
+        "TransactionID": "0"
+      },
+      {
+        "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+        "line": 33107,
+        "Timestamp": "2023-03-12 17:46:58.011",
+        "TargetIP": "185.175.0.8",
+        "Attack": "Recon. Complete",
+        "TransactionID": "1048575"
+      },
+      {
+        "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+        "line": 33108,
+        "Timestamp": "2023-03-12 17:46:58.011",
+        "TargetIP": "185.175.0.8",
+        "Attack": "Recon. Range: 2000",
+        "TransactionID": "0"
+      },
+      {
+        "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-2.csv",
+        "line": 8284,
+        "Timestamp": "2023-03-13 01:59:14.54",
+        "TargetIP": "185.175.0.4",
+        "Attack": "Recon. Range: 2000",
+        "TransactionID": "0"
+      },
+      {
+        "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-3.csv",
+        "line": 2,
+        "Timestamp": "2023-03-13 00:19:07.516",
+        "TargetIP": "185.175.0.8",
+        "Attack": "Recon. Range: 2000",
+        "TransactionID": "0"
+      },
+      {
+        "file": "attack\\compromised-scada\\attack logs\\03-13-2023\\03-13-2023-1.csv",
+        "line": 2,
+        "Timestamp": "2023-03-13 00:21:18.041",
+        "TargetIP": "185.175.0.5",
+        "Attack": "Recon. Range: 2000",
+        "TransactionID": "0"
+      }
+    ]
+  },
+  "transaction_id_outside_uint16_examples": [
+    {
+      "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+      "line": 19,
+      "Timestamp": "2023-03-12 16:13:54.635",
+      "TargetIP": "185.175.0.5",
+      "Attack": "Query flooding. Complete",
+      "TransactionID": "1048575"
+    },
+    {
+      "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+      "line": 21,
+      "Timestamp": "2023-03-12 16:13:54.637",
+      "TargetIP": "185.175.0.5",
+      "Attack": "Query flooding. Complete",
+      "TransactionID": "1048575"
+    },
+    {
+      "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+      "line": 23,
+      "Timestamp": "2023-03-12 16:13:54.639",
+      "TargetIP": "185.175.0.5",
+      "Attack": "Query flooding. Complete",
+      "TransactionID": "1048575"
+    },
+    {
+      "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+      "line": 25,
+      "Timestamp": "2023-03-12 16:13:54.641",
+      "TargetIP": "185.175.0.5",
+      "Attack": "Query flooding. Complete",
+      "TransactionID": "1048575"
+    },
+    {
+      "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+      "line": 27,
+      "Timestamp": "2023-03-12 16:16:01.779",
+      "TargetIP": "185.175.0.8",
+      "Attack": "Stacked Modbus Frames - Complete",
+      "TransactionID": "1048575"
+    },
+    {
+      "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+      "line": 29,
+      "Timestamp": "2023-03-12 16:16:01.78",
+      "TargetIP": "185.175.0.8",
+      "Attack": "Stacked Modbus Frames - Complete",
+      "TransactionID": "1048575"
+    },
+    {
+      "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+      "line": 31,
+      "Timestamp": "2023-03-12 16:16:01.781",
+      "TargetIP": "185.175.0.8",
+      "Attack": "Stacked Modbus Frames - Complete",
+      "TransactionID": "1048575"
+    },
+    {
+      "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+      "line": 33,
+      "Timestamp": "2023-03-12 16:16:01.781",
+      "TargetIP": "185.175.0.8",
+      "Attack": "Stacked Modbus Frames - Complete",
+      "TransactionID": "1048575"
+    },
+    {
+      "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+      "line": 8301,
+      "Timestamp": "2023-03-12 16:40:54.651",
+      "TargetIP": "185.175.0.5",
+      "Attack": "Query flooding. Complete",
+      "TransactionID": "1048575"
+    },
+    {
+      "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+      "line": 8303,
+      "Timestamp": "2023-03-12 16:40:54.652",
+      "TargetIP": "185.175.0.5",
+      "Attack": "Query flooding. Complete",
+      "TransactionID": "1048575"
+    },
+    {
+      "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+      "line": 8305,
+      "Timestamp": "2023-03-12 16:40:54.654",
+      "TargetIP": "185.175.0.5",
+      "Attack": "Query flooding. Complete",
+      "TransactionID": "1048575"
+    },
+    {
+      "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+      "line": 8307,
+      "Timestamp": "2023-03-12 16:40:54.661",
+      "TargetIP": "185.175.0.5",
+      "Attack": "Query flooding. Complete",
+      "TransactionID": "1048575"
+    }
+  ],
+  "logs": [
+    {
+      "path": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+      "bytes": 4995,
+      "sha256": "aa59f2357773f6d194aa480cbef34cb6a3b353a770f722954f8fe058e68cd5ca",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 66,
+      "attack_counts": {
+        "Baseline Replay: In position": 29,
+        "Starting Payload Injection... ": 4,
+        "Payload Injection.. Complete": 4,
+        "Delay Response Attack: Delaying response by 8267 milliseconds": 1,
+        "Delay response: Sending response to client": 4,
+        "False Data Injection Attack": 2,
+        "Starting Query flooding.. ": 4,
+        "Starting Length manipulation... ": 5,
+        "Length manipulation.. Complete": 5,
+        "Delay Response Attack: Delaying response by 7734 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 9390 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 5439 milliseconds": 1,
+        "Query flooding.. Complete": 1,
+        "Starting Frame Stacking... ": 2,
+        "Frame Stacking... Complete": 2
+      },
+      "family_counts": {
+        "baseline_replay": 29,
+        "loading_payloads": 8,
+        "delay_response": 8,
+        "false_data_injection": 2,
+        "query_flooding": 5,
+        "length_manipulation": 10,
+        "stacking_frames": 4
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 66
+      },
+      "fractional_digits_counts": {
+        "3": 57,
+        "2": 8,
+        "1": 1
+      },
+      "datetime_min_verbatim": "2023-03-23 05:09:22.829",
+      "datetime_max_verbatim": "2023-03-23 23:33:37.935",
+      "targets": {
+        "185.175.0.2": 66
+      },
+      "transaction_id_status": {
+        "integer_uint16": 66
+      },
+      "duplicate_exact_event_excess": 0,
+      "unique_event_signatures": 66,
+      "complete_event_rows": 12,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-03-23 05:09:22.829",
+          "TargetIP": "185.175.0.2",
+          "Attack": "Baseline Replay: In position",
+          "TransactionID": "1"
+        },
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+          "line": 3,
+          "Timestamp": "2023-03-23 05:30:24.984",
+          "TargetIP": "185.175.0.2",
+          "Attack": "Baseline Replay: In position",
+          "TransactionID": "1238"
+        },
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-23-2023\\03-23-2023-1.csv",
+          "line": 4,
+          "Timestamp": "2023-03-23 05:51:26.274",
+          "TargetIP": "185.175.0.2",
+          "Attack": "Baseline Replay: In position",
+          "TransactionID": "2479"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-ied\\attack logs\\03-24-2023\\03-24-2023-1.csv",
+      "bytes": 8622,
+      "sha256": "b51b53aa724c2c1994a494b02d556da93d73edf89868330782efe7f1341a3bfc",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 113,
+      "attack_counts": {
+        "Starting Payload Injection... ": 10,
+        "Payload Injection.. Complete": 10,
+        "Delay Response Attack: Delaying response by 7481 milliseconds": 1,
+        "Delay response: Sending response to client": 9,
+        "Starting Query flooding.. ": 15,
+        "Starting Frame Stacking... ": 13,
+        "Frame Stacking... Complete": 13,
+        "Delay Response Attack: Delaying response by 6610 milliseconds": 1,
+        "Starting Length manipulation... ": 7,
+        "Length manipulation.. Complete": 7,
+        "False Data Injection Attack": 9,
+        "Baseline Replay: In position": 4,
+        "Query flooding.. Complete": 7,
+        "Delay Response Attack: Delaying response by 5928 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 5077 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 9242 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 7564 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 6104 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 5305 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 9300 milliseconds": 1
+      },
+      "family_counts": {
+        "loading_payloads": 20,
+        "delay_response": 18,
+        "query_flooding": 22,
+        "stacking_frames": 26,
+        "length_manipulation": 14,
+        "false_data_injection": 9,
+        "baseline_replay": 4
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 113
+      },
+      "fractional_digits_counts": {
+        "3": 101,
+        "2": 12
+      },
+      "datetime_min_verbatim": "2023-03-24 00:02:42.164",
+      "datetime_max_verbatim": "2023-03-24 23:45:27.338",
+      "targets": {
+        "185.175.0.2": 113
+      },
+      "transaction_id_status": {
+        "integer_uint16": 113
+      },
+      "duplicate_exact_event_excess": 0,
+      "unique_event_signatures": 113,
+      "complete_event_rows": 37,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-24-2023\\03-24-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-03-24 00:02:42.164",
+          "TargetIP": "185.175.0.2",
+          "Attack": "Starting Payload Injection... ",
+          "TransactionID": "34313"
+        },
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-24-2023\\03-24-2023-1.csv",
+          "line": 3,
+          "Timestamp": "2023-03-24 00:02:42.177",
+          "TargetIP": "185.175.0.2",
+          "Attack": "Payload Injection.. Complete",
+          "TransactionID": "34313"
+        },
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-24-2023\\03-24-2023-1.csv",
+          "line": 4,
+          "Timestamp": "2023-03-24 00:24:42.861",
+          "TargetIP": "185.175.0.2",
+          "Attack": "Delay Response Attack: Delaying response by 7481 milliseconds",
+          "TransactionID": "35612"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-ied\\attack logs\\03-25-2023\\03-25-2023-1.csv",
+      "bytes": 7757,
+      "sha256": "ee33b29e7dc70a403594acda3e12f2c327c57aa739a914456cf43e1adc557bf2",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 102,
+      "attack_counts": {
+        "Starting Frame Stacking... ": 8,
+        "Frame Stacking... Complete": 8,
+        "False Data Injection Attack": 8,
+        "Starting Query flooding.. ": 11,
+        "Starting Length manipulation... ": 16,
+        "Length manipulation.. Complete": 16,
+        "Baseline Replay: In position": 13,
+        "Delay Response Attack: Delaying response by 8633 milliseconds": 1,
+        "Delay response: Sending response to client": 6,
+        "Starting Payload Injection... ": 4,
+        "Payload Injection.. Complete": 4,
+        "Delay Response Attack: Delaying response by 9645 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 6713 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 8280 milliseconds": 1,
+        "Query flooding.. Complete": 2,
+        "Delay Response Attack: Delaying response by 5245 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 8890 milliseconds": 1
+      },
+      "family_counts": {
+        "stacking_frames": 16,
+        "false_data_injection": 8,
+        "query_flooding": 13,
+        "length_manipulation": 32,
+        "baseline_replay": 13,
+        "delay_response": 12,
+        "loading_payloads": 8
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 102
+      },
+      "fractional_digits_counts": {
+        "3": 90,
+        "2": 9,
+        "1": 3
+      },
+      "datetime_min_verbatim": "2023-03-25 00:08:29.948",
+      "datetime_max_verbatim": "2023-03-25 23:46:25.1",
+      "targets": {
+        "185.175.0.2": 102
+      },
+      "transaction_id_status": {
+        "integer_uint16": 102
+      },
+      "duplicate_exact_event_excess": 0,
+      "unique_event_signatures": 102,
+      "complete_event_rows": 30,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-25-2023\\03-25-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-03-25 00:08:29.948",
+          "TargetIP": "185.175.0.2",
+          "Attack": "Starting Frame Stacking... ",
+          "TransactionID": "54048"
+        },
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-25-2023\\03-25-2023-1.csv",
+          "line": 3,
+          "Timestamp": "2023-03-25 00:08:29.95",
+          "TargetIP": "185.175.0.2",
+          "Attack": "Frame Stacking... Complete",
+          "TransactionID": "54048"
+        },
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-25-2023\\03-25-2023-1.csv",
+          "line": 4,
+          "Timestamp": "2023-03-25 00:35:31.738",
+          "TargetIP": "185.175.0.2",
+          "Attack": "False Data Injection Attack",
+          "TransactionID": "55640"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-ied\\attack logs\\03-26-2023\\03-26-2023-1.csv",
+      "bytes": 8530,
+      "sha256": "33f09fd9325652066bcf5edf8607ab30b36862145c17704d2d3b9770a155824b",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 109,
+      "attack_counts": {
+        "Starting Query flooding.. ": 10,
+        "Query flooding.. Complete": 6,
+        "Baseline Replay: In position": 13,
+        "False Data Injection Attack": 6,
+        "Delay Response Attack: Delaying response by 5508 milliseconds": 1,
+        "Delay response: Sending response to client": 13,
+        "Starting Length manipulation... ": 9,
+        "Length manipulation.. Complete": 9,
+        "Starting Payload Injection... ": 7,
+        "Payload Injection.. Complete": 7,
+        "Starting Frame Stacking... ": 8,
+        "Frame Stacking... Complete": 8,
+        "Delay Response Attack: Delaying response by 6865 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 9702 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 9017 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 9525 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 7038 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 8344 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 9478 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 7101 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 5421 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 7288 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 9755 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 5561 milliseconds": 1
+      },
+      "family_counts": {
+        "query_flooding": 16,
+        "baseline_replay": 13,
+        "false_data_injection": 6,
+        "delay_response": 26,
+        "length_manipulation": 18,
+        "loading_payloads": 14,
+        "stacking_frames": 16
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 109
+      },
+      "fractional_digits_counts": {
+        "3": 93,
+        "2": 14,
+        "1": 2
+      },
+      "datetime_min_verbatim": "2023-03-26 00:13:27.217",
+      "datetime_max_verbatim": "2023-03-26 23:46:02.891",
+      "targets": {
+        "185.175.0.2": 109
+      },
+      "transaction_id_status": {
+        "integer_uint16": 109
+      },
+      "duplicate_exact_event_excess": 0,
+      "unique_event_signatures": 109,
+      "complete_event_rows": 30,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-26-2023\\03-26-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-03-26 00:13:27.217",
+          "TargetIP": "185.175.0.2",
+          "Attack": "Starting Query flooding.. ",
+          "TransactionID": "8356"
+        },
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-26-2023\\03-26-2023-1.csv",
+          "line": 3,
+          "Timestamp": "2023-03-26 00:13:27.221",
+          "TargetIP": "185.175.0.2",
+          "Attack": "Query flooding.. Complete",
+          "TransactionID": "8356"
+        },
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-26-2023\\03-26-2023-1.csv",
+          "line": 4,
+          "Timestamp": "2023-03-26 00:33:30.785",
+          "TargetIP": "185.175.0.2",
+          "Attack": "Baseline Replay: In position",
+          "TransactionID": "9537"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-ied\\attack logs\\03-27-2023\\03-27-2023-1.csv",
+      "bytes": 8105,
+      "sha256": "a578348cc65f205320feb67a683ecbb8747eb534b7031de9cd2a67b9ad933263",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 109,
+      "attack_counts": {
+        "Starting Frame Stacking... ": 14,
+        "Frame Stacking... Complete": 14,
+        "Starting Payload Injection... ": 10,
+        "Payload Injection.. Complete": 10,
+        "Starting Length manipulation... ": 13,
+        "Length manipulation.. Complete": 13,
+        "Delay Response Attack: Delaying response by 6146 milliseconds": 1,
+        "Delay response: Sending response to client": 3,
+        "Starting Query flooding.. ": 7,
+        "Query flooding.. Complete": 4,
+        "False Data Injection Attack": 11,
+        "Baseline Replay: In position": 7,
+        "Delay Response Attack: Delaying response by 9190 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 8332 milliseconds": 1
+      },
+      "family_counts": {
+        "stacking_frames": 28,
+        "loading_payloads": 20,
+        "length_manipulation": 26,
+        "delay_response": 6,
+        "query_flooding": 11,
+        "false_data_injection": 11,
+        "baseline_replay": 7
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 109
+      },
+      "fractional_digits_counts": {
+        "3": 98,
+        "2": 9,
+        "1": 2
+      },
+      "datetime_min_verbatim": "2023-03-27 00:03:02.264",
+      "datetime_max_verbatim": "2023-03-27 23:51:48.883",
+      "targets": {
+        "185.175.0.2": 109
+      },
+      "transaction_id_status": {
+        "integer_uint16": 109
+      },
+      "duplicate_exact_event_excess": 0,
+      "unique_event_signatures": 109,
+      "complete_event_rows": 41,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-27-2023\\03-27-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-03-27 00:03:02.264",
+          "TargetIP": "185.175.0.2",
+          "Attack": "Starting Frame Stacking... ",
+          "TransactionID": "27291"
+        },
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-27-2023\\03-27-2023-1.csv",
+          "line": 3,
+          "Timestamp": "2023-03-27 00:03:02.266",
+          "TargetIP": "185.175.0.2",
+          "Attack": "Frame Stacking... Complete",
+          "TransactionID": "27291"
+        },
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-27-2023\\03-27-2023-1.csv",
+          "line": 4,
+          "Timestamp": "2023-03-27 00:18:04.794",
+          "TargetIP": "185.175.0.2",
+          "Attack": "Starting Frame Stacking... ",
+          "TransactionID": "28176"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-ied\\attack logs\\03-28-2023\\03-28-2023-1.csv",
+      "bytes": 8203,
+      "sha256": "92e31afbf3a6e44a135b1145542800bf013ce8e9230312782feb3699d3b7fce3",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 106,
+      "attack_counts": {
+        "Starting Length manipulation... ": 12,
+        "Length manipulation.. Complete": 12,
+        "Delay Response Attack: Delaying response by 7209 milliseconds": 1,
+        "Delay response: Sending response to client": 10,
+        "Baseline Replay: In position": 9,
+        "Starting Query flooding.. ": 10,
+        "Query flooding.. Complete": 6,
+        "Delay Response Attack: Delaying response by 6291 milliseconds": 1,
+        "False Data Injection Attack": 11,
+        "Starting Payload Injection... ": 6,
+        "Payload Injection.. Complete": 6,
+        "Starting Frame Stacking... ": 7,
+        "Frame Stacking... Complete": 7,
+        "Delay Response Attack: Delaying response by 5149 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 6438 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 6743 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 7056 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 7167 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 9609 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 6203 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 5439 milliseconds": 1
+      },
+      "family_counts": {
+        "length_manipulation": 24,
+        "delay_response": 20,
+        "baseline_replay": 9,
+        "query_flooding": 16,
+        "false_data_injection": 11,
+        "loading_payloads": 12,
+        "stacking_frames": 14
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 106
+      },
+      "fractional_digits_counts": {
+        "3": 98,
+        "2": 8
+      },
+      "datetime_min_verbatim": "2023-03-28 00:18:49.775",
+      "datetime_max_verbatim": "2023-03-28 23:46:27.03",
+      "targets": {
+        "185.175.0.2": 106
+      },
+      "transaction_id_status": {
+        "integer_uint16": 106
+      },
+      "duplicate_exact_event_excess": 0,
+      "unique_event_signatures": 106,
+      "complete_event_rows": 31,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-28-2023\\03-28-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-03-28 00:18:49.775",
+          "TargetIP": "185.175.0.2",
+          "Attack": "Starting Length manipulation... ",
+          "TransactionID": "47439"
+        },
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-28-2023\\03-28-2023-1.csv",
+          "line": 3,
+          "Timestamp": "2023-03-28 00:18:49.782",
+          "TargetIP": "185.175.0.2",
+          "Attack": "Length manipulation.. Complete",
+          "TransactionID": "47439"
+        },
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-28-2023\\03-28-2023-1.csv",
+          "line": 4,
+          "Timestamp": "2023-03-28 00:35:51.986",
+          "TargetIP": "185.175.0.2",
+          "Attack": "Starting Length manipulation... ",
+          "TransactionID": "48431"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-ied\\attack logs\\03-29-2023\\03-29-2023-1.csv",
+      "bytes": 5438,
+      "sha256": "2d5b18312c060bda56e4ea5dcf89f94fc8b80104b590fb646e7abff0a6557159",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 71,
+      "attack_counts": {
+        "Starting Payload Injection... ": 4,
+        "Payload Injection.. Complete": 4,
+        "Starting Length manipulation... ": 9,
+        "Length manipulation.. Complete": 9,
+        "Baseline Replay: In position": 8,
+        "False Data Injection Attack": 7,
+        "Delay Response Attack: Delaying response by 8622 milliseconds": 1,
+        "Delay response: Sending response to client": 5,
+        "Starting Query flooding.. ": 6,
+        "Query flooding.. Complete": 2,
+        "Delay Response Attack: Delaying response by 8634 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 5665 milliseconds": 1,
+        "Starting Frame Stacking... ": 6,
+        "Frame Stacking... Complete": 6,
+        "Delay Response Attack: Delaying response by 6210 milliseconds": 1,
+        "Delay Response Attack: Delaying response by 9461 milliseconds": 1
+      },
+      "family_counts": {
+        "loading_payloads": 8,
+        "length_manipulation": 18,
+        "baseline_replay": 8,
+        "false_data_injection": 7,
+        "delay_response": 10,
+        "query_flooding": 8,
+        "stacking_frames": 12
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 71
+      },
+      "fractional_digits_counts": {
+        "2": 5,
+        "3": 66
+      },
+      "datetime_min_verbatim": "2023-03-29 00:14:29.41",
+      "datetime_max_verbatim": "2023-03-29 16:06:25.02",
+      "targets": {
+        "185.175.0.2": 71
+      },
+      "transaction_id_status": {
+        "integer_uint16": 71
+      },
+      "duplicate_exact_event_excess": 0,
+      "unique_event_signatures": 71,
+      "complete_event_rows": 21,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-29-2023\\03-29-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-03-29 00:14:29.41",
+          "TargetIP": "185.175.0.2",
+          "Attack": "Starting Payload Injection... ",
+          "TransactionID": "895"
+        },
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-29-2023\\03-29-2023-1.csv",
+          "line": 3,
+          "Timestamp": "2023-03-29 00:14:29.417",
+          "TargetIP": "185.175.0.2",
+          "Attack": "Payload Injection.. Complete",
+          "TransactionID": "895"
+        },
+        {
+          "file": "attack\\compromised-ied\\attack logs\\03-29-2023\\03-29-2023-1.csv",
+          "line": 4,
+          "Timestamp": "2023-03-29 00:35:32.492",
+          "TargetIP": "185.175.0.2",
+          "Attack": "Starting Length manipulation... ",
+          "TransactionID": "2132"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+      "bytes": 8494334,
+      "sha256": "921e4ad05136fad9a03a93e39a66582fb3d27f3698a5c23841d5429197072acb",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 107770,
+      "attack_counts": {
+        "Brute force or specific coil. Address: 13": 11,
+        "Brute force or specific - Complete": 53658,
+        "Brute force or specific coil. Address: 14": 11,
+        "Brute force or specific coil. Address: 8": 11,
+        "Replay": 55,
+        "Replay - Complete": 55,
+        "Query Flooding": 32,
+        "Query flooding. Complete": 32,
+        "Stacked Modbus Frames": 44,
+        "Stacked Modbus Frames - Complete": 44,
+        "Brute force or specific coil. Address: 1": 53625,
+        "Length manipulation": 52,
+        "Length manipulation - Complete": 52,
+        "Payload injection": 20,
+        "Payload injection - Complete": 20,
+        "Recon. Range: 2000": 12,
+        "Recon. Complete": 24,
+        "Recon. Range: 125": 12
+      },
+      "family_counts": {
+        "brute_force_or_specific_coil": 107316,
+        "baseline_replay": 110,
+        "query_flooding": 64,
+        "stacking_frames": 88,
+        "length_manipulation": 104,
+        "loading_payloads": 40,
+        "reconnaissance": 48
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 107770
+      },
+      "fractional_digits_counts": {
+        "3": 96488,
+        "2": 10199,
+        "1": 1083
+      },
+      "datetime_min_verbatim": "2023-03-12 16:12:27.761",
+      "datetime_max_verbatim": "2023-03-12 23:56:07.515",
+      "targets": {
+        "185.175.0.4": 33192,
+        "185.175.0.5": 24934,
+        "185.175.0.8": 49644
+      },
+      "transaction_id_status": {
+        "integer_uint16": 107598,
+        "integer_outside_uint16": 172
+      },
+      "duplicate_exact_event_excess": 68285,
+      "unique_event_signatures": 39485,
+      "complete_event_rows": 53885,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-03-12 16:12:27.761",
+          "TargetIP": "185.175.0.4",
+          "Attack": "Brute force or specific coil. Address: 13",
+          "TransactionID": "5"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+          "line": 3,
+          "Timestamp": "2023-03-12 16:12:27.773",
+          "TargetIP": "185.175.0.4",
+          "Attack": "Brute force or specific - Complete",
+          "TransactionID": "65535"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-1.csv",
+          "line": 4,
+          "Timestamp": "2023-03-12 16:12:27.774",
+          "TargetIP": "185.175.0.4",
+          "Attack": "Brute force or specific coil. Address: 14",
+          "TransactionID": "5"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-2.csv",
+      "bytes": 2642769,
+      "sha256": "7b3dc25bb699015aefc8c3bb26197518e0b98fd82ef2079b40ca2d7f7e84b237",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 33566,
+      "attack_counts": {
+        "Query Flooding": 16,
+        "Query flooding. Complete": 16,
+        "Brute force or specific coil. Address: 1": 16607,
+        "Brute force or specific - Complete": 16637,
+        "Payload injection": 24,
+        "Payload injection - Complete": 24,
+        "Recon. Range: 2000": 12,
+        "Recon. Complete": 24,
+        "Recon. Range: 125": 12,
+        "Stacked Modbus Frames": 20,
+        "Stacked Modbus Frames - Complete": 20,
+        "Brute force or specific coil. Address: 13": 10,
+        "Brute force or specific coil. Address: 14": 10,
+        "Brute force or specific coil. Address: 8": 10,
+        "Replay": 50,
+        "Replay - Complete": 50,
+        "Length manipulation": 12,
+        "Length manipulation - Complete": 12
+      },
+      "family_counts": {
+        "query_flooding": 32,
+        "brute_force_or_specific_coil": 33274,
+        "loading_payloads": 48,
+        "reconnaissance": 48,
+        "stacking_frames": 40,
+        "baseline_replay": 100,
+        "length_manipulation": 24
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 33566
+      },
+      "fractional_digits_counts": {
+        "3": 30036,
+        "2": 3201,
+        "1": 329
+      },
+      "datetime_min_verbatim": "2023-03-13 00:12:48.849",
+      "datetime_max_verbatim": "2023-03-13 13:44:57.303",
+      "targets": {
+        "185.175.0.4": 33566
+      },
+      "transaction_id_status": {
+        "integer_uint16": 33470,
+        "integer_outside_uint16": 96
+      },
+      "duplicate_exact_event_excess": 22275,
+      "unique_event_signatures": 11291,
+      "complete_event_rows": 16783,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-2.csv",
+          "line": 2,
+          "Timestamp": "2023-03-13 00:12:48.849",
+          "TargetIP": "185.175.0.4",
+          "Attack": "Query Flooding",
+          "TransactionID": "0"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-2.csv",
+          "line": 3,
+          "Timestamp": "2023-03-13 00:12:48.863",
+          "TargetIP": "185.175.0.4",
+          "Attack": "Query flooding. Complete",
+          "TransactionID": "1048575"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-2.csv",
+          "line": 4,
+          "Timestamp": "2023-03-13 00:12:48.863",
+          "TargetIP": "185.175.0.4",
+          "Attack": "Query Flooding",
+          "TransactionID": "0"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-3.csv",
+      "bytes": 3278226,
+      "sha256": "b8a9718c510115b6564962dd03bfd0abec7d12e0fd5ddae6a2f6ee0a10922ae3",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 41618,
+      "attack_counts": {
+        "Recon. Range: 2000": 8,
+        "Recon. Complete": 16,
+        "Recon. Range: 125": 8,
+        "Brute force or specific coil. Address: 13": 9,
+        "Brute force or specific - Complete": 20652,
+        "Brute force or specific coil. Address: 14": 9,
+        "Brute force or specific coil. Address: 8": 9,
+        "Replay": 45,
+        "Replay - Complete": 45,
+        "Length manipulation": 24,
+        "Length manipulation - Complete": 24,
+        "Payload injection": 24,
+        "Payload injection - Complete": 24,
+        "Stacked Modbus Frames": 32,
+        "Stacked Modbus Frames - Complete": 32,
+        "Brute force or specific coil. Address: 1": 20625,
+        "Query Flooding": 16,
+        "Query flooding. Complete": 16
+      },
+      "family_counts": {
+        "reconnaissance": 32,
+        "brute_force_or_specific_coil": 41304,
+        "baseline_replay": 90,
+        "length_manipulation": 48,
+        "loading_payloads": 48,
+        "stacking_frames": 64,
+        "query_flooding": 32
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 41618
+      },
+      "fractional_digits_counts": {
+        "3": 37452,
+        "2": 3777,
+        "1": 389
+      },
+      "datetime_min_verbatim": "2023-03-13 00:19:07.516",
+      "datetime_max_verbatim": "2023-03-13 15:34:23.082",
+      "targets": {
+        "185.175.0.8": 41618
+      },
+      "transaction_id_status": {
+        "integer_uint16": 41506,
+        "integer_outside_uint16": 112
+      },
+      "duplicate_exact_event_excess": 28257,
+      "unique_event_signatures": 13361,
+      "complete_event_rows": 20809,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-3.csv",
+          "line": 2,
+          "Timestamp": "2023-03-13 00:19:07.516",
+          "TargetIP": "185.175.0.8",
+          "Attack": "Recon. Range: 2000",
+          "TransactionID": "0"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-3.csv",
+          "line": 3,
+          "Timestamp": "2023-03-13 00:19:07.54",
+          "TargetIP": "185.175.0.8",
+          "Attack": "Recon. Complete",
+          "TransactionID": "1048575"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-12-2023\\03-12-2023-3.csv",
+          "line": 4,
+          "Timestamp": "2023-03-13 00:19:07.54",
+          "TargetIP": "185.175.0.8",
+          "Attack": "Recon. Range: 2000",
+          "TransactionID": "0"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-13-2023\\03-13-2023-1.csv",
+      "bytes": 8357838,
+      "sha256": "10ab69940a08611527711872e7c1e946240402c762c9ca10d4fbff4cdc99d45a",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 106092,
+      "attack_counts": {
+        "Recon. Range: 2000": 36,
+        "Recon. Complete": 72,
+        "Recon. Range: 125": 36,
+        "Payload injection": 64,
+        "Payload injection - Complete": 64,
+        "Brute force or specific coil. Address: 1": 52640,
+        "Brute force or specific - Complete": 52679,
+        "Length manipulation": 64,
+        "Length manipulation - Complete": 64,
+        "Stacked Modbus Frames": 52,
+        "Stacked Modbus Frames - Complete": 52,
+        "Query Flooding": 52,
+        "Query flooding. Complete": 48,
+        "Brute force or specific coil. Address: 13": 13,
+        "Brute force or specific coil. Address: 14": 13,
+        "Brute force or specific coil. Address: 8": 13,
+        "Replay": 65,
+        "Replay - Complete": 65
+      },
+      "family_counts": {
+        "reconnaissance": 144,
+        "loading_payloads": 128,
+        "brute_force_or_specific_coil": 105358,
+        "length_manipulation": 128,
+        "stacking_frames": 104,
+        "query_flooding": 100,
+        "baseline_replay": 130
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 106092
+      },
+      "fractional_digits_counts": {
+        "3": 95411,
+        "2": 9685,
+        "1": 996
+      },
+      "datetime_min_verbatim": "2023-03-13 00:21:18.041",
+      "datetime_max_verbatim": "2023-03-13 23:57:07.794",
+      "targets": {
+        "185.175.0.5": 74762,
+        "185.175.0.4": 6445,
+        "185.175.0.8": 24885
+      },
+      "transaction_id_status": {
+        "integer_uint16": 105792,
+        "integer_outside_uint16": 300
+      },
+      "duplicate_exact_event_excess": 62662,
+      "unique_event_signatures": 43430,
+      "complete_event_rows": 53044,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-13-2023\\03-13-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-03-13 00:21:18.041",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Recon. Range: 2000",
+          "TransactionID": "0"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-13-2023\\03-13-2023-1.csv",
+          "line": 3,
+          "Timestamp": "2023-03-13 00:21:18.053",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Recon. Complete",
+          "TransactionID": "1048575"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-13-2023\\03-13-2023-1.csv",
+          "line": 4,
+          "Timestamp": "2023-03-13 00:21:18.054",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Recon. Range: 2000",
+          "TransactionID": "0"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-13-2023\\03-13-2023-2.csv",
+      "bytes": 3921348,
+      "sha256": "070a980c1ab22de6f9d92fab9e0b9ab949eb26c38e1cbe7c8e0948a359e60b1b",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 49776,
+      "attack_counts": {
+        "Stacked Modbus Frames": 24,
+        "Stacked Modbus Frames - Complete": 24,
+        "Recon. Range: 2000": 19,
+        "Recon. Complete": 37,
+        "Recon. Range: 125": 18,
+        "Brute force or specific coil. Address: 1": 24712,
+        "Brute force or specific - Complete": 24736,
+        "Brute force or specific coil. Address: 13": 8,
+        "Brute force or specific coil. Address: 14": 8,
+        "Brute force or specific coil. Address: 8": 8,
+        "Replay": 40,
+        "Replay - Complete": 40,
+        "Length manipulation": 4,
+        "Length manipulation - Complete": 4,
+        "Payload injection": 20,
+        "Payload injection - Complete": 20,
+        "Query Flooding": 28,
+        "Query flooding. Complete": 26
+      },
+      "family_counts": {
+        "stacking_frames": 48,
+        "reconnaissance": 74,
+        "brute_force_or_specific_coil": 49472,
+        "baseline_replay": 80,
+        "length_manipulation": 8,
+        "loading_payloads": 40,
+        "query_flooding": 54
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 49776
+      },
+      "fractional_digits_counts": {
+        "3": 44651,
+        "2": 4601,
+        "1": 524
+      },
+      "datetime_min_verbatim": "2023-03-14 00:06:32.712",
+      "datetime_max_verbatim": "2023-03-14 15:18:27.256",
+      "targets": {
+        "185.175.0.8": 49774,
+        "185.175.0.4": 2
+      },
+      "transaction_id_status": {
+        "integer_uint16": 49665,
+        "integer_outside_uint16": 111
+      },
+      "duplicate_exact_event_excess": 33244,
+      "unique_event_signatures": 16532,
+      "complete_event_rows": 24887,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-13-2023\\03-13-2023-2.csv",
+          "line": 2,
+          "Timestamp": "2023-03-14 00:06:32.712",
+          "TargetIP": "185.175.0.8",
+          "Attack": "Stacked Modbus Frames",
+          "TransactionID": "0"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-13-2023\\03-13-2023-2.csv",
+          "line": 3,
+          "Timestamp": "2023-03-14 00:06:32.723",
+          "TargetIP": "185.175.0.8",
+          "Attack": "Stacked Modbus Frames - Complete",
+          "TransactionID": "1048575"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-13-2023\\03-13-2023-2.csv",
+          "line": 4,
+          "Timestamp": "2023-03-14 00:06:32.723",
+          "TargetIP": "185.175.0.8",
+          "Attack": "Stacked Modbus Frames",
+          "TransactionID": "0"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-14-2023\\03-14-2023-1.csv",
+      "bytes": 11115046,
+      "sha256": "11e59862c161424d812f766505c271fbcb05decc1db2213eb171528569f8d122",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 141042,
+      "attack_counts": {
+        "Length manipulation": 56,
+        "Length manipulation - Complete": 56,
+        "Stacked Modbus Frames": 44,
+        "Stacked Modbus Frames - Complete": 44,
+        "Query Flooding": 76,
+        "Query flooding. Complete": 76,
+        "Brute force or specific coil. Address: 1": 70125,
+        "Brute force or specific - Complete": 70161,
+        "Brute force or specific coil. Address: 13": 12,
+        "Brute force or specific coil. Address: 14": 12,
+        "Brute force or specific coil. Address: 8": 12,
+        "Replay": 60,
+        "Replay - Complete": 60,
+        "Recon. Range: 2000": 36,
+        "Recon. Complete": 72,
+        "Recon. Range: 125": 36,
+        "Payload injection": 52,
+        "Payload injection - Complete": 52
+      },
+      "family_counts": {
+        "length_manipulation": 112,
+        "stacking_frames": 88,
+        "query_flooding": 152,
+        "brute_force_or_specific_coil": 140322,
+        "baseline_replay": 120,
+        "reconnaissance": 144,
+        "loading_payloads": 104
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 141042
+      },
+      "fractional_digits_counts": {
+        "3": 126757,
+        "2": 13010,
+        "1": 1275
+      },
+      "datetime_min_verbatim": "2023-03-14 00:26:07.795",
+      "datetime_max_verbatim": "2023-03-14 23:42:42.578",
+      "targets": {
+        "185.175.0.5": 91246,
+        "185.175.0.4": 33280,
+        "185.175.0.8": 16516
+      },
+      "transaction_id_status": {
+        "integer_uint16": 140742,
+        "integer_outside_uint16": 300
+      },
+      "duplicate_exact_event_excess": 85031,
+      "unique_event_signatures": 56011,
+      "complete_event_rows": 70521,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-14-2023\\03-14-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-03-14 00:26:07.795",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Length manipulation",
+          "TransactionID": "0"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-14-2023\\03-14-2023-1.csv",
+          "line": 3,
+          "Timestamp": "2023-03-14 00:26:07.808",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Length manipulation - Complete",
+          "TransactionID": "1048575"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-14-2023\\03-14-2023-1.csv",
+          "line": 4,
+          "Timestamp": "2023-03-14 00:26:07.808",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Length manipulation",
+          "TransactionID": "0"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-14-2023\\03-14-2023-2.csv",
+      "bytes": 7845092,
+      "sha256": "a2051f588d19a0a6c8513f671cfd9c4d0c239e21acd73c3d660d8c8710f1af66",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 99536,
+      "attack_counts": {
+        "Brute force or specific coil. Address: 1": 49500,
+        "Brute force or specific - Complete": 49536,
+        "Stacked Modbus Frames": 40,
+        "Stacked Modbus Frames - Complete": 40,
+        "Query Flooding": 44,
+        "Query flooding. Complete": 44,
+        "Brute force or specific coil. Address: 13": 12,
+        "Brute force or specific coil. Address: 14": 12,
+        "Brute force or specific coil. Address: 8": 12,
+        "Replay": 60,
+        "Replay - Complete": 60,
+        "Recon. Range: 2000": 8,
+        "Recon. Complete": 16,
+        "Recon. Range: 125": 8,
+        "Length manipulation": 24,
+        "Length manipulation - Complete": 24,
+        "Payload injection": 48,
+        "Payload injection - Complete": 48
+      },
+      "family_counts": {
+        "brute_force_or_specific_coil": 99072,
+        "stacking_frames": 80,
+        "query_flooding": 88,
+        "baseline_replay": 120,
+        "reconnaissance": 32,
+        "length_manipulation": 48,
+        "loading_payloads": 96
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 99536
+      },
+      "fractional_digits_counts": {
+        "3": 89694,
+        "2": 8924,
+        "1": 918
+      },
+      "datetime_min_verbatim": "2023-03-15 00:00:19.873",
+      "datetime_max_verbatim": "2023-03-15 23:42:01.122",
+      "targets": {
+        "185.175.0.5": 99536
+      },
+      "transaction_id_status": {
+        "integer_uint16": 99364,
+        "integer_outside_uint16": 172
+      },
+      "duplicate_exact_event_excess": 52741,
+      "unique_event_signatures": 46795,
+      "complete_event_rows": 49768,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-14-2023\\03-14-2023-2.csv",
+          "line": 2,
+          "Timestamp": "2023-03-15 00:00:19.873",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Brute force or specific coil. Address: 1",
+          "TransactionID": "5"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-14-2023\\03-14-2023-2.csv",
+          "line": 3,
+          "Timestamp": "2023-03-15 00:00:19.875",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Brute force or specific - Complete",
+          "TransactionID": "65535"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-14-2023\\03-14-2023-2.csv",
+          "line": 4,
+          "Timestamp": "2023-03-15 00:00:19.875",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Brute force or specific coil. Address: 1",
+          "TransactionID": "5"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-14-2023\\03-14-2023-3.csv",
+      "bytes": 2434790,
+      "sha256": "2f77392786da164629e3051bd65fceb1557aa4cfe44571298360fa6ce5a67060",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 30888,
+      "attack_counts": {
+        "Length manipulation": 8,
+        "Length manipulation - Complete": 8,
+        "Brute force or specific coil. Address: 13": 4,
+        "Brute force or specific - Complete": 15388,
+        "Brute force or specific coil. Address: 14": 4,
+        "Brute force or specific coil. Address: 8": 4,
+        "Replay": 20,
+        "Replay - Complete": 20,
+        "Stacked Modbus Frames": 8,
+        "Stacked Modbus Frames - Complete": 8,
+        "Payload injection": 16,
+        "Payload injection - Complete": 16,
+        "Brute force or specific coil. Address: 1": 15376,
+        "Recon. Range: 2000": 2,
+        "Recon. Complete": 4,
+        "Recon. Range: 125": 2
+      },
+      "family_counts": {
+        "length_manipulation": 16,
+        "brute_force_or_specific_coil": 30776,
+        "baseline_replay": 40,
+        "stacking_frames": 16,
+        "loading_payloads": 32,
+        "reconnaissance": 8
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 30888
+      },
+      "fractional_digits_counts": {
+        "3": 27675,
+        "2": 2902,
+        "1": 311
+      },
+      "datetime_min_verbatim": "2023-03-15 00:01:42.579",
+      "datetime_max_verbatim": "2023-03-15 07:03:34.797",
+      "targets": {
+        "185.175.0.8": 30888
+      },
+      "transaction_id_status": {
+        "integer_uint16": 30852,
+        "integer_outside_uint16": 36
+      },
+      "duplicate_exact_event_excess": 19279,
+      "unique_event_signatures": 11609,
+      "complete_event_rows": 15444,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-14-2023\\03-14-2023-3.csv",
+          "line": 2,
+          "Timestamp": "2023-03-15 00:01:42.579",
+          "TargetIP": "185.175.0.8",
+          "Attack": "Length manipulation",
+          "TransactionID": "0"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-14-2023\\03-14-2023-3.csv",
+          "line": 3,
+          "Timestamp": "2023-03-15 00:01:42.604",
+          "TargetIP": "185.175.0.8",
+          "Attack": "Length manipulation - Complete",
+          "TransactionID": "1048575"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-14-2023\\03-14-2023-3.csv",
+          "line": 4,
+          "Timestamp": "2023-03-15 00:01:42.604",
+          "TargetIP": "185.175.0.8",
+          "Attack": "Length manipulation",
+          "TransactionID": "0"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-15-2023\\03-15-2023-1.csv",
+      "bytes": 8027564,
+      "sha256": "0703d796f3e9623d1368cef9b60b23b28f700f6b7517389c52b131292e22fc9c",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 101863,
+      "attack_counts": {
+        "Brute force or specific coil. Address: 13": 10,
+        "Brute force or specific - Complete": 50663,
+        "Brute force or specific coil. Address: 14": 10,
+        "Brute force or specific coil. Address: 8": 10,
+        "Replay": 50,
+        "Replay - Complete": 50,
+        "Brute force or specific coil. Address: 1": 50633,
+        "Query Flooding": 44,
+        "Query flooding. Complete": 41,
+        "Stacked Modbus Frames": 68,
+        "Stacked Modbus Frames - Complete": 68,
+        "Length manipulation": 44,
+        "Length manipulation - Complete": 44,
+        "Recon. Range: 2000": 20,
+        "Recon. Complete": 40,
+        "Recon. Range: 125": 20,
+        "Payload injection": 24,
+        "Payload injection - Complete": 24
+      },
+      "family_counts": {
+        "brute_force_or_specific_coil": 101326,
+        "baseline_replay": 100,
+        "query_flooding": 85,
+        "stacking_frames": 136,
+        "length_manipulation": 88,
+        "reconnaissance": 80,
+        "loading_payloads": 48
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 101863
+      },
+      "fractional_digits_counts": {
+        "3": 91513,
+        "2": 9378,
+        "1": 972
+      },
+      "datetime_min_verbatim": "2023-03-15 00:05:30.228",
+      "datetime_max_verbatim": "2023-03-15 23:55:02.628",
+      "targets": {
+        "185.175.0.4": 88772,
+        "185.175.0.8": 13091
+      },
+      "transaction_id_status": {
+        "integer_uint16": 101646,
+        "integer_outside_uint16": 217
+      },
+      "duplicate_exact_event_excess": 62814,
+      "unique_event_signatures": 39049,
+      "complete_event_rows": 50930,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-15-2023\\03-15-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-03-15 00:05:30.228",
+          "TargetIP": "185.175.0.4",
+          "Attack": "Brute force or specific coil. Address: 13",
+          "TransactionID": "5"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-15-2023\\03-15-2023-1.csv",
+          "line": 3,
+          "Timestamp": "2023-03-15 00:05:30.242",
+          "TargetIP": "185.175.0.4",
+          "Attack": "Brute force or specific - Complete",
+          "TransactionID": "65535"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-15-2023\\03-15-2023-1.csv",
+          "line": 4,
+          "Timestamp": "2023-03-15 00:05:30.242",
+          "TargetIP": "185.175.0.4",
+          "Attack": "Brute force or specific coil. Address: 14",
+          "TransactionID": "5"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-15-2023\\03-15-2023-2.csv",
+      "bytes": 5892689,
+      "sha256": "9c5f91aa531bb55576a12b92e5b8db4f32327c6ccbb385c88b8375de630dab90",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 74794,
+      "attack_counts": {
+        "Brute force or specific coil. Address: 13": 9,
+        "Brute force or specific - Complete": 37152,
+        "Brute force or specific coil. Address: 14": 9,
+        "Brute force or specific coil. Address: 8": 9,
+        "Replay": 45,
+        "Replay - Complete": 45,
+        "Payload injection": 40,
+        "Payload injection - Complete": 40,
+        "Query Flooding": 44,
+        "Query flooding. Complete": 44,
+        "Length manipulation": 56,
+        "Length manipulation - Complete": 56,
+        "Stacked Modbus Frames": 24,
+        "Stacked Modbus Frames - Complete": 24,
+        "Recon. Range: 2000": 18,
+        "Recon. Complete": 36,
+        "Recon. Range: 125": 18,
+        "Brute force or specific coil. Address: 1": 37125
+      },
+      "family_counts": {
+        "brute_force_or_specific_coil": 74304,
+        "baseline_replay": 90,
+        "loading_payloads": 80,
+        "query_flooding": 88,
+        "length_manipulation": 112,
+        "stacking_frames": 48,
+        "reconnaissance": 72
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 74794
+      },
+      "fractional_digits_counts": {
+        "3": 67267,
+        "2": 6816,
+        "1": 711
+      },
+      "datetime_min_verbatim": "2023-03-16 00:03:01.122",
+      "datetime_max_verbatim": "2023-03-16 23:58:48.029",
+      "targets": {
+        "185.175.0.5": 74794
+      },
+      "transaction_id_status": {
+        "integer_uint16": 74594,
+        "integer_outside_uint16": 200
+      },
+      "duplicate_exact_event_excess": 42516,
+      "unique_event_signatures": 32278,
+      "complete_event_rows": 37397,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-15-2023\\03-15-2023-2.csv",
+          "line": 2,
+          "Timestamp": "2023-03-16 00:03:01.122",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Brute force or specific coil. Address: 13",
+          "TransactionID": "5"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-15-2023\\03-15-2023-2.csv",
+          "line": 3,
+          "Timestamp": "2023-03-16 00:03:01.124",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Brute force or specific - Complete",
+          "TransactionID": "65535"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-15-2023\\03-15-2023-2.csv",
+          "line": 4,
+          "Timestamp": "2023-03-16 00:03:01.125",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Brute force or specific coil. Address: 14",
+          "TransactionID": "5"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-15-2023\\03-15-2023-3.csv",
+      "bytes": 1163722,
+      "sha256": "037ee8b9508094ee4312b09414cc8d0e08ee1aab096dc111e45c2540ff364494",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 14784,
+      "attack_counts": {
+        "Stacked Modbus Frames": 12,
+        "Stacked Modbus Frames - Complete": 12,
+        "Brute force or specific coil. Address: 13": 4,
+        "Brute force or specific - Complete": 7316,
+        "Brute force or specific coil. Address: 14": 4,
+        "Brute force or specific coil. Address: 8": 4,
+        "Replay": 20,
+        "Replay - Complete": 20,
+        "Payload injection": 12,
+        "Payload injection - Complete": 12,
+        "Recon. Range: 2000": 4,
+        "Recon. Complete": 8,
+        "Recon. Range: 125": 4,
+        "Length manipulation": 16,
+        "Length manipulation - Complete": 16,
+        "Query Flooding": 8,
+        "Query flooding. Complete": 8,
+        "Brute force or specific coil. Address: 1": 7304
+      },
+      "family_counts": {
+        "stacking_frames": 24,
+        "brute_force_or_specific_coil": 14632,
+        "baseline_replay": 40,
+        "loading_payloads": 24,
+        "reconnaissance": 16,
+        "length_manipulation": 32,
+        "query_flooding": 16
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 14784
+      },
+      "fractional_digits_counts": {
+        "3": 13150,
+        "2": 1454,
+        "1": 180
+      },
+      "datetime_min_verbatim": "2023-03-16 00:08:28.146",
+      "datetime_max_verbatim": "2023-03-16 07:02:33.801",
+      "targets": {
+        "185.175.0.8": 14784
+      },
+      "transaction_id_status": {
+        "integer_uint16": 14728,
+        "integer_outside_uint16": 56
+      },
+      "duplicate_exact_event_excess": 6561,
+      "unique_event_signatures": 8223,
+      "complete_event_rows": 7392,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-15-2023\\03-15-2023-3.csv",
+          "line": 2,
+          "Timestamp": "2023-03-16 00:08:28.146",
+          "TargetIP": "185.175.0.8",
+          "Attack": "Stacked Modbus Frames",
+          "TransactionID": "0"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-15-2023\\03-15-2023-3.csv",
+          "line": 3,
+          "Timestamp": "2023-03-16 00:08:28.158",
+          "TargetIP": "185.175.0.8",
+          "Attack": "Stacked Modbus Frames - Complete",
+          "TransactionID": "1048575"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-15-2023\\03-15-2023-3.csv",
+          "line": 4,
+          "Timestamp": "2023-03-16 00:08:28.159",
+          "TargetIP": "185.175.0.8",
+          "Attack": "Stacked Modbus Frames",
+          "TransactionID": "0"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-16-2023\\03-16-2023-1.csv",
+      "bytes": 4075766,
+      "sha256": "f010a4629d4a8c5e9089a649dfc72d9d2d4ed18beae08d342927a656146b375c",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 51786,
+      "attack_counts": {
+        "Recon. Range: 2000": 24,
+        "Recon. Complete": 48,
+        "Recon. Range: 125": 24,
+        "Payload injection": 44,
+        "Payload injection - Complete": 44,
+        "Stacked Modbus Frames": 48,
+        "Stacked Modbus Frames - Complete": 48,
+        "Brute force or specific coil. Address: 1": 25560,
+        "Brute force or specific - Complete": 25599,
+        "Length manipulation": 60,
+        "Length manipulation - Complete": 60,
+        "Brute force or specific coil. Address: 13": 13,
+        "Brute force or specific coil. Address: 14": 13,
+        "Brute force or specific coil. Address: 8": 13,
+        "Replay": 65,
+        "Replay - Complete": 65,
+        "Query Flooding": 32,
+        "Query flooding. Complete": 26
+      },
+      "family_counts": {
+        "reconnaissance": 96,
+        "loading_payloads": 88,
+        "stacking_frames": 96,
+        "brute_force_or_specific_coil": 51198,
+        "length_manipulation": 120,
+        "baseline_replay": 130,
+        "query_flooding": 58
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 51786
+      },
+      "fractional_digits_counts": {
+        "3": 46399,
+        "2": 4845,
+        "1": 542
+      },
+      "datetime_min_verbatim": "2023-03-16 00:14:02.637",
+      "datetime_max_verbatim": "2023-03-16 23:49:22.916",
+      "targets": {
+        "185.175.0.4": 34974,
+        "185.175.0.8": 16812
+      },
+      "transaction_id_status": {
+        "integer_uint16": 51560,
+        "integer_outside_uint16": 226
+      },
+      "duplicate_exact_event_excess": 33429,
+      "unique_event_signatures": 18357,
+      "complete_event_rows": 25890,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-16-2023\\03-16-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-03-16 00:14:02.637",
+          "TargetIP": "185.175.0.4",
+          "Attack": "Recon. Range: 2000",
+          "TransactionID": "0"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-16-2023\\03-16-2023-1.csv",
+          "line": 3,
+          "Timestamp": "2023-03-16 00:14:02.657",
+          "TargetIP": "185.175.0.4",
+          "Attack": "Recon. Complete",
+          "TransactionID": "1048575"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-16-2023\\03-16-2023-1.csv",
+          "line": 4,
+          "Timestamp": "2023-03-16 00:14:02.657",
+          "TargetIP": "185.175.0.4",
+          "Attack": "Recon. Range: 2000",
+          "TransactionID": "0"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-16-2023\\03-16-2023-2.csv",
+      "bytes": 2638828,
+      "sha256": "db1238ed6cf6ab21b2fffb77acc68a4ec0ebb24f805fc29092b8af9b99c2e1d6",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 33555,
+      "attack_counts": {
+        "Query Flooding": 68,
+        "Query flooding. Complete": 63,
+        "Brute force or specific coil. Address: 1": 16500,
+        "Brute force or specific - Complete": 16524,
+        "Length manipulation": 40,
+        "Length manipulation - Complete": 40,
+        "Brute force or specific coil. Address: 13": 8,
+        "Brute force or specific coil. Address: 14": 8,
+        "Brute force or specific coil. Address: 8": 8,
+        "Replay": 40,
+        "Replay - Complete": 40,
+        "Stacked Modbus Frames": 20,
+        "Stacked Modbus Frames - Complete": 20,
+        "Recon. Range: 2000": 22,
+        "Recon. Complete": 44,
+        "Recon. Range: 125": 22,
+        "Payload injection": 44,
+        "Payload injection - Complete": 44
+      },
+      "family_counts": {
+        "query_flooding": 131,
+        "brute_force_or_specific_coil": 33048,
+        "length_manipulation": 80,
+        "baseline_replay": 80,
+        "stacking_frames": 40,
+        "reconnaissance": 88,
+        "loading_payloads": 88
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 33555
+      },
+      "fractional_digits_counts": {
+        "3": 30134,
+        "2": 3142,
+        "1": 279
+      },
+      "datetime_min_verbatim": "2023-03-17 00:13:16.321",
+      "datetime_max_verbatim": "2023-03-17 23:32:06.507",
+      "targets": {
+        "185.175.0.4": 33555
+      },
+      "transaction_id_status": {
+        "integer_uint16": 33344,
+        "integer_outside_uint16": 211
+      },
+      "duplicate_exact_event_excess": 21352,
+      "unique_event_signatures": 12203,
+      "complete_event_rows": 16775,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-16-2023\\03-16-2023-2.csv",
+          "line": 2,
+          "Timestamp": "2023-03-17 00:13:16.321",
+          "TargetIP": "185.175.0.4",
+          "Attack": "Query Flooding",
+          "TransactionID": "0"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-16-2023\\03-16-2023-2.csv",
+          "line": 3,
+          "Timestamp": "2023-03-17 00:13:16.337",
+          "TargetIP": "185.175.0.4",
+          "Attack": "Query flooding. Complete",
+          "TransactionID": "1048575"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-16-2023\\03-16-2023-2.csv",
+          "line": 4,
+          "Timestamp": "2023-03-17 00:13:16.338",
+          "TargetIP": "185.175.0.4",
+          "Attack": "Query Flooding",
+          "TransactionID": "0"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-16-2023\\03-16-2023-3.csv",
+      "bytes": 5241027,
+      "sha256": "7f67ce783ac32acb585a099c82853fc48e7ccf3e379ddc39e99ec6de44e81dd8",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 66536,
+      "attack_counts": {
+        "Recon. Range: 2000": 24,
+        "Recon. Complete": 48,
+        "Recon. Range: 125": 24,
+        "Query Flooding": 48,
+        "Query flooding. Complete": 48,
+        "Stacked Modbus Frames": 36,
+        "Stacked Modbus Frames - Complete": 36,
+        "Brute force or specific coil. Address: 1": 33000,
+        "Brute force or specific - Complete": 33030,
+        "Payload injection": 36,
+        "Payload injection - Complete": 36,
+        "Brute force or specific coil. Address: 13": 10,
+        "Brute force or specific coil. Address: 14": 10,
+        "Brute force or specific coil. Address: 8": 10,
+        "Replay": 50,
+        "Replay - Complete": 50,
+        "Length manipulation": 20,
+        "Length manipulation - Complete": 20
+      },
+      "family_counts": {
+        "reconnaissance": 96,
+        "query_flooding": 96,
+        "stacking_frames": 72,
+        "brute_force_or_specific_coil": 66060,
+        "loading_payloads": 72,
+        "baseline_replay": 100,
+        "length_manipulation": 40
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 66536
+      },
+      "fractional_digits_counts": {
+        "3": 59830,
+        "2": 6029,
+        "1": 677
+      },
+      "datetime_min_verbatim": "2023-03-17 00:15:48.034",
+      "datetime_max_verbatim": "2023-03-17 23:41:22.206",
+      "targets": {
+        "185.175.0.5": 66536
+      },
+      "transaction_id_status": {
+        "integer_uint16": 66348,
+        "integer_outside_uint16": 188
+      },
+      "duplicate_exact_event_excess": 29818,
+      "unique_event_signatures": 36718,
+      "complete_event_rows": 33268,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-16-2023\\03-16-2023-3.csv",
+          "line": 2,
+          "Timestamp": "2023-03-17 00:15:48.034",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Recon. Range: 2000",
+          "TransactionID": "0"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-16-2023\\03-16-2023-3.csv",
+          "line": 3,
+          "Timestamp": "2023-03-17 00:15:48.041",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Recon. Complete",
+          "TransactionID": "1048575"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-16-2023\\03-16-2023-3.csv",
+          "line": 4,
+          "Timestamp": "2023-03-17 00:15:48.041",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Recon. Range: 2000",
+          "TransactionID": "0"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-17-2023\\03-17-2023-1.csv",
+      "bytes": 1665083,
+      "sha256": "6e7b2ac3cf389d0f67bde024773b1a9657d55c95344df8444f257754edcf8fa5",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 21134,
+      "attack_counts": {
+        "Payload injection": 8,
+        "Payload injection - Complete": 8,
+        "Length manipulation": 8,
+        "Length manipulation - Complete": 8,
+        "Brute force or specific coil. Address: 13": 3,
+        "Brute force or specific - Complete": 10504,
+        "Brute force or specific coil. Address: 14": 3,
+        "Brute force or specific coil. Address: 8": 3,
+        "Replay": 15,
+        "Replay - Complete": 15,
+        "Query Flooding": 16,
+        "Query flooding. Complete": 16,
+        "Stacked Modbus Frames": 12,
+        "Stacked Modbus Frames - Complete": 12,
+        "Brute force or specific coil. Address: 1": 10495,
+        "Recon. Range: 2000": 2,
+        "Recon. Complete": 4,
+        "Recon. Range: 125": 2
+      },
+      "family_counts": {
+        "loading_payloads": 16,
+        "length_manipulation": 16,
+        "brute_force_or_specific_coil": 21008,
+        "baseline_replay": 30,
+        "query_flooding": 32,
+        "stacking_frames": 24,
+        "reconnaissance": 8
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 21134
+      },
+      "fractional_digits_counts": {
+        "3": 18922,
+        "2": 1910,
+        "1": 302
+      },
+      "datetime_min_verbatim": "2023-03-17 00:16:22.925",
+      "datetime_max_verbatim": "2023-03-17 06:11:31.21",
+      "targets": {
+        "185.175.0.8": 21134
+      },
+      "transaction_id_status": {
+        "integer_uint16": 21086,
+        "integer_outside_uint16": 48
+      },
+      "duplicate_exact_event_excess": 14133,
+      "unique_event_signatures": 7001,
+      "complete_event_rows": 10567,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-17-2023\\03-17-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-03-17 00:16:22.925",
+          "TargetIP": "185.175.0.8",
+          "Attack": "Payload injection",
+          "TransactionID": "0"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-17-2023\\03-17-2023-1.csv",
+          "line": 3,
+          "Timestamp": "2023-03-17 00:16:22.948",
+          "TargetIP": "185.175.0.8",
+          "Attack": "Payload injection - Complete",
+          "TransactionID": "1048575"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-17-2023\\03-17-2023-1.csv",
+          "line": 4,
+          "Timestamp": "2023-03-17 00:16:22.949",
+          "TargetIP": "185.175.0.8",
+          "Attack": "Payload injection",
+          "TransactionID": "0"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-17-2023\\03-17-2023-2.csv",
+      "bytes": 699261,
+      "sha256": "6cfc63322d6de0cdc3a839d28ba8a3543f5051d96571cb52c80f3bf017aed443",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 8878,
+      "attack_counts": {
+        "Stacked Modbus Frames": 12,
+        "Stacked Modbus Frames - Complete": 12,
+        "Brute force or specific coil. Address: 13": 3,
+        "Brute force or specific - Complete": 4404,
+        "Brute force or specific coil. Address: 14": 3,
+        "Brute force or specific coil. Address: 8": 3,
+        "Replay": 15,
+        "Replay - Complete": 15,
+        "Brute force or specific coil. Address: 1": 4395,
+        "Query Flooding": 4,
+        "Query flooding. Complete": 4,
+        "Payload injection": 4,
+        "Payload injection - Complete": 4
+      },
+      "family_counts": {
+        "stacking_frames": 24,
+        "brute_force_or_specific_coil": 8808,
+        "baseline_replay": 30,
+        "query_flooding": 8,
+        "loading_payloads": 8
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 8878
+      },
+      "fractional_digits_counts": {
+        "3": 7985,
+        "2": 816,
+        "1": 77
+      },
+      "datetime_min_verbatim": "2023-03-18 00:00:06.508",
+      "datetime_max_verbatim": "2023-03-18 02:57:38.416",
+      "targets": {
+        "185.175.0.4": 8878
+      },
+      "transaction_id_status": {
+        "integer_uint16": 8858,
+        "integer_outside_uint16": 20
+      },
+      "duplicate_exact_event_excess": 6053,
+      "unique_event_signatures": 2825,
+      "complete_event_rows": 4439,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-17-2023\\03-17-2023-2.csv",
+          "line": 2,
+          "Timestamp": "2023-03-18 00:00:06.508",
+          "TargetIP": "185.175.0.4",
+          "Attack": "Stacked Modbus Frames",
+          "TransactionID": "0"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-17-2023\\03-17-2023-2.csv",
+          "line": 3,
+          "Timestamp": "2023-03-18 00:00:06.511",
+          "TargetIP": "185.175.0.4",
+          "Attack": "Stacked Modbus Frames - Complete",
+          "TransactionID": "1048575"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-17-2023\\03-17-2023-2.csv",
+          "line": 4,
+          "Timestamp": "2023-03-18 00:00:06.512",
+          "TargetIP": "185.175.0.4",
+          "Attack": "Stacked Modbus Frames",
+          "TransactionID": "0"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-18-2023\\03-18-2023-1.csv",
+      "bytes": 5890154,
+      "sha256": "dcd9bf33504be09cbd69a5b81952286e89f9a32ed5eb0d6aeb724d315ead299f",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 74754,
+      "attack_counts": {
+        "Payload injection": 36,
+        "Payload injection - Complete": 36,
+        "Length manipulation": 28,
+        "Length manipulation - Complete": 28,
+        "Brute force or specific coil. Address: 1": 37125,
+        "Brute force or specific - Complete": 37152,
+        "Stacked Modbus Frames": 48,
+        "Stacked Modbus Frames - Complete": 48,
+        "Brute force or specific coil. Address: 13": 9,
+        "Brute force or specific coil. Address: 14": 9,
+        "Brute force or specific coil. Address: 8": 9,
+        "Replay": 45,
+        "Replay - Complete": 45,
+        "Query Flooding": 40,
+        "Query flooding. Complete": 40,
+        "Recon. Range: 2000": 14,
+        "Recon. Complete": 28,
+        "Recon. Range: 125": 14
+      },
+      "family_counts": {
+        "loading_payloads": 72,
+        "length_manipulation": 56,
+        "brute_force_or_specific_coil": 74304,
+        "stacking_frames": 96,
+        "baseline_replay": 90,
+        "query_flooding": 80,
+        "reconnaissance": 56
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 74754
+      },
+      "fractional_digits_counts": {
+        "3": 67146,
+        "2": 6855,
+        "1": 753
+      },
+      "datetime_min_verbatim": "2023-03-18 00:06:22.207",
+      "datetime_max_verbatim": "2023-03-18 23:43:45.144",
+      "targets": {
+        "185.175.0.5": 74754
+      },
+      "transaction_id_status": {
+        "integer_uint16": 74574,
+        "integer_outside_uint16": 180
+      },
+      "duplicate_exact_event_excess": 42085,
+      "unique_event_signatures": 32669,
+      "complete_event_rows": 37377,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-18-2023\\03-18-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-03-18 00:06:22.207",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Payload injection",
+          "TransactionID": "0"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-18-2023\\03-18-2023-1.csv",
+          "line": 3,
+          "Timestamp": "2023-03-18 00:06:22.208",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Payload injection - Complete",
+          "TransactionID": "1048575"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-18-2023\\03-18-2023-1.csv",
+          "line": 4,
+          "Timestamp": "2023-03-18 00:06:22.208",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Payload injection",
+          "TransactionID": "0"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-19-2023\\03-19-2023-1.csv",
+      "bytes": 10891858,
+      "sha256": "c2bdcff506bacb93884163da685630151dcb3562e2c31ab1c73dd7a1206503ce",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 138314,
+      "attack_counts": {
+        "Stacked Modbus Frames": 108,
+        "Stacked Modbus Frames - Complete": 108,
+        "Brute force or specific coil. Address: 13": 31,
+        "Brute force or specific - Complete": 68566,
+        "Brute force or specific coil. Address: 14": 31,
+        "Brute force or specific coil. Address: 8": 31,
+        "Replay": 155,
+        "Replay - Complete": 155,
+        "Brute force or specific coil. Address: 1": 68473,
+        "Payload injection": 80,
+        "Payload injection - Complete": 80,
+        "Recon. Range: 2000": 50,
+        "Recon. Complete": 100,
+        "Recon. Range: 125": 50,
+        "Query Flooding": 92,
+        "Query flooding. Complete": 84,
+        "Length manipulation": 60,
+        "Length manipulation - Complete": 60
+      },
+      "family_counts": {
+        "stacking_frames": 216,
+        "brute_force_or_specific_coil": 137132,
+        "baseline_replay": 310,
+        "loading_payloads": 160,
+        "reconnaissance": 200,
+        "query_flooding": 176,
+        "length_manipulation": 120
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 138314
+      },
+      "fractional_digits_counts": {
+        "3": 124476,
+        "2": 12509,
+        "1": 1329
+      },
+      "datetime_min_verbatim": "2023-03-19 00:06:45.145",
+      "datetime_max_verbatim": "2023-03-19 23:44:41.21",
+      "targets": {
+        "185.175.0.5": 66616,
+        "185.175.0.8": 38530,
+        "185.175.0.4": 33168
+      },
+      "transaction_id_status": {
+        "integer_uint16": 137882,
+        "integer_outside_uint16": 432
+      },
+      "duplicate_exact_event_excess": 80221,
+      "unique_event_signatures": 58093,
+      "complete_event_rows": 69153,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-19-2023\\03-19-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-03-19 00:06:45.145",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Stacked Modbus Frames",
+          "TransactionID": "0"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-19-2023\\03-19-2023-1.csv",
+          "line": 3,
+          "Timestamp": "2023-03-19 00:06:45.146",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Stacked Modbus Frames - Complete",
+          "TransactionID": "1048575"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-19-2023\\03-19-2023-1.csv",
+          "line": 4,
+          "Timestamp": "2023-03-19 00:06:45.147",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Stacked Modbus Frames",
+          "TransactionID": "0"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-20-2023\\03-20-2023-1.csv",
+      "bytes": 5895328,
+      "sha256": "80b5d5bfab67718ecd7a0583c0e2863c4be94bd28189d9a498a71a8041ca7088",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 74829,
+      "attack_counts": {
+        "Length manipulation": 72,
+        "Length manipulation - Complete": 72,
+        "Stacked Modbus Frames": 52,
+        "Stacked Modbus Frames - Complete": 52,
+        "Payload injection": 56,
+        "Payload injection - Complete": 56,
+        "Brute force or specific coil. Address: 1": 37125,
+        "Brute force or specific - Complete": 37143,
+        "Query Flooding": 40,
+        "Query flooding. Complete": 35,
+        "Brute force or specific coil. Address: 13": 6,
+        "Brute force or specific coil. Address: 14": 6,
+        "Brute force or specific coil. Address: 8": 6,
+        "Replay": 30,
+        "Replay - Complete": 30,
+        "Recon. Range: 2000": 12,
+        "Recon. Complete": 24,
+        "Recon. Range: 125": 12
+      },
+      "family_counts": {
+        "length_manipulation": 144,
+        "stacking_frames": 104,
+        "loading_payloads": 112,
+        "brute_force_or_specific_coil": 74286,
+        "query_flooding": 75,
+        "baseline_replay": 60,
+        "reconnaissance": 48
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 74829
+      },
+      "fractional_digits_counts": {
+        "3": 67201,
+        "2": 6870,
+        "1": 758
+      },
+      "datetime_min_verbatim": "2023-03-20 00:06:41.211",
+      "datetime_max_verbatim": "2023-03-20 23:44:43.05",
+      "targets": {
+        "185.175.0.5": 58270,
+        "185.175.0.4": 8,
+        "185.175.0.8": 16551
+      },
+      "transaction_id_status": {
+        "integer_uint16": 74590,
+        "integer_outside_uint16": 239
+      },
+      "duplicate_exact_event_excess": 43615,
+      "unique_event_signatures": 31214,
+      "complete_event_rows": 37412,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-20-2023\\03-20-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-03-20 00:06:41.211",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Length manipulation",
+          "TransactionID": "0"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-20-2023\\03-20-2023-1.csv",
+          "line": 3,
+          "Timestamp": "2023-03-20 00:06:41.214",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Length manipulation - Complete",
+          "TransactionID": "1048575"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-20-2023\\03-20-2023-1.csv",
+          "line": 4,
+          "Timestamp": "2023-03-20 00:06:41.214",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Length manipulation",
+          "TransactionID": "0"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-21-2023\\03-21-2023-1-original.csv",
+      "bytes": 522516,
+      "sha256": "915e4917204d14831560df0c0a60a55de0eae63b1717ac876a7e3b3d90dfc2d7",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 8306,
+      "attack_counts": {
+        "Recon. Range: 2000": 2,
+        "Recon. Complete": 4,
+        "Recon. Range: 125": 2,
+        "Brute force or specific coil. Address: 1": 4125,
+        "Brute force or specific - Complete": 4128,
+        "Query Flooding": 4,
+        "Query flooding. Complete": 4,
+        "Length manipulation": 4,
+        "Length manipulation - Complete": 4,
+        "Payload injection": 4,
+        "Payload injection - Complete": 4,
+        "Stacked Modbus Frames": 4,
+        "Stacked Modbus Frames - Complete": 4,
+        "Replay": 5,
+        "Replay - Complete": 5,
+        "Brute force or specific coil. Address: 13": 1,
+        "Brute force or specific coil. Address: 14": 1,
+        "Brute force or specific coil. Address: 8": 1
+      },
+      "family_counts": {
+        "reconnaissance": 8,
+        "brute_force_or_specific_coil": 8256,
+        "query_flooding": 8,
+        "length_manipulation": 8,
+        "loading_payloads": 8,
+        "stacking_frames": 8,
+        "baseline_replay": 10
+      },
+      "timestamp_shapes": {
+        "truncated_mm_ss_or_unknown": 8306
+      },
+      "fractional_digits_counts": {
+        "1": 8306
+      },
+      "datetime_min_verbatim": null,
+      "datetime_max_verbatim": null,
+      "targets": {
+        "185.175.0.8": 8306
+      },
+      "transaction_id_status": {
+        "integer_uint16": 8286,
+        "integer_outside_uint16": 20
+      },
+      "duplicate_exact_event_excess": 8217,
+      "unique_event_signatures": 89,
+      "complete_event_rows": 4153,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-21-2023\\03-21-2023-1-original.csv",
+          "line": 2,
+          "Timestamp": "07:40.5",
+          "TargetIP": "185.175.0.8",
+          "Attack": "Recon. Range: 2000",
+          "TransactionID": "0"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-21-2023\\03-21-2023-1-original.csv",
+          "line": 3,
+          "Timestamp": "07:40.5",
+          "TargetIP": "185.175.0.8",
+          "Attack": "Recon. Complete",
+          "TransactionID": "1048575"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-21-2023\\03-21-2023-1-original.csv",
+          "line": 4,
+          "Timestamp": "07:40.5",
+          "TargetIP": "185.175.0.8",
+          "Attack": "Recon. Range: 2000",
+          "TransactionID": "0"
+        }
+      ]
+    },
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-22-2023\\03-22-2023-1.csv",
+      "bytes": 656503,
+      "sha256": "f89f76c711da548a9288ce357196616cf2a6404092b2b09e2dd5d12321d7ba0a",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "TargetIP",
+        "Attack",
+        "TransactionID"
+      ],
+      "rows": 8338,
+      "attack_counts": {
+        "Recon. Range: 2000": 6,
+        "Recon. Complete": 12,
+        "Recon. Range: 125": 6,
+        "Stacked Modbus Frames": 4,
+        "Stacked Modbus Frames - Complete": 4,
+        "Payload injection": 8,
+        "Payload injection - Complete": 8,
+        "Brute force or specific coil. Address: 13": 2,
+        "Brute force or specific - Complete": 4131,
+        "Brute force or specific coil. Address: 14": 2,
+        "Brute force or specific coil. Address: 8": 2,
+        "Replay": 10,
+        "Replay - Complete": 10,
+        "Length manipulation": 4,
+        "Length manipulation - Complete": 4,
+        "Brute force or specific coil. Address: 1": 4125
+      },
+      "family_counts": {
+        "reconnaissance": 24,
+        "stacking_frames": 8,
+        "loading_payloads": 16,
+        "brute_force_or_specific_coil": 8262,
+        "baseline_replay": 20,
+        "length_manipulation": 8
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 8338
+      },
+      "fractional_digits_counts": {
+        "3": 7500,
+        "2": 761,
+        "1": 77
+      },
+      "datetime_min_verbatim": "2023-03-22 00:18:39.452",
+      "datetime_max_verbatim": "2023-03-22 03:41:25.376",
+      "targets": {
+        "185.175.0.5": 8338
+      },
+      "transaction_id_status": {
+        "integer_uint16": 8310,
+        "integer_outside_uint16": 28
+      },
+      "duplicate_exact_event_excess": 4480,
+      "unique_event_signatures": 3858,
+      "complete_event_rows": 4169,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-22-2023\\03-22-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-03-22 00:18:39.452",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Recon. Range: 2000",
+          "TransactionID": "0"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-22-2023\\03-22-2023-1.csv",
+          "line": 3,
+          "Timestamp": "2023-03-22 00:18:39.455",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Recon. Complete",
+          "TransactionID": "1048575"
+        },
+        {
+          "file": "attack\\compromised-scada\\attack logs\\03-22-2023\\03-22-2023-1.csv",
+          "line": 4,
+          "Timestamp": "2023-03-22 00:18:39.455",
+          "TargetIP": "185.175.0.5",
+          "Attack": "Recon. Range: 2000",
+          "TransactionID": "0"
+        }
+      ]
+    },
+    {
+      "path": "attack\\external\\external-attacker\\attacker logs\\01-01-2023\\01-01-2023-1.csv",
+      "bytes": 62,
+      "sha256": "eac25a7b7602c5983cb1ae7293a3fd32f52e4032e696531c74149cc128f75162",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "Attack"
+      ],
+      "rows": 1,
+      "attack_counts": {
+        "Recon. Range: 65535": 1
+      },
+      "family_counts": {
+        "reconnaissance": 1
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 1
+      },
+      "fractional_digits_counts": {
+        "3": 1
+      },
+      "datetime_min_verbatim": "2023-01-01 21:00:44.389",
+      "datetime_max_verbatim": "2023-01-01 21:00:44.389",
+      "targets": {
+        "<missing>": 1
+      },
+      "transaction_id_status": {
+        "missing": 1
+      },
+      "duplicate_exact_event_excess": 0,
+      "unique_event_signatures": 1,
+      "complete_event_rows": 0,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\external\\external-attacker\\attacker logs\\01-01-2023\\01-01-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-01-01 21:00:44.389",
+          "Attack": "Recon. Range: 65535"
+        }
+      ]
+    },
+    {
+      "path": "attack\\external\\external-attacker\\attacker logs\\01-02-2023\\01-02-2023-1.csv",
+      "bytes": 123,
+      "sha256": "9a5c8927b847070b5e8c298e1fb1e88122b468e3c00db7b891084f4c39e5e80d",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "Attack"
+      ],
+      "rows": 2,
+      "attack_counts": {
+        "Brute force or specific coil. Address: 0": 1,
+        "Query Flooding": 1
+      },
+      "family_counts": {
+        "brute_force_or_specific_coil": 1,
+        "query_flooding": 1
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 2
+      },
+      "fractional_digits_counts": {
+        "3": 2
+      },
+      "datetime_min_verbatim": "2023-01-02 01:45:33.274",
+      "datetime_max_verbatim": "2023-01-02 02:38:50.683",
+      "targets": {
+        "<missing>": 2
+      },
+      "transaction_id_status": {
+        "missing": 2
+      },
+      "duplicate_exact_event_excess": 0,
+      "unique_event_signatures": 2,
+      "complete_event_rows": 0,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\external\\external-attacker\\attacker logs\\01-02-2023\\01-02-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-01-02 01:45:33.274",
+          "Attack": "Brute force or specific coil. Address: 0"
+        },
+        {
+          "file": "attack\\external\\external-attacker\\attacker logs\\01-02-2023\\01-02-2023-1.csv",
+          "line": 3,
+          "Timestamp": "2023-01-02 02:38:50.683",
+          "Attack": "Query Flooding"
+        }
+      ]
+    },
+    {
+      "path": "attack\\external\\external-attacker\\attacker logs\\01-17-2023\\01-17-2023-1.csv",
+      "bytes": 271,
+      "sha256": "e4a743a2dd6ed1c32d064d74a6ffeab9a92f94ef9cd18fb11d52d689af679b42",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "Attack"
+      ],
+      "rows": 6,
+      "attack_counts": {
+        "Recon. Range: 65535": 3,
+        "Query Flooding": 3
+      },
+      "family_counts": {
+        "reconnaissance": 3,
+        "query_flooding": 3
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 6
+      },
+      "fractional_digits_counts": {
+        "3": 5,
+        "2": 1
+      },
+      "datetime_min_verbatim": "2023-01-17 05:46:29.366",
+      "datetime_max_verbatim": "2023-01-17 06:08:38.55",
+      "targets": {
+        "<missing>": 6
+      },
+      "transaction_id_status": {
+        "missing": 6
+      },
+      "duplicate_exact_event_excess": 0,
+      "unique_event_signatures": 6,
+      "complete_event_rows": 0,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\external\\external-attacker\\attacker logs\\01-17-2023\\01-17-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-01-17 05:46:29.366",
+          "Attack": "Recon. Range: 65535"
+        },
+        {
+          "file": "attack\\external\\external-attacker\\attacker logs\\01-17-2023\\01-17-2023-1.csv",
+          "line": 3,
+          "Timestamp": "2023-01-17 05:48:19.561",
+          "Attack": "Recon. Range: 65535"
+        },
+        {
+          "file": "attack\\external\\external-attacker\\attacker logs\\01-17-2023\\01-17-2023-1.csv",
+          "line": 4,
+          "Timestamp": "2023-01-17 05:50:17.621",
+          "Attack": "Query Flooding"
+        }
+      ]
+    },
+    {
+      "path": "attack\\external\\external-attacker\\attacker logs\\02-01-2023\\02-01-2023-1.csv",
+      "bytes": 8248760,
+      "sha256": "75069d3594cb8d8b96e8c901b4f849470bff47b110382bb2b2c235f504226786",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "Attack"
+      ],
+      "rows": 131187,
+      "attack_counts": {
+        "Recon. Range: 65535": 4,
+        "Recon. Complete": 32,
+        "Query Flooding": 2,
+        "Query flooding. Complete": 1,
+        "Recon. Range: 5": 4,
+        "Recon. Range: 2": 1,
+        "Recon. Range: 9": 1,
+        "Recon. Range: 20": 1,
+        "Recon. Range: 4": 21,
+        "Length manipulation": 1,
+        "Length manipulation - Complete": 1,
+        "Replay": 1,
+        "Replay - Complete": 1,
+        "Payload injection": 1,
+        "Payload injection - Complete": 1,
+        "Stacked Modbus Frames": 1,
+        "Stacked Modbus Frames - Complete": 1,
+        "Brute force or specific coil. Address: 0": 65555,
+        "Brute force or specific - Complete": 65556,
+        "Brute force or specific coil. Address: 13": 1
+      },
+      "family_counts": {
+        "reconnaissance": 64,
+        "query_flooding": 3,
+        "length_manipulation": 2,
+        "baseline_replay": 2,
+        "loading_payloads": 2,
+        "stacking_frames": 2,
+        "brute_force_or_specific_coil": 131112
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 131187
+      },
+      "fractional_digits_counts": {
+        "3": 118027,
+        "2": 11857,
+        "1": 1303
+      },
+      "datetime_min_verbatim": "2023-02-01 03:51:37.648",
+      "datetime_max_verbatim": "2023-02-01 13:22:13.415",
+      "targets": {
+        "<missing>": 131187
+      },
+      "transaction_id_status": {
+        "missing": 131187
+      },
+      "duplicate_exact_event_excess": 39074,
+      "unique_event_signatures": 92113,
+      "complete_event_rows": 65593,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\external\\external-attacker\\attacker logs\\02-01-2023\\02-01-2023-1.csv",
+          "line": 2,
+          "Timestamp": "2023-02-01 03:51:37.648",
+          "Attack": "Recon. Range: 65535"
+        },
+        {
+          "file": "attack\\external\\external-attacker\\attacker logs\\02-01-2023\\02-01-2023-1.csv",
+          "line": 3,
+          "Timestamp": "2023-02-01 03:51:37.696",
+          "Attack": "Recon. Complete"
+        },
+        {
+          "file": "attack\\external\\external-attacker\\attacker logs\\02-01-2023\\02-01-2023-1.csv",
+          "line": 4,
+          "Timestamp": "2023-02-01 03:52:46.776",
+          "Attack": "Recon. Range: 65535"
+        }
+      ]
+    },
+    {
+      "path": "attack\\external\\external-attacker\\attacker logs\\12-29-2022\\12-29-2022-1.csv",
+      "bytes": 58,
+      "sha256": "c2b155c1e191e3037121b2a08bc8f7645cc65b31ef894ec359dc92f3988dfdd5",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "Attack"
+      ],
+      "rows": 1,
+      "attack_counts": {
+        "Recon. Range: 1": 1
+      },
+      "family_counts": {
+        "reconnaissance": 1
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 1
+      },
+      "fractional_digits_counts": {
+        "3": 1
+      },
+      "datetime_min_verbatim": "2022-12-29 06:06:21.239",
+      "datetime_max_verbatim": "2022-12-29 06:06:21.239",
+      "targets": {
+        "<missing>": 1
+      },
+      "transaction_id_status": {
+        "missing": 1
+      },
+      "duplicate_exact_event_excess": 0,
+      "unique_event_signatures": 1,
+      "complete_event_rows": 0,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\external\\external-attacker\\attacker logs\\12-29-2022\\12-29-2022-1.csv",
+          "line": 2,
+          "Timestamp": "2022-12-29 06:06:21.239",
+          "Attack": "Recon. Range: 1"
+        }
+      ]
+    },
+    {
+      "path": "attack\\external\\external-attacker\\attacker logs\\12-30-2022\\12-30-2022-1.csv",
+      "bytes": 490,
+      "sha256": "71e3ded87f78d864c58546713b55f874fbdd4b2da0d63d47f68a4ea9750fdb9e",
+      "encoding": "utf-8-sig",
+      "header": [
+        "Timestamp",
+        "Attack"
+      ],
+      "rows": 10,
+      "attack_counts": {
+        "Recon. Range: 65535": 4,
+        "Query Flooding": 2,
+        "Brute force or specific coil. Address: 0": 2,
+        "Recon. Range: 1": 2
+      },
+      "family_counts": {
+        "reconnaissance": 6,
+        "query_flooding": 2,
+        "brute_force_or_specific_coil": 2
+      },
+      "timestamp_shapes": {
+        "full_naive_datetime": 10
+      },
+      "fractional_digits_counts": {
+        "3": 9,
+        "2": 1
+      },
+      "datetime_min_verbatim": "2022-12-30 03:54:30.549",
+      "datetime_max_verbatim": "2022-12-30 06:17:11.394",
+      "targets": {
+        "<missing>": 10
+      },
+      "transaction_id_status": {
+        "missing": 10
+      },
+      "duplicate_exact_event_excess": 0,
+      "unique_event_signatures": 10,
+      "complete_event_rows": 0,
+      "malformed_examples": [],
+      "first_rows": [
+        {
+          "file": "attack\\external\\external-attacker\\attacker logs\\12-30-2022\\12-30-2022-1.csv",
+          "line": 2,
+          "Timestamp": "2022-12-30 03:54:30.549",
+          "Attack": "Recon. Range: 65535"
+        },
+        {
+          "file": "attack\\external\\external-attacker\\attacker logs\\12-30-2022\\12-30-2022-1.csv",
+          "line": 3,
+          "Timestamp": "2022-12-30 03:58:40.375",
+          "Attack": "Recon. Range: 65535"
+        },
+        {
+          "file": "attack\\external\\external-attacker\\attacker logs\\12-30-2022\\12-30-2022-1.csv",
+          "line": 4,
+          "Timestamp": "2022-12-30 03:59:38.059",
+          "Attack": "Query Flooding"
+        }
+      ]
+    }
+  ],
+  "workbooks": [
+    {
+      "path": "attack\\compromised-scada\\attack logs\\03-21-2023\\03-21-2023-1-formatted.xlsx",
+      "bytes": 2196561,
+      "date1904": false,
+      "excel_epoch": "1899-12-30",
+      "sheets": [
+        {
+          "sheet": "To IED4C",
+          "member": "xl/worksheets/sheet1.xml",
+          "rows": 8306,
+          "timestamp_cell_types": {
+            "numeric_excel_serial_timestamp": 8306
+          },
+          "date_counts": {
+            "2023-03-21": 8306
+          },
+          "datetime_min_naive": "2023-03-21 03:07:40.517000",
+          "datetime_max_naive": "2023-03-21 05:13:52.814000",
+          "target_counts": {
+            "185.175.0.8": 8306
+          },
+          "attack_counts": {
+            "Recon. Range: 2000": 2,
+            "Recon. Complete": 4,
+            "Recon. Range: 125": 2,
+            "Brute force or specific coil. Address: 1": 4125,
+            "Brute force or specific - Complete": 4128,
+            "Query Flooding": 4,
+            "Query flooding. Complete": 4,
+            "Length manipulation": 4,
+            "Length manipulation - Complete": 4,
+            "Payload injection": 4,
+            "Payload injection - Complete": 4,
+            "Stacked Modbus Frames": 4,
+            "Stacked Modbus Frames - Complete": 4,
+            "Replay": 5,
+            "Replay - Complete": 5,
+            "Brute force or specific coil. Address: 13": 1,
+            "Brute force or specific coil. Address: 14": 1,
+            "Brute force or specific coil. Address: 8": 1
+          },
+          "duplicate_raw_serial_event_excess": 4729,
+          "companion_csv_rowwise_content_matches": 8306,
+          "companion_csv_rowwise_mm_ss_tenth_matches": 8267,
+          "companion_csv_rows": 8306,
+          "companion_csv_time_render_mismatch_examples": [
+            {
+              "row": 917,
+              "serial": "45006.142140625001",
+              "converted_naive": "2023-03-21 03:24:40.950000",
+              "csv_time": "24:40.9",
+              "diagnostic_render": "24:41.0"
+            },
+            {
+              "row": 918,
+              "serial": "45006.142140625001",
+              "converted_naive": "2023-03-21 03:24:40.950000",
+              "csv_time": "24:40.9",
+              "diagnostic_render": "24:41.0"
+            },
+            {
+              "row": 919,
+              "serial": "45006.142140625001",
+              "converted_naive": "2023-03-21 03:24:40.950000",
+              "csv_time": "24:40.9",
+              "diagnostic_render": "24:41.0"
+            },
+            {
+              "row": 920,
+              "serial": "45006.142140625001",
+              "converted_naive": "2023-03-21 03:24:40.950000",
+              "csv_time": "24:40.9",
+              "diagnostic_render": "24:41.0"
+            },
+            {
+              "row": 1140,
+              "serial": "45006.142141782409",
+              "converted_naive": "2023-03-21 03:24:41.050000",
+              "csv_time": "24:41.0",
+              "diagnostic_render": "24:41.1"
+            }
+          ],
+          "samples": [
+            {
+              "cell": "A2",
+              "raw_value": "45006.130330057873",
+              "style_index": "1",
+              "cell_type": "numeric",
+              "converted_naive_datetime": "2023-03-21 03:07:40.517000",
+              "numFmtId": "47",
+              "target": "185.175.0.8",
+              "attack": "Recon. Range: 2000",
+              "transaction_id": "0"
+            },
+            {
+              "cell": "A3",
+              "raw_value": "45006.130330231485",
+              "style_index": "1",
+              "cell_type": "numeric",
+              "converted_naive_datetime": "2023-03-21 03:07:40.532000",
+              "numFmtId": "47",
+              "target": "185.175.0.8",
+              "attack": "Recon. Complete",
+              "transaction_id": "1048575"
+            },
+            {
+              "cell": "A4",
+              "raw_value": "45006.130330243053",
+              "style_index": "1",
+              "cell_type": "numeric",
+              "converted_naive_datetime": "2023-03-21 03:07:40.533000",
+              "numFmtId": "47",
+              "target": "185.175.0.8",
+              "attack": "Recon. Range: 2000",
+              "transaction_id": "0"
+            },
+            {
+              "cell": "A5",
+              "raw_value": "45006.130330243053",
+              "style_index": "1",
+              "cell_type": "numeric",
+              "converted_naive_datetime": "2023-03-21 03:07:40.533000",
+              "numFmtId": "47",
+              "target": "185.175.0.8",
+              "attack": "Recon. Complete",
+              "transaction_id": "1048575"
+            },
+            {
+              "cell": "A6",
+              "raw_value": "45006.130330254629",
+              "style_index": "1",
+              "cell_type": "numeric",
+              "converted_naive_datetime": "2023-03-21 03:07:40.534000",
+              "numFmtId": "47",
+              "target": "185.175.0.8",
+              "attack": "Recon. Range: 125",
+              "transaction_id": "0"
+            }
+          ]
+        },
+        {
+          "sheet": "To IED1A",
+          "member": "xl/worksheets/sheet2.xml",
+          "rows": 8306,
+          "timestamp_cell_types": {
+            "numeric_excel_serial_timestamp": 8306
+          },
+          "date_counts": {
+            "2023-03-21": 8306
+          },
+          "datetime_min_naive": "2023-03-21 12:14:58.761000",
+          "datetime_max_naive": "2023-03-21 14:37:17.030000",
+          "target_counts": {
+            "185.175.0.4": 8306
+          },
+          "attack_counts": {
+            "Recon. Range: 2000": 2,
+            "Recon. Complete": 4,
+            "Recon. Range: 125": 2,
+            "Brute force or specific coil. Address: 1": 4125,
+            "Brute force or specific - Complete": 4128,
+            "Query Flooding": 4,
+            "Query flooding. Complete": 4,
+            "Length manipulation": 4,
+            "Length manipulation - Complete": 4,
+            "Payload injection": 4,
+            "Payload injection - Complete": 4,
+            "Stacked Modbus Frames": 4,
+            "Stacked Modbus Frames - Complete": 4,
+            "Replay": 5,
+            "Replay - Complete": 5,
+            "Brute force or specific coil. Address: 13": 1,
+            "Brute force or specific coil. Address: 14": 1,
+            "Brute force or specific coil. Address: 8": 1
+          },
+          "duplicate_raw_serial_event_excess": 4541,
+          "companion_csv_rowwise_content_matches": 0,
+          "companion_csv_rowwise_mm_ss_tenth_matches": 0,
+          "companion_csv_rows": 8306,
+          "companion_csv_time_render_mismatch_examples": [],
+          "samples": [
+            {
+              "cell": "A2",
+              "raw_value": "45006.510402326392",
+              "style_index": "1",
+              "cell_type": "numeric",
+              "converted_naive_datetime": "2023-03-21 12:14:58.761000",
+              "numFmtId": "47",
+              "target": "185.175.0.4",
+              "attack": "Recon. Range: 2000",
+              "transaction_id": "0"
+            },
+            {
+              "cell": "A3",
+              "raw_value": "45006.510402546293",
+              "style_index": "1",
+              "cell_type": "numeric",
+              "converted_naive_datetime": "2023-03-21 12:14:58.780000",
+              "numFmtId": "47",
+              "target": "185.175.0.4",
+              "attack": "Recon. Complete",
+              "transaction_id": "1048575"
+            },
+            {
+              "cell": "A4",
+              "raw_value": "45006.510402557869",
+              "style_index": "1",
+              "cell_type": "numeric",
+              "converted_naive_datetime": "2023-03-21 12:14:58.781000",
+              "numFmtId": "47",
+              "target": "185.175.0.4",
+              "attack": "Recon. Range: 2000",
+              "transaction_id": "0"
+            },
+            {
+              "cell": "A5",
+              "raw_value": "45006.510402581021",
+              "style_index": "1",
+              "cell_type": "numeric",
+              "converted_naive_datetime": "2023-03-21 12:14:58.783000",
+              "numFmtId": "47",
+              "target": "185.175.0.4",
+              "attack": "Recon. Complete",
+              "transaction_id": "1048575"
+            },
+            {
+              "cell": "A6",
+              "raw_value": "45006.510402650463",
+              "style_index": "1",
+              "cell_type": "numeric",
+              "converted_naive_datetime": "2023-03-21 12:14:58.789000",
+              "numFmtId": "47",
+              "target": "185.175.0.4",
+              "attack": "Recon. Range: 125",
+              "transaction_id": "0"
+            }
+          ]
+        },
+        {
+          "sheet": "To IED1B",
+          "member": "xl/worksheets/sheet3.xml",
+          "rows": 99472,
+          "timestamp_cell_types": {
+            "numeric_excel_serial_timestamp": 99472
+          },
+          "date_counts": {
+            "2023-03-21": 99472
+          },
+          "datetime_min_naive": "2023-03-21 00:13:43.050000",
+          "datetime_max_naive": "2023-03-21 23:58:39.452000",
+          "target_counts": {
+            "185.175.0.5": 99472
+          },
+          "attack_counts": {
+            "Stacked Modbus Frames": 44,
+            "Stacked Modbus Frames - Complete": 44,
+            "Recon. Range: 2000": 10,
+            "Recon. Complete": 20,
+            "Recon. Range: 125": 10,
+            "Brute force or specific coil. Address: 1": 49500,
+            "Brute force or specific - Complete": 49527,
+            "Query Flooding": 36,
+            "Query flooding. Complete": 36,
+            "Payload injection": 32,
+            "Payload injection - Complete": 32,
+            "Length manipulation": 32,
+            "Length manipulation - Complete": 32,
+            "Brute force or specific coil. Address: 13": 9,
+            "Brute force or specific coil. Address: 14": 9,
+            "Brute force or specific coil. Address: 8": 9,
+            "Replay": 45,
+            "Replay - Complete": 45
+          },
+          "duplicate_raw_serial_event_excess": 56213,
+          "companion_csv_rowwise_content_matches": 0,
+          "companion_csv_rowwise_mm_ss_tenth_matches": 0,
+          "companion_csv_rows": 8306,
+          "companion_csv_time_render_mismatch_examples": [],
+          "samples": [
+            {
+              "cell": "A2",
+              "raw_value": "45006.009526041664",
+              "style_index": "1",
+              "cell_type": "numeric",
+              "converted_naive_datetime": "2023-03-21 00:13:43.050000",
+              "numFmtId": "47",
+              "target": "185.175.0.5",
+              "attack": "Stacked Modbus Frames",
+              "transaction_id": "0"
+            },
+            {
+              "cell": "A3",
+              "raw_value": "45006.009526064816",
+              "style_index": "1",
+              "cell_type": "numeric",
+              "converted_naive_datetime": "2023-03-21 00:13:43.052000",
+              "numFmtId": "47",
+              "target": "185.175.0.5",
+              "attack": "Stacked Modbus Frames - Complete",
+              "transaction_id": "1048575"
+            },
+            {
+              "cell": "A4",
+              "raw_value": "45006.009526076392",
+              "style_index": "1",
+              "cell_type": "numeric",
+              "converted_naive_datetime": "2023-03-21 00:13:43.053000",
+              "numFmtId": "47",
+              "target": "185.175.0.5",
+              "attack": "Stacked Modbus Frames",
+              "transaction_id": "0"
+            },
+            {
+              "cell": "A5",
+              "raw_value": "45006.009526076392",
+              "style_index": "1",
+              "cell_type": "numeric",
+              "converted_naive_datetime": "2023-03-21 00:13:43.053000",
+              "numFmtId": "47",
+              "target": "185.175.0.5",
+              "attack": "Stacked Modbus Frames - Complete",
+              "transaction_id": "1048575"
+            },
+            {
+              "cell": "A6",
+              "raw_value": "45006.009526076392",
+              "style_index": "1",
+              "cell_type": "numeric",
+              "converted_naive_datetime": "2023-03-21 00:13:43.053000",
+              "numFmtId": "47",
+              "target": "185.175.0.5",
+              "attack": "Stacked Modbus Frames",
+              "transaction_id": "0"
+            }
+          ]
+        }
+      ],
+      "interpretation": "Workbook retains numeric serial date+hour+subsecond values absent from CSV display strings. These are naive wall-clock timestamps; timezone alignment still requires capture evidence. Different sheets and CSV overlap must not be counted as independent events."
+    }
+  ],
+  "readme_sha256": "9714c70a30ee3204a30343127477b1241e4fc25cd6a06b0675754fbeab1fb246"
+}

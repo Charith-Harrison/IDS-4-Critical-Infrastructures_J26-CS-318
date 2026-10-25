@@ -1,0 +1,52 @@
+[
+  {
+    "file": "application_ledger.jsonl",
+    "bytes": 119778,
+    "sha256": "dce594d666f5701fd065eddd94c0eb5b7c583c2eb1f8c8dc391020e5b2ed6438"
+  },
+  {
+    "file": "capture.log",
+    "bytes": 164,
+    "sha256": "23760378bfd0f2552ffb5ce8fb765a5805db6be3408df06e8cf1488097a92acb"
+  },
+  {
+    "file": "capture.pcap",
+    "bytes": 20940,
+    "sha256": "54560fd05077665e580ad247d433732087bbb336601bfe2d4a475edef118972d"
+  },
+  {
+    "file": "EVIDENCE_WALKTHROUGH.txt",
+    "bytes": 1165,
+    "sha256": "c62d07a0edcf6ec4dc454ce2b37fb9ed612b4b446f05c94b9f91fff0f3fee855"
+  },
+  {
+    "file": "host_execution.json",
+    "bytes": 2915,
+    "sha256": "beb974ccc3bb88d3cec3cc59cd06568ed631d9af64f87cbb5e36b9d93dd3ffc4"
+  },
+  {
+    "file": "INDEPENDENT_CAPTURE_CHECKS.json",
+    "bytes": 598,
+    "sha256": "899d3dd577cb1f1f76b083973600266b58afdd85855b12d892392e80bca4a71b"
+  },
+  {
+    "file": "run_manifest.json",
+    "bytes": 1892,
+    "sha256": "9899fb3c057b76463a12b02db565175263c1030c7dd5366734d40bb0ed26ed91"
+  },
+  {
+    "file": "server_audit.jsonl",
+    "bytes": 44947,
+    "sha256": "9536d8fe8e98c9f394abef6a6bfd21e3136e2e0801c28c6773555220cf9d2aa4"
+  },
+  {
+    "file": "validation_report.json",
+    "bytes": 1376,
+    "sha256": "c92fa34c375fa694ceccb10abe7edb892bce6b9f8e1d726f97eb026b4be2927c"
+  },
+  {
+    "file": "verified_labels.jsonl",
+    "bytes": 201653,
+    "sha256": "cc9d2cae57db90ecf7670ddd70b9b6de4ae017a05a0bd022961ddfd01697e9b9"
+  }
+]

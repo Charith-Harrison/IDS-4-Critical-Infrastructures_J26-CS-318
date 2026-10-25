@@ -1,0 +1,732 @@
+=== PAGE 1 ===
+        
+ 
+ 
+ 
+Page 1 of 13 
+V2.2 updated on 04th June 2026 
+IT4010 Research Project – 2026 Jul 
+Topic Assessment Form 
+V2.2 
+                                                             Project ID: 
+1. Topic (12 words max) 
+ 
+ 
+ 
+2. Research group the project belongs to 
+ 
+ 
+ 
+3. Specialization of the project belongs to 
+ 
+ 
+ 
+4. If a continuation of a previous project:  
+ 
+ 
+ 
+5. Brief description of the research problem  including references (300 words max)  – 
+references not included in word count. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Project ID    
+Year  
+Protocol-aware ML framework for intelligent Modbus attack detection and incident analysis 
+AIMS - Autonomous Intelligent Machines and Systems  
+ 
+Cyber Security (CS) 
+ 
+Nature and Gravity of the Problem  
+Industrial Control Systems (ICS) and Supervisory Control and Data Acquisition (SCADA) environments 
+for the backbone of modern critical infrastructure such as power generation, water treatment, 
+manufacturing and oil gas pipelines [1], [4]. Large proportions of these systems communicate using 
+Modbus/TCP protocol, which was designed decades ago for reliability and simplicity rather than for 
+security [8], [9]. Modbus contains no native authentication, no encryption and no integrity checking, 
+which means that any device able to reach the network can read, process data, issue control 
+commands or impersonate legitimate masters and slaves [11], [13].  
+As ICS networks are increasingly connected to corporate networks and the internet to enable remote 
+monitoring, the attack surface has expanded dramatically [4], [1 1]. Adversaries can now launch 
+Denial-of-Service (DoS) attacks that flood Programmable Logic Controllers (PLCs) with malformed or 
+high-frequency requests, reconnaissance scans that quietly map registers and devices, command and 
+response injection that forges process commands, and replay attacks that re -transmit previously 
+captured legitimate packets [13]. Conventional Intrusion Detection Systems (IDS) deployed in these 
+networks rely mainly on signature-based or static rule-based methods and on generic network-flow 
+features that ignore the semantics of the Modbus protocol [1,], [6], [15]. As a result they fail to detect 
+novel, low-volume or protocol -valid attacks, and produce high false -positive rates that overwhelm 
+operators [10], [15].  
+This research therefore investigates a unified, protocol -aware machine learning framework that 
+detects and explains four distinct classes of Modbus attack; DoS, reconnaissance, 
+command/response injection and replay. Each through a methodology tailored to the behavioral  
+J26-CS-318 
+ 
+
+=== PAGE 2 ===
+        
+ 
+ 
+ 
+Page 2 of 13 
+V2.2 updated on 04th June 2026 
+IT4010 Research Project – 2026 Jul 
+Topic Assessment Form 
+V2.2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Signature of that attack, integrated into a single intelligent detection and incident-analysis pipeline.  
+Impact of the problem 
+• Operational and safety – undetected attacks on PLCs and field devices can cause incorrect 
+actuator behaviour, equipment damage, process disruption and even physical safety hazards 
+for personal and the public [4], [13].  
+• Technical – existing IDS depend on generic flow features and signatures, cannot model 
+protocol semantics or temporal behaviour, and degrade against zero-day or protocol-valid 
+attacks [1], [6], [15].  
+• Economic – downtime in critical infrastructure, recovery costs and regulatory penalties are 
+extremely high, while specialised commercial OT security appliances are costly and difficult to 
+adapt [4], [11]. 
+• Privacy and trust – manipulation or exfiltration of process data undermines the integrity and 
+trustworthiness of national infrastructure and the data it generates [7], [11].  
+FoC research cluster and industry verticals  
+• Research cluster – cyber security and network engineering / Software Systems and 
+Technologies (SST) focusing on protocol aware, machine-learning based intrusion detection 
+and incident-analysis software for operational technology networks.  
+• Industry verticals – Critical Infrastructure Protection, Operational Technology (OT) / ICS-
+SCADA Security, Energy and Utilities, and Smart Manufacturing (Industry 4.0). 
+Sustainable Development Goals (SDGs) attained  
+• SDG 9 (Industry, Innovation and Infrastructure) – strengthens the resilience and reliability of 
+industrial infrastructure by detecting and explaining cyber-attacks against Modbus-based 
+control systems. 
+• SDG 7 (Affordable and Clean Energy) – Helps protect energy generation and distribution 
+systems, frequent Modbus deployments from disruption, supporting reliable and continuous 
+energy supply.  
+• SDG 11 (Sustainable Cities and Communities) – contributes to safe and resilient water, 
+transport and utility services that depend on secure industrial control systems.  
+ 
+ 
+ 
+
+=== PAGE 3 ===
+        
+ 
+ 
+ 
+Page 3 of 13 
+V2.2 updated on 04th June 2026 
+IT4010 Research Project – 2026 Jul 
+Topic Assessment Form 
+V2.2 
+ 
+6. Description of Existing Research and Systems (300 words max) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Summary of existing products/systems 
+Most operational deployments protect Modbus networks using perimeter firewalls, industrial 
+demilitarized zones and signature-based intrusion detection sensors such as Snort with hand-written 
+ICS rule sets [15]. Commercial OT-security platforms provide deep-packet inspection and asset 
+discovery for Modbus and similar protocols, but they are expensive, largely rule-driven and tuned to 
+known attack signatures [15]. Research testbeds such as the Mississippi State University gas-pipeline 
+and water-storage datasets [2], [8], recent Modbus/TCO attack-emulation testbeds [13], [18] have 
+been used to generate labelled normal and attack traffic covering reconnaissance, injection, DoS and 
+replay scenarios.  
+Summary of existing research 
+Machine learning and deep learning have become dominant research direction for ICS intrusion 
+detection [1], [4]. Supervised classifiers such as Decision Trees, Random Forest, SVM, KNN and 
+XGBoost have been applied to Modbus traffic, with Random Forest and gradient boosting models 
+reaching very high reported accuracy on benchmark datasets [5], [6]. Deep models including DNN, 
+CNN and hybrid GooLeNet-LSTM architecture have been used to capture spatial and temporal patterns 
+in ICS communication for mutli-class attack detection [3]. Unsupervised approaches particularly 
+autoencoders that learn a model of normal traffic and flag high reconstruction error have proven 
+effective for anomaly and zero-day detection in SCADA, DNP3 networks, including function-code based 
+autoencoder IDS designs [9], [13]. Protocol-specific work has demonstrated replay-attack detection 
+using timestamps and sequence numbers [10] and explainable-AI methods that take Modbus IDS 
+decisions interpretable [6], [7]. 
+Gaps/limitations identified 
+• Most IDS use generic flow features (packet size, bytes/sec, TCP flags) and ignore Modbus 
+protocol semantics such as function codes and register access patterns [1], [6]. 
+• Signature and rule-based system cannot detect novel, low-volume or protocol-valid attacks 
+and generate high false-positive rates [15]. 
+• Reconnaissance scans rarely change traffic volume, so packet-level detectors miss the subtle 
+temporal behavior that distinguishes them [3], [18]. 
+• Injection attacks are frequently inspected per-packet, ignoring whether a command is valid 
+within its surrounding communication context [9], [13]. 
+• Replay attacks reuse genuinely valid packets, so content-based detection alone fails without 
+transaction-consistency analysis [10]. 
+• Few works integrate detection of multiple attack classes into one framework with unified 
+incident analysis and explanation [4], [7]. 
+Hence there is a clear need for a single, cost-effective, protocol-aware machine-learning framework 
+that combines attack-specific detection methodologies with unified incident analysis for Modbus-
+based industrial control systems. 
+  
+ 
+ 
+
+=== PAGE 4 ===
+        
+ 
+ 
+ 
+Page 4 of 13 
+V2.2 updated on 04th June 2026 
+IT4010 Research Project – 2026 Jul 
+Topic Assessment Form 
+V2.2 
+ 
+7. Brief description of the solution's nature, including a conceptual diagram (maximum 500 
+words). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Addressing the identified research gaps 
+The proposed solution is a Protocol-aware machine learning framework that captures live and 
+recorded Modbus/TCP traffic, parses it into a shared, protocol-aware repository, and then routes 
+those features to four parallel detection modules, one per attack class, before fusing their outputs into 
+a single incident-analysis and reporting layer. Rather than treating every attack with one generic 
+model, each research components apply the methodology best matched to the behavioral signature of 
+its target attack.  
+• RP1 – DoS via Protocol-aware feature engineering: engineers Modbus-specific features 
+(function codes, register/coil addresses, transaction IDs, read/write behaviour) and uses an 
+autoencoder to flag flooding and resource-exhaustion anomalies that generic flow feature 
+miss.  
+• RP2 – Reconnaissance via temporal behavior analysis: models communication patterns over 
+time using time-series/LSTM techniques to reveal sequential register scanning and abnormal 
+polling frequency that produce no obvious volume spike.  
+• RP3 – Command/response injection via context-aware command analysis: analyses 
+command relationships and protocol semantics. For example, an unexpected write after read, 
+invalid function-code usage, or abnormal request-response pairing instead of inspecting 
+packet in isolation.  
+• RP4 – Replay via transaction consistency analysis: examines transaction IDs, response timing, 
+duplicate requests and session consistency to separate replayed but valid packets from 
+genuine communication.  
+A common feature repository removes duplicated preprocessing, lets the four modules share a 
+consistent view of the traffic, and supports cross-module correlation. A decision-fusion layer combines 
+per-module anomaly scores into a unified verdict, and an incident-analysis layer adds attack-type 
+classification, severity ranking and explainable-AI attribution so that operators understand why an 
+alert was raised. Because the framework relies on open datasets, an inexpensive testbed and software 
+models rather than proprietary appliances, it offers an affordable and adaptable alternative for 
+securing Modbus ICS networks.  
+ 
+ 
+
+=== PAGE 5 ===
+        
+ 
+ 
+ 
+Page 5 of 13 
+V2.2 updated on 04th June 2026 
+IT4010 Research Project – 2026 Jul 
+Topic Assessment Form 
+V2.2 
+ 
+ 
+ 
+
+
+=== PAGE 6 ===
+        
+ 
+ 
+ 
+Page 6 of 13 
+V2.2 updated on 04th June 2026 
+IT4010 Research Project – 2026 Jul 
+Topic Assessment Form 
+V2.2 
+ 
+8. Brief overview of the availability of necessary specialized domain expertise, knowledge, 
+and data. (500 words max) 
+ 
+ 
+ 
+Gaining specialized domain expertise  
+The team will build domain expertise in industrial control systems and operational-technology 
+security by consulting academic supervisors, cyber-security practitioners and where possible, OT/ICS 
+engineers who operate Modbus-based equipment. The group will study how Modbus/TCP 
+communication works in practice, the master-slave request/response model, function codes, register 
+and coil addressing and the MBAP header and how each target attack manifests at the protocol level 
+[8], [11], [13]. Members will review the structure and behavior of SCADA/HMI systems, PLCs and 
+field devices so that modelling of normal versus malicious behavior is grounded in realistic 
+operational patterns. Regular discussion with supervisors and review of standards and case studies 
+on ICS incidents will deepen the team’s understanding of attacker techniques, defensive controls and 
+the safety implications of false negatives and false positives in critical infrastructure.  
+Gaining technical knowledge and skills 
+The technical skills required for the project span network traffic analysis, protocol parsing, feature 
+engineering and machine/deep learning. Team members will acquire these through online courses, 
+academic literature, technical documentation and hands-on experiment. Specific competencies 
+include packet capture and dissection (e.g- with Wireshark/tshark and Scapy), building and labelling 
+datasets, and engineering protocol-aware features from Modbus traffic. On the modelling side, 
+members will learn to design and evaluate autoencoders for anomaly detection, LSTM and other 
+time-series models for temporal behavior, sequence and context modelling techniques for command 
+analysis, and consistency-checking methods for transaction analysis [3], [9], [12]. The team will also 
+develop skills in building the integration layer and incident dashboard, including data visualization, 
+model service and explainable AI techniques for interpreting detections [6], [7]. Standard evaluation 
+methodology with accuracy, precision, recall, F1 score, false positive rate and ROC-AUC will be used 
+to compare models against baselines [5], [6], [10]. 
+Data collection 
+The project will use both primary and secondary data. Primary data will be generate from a 
+controlled Modbus/TCP testbed using physical or simulated PLCs and a Modbus master, supported 
+by simulation frameworks such as ICSSIM and Modbus attack-emulation tools in which the four 
+target attacks (DoS, reconnaissance, command/response injection and replay) are executed to 
+capture labelled normal and malicious traffic [13], [18]. Secondary data will be drawn from 
+established public ICS/SCADA datasets, including the Mississippi State University gas-pipeline and 
+water-storage datasets and recent Modbus-specific anomaly detection datasets, to benchmark the 
+models and improve generalization [2], [8], [17]. Collected traffic will be parsed, cleaned, labelled 
+and split into training and testing sets within the common feature repository, and will be the basis 
+for training and validating every detection module.  
+
+=== PAGE 7 ===
+        
+ 
+ 
+ 
+Page 7 of 13 
+V2.2 updated on 04th June 2026 
+IT4010 Research Project – 2026 Jul 
+Topic Assessment Form 
+V2.2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Ethical clearance 
+Because the research uses network traffic from controlled testbeds and publicly available datasets rather 
+than personal or medical data, the ethical risk is low. No human subject data is collected. All traffic is 
+generated in an isolated laboratory environment so that no live or third-party infrastructure is affected. 
+Any third-party datasets will be used strictly in accordance with their licenses and only for academic 
+research. The project will follow responsible disclosure principles for any vulnerabilities observed and will 
+adhere to the university’s research ethics guidelines, ensuring that the work is conducted safely, legally 
+and for defensive purposes only.  
+
+=== PAGE 8 ===
+        
+ 
+ 
+ 
+Page 8 of 13 
+V2.2 updated on 04th June 2026 
+IT4010 Research Project – 2026 Jul 
+Topic Assessment Form 
+V2.2 
+9. Objectives and Novelty 
+Main Objective 
+To design and develop a unified, protocol-aware machine learning framework that detects correlates and explains multiple 
+classes of Modbus attacks: Denial-of-Service, reconnaissance, command/response injection and replay in industrial control 
+systems, providing real-time detection and incident analysis through a single intelligent pipeline.  
+Member Name  
+with Registration 
+No 
+Sub Objective Tasks Novelty 
+IT23219984 
+Rathnayake 
+H.M.S.R 
+DoS Attack 
+detection using 
+protocol-aware 
+feature 
+engineering.  
+• Build a Modbus protocol parser 
+and extract protocol -aware 
+features (function codes, register 
+addresses, transaction IDs, 
+read/write behavior. 
+• Generate and label DoS attack 
+traffic on the testbed and 
+combine it with public datasets.  
+• Design and train an autoencoder 
+to model normal Modbus 
+behavior and flag DoS anomalies 
+via reconstruction error.  
+• Compare protocol -aware 
+features against generic flow 
+features.  
+Introduces protocol -aware feature 
+engineering for Modbus DoS 
+detection. Unlike conventional IDS 
+that rely on generic network -flow 
+features, this component evaluates 
+whether Modbus specific semantic 
+features improve autoencoder-based 
+detection of flooding a nd resource 
+exhaustion attacks. 
+ 
+
+=== PAGE 9 ===
+        
+ 
+ 
+ 
+Page 9 of 13 
+V2.2 updated on 04th June 2026 
+IT4010 Research Project – 2026 Jul 
+Topic Assessment Form 
+V2.2 
+• Evaluate using accuracy. 
+Precision, recall, F1 and false 
+positive rate.  
+IT23269002 
+Charith H 
+Reconnaissance 
+attack detection 
+using temporal 
+behavior analysis 
+• Capture and label 
+reconnaissance/scanning traffic 
+(sequential register scanning, 
+polling-rate changes). 
+• Construct time -windowed and 
+sequence features representing 
+communication behavior over 
+time.  
+• Design and train time -
+series/LSTM models to detect 
+subtle temporal patterns. 
+• Validate that temporal modelling 
+outperforms packet -level 
+analysis.  
+• Evaluate detection performance 
+and latency.  
+Models communication patters over 
+time rather than analyzing packets 
+independently. Because 
+reconnaissance rarely changes traffic 
+volume, this component detects 
+scanning through temporal behavior, 
+sequential register access and 
+abnormal polling frequence t hat 
+volume-based detectors miss.  
+IT23150270 
+Rathnayaka K.H 
+Command and 
+response injection 
+detection using 
+context-aware 
+command analysis 
+• Extract command sequence and 
+request response features from 
+Modbus traffic.  
+• Define legitimate protocol -
+semantic context (valid function 
+code use, read/write ordering, 
+request-response pairing). 
+Introduces context-aware analysis of 
+Modbus command sequences using 
+protocol semantics instead of only 
+statistical traffic features. It detects 
+injection by reasoning about 
+command relationships and request -
+response context rather than 
+inspecting packets in isolation.  
+
+=== PAGE 10 ===
+        
+ 
+ 
+ 
+Page 10 of 13 
+V2.2 updated on 04th June 2026 
+IT4010 Research Project – 2026 Jul 
+Topic Assessment Form 
+V2.2 
+• Design models that judge 
+whether the command is valid 
+within its surrounding context.  
+• Detect injected commands such 
+as unexpected writes, invalid 
+function codes and illegal 
+register modifications.  
+• Evaluate against per -packet 
+baselines.  
+IT23284616 
+Ilankoon I.M.D.S 
+Replay attack 
+detection using 
+transaction 
+consistency analysis 
+• Capture and label replay attack 
+traffic on the testbed. 
+• Extract transaction -level 
+features such as transaction IDs, 
+response timing, duplicate 
+requests, session consistency. 
+• Design a transaction consistency 
+model to distinguish replayed 
+packets from legitimate traffic.  
+• Integrate detection results into 
+the fusion and incident -analysis 
+layer.  
+• Evaluate detection accuracy and 
+false-positive rate. 
+Detects inconsistencies across 
+transactions rather than withing 
+individual packets. Because replayed 
+packets are individually valid, this 
+component uses communication 
+state information such as transaction 
+IDs, timing and session consistency. 
+Instead of packet content alone.  
+ 
+
+=== PAGE 11 ===
+        
+ 
+ 
+ 
+Page 11 of 13 
+V2.2 updated on 04th June 2026 
+IT4010 Research Project – 2026 Jul 
+Topic Assessment Form 
+V2.2 
+10. This section is to be completed by the 
+Supervisor and the Co-supervisor of the Project. 
+ 
+a) This research topic possesses a comprehensive scope suitable for a final -year 
+project. 
+Yes  No  
+ 
+b) The proposed topic exhibits novelty. 
+Yes  No  
+ 
+c) The student group can successfully execute the proposed project. 
+Yes  No  
+ 
+d) The proposed sub-objectives reflect the students' areas of specialization. 
+Yes  No  
+ 
+e) Data required for the project is available. 
+Yes  No  
+ 
+f) Any other comments:  
+ 
+ 
+ 
+ 
+ 
+ Title First Name Last Name Signature 
+Supervisor*     
+Co-Supervisor*     
+ 
+References 
+ 
+ 
+ 
+
+=== PAGE 12 ===
+        
+ 
+ 
+ 
+Page 12 of 13 
+V2.2 updated on 04th June 2026 
+IT4010 Research Project – 2026 Jul 
+Topic Assessment Form 
+V2.2 
+References  
+[1] M. Çelebi, A. Özbilen and U. Yavanoğlu, "An intrusion detection system for critical 
+infrastructures: A Modbus approach," Engineering Applications of Artificial Intelligence, 2025. 
+[2] T. Morris and W. Gao, "Industrial control system traffic data sets for intrusion detection 
+research," in Critical Infrastructure Protection VIII, Springer, 2014. 
+[3] A. Chu, Y. Lai, and J. Liu, "Industrial control intrusion detection approach based on 
+multiclassification GoogLeNet-LSTM model," Security and Communication Networks, vol. 2019, 
+Art. no. 6757685, pp. 1–11, Dec. 2019, doi: 10.1155/2019/6757685. 
+[4] H. Qu, J. Qin, W. Liu and H. Chen, "Instruction Detection in SCADA/Modbus Network Based on 
+Machine Learning," in Machine Learning and Intelligent Communications, Springer, 2018. 
+[5] F. Alharbi, "IoT intrusion detection system for Modbus networks with explainable AI," Journal 
+of Advances in Information Technology , vol. 16, no. 7, pp. 973 –979, Jul. 2025, doi: 
+10.12720/jait.16.7.973-979. 
+[6] M. Tawfik et al., "Trustworthy AI for Modbus/TCP intrusion detection in industrial control 
+systems," in Proc. 12th Int. Conf. Intelligent Computing and Information Systems (ICICIS), 2025. 
+[7] Authors, "An improved autoencoder -based approach for anomaly detection in industrial 
+control systems," Systems Science & Control Engineering, Taylor & Francis, 2024. 
+[8] W. Yusheng, K. Fan, Y. Lai et al., "Intrusion Detection of Industrial Control System Based on 
+Modbus TCP Protocol," in Proc. IEEE 13th Int. Symp. on Autonomous Decentralized Systems, 
+2017. 
+[9] S. Kwon et al., "Anomaly Detection for SCADA System Security Based on Unsupervised Learning 
+and Function Codes Analysis in the DNP3 Protocol," Electronics, MDPI, vol. 11, no. 14, 2184, 
+2022. 
+[10] L. et al., "Detection and Blocking of Replay, False Command, and False Access Injection 
+Commands in SCADA Systems with Modbus Protocol," Security and Communication Networks, 
+vol. 2021, Hindawi, 2021. 
+[11] I. N. Fovino et al., "Design and implementation of a secure Modbus protocol," in Critical 
+Infrastructure Protection III, Springer, 2009. 
+
+=== PAGE 13 ===
+        
+ 
+ 
+ 
+Page 13 of 13 
+V2.2 updated on 04th June 2026 
+IT4010 Research Project – 2026 Jul 
+Topic Assessment Form 
+V2.2 
+[12] M. Altaha, J. -M. Lee, M. Aslam, and S. Hong, "An autoencoder -based network intrusion 
+detection system for the SCADA system," Journal of Communications, vol. 16, no. 6, pp. 210 –
+216, Jun. 2021, doi: 10.12720/jcm.16.6.210-216. 
+[13] M. Bashendy, S. Eltanbouly, A. Tantawy and A. Erradi, "Design and Implementation of Cyber -
+Physical Attacks on Modbus/TCP Protocol," in World Congress on Industrial Control Systems 
+Security (WCICSS-2020), 2020. 
+[14] B. Stewart et al., "A novel intrusion detection mechanism for SCADA systems which 
+automatically adapts to network topology changes," EAI Endorsed Trans. on Industrial 
+Networks and Intelligent Systems, 2017. 
+[15] Authors, "On Cyber Attacks and Signature Based Intrusion Detection for Modbus Based 
+Industrial Control Systems," Journal of Digital Forensics, Security and Law, 2014. 
+[16] N. Goldenberg and A. Wool, "Accurate modeling of Modbus/TCP for intrusion detection in 
+SCADA systems," International Journal of Critical Infrastructure Protection, vol. 6, no. 2, pp. 63–
+75, 2013. 
+[17] A. Dehlaghi-Ghadim et al., "Anomaly detection dataset for industrial control systems," IEEE 
+Access, vol. 11, pp. 107951–107973, 2023, doi: 10.1109/ACCESS.2023.3320928. 
+[18] Authors, "Implementing Attacks for Modbus/TCP Protocol in a Real-Time Cyber Physical System 
+Testbed," in Proc. IEEE Int. Workshop on Communications Quality and Reliability (CQR), 2015. 
+ 

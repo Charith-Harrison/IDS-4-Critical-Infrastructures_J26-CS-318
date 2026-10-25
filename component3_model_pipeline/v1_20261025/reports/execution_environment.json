@@ -1,0 +1,20 @@
+{
+  "recorded_at_utc": "2026-10-25T08:09:15.976123+00:00",
+  "machine_role": "Producer PC; not Kaveesha laptop",
+  "hostname": "DESKTOP-FN2QP7H",
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14",
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scikit-learn": "1.8.0",
+    "joblib": "1.5.3",
+    "pyarrow": "26.0.0"
+  },
+  "test_result": "18 unittest tests passed after equal-budget revision",
+  "earlier_test_environment_failure": "Initial sandbox TEMP ACL denied temporary-directory writes; same tests passed using writable temp/elevated repository execution. No data acceptance checks changed.",
+  "source_collection_id": "40ae7a846cce48fc8e3c52ebfca7e2cd",
+  "lock_sha256": "f59f8e8922de62afd28f610a2521d9c45c0ebc46cec35b587210f4da0c6181c9",
+  "final_summary_sha256": "72efc4b66bf0d73d257b6019bf64ca3751afe776997eb9721a9b18e9272cfa2e",
+  "attestation": "Self-reported local execution record, not external machine attestation"
+}

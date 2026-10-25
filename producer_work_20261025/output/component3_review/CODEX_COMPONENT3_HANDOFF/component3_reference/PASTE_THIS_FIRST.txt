@@ -1,0 +1,8 @@
+Work locally on component 3: Command and Response Injection Detection in Modbus/TCP Using Context-Aware Command Analysis.
+
+Repository: C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318
+Raw dataset: C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\data\raw\Modbus Dataset
+
+Read component3_reference/CODEX_COMPONENT3_PROMPT.txt and follow its preparation requirements. Read the supplied TAF, individual proposal, README, old datasets and audit material as directed there. Treat historical prompts as reference and independently verify earlier findings.
+
+Start with the actual source inventory, salvage/label feasibility and a small validated parsing pilot; proceed to supported extraction and grouped partitions once checks pass. Preserve original data and other components. Do not train the final model yet. Report missing capabilities honestly and complete all unaffected work.

@@ -61,3 +61,21 @@ coverage.xml
 Thumbs.db
 Desktop.ini
 ~$*
+
+# Producer PC evidence import: preserve locally, transfer via verified archive
+/producer_work_20261025/**/component3_collection_runs/
+/producer_work_20261025/**/component3_preparation/output/
+/producer_work_20261025/**/component3_reassessment/**/output/
+/producer_work_20261025/**/*.jsonl
+/producer_work_20261025/**/*.parquet
+/producer_work_20261025/**/*.pcap
+/producer_work_20261025/**/*.pcapng
+/producer_work_20261025/**/*.csv
+/producer_work_20261025/**/*.tar
+/producer_work_20261025/**/*.gz
+/producer_work_20261025/**/*.zip
+/producer_work_20261025/**/original_attempt_backup/
+/component3_model_pipeline/v1_20261025/artifacts/
+/.venv-c3/
+
+/component3_model_pipeline/v1_20261025/development_balanced_only/

@@ -1,0 +1,205 @@
+{
+  "scope": "Read-only downloaded-reassessment integrity and independent temporal-count review. No extraction, labels, split, model preprocessing or training executed.",
+  "integrity_checks": [
+    {
+      "kind": "code",
+      "path": "bounded_pilot.py",
+      "matches": true
+    },
+    {
+      "kind": "code",
+      "path": "cohort.py",
+      "matches": true
+    },
+    {
+      "kind": "code",
+      "path": "common.py",
+      "matches": true
+    },
+    {
+      "kind": "code",
+      "path": "identity_timing.py",
+      "matches": true
+    },
+    {
+      "kind": "code",
+      "path": "logs_audit.py",
+      "matches": true
+    },
+    {
+      "kind": "code",
+      "path": "overlap_plan.py",
+      "matches": true
+    },
+    {
+      "kind": "code",
+      "path": "report.py",
+      "matches": true
+    },
+    {
+      "kind": "code",
+      "path": "run.py",
+      "matches": true
+    },
+    {
+      "kind": "code",
+      "path": "temporal_feasibility.py",
+      "matches": true
+    },
+    {
+      "kind": "code",
+      "path": "test_reassessment.py",
+      "matches": true
+    },
+    {
+      "kind": "config",
+      "path": "config.json",
+      "matches": true
+    },
+    {
+      "kind": "stage_output",
+      "stage": "cohort.py",
+      "path": "cohort_diagnostics.json",
+      "matches": true
+    },
+    {
+      "kind": "stage_output",
+      "stage": "cohort.py",
+      "path": "review_reproduction.json",
+      "matches": true
+    },
+    {
+      "kind": "stage_output",
+      "stage": "cohort.py",
+      "path": "diagnostic_candidates.json",
+      "matches": true
+    },
+    {
+      "kind": "stage_output",
+      "stage": "cohort.py",
+      "path": "event_examples.json",
+      "matches": true
+    },
+    {
+      "kind": "stage_output",
+      "stage": "cohort.py",
+      "path": "accepted_class_campaign_day_endpoint_function_pdu_parse_pair.csv",
+      "matches": true
+    },
+    {
+      "kind": "stage_output",
+      "stage": "logs_audit.py",
+      "path": "original_log_timing_and_coverage.json",
+      "matches": true
+    },
+    {
+      "kind": "stage_output",
+      "stage": "bounded_pilot.py",
+      "path": "bounded_pilot_summary.json",
+      "matches": true
+    },
+    {
+      "kind": "stage_output",
+      "stage": "bounded_pilot.py",
+      "path": "bounded_raw_evidence.json",
+      "matches": true
+    },
+    {
+      "kind": "stage_output",
+      "stage": "identity_timing.py",
+      "path": "identity_byte_log_examples.json",
+      "matches": true
+    },
+    {
+      "kind": "stage_output",
+      "stage": "identity_timing.py",
+      "path": "identity_and_clock_audit.json",
+      "matches": true
+    },
+    {
+      "kind": "stage_output",
+      "stage": "identity_timing.py",
+      "path": "mechanism_parse_pair_impact.json",
+      "matches": true
+    },
+    {
+      "kind": "stage_output",
+      "stage": "overlap_plan.py",
+      "path": "view_overlap_samples.json",
+      "matches": true
+    },
+    {
+      "kind": "stage_output",
+      "stage": "overlap_plan.py",
+      "path": "expanded_scope_plan.json",
+      "matches": true
+    },
+    {
+      "kind": "stage_output",
+      "stage": "temporal_feasibility.py",
+      "path": "temporal_feasibility.json",
+      "matches": true
+    },
+    {
+      "kind": "stage_output",
+      "stage": "report.py",
+      "path": "shortcut_risks.json",
+      "matches": true
+    },
+    {
+      "kind": "stage_output",
+      "stage": "report.py",
+      "path": "proposed_policy_v2_not_adopted.json",
+      "matches": true
+    },
+    {
+      "kind": "stage_output",
+      "stage": "report.py",
+      "path": "decision.json",
+      "matches": true
+    }
+  ],
+  "all_recorded_hashes_match": true,
+  "independent_accepted_label_totals": {
+    "normal": 1404306,
+    "command_injection": 100,
+    "response_injection": 54
+  },
+  "independent_phase_counts": [
+    {
+      "phase": "early",
+      "accepted_counts_from_baseline_parquet": {
+        "normal": 465934,
+        "command_injection": 57,
+        "response_injection": 13
+      },
+      "matches_report": true,
+      "parser_ok_commands": 2,
+      "parser_ok_responses": 0
+    },
+    {
+      "phase": "middle",
+      "accepted_counts_from_baseline_parquet": {
+        "normal": 468838,
+        "command_injection": 34,
+        "response_injection": 18
+      },
+      "matches_report": true,
+      "parser_ok_commands": 0,
+      "parser_ok_responses": 0
+    },
+    {
+      "phase": "late",
+      "accepted_counts_from_baseline_parquet": {
+        "normal": 469534,
+        "command_injection": 9,
+        "response_injection": 23
+      },
+      "matches_report": true,
+      "parser_ok_commands": 0,
+      "parser_ok_responses": 1
+    }
+  ],
+  "all_phase_counts_match_report": true,
+  "limits": "Recorded hashes validate transfer consistency, not scientific correctness. Phase counts are probes before purging; no replacement split is endorsed. No new independent raw-pilot validation was performed in this step."
+}

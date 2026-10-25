@@ -1,0 +1,106 @@
+{
+  "status": "DEVELOPMENT_PREPARED_FINAL_ROWS_NOT_OPENED",
+  "adus": 114604,
+  "label_counts": {
+    "normal": 113740,
+    "command_injection": 288,
+    "response_injection": 576
+  },
+  "eligible": 12720,
+  "common_supported": 8976,
+  "feature_columns": {
+    "B": [
+      "current_function",
+      "current_unit",
+      "current_is_request",
+      "current_pdu_length",
+      "current_wire_address",
+      "current_wire_word",
+      "current_wire_quantity",
+      "current_byte_count",
+      "current_request_object_role"
+    ],
+    "D": [
+      "current_function",
+      "current_unit",
+      "current_is_request",
+      "current_pdu_length",
+      "current_wire_address",
+      "current_wire_word",
+      "current_wire_quantity",
+      "current_byte_count",
+      "current_request_object_role",
+      "earlier_observed_mode",
+      "earlier_acknowledged_setpoint",
+      "paired_request_object_role",
+      "response_minus_acknowledged_setpoint",
+      "context_available"
+    ],
+    "B-wire": [
+      "current_function",
+      "current_unit",
+      "current_is_request",
+      "current_pdu_length",
+      "current_wire_address",
+      "current_wire_word",
+      "current_wire_quantity",
+      "current_byte_count",
+      "current_request_object_role",
+      "current_numeric_tid",
+      "current_source_ip",
+      "current_destination_ip",
+      "current_source_port",
+      "current_destination_port"
+    ],
+    "D-wire": [
+      "current_function",
+      "current_unit",
+      "current_is_request",
+      "current_pdu_length",
+      "current_wire_address",
+      "current_wire_word",
+      "current_wire_quantity",
+      "current_byte_count",
+      "current_request_object_role",
+      "earlier_observed_mode",
+      "earlier_acknowledged_setpoint",
+      "paired_request_object_role",
+      "response_minus_acknowledged_setpoint",
+      "context_available",
+      "current_numeric_tid",
+      "current_source_ip",
+      "current_destination_ip",
+      "current_source_port",
+      "current_destination_port"
+    ]
+  },
+  "artifacts_bytes": 13680393,
+  "source_admission": {
+    "collection_id": "40ae7a846cce48fc8e3c52ebfca7e2cd",
+    "runs": 104,
+    "roles": {
+      "train": 32,
+      "validation": 16,
+      "final_test_repeat": 24,
+      "final_test_values": 8,
+      "final_test_map": 8,
+      "final_test_order": 8,
+      "final_test_timing": 8
+    },
+    "canonical_index_sha256": "ff74c745b5004973e516d0d05662173cd80f0768a4d941918c4b01428ac8c8cf"
+  },
+  "code_sha256": {
+    "__init__.py": "a433cf12739db2c5e9edc457486d90fd4bef0f55aa76ff0dca6809fc72ce54d2",
+    "__main__.py": "17a58ebc938a6f4053d901fc0e81d1b6aba64011d80996ecc929a783ea862bf9",
+    "experiment.py": "8012e15e2a10922e31c77d2d2aa8537d800149d456a4fa4372cc09a96c58936c",
+    "records.py": "adb2ac4fed42e09490ac7415bc7d59d19bb448654924b4c3d5007395f6f8a189"
+  },
+  "development_file_sha256": "b44593baeb3f76cb464b9821b02a3557f63c28b6bda47a452dbaedcf30b65a27",
+  "memberships_sha256": "86da7c88381c8855cdc930c5738f0b44dd2e4328b01f24454caa0e990bdd37db",
+  "definitions": {
+    "current_features": "Exact current bytes/public map only; absent response addresses remain missing",
+    "context": "Wire-derived earlier mode/read, successful FC6 ACK and request identity, max6interveningADUs",
+    "preprocessing": "Decode, preserve missingness, causal replay, explicit feature separation. RF imputer fitted later on train only.",
+    "excluded": "No scaling needed for RF; no resampling, row shuffle, oracle predictors or absolute-time features"
+  }
+}

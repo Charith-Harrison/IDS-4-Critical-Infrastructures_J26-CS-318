@@ -1,0 +1,193 @@
+{
+  "status": "FOURTEEN_ENGINEERING_PROBES_PASSED",
+  "total_messages": 33970,
+  "runs": [
+    {
+      "id": "EQ01",
+      "map": "M0",
+      "values": "V0",
+      "ordering": "O0",
+      "timing": "T0",
+      "recording_mode": "mixed",
+      "artifact_bytes": 6453686
+    },
+    {
+      "id": "EQ02",
+      "map": "M0",
+      "values": "V0",
+      "ordering": "O1",
+      "timing": "T1",
+      "recording_mode": "mixed",
+      "artifact_bytes": 7028925
+    },
+    {
+      "id": "EQ03",
+      "map": "M1",
+      "values": "V0",
+      "ordering": "O0",
+      "timing": "T1",
+      "recording_mode": "mixed",
+      "artifact_bytes": 6527716
+    },
+    {
+      "id": "EQ04",
+      "map": "M1",
+      "values": "V0",
+      "ordering": "O1",
+      "timing": "T0",
+      "recording_mode": "mixed",
+      "artifact_bytes": 6900389
+    },
+    {
+      "id": "EQ05",
+      "map": "M2",
+      "values": "V0",
+      "ordering": "O0",
+      "timing": "T0",
+      "recording_mode": "mixed",
+      "artifact_bytes": 6416337
+    },
+    {
+      "id": "EQ06",
+      "map": "M2",
+      "values": "V0",
+      "ordering": "O1",
+      "timing": "T1",
+      "recording_mode": "mixed",
+      "artifact_bytes": 7015683
+    },
+    {
+      "id": "EQ07",
+      "map": "M0",
+      "values": "V0",
+      "ordering": "O2",
+      "timing": "T0",
+      "recording_mode": "mixed",
+      "artifact_bytes": 7222624
+    },
+    {
+      "id": "EQ08",
+      "map": "M1",
+      "values": "V0",
+      "ordering": "O2",
+      "timing": "T1",
+      "recording_mode": "mixed",
+      "artifact_bytes": 7233431
+    },
+    {
+      "id": "EQ09",
+      "map": "M0",
+      "values": "V0",
+      "ordering": "O0",
+      "timing": "T2",
+      "recording_mode": "mixed",
+      "artifact_bytes": 6528433
+    },
+    {
+      "id": "EQ10",
+      "map": "M1",
+      "values": "V0",
+      "ordering": "O1",
+      "timing": "T2",
+      "recording_mode": "mixed",
+      "artifact_bytes": 6995117
+    },
+    {
+      "id": "EQ11",
+      "map": "M0",
+      "values": "V1",
+      "ordering": "O0",
+      "timing": "T0",
+      "recording_mode": "mixed",
+      "artifact_bytes": 6489617
+    },
+    {
+      "id": "EQ12",
+      "map": "M1",
+      "values": "V1",
+      "ordering": "O1",
+      "timing": "T1",
+      "recording_mode": "mixed",
+      "artifact_bytes": 6974591
+    },
+    {
+      "id": "EQ13",
+      "map": "M0",
+      "values": "V0",
+      "ordering": "O0",
+      "timing": "T0",
+      "recording_mode": "normal_only",
+      "artifact_bytes": 6365657
+    },
+    {
+      "id": "EQ14",
+      "map": "M1",
+      "values": "V0",
+      "ordering": "O1",
+      "timing": "T1",
+      "recording_mode": "normal_only",
+      "artifact_bytes": 7040530
+    }
+  ],
+  "reported_independent_audit": "PASSED",
+  "all_14_recording_artifact_hashes_reproduced": true,
+  "source_summary_sha256": "3ae23378da74dc4c24dd5db609605b36d39217e0a4dfb3b916a42b9cccdfd9ca",
+  "measured_payload_spans": [
+    {
+      "id": "EQ01",
+      "seconds": 43.148495
+    },
+    {
+      "id": "EQ02",
+      "seconds": 96.087576
+    },
+    {
+      "id": "EQ03",
+      "seconds": 88.714171
+    },
+    {
+      "id": "EQ04",
+      "seconds": 37.770669
+    },
+    {
+      "id": "EQ05",
+      "seconds": 36.252677
+    },
+    {
+      "id": "EQ06",
+      "seconds": 98.857828
+    },
+    {
+      "id": "EQ07",
+      "seconds": 37.578222
+    },
+    {
+      "id": "EQ08",
+      "seconds": 100.234943
+    },
+    {
+      "id": "EQ09",
+      "seconds": 150.983201
+    },
+    {
+      "id": "EQ10",
+      "seconds": 160.7927
+    },
+    {
+      "id": "EQ11",
+      "seconds": 34.824124
+    },
+    {
+      "id": "EQ12",
+      "seconds": 93.828624
+    },
+    {
+      "id": "EQ13",
+      "seconds": 37.581108
+    },
+    {
+      "id": "EQ14",
+      "seconds": 97.115919
+    }
+  ]
+}

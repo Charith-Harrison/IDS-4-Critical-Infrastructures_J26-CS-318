@@ -1,0 +1,1091 @@
+{
+  "scope": "Read-only original-frame byte validation of accepted event cohort; does not establish authorization, label independence or full extraction correctness.",
+  "events": 154,
+  "statuses": {
+    "matched_original_frame_payload": 154
+  },
+  "by_label": {
+    "command_injection|matched_original_frame_payload": 100,
+    "response_injection|matched_original_frame_payload": 54
+  },
+  "checks": [
+    {
+      "event_uid": "scada_ied1a:e14564",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e14565",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e14566",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e60349",
+      "label": "command_injection",
+      "parse_status": "ok",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "00050000000601050001ff00"
+    },
+    {
+      "event_uid": "scada_ied1a:e68275",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "00050000000601050001ffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e69748",
+      "label": "command_injection",
+      "parse_status": "ok",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "00050000000601050001ff00"
+    },
+    {
+      "event_uid": "scada_ied1a:e75722",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e75723",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e75724",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e77138",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e77139",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e77140",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e95415",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e95417",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e95418",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e128080",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e128081",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e128082",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e145461",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e145462",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e145463",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e156635",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e156636",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e156637",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e184778",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e184780",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e184781",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e186412",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e186413",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e186414",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e189579",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e189580",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e189581",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e195538",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e195539",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e195540",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e206750",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e206751",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e206752",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e231493",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e231494",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e231495",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e237634",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e237635",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e237636",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e256212",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e256214",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e256215",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e259191",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e259192",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e259193",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e259996",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e259997",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e259998",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e267993",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e267994",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e267995",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e306704",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e306706",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e306707",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e307509",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e307511",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e307512",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e334739",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "00050000000601050001ffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e342812",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e342813",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e342814",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e348158",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e348159",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e348160",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e348526",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e348527",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e348528",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e522582",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e522583",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e522584",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e544524",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e544525",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e544526",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e547078",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e547079",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e547080",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e553907",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e553908",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e553909",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e554840",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e554841",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e554842",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e587584",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e587585",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e587586",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e601504",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e601505",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e601506",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e602517",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e602519",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e602520",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000500000006010500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e873064",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e873065",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0005000000060105000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e873066",
+      "label": "command_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "000600000006010500080008"
+    },
+    {
+      "event_uid": "ied_ied1b:e98264",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "1d3d000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e116751",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "4148000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e166273",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "a1db000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e169459",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "a814000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e187576",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "cb73000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e190412",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "d0fd000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e273318",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "728e000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e276841",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "796f000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e278841",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "7d57000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e291307",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "9586000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e307407",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "b4e3000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e326081",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "d958000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e359420",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "1a71000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e372920",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "34c9000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e441306",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "ba0f000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e455100",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "d4f5000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e462769",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "e3ee000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e469126",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "f059000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e487367",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "13f5000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e499474",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "2b79000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e566238",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "adb1000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e579141",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "c6c5000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e591270",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "de74000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e603040",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "f560000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e633079",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "300a000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e690822",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "a0b0000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e705533",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "bd6a000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e725048",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "e386000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e727522",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "e85b000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e736372",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "f9a2000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e744872",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "0a3a000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e759326",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "266a000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e764398",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "304f000000040102abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e774176",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "4360000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e785958",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "5a60000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e829507",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "af33000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e857725",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "e63b000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e863851",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "f232000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e874464",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "06ec000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e887183",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "1fbe000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e910266",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "4cbb000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e927346",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "6e09000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e938079",
+      "label": "response_injection",
+      "parse_status": "ok",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "82fd00000005010302abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e953634",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "a152000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e960608",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "aedf000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e985968",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "e063000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e989252",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "e6cd000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e1012687",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "147e000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e1014681",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "1863000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e1018095",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "1f0e000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e1044490",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "527c000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e1049866",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "5cfc000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e1110994",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "d423000000040101abcd"
+    },
+    {
+      "event_uid": "ied_ied1b:e1115827",
+      "label": "response_injection",
+      "parse_status": "malformed",
+      "source_byte_check": "matched_original_frame_payload",
+      "adu_hex": "dd93000000040101abcd"
+    }
+  ]
+}

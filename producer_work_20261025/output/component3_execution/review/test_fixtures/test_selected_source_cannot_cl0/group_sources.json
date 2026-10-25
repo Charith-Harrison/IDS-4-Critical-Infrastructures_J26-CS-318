@@ -1,0 +1,1 @@
+{"groups": [{"recording_id": "first", "views": [{"chunks": [{"path": "a.pcap"}]}]}, {"recording_id": "second", "views": [{"chunks": [{"path": "b.pcap"}]}]}], "sampled_duplicate_observations": [{"sha256_frame": "same frame content", "observations": [{"path": "a.pcap", "frame": 1, "ts_us": 100}, {"path": "b.pcap", "frame": 1, "ts_us": 100000000}]}]}

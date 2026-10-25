@@ -1,0 +1,39 @@
+{
+  "attempt": "MX087-20261025T063952Z-1fa45191",
+  "validation_status": "FAILED",
+  "errors": [
+    "ValidationError: Application timing not one outstanding transaction"
+  ],
+  "anomalies": [
+    {
+      "previous_event": "MX087-20261025T063952Z-1fa45191:e752",
+      "event": "MX087-20261025T063952Z-1fa45191:e753",
+      "previous_timestamp_ns": 1792910398265844663,
+      "timestamp_ns": 1792910398264552417,
+      "backward_ns": 1292246
+    }
+  ],
+  "completed_receipts": 86,
+  "reported_kernel_drops": 0,
+  "windows_time_service_at_check": "STOPPED (manual start); query status returned service not started",
+  "root_cause_identified": false,
+  "clock_or_system_settings_changed": false,
+  "original_attempt_files_unchanged": true,
+  "original_attempt_sha256": {
+    "application_ledger.jsonl": "13c16e8e8669b2a3c3551434efa73735ed3ae9cf95bdf8e2fda33f1b0dc98f02",
+    "attempt_disposition.json": "880d96b3103c8767dfa767c0ffdee10b0cc26883a9926a18ac939891293e0cc4",
+    "attempt_request.json": "b615cfa1cb1dde2e1c979edc954f5f0a2670fc867e40db2cbd04ed2bbd543564",
+    "capture.log": "1ff9f56aca5d851509889f17177a8d13ba44e3eb6dbb9170a7b056170e6c26b2",
+    "capture.pcap": "9b32d0276b4b1312f66f7be5b67d155fcb8ac8d584b499dfcd0950b25827f1c0",
+    "docker_output.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host_execution.json": "ccb6d2e724fa9933aae22f2e436d35e0000919deb103478eff208c7c16a22d44",
+    "intervention_audit.jsonl": "b8661c1caf114e34f9c9c82230e946f06f11ac79f0b60deec5b255540547eb39",
+    "planned_run.json": "a562be8dd5f58a4954a120df8e7d2de2743365d57a22aeb1c1c186f4f46dd9ba",
+    "progress.json": "d6bda2ad701c9959d5471aac468aae0b2ad8505592c9a2579ce4f467b7e9bc92",
+    "run_manifest.json": "32d5d50313c889b2e822fc98830713da50fe57b813d65a11975c992de6da3a31",
+    "scenario_plan.json": "fee11b9e03af233a90a98cefe4a4da66708a7a22ef9915f4c917cb87d288f80c",
+    "server_audit.jsonl": "02b44dd6671d19471045b7f8ab60848cb8be223b46daf4ec95196c6c5bd61490",
+    "validation_report.json": "e418939d3a26fdb6bbea8fda48aaa76ffdae6cf3c3f83df036fe3c1bbc8c352a"
+  },
+  "decision": "Preserve and exclude failed attempt. One explicit fresh retry remains permitted by the frozen retry policy; no timestamp rewriting, source modification or automatic retry loop."
+}

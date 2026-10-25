@@ -1,0 +1,157 @@
+{
+  "source": "G:\\modbus cic 2023\\Modbus Dataset\\benign\\scada-hmi\\scada-hmi-network-capture\\veth5bbeaa2-normal-13.pcap",
+  "requested_frames": [
+    3,
+    5,
+    14924,
+    14926
+  ],
+  "limitations": "Bounded selected-frame sample only; no TCP reassembly, attack labels or coverage claims.",
+  "linktype": 1,
+  "timestamp_ticks_per_second": 1000000,
+  "samples": [
+    {
+      "frame": 3,
+      "epoch_seconds": 1674481924,
+      "fraction_ticks": 4201,
+      "captured_len": 78,
+      "wire_len": 78,
+      "decoded": {
+        "src_ip": "185.175.0.3",
+        "dst_ip": "185.175.0.5",
+        "src_port": 34546,
+        "dst_port": 502,
+        "seq": 2788960816,
+        "ack": 3299932555,
+        "tcp_flags": 24,
+        "tcp_payload_bytes": 12,
+        "tcp_payload_hex": "e07800000006010300230001",
+        "direction_inference": "request_by_port",
+        "adus_without_reassembly": [
+          {
+            "payload_offset": 0,
+            "transaction_id": 57464,
+            "protocol_id": 0,
+            "mbap_length": 6,
+            "unit_id": 1,
+            "complete_in_payload": true,
+            "pdu_hex": "0300230001",
+            "raw_function": 3,
+            "base_function": 3,
+            "exception": false,
+            "requested_start": 35,
+            "requested_quantity": 1
+          }
+        ]
+      }
+    },
+    {
+      "frame": 5,
+      "epoch_seconds": 1674481924,
+      "fraction_ticks": 4676,
+      "captured_len": 77,
+      "wire_len": 77,
+      "decoded": {
+        "src_ip": "185.175.0.5",
+        "dst_ip": "185.175.0.3",
+        "src_port": 502,
+        "dst_port": 34546,
+        "seq": 3299932555,
+        "ack": 2788960828,
+        "tcp_flags": 24,
+        "tcp_payload_bytes": 11,
+        "tcp_payload_hex": "e078000000050103020009",
+        "direction_inference": "response_by_port",
+        "adus_without_reassembly": [
+          {
+            "payload_offset": 0,
+            "transaction_id": 57464,
+            "protocol_id": 0,
+            "mbap_length": 5,
+            "unit_id": 1,
+            "complete_in_payload": true,
+            "pdu_hex": "03020009",
+            "raw_function": 3,
+            "base_function": 3,
+            "exception": false,
+            "returned_byte_count": 2,
+            "returned_data_hex": "0009",
+            "returned_register_words": [
+              9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "frame": 14924,
+      "epoch_seconds": 1674482417,
+      "fraction_ticks": 866921,
+      "captured_len": 78,
+      "wire_len": 78,
+      "decoded": {
+        "src_ip": "185.175.0.3",
+        "dst_ip": "185.175.0.5",
+        "src_port": 35564,
+        "dst_port": 502,
+        "seq": 1502220366,
+        "ack": 1378062591,
+        "tcp_flags": 24,
+        "tcp_payload_bytes": 12,
+        "tcp_payload_hex": "e25f000000060105000fff00",
+        "direction_inference": "request_by_port",
+        "adus_without_reassembly": [
+          {
+            "payload_offset": 0,
+            "transaction_id": 57951,
+            "protocol_id": 0,
+            "mbap_length": 6,
+            "unit_id": 1,
+            "complete_in_payload": true,
+            "pdu_hex": "05000fff00",
+            "raw_function": 5,
+            "base_function": 5,
+            "exception": false,
+            "start": 15,
+            "write_or_echo_raw_word": 65280
+          }
+        ]
+      }
+    },
+    {
+      "frame": 14926,
+      "epoch_seconds": 1674482417,
+      "fraction_ticks": 867052,
+      "captured_len": 78,
+      "wire_len": 78,
+      "decoded": {
+        "src_ip": "185.175.0.5",
+        "dst_ip": "185.175.0.3",
+        "src_port": 502,
+        "dst_port": 35564,
+        "seq": 1378062591,
+        "ack": 1502220378,
+        "tcp_flags": 24,
+        "tcp_payload_bytes": 12,
+        "tcp_payload_hex": "e25f000000060105000fff00",
+        "direction_inference": "response_by_port",
+        "adus_without_reassembly": [
+          {
+            "payload_offset": 0,
+            "transaction_id": 57951,
+            "protocol_id": 0,
+            "mbap_length": 6,
+            "unit_id": 1,
+            "complete_in_payload": true,
+            "pdu_hex": "05000fff00",
+            "raw_function": 5,
+            "base_function": 5,
+            "exception": false,
+            "start": 15,
+            "write_or_echo_raw_word": 65280
+          }
+        ]
+      }
+    }
+  ]
+}

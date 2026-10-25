@@ -1,3 +1,5 @@
+> **Current Component3 research (25 October 2026):** The verified104-run controlled-testbed pipeline and locked results are in [component3_model_pipeline/v1_20261025](component3_model_pipeline/v1_20261025/README.md). Read [RESULTS.md](component3_model_pipeline/v1_20261025/RESULTS.md) and [the producer-work index](PRODUCER_WORK_INDEX.md). The binary CSV workflow below is historical and must not be used as the new experiment's training/evaluation pipeline.
+
 # Command and Response Injection Detection in Modbus/TCP Using Context-Aware Command Analysis
 
 **J26-CS-318 — Preliminary Binary Injection Detection Model (approximately 70% implementation).**

@@ -1,0 +1,8 @@
+outputs
+__pycache__
+**/__pycache__
+*.zip
+.git
+docs
+*.md
+*.ps1

@@ -1,0 +1,62 @@
+[
+  {
+    "event_id": "MX084-20261025T063001Z-dfeac789:e2388",
+    "run_id": "MX084-20261025T063001Z-dfeac789",
+    "adu_hex": "00050000000601050001ff00",
+    "pdu_hex": "050001ff00",
+    "label": "normal",
+    "task": "command",
+    "earlier_observed_mode": 1.0,
+    "earlier_acknowledged_setpoint": null,
+    "response_minus_acknowledged_setpoint": null,
+    "mode_anchor_event_id": "MX084-20261025T063001Z-dfeac789:e2383",
+    "setpoint_anchor_event_id": null,
+    "paired_request_event_id": null,
+    "case": "normal"
+  },
+  {
+    "event_id": "MX001-20261025T050857Z-878e257e:e790",
+    "run_id": "MX001-20261025T050857Z-878e257e",
+    "adu_hex": "00050000000601050001ff00",
+    "pdu_hex": "050001ff00",
+    "label": "command_injection",
+    "task": "command",
+    "earlier_observed_mode": 0.0,
+    "earlier_acknowledged_setpoint": null,
+    "response_minus_acknowledged_setpoint": null,
+    "mode_anchor_event_id": "MX001-20261025T050857Z-878e257e:e787",
+    "setpoint_anchor_event_id": null,
+    "paired_request_event_id": null,
+    "case": "injection"
+  },
+  {
+    "event_id": "MX001-20261025T050857Z-878e257e:e1519",
+    "run_id": "MX001-20261025T050857Z-878e257e",
+    "adu_hex": "0005000000050103020039",
+    "pdu_hex": "03020039",
+    "label": "normal",
+    "task": "response",
+    "earlier_observed_mode": null,
+    "earlier_acknowledged_setpoint": 57.0,
+    "response_minus_acknowledged_setpoint": 0.0,
+    "mode_anchor_event_id": null,
+    "setpoint_anchor_event_id": "MX001-20261025T050857Z-878e257e:e1515",
+    "paired_request_event_id": "MX001-20261025T050857Z-878e257e:e1518",
+    "case": "normal"
+  },
+  {
+    "event_id": "MX001-20261025T050857Z-878e257e:e31",
+    "run_id": "MX001-20261025T050857Z-878e257e",
+    "adu_hex": "0005000000050103020039",
+    "pdu_hex": "03020039",
+    "label": "response_injection",
+    "task": "response",
+    "earlier_observed_mode": null,
+    "earlier_acknowledged_setpoint": 22.0,
+    "response_minus_acknowledged_setpoint": 35.0,
+    "mode_anchor_event_id": null,
+    "setpoint_anchor_event_id": "MX001-20261025T050857Z-878e257e:e27",
+    "paired_request_event_id": "MX001-20261025T050857Z-878e257e:e30",
+    "case": "injection"
+  }
+]

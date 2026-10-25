@@ -1,0 +1,2353 @@
+{
+  "all_adus": 19136,
+  "raw_label_counts": {
+    "normal": 18920,
+    "response_injection": 144,
+    "command_injection": 72
+  },
+  "task_eligible": 2120,
+  "common_supported": 1496,
+  "context_abstentions": 624,
+  "out_of_scope": 17016,
+  "methods": {
+    "A": {
+      "common_cohort": {
+        "support": 1496,
+        "labels": [
+          "normal",
+          "command_injection",
+          "response_injection"
+        ],
+        "confusion": [
+          [
+            1280,
+            0,
+            0
+          ],
+          [
+            72,
+            0,
+            0
+          ],
+          [
+            144,
+            0,
+            0
+          ]
+        ],
+        "macro_f1": 0.3073967339097022,
+        "per_class": {
+          "normal": {
+            "support": 1280,
+            "precision": 0.8556149732620321,
+            "recall": 1.0,
+            "f1": 0.9221902017291066
+          },
+          "command_injection": {
+            "support": 72,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "response_injection": {
+            "support": 144,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "all_available_cohort": {
+        "support": 2120,
+        "labels": [
+          "normal",
+          "command_injection",
+          "response_injection"
+        ],
+        "confusion": [
+          [
+            1904,
+            0,
+            0
+          ],
+          [
+            72,
+            0,
+            0
+          ],
+          [
+            144,
+            0,
+            0
+          ]
+        ],
+        "macro_f1": 0.31544068919814444,
+        "per_class": {
+          "normal": {
+            "support": 1904,
+            "precision": 0.8981132075471698,
+            "recall": 1.0,
+            "f1": 0.9463220675944334
+          },
+          "command_injection": {
+            "support": 72,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "response_injection": {
+            "support": 144,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "scored": 2120,
+      "abstained": 0,
+      "tasks": {
+        "command": {
+          "support": 680,
+          "labels": [
+            "normal",
+            "command_injection",
+            "response_injection"
+          ],
+          "confusion": [
+            [
+              608,
+              0,
+              0
+            ],
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "macro_f1": 0.3146997929606625,
+          "per_class": {
+            "normal": {
+              "support": 608,
+              "precision": 0.8941176470588236,
+              "recall": 1.0,
+              "f1": 0.9440993788819876
+            },
+            "command_injection": {
+              "support": 72,
+              "precision": null,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "response_injection": {
+              "support": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            }
+          },
+          "attack_f1": 0.0
+        },
+        "response": {
+          "support": 816,
+          "labels": [
+            "normal",
+            "command_injection",
+            "response_injection"
+          ],
+          "confusion": [
+            [
+              672,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              144,
+              0,
+              0
+            ]
+          ],
+          "macro_f1": 0.3010752688172043,
+          "per_class": {
+            "normal": {
+              "support": 672,
+              "precision": 0.8235294117647058,
+              "recall": 1.0,
+              "f1": 0.9032258064516129
+            },
+            "command_injection": {
+              "support": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            },
+            "response_injection": {
+              "support": 144,
+              "precision": null,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "attack_f1": 0.0
+        }
+      },
+      "false_alarms": {
+        "normal_only": {
+          "on_scored_normal": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "per_all_normal_traffic": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "scored_normal_coverage": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          }
+        },
+        "mixed": {
+          "on_scored_normal": {
+            "count": 0,
+            "denominator": 1904,
+            "rate": 0.0
+          },
+          "per_all_normal_traffic": {
+            "count": 0,
+            "denominator": 18920,
+            "rate": 0.0
+          },
+          "scored_normal_coverage": {
+            "count": 1904,
+            "denominator": 18920,
+            "rate": 0.10063424947145877
+          }
+        }
+      }
+    },
+    "C": {
+      "common_cohort": {
+        "support": 1496,
+        "labels": [
+          "normal",
+          "command_injection",
+          "response_injection"
+        ],
+        "confusion": [
+          [
+            1280,
+            0,
+            0
+          ],
+          [
+            0,
+            72,
+            0
+          ],
+          [
+            0,
+            0,
+            144
+          ]
+        ],
+        "macro_f1": 1.0,
+        "per_class": {
+          "normal": {
+            "support": 1280,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "command_injection": {
+            "support": 72,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "response_injection": {
+            "support": 144,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "all_available_cohort": {
+        "support": 1496,
+        "labels": [
+          "normal",
+          "command_injection",
+          "response_injection"
+        ],
+        "confusion": [
+          [
+            1280,
+            0,
+            0
+          ],
+          [
+            0,
+            72,
+            0
+          ],
+          [
+            0,
+            0,
+            144
+          ]
+        ],
+        "macro_f1": 1.0,
+        "per_class": {
+          "normal": {
+            "support": 1280,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "command_injection": {
+            "support": 72,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "response_injection": {
+            "support": 144,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "scored": 1496,
+      "abstained": 624,
+      "tasks": {
+        "command": {
+          "support": 680,
+          "labels": [
+            "normal",
+            "command_injection",
+            "response_injection"
+          ],
+          "confusion": [
+            [
+              608,
+              0,
+              0
+            ],
+            [
+              0,
+              72,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "macro_f1": 0.6666666666666666,
+          "per_class": {
+            "normal": {
+              "support": 608,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "command_injection": {
+              "support": 72,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "response_injection": {
+              "support": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            }
+          },
+          "attack_f1": 1.0
+        },
+        "response": {
+          "support": 816,
+          "labels": [
+            "normal",
+            "command_injection",
+            "response_injection"
+          ],
+          "confusion": [
+            [
+              672,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              144
+            ]
+          ],
+          "macro_f1": 0.6666666666666666,
+          "per_class": {
+            "normal": {
+              "support": 672,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "command_injection": {
+              "support": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            },
+            "response_injection": {
+              "support": 144,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "attack_f1": 1.0
+        }
+      },
+      "false_alarms": {
+        "normal_only": {
+          "on_scored_normal": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "per_all_normal_traffic": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "scored_normal_coverage": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          }
+        },
+        "mixed": {
+          "on_scored_normal": {
+            "count": 0,
+            "denominator": 1280,
+            "rate": 0.0
+          },
+          "per_all_normal_traffic": {
+            "count": 0,
+            "denominator": 18920,
+            "rate": 0.0
+          },
+          "scored_normal_coverage": {
+            "count": 1280,
+            "denominator": 18920,
+            "rate": 0.06765327695560254
+          }
+        }
+      }
+    },
+    "B": {
+      "common_cohort": {
+        "support": 1496,
+        "labels": [
+          "normal",
+          "command_injection",
+          "response_injection"
+        ],
+        "confusion": [
+          [
+            1280,
+            0,
+            0
+          ],
+          [
+            72,
+            0,
+            0
+          ],
+          [
+            144,
+            0,
+            0
+          ]
+        ],
+        "macro_f1": 0.3073967339097022,
+        "per_class": {
+          "normal": {
+            "support": 1280,
+            "precision": 0.8556149732620321,
+            "recall": 1.0,
+            "f1": 0.9221902017291066
+          },
+          "command_injection": {
+            "support": 72,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "response_injection": {
+            "support": 144,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "all_available_cohort": {
+        "support": 2120,
+        "labels": [
+          "normal",
+          "command_injection",
+          "response_injection"
+        ],
+        "confusion": [
+          [
+            1904,
+            0,
+            0
+          ],
+          [
+            72,
+            0,
+            0
+          ],
+          [
+            144,
+            0,
+            0
+          ]
+        ],
+        "macro_f1": 0.31544068919814444,
+        "per_class": {
+          "normal": {
+            "support": 1904,
+            "precision": 0.8981132075471698,
+            "recall": 1.0,
+            "f1": 0.9463220675944334
+          },
+          "command_injection": {
+            "support": 72,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "response_injection": {
+            "support": 144,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "scored": 2120,
+      "abstained": 0,
+      "tasks": {
+        "command": {
+          "support": 680,
+          "labels": [
+            "normal",
+            "command_injection",
+            "response_injection"
+          ],
+          "confusion": [
+            [
+              608,
+              0,
+              0
+            ],
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "macro_f1": 0.3146997929606625,
+          "per_class": {
+            "normal": {
+              "support": 608,
+              "precision": 0.8941176470588236,
+              "recall": 1.0,
+              "f1": 0.9440993788819876
+            },
+            "command_injection": {
+              "support": 72,
+              "precision": null,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "response_injection": {
+              "support": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            }
+          },
+          "attack_f1": 0.0
+        },
+        "response": {
+          "support": 816,
+          "labels": [
+            "normal",
+            "command_injection",
+            "response_injection"
+          ],
+          "confusion": [
+            [
+              672,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              144,
+              0,
+              0
+            ]
+          ],
+          "macro_f1": 0.3010752688172043,
+          "per_class": {
+            "normal": {
+              "support": 672,
+              "precision": 0.8235294117647058,
+              "recall": 1.0,
+              "f1": 0.9032258064516129
+            },
+            "command_injection": {
+              "support": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            },
+            "response_injection": {
+              "support": 144,
+              "precision": null,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "attack_f1": 0.0
+        }
+      },
+      "false_alarms": {
+        "normal_only": {
+          "on_scored_normal": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "per_all_normal_traffic": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "scored_normal_coverage": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          }
+        },
+        "mixed": {
+          "on_scored_normal": {
+            "count": 0,
+            "denominator": 1904,
+            "rate": 0.0
+          },
+          "per_all_normal_traffic": {
+            "count": 0,
+            "denominator": 18920,
+            "rate": 0.0
+          },
+          "scored_normal_coverage": {
+            "count": 1904,
+            "denominator": 18920,
+            "rate": 0.10063424947145877
+          }
+        }
+      }
+    },
+    "D": {
+      "common_cohort": {
+        "support": 1496,
+        "labels": [
+          "normal",
+          "command_injection",
+          "response_injection"
+        ],
+        "confusion": [
+          [
+            1280,
+            0,
+            0
+          ],
+          [
+            0,
+            72,
+            0
+          ],
+          [
+            0,
+            0,
+            144
+          ]
+        ],
+        "macro_f1": 1.0,
+        "per_class": {
+          "normal": {
+            "support": 1280,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "command_injection": {
+            "support": 72,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "response_injection": {
+            "support": 144,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "all_available_cohort": {
+        "support": 1496,
+        "labels": [
+          "normal",
+          "command_injection",
+          "response_injection"
+        ],
+        "confusion": [
+          [
+            1280,
+            0,
+            0
+          ],
+          [
+            0,
+            72,
+            0
+          ],
+          [
+            0,
+            0,
+            144
+          ]
+        ],
+        "macro_f1": 1.0,
+        "per_class": {
+          "normal": {
+            "support": 1280,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "command_injection": {
+            "support": 72,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "response_injection": {
+            "support": 144,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "scored": 1496,
+      "abstained": 624,
+      "tasks": {
+        "command": {
+          "support": 680,
+          "labels": [
+            "normal",
+            "command_injection",
+            "response_injection"
+          ],
+          "confusion": [
+            [
+              608,
+              0,
+              0
+            ],
+            [
+              0,
+              72,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "macro_f1": 0.6666666666666666,
+          "per_class": {
+            "normal": {
+              "support": 608,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "command_injection": {
+              "support": 72,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "response_injection": {
+              "support": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            }
+          },
+          "attack_f1": 1.0
+        },
+        "response": {
+          "support": 816,
+          "labels": [
+            "normal",
+            "command_injection",
+            "response_injection"
+          ],
+          "confusion": [
+            [
+              672,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              144
+            ]
+          ],
+          "macro_f1": 0.6666666666666666,
+          "per_class": {
+            "normal": {
+              "support": 672,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "command_injection": {
+              "support": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            },
+            "response_injection": {
+              "support": 144,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "attack_f1": 1.0
+        }
+      },
+      "false_alarms": {
+        "normal_only": {
+          "on_scored_normal": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "per_all_normal_traffic": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "scored_normal_coverage": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          }
+        },
+        "mixed": {
+          "on_scored_normal": {
+            "count": 0,
+            "denominator": 1280,
+            "rate": 0.0
+          },
+          "per_all_normal_traffic": {
+            "count": 0,
+            "denominator": 18920,
+            "rate": 0.0
+          },
+          "scored_normal_coverage": {
+            "count": 1280,
+            "denominator": 18920,
+            "rate": 0.06765327695560254
+          }
+        }
+      }
+    },
+    "B-wire": {
+      "common_cohort": {
+        "support": 1496,
+        "labels": [
+          "normal",
+          "command_injection",
+          "response_injection"
+        ],
+        "confusion": [
+          [
+            1280,
+            0,
+            0
+          ],
+          [
+            72,
+            0,
+            0
+          ],
+          [
+            144,
+            0,
+            0
+          ]
+        ],
+        "macro_f1": 0.3073967339097022,
+        "per_class": {
+          "normal": {
+            "support": 1280,
+            "precision": 0.8556149732620321,
+            "recall": 1.0,
+            "f1": 0.9221902017291066
+          },
+          "command_injection": {
+            "support": 72,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "response_injection": {
+            "support": 144,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "all_available_cohort": {
+        "support": 2120,
+        "labels": [
+          "normal",
+          "command_injection",
+          "response_injection"
+        ],
+        "confusion": [
+          [
+            1904,
+            0,
+            0
+          ],
+          [
+            72,
+            0,
+            0
+          ],
+          [
+            144,
+            0,
+            0
+          ]
+        ],
+        "macro_f1": 0.31544068919814444,
+        "per_class": {
+          "normal": {
+            "support": 1904,
+            "precision": 0.8981132075471698,
+            "recall": 1.0,
+            "f1": 0.9463220675944334
+          },
+          "command_injection": {
+            "support": 72,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "response_injection": {
+            "support": 144,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "scored": 2120,
+      "abstained": 0,
+      "tasks": {
+        "command": {
+          "support": 680,
+          "labels": [
+            "normal",
+            "command_injection",
+            "response_injection"
+          ],
+          "confusion": [
+            [
+              608,
+              0,
+              0
+            ],
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "macro_f1": 0.3146997929606625,
+          "per_class": {
+            "normal": {
+              "support": 608,
+              "precision": 0.8941176470588236,
+              "recall": 1.0,
+              "f1": 0.9440993788819876
+            },
+            "command_injection": {
+              "support": 72,
+              "precision": null,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "response_injection": {
+              "support": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            }
+          },
+          "attack_f1": 0.0
+        },
+        "response": {
+          "support": 816,
+          "labels": [
+            "normal",
+            "command_injection",
+            "response_injection"
+          ],
+          "confusion": [
+            [
+              672,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              144,
+              0,
+              0
+            ]
+          ],
+          "macro_f1": 0.3010752688172043,
+          "per_class": {
+            "normal": {
+              "support": 672,
+              "precision": 0.8235294117647058,
+              "recall": 1.0,
+              "f1": 0.9032258064516129
+            },
+            "command_injection": {
+              "support": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            },
+            "response_injection": {
+              "support": 144,
+              "precision": null,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "attack_f1": 0.0
+        }
+      },
+      "false_alarms": {
+        "normal_only": {
+          "on_scored_normal": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "per_all_normal_traffic": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "scored_normal_coverage": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          }
+        },
+        "mixed": {
+          "on_scored_normal": {
+            "count": 0,
+            "denominator": 1904,
+            "rate": 0.0
+          },
+          "per_all_normal_traffic": {
+            "count": 0,
+            "denominator": 18920,
+            "rate": 0.0
+          },
+          "scored_normal_coverage": {
+            "count": 1904,
+            "denominator": 18920,
+            "rate": 0.10063424947145877
+          }
+        }
+      }
+    },
+    "D-wire": {
+      "common_cohort": {
+        "support": 1496,
+        "labels": [
+          "normal",
+          "command_injection",
+          "response_injection"
+        ],
+        "confusion": [
+          [
+            1280,
+            0,
+            0
+          ],
+          [
+            0,
+            72,
+            0
+          ],
+          [
+            0,
+            0,
+            144
+          ]
+        ],
+        "macro_f1": 1.0,
+        "per_class": {
+          "normal": {
+            "support": 1280,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "command_injection": {
+            "support": 72,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "response_injection": {
+            "support": 144,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "all_available_cohort": {
+        "support": 1496,
+        "labels": [
+          "normal",
+          "command_injection",
+          "response_injection"
+        ],
+        "confusion": [
+          [
+            1280,
+            0,
+            0
+          ],
+          [
+            0,
+            72,
+            0
+          ],
+          [
+            0,
+            0,
+            144
+          ]
+        ],
+        "macro_f1": 1.0,
+        "per_class": {
+          "normal": {
+            "support": 1280,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "command_injection": {
+            "support": 72,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "response_injection": {
+            "support": 144,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "scored": 1496,
+      "abstained": 624,
+      "tasks": {
+        "command": {
+          "support": 680,
+          "labels": [
+            "normal",
+            "command_injection",
+            "response_injection"
+          ],
+          "confusion": [
+            [
+              608,
+              0,
+              0
+            ],
+            [
+              0,
+              72,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "macro_f1": 0.6666666666666666,
+          "per_class": {
+            "normal": {
+              "support": 608,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "command_injection": {
+              "support": 72,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "response_injection": {
+              "support": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            }
+          },
+          "attack_f1": 1.0
+        },
+        "response": {
+          "support": 816,
+          "labels": [
+            "normal",
+            "command_injection",
+            "response_injection"
+          ],
+          "confusion": [
+            [
+              672,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              144
+            ]
+          ],
+          "macro_f1": 0.6666666666666666,
+          "per_class": {
+            "normal": {
+              "support": 672,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "command_injection": {
+              "support": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            },
+            "response_injection": {
+              "support": 144,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "attack_f1": 1.0
+        }
+      },
+      "false_alarms": {
+        "normal_only": {
+          "on_scored_normal": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "per_all_normal_traffic": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "scored_normal_coverage": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          }
+        },
+        "mixed": {
+          "on_scored_normal": {
+            "count": 0,
+            "denominator": 1280,
+            "rate": 0.0
+          },
+          "per_all_normal_traffic": {
+            "count": 0,
+            "denominator": 18920,
+            "rate": 0.0
+          },
+          "scored_normal_coverage": {
+            "count": 1280,
+            "denominator": 18920,
+            "rate": 0.06765327695560254
+          }
+        }
+      }
+    }
+  },
+  "paired_run_uncertainty": {
+    "run_scores": [
+      {
+        "run_id": "MX049-20261025T055044Z-0521338c",
+        "support": 175,
+        "recording_mode": "mixed",
+        "class_support": {
+          "normal": 148,
+          "response_injection": 18,
+          "command_injection": 9
+        },
+        "confusion": {
+          "A": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "C": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ],
+          "B": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "D": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ],
+          "B-wire": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "D-wire": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ]
+        },
+        "A": 0.30546955624355004,
+        "C": 1.0,
+        "B": 0.30546955624355004,
+        "D": 1.0,
+        "B-wire": 0.30546955624355004,
+        "D-wire": 1.0
+      },
+      {
+        "run_id": "MX050-20261025T055104Z-d555fdc4",
+        "support": 175,
+        "recording_mode": "mixed",
+        "class_support": {
+          "normal": 148,
+          "command_injection": 9,
+          "response_injection": 18
+        },
+        "confusion": {
+          "A": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "C": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ],
+          "B": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "D": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ],
+          "B-wire": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "D-wire": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ]
+        },
+        "A": 0.30546955624355004,
+        "C": 1.0,
+        "B": 0.30546955624355004,
+        "D": 1.0,
+        "B-wire": 0.30546955624355004,
+        "D-wire": 1.0
+      },
+      {
+        "run_id": "MX051-20261025T055204Z-4bca4444",
+        "support": 199,
+        "recording_mode": "mixed",
+        "class_support": {
+          "normal": 172,
+          "response_injection": 18,
+          "command_injection": 9
+        },
+        "confusion": {
+          "A": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "C": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ],
+          "B": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "D": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ],
+          "B-wire": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "D-wire": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ]
+        },
+        "A": 0.3090745732255166,
+        "C": 1.0,
+        "B": 0.3090745732255166,
+        "D": 1.0,
+        "B-wire": 0.3090745732255166,
+        "D-wire": 1.0
+      },
+      {
+        "run_id": "MX052-20261025T055227Z-6eba6331",
+        "support": 199,
+        "recording_mode": "mixed",
+        "class_support": {
+          "normal": 172,
+          "response_injection": 18,
+          "command_injection": 9
+        },
+        "confusion": {
+          "A": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "C": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ],
+          "B": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "D": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ],
+          "B-wire": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "D-wire": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ]
+        },
+        "A": 0.3090745732255166,
+        "C": 1.0,
+        "B": 0.3090745732255166,
+        "D": 1.0,
+        "B-wire": 0.3090745732255166,
+        "D-wire": 1.0
+      },
+      {
+        "run_id": "MX053-20261025T055331Z-61748e62",
+        "support": 175,
+        "recording_mode": "mixed",
+        "class_support": {
+          "normal": 148,
+          "command_injection": 9,
+          "response_injection": 18
+        },
+        "confusion": {
+          "A": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "C": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ],
+          "B": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "D": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ],
+          "B-wire": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "D-wire": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ]
+        },
+        "A": 0.30546955624355004,
+        "C": 1.0,
+        "B": 0.30546955624355004,
+        "D": 1.0,
+        "B-wire": 0.30546955624355004,
+        "D-wire": 1.0
+      },
+      {
+        "run_id": "MX054-20261025T055351Z-a66b9295",
+        "support": 175,
+        "recording_mode": "mixed",
+        "class_support": {
+          "normal": 148,
+          "command_injection": 9,
+          "response_injection": 18
+        },
+        "confusion": {
+          "A": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "C": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ],
+          "B": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "D": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ],
+          "B-wire": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "D-wire": [
+            [
+              148,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ]
+        },
+        "A": 0.30546955624355004,
+        "C": 1.0,
+        "B": 0.30546955624355004,
+        "D": 1.0,
+        "B-wire": 0.30546955624355004,
+        "D-wire": 1.0
+      },
+      {
+        "run_id": "MX055-20261025T055450Z-bfa2b28d",
+        "support": 199,
+        "recording_mode": "mixed",
+        "class_support": {
+          "normal": 172,
+          "response_injection": 18,
+          "command_injection": 9
+        },
+        "confusion": {
+          "A": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "C": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ],
+          "B": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "D": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ],
+          "B-wire": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "D-wire": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ]
+        },
+        "A": 0.3090745732255166,
+        "C": 1.0,
+        "B": 0.3090745732255166,
+        "D": 1.0,
+        "B-wire": 0.3090745732255166,
+        "D-wire": 1.0
+      },
+      {
+        "run_id": "MX056-20261025T055513Z-32236c08",
+        "support": 199,
+        "recording_mode": "mixed",
+        "class_support": {
+          "normal": 172,
+          "command_injection": 9,
+          "response_injection": 18
+        },
+        "confusion": {
+          "A": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "C": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ],
+          "B": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "D": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ],
+          "B-wire": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              0,
+              0
+            ]
+          ],
+          "D-wire": [
+            [
+              172,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              18
+            ]
+          ]
+        },
+        "A": 0.3090745732255166,
+        "C": 1.0,
+        "B": 0.3090745732255166,
+        "D": 1.0,
+        "B-wire": 0.3090745732255166,
+        "D-wire": 1.0
+      }
+    ],
+    "pooled_D_minus_B_macro_f1": 0.6926032660902979,
+    "paired_run_bootstrap_95_percent_interval": [
+      0.6913242009132421,
+      0.6940222897669706
+    ],
+    "replications": 8,
+    "limitation": "Whole-run bootstrap stratified by mixed/normal-only, not industrial-campaign confidence. Per-run fixed-three-class macro scores and their actual class support are shown separately."
+  }
+}

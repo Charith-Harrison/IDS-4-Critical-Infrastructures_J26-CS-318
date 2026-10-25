@@ -1,0 +1,5 @@
+
+
+# Frozen imported evidence/source and locked experiment hashes require exact bytes
+/producer_work_20261025/** -text whitespace=cr-at-eol
+/component3_model_pipeline/v1_20261025/** -text whitespace=cr-at-eol

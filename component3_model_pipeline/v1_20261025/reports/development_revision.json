@@ -1,0 +1,7 @@
+{
+  "status": "DEVELOPMENT_ONLY_REVISION_BEFORE_FINAL_ACCESS",
+  "reason": "All-normal protocol comparator outperformed class-balanced current-message RF on validation; expand equally to balanced and unweighted RF candidates for all4learners.",
+  "old_artifacts": "development_balanced_only",
+  "final_payloads_accessed": false,
+  "preserved_original_selection": true
+}

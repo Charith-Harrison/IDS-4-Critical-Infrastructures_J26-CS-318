@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-25",
+  "accepted_completion_receipts": 87,
+  "frozen_bundle": "1fe2b0eb6f44807bc6759d3f3e998ce5064047516585d9e8e313f01b24050663",
+  "mx088_validation_status": "FAILED",
+  "mx088_errors": [
+    "ValidationError: Application timing not one outstanding transaction"
+  ],
+  "clock_reversals": [
+    {
+      "attempt": "MX086-20261025T063126Z-16600283",
+      "transaction": 653,
+      "previous_event": "MX086-20261025T063126Z-16600283:e1306",
+      "current_event": "MX086-20261025T063126Z-16600283:e1307",
+      "previous_timestamp_ns": 1792909918243990769,
+      "timestamp_ns": 1792909918242738872,
+      "backward_ns": 1251897
+    },
+    {
+      "attempt": "MX087-20261025T063952Z-1fa45191",
+      "transaction": 376,
+      "previous_event": "MX087-20261025T063952Z-1fa45191:e752",
+      "current_event": "MX087-20261025T063952Z-1fa45191:e753",
+      "previous_timestamp_ns": 1792910398265844663,
+      "timestamp_ns": 1792910398264552417,
+      "backward_ns": 1292246
+    },
+    {
+      "attempt": "MX088-20261025T064936Z-55b059c6",
+      "transaction": 1065,
+      "previous_event": "MX088-20261025T064936Z-55b059c6:e2130",
+      "current_event": "MX088-20261025T064936Z-55b059c6:e2131",
+      "previous_timestamp_ns": 1792911028296882590,
+      "timestamp_ns": 1792911028296179770,
+      "backward_ns": 702820
+    }
+  ],
+  "container_clock_probe": {
+    "time_implementation": "clock_gettime(CLOCK_REALTIME)",
+    "time_monotonic": false,
+    "time_adjustable": true,
+    "monotonic_implementation": "clock_gettime(CLOCK_MONOTONIC)",
+    "monotonic_adjustable": false,
+    "current_clocksource": "tsc"
+  },
+  "established_defect": "Wall-clock values are used as a monotonic causal-order invariant. Recorded reversals trigger rejection.",
+  "unconfirmed_trigger": "Exact host/WSL/kernel mechanism producing the reversals has not been isolated.",
+  "original_data_changed": false,
+  "frozen_code_changed": false,
+  "clock_or_system_settings_changed": false,
+  "decision": "Leave collection stopped. Preserve87 accepted runs and all failed attempts. Prepare a versioned clock-safe correction and compatibility assessment; no silent timestamp repair, threshold relaxation, source refreeze or blind retry loop."
+}

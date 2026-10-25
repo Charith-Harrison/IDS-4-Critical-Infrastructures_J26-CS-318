@@ -1,0 +1,357 @@
+{
+  "status": "TRAIN_FITTED_VALIDATION_SELECTED_FINAL_UNOPENED",
+  "fit_rows": 5984,
+  "validation_common_rows": 2992,
+  "methods": {
+    "B": {
+      "features": [
+        "current_function",
+        "current_unit",
+        "current_is_request",
+        "current_pdu_length",
+        "current_wire_address",
+        "current_wire_word",
+        "current_wire_quantity",
+        "current_byte_count",
+        "current_request_object_role"
+      ],
+      "parameters": {
+        "n_estimators": 160,
+        "max_features": "sqrt",
+        "random_state": 42,
+        "n_jobs": 2,
+        "max_depth": 12,
+        "min_samples_leaf": 2,
+        "class_weight": null
+      },
+      "candidate_validation_macro_f1": [
+        0.14109348364481386,
+        0.10592437292030442,
+        0.32085067036523346,
+        0.32085067036523346
+      ],
+      "validation": {
+        "support": 2992,
+        "labels": [
+          "normal",
+          "command_injection",
+          "response_injection"
+        ],
+        "confusion": [
+          [
+            2776,
+            0,
+            0
+          ],
+          [
+            72,
+            0,
+            0
+          ],
+          [
+            144,
+            0,
+            0
+          ]
+        ],
+        "macro_f1": 0.32085067036523346,
+        "per_class": {
+          "normal": {
+            "support": 2776,
+            "precision": 0.9278074866310161,
+            "recall": 1.0,
+            "f1": 0.9625520110957004
+          },
+          "command_injection": {
+            "support": 72,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "response_injection": {
+            "support": 144,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "model_sha256": "a90c21c38df93998ec0e48421925d64b34165396b6b2a8fef96f74f569086e50"
+    },
+    "D": {
+      "features": [
+        "current_function",
+        "current_unit",
+        "current_is_request",
+        "current_pdu_length",
+        "current_wire_address",
+        "current_wire_word",
+        "current_wire_quantity",
+        "current_byte_count",
+        "current_request_object_role",
+        "earlier_observed_mode",
+        "earlier_acknowledged_setpoint",
+        "paired_request_object_role",
+        "response_minus_acknowledged_setpoint",
+        "context_available"
+      ],
+      "parameters": {
+        "n_estimators": 160,
+        "max_features": "sqrt",
+        "random_state": 42,
+        "n_jobs": 2,
+        "max_depth": 12,
+        "min_samples_leaf": 2,
+        "class_weight": "balanced"
+      },
+      "candidate_validation_macro_f1": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "validation": {
+        "support": 2992,
+        "labels": [
+          "normal",
+          "command_injection",
+          "response_injection"
+        ],
+        "confusion": [
+          [
+            2776,
+            0,
+            0
+          ],
+          [
+            0,
+            72,
+            0
+          ],
+          [
+            0,
+            0,
+            144
+          ]
+        ],
+        "macro_f1": 1.0,
+        "per_class": {
+          "normal": {
+            "support": 2776,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "command_injection": {
+            "support": 72,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "response_injection": {
+            "support": 144,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "model_sha256": "b1d03a84c5dd3afb06ce52dc8a7c6316c7e78b62c631122ae3bf46fa5d3dad13"
+    },
+    "B-wire": {
+      "features": [
+        "current_function",
+        "current_unit",
+        "current_is_request",
+        "current_pdu_length",
+        "current_wire_address",
+        "current_wire_word",
+        "current_wire_quantity",
+        "current_byte_count",
+        "current_request_object_role",
+        "current_numeric_tid",
+        "current_source_ip",
+        "current_destination_ip",
+        "current_source_port",
+        "current_destination_port"
+      ],
+      "parameters": {
+        "n_estimators": 160,
+        "max_features": "sqrt",
+        "random_state": 42,
+        "n_jobs": 2,
+        "max_depth": 12,
+        "min_samples_leaf": 2,
+        "class_weight": null
+      },
+      "candidate_validation_macro_f1": [
+        0.27867944742330497,
+        0.18725091374425573,
+        0.32085067036523346,
+        0.32085067036523346
+      ],
+      "validation": {
+        "support": 2992,
+        "labels": [
+          "normal",
+          "command_injection",
+          "response_injection"
+        ],
+        "confusion": [
+          [
+            2776,
+            0,
+            0
+          ],
+          [
+            72,
+            0,
+            0
+          ],
+          [
+            144,
+            0,
+            0
+          ]
+        ],
+        "macro_f1": 0.32085067036523346,
+        "per_class": {
+          "normal": {
+            "support": 2776,
+            "precision": 0.9278074866310161,
+            "recall": 1.0,
+            "f1": 0.9625520110957004
+          },
+          "command_injection": {
+            "support": 72,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "response_injection": {
+            "support": 144,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "model_sha256": "a70d6e8d86bcbdeac27ec0e0b6b4a9c9ed03d22b8811e7b0c556a33f5ba8e964"
+    },
+    "D-wire": {
+      "features": [
+        "current_function",
+        "current_unit",
+        "current_is_request",
+        "current_pdu_length",
+        "current_wire_address",
+        "current_wire_word",
+        "current_wire_quantity",
+        "current_byte_count",
+        "current_request_object_role",
+        "earlier_observed_mode",
+        "earlier_acknowledged_setpoint",
+        "paired_request_object_role",
+        "response_minus_acknowledged_setpoint",
+        "context_available",
+        "current_numeric_tid",
+        "current_source_ip",
+        "current_destination_ip",
+        "current_source_port",
+        "current_destination_port"
+      ],
+      "parameters": {
+        "n_estimators": 160,
+        "max_features": "sqrt",
+        "random_state": 42,
+        "n_jobs": 2,
+        "max_depth": 12,
+        "min_samples_leaf": 2,
+        "class_weight": "balanced"
+      },
+      "candidate_validation_macro_f1": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "validation": {
+        "support": 2992,
+        "labels": [
+          "normal",
+          "command_injection",
+          "response_injection"
+        ],
+        "confusion": [
+          [
+            2776,
+            0,
+            0
+          ],
+          [
+            0,
+            72,
+            0
+          ],
+          [
+            0,
+            0,
+            144
+          ]
+        ],
+        "macro_f1": 1.0,
+        "per_class": {
+          "normal": {
+            "support": 2776,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "command_injection": {
+            "support": 72,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "response_injection": {
+            "support": 144,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "model_sha256": "297a4397263bcaf1630e8e9c0f74396964bef6e2c472eaef7de8ed00fbfda71a"
+    }
+  },
+  "selection_metric": "Common-cohort three-class macroF1",
+  "development_file_sha256": "b44593baeb3f76cb464b9821b02a3557f63c28b6bda47a452dbaedcf30b65a27",
+  "prepare_report_sha256": "bbccad1d0ef791089a6a5a09b1dbf7d80c078a9a1b6eff8279cedf4793f7a8ef",
+  "code_sha256": {
+    "__init__.py": "a433cf12739db2c5e9edc457486d90fd4bef0f55aa76ff0dca6809fc72ce54d2",
+    "__main__.py": "17a58ebc938a6f4053d901fc0e81d1b6aba64011d80996ecc929a783ea862bf9",
+    "experiment.py": "8012e15e2a10922e31c77d2d2aa8537d800149d456a4fa4372cc09a96c58936c",
+    "records.py": "adb2ac4fed42e09490ac7415bc7d59d19bb448654924b4c3d5007395f6f8a189"
+  },
+  "source_admission": {
+    "collection_id": "40ae7a846cce48fc8e3c52ebfca7e2cd",
+    "runs": 104,
+    "roles": {
+      "train": 32,
+      "validation": 16,
+      "final_test_repeat": 24,
+      "final_test_values": 8,
+      "final_test_map": 8,
+      "final_test_order": 8,
+      "final_test_timing": 8
+    },
+    "canonical_index_sha256": "ff74c745b5004973e516d0d05662173cd80f0768a4d941918c4b01428ac8c8cf"
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scikit-learn": "1.8.0",
+    "joblib": "1.5.3",
+    "pyarrow": "26.0.0"
+  }
+}

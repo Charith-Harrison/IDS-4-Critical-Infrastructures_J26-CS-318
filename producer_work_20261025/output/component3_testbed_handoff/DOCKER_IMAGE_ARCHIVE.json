@@ -1,0 +1,10 @@
+{
+  "platform": "linux/amd64",
+  "source_image": "kaveesha-c3-pilot:0.1.0",
+  "gzip_file": "KAVEESHA_C3_DOCKER_IMAGE.tar.gz",
+  "gzip_bytes": 44756087,
+  "gzip_sha256": "84c9c9c4791d2a61cc909456423eade725f0ea6bf35d8a7d0eee0e6d09734faf",
+  "uncompressed_tar_bytes": 45132800,
+  "uncompressed_tar_sha256": "b3e3be971c9ba245336eb7dc5030e3490b1c1dba85e2c8d8d96e0a592d530ecb",
+  "note": "Optional image for reproduction; Docker is not required to read supplied text/JSON evidence."
+}

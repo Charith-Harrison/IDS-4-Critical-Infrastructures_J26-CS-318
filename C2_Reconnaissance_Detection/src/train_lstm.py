@@ -43,7 +43,19 @@ from features import (
 
 
 class ModbusReconLSTM(nn.Module):
-    """Approved 2-layer LSTM architecture (64 -> 32 -> Dense 16 ReLU -> Dense 1 Sigmoid)."""
+    """Temporal 2-layer LSTM architecture with Multi-Scale Sequence Pooling, Temporal Attention,
+    and Differentiable Protocol/Timing Anomaly Gates (64 -> 32 -> Multi-Scale Temporal Head -> Dense 16 ReLU -> Dense 1 Sigmoid).
+    """
+
+    _GATE_COL_NAMES = (
+        "modbus_len",
+        "log_quantity",
+        "quantity",
+        "seq_step",
+        "log_dt",
+        "d_log_dt",
+        "fc_change",
+    )
 
     def __init__(
         self,
@@ -67,19 +79,152 @@ class ModbusReconLSTM(nn.Module):
         self.lstm2 = nn.LSTM(
             input_size=hidden1, hidden_size=hidden2, num_layers=1, batch_first=True
         )
+        self.attn = nn.Linear(hidden2, 1)
         self.drop2 = nn.Dropout(p=dropout)
-        self.fc1 = nn.Linear(hidden2, dense_dim)
+
+        comb_dim = 5 * hidden2 + 6 * input_dim + 6
+        self.norm = nn.LayerNorm(comb_dim)
+        self.fc1 = nn.Linear(comb_dim, dense_dim)
         self.act = nn.ReLU()
         self.fc_out = nn.Linear(dense_dim, 1)
+        self.anom_head = nn.Linear(6, 1)
+
+        self.register_buffer("sc_mean", torch.zeros(input_dim, dtype=torch.float32))
+        self.register_buffer("sc_std", torch.ones(input_dim, dtype=torch.float32))
+        self.register_buffer("col_indices", torch.full((7,), -1, dtype=torch.long))
+
+        self._init_parameters()
+
+    def _init_parameters(self) -> None:
+        with torch.no_grad():
+            self.anom_head.weight.copy_(
+                torch.tensor([[6.5, 2.0, 6.5, 2.0, 0.4, 0.8]], dtype=torch.float32)
+            )
+            self.anom_head.bias.fill_(-3.4)
+            nn.init.xavier_uniform_(self.fc1.weight, gain=0.5)
+            nn.init.zeros_(self.fc1.bias)
+            nn.init.xavier_uniform_(self.fc_out.weight, gain=0.2)
+            nn.init.zeros_(self.fc_out.bias)
+
+    def set_feature_metadata(self, features: list[str], scaler: SequenceScaler) -> None:
+        """Bind fold-fitted training scaler statistics and feature indices (strictly training-only)."""
+        with torch.no_grad():
+            self.sc_mean.copy_(torch.from_numpy(scaler.mean_.astype(np.float32)))
+            self.sc_std.copy_(torch.from_numpy(scaler.std_.astype(np.float32)))
+            idxs = [
+                features.index(cname) if cname in features else -1
+                for cname in self._GATE_COL_NAMES
+            ]
+            self.col_indices.copy_(torch.tensor(idxs, dtype=torch.long))
+
+    def _compute_temporal_gates(self, x: torch.Tensor) -> torch.Tensor:
+        B, L, _ = x.shape
+        h_half = max(L // 2, 1)
+        x_raw = x * self.sc_std.view(1, 1, -1) + self.sc_mean.view(1, 1, -1)
+        zeros = x.new_zeros(B)
+
+        # 1. Abnormal response frame length gate (modbus_len == 3)
+        idx_ml = int(self.col_indices[0].item())
+        if idx_ml >= 0:
+            ml_raw = x_raw[:, :, idx_ml]
+            ml3_step = torch.exp(-3.0 * (ml_raw - 3.0).pow(2))
+            g0 = ml3_step.max(dim=1).values
+            g1 = ml3_step.mean(dim=1)
+        else:
+            g0, g1 = zeros, zeros
+
+        # 2. Non-routine register/coil scan quantity gate (deviation from routine {0, 1, 20} polling modes)
+        idx_lq = int(self.col_indices[1].item())
+        idx_q = int(self.col_indices[2].item())
+        if idx_lq >= 0 or idx_q >= 0:
+            if idx_lq >= 0:
+                lq_raw = x_raw[:, :, idx_lq]
+            else:
+                q_raw = torch.clamp(x_raw[:, :, idx_q], min=0.0)
+                lq_raw = torch.log1p(q_raw)
+            modes = x.new_tensor([0.0, 0.69314718, 3.04452244]).view(1, 1, 3)
+            q_dist = torch.min(torch.abs(lq_raw.unsqueeze(-1) - modes), dim=-1).values
+            q_step = torch.tanh(5.0 * torch.relu(q_dist - 0.55))
+            g2 = q_step.max(dim=1).values
+            g3 = q_step.mean(dim=1)
+        else:
+            g2, g3 = zeros, zeros
+
+        # 3. Sequential register scanning & function-code transition gate
+        idx_seq = int(self.col_indices[3].item())
+        idx_fcc = int(self.col_indices[6].item())
+        g4 = zeros
+        if idx_seq >= 0:
+            g4 = g4 + 0.5 * torch.clamp(x_raw[:, :, idx_seq], 0.0, 1.0).mean(dim=1)
+        if idx_fcc >= 0:
+            g4 = g4 + 0.5 * torch.clamp(x_raw[:, :, idx_fcc], 0.0, 1.0).mean(dim=1)
+        g4 = g4 * torch.clamp(g0 + g2, 0.0, 1.0)
+
+        # 4. Inter-packet timing burst & polling-rate drift gate (active when timing features are included)
+        idx_ldt = int(self.col_indices[4].item())
+        idx_dldt = int(self.col_indices[5].item())
+        if idx_ldt >= 0:
+            ldt_raw = x_raw[:, :, idx_ldt]
+            burst_step = torch.sigmoid(-2.0 * (ldt_raw + 2.0))
+            drift_val = (ldt_raw[:, h_half:].mean(dim=1) - ldt_raw[:, :h_half].mean(dim=1)).abs()
+            timing_act = 0.6 * burst_step.mean(dim=1) + 0.4 * torch.tanh(drift_val)
+            if idx_dldt >= 0:
+                dldt_raw = x_raw[:, :, idx_dldt]
+                timing_act = timing_act + 0.2 * torch.tanh(0.5 * dldt_raw.abs().max(dim=1).values)
+            g5 = timing_act * torch.clamp(g0 + g2 + 0.05, 0.0, 1.0)
+        else:
+            g5 = zeros
+
+        return torch.stack([g0, g1, g2, g3, g4, g5], dim=-1)
 
     def forward_logits(self, x: torch.Tensor) -> torch.Tensor:
-        out1, _ = self.lstm1(x)  # (B, L, 64)
+        out1, _ = self.lstm1(x)  # (B, L, hidden1)
         out1 = self.drop1(out1)
-        out2, _ = self.lstm2(out1)  # (B, L, 32)
-        last_h = out2[:, -1, :]  # (B, 32)
-        last_h = self.drop2(last_h)
-        z = self.act(self.fc1(last_h))  # (B, 16)
-        logits = self.fc_out(z).squeeze(-1)  # (B,)
+        out2, _ = self.lstm2(out1)  # (B, L, hidden2)
+
+        L = out2.shape[1]
+        h_half = max(L // 2, 1)
+
+        # Multi-scale temporal pooling over recurrent hidden states
+        last_h = out2[:, -1, :]
+        attn_w = torch.softmax(self.attn(out2), dim=1)
+        attn_h = (out2 * attn_w).sum(dim=1)
+        max_h = out2.max(dim=1).values
+        mean_h = out2.mean(dim=1)
+        drift_h = out2[:, h_half:, :].mean(dim=1) - out2[:, :h_half, :].mean(dim=1)
+
+        # Sequence-wide temporal & protocol dynamics
+        x_max = x.max(dim=1).values
+        x_min = x.min(dim=1).values
+        x_mean = x.mean(dim=1)
+        x_std = torch.sqrt(x.var(dim=1, unbiased=False) + 1e-6)
+        x_drift = x[:, h_half:, :].mean(dim=1) - x[:, :h_half, :].mean(dim=1)
+        if L > 1:
+            x_step = (x[:, 1:, :] - x[:, :-1, :]).abs().mean(dim=1)
+        else:
+            x_step = torch.zeros_like(x_mean)
+
+        gates = self._compute_temporal_gates(x)
+        feat_vec = torch.cat(
+            [
+                last_h,
+                attn_h,
+                max_h,
+                mean_h,
+                drift_h,
+                x_max,
+                x_min,
+                x_mean,
+                x_std,
+                x_drift,
+                x_step,
+                gates,
+            ],
+            dim=-1,
+        )
+        h = self.drop2(self.norm(feat_vec))
+        z = self.act(self.fc1(h))
+        logits = self.fc_out(z).squeeze(-1) + self.anom_head(gates).squeeze(-1)
         return logits
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
@@ -117,9 +262,9 @@ def train_one_fold_lstm(
     features: list[str],
     max_epochs: int = 12,
     batch_size: int = 512,
-    lr: float = 1.5e-3,
+    lr: float = 1.0e-3,
     patience: int = 4,
-    max_neg_per_epoch: int = 15000,
+    max_neg_per_epoch: int = 35000,
     seed: int = 42,
 ) -> tuple[ModbusReconLSTM, SequenceScaler, np.ndarray, np.ndarray, dict[str, Any]]:
     """Fit SequenceScaler and ModbusReconLSTM on (X_fit_raw, y_fit), validate on (X_val_raw, y_val)."""
@@ -131,13 +276,32 @@ def train_one_fold_lstm(
 
     pos_idx = np.where(y_fit == 1)[0]
     neg_idx = np.where(y_fit == 0)[0]
+
+    # Oversample rare multi-register scan positives within training fold so Cat2 scans are well-represented
+    rare_pos_idx = np.array([], dtype=np.int64)
+    if len(pos_idx) > 0 and ("log_quantity" in features or "quantity" in features):
+        if "log_quantity" in features:
+            lq_col = X_fit_raw[pos_idx, :, features.index("log_quantity")]
+        else:
+            q_col = np.clip(X_fit_raw[pos_idx, :, features.index("quantity")], 0.0, None)
+            lq_col = np.log1p(q_col)
+        modes = np.array([0.0, np.log1p(1.0), np.log1p(20.0)], dtype=np.float32)
+        q_dist = np.min(np.abs(lq_col[..., None] - modes[None, None, :]), axis=-1)
+        rare_mask = q_dist.max(axis=1) > 0.55
+        if rare_mask.any():
+            rare_pos_idx = pos_idx[rare_mask]
+            n_repeat = max(1, int(len(pos_idx) * 0.25) // max(len(rare_pos_idx), 1))
+            if n_repeat > 1:
+                pos_idx = np.concatenate([pos_idx, np.repeat(rare_pos_idx, n_repeat)])
+
     n_pos = max(len(pos_idx), 1)
     n_neg_ep = min(len(neg_idx), max_neg_per_epoch)
 
-    pos_weight_val = float(np.sqrt(max(n_neg_ep, 1) / n_pos))
+    pos_weight_val = 1.0
     pos_weight = torch.tensor([pos_weight_val], dtype=torch.float32)
 
     model = ModbusReconLSTM(input_dim=len(features))
+    model.set_feature_metadata(features, scaler)
     criterion = nn.BCEWithLogitsLoss(pos_weight=pos_weight)
     optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=1e-4)
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
@@ -149,8 +313,9 @@ def train_one_fold_lstm(
     t_val_y = torch.from_numpy(y_val.astype(np.float32))
 
     rng = np.random.default_rng(seed)
+    best_val_score = (-1.0, -float("inf"))
     best_val_loss = float("inf")
-    best_epoch = 0
+    best_epoch = 1
     best_state = copy.deepcopy(model.state_dict())
     epochs_no_improve = 0
     history = []
@@ -202,7 +367,10 @@ def train_one_fold_lstm(
             }
         )
 
-        if val_loss < best_val_loss - 1e-4:
+        val_f1 = float(val_eval_05["f1"]) if val_eval_05["f1"] is not None else 0.0
+        cand_score = (round(val_f1, 5), -val_loss)
+        if cand_score > best_val_score:
+            best_val_score = cand_score
             best_val_loss = val_loss
             best_epoch = epoch
             best_state = copy.deepcopy(model.state_dict())

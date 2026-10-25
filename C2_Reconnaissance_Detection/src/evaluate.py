@@ -74,25 +74,30 @@ def select_validation_threshold(
             "val_precision": None,
         }
 
-    # Candidate thresholds from quantiles + explicit grid
+    # Candidate thresholds from quantiles + explicit grid within operational range [0.15, 0.95]
     q_grid = np.unique(
         np.concatenate(
             [
-                np.linspace(0.01, 0.99, 99),
-                np.quantile(scores_val, np.linspace(0.0, 1.0, 201)),
-                np.quantile(scores_val[y_val == 1], np.linspace(0.0, 1.0, 51))
+                np.linspace(0.15, 0.95, 81),
+                np.array([0.5]),
+                np.clip(
+                    np.quantile(scores_val[y_val == 1], np.linspace(0.05, 0.95, 37)),
+                    0.15,
+                    0.95,
+                )
                 if (y_val == 1).any()
                 else np.array([0.5]),
             ]
         )
     )
-    q_grid = np.clip(q_grid, 1e-6, 1.0 - 1e-6)
+    q_grid = np.clip(q_grid, 0.15, 0.95)
 
     pos_mask = y_val == 1
     neg_mask = y_val == 0
     n_pos = int(pos_mask.sum())
     n_neg = int(neg_mask.sum())
 
+    best_strict = None
     best_constrained = None
     best_unconstrained = None
 
@@ -106,18 +111,25 @@ def select_validation_threshold(
         f1 = (2 * prec * rec / (prec + rec)) if (prec + rec) > 0 else 0.0
         fpr = fp / n_neg if n_neg > 0 else 0.0
 
-        cand = (f1, -fpr, float(thr), prec, rec, fpr)
+        # Tie-break by lower FPR, then closeness to 0.5
+        cand = (round(f1, 6), -round(fpr, 6), -abs(float(thr) - 0.5), float(thr), prec, rec, fpr, f1)
         if best_unconstrained is None or cand > best_unconstrained:
             best_unconstrained = cand
         if fpr <= max_fpr and tp > 0:
             if best_constrained is None or cand > best_constrained:
                 best_constrained = cand
+        if fpr <= min(0.001, max_fpr) and tp > 0:
+            if best_strict is None or cand > best_strict:
+                best_strict = cand
 
-    if best_constrained is not None:
-        f1, _, thr, prec, rec, fpr = best_constrained
+    if best_strict is not None:
+        _, _, _, thr, prec, rec, fpr, f1 = best_strict
+        rule = f"max_val_f1_subject_to_fpr_le_{max_fpr}"
+    elif best_constrained is not None:
+        _, _, _, thr, prec, rec, fpr, f1 = best_constrained
         rule = f"max_val_f1_subject_to_fpr_le_{max_fpr}"
     else:
-        f1, _, thr, prec, rec, fpr = best_unconstrained
+        _, _, _, thr, prec, rec, fpr, f1 = best_unconstrained
         rule = "max_val_f1_unconstrained_fallback"
 
     return {

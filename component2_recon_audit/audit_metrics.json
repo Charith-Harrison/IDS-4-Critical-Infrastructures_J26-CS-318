@@ -1,0 +1,2412 @@
+{
+  "project_id": "J26-CS-318",
+  "component": "Component 2 (RP2) - Reconnaissance Attack Detection Using Temporal Behavior Analysis",
+  "student": "Charith H. / Harry (IT23269002)",
+  "section_5_rebuilt_dataset_accounting": {
+    "packets_rebuilt": {
+      "row_count": 597135,
+      "class_counts": {
+        "0": 588498,
+        "1": 8637
+      },
+      "positive_rate_pct": 1.4464,
+      "columns": [
+        "row_index",
+        "timestamp",
+        "ts_ns",
+        "capture_group",
+        "session_id",
+        "file_source",
+        "src_ip",
+        "dst_ip",
+        "unit_id",
+        "func_code",
+        "modbus_len",
+        "register_start",
+        "quantity",
+        "packet_size",
+        "time_delta",
+        "dt_s",
+        "label",
+        "is_fc5_len3"
+      ],
+      "null_counts": {
+        "row_index": 0,
+        "timestamp": 0,
+        "ts_ns": 0,
+        "capture_group": 0,
+        "session_id": 0,
+        "file_source": 0,
+        "src_ip": 0,
+        "dst_ip": 0,
+        "unit_id": 0,
+        "func_code": 0,
+        "modbus_len": 0,
+        "register_start": 0,
+        "quantity": 0,
+        "packet_size": 0,
+        "time_delta": 0,
+        "dt_s": 56,
+        "label": 0,
+        "is_fc5_len3": 0
+      },
+      "distinct_capture_groups": 10,
+      "distinct_session_ids": 13,
+      "distinct_capture_session_streams": 56,
+      "distinct_source_files": 12,
+      "timestamps_reverse_within_any_stream": false,
+      "total_stream_timestamp_reversals": 0,
+      "dt_s_negative_count": 0,
+      "dt_s_zero_count": 0,
+      "dt_s_null_count": 56,
+      "first_packet_of_stream_accounts_for_all_missing_dt_s": true,
+      "any_stream_has_multiple_retained_source_files": false,
+      "session_ids_spanning_multiple_capture_groups_if_not_grouped_by_capture": 12,
+      "capture_group_timestamps": [
+        {
+          "capture_group": "G01_0122_normal4",
+          "packets": 35000,
+          "pos_packets": 0,
+          "neg_packets": 35000,
+          "distinct_sessions": 2,
+          "distinct_source_files": 1,
+          "source_files": [
+            "veth4edc015-normal-4.pcap"
+          ],
+          "first_timestamp": "2023-01-22T09:40:36.658912000+0530",
+          "last_timestamp": "2023-01-23T06:48:11.998005000+0530",
+          "first_ts_ns": 1674360636658912000,
+          "last_ts_ns": 1674436691998005000,
+          "duration_s": 76055.339093
+        },
+        {
+          "capture_group": "G02_0123_normal13",
+          "packets": 35000,
+          "pos_packets": 0,
+          "neg_packets": 35000,
+          "distinct_sessions": 6,
+          "distinct_source_files": 1,
+          "source_files": [
+            "veth5bbeaa2-normal-13.pcap"
+          ],
+          "first_timestamp": "2023-01-23T19:22:04.004201000+0530",
+          "last_timestamp": "2023-01-23T21:01:33.205086000+0530",
+          "first_ts_ns": 1674481924004201000,
+          "last_ts_ns": 1674487893205086000,
+          "duration_s": 5969.200885
+        },
+        {
+          "capture_group": "G03_0201_veth",
+          "packets": 282135,
+          "pos_packets": 50,
+          "neg_packets": 282085,
+          "distinct_sessions": 7,
+          "distinct_source_files": 3,
+          "source_files": [
+            "veth4edc015-0.pcap",
+            "veth8bc3408-0.pcap",
+            "vethd9e14c0-0.pcap"
+          ],
+          "first_timestamp": "2023-02-01T09:18:39.921812000+0530",
+          "last_timestamp": "2023-02-01T19:31:50.737508000+0530",
+          "first_ts_ns": 1675223319921812000,
+          "last_ts_ns": 1675260110737508000,
+          "duration_s": 36790.815696
+        },
+        {
+          "capture_group": "G04_0315_sub1",
+          "packets": 35000,
+          "pos_packets": 2001,
+          "neg_packets": 32999,
+          "distinct_sessions": 5,
+          "distinct_source_files": 1,
+          "source_files": [
+            "substation-1.pcap"
+          ],
+          "first_timestamp": "2023-03-15T14:23:29.791436000+0530",
+          "last_timestamp": "2023-03-15T16:30:08.655967000+0530",
+          "first_ts_ns": 1678870409791436000,
+          "last_ts_ns": 1678878008655967000,
+          "duration_s": 7598.864531
+        },
+        {
+          "capture_group": "G05_0315_sub2",
+          "packets": 35000,
+          "pos_packets": 136,
+          "neg_packets": 34864,
+          "distinct_sessions": 6,
+          "distinct_source_files": 1,
+          "source_files": [
+            "substation-2.pcap"
+          ],
+          "first_timestamp": "2023-03-16T00:32:50.918917000+0530",
+          "last_timestamp": "2023-03-16T02:26:16.659313000+0530",
+          "first_ts_ns": 1678906970918917000,
+          "last_ts_ns": 1678913776659313000,
+          "duration_s": 6805.740396
+        },
+        {
+          "capture_group": "G06_0316_sub4",
+          "packets": 35000,
+          "pos_packets": 2140,
+          "neg_packets": 32860,
+          "distinct_sessions": 6,
+          "distinct_source_files": 1,
+          "source_files": [
+            "substation-4.pcap"
+          ],
+          "first_timestamp": "2023-03-16T22:53:27.185458000+0530",
+          "last_timestamp": "2023-03-17T00:24:32.113512000+0530",
+          "first_ts_ns": 1678987407185458000,
+          "last_ts_ns": 1678992872113512000,
+          "duration_s": 5464.928054
+        },
+        {
+          "capture_group": "G07_0319_sub10",
+          "packets": 35000,
+          "pos_packets": 2185,
+          "neg_packets": 32815,
+          "distinct_sessions": 6,
+          "distinct_source_files": 1,
+          "source_files": [
+            "substation-10.pcap"
+          ],
+          "first_timestamp": "2023-03-19T07:26:44.444617000+0530",
+          "last_timestamp": "2023-03-19T08:33:09.884694000+0530",
+          "first_ts_ns": 1679191004444617000,
+          "last_ts_ns": 1679194989884694000,
+          "duration_s": 3985.440077
+        },
+        {
+          "capture_group": "G08_0320_sub14",
+          "packets": 35000,
+          "pos_packets": 2125,
+          "neg_packets": 32875,
+          "distinct_sessions": 6,
+          "distinct_source_files": 1,
+          "source_files": [
+            "substation-14.pcap"
+          ],
+          "first_timestamp": "2023-03-21T00:11:35.636468000+0530",
+          "last_timestamp": "2023-03-21T01:27:04.268510000+0530",
+          "first_ts_ns": 1679337695636468000,
+          "last_ts_ns": 1679342224268510000,
+          "duration_s": 4528.632042
+        },
+        {
+          "capture_group": "G09_0323_veth3e0",
+          "packets": 35000,
+          "pos_packets": 0,
+          "neg_packets": 35000,
+          "distinct_sessions": 6,
+          "distinct_source_files": 1,
+          "source_files": [
+            "veth3efd353-0.pcap"
+          ],
+          "first_timestamp": "2023-03-23T08:01:40.940955000+0530",
+          "last_timestamp": "2023-03-23T09:41:05.198011000+0530",
+          "first_ts_ns": 1679538700940955000,
+          "last_ts_ns": 1679544665198011000,
+          "duration_s": 5964.257056
+        },
+        {
+          "capture_group": "G10_0323_veth3e1",
+          "packets": 35000,
+          "pos_packets": 0,
+          "neg_packets": 35000,
+          "distinct_sessions": 6,
+          "distinct_source_files": 1,
+          "source_files": [
+            "veth3efd353-1.pcap"
+          ],
+          "first_timestamp": "2023-03-23T15:40:37.200544000+0530",
+          "last_timestamp": "2023-03-23T17:19:42.813745000+0530",
+          "first_ts_ns": 1679566237200544000,
+          "last_ts_ns": 1679572182813745000,
+          "duration_s": 5945.613201
+        }
+      ],
+      "session_id_timestamps": [
+        {
+          "session_id": "185.175.0.2_185.175.0.4_u1_s0010",
+          "packets": 11670,
+          "pos_packets": 0,
+          "capture_groups": 2,
+          "source_files": 2,
+          "first_timestamp": "2023-03-23T08:01:51.912476000+0530",
+          "last_timestamp": "2023-03-23T17:19:38.109566000+0530",
+          "span_days": 0.387
+        },
+        {
+          "session_id": "185.175.0.2_185.175.0.5_u1_s0008",
+          "packets": 11701,
+          "pos_packets": 0,
+          "capture_groups": 2,
+          "source_files": 2,
+          "first_timestamp": "2023-03-23T08:01:40.940955000+0530",
+          "last_timestamp": "2023-03-23T17:19:42.806734000+0530",
+          "span_days": 0.388
+        },
+        {
+          "session_id": "185.175.0.2_185.175.0.8_u1_s0012",
+          "packets": 11630,
+          "pos_packets": 0,
+          "capture_groups": 2,
+          "source_files": 2,
+          "first_timestamp": "2023-03-23T08:02:03.873708000+0530",
+          "last_timestamp": "2023-03-23T17:19:38.343412000+0530",
+          "span_days": 0.387
+        },
+        {
+          "session_id": "185.175.0.3_185.175.0.4_u1_s0001",
+          "packets": 94609,
+          "pos_packets": 29,
+          "capture_groups": 8,
+          "source_files": 8,
+          "first_timestamp": "2023-01-22T09:40:36.658912000+0530",
+          "last_timestamp": "2023-03-21T01:27:03.391897000+0530",
+          "span_days": 57.657
+        },
+        {
+          "session_id": "185.175.0.3_185.175.0.5_u1_s0003",
+          "packets": 86345,
+          "pos_packets": 48,
+          "capture_groups": 7,
+          "source_files": 7,
+          "first_timestamp": "2023-01-23T19:22:04.004201000+0530",
+          "last_timestamp": "2023-03-21T01:26:59.539827000+0530",
+          "span_days": 56.253
+        },
+        {
+          "session_id": "185.175.0.3_185.175.0.8_u1_s0005",
+          "packets": 58858,
+          "pos_packets": 20,
+          "capture_groups": 7,
+          "source_files": 7,
+          "first_timestamp": "2023-01-23T19:22:07.164175000+0530",
+          "last_timestamp": "2023-03-21T01:27:04.268510000+0530",
+          "span_days": 56.253
+        },
+        {
+          "session_id": "185.175.0.4_185.175.0.2_u1_s0011",
+          "packets": 11670,
+          "pos_packets": 0,
+          "capture_groups": 2,
+          "source_files": 2,
+          "first_timestamp": "2023-03-23T08:01:51.958807000+0530",
+          "last_timestamp": "2023-03-23T17:19:38.110037000+0530",
+          "span_days": 0.387
+        },
+        {
+          "session_id": "185.175.0.4_185.175.0.3_u1_s0002",
+          "packets": 79823,
+          "pos_packets": 33,
+          "capture_groups": 8,
+          "source_files": 8,
+          "first_timestamp": "2023-01-22T09:40:36.659756000+0530",
+          "last_timestamp": "2023-03-21T01:27:03.392319000+0530",
+          "span_days": 57.657
+        },
+        {
+          "session_id": "185.175.0.5_185.175.0.2_u1_s0009",
+          "packets": 11701,
+          "pos_packets": 0,
+          "capture_groups": 2,
+          "source_files": 2,
+          "first_timestamp": "2023-03-23T08:01:40.941231000+0530",
+          "last_timestamp": "2023-03-23T17:19:42.813745000+0530",
+          "span_days": 0.388
+        },
+        {
+          "session_id": "185.175.0.5_185.175.0.3_u1_s0004",
+          "packets": 86269,
+          "pos_packets": 8432,
+          "capture_groups": 7,
+          "source_files": 7,
+          "first_timestamp": "2023-01-23T19:22:04.004676000+0530",
+          "last_timestamp": "2023-03-21T01:26:59.540300000+0530",
+          "span_days": 56.253
+        },
+        {
+          "session_id": "185.175.0.7_185.175.0.4_u1_s0007",
+          "packets": 65610,
+          "pos_packets": 50,
+          "capture_groups": 1,
+          "source_files": 1,
+          "first_timestamp": "2023-02-01T09:21:37.648705000+0530",
+          "last_timestamp": "2023-02-01T18:52:13.415267000+0530",
+          "span_days": 0.396
+        },
+        {
+          "session_id": "185.175.0.8_185.175.0.2_u1_s0013",
+          "packets": 11628,
+          "pos_packets": 0,
+          "capture_groups": 2,
+          "source_files": 2,
+          "first_timestamp": "2023-03-23T08:02:36.810879000+0530",
+          "last_timestamp": "2023-03-23T17:19:38.343946000+0530",
+          "span_days": 0.387
+        },
+        {
+          "session_id": "185.175.0.8_185.175.0.3_u1_s0006",
+          "packets": 55621,
+          "pos_packets": 25,
+          "capture_groups": 6,
+          "source_files": 6,
+          "first_timestamp": "2023-01-23T19:22:07.165952000+0530",
+          "last_timestamp": "2023-03-21T01:27:04.247860000+0530",
+          "span_days": 56.253
+        }
+      ]
+    },
+    "packet_exclusions": {
+      "row_count": 282090,
+      "exclusion_reasons_and_counts": {
+        "duplicate_interface_view": 282076,
+        "excluded_file": 14
+      },
+      "raw_packet_population_total": 879225,
+      "retained_plus_excluded_total": 879225,
+      "exact_reproduction_of_original_packet_population": true,
+      "duplicate_retained_orig_row_ids": 0,
+      "duplicate_excluded_orig_row_ids": 0,
+      "overlap_between_retained_and_excluded_ids": 0,
+      "missing_original_row_ids": 0,
+      "attached_recon_flows_14_rows_intentionally_excluded": true,
+      "duplicate_interface_view_independent_verification": {
+        "total_duplicate_interface_view_excluded": 282076,
+        "excluded_files_in_duplicate_view": {
+          "veth5bbeaa2-0.pcap": 216466,
+          "veth665f3cf-0.pcap": 65610
+        },
+        "matched_within_1ms_of_retained_identical_packet": 282076,
+        "matched_within_1ms_pct": 100.0,
+        "unmatched_over_1ms": 0,
+        "exact_0ns_delta_count": 0,
+        "delta_le_50us_count": 281672,
+        "delta_le_100us_count": 281992,
+        "delta_le_500us_count": 282075,
+        "delta_le_1ms_count": 282076,
+        "median_delta_us": 6.0,
+        "p95_delta_us": 13.0,
+        "max_delta_us": 535.0,
+        "positive_packets_excluded_as_duplicate": 50,
+        "normal_packets_excluded_as_duplicate": 282026
+      }
+    },
+    "old_sequences_comparison": {
+      "rows": 175800,
+      "distinct_session_ids": 13,
+      "positive_windows": 18338,
+      "negative_windows": 157462,
+      "windows_with_start_after_end": 67489,
+      "windows_with_any_backward_time_step": 174708,
+      "windows_spanning_multiple_file_sources": 171080
+    }
+  },
+  "section_6_session_id_forensics": {
+    "distinct_session_ids_retained": 13,
+    "distinct_session_ids_raw_including_excluded": 17,
+    "distinct_src_dst_unit_triples_retained": 13,
+    "is_exact_1to1_bijection_with_src_ip_dst_ip_unit_id": true,
+    "pattern_formula": "<src_ip>_<dst_ip>_u<unit_id>_s<4-digit-index>",
+    "tcp_ports_present_in_dataset": false,
+    "represents_actual_tcp_connection": false,
+    "represents_capture_local_stream_by_itself": false,
+    "precise_meaning": "Global directed (src_ip, dst_ip, unit_id) logical endpoint+unit tuple reused across all captures and months; only (capture_group, session_id) is capture-local",
+    "session_mapping_table": [
+      {
+        "session_id": "185.175.0.2_185.175.0.4_u1_s0010",
+        "src_ip": "185.175.0.2",
+        "dst_ip": "185.175.0.4",
+        "unit_id": 1,
+        "matches_formula_src_dst_unit": true,
+        "packets": 11670,
+        "pos_packets": 0,
+        "distinct_capture_groups": 2,
+        "distinct_source_files": 2
+      },
+      {
+        "session_id": "185.175.0.2_185.175.0.5_u1_s0008",
+        "src_ip": "185.175.0.2",
+        "dst_ip": "185.175.0.5",
+        "unit_id": 1,
+        "matches_formula_src_dst_unit": true,
+        "packets": 11701,
+        "pos_packets": 0,
+        "distinct_capture_groups": 2,
+        "distinct_source_files": 2
+      },
+      {
+        "session_id": "185.175.0.2_185.175.0.8_u1_s0012",
+        "src_ip": "185.175.0.2",
+        "dst_ip": "185.175.0.8",
+        "unit_id": 1,
+        "matches_formula_src_dst_unit": true,
+        "packets": 11630,
+        "pos_packets": 0,
+        "distinct_capture_groups": 2,
+        "distinct_source_files": 2
+      },
+      {
+        "session_id": "185.175.0.3_185.175.0.4_u1_s0001",
+        "src_ip": "185.175.0.3",
+        "dst_ip": "185.175.0.4",
+        "unit_id": 1,
+        "matches_formula_src_dst_unit": true,
+        "packets": 94609,
+        "pos_packets": 29,
+        "distinct_capture_groups": 8,
+        "distinct_source_files": 8
+      },
+      {
+        "session_id": "185.175.0.3_185.175.0.5_u1_s0003",
+        "src_ip": "185.175.0.3",
+        "dst_ip": "185.175.0.5",
+        "unit_id": 1,
+        "matches_formula_src_dst_unit": true,
+        "packets": 86345,
+        "pos_packets": 48,
+        "distinct_capture_groups": 7,
+        "distinct_source_files": 7
+      },
+      {
+        "session_id": "185.175.0.3_185.175.0.8_u1_s0005",
+        "src_ip": "185.175.0.3",
+        "dst_ip": "185.175.0.8",
+        "unit_id": 1,
+        "matches_formula_src_dst_unit": true,
+        "packets": 58858,
+        "pos_packets": 20,
+        "distinct_capture_groups": 7,
+        "distinct_source_files": 7
+      },
+      {
+        "session_id": "185.175.0.4_185.175.0.2_u1_s0011",
+        "src_ip": "185.175.0.4",
+        "dst_ip": "185.175.0.2",
+        "unit_id": 1,
+        "matches_formula_src_dst_unit": true,
+        "packets": 11670,
+        "pos_packets": 0,
+        "distinct_capture_groups": 2,
+        "distinct_source_files": 2
+      },
+      {
+        "session_id": "185.175.0.4_185.175.0.3_u1_s0002",
+        "src_ip": "185.175.0.4",
+        "dst_ip": "185.175.0.3",
+        "unit_id": 1,
+        "matches_formula_src_dst_unit": true,
+        "packets": 79823,
+        "pos_packets": 33,
+        "distinct_capture_groups": 8,
+        "distinct_source_files": 8
+      },
+      {
+        "session_id": "185.175.0.5_185.175.0.2_u1_s0009",
+        "src_ip": "185.175.0.5",
+        "dst_ip": "185.175.0.2",
+        "unit_id": 1,
+        "matches_formula_src_dst_unit": true,
+        "packets": 11701,
+        "pos_packets": 0,
+        "distinct_capture_groups": 2,
+        "distinct_source_files": 2
+      },
+      {
+        "session_id": "185.175.0.5_185.175.0.3_u1_s0004",
+        "src_ip": "185.175.0.5",
+        "dst_ip": "185.175.0.3",
+        "unit_id": 1,
+        "matches_formula_src_dst_unit": true,
+        "packets": 86269,
+        "pos_packets": 8432,
+        "distinct_capture_groups": 7,
+        "distinct_source_files": 7
+      },
+      {
+        "session_id": "185.175.0.7_185.175.0.4_u1_s0007",
+        "src_ip": "185.175.0.7",
+        "dst_ip": "185.175.0.4",
+        "unit_id": 1,
+        "matches_formula_src_dst_unit": true,
+        "packets": 65610,
+        "pos_packets": 50,
+        "distinct_capture_groups": 1,
+        "distinct_source_files": 1
+      },
+      {
+        "session_id": "185.175.0.8_185.175.0.2_u1_s0013",
+        "src_ip": "185.175.0.8",
+        "dst_ip": "185.175.0.2",
+        "unit_id": 1,
+        "matches_formula_src_dst_unit": true,
+        "packets": 11628,
+        "pos_packets": 0,
+        "distinct_capture_groups": 2,
+        "distinct_source_files": 2
+      },
+      {
+        "session_id": "185.175.0.8_185.175.0.3_u1_s0006",
+        "src_ip": "185.175.0.8",
+        "dst_ip": "185.175.0.3",
+        "unit_id": 1,
+        "matches_formula_src_dst_unit": true,
+        "packets": 55621,
+        "pos_packets": 25,
+        "distinct_capture_groups": 6,
+        "distinct_source_files": 6
+      }
+    ]
+  },
+  "section_7_and_8_label_provenance_and_fc5_len3": {
+    "forensic_positive_categories": {
+      "cat1_fc5_len3_75b_response": 8400,
+      "cat3_event_mapped_substation2_substation10": 158,
+      "cat2_nonroutine_quantity_gt1_read": 66,
+      "cat1b_fc1to4_len3_75b_response": 13
+    },
+    "fc5_len3_summary": {
+      "pos_packets_total": 8637,
+      "neg_packets_total": 588498,
+      "pos_packets_fc5_len3": 8400,
+      "pos_packets_fc5_len3_pct": 97.256,
+      "neg_packets_fc5_len3": 0,
+      "pos_packets_any_len3": 8413,
+      "pos_packets_any_len3_pct": 97.4065,
+      "neg_packets_any_len3": 0,
+      "pos_windows_total": 1878,
+      "neg_windows_total": 117359,
+      "pos_windows_with_fc5_len3": 1769,
+      "pos_windows_with_fc5_len3_pct": 94.196,
+      "neg_windows_with_fc5_len3": 0,
+      "pos_windows_with_any_len3": 1784,
+      "pos_windows_with_any_len3_pct": 94.9947,
+      "pos_windows_without_len3_total": 94,
+      "pos_windows_only_qty_gt1_no_len3": 23,
+      "pos_windows_only_routine_event_mapped_no_len3_no_qty_gt1": 71
+    },
+    "normal_distributions": {
+      "func_code": {
+        "1": 191990,
+        "2": 96059,
+        "3": 98410,
+        "4": 96116,
+        "5": 105323,
+        "6": 600
+      },
+      "modbus_len": {
+        "4": 143860,
+        "5": 95977,
+        "6": 348585,
+        "43": 76
+      },
+      "packet_size": {
+        "76": 143860,
+        "77": 95977,
+        "78": 348510,
+        "83": 28,
+        "114": 1,
+        "115": 76,
+        "126": 18,
+        "150": 1,
+        "162": 3,
+        "222": 14,
+        "234": 1,
+        "282": 2,
+        "294": 1,
+        "342": 1,
+        "354": 1,
+        "378": 2,
+        "390": 1,
+        "402": 1
+      },
+      "quantity": {
+        "0": 345929,
+        "1": 242110,
+        "2": 1,
+        "20": 458
+      },
+      "register_start_top20": {
+        "0": 305561,
+        "8": 97602,
+        "1": 39702,
+        "5": 32575,
+        "14": 31853,
+        "13": 31838,
+        "35": 16594,
+        "25": 16393,
+        "15": 16380
+      },
+      "joint_func_code_modbus_len": {
+        "FC1_len4": 95906,
+        "FC1_len6": 96084,
+        "FC2_len4": 47954,
+        "FC2_len6": 48105,
+        "FC3_len5": 48006,
+        "FC3_len6": 50365,
+        "FC3_len43": 39,
+        "FC4_len5": 47971,
+        "FC4_len6": 48108,
+        "FC4_len43": 37,
+        "FC5_len6": 105323,
+        "FC6_len6": 600
+      },
+      "joint_full_signature": {
+        "FC1_len4_pkt76_qty0": 95906,
+        "FC1_len6_pkt78_qty0": 51,
+        "FC1_len6_pkt78_qty1": 95919,
+        "FC1_len6_pkt78_qty20": 94,
+        "FC1_len6_pkt83_qty1": 7,
+        "FC1_len6_pkt126_qty0": 2,
+        "FC1_len6_pkt126_qty20": 4,
+        "FC1_len6_pkt162_qty0": 1,
+        "FC1_len6_pkt222_qty20": 3,
+        "FC1_len6_pkt354_qty20": 1,
+        "FC1_len6_pkt378_qty20": 1,
+        "FC1_len6_pkt390_qty20": 1,
+        "FC2_len4_pkt76_qty0": 47954,
+        "FC2_len6_pkt78_qty0": 38,
+        "FC2_len6_pkt78_qty1": 47950,
+        "FC2_len6_pkt78_qty20": 98,
+        "FC2_len6_pkt83_qty1": 7,
+        "FC2_len6_pkt126_qty20": 4,
+        "FC2_len6_pkt150_qty0": 1,
+        "FC2_len6_pkt162_qty20": 1,
+        "FC2_len6_pkt222_qty20": 3,
+        "FC2_len6_pkt282_qty20": 1,
+        "FC2_len6_pkt294_qty20": 1,
+        "FC2_len6_pkt402_qty20": 1,
+        "FC3_len5_pkt77_qty0": 48006,
+        "FC3_len6_pkt78_qty1": 50236,
+        "FC3_len6_pkt78_qty2": 1,
+        "FC3_len6_pkt78_qty20": 109,
+        "FC3_len6_pkt83_qty1": 7,
+        "FC3_len6_pkt114_qty20": 1,
+        "FC3_len6_pkt126_qty20": 4,
+        "FC3_len6_pkt162_qty20": 1,
+        "FC3_len6_pkt222_qty20": 4,
+        "FC3_len6_pkt234_qty20": 1,
+        "FC3_len6_pkt342_qty20": 1,
+        "FC3_len43_pkt115_qty0": 39,
+        "FC4_len5_pkt77_qty0": 47971,
+        "FC4_len6_pkt78_qty1": 47977,
+        "FC4_len6_pkt78_qty20": 114,
+        "FC4_len6_pkt83_qty1": 7,
+        "FC4_len6_pkt126_qty20": 4,
+        "FC4_len6_pkt222_qty20": 4,
+        "FC4_len6_pkt282_qty20": 1,
+        "FC4_len6_pkt378_qty20": 1,
+        "FC4_len43_pkt115_qty0": 37,
+        "FC5_len6_pkt78_qty0": 105323,
+        "FC6_len6_pkt78_qty0": 600
+      }
+    },
+    "recon_distributions": {
+      "func_code": {
+        "1": 75,
+        "2": 61,
+        "3": 43,
+        "4": 58,
+        "5": 8400
+      },
+      "modbus_len": {
+        "3": 8413,
+        "4": 47,
+        "5": 30,
+        "6": 147
+      },
+      "packet_size": {
+        "75": 8413,
+        "76": 47,
+        "77": 30,
+        "78": 146,
+        "342": 1
+      },
+      "quantity": {
+        "0": 8490,
+        "1": 81,
+        "2": 1,
+        "4": 21,
+        "5": 4,
+        "9": 1,
+        "20": 19,
+        "125": 8,
+        "2000": 8,
+        "65535": 4
+      },
+      "register_start_top20": {
+        "0": 8494,
+        "1": 57,
+        "8": 26,
+        "5": 18,
+        "13": 8,
+        "35": 8,
+        "25": 8,
+        "15": 8,
+        "14": 7,
+        "2": 3
+      },
+      "joint_func_code_modbus_len": {
+        "FC1_len3": 4,
+        "FC1_len4": 31,
+        "FC1_len6": 40,
+        "FC2_len3": 3,
+        "FC2_len4": 16,
+        "FC2_len6": 42,
+        "FC3_len3": 3,
+        "FC3_len5": 15,
+        "FC3_len6": 25,
+        "FC4_len3": 3,
+        "FC4_len5": 15,
+        "FC4_len6": 40,
+        "FC5_len3": 8400
+      },
+      "joint_full_signature": {
+        "FC1_len3_pkt75_qty0": 4,
+        "FC1_len4_pkt76_qty0": 31,
+        "FC1_len6_pkt78_qty1": 31,
+        "FC1_len6_pkt78_qty5": 3,
+        "FC1_len6_pkt78_qty20": 1,
+        "FC1_len6_pkt78_qty2000": 4,
+        "FC1_len6_pkt78_qty65535": 1,
+        "FC2_len3_pkt75_qty0": 3,
+        "FC2_len4_pkt76_qty0": 16,
+        "FC2_len6_pkt78_qty1": 16,
+        "FC2_len6_pkt78_qty2": 1,
+        "FC2_len6_pkt78_qty4": 20,
+        "FC2_len6_pkt78_qty2000": 4,
+        "FC2_len6_pkt78_qty65535": 1,
+        "FC3_len3_pkt75_qty0": 3,
+        "FC3_len5_pkt77_qty0": 15,
+        "FC3_len6_pkt78_qty1": 19,
+        "FC3_len6_pkt78_qty9": 1,
+        "FC3_len6_pkt78_qty125": 4,
+        "FC3_len6_pkt78_qty65535": 1,
+        "FC4_len3_pkt75_qty0": 3,
+        "FC4_len5_pkt77_qty0": 15,
+        "FC4_len6_pkt78_qty1": 15,
+        "FC4_len6_pkt78_qty4": 1,
+        "FC4_len6_pkt78_qty5": 1,
+        "FC4_len6_pkt78_qty20": 17,
+        "FC4_len6_pkt78_qty125": 4,
+        "FC4_len6_pkt78_qty65535": 1,
+        "FC4_len6_pkt342_qty20": 1,
+        "FC5_len3_pkt75_qty0": 8400
+      }
+    },
+    "fc5_neighbor_request_response_pairing": {
+      "G04_0315_sub1": {
+        "source_file": "substation-1.pcap",
+        "total_packets_in_capture": 35000,
+        "fc5_len3_slave_to_master_count": 2001,
+        "fc5_len3_labelled_1_count": 2001,
+        "fc5_len6_master_to_slave_count": 9452,
+        "fc5_len6_labelled_1_count": 0,
+        "fc5_len6_labelled_0_count": 9452,
+        "fc5_len6_unique_register_targets": 5,
+        "fc5_len6_register_min": 1,
+        "fc5_len6_register_max": 25,
+        "fc5_len3_immediately_preceded_by_fc5_len6_req_count": 1168,
+        "median_response_delay_ms": 0.219,
+        "sample_request_response_pairs": [
+          {
+            "req_orig_row_index": 69067,
+            "req_ts": "2023-03-15T15:51:59.515434000+0530",
+            "req_src_dst": "185.175.0.3->185.175.0.4",
+            "req_fc_len_reg_qty_size": "FC=5 len=6 reg=1 qty=0 size=78B",
+            "req_label": 0,
+            "resp_orig_row_index": 192326,
+            "resp_ts": "2023-03-15T15:51:59.515543000+0530",
+            "resp_src_dst": "185.175.0.4->185.175.0.3",
+            "resp_fc_len_reg_qty_size": "FC=5 len=3 reg=0 qty=0 size=75B",
+            "resp_label": 1,
+            "delay_ms": 0.109
+          },
+          {
+            "req_orig_row_index": 289464,
+            "req_ts": "2023-03-15T16:29:25.341152000+0530",
+            "req_src_dst": "185.175.0.3->185.175.0.5",
+            "req_fc_len_reg_qty_size": "FC=5 len=6 reg=1 qty=0 size=78B",
+            "req_label": 0,
+            "resp_orig_row_index": 412028,
+            "resp_ts": "2023-03-15T16:29:25.341589000+0530",
+            "resp_src_dst": "185.175.0.5->185.175.0.3",
+            "resp_fc_len_reg_qty_size": "FC=5 len=3 reg=0 qty=0 size=75B",
+            "resp_label": 1,
+            "delay_ms": 0.437
+          },
+          {
+            "req_orig_row_index": 289541,
+            "req_ts": "2023-03-15T16:29:25.350541000+0530",
+            "req_src_dst": "185.175.0.3->185.175.0.5",
+            "req_fc_len_reg_qty_size": "FC=5 len=6 reg=1 qty=0 size=78B",
+            "req_label": 0,
+            "resp_orig_row_index": 412105,
+            "resp_ts": "2023-03-15T16:29:25.350845000+0530",
+            "resp_src_dst": "185.175.0.5->185.175.0.3",
+            "resp_fc_len_reg_qty_size": "FC=5 len=3 reg=0 qty=0 size=75B",
+            "resp_label": 1,
+            "delay_ms": 0.304
+          }
+        ]
+      },
+      "G05_0315_sub2": {
+        "source_file": "substation-2.pcap",
+        "total_packets_in_capture": 35000,
+        "fc5_len3_slave_to_master_count": 5,
+        "fc5_len3_labelled_1_count": 5,
+        "fc5_len6_master_to_slave_count": 6526,
+        "fc5_len6_labelled_1_count": 0,
+        "fc5_len6_labelled_0_count": 6526,
+        "fc5_len6_unique_register_targets": 6,
+        "fc5_len6_register_min": 1,
+        "fc5_len6_register_max": 25,
+        "fc5_len3_immediately_preceded_by_fc5_len6_req_count": 3,
+        "median_response_delay_ms": 1.169,
+        "sample_request_response_pairs": [
+          {
+            "req_orig_row_index": 512275,
+            "req_ts": "2023-03-16T01:04:08.995088000+0530",
+            "req_src_dst": "185.175.0.3->185.175.0.8",
+            "req_fc_len_reg_qty_size": "FC=5 len=6 reg=13 qty=0 size=78B",
+            "req_label": 0,
+            "resp_orig_row_index": 606758,
+            "resp_ts": "2023-03-16T01:04:09.013913000+0530",
+            "resp_src_dst": "185.175.0.8->185.175.0.3",
+            "resp_fc_len_reg_qty_size": "FC=5 len=3 reg=0 qty=0 size=75B",
+            "resp_label": 1,
+            "delay_ms": 18.825
+          },
+          {
+            "req_orig_row_index": 512472,
+            "req_ts": "2023-03-16T01:04:09.035767000+0530",
+            "req_src_dst": "185.175.0.3->185.175.0.8",
+            "req_fc_len_reg_qty_size": "FC=3 len=6 reg=8 qty=1 size=78B",
+            "req_label": 0,
+            "resp_orig_row_index": 606781,
+            "resp_ts": "2023-03-16T01:04:09.035888000+0530",
+            "resp_src_dst": "185.175.0.8->185.175.0.3",
+            "resp_fc_len_reg_qty_size": "FC=5 len=3 reg=0 qty=0 size=75B",
+            "resp_label": 1,
+            "delay_ms": 0.121
+          },
+          {
+            "req_orig_row_index": 606848,
+            "req_ts": "2023-03-16T01:04:09.057958000+0530",
+            "req_src_dst": "185.175.0.8->185.175.0.3",
+            "req_fc_len_reg_qty_size": "FC=1 len=4 reg=0 qty=0 size=76B",
+            "req_label": 0,
+            "resp_orig_row_index": 606789,
+            "resp_ts": "2023-03-16T01:04:09.059127000+0530",
+            "resp_src_dst": "185.175.0.8->185.175.0.3",
+            "resp_fc_len_reg_qty_size": "FC=5 len=3 reg=0 qty=0 size=75B",
+            "resp_label": 1,
+            "delay_ms": 1.169
+          }
+        ]
+      },
+      "G06_0316_sub4": {
+        "source_file": "substation-4.pcap",
+        "total_packets_in_capture": 35000,
+        "fc5_len3_slave_to_master_count": 2140,
+        "fc5_len3_labelled_1_count": 2140,
+        "fc5_len6_master_to_slave_count": 7829,
+        "fc5_len6_labelled_1_count": 0,
+        "fc5_len6_labelled_0_count": 7829,
+        "fc5_len6_unique_register_targets": 6,
+        "fc5_len6_register_min": 1,
+        "fc5_len6_register_max": 25,
+        "fc5_len3_immediately_preceded_by_fc5_len6_req_count": 1766,
+        "median_response_delay_ms": 0.234,
+        "sample_request_response_pairs": [
+          {
+            "req_orig_row_index": 367328,
+            "req_ts": "2023-03-16T23:01:00.345939000+0530",
+            "req_src_dst": "185.175.0.3->185.175.0.5",
+            "req_fc_len_reg_qty_size": "FC=5 len=6 reg=14 qty=0 size=78B",
+            "req_label": 0,
+            "resp_orig_row_index": 452228,
+            "resp_ts": "2023-03-16T23:01:00.346023000+0530",
+            "resp_src_dst": "185.175.0.5->185.175.0.3",
+            "resp_fc_len_reg_qty_size": "FC=5 len=3 reg=0 qty=0 size=75B",
+            "resp_label": 1,
+            "delay_ms": 0.084
+          },
+          {
+            "req_orig_row_index": 329772,
+            "req_ts": "2023-03-16T23:01:00.347199000+0530",
+            "req_src_dst": "185.175.0.3->185.175.0.5",
+            "req_fc_len_reg_qty_size": "FC=1 len=6 reg=13 qty=1 size=78B",
+            "req_label": 0,
+            "resp_orig_row_index": 489862,
+            "resp_ts": "2023-03-16T23:01:00.347273000+0530",
+            "resp_src_dst": "185.175.0.5->185.175.0.3",
+            "resp_fc_len_reg_qty_size": "FC=5 len=3 reg=0 qty=0 size=75B",
+            "resp_label": 1,
+            "delay_ms": 0.074
+          },
+          {
+            "req_orig_row_index": 329799,
+            "req_ts": "2023-03-16T23:01:00.347892000+0530",
+            "req_src_dst": "185.175.0.3->185.175.0.5",
+            "req_fc_len_reg_qty_size": "FC=1 len=6 reg=14 qty=1 size=78B",
+            "req_label": 0,
+            "resp_orig_row_index": 489870,
+            "resp_ts": "2023-03-16T23:01:00.348236000+0530",
+            "resp_src_dst": "185.175.0.5->185.175.0.3",
+            "resp_fc_len_reg_qty_size": "FC=5 len=3 reg=0 qty=0 size=75B",
+            "resp_label": 1,
+            "delay_ms": 0.344
+          }
+        ]
+      },
+      "G07_0319_sub10": {
+        "source_file": "substation-10.pcap",
+        "total_packets_in_capture": 35000,
+        "fc5_len3_slave_to_master_count": 2129,
+        "fc5_len3_labelled_1_count": 2129,
+        "fc5_len6_master_to_slave_count": 9401,
+        "fc5_len6_labelled_1_count": 0,
+        "fc5_len6_labelled_0_count": 9401,
+        "fc5_len6_unique_register_targets": 6,
+        "fc5_len6_register_min": 1,
+        "fc5_len6_register_max": 25,
+        "fc5_len3_immediately_preceded_by_fc5_len6_req_count": 1214,
+        "median_response_delay_ms": 0.246,
+        "sample_request_response_pairs": [
+          {
+            "req_orig_row_index": 308887,
+            "req_ts": "2023-03-19T07:45:55.100612000+0530",
+            "req_src_dst": "185.175.0.3->185.175.0.5",
+            "req_fc_len_reg_qty_size": "FC=5 len=6 reg=1 qty=0 size=78B",
+            "req_label": 0,
+            "resp_orig_row_index": 431445,
+            "resp_ts": "2023-03-19T07:45:55.101026000+0530",
+            "resp_src_dst": "185.175.0.5->185.175.0.3",
+            "resp_fc_len_reg_qty_size": "FC=5 len=3 reg=0 qty=0 size=75B",
+            "resp_label": 1,
+            "delay_ms": 0.414
+          },
+          {
+            "req_orig_row_index": 308935,
+            "req_ts": "2023-03-19T07:45:55.101482000+0530",
+            "req_src_dst": "185.175.0.3->185.175.0.5",
+            "req_fc_len_reg_qty_size": "FC=5 len=6 reg=1 qty=0 size=78B",
+            "req_label": 0,
+            "resp_orig_row_index": 431493,
+            "resp_ts": "2023-03-19T07:45:55.101680000+0530",
+            "resp_src_dst": "185.175.0.5->185.175.0.3",
+            "resp_fc_len_reg_qty_size": "FC=5 len=3 reg=0 qty=0 size=75B",
+            "resp_label": 1,
+            "delay_ms": 0.198
+          },
+          {
+            "req_orig_row_index": 308966,
+            "req_ts": "2023-03-19T07:45:55.102029000+0530",
+            "req_src_dst": "185.175.0.3->185.175.0.5",
+            "req_fc_len_reg_qty_size": "FC=5 len=6 reg=1 qty=0 size=78B",
+            "req_label": 0,
+            "resp_orig_row_index": 431524,
+            "resp_ts": "2023-03-19T07:45:55.102248000+0530",
+            "resp_src_dst": "185.175.0.5->185.175.0.3",
+            "resp_fc_len_reg_qty_size": "FC=5 len=3 reg=0 qty=0 size=75B",
+            "resp_label": 1,
+            "delay_ms": 0.219
+          }
+        ]
+      },
+      "G08_0320_sub14": {
+        "source_file": "substation-14.pcap",
+        "total_packets_in_capture": 35000,
+        "fc5_len3_slave_to_master_count": 2125,
+        "fc5_len3_labelled_1_count": 2125,
+        "fc5_len6_master_to_slave_count": 6163,
+        "fc5_len6_labelled_1_count": 0,
+        "fc5_len6_labelled_0_count": 6163,
+        "fc5_len6_unique_register_targets": 5,
+        "fc5_len6_register_min": 1,
+        "fc5_len6_register_max": 25,
+        "fc5_len3_immediately_preceded_by_fc5_len6_req_count": 1193,
+        "median_response_delay_ms": 0.267,
+        "sample_request_response_pairs": [
+          {
+            "req_orig_row_index": 326621,
+            "req_ts": "2023-03-21T00:55:36.199657000+0530",
+            "req_src_dst": "185.175.0.3->185.175.0.5",
+            "req_fc_len_reg_qty_size": "FC=5 len=6 reg=1 qty=0 size=78B",
+            "req_label": 0,
+            "resp_orig_row_index": 449180,
+            "resp_ts": "2023-03-21T00:55:36.200672000+0530",
+            "resp_src_dst": "185.175.0.5->185.175.0.3",
+            "resp_fc_len_reg_qty_size": "FC=5 len=3 reg=0 qty=0 size=75B",
+            "resp_label": 1,
+            "delay_ms": 1.015
+          },
+          {
+            "req_orig_row_index": 326801,
+            "req_ts": "2023-03-21T00:55:36.208193000+0530",
+            "req_src_dst": "185.175.0.3->185.175.0.5",
+            "req_fc_len_reg_qty_size": "FC=5 len=6 reg=1 qty=0 size=78B",
+            "req_label": 0,
+            "resp_orig_row_index": 449221,
+            "resp_ts": "2023-03-21T00:55:36.208386000+0530",
+            "resp_src_dst": "185.175.0.5->185.175.0.3",
+            "resp_fc_len_reg_qty_size": "FC=5 len=3 reg=0 qty=0 size=75B",
+            "resp_label": 1,
+            "delay_ms": 0.193
+          },
+          {
+            "req_orig_row_index": 327086,
+            "req_ts": "2023-03-21T00:55:36.210156000+0530",
+            "req_src_dst": "185.175.0.3->185.175.0.5",
+            "req_fc_len_reg_qty_size": "FC=5 len=6 reg=1 qty=0 size=78B",
+            "req_label": 0,
+            "resp_orig_row_index": 449278,
+            "resp_ts": "2023-03-21T00:55:36.210189000+0530",
+            "resp_src_dst": "185.175.0.5->185.175.0.3",
+            "resp_fc_len_reg_qty_size": "FC=5 len=3 reg=0 qty=0 size=75B",
+            "resp_label": 1,
+            "delay_ms": 0.033
+          }
+        ]
+      }
+    },
+    "attack_events_mapped_alignment": [
+      {
+        "file_source": "substation-10.pcap",
+        "log_attack": "Recon. Complete",
+        "log_timestamp": "2023-03-19T06:13:51.074000",
+        "log_file": "attack\\compromised-scada\\attack logs\\03-19-2023\\03-19-2023-1.csv",
+        "mapped_packet_rows": 30,
+        "first_packet_timestamp": "2023-03-19T08:32:47.094730000+0530",
+        "last_packet_timestamp": "2023-03-19T08:32:48.816817000+0530",
+        "offset_utc_minus_log_min_min": -191.066,
+        "offset_utc_minus_log_min_max": -191.038,
+        "func_codes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "quantities": [
+          0,
+          1
+        ]
+      },
+      {
+        "file_source": "substation-10.pcap",
+        "log_attack": "Recon. Range: 2000",
+        "log_timestamp": "2023-03-19T06:32:51.081000",
+        "log_file": "attack\\compromised-scada\\attack logs\\03-19-2023\\03-19-2023-1.csv",
+        "mapped_packet_rows": 21,
+        "first_packet_timestamp": "2023-03-19T08:32:52.188101000+0530",
+        "last_packet_timestamp": "2023-03-19T08:32:53.933556000+0530",
+        "offset_utc_minus_log_min_min": -209.982,
+        "offset_utc_minus_log_min_max": -209.952,
+        "func_codes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "quantities": [
+          0,
+          1
+        ]
+      },
+      {
+        "file_source": "substation-2.pcap",
+        "log_attack": "Recon. Complete",
+        "log_timestamp": "2023-03-15T17:27:36.753000",
+        "log_file": "attack\\compromised-scada\\attack logs\\03-15-2023\\03-15-2023-1.csv",
+        "mapped_packet_rows": 21,
+        "first_packet_timestamp": "2023-03-16T01:19:05.273599000+0530",
+        "last_packet_timestamp": "2023-03-16T01:19:06.011150000+0530",
+        "offset_utc_minus_log_min_min": 141.475,
+        "offset_utc_minus_log_min_max": 141.488,
+        "func_codes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "quantities": [
+          0,
+          1
+        ]
+      },
+      {
+        "file_source": "substation-2.pcap",
+        "log_attack": "Recon. Complete",
+        "log_timestamp": "2023-03-15T18:13:36.789000",
+        "log_file": "attack\\compromised-scada\\attack logs\\03-15-2023\\03-15-2023-1.csv",
+        "mapped_packet_rows": 14,
+        "first_packet_timestamp": "2023-03-16T01:53:39.721598000+0530",
+        "last_packet_timestamp": "2023-03-16T01:53:42.487863000+0530",
+        "offset_utc_minus_log_min_min": 130.049,
+        "offset_utc_minus_log_min_max": 130.095,
+        "func_codes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "quantities": [
+          0,
+          1
+        ]
+      },
+      {
+        "file_source": "substation-2.pcap",
+        "log_attack": "Recon. Complete",
+        "log_timestamp": "2023-03-15T19:49:09.044000",
+        "log_file": "attack\\compromised-scada\\attack logs\\03-15-2023\\03-15-2023-1.csv",
+        "mapped_packet_rows": 20,
+        "first_packet_timestamp": "2023-03-16T02:19:41.389535000+0530",
+        "last_packet_timestamp": "2023-03-16T02:19:43.722016000+0530",
+        "offset_utc_minus_log_min_min": 60.539,
+        "offset_utc_minus_log_min_max": 60.578,
+        "func_codes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "quantities": [
+          0,
+          1
+        ]
+      },
+      {
+        "file_source": "substation-2.pcap",
+        "log_attack": "Recon. Range: 2000",
+        "log_timestamp": "2023-03-15T18:13:36.789000",
+        "log_file": "attack\\compromised-scada\\attack logs\\03-15-2023\\03-15-2023-1.csv",
+        "mapped_packet_rows": 12,
+        "first_packet_timestamp": "2023-03-16T01:19:10.285518000+0530",
+        "last_packet_timestamp": "2023-03-16T01:19:11.025505000+0530",
+        "offset_utc_minus_log_min_min": 95.558,
+        "offset_utc_minus_log_min_max": 95.571,
+        "func_codes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "quantities": [
+          0,
+          1
+        ]
+      },
+      {
+        "file_source": "substation-2.pcap",
+        "log_attack": "Recon. Range: 2000",
+        "log_timestamp": "2023-03-15T19:49:09.043000",
+        "log_file": "attack\\compromised-scada\\attack logs\\03-15-2023\\03-15-2023-1.csv",
+        "mapped_packet_rows": 20,
+        "first_packet_timestamp": "2023-03-16T01:53:44.761492000+0530",
+        "last_packet_timestamp": "2023-03-16T01:53:47.586689000+0530",
+        "offset_utc_minus_log_min_min": 34.595,
+        "offset_utc_minus_log_min_max": 34.642,
+        "func_codes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "quantities": [
+          0,
+          1
+        ]
+      },
+      {
+        "file_source": "substation-2.pcap",
+        "log_attack": "Recon. Range: 2000",
+        "log_timestamp": "2023-03-15T21:03:02.490000",
+        "log_file": "attack\\compromised-scada\\attack logs\\03-15-2023\\03-15-2023-1.csv",
+        "mapped_packet_rows": 20,
+        "first_packet_timestamp": "2023-03-16T02:19:46.591961000+0530",
+        "last_packet_timestamp": "2023-03-16T02:19:48.818821000+0530",
+        "offset_utc_minus_log_min_min": -13.265,
+        "offset_utc_minus_log_min_max": -13.228,
+        "func_codes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "quantities": [
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "section_9_static_shortcut_summary": [
+    {
+      "evaluation_level": "packet_level",
+      "evaluation_protocol": "deterministic_static_rule (no training)",
+      "model_or_rule": "Rule 1: func_code == 5",
+      "window_aggregation_rule": "N/A (single current packet)",
+      "features_used": "func_code == 5",
+      "tp": 8400,
+      "fp": 105323,
+      "fn": 237,
+      "tn": 483175,
+      "precision": 0.073864,
+      "recall": 0.97256,
+      "f1": 0.1373,
+      "fpr": 0.178969,
+      "specificity": 0.821031,
+      "accuracy": 0.823223
+    },
+    {
+      "evaluation_level": "window_level",
+      "evaluation_protocol": "deterministic_static_rule (no training)",
+      "model_or_rule": "Rule 1: func_code == 5",
+      "window_aggregation_rule": "any_packet_in_window_matches (>=1 of 20 packets)",
+      "features_used": "func_code == 5",
+      "tp": 1781,
+      "fp": 23139,
+      "fn": 97,
+      "tn": 94220,
+      "precision": 0.071469,
+      "recall": 0.948349,
+      "f1": 0.13292,
+      "fpr": 0.197164,
+      "specificity": 0.802836,
+      "accuracy": 0.805128
+    },
+    {
+      "evaluation_level": "packet_level",
+      "evaluation_protocol": "deterministic_static_rule (no training)",
+      "model_or_rule": "Rule 2: modbus_len == 3",
+      "window_aggregation_rule": "N/A (single current packet)",
+      "features_used": "modbus_len == 3",
+      "tp": 8413,
+      "fp": 0,
+      "fn": 224,
+      "tn": 588498,
+      "precision": 1.0,
+      "recall": 0.974065,
+      "f1": 0.986862,
+      "fpr": 0.0,
+      "specificity": 1.0,
+      "accuracy": 0.999625
+    },
+    {
+      "evaluation_level": "window_level",
+      "evaluation_protocol": "deterministic_static_rule (no training)",
+      "model_or_rule": "Rule 2: modbus_len == 3",
+      "window_aggregation_rule": "any_packet_in_window_matches (>=1 of 20 packets)",
+      "features_used": "modbus_len == 3",
+      "tp": 1784,
+      "fp": 0,
+      "fn": 94,
+      "tn": 117359,
+      "precision": 1.0,
+      "recall": 0.949947,
+      "f1": 0.974331,
+      "fpr": 0.0,
+      "specificity": 1.0,
+      "accuracy": 0.999212
+    },
+    {
+      "evaluation_level": "packet_level",
+      "evaluation_protocol": "deterministic_static_rule (no training)",
+      "model_or_rule": "Rule 3: func_code == 5 AND modbus_len == 3",
+      "window_aggregation_rule": "N/A (single current packet)",
+      "features_used": "func_code == 5 AND modbus_len == 3",
+      "tp": 8400,
+      "fp": 0,
+      "fn": 237,
+      "tn": 588498,
+      "precision": 1.0,
+      "recall": 0.97256,
+      "f1": 0.986089,
+      "fpr": 0.0,
+      "specificity": 1.0,
+      "accuracy": 0.999603
+    },
+    {
+      "evaluation_level": "window_level",
+      "evaluation_protocol": "deterministic_static_rule (no training)",
+      "model_or_rule": "Rule 3: func_code == 5 AND modbus_len == 3",
+      "window_aggregation_rule": "any_packet_in_window_matches (>=1 of 20 packets)",
+      "features_used": "func_code == 5 AND modbus_len == 3",
+      "tp": 1769,
+      "fp": 0,
+      "fn": 109,
+      "tn": 117359,
+      "precision": 1.0,
+      "recall": 0.94196,
+      "f1": 0.970112,
+      "fpr": 0.0,
+      "specificity": 1.0,
+      "accuracy": 0.999086
+    },
+    {
+      "evaluation_level": "packet_level",
+      "evaluation_protocol": "deterministic_static_rule (no training)",
+      "model_or_rule": "Rule 4: packet_size == 75",
+      "window_aggregation_rule": "N/A (single current packet)",
+      "features_used": "packet_size == 75",
+      "tp": 8413,
+      "fp": 0,
+      "fn": 224,
+      "tn": 588498,
+      "precision": 1.0,
+      "recall": 0.974065,
+      "f1": 0.986862,
+      "fpr": 0.0,
+      "specificity": 1.0,
+      "accuracy": 0.999625
+    },
+    {
+      "evaluation_level": "window_level",
+      "evaluation_protocol": "deterministic_static_rule (no training)",
+      "model_or_rule": "Rule 4: packet_size == 75",
+      "window_aggregation_rule": "any_packet_in_window_matches (>=1 of 20 packets)",
+      "features_used": "packet_size == 75",
+      "tp": 1784,
+      "fp": 0,
+      "fn": 94,
+      "tn": 117359,
+      "precision": 1.0,
+      "recall": 0.949947,
+      "f1": 0.974331,
+      "fpr": 0.0,
+      "specificity": 1.0,
+      "accuracy": 0.999212
+    },
+    {
+      "evaluation_level": "packet_level",
+      "evaluation_protocol": "deterministic_static_rule (no training)",
+      "model_or_rule": "Rule 5a: register_start == 0 AND quantity == 0",
+      "window_aggregation_rule": "N/A (single current packet)",
+      "features_used": "register_start == 0 AND quantity == 0",
+      "tp": 8490,
+      "fp": 305561,
+      "fn": 147,
+      "tn": 282937,
+      "precision": 0.027034,
+      "recall": 0.98298,
+      "f1": 0.05262,
+      "fpr": 0.519222,
+      "specificity": 0.480778,
+      "accuracy": 0.488042
+    },
+    {
+      "evaluation_level": "window_level",
+      "evaluation_protocol": "deterministic_static_rule (no training)",
+      "model_or_rule": "Rule 5a: register_start == 0 AND quantity == 0",
+      "window_aggregation_rule": "any_packet_in_window_matches (>=1 of 20 packets)",
+      "features_used": "register_start == 0 AND quantity == 0",
+      "tp": 1818,
+      "fp": 61067,
+      "fn": 60,
+      "tn": 56292,
+      "precision": 0.02891,
+      "recall": 0.968051,
+      "f1": 0.056143,
+      "fpr": 0.520344,
+      "specificity": 0.479656,
+      "accuracy": 0.487349
+    },
+    {
+      "evaluation_level": "packet_level",
+      "evaluation_protocol": "deterministic_static_rule (no training)",
+      "model_or_rule": "Rule 5b: func_code == 5 AND register_start == 0 AND quantity == 0",
+      "window_aggregation_rule": "N/A (single current packet)",
+      "features_used": "func_code == 5 AND register_start == 0 AND quantity == 0",
+      "tp": 8400,
+      "fp": 65555,
+      "fn": 237,
+      "tn": 522943,
+      "precision": 0.113583,
+      "recall": 0.97256,
+      "f1": 0.20341,
+      "fpr": 0.111394,
+      "specificity": 0.888606,
+      "accuracy": 0.889821
+    },
+    {
+      "evaluation_level": "window_level",
+      "evaluation_protocol": "deterministic_static_rule (no training)",
+      "model_or_rule": "Rule 5b: func_code == 5 AND register_start == 0 AND quantity == 0",
+      "window_aggregation_rule": "any_packet_in_window_matches (>=1 of 20 packets)",
+      "features_used": "func_code == 5 AND register_start == 0 AND quantity == 0",
+      "tp": 1772,
+      "fp": 13109,
+      "fn": 106,
+      "tn": 104250,
+      "precision": 0.119078,
+      "recall": 0.943557,
+      "f1": 0.211468,
+      "fpr": 0.1117,
+      "specificity": 0.8883,
+      "accuracy": 0.88917
+    },
+    {
+      "evaluation_level": "packet_level",
+      "evaluation_protocol": "deterministic_static_rule (no training)",
+      "model_or_rule": "Rule 6a: quantity > 1",
+      "window_aggregation_rule": "N/A (single current packet)",
+      "features_used": "quantity > 1",
+      "tp": 66,
+      "fp": 459,
+      "fn": 8571,
+      "tn": 588039,
+      "precision": 0.125714,
+      "recall": 0.007642,
+      "f1": 0.014407,
+      "fpr": 0.00078,
+      "specificity": 0.99922,
+      "accuracy": 0.984878
+    },
+    {
+      "evaluation_level": "window_level",
+      "evaluation_protocol": "deterministic_static_rule (no training)",
+      "model_or_rule": "Rule 6a: quantity > 1",
+      "window_aggregation_rule": "any_packet_in_window_matches (>=1 of 20 packets)",
+      "features_used": "quantity > 1",
+      "tp": 23,
+      "fp": 134,
+      "fn": 1855,
+      "tn": 117225,
+      "precision": 0.146497,
+      "recall": 0.012247,
+      "f1": 0.022604,
+      "fpr": 0.001142,
+      "specificity": 0.998858,
+      "accuracy": 0.983319
+    },
+    {
+      "evaluation_level": "packet_level",
+      "evaluation_protocol": "deterministic_static_rule (no training)",
+      "model_or_rule": "Rule 6b: (func_code == 5 AND modbus_len == 3) OR (quantity > 1)",
+      "window_aggregation_rule": "N/A (single current packet)",
+      "features_used": "(func_code == 5 AND modbus_len == 3) OR (quantity > 1)",
+      "tp": 8466,
+      "fp": 459,
+      "fn": 171,
+      "tn": 588039,
+      "precision": 0.948571,
+      "recall": 0.980201,
+      "f1": 0.964127,
+      "fpr": 0.00078,
+      "specificity": 0.99922,
+      "accuracy": 0.998945
+    },
+    {
+      "evaluation_level": "window_level",
+      "evaluation_protocol": "deterministic_static_rule (no training)",
+      "model_or_rule": "Rule 6b: (func_code == 5 AND modbus_len == 3) OR (quantity > 1)",
+      "window_aggregation_rule": "any_packet_in_window_matches (>=1 of 20 packets)",
+      "features_used": "(func_code == 5 AND modbus_len == 3) OR (quantity > 1)",
+      "tp": 1792,
+      "fp": 134,
+      "fn": 86,
+      "tn": 117225,
+      "precision": 0.930426,
+      "recall": 0.954207,
+      "f1": 0.942166,
+      "fpr": 0.001142,
+      "specificity": 0.998858,
+      "accuracy": 0.998155
+    },
+    {
+      "evaluation_level": "packet_level",
+      "evaluation_protocol": "deterministic_static_rule (no training)",
+      "model_or_rule": "Rule 6c: (modbus_len == 3) OR (quantity > 1)",
+      "window_aggregation_rule": "N/A (single current packet)",
+      "features_used": "(modbus_len == 3) OR (quantity > 1)",
+      "tp": 8479,
+      "fp": 459,
+      "fn": 158,
+      "tn": 588039,
+      "precision": 0.948646,
+      "recall": 0.981707,
+      "f1": 0.964893,
+      "fpr": 0.00078,
+      "specificity": 0.99922,
+      "accuracy": 0.998967
+    },
+    {
+      "evaluation_level": "window_level",
+      "evaluation_protocol": "deterministic_static_rule (no training)",
+      "model_or_rule": "Rule 6c: (modbus_len == 3) OR (quantity > 1)",
+      "window_aggregation_rule": "any_packet_in_window_matches (>=1 of 20 packets)",
+      "features_used": "(modbus_len == 3) OR (quantity > 1)",
+      "tp": 1807,
+      "fp": 134,
+      "fn": 71,
+      "tn": 117225,
+      "precision": 0.930963,
+      "recall": 0.962194,
+      "f1": 0.946321,
+      "fpr": 0.001142,
+      "specificity": 0.998858,
+      "accuracy": 0.998281
+    },
+    {
+      "evaluation_level": "packet_level",
+      "evaluation_protocol": "LOCGO_cross_validation (10 capture groups)",
+      "model_or_rule": "Static DecisionTree (max_depth=3, with_len_size)",
+      "window_aggregation_rule": "N/A (single current packet)",
+      "features_used": "func_code, register_start, quantity, modbus_len, packet_size, unit_id",
+      "tp": 8433,
+      "fp": 0,
+      "fn": 204,
+      "tn": 588498,
+      "precision": 1.0,
+      "recall": 0.976381,
+      "f1": 0.988049,
+      "fpr": 0.0,
+      "specificity": 1.0,
+      "accuracy": 0.999658
+    },
+    {
+      "evaluation_level": "packet_level",
+      "evaluation_protocol": "LOCGO_cross_validation (10 capture groups)",
+      "model_or_rule": "Static LogisticRegression (with_len_size)",
+      "window_aggregation_rule": "N/A (single current packet)",
+      "features_used": "func_code, register_start, quantity, modbus_len, packet_size, unit_id",
+      "tp": 8410,
+      "fp": 1,
+      "fn": 227,
+      "tn": 588497,
+      "precision": 0.999881,
+      "recall": 0.973718,
+      "f1": 0.986626,
+      "fpr": 2e-06,
+      "specificity": 0.999998,
+      "accuracy": 0.999618
+    },
+    {
+      "evaluation_level": "packet_level",
+      "evaluation_protocol": "LOCGO_cross_validation (10 capture groups)",
+      "model_or_rule": "Static DecisionTree (max_depth=3, without_len_size)",
+      "window_aggregation_rule": "N/A (single current packet)",
+      "features_used": "func_code, register_start, quantity, unit_id (NO modbus_len/packet_size)",
+      "tp": 20,
+      "fp": 65555,
+      "fn": 8617,
+      "tn": 522943,
+      "precision": 0.000305,
+      "recall": 0.002316,
+      "f1": 0.000539,
+      "fpr": 0.111394,
+      "specificity": 0.888606,
+      "accuracy": 0.875787
+    },
+    {
+      "evaluation_level": "packet_level",
+      "evaluation_protocol": "LOCGO_cross_validation (10 capture groups)",
+      "model_or_rule": "Static LogisticRegression (without_len_size)",
+      "window_aggregation_rule": "N/A (single current packet)",
+      "features_used": "func_code, register_start, quantity, unit_id (NO modbus_len/packet_size)",
+      "tp": 12,
+      "fp": 65555,
+      "fn": 8625,
+      "tn": 522943,
+      "precision": 0.000183,
+      "recall": 0.001389,
+      "f1": 0.000323,
+      "fpr": 0.111394,
+      "specificity": 0.888606,
+      "accuracy": 0.875773
+    },
+    {
+      "evaluation_level": "window_level",
+      "evaluation_protocol": "LOCGO_cross_validation (10 capture groups)",
+      "model_or_rule": "Window Static Aggregated DecisionTree (max_depth=3, with_len_size)",
+      "window_aggregation_rule": "bag_of_packets_summary_stats (order-invariant, no timing)",
+      "features_used": "Non-sequential window min/max/mean/std of [func_code, register_start, quantity, modbus_len, packet_size, unit_id]",
+      "tp": 1798,
+      "fp": 0,
+      "fn": 80,
+      "tn": 117359,
+      "precision": 1.0,
+      "recall": 0.957401,
+      "f1": 0.978237,
+      "fpr": 0.0,
+      "specificity": 1.0,
+      "accuracy": 0.999329
+    },
+    {
+      "evaluation_level": "window_level",
+      "evaluation_protocol": "LOCGO_cross_validation (10 capture groups)",
+      "model_or_rule": "Window Static Aggregated RandomForest (max_depth=6, with_len_size)",
+      "window_aggregation_rule": "bag_of_packets_summary_stats (order-invariant, no timing)",
+      "features_used": "Non-sequential window min/max/mean/std of [func_code, register_start, quantity, modbus_len, packet_size, unit_id]",
+      "tp": 1797,
+      "fp": 0,
+      "fn": 81,
+      "tn": 117359,
+      "precision": 1.0,
+      "recall": 0.956869,
+      "f1": 0.977959,
+      "fpr": 0.0,
+      "specificity": 1.0,
+      "accuracy": 0.999321
+    },
+    {
+      "evaluation_level": "window_level",
+      "evaluation_protocol": "LOCGO_cross_validation (10 capture groups)",
+      "model_or_rule": "Window Static Aggregated LogisticRegression (with_len_size)",
+      "window_aggregation_rule": "bag_of_packets_summary_stats (order-invariant, no timing)",
+      "features_used": "Non-sequential window min/max/mean/std of [func_code, register_start, quantity, modbus_len, packet_size, unit_id]",
+      "tp": 1771,
+      "fp": 3,
+      "fn": 107,
+      "tn": 117356,
+      "precision": 0.998309,
+      "recall": 0.943024,
+      "f1": 0.96988,
+      "fpr": 2.6e-05,
+      "specificity": 0.999974,
+      "accuracy": 0.999077
+    },
+    {
+      "evaluation_level": "window_level",
+      "evaluation_protocol": "LOCGO_cross_validation (10 capture groups)",
+      "model_or_rule": "Window Static Aggregated DecisionTree (max_depth=3, without_len_size)",
+      "window_aggregation_rule": "bag_of_packets_summary_stats (order-invariant, no timing)",
+      "features_used": "Non-sequential window min/max/mean/std of [func_code, register_start, quantity, unit_id] (NO modbus_len/packet_size)",
+      "tp": 223,
+      "fp": 13178,
+      "fn": 1655,
+      "tn": 104181,
+      "precision": 0.016641,
+      "recall": 0.118743,
+      "f1": 0.02919,
+      "fpr": 0.112288,
+      "specificity": 0.887712,
+      "accuracy": 0.875601
+    },
+    {
+      "evaluation_level": "window_level",
+      "evaluation_protocol": "LOCGO_cross_validation (10 capture groups)",
+      "model_or_rule": "Window Static Aggregated RandomForest (max_depth=6, without_len_size)",
+      "window_aggregation_rule": "bag_of_packets_summary_stats (order-invariant, no timing)",
+      "features_used": "Non-sequential window min/max/mean/std of [func_code, register_start, quantity, unit_id] (NO modbus_len/packet_size)",
+      "tp": 243,
+      "fp": 13118,
+      "fn": 1635,
+      "tn": 104241,
+      "precision": 0.018187,
+      "recall": 0.129393,
+      "f1": 0.031892,
+      "fpr": 0.111777,
+      "specificity": 0.888223,
+      "accuracy": 0.876272
+    },
+    {
+      "evaluation_level": "window_level",
+      "evaluation_protocol": "LOCGO_cross_validation (10 capture groups)",
+      "model_or_rule": "Window Static Aggregated LogisticRegression (without_len_size)",
+      "window_aggregation_rule": "bag_of_packets_summary_stats (order-invariant, no timing)",
+      "features_used": "Non-sequential window min/max/mean/std of [func_code, register_start, quantity, unit_id] (NO modbus_len/packet_size)",
+      "tp": 146,
+      "fp": 13277,
+      "fn": 1732,
+      "tn": 104082,
+      "precision": 0.010877,
+      "recall": 0.077742,
+      "f1": 0.019084,
+      "fpr": 0.113132,
+      "specificity": 0.886868,
+      "accuracy": 0.874125
+    }
+  ],
+  "section_10_temporal_signal_diagnostics": {
+    "cohort_feature_distributions": {
+      "normal_all (n=117359)": {
+        "window_count": 117359,
+        "address_delta": {
+          "mean": -0.0379,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.5263
+        },
+        "abs_address_delta": {
+          "mean": 3.4387,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 2.4737,
+          "p95": 20.0
+        },
+        "unique_addresses_last_20": {
+          "mean": 1.9804,
+          "median": 1.0,
+          "p25": 1.0,
+          "p75": 3.0,
+          "p95": 4.0
+        },
+        "register_span_last_20": {
+          "mean": 6.0929,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 6.0,
+          "p95": 30.0
+        },
+        "monotonic_scan_fraction (reg_t > reg_t-1)": {
+          "mean": 0.1218,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.2105,
+          "p95": 0.4211
+        },
+        "exact_step1_scan_fraction (reg_t - reg_t-1 == 1)": {
+          "mean": 0.0084,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.0
+        },
+        "function_transition_rate": {
+          "mean": 0.6544,
+          "median": 0.7895,
+          "p25": 0.7895,
+          "p75": 0.7895,
+          "p95": 0.8421
+        },
+        "read_request_rate (FC1-4)": {
+          "mean": 0.8197,
+          "median": 1.0,
+          "p25": 1.0,
+          "p75": 1.0,
+          "p95": 1.0
+        },
+        "requests_per_second": {
+          "mean": 348.4386,
+          "median": 0.9829,
+          "p25": 0.9821,
+          "p75": 1.3017,
+          "p95": 3047.8977
+        },
+        "median_interarrival_s": {
+          "mean": 0.05,
+          "median": 0.022,
+          "p25": 0.0213,
+          "p75": 0.0225,
+          "p95": 0.0403
+        },
+        "polling_interval_drift_cv": {
+          "mean": 1.7383,
+          "median": 1.8962,
+          "p25": 1.8918,
+          "p75": 1.8981,
+          "p95": 2.2485
+        },
+        "same_address_repeat_steps (out of 19)": {
+          "mean": 13.2556,
+          "median": 19.0,
+          "p25": 8.0,
+          "p75": 19.0,
+          "p95": 19.0
+        },
+        "unique_unit_ids_last_20": {
+          "mean": 1.0,
+          "median": 1.0,
+          "p25": 1.0,
+          "p75": 1.0,
+          "p95": 1.0
+        }
+      },
+      "recon_all (n=1878)": {
+        "window_count": 1878,
+        "address_delta": {
+          "mean": 0.0021,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.0
+        },
+        "abs_address_delta": {
+          "mean": 0.2737,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.0526
+        },
+        "unique_addresses_last_20": {
+          "mean": 1.1081,
+          "median": 1.0,
+          "p25": 1.0,
+          "p75": 1.0,
+          "p95": 2.0
+        },
+        "register_span_last_20": {
+          "mean": 0.631,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 1.0
+        },
+        "monotonic_scan_fraction (reg_t > reg_t-1)": {
+          "mean": 0.0085,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.0
+        },
+        "exact_step1_scan_fraction (reg_t - reg_t-1 == 1)": {
+          "mean": 0.0007,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.0
+        },
+        "function_transition_rate": {
+          "mean": 0.0789,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.7895
+        },
+        "read_request_rate (FC1-4)": {
+          "mean": 0.0974,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 1.0
+        },
+        "requests_per_second": {
+          "mean": 1059.4557,
+          "median": 1186.6631,
+          "p25": 19.6325,
+          "p75": 1776.633,
+          "p95": 2603.7939
+        },
+        "median_interarrival_s": {
+          "mean": 0.2042,
+          "median": 0.0004,
+          "p25": 0.0003,
+          "p75": 0.0006,
+          "p95": 0.0237
+        },
+        "polling_interval_drift_cv": {
+          "mean": 2.0071,
+          "median": 1.4932,
+          "p25": 0.8732,
+          "p75": 3.7762,
+          "p95": 4.2025
+        },
+        "same_address_repeat_steps (out of 19)": {
+          "mean": 18.5964,
+          "median": 19.0,
+          "p25": 19.0,
+          "p75": 19.0,
+          "p95": 19.0
+        },
+        "unique_unit_ids_last_20": {
+          "mean": 1.0,
+          "median": 1.0,
+          "p25": 1.0,
+          "p75": 1.0,
+          "p95": 1.0
+        }
+      },
+      "recon_cohort1_len3_shortcut (n=1784)": {
+        "window_count": 1784,
+        "address_delta": {
+          "mean": 0.0008,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.0
+        },
+        "abs_address_delta": {
+          "mean": 0.0114,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.0
+        },
+        "unique_addresses_last_20": {
+          "mean": 1.0263,
+          "median": 1.0,
+          "p25": 1.0,
+          "p75": 1.0,
+          "p95": 1.0
+        },
+        "register_span_last_20": {
+          "mean": 0.1087,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.0
+        },
+        "monotonic_scan_fraction (reg_t > reg_t-1)": {
+          "mean": 0.0011,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.0
+        },
+        "exact_step1_scan_fraction (reg_t - reg_t-1 == 1)": {
+          "mean": 0.0004,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.0
+        },
+        "function_transition_rate": {
+          "mean": 0.0475,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.2632
+        },
+        "read_request_rate (FC1-4)": {
+          "mean": 0.0511,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.25
+        },
+        "requests_per_second": {
+          "mean": 1115.2311,
+          "median": 1252.3505,
+          "p25": 19.6838,
+          "p75": 1819.4637,
+          "p95": 2613.6445
+        },
+        "median_interarrival_s": {
+          "mean": 0.0017,
+          "median": 0.0004,
+          "p25": 0.0003,
+          "p75": 0.0006,
+          "p95": 0.0013
+        },
+        "polling_interval_drift_cv": {
+          "mean": 2.0133,
+          "median": 1.4189,
+          "p25": 0.8559,
+          "p75": 3.9714,
+          "p95": 4.203
+        },
+        "same_address_repeat_steps (out of 19)": {
+          "mean": 18.9636,
+          "median": 19.0,
+          "p25": 19.0,
+          "p75": 19.0,
+          "p95": 19.0
+        },
+        "unique_unit_ids_last_20": {
+          "mean": 1.0,
+          "median": 1.0,
+          "p25": 1.0,
+          "p75": 1.0,
+          "p95": 1.0
+        }
+      },
+      "recon_cohort2_qty_gt1_no_len3 (n=23)": {
+        "window_count": 23,
+        "address_delta": {
+          "mean": 0.1213,
+          "median": 0.0,
+          "p25": -0.0263,
+          "p75": 0.0,
+          "p95": 1.6316
+        },
+        "abs_address_delta": {
+          "mean": 6.3822,
+          "median": 1.3684,
+          "p25": 0.4211,
+          "p75": 16.2105,
+          "p95": 17.4421
+        },
+        "unique_addresses_last_20": {
+          "mean": 3.9565,
+          "median": 4.0,
+          "p25": 3.0,
+          "p75": 5.0,
+          "p95": 5.0
+        },
+        "register_span_last_20": {
+          "mean": 17.0435,
+          "median": 13.0,
+          "p25": 4.0,
+          "p75": 34.0,
+          "p95": 34.0
+        },
+        "monotonic_scan_fraction (reg_t > reg_t-1)": {
+          "mean": 0.1854,
+          "median": 0.1579,
+          "p25": 0.1053,
+          "p75": 0.3158,
+          "p95": 0.3632
+        },
+        "exact_step1_scan_fraction (reg_t - reg_t-1 == 1)": {
+          "mean": 0.0206,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0526,
+          "p95": 0.0526
+        },
+        "function_transition_rate": {
+          "mean": 0.524,
+          "median": 0.4737,
+          "p25": 0.2632,
+          "p75": 0.8421,
+          "p95": 0.8421
+        },
+        "read_request_rate (FC1-4)": {
+          "mean": 0.9609,
+          "median": 1.0,
+          "p25": 1.0,
+          "p75": 1.0,
+          "p95": 1.0
+        },
+        "requests_per_second": {
+          "mean": 0.5916,
+          "median": 0.3616,
+          "p25": 0.0166,
+          "p75": 1.2238,
+          "p95": 1.3075
+        },
+        "median_interarrival_s": {
+          "mean": 15.1433,
+          "median": 0.0238,
+          "p25": 0.0228,
+          "p75": 21.4893,
+          "p95": 60.0017
+        },
+        "polling_interval_drift_cv": {
+          "mean": 2.059,
+          "median": 2.0182,
+          "p25": 1.4206,
+          "p75": 2.1642,
+          "p95": 4.1327
+        },
+        "same_address_repeat_steps (out of 19)": {
+          "mean": 10.6522,
+          "median": 14.0,
+          "p25": 3.0,
+          "p75": 16.0,
+          "p95": 18.0
+        },
+        "unique_unit_ids_last_20": {
+          "mean": 1.0,
+          "median": 1.0,
+          "p25": 1.0,
+          "p75": 1.0,
+          "p95": 1.0
+        }
+      },
+      "recon_cohort3_event_mapped_routine_no_len3_no_qty_gt1 (n=71)": {
+        "window_count": 71,
+        "address_delta": {
+          "mean": -0.0052,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.1316,
+          "p95": 0.5263
+        },
+        "abs_address_delta": {
+          "mean": 4.8858,
+          "median": 0.3684,
+          "p25": 0.0,
+          "p75": 2.5263,
+          "p95": 20.5263
+        },
+        "unique_addresses_last_20": {
+          "mean": 2.2394,
+          "median": 2.0,
+          "p25": 1.0,
+          "p75": 3.5,
+          "p95": 4.0
+        },
+        "register_span_last_20": {
+          "mean": 8.4366,
+          "median": 6.0,
+          "p25": 0.0,
+          "p75": 10.0,
+          "p95": 30.0
+        },
+        "monotonic_scan_fraction (reg_t > reg_t-1)": {
+          "mean": 0.1394,
+          "median": 0.0526,
+          "p25": 0.0,
+          "p75": 0.2105,
+          "p95": 0.4211
+        },
+        "exact_step1_scan_fraction (reg_t - reg_t-1 == 1)": {
+          "mean": 0.0,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.0
+        },
+        "function_transition_rate": {
+          "mean": 0.725,
+          "median": 0.7895,
+          "p25": 0.7895,
+          "p75": 0.7895,
+          "p95": 0.8421
+        },
+        "read_request_rate (FC1-4)": {
+          "mean": 0.9796,
+          "median": 1.0,
+          "p25": 1.0,
+          "p75": 1.0,
+          "p95": 1.0
+        },
+        "requests_per_second": {
+          "mean": 1.0139,
+          "median": 0.9816,
+          "p25": 0.9698,
+          "p75": 0.9831,
+          "p95": 1.2847
+        },
+        "median_interarrival_s": {
+          "mean": 0.4519,
+          "median": 0.0245,
+          "p25": 0.0223,
+          "p75": 0.0447,
+          "p95": 5.0119
+        },
+        "polling_interval_drift_cv": {
+          "mean": 1.8333,
+          "median": 1.8948,
+          "p25": 1.8711,
+          "p75": 1.8967,
+          "p95": 2.2147
+        },
+        "same_address_repeat_steps (out of 19)": {
+          "mean": 11.9437,
+          "median": 18.0,
+          "p25": 7.0,
+          "p75": 19.0,
+          "p95": 19.0
+        },
+        "unique_unit_ids_last_20": {
+          "mean": 1.0,
+          "median": 1.0,
+          "p25": 1.0,
+          "p75": 1.0,
+          "p95": 1.0
+        }
+      },
+      "unlabelled_master_fc5_request_windows_in_s0003 (n=23139)": {
+        "window_count": 23139,
+        "address_delta": {
+          "mean": 0.001,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.0
+        },
+        "abs_address_delta": {
+          "mean": 0.5389,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 2.2632
+        },
+        "unique_addresses_last_20": {
+          "mean": 1.2054,
+          "median": 1.0,
+          "p25": 1.0,
+          "p75": 1.0,
+          "p95": 3.0
+        },
+        "register_span_last_20": {
+          "mean": 1.7951,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 14.0
+        },
+        "monotonic_scan_fraction (reg_t > reg_t-1)": {
+          "mean": 0.0187,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.1053
+        },
+        "exact_step1_scan_fraction (reg_t - reg_t-1 == 1)": {
+          "mean": 0.0017,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.0
+        },
+        "function_transition_rate": {
+          "mean": 0.0776,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.7895
+        },
+        "read_request_rate (FC1-4)": {
+          "mean": 0.0897,
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.95
+        },
+        "requests_per_second": {
+          "mean": 1727.7255,
+          "median": 1055.6318,
+          "p25": 593.0055,
+          "p75": 3049.4778,
+          "p95": 4391.7435
+        },
+        "median_interarrival_s": {
+          "mean": 0.0161,
+          "median": 0.0004,
+          "p25": 0.0003,
+          "p75": 0.0016,
+          "p95": 0.022
+        },
+        "polling_interval_drift_cv": {
+          "mean": 0.8083,
+          "median": 0.2526,
+          "p25": 0.0747,
+          "p75": 1.3519,
+          "p95": 3.3554
+        },
+        "same_address_repeat_steps (out of 19)": {
+          "mean": 18.1753,
+          "median": 19.0,
+          "p25": 19.0,
+          "p75": 19.0,
+          "p95": 19.0
+        },
+        "unique_unit_ids_last_20": {
+          "mean": 1.0,
+          "median": 1.0,
+          "p25": 1.0,
+          "p75": 1.0,
+          "p95": 1.0
+        }
+      }
+    },
+    "temporal_only_locgo_classifier_evaluation": {
+      "rf_locgo_overall": {
+        "tp": 315,
+        "fp": 32,
+        "fn": 1563,
+        "tn": 117327,
+        "precision": 0.907781,
+        "recall": 0.167732,
+        "f1": 0.283146,
+        "fpr": 0.000273,
+        "specificity": 0.999727,
+        "accuracy": 0.986623
+      },
+      "lr_locgo_overall": {
+        "tp": 1,
+        "fp": 7456,
+        "fn": 1877,
+        "tn": 109903,
+        "precision": 0.000134,
+        "recall": 0.000532,
+        "f1": 0.000214,
+        "fpr": 0.063532,
+        "specificity": 0.936468,
+        "accuracy": 0.921727
+      },
+      "rf_recall_on_cohort1_len3_windows": 0.1766,
+      "rf_recall_on_cohort2_qty_gt1_windows": 0.0,
+      "rf_recall_on_cohort3_event_mapped_windows": 0.0
+    }
+  },
+  "section_11_attack_independence": {
+    "hierarchy_of_counts": {
+      "1_raw_packet_count_before_dedup": 879225,
+      "1b_raw_positive_packet_count_before_dedup": 8699,
+      "1c_rebuilt_retained_packet_count": 597135,
+      "1d_rebuilt_positive_packet_count": 8637,
+      "2_rebuilt_total_window_count": 119237,
+      "2b_rebuilt_positive_window_count": 1878,
+      "2c_rebuilt_non_len3_positive_window_count": 94,
+      "3_mapped_attack_event_rows_in_xlsx": 158,
+      "3b_distinct_log_timestamps_in_attack_events_mapped": 7,
+      "3c_contiguous_positive_packet_bursts_in_rebuilt_streams": 77,
+      "4_distinct_source_pcap_files_in_raw": 15,
+      "4b_distinct_source_pcap_files_retained": 12,
+      "4c_distinct_capture_groups_retained": 10,
+      "4d_positive_capture_groups_retained": 6,
+      "5_independent_reconnaissance_campaigns": 2,
+      "5_campaign_breakdown": [
+        {
+          "campaign_id": 1,
+          "name": "Feb 2023 Docker veth Multi-Interface Capture (G03_0201_veth)",
+          "capture_groups": [
+            "G03_0201_veth"
+          ],
+          "positive_packets": 50,
+          "positive_windows": 10,
+          "dominant_artifact": "50 retained packets (10 windows) in 185.175.0.7->185.175.0.4 with FC=1, quantity=204, register_start=114 (repeated identical probe, plus 50 duplicate view packets dropped from veth665f3cf-0.pcap)"
+        },
+        {
+          "campaign_id": 2,
+          "name": "Mar 15-20 2023 Compromised-SCADA Substation Captures (G04_0315_sub1, G05_0315_sub2, G06_0316_sub4, G07_0319_sub10, G08_0320_sub14)",
+          "capture_groups": [
+            "G04_0315_sub1",
+            "G05_0315_sub2",
+            "G06_0316_sub4",
+            "G07_0319_sub10",
+            "G08_0320_sub14"
+          ],
+          "positive_packets": 8587,
+          "positive_windows": 1868,
+          "dominant_artifact": "8,400 FC5+len3 slave responses (97.82% of substation positives) + 13 FC1-4+len3 responses + 16 non-routine qty>1 reads + 158 event_mapped rows"
+        }
+      ]
+    },
+    "concentration_metrics": {
+      "largest_positive_capture_group": "G07_0319_sub10",
+      "largest_positive_capture_group_packets": 2185,
+      "largest_positive_capture_group_packet_pct": 25.3,
+      "substation_campaign_packet_pct": 99.42,
+      "largest_positive_session_id": "185.175.0.5_185.175.0.3_u1_s0004",
+      "largest_positive_session_id_packets": 8432,
+      "largest_positive_session_id_packet_pct": 97.63,
+      "largest_positive_session_id_windows": 1769,
+      "largest_positive_session_id_window_pct": 94.2,
+      "positive_packets_by_capture_group": {
+        "G07_0319_sub10": 2185,
+        "G06_0316_sub4": 2140,
+        "G08_0320_sub14": 2125,
+        "G04_0315_sub1": 2001,
+        "G05_0315_sub2": 136,
+        "G03_0201_veth": 50
+      },
+      "positive_windows_by_capture_group": {
+        "G07_0319_sub10": 470,
+        "G06_0316_sub4": 454,
+        "G08_0320_sub14": 443,
+        "G04_0315_sub1": 415,
+        "G05_0315_sub2": 86,
+        "G03_0201_veth": 10
+      },
+      "positive_packets_by_session_id": {
+        "185.175.0.5_185.175.0.3_u1_s0004": 8432,
+        "185.175.0.7_185.175.0.4_u1_s0007": 50,
+        "185.175.0.3_185.175.0.5_u1_s0003": 48,
+        "185.175.0.4_185.175.0.3_u1_s0002": 33,
+        "185.175.0.3_185.175.0.4_u1_s0001": 29,
+        "185.175.0.8_185.175.0.3_u1_s0006": 25,
+        "185.175.0.3_185.175.0.8_u1_s0005": 20
+      },
+      "positive_windows_by_session_id": {
+        "185.175.0.5_185.175.0.3_u1_s0004": 1769,
+        "185.175.0.4_185.175.0.3_u1_s0002": 28,
+        "185.175.0.3_185.175.0.5_u1_s0003": 23,
+        "185.175.0.3_185.175.0.4_u1_s0001": 22,
+        "185.175.0.8_185.175.0.3_u1_s0006": 18,
+        "185.175.0.7_185.175.0.4_u1_s0007": 10,
+        "185.175.0.3_185.175.0.8_u1_s0005": 8
+      }
+    }
+  }
+}

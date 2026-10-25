@@ -1,0 +1,7 @@
+test_demonstrations_and_saved_results_are_read_only (__main__.FrontendTests.test_demonstrations_and_saved_results_are_read_only) ... 2026-10-25 22:31:17.896 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+
+----------------------------------------------------------------------
+Ran 1 test in 11.534s
+
+OK

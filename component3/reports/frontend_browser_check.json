@@ -1,0 +1,14 @@
+{
+  "status": "PASSED",
+  "http_status": 200,
+  "page_errors": [],
+  "browser": "installed Edge via Playwright",
+  "views": [
+    "command",
+    "response",
+    "abstention",
+    "saved results"
+  ],
+  "screenshot_directory": "component3/local/frontend",
+  "scope": "Local browser smoke test; development inference and saved result display only"
+}

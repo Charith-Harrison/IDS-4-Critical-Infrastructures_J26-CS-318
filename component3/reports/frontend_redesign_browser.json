@@ -1,0 +1,20 @@
+{
+  "status": "PASSED",
+  "http_status": 200,
+  "page_errors": [],
+  "horizontal_overflow": [],
+  "browser": "installed Edge via Playwright",
+  "views": [
+    "command-hidden-1366",
+    "command-context-1366",
+    "response-context-1366",
+    "how-it-works-1366",
+    "results-1366",
+    "evidence-1366",
+    "dataset-1366",
+    "response-context-1280",
+    "command-context-1280"
+  ],
+  "screenshot_directory": "component3/local/frontend_redesign",
+  "scope": "Presentation check at 1366×768 and 1280×800. Saved predictions/results only."
+}

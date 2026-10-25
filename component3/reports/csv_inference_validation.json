@@ -1,0 +1,59 @@
+{
+  "status": "PASSED",
+  "protected_manifest": "component3/local/frontend_redesign_before/protected_hashes.json",
+  "protected_manifest_sha256": "d3b6558347821cc1706f543499cc00901a1fbd06faab3be265e3504dd2d938ee",
+  "protected_files_checked": 1821,
+  "changed_protected_files": [],
+  "test_groups": [
+    "38",
+    "18"
+  ],
+  "tests_passed": 56,
+  "test_command": ".\\.venv\\Scripts\\python.exe -B c3.py test",
+  "browser_checks": {
+    "csv": {
+      "status": "PASSED",
+      "page_errors": [],
+      "checked": [
+        "incompatible schema rejected",
+        "unlabelled CSV predicted",
+        "validation badge",
+        "labelled CSV scored after prediction",
+        "prediction report downloaded"
+      ],
+      "report_rows": 2272,
+      "screenshots": "component3/local/csv_demo"
+    },
+    "pcap": {
+      "status": "PASSED",
+      "page_errors": [],
+      "run": "MX025",
+      "messages": 2272,
+      "predicted_alerts": 27,
+      "exported_rows": 2272,
+      "checked": [
+        "PCAP model inference button",
+        "fresh confidence",
+        "CSV export",
+        "per-class metrics",
+        "confusion matrix"
+      ],
+      "scope": "Development replay only; original final metrics read, never regenerated."
+    }
+  },
+  "equivalence_recording": "MX025 (validation)",
+  "equivalence_messages": 2272,
+  "equivalence_contract": "Exact feature rows and B/D class predictions; confidence tolerance 1e-12 for parallel RF floating-point summation.",
+  "schema": "c3-modbus-observations-v1",
+  "inference_refits": false,
+  "labels_in_predictors": false,
+  "official_final_evaluation_rerun": false,
+  "source_sha256": {
+    "csv_inference.py": "237e87cc930bd8dd85bba2dc213947fa6a68167cfd2f9258d5e59332ac552193",
+    "observation_inference.py": "b7f510da7ead7c72aaca0b347f35175fe544c39c7443f56e4936d03817aa35fd",
+    "traffic_ui.py": "d67e41afffe863ca250ff49da7940a1f0a87e0b1d04c63bf86beb0a462d105ae",
+    "capture_replay.py": "f650d38a8aba2d4914f85ea746e729f6153382fc650b215ca018dd8c653fc541",
+    "frontend.py": "782894ca24c9583a378718e637c58ee9f053575fab1553388fdb94ab2aaef7f8",
+    "tests/test_csv_inference.py": "f3b460858793ab3d29bed27380018f59cdd1f014fe080a38c0bd0c877909dd03"
+  }
+}

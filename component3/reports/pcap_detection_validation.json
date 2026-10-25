@@ -1,0 +1,15 @@
+{
+  "status": "PASSED",
+  "protected_files_checked": 1821,
+  "changed_protected_files": [],
+  "tests_passed": 41,
+  "replay_scope": "accepted development PCAPs only",
+  "research_training_executed": false,
+  "final_evaluation_executed": false,
+  "code_sha256": {
+    "component3\\capture_replay.py": "7ec3418de6b2c535c1f570d551082e2077c87a720ee1ee81b62fe4a1bd20eeed",
+    "component3\\frontend.py": "6d5df75f8c438524b8d9533dda7c1a5b85e94c3e3222cde5ee6dc1d5222769e7",
+    "component3\\tests\\test_capture_replay.py": "64ca36b5762d7e561deb6bb004eb5f9cf154b25155927a11e148b2a0e2ca6f10",
+    "component3\\tests\\test_frontend.py": "be9883e06b40e6750120a247762d343321b9fbe3014759b1d16fccfbeb30fb3a"
+  }
+}

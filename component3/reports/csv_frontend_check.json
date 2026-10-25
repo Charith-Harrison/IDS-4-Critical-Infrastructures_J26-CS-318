@@ -1,0 +1,13 @@
+{
+  "status": "PASSED",
+  "page_errors": [],
+  "checked": [
+    "incompatible schema rejected",
+    "unlabelled CSV predicted",
+    "validation badge",
+    "labelled CSV scored after prediction",
+    "prediction report downloaded"
+  ],
+  "report_rows": 2272,
+  "screenshots": "component3/local/csv_demo"
+}

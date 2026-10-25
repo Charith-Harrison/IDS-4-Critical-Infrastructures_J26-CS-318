@@ -10,6 +10,8 @@ Command and response injection detection in Modbus/TCP using earlier observable 
 - [Requirements traceability](docs/TRACEABILITY.md): all proposal requirements, individual/group boundaries and the actual PP1 rubric.
 - [Setup and demonstration](docs/SETUP.md): safe commands, portable paths and output contract.
 - [Viva guide](docs/VIVA.md): exactly what the preprocessing, features, models and scores mean.
+- [PP1 frontend demonstration](docs/PP1_FRONTEND_DEMO.md): launch the separate page and follow a timed presentation script.
+- [Analyze a CSV](docs/CSV_INFERENCE.md): observation schema, offline inference, run boundaries and honest upload metrics.
 - [Methodology amendment for review](docs/METHODOLOGY_AMENDMENT.md): proposed change, not approval.
 - [Migration record](docs/MIGRATION.md): old/new paths, preservation and historical commands.
 
@@ -44,3 +46,9 @@ Collection `40ae7a846cce48fc8e3c52ebfca7e2cd`: **104 accepted runs**, 107 attemp
 The original lock remains `f59f8e8922de62afd28f610a2521d9c45c0ebc46cec35b587210f4da0c6181c9`. Frozen instructions retain their historical paths and commands; they are evidence, not the active workflow. Do not run their `prepare`, `train`, `freeze` or `evaluate-final` commands against the locked artifacts. Current commands do not expose those operations.
 
 The root `app/`, `src/` and other group components are unchanged. The legacy binary CSV application's metrics do not establish performance of this three-class testbed component.
+
+## Analyze a CSV
+
+Open **Demo → Analyze traffic**, choose **CSV**, download the template, select a CSV, confirm the declared testbed policy and click **Run detection on CSV**. Review predictions, inspect a decision's earlier context, optionally evaluate supplied labels and download the report. Uploading a CSV does not train the model. Metrics from training data are not independent test results.
+
+PCAP is the full captured-traffic route. CSV is the batch route for already extracted Modbus observations. Both use the same causal context builder, frozen preprocessing and saved model. To check a real round trip, analyze a recorded PCAP and download **observations (CSV input)**, then analyze that file in CSV mode. See the linked schema guide; generic flow CSVs and prediction reports are not supported inputs.

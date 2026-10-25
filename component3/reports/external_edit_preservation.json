@@ -1,0 +1,8 @@
+{
+  "reason": "Uncommitted external whitespace edit broke original frozen code hash; edited bytes preserved separately before exact restoration",
+  "edited_copy": "component3\\local\\preserved_external_edits\\experiment-whitespace-change.py",
+  "edited_sha256": "73062168255370e2e7db02178c4051e5232aef650ebff745576a4012febeb88c",
+  "restored_sha256": "8012e15e2a10922e31c77d2d2aa8537d800149d456a4fa4372cc09a96c58936c",
+  "expected_lock_sha256": "8012e15e2a10922e31c77d2d2aa8537d800149d456a4fa4372cc09a96c58936c",
+  "source_git_head": "9a1811ab398a964965eb3417f0613ecaea27891d"
+}

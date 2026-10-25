@@ -1,0 +1,27 @@
+{
+  "kind": "DEVELOPMENT_PCAP_INFERENCE_NOT_FINAL_EVALUATION",
+  "planned_id": "MX084",
+  "run_id": "MX084-20261025T063001Z-dfeac789",
+  "role": "train",
+  "pcap": "component3\\data\\collection\\MX084-20261025T063001Z-dfeac789\\capture.pcap",
+  "capture_sha256": "c2fa995200539fe150dad75f5e4473e5bfd771cd57f5977f1b78ebb00b5920d5",
+  "messages": 2486,
+  "eligible": 265,
+  "alerts": 0,
+  "abstentions": 66,
+  "out_of_scope": 2221,
+  "prediction_counts": {
+    "out_of_scope": 2221,
+    "normal": 199,
+    "abstain": 66
+  },
+  "capture_statistics": {
+    "frames": 3596,
+    "tcp_frames": 3596,
+    "observed_tcp_payload_bytes": 28821,
+    "unique_tcp_payload_bytes": 28821
+  },
+  "labels_used": false,
+  "training_executed": false,
+  "final_evaluation_executed": false
+}

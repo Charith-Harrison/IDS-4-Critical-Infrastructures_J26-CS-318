@@ -1,0 +1,19 @@
+{
+  "status": "PASSED",
+  "broken_document_links": [],
+  "python_sources_compiled": 11,
+  "code_sha256": {
+    "c3.py": "afb9182eef3d59d4ce5787142b8f561ff4f21b381ff6e2e6331ec4066b7e3130",
+    "component3\\cli.py": "fc47430ff64b058ca1b6fc7df8b076cfdbf4fee7f37d546d91c960e2f24e4910",
+    "component3\\demo_data.py": "88a19766470566b5d947dca6b5688798374069829fd8126f76370eadfd968b72",
+    "component3\\frontend.py": "494a81da913e15eb9977bdbbc7ec010157f740304c68b055541a29e44ca7428a",
+    "component3\\runtime.py": "9158c9f8a0607e73ba62e1fcbb8292d008dade4dc3da365e6cc0fb6e3c95e77e",
+    "component3\\tools\\audit.py": "b98655f33b3dbe4d0d2a52be52d1efa98ec2d23bebd460262d3be1eae1bebc81",
+    "component3\\tools\\preservation.py": "b673cccb400ba2821eb51ae3ee77e05bf29bad33240fa1ab3d9469e105ab22bb",
+    "component3\\tools\\runtime_check.py": "d655d54330237dd2ebd5893cca0e5d72ccda59f89b9500abbdbc9d4e1591dba9",
+    "component3\\tools\\supplement.py": "54840c4593d9452d47a3c9b3832a87f2d91c43853607430febc461836430babf",
+    "component3\\tests\\test_frontend.py": "dc26b4297aece3e9d0162f4969e340130f96272af9bc7c248c757de44370716a",
+    "component3\\tests\\test_runtime.py": "8db1f9f06680ae7a645fc9d4f9baca658270aaa1e7e2d946dda40c66331d535c"
+  },
+  "lock_sha256": "f59f8e8922de62afd28f610a2521d9c45c0ebc46cec35b587210f4da0c6181c9"
+}

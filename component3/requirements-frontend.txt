@@ -1,0 +1,2 @@
+-r requirements-local-tested.txt
+streamlit==1.66.0

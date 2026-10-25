@@ -88,3 +88,9 @@ Stop inference on unsupported map/unit/function, unresolved byte gaps, ambiguous
 **Not inferable here:** industrial effectiveness, physical harm, broad injection mechanisms, independence of seeds as campaigns, calibrated risk, malicious intent from policy-conforming traffic, or supervisor approval.
 
 **Single best next action:** take the amendment and this evidence report to the supervisor and agree the narrow testbed research question before collecting or tuning another experiment.
+
+## PP1 demonstration addition
+
+Added a separate read-only Streamlit frontend (`frontend.py`, `demo_data.py`) using the original matched training examples from MX001/MX084. It replays complete accepted development streams, separates label evidence from prediction inputs, reveals earlier context interactively and displays original saved final metrics separately. The additional Streamlit interaction test checks command/response/abstention/evidence views and unchanged lock/start-marker/summary hashes. All four browser views passed in local Edge with HTTP200 and no page errors; screenshots were visually checked. A missing-anchor display issue found during browser testing was fixed. It does not establish a live transport adapter or integration into the group fusion application. See `reports/frontend_tests_final.txt`, `reports/frontend_browser_check.json` and the [frontend guide](PP1_FRONTEND_DEMO.md).
+
+During frontend work, an external whitespace-only edit to locked `experiment.py` broke the model code hash. The edited version was preserved under ignored `local/preserved_external_edits/` before restoring the exact committed frozen bytes. `reports/external_edit_preservation.json` records both hashes. The original experiment remains authoritative.

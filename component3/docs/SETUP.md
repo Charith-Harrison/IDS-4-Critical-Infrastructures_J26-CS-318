@@ -77,3 +77,7 @@ Statuses: `complete`, `insufficient_context`, `out_of_scope`, `invalid_input`, `
 Only unit1, one outstanding request/writer and the supplied single-object FC1/3/5/6 map are qualified. Map changes clear state. After loss/trust changes, start a fresh transport generation/offset basis and observe new anchors; there is no automatic midstream resynchronization. The transport must call `invalidate(connection)` on timeout, loss, reconnect or trust loss. Upstream generation/offset errors or forged anchor messages remain outside demonstrated operational reliability.
 
 No network publication, collection start, original experiment retraining or final evaluation is part of these commands.
+
+## PP1 frontend
+
+See [the frontend demonstration guide](PP1_FRONTEND_DEMO.md) for the separate localhost page and a six-minute rehearsal. It replays only accepted training examples and displays original saved results separately.

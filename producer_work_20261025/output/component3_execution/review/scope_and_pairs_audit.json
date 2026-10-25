@@ -1,0 +1,222 @@
+{
+  "scope": "Read-only scope/label/pair checks; no new accepted labels, split or model data.",
+  "log_signature_coverage_by_family_and_state": [
+    {
+      "family": "baseline_replay",
+      "state": "candidate_only_or_ambiguous",
+      "signatures": 77
+    },
+    {
+      "family": "baseline_replay",
+      "state": "outside_selected_capture_interval_candidate_utc",
+      "signatures": 186
+    },
+    {
+      "family": "baseline_replay",
+      "state": "outside_selected_endpoint_scope_not_absent_from_raw_dataset",
+      "signatures": 277
+    },
+    {
+      "family": "baseline_replay",
+      "state": "unmatched_log_attempt_or_unverified_tid_semantics",
+      "signatures": 83
+    },
+    {
+      "family": "brute_force_or_specific_coil",
+      "state": "accepted_core_mechanism_event_evidence",
+      "signatures": 100
+    },
+    {
+      "family": "brute_force_or_specific_coil",
+      "state": "candidate_only_or_ambiguous",
+      "signatures": 35518
+    },
+    {
+      "family": "brute_force_or_specific_coil",
+      "state": "outside_selected_capture_interval_candidate_utc",
+      "signatures": 92872
+    },
+    {
+      "family": "brute_force_or_specific_coil",
+      "state": "outside_selected_endpoint_scope_not_absent_from_raw_dataset",
+      "signatures": 153560
+    },
+    {
+      "family": "delay_response",
+      "state": "unmatched_log_attempt_or_unverified_tid_semantics",
+      "signatures": 50
+    },
+    {
+      "family": "false_data_injection",
+      "state": "accepted_core_mechanism_event_evidence",
+      "signatures": 54
+    },
+    {
+      "family": "length_manipulation",
+      "state": "outside_selected_capture_interval_candidate_utc",
+      "signatures": 166
+    },
+    {
+      "family": "length_manipulation",
+      "state": "outside_selected_endpoint_scope_not_absent_from_raw_dataset",
+      "signatures": 239
+    },
+    {
+      "family": "length_manipulation",
+      "state": "unmatched_log_attempt_or_unverified_tid_semantics",
+      "signatures": 168
+    },
+    {
+      "family": "loading_payloads",
+      "state": "candidate_only_or_ambiguous",
+      "signatures": 92
+    },
+    {
+      "family": "loading_payloads",
+      "state": "outside_selected_capture_interval_candidate_utc",
+      "signatures": 145
+    },
+    {
+      "family": "loading_payloads",
+      "state": "outside_selected_endpoint_scope_not_absent_from_raw_dataset",
+      "signatures": 260
+    },
+    {
+      "family": "loading_payloads",
+      "state": "unmatched_log_attempt_or_unverified_tid_semantics",
+      "signatures": 45
+    },
+    {
+      "family": "query_flooding",
+      "state": "candidate_only_or_ambiguous",
+      "signatures": 150
+    },
+    {
+      "family": "query_flooding",
+      "state": "outside_selected_capture_interval_candidate_utc",
+      "signatures": 214
+    },
+    {
+      "family": "query_flooding",
+      "state": "outside_selected_endpoint_scope_not_absent_from_raw_dataset",
+      "signatures": 346
+    },
+    {
+      "family": "query_flooding",
+      "state": "unmatched_log_attempt_or_unverified_tid_semantics",
+      "signatures": 64
+    },
+    {
+      "family": "reconnaissance",
+      "state": "candidate_only_or_ambiguous",
+      "signatures": 105
+    },
+    {
+      "family": "reconnaissance",
+      "state": "outside_selected_capture_interval_candidate_utc",
+      "signatures": 221
+    },
+    {
+      "family": "reconnaissance",
+      "state": "outside_selected_endpoint_scope_not_absent_from_raw_dataset",
+      "signatures": 274
+    },
+    {
+      "family": "stacking_frames",
+      "state": "candidate_only_or_ambiguous",
+      "signatures": 98
+    },
+    {
+      "family": "stacking_frames",
+      "state": "outside_selected_capture_interval_candidate_utc",
+      "signatures": 165
+    },
+    {
+      "family": "stacking_frames",
+      "state": "outside_selected_endpoint_scope_not_absent_from_raw_dataset",
+      "signatures": 271
+    },
+    {
+      "family": "stacking_frames",
+      "state": "unmatched_log_attempt_or_unverified_tid_semantics",
+      "signatures": 58
+    }
+  ],
+  "core_log_scope_by_target": [
+    {
+      "family": "brute_force_or_specific_coil",
+      "target": "185.175.0.4",
+      "state": "accepted_core_mechanism_event_evidence",
+      "signatures": 100
+    },
+    {
+      "family": "brute_force_or_specific_coil",
+      "target": "185.175.0.4",
+      "state": "candidate_only_or_ambiguous",
+      "signatures": 35518
+    },
+    {
+      "family": "brute_force_or_specific_coil",
+      "target": "185.175.0.4",
+      "state": "outside_selected_capture_interval_candidate_utc",
+      "signatures": 20929
+    },
+    {
+      "family": "brute_force_or_specific_coil",
+      "target": "185.175.0.5",
+      "state": "outside_selected_capture_interval_candidate_utc",
+      "signatures": 41196
+    },
+    {
+      "family": "brute_force_or_specific_coil",
+      "target": "185.175.0.5",
+      "state": "outside_selected_endpoint_scope_not_absent_from_raw_dataset",
+      "signatures": 123325
+    },
+    {
+      "family": "brute_force_or_specific_coil",
+      "target": "185.175.0.8",
+      "state": "outside_selected_capture_interval_candidate_utc",
+      "signatures": 30747
+    },
+    {
+      "family": "brute_force_or_specific_coil",
+      "target": "185.175.0.8",
+      "state": "outside_selected_endpoint_scope_not_absent_from_raw_dataset",
+      "signatures": 30235
+    },
+    {
+      "family": "false_data_injection",
+      "target": "185.175.0.2",
+      "state": "accepted_core_mechanism_event_evidence",
+      "signatures": 54
+    }
+  ],
+  "accepted_pair_outcomes": {
+    "scada_ied1a": {
+      "accepted_events": 100,
+      "relations_with_directly_accepted_events": 100,
+      "pair_statuses": {
+        "matched_exception": 82,
+        "pending_at_connection_end": 18
+      },
+      "pair_reasons": {}
+    },
+    "ied_ied1b": {
+      "accepted_events": 54,
+      "relations_with_directly_accepted_events": 54,
+      "pair_statuses": {
+        "matched_inconsistent": 53,
+        "matched": 1
+      },
+      "pair_reasons": {
+        "response_byte_count_vs_request_quantity": 53,
+        "response_parse_malformed": 53
+      }
+    }
+  },
+  "normal_fc5_request_patterns": {
+    "05000fff00": 347,
+    "050019ff00": 360
+  }
+}

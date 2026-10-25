@@ -1,0 +1,12 @@
+Work locally on component 3: Command and Response Injection Detection in Modbus/TCP Using Context-Aware Command Analysis.
+
+Use original CICModbusDataset2023 ONLY. Exclude MSU/New Gas Pipeline/water-storage and all other external datasets, including fallback/validation, despite proposal references. Old CIC derivatives are diagnostic references only.
+
+First run: raw CIC protocol extraction, evidence labels, pairing audit and grouped splitting ONLY. Leave model preprocessing for me to perform and explain separately in viva. Do not engineer context/lag features, impute, encode, scale, normalize, rebalance, create sequence windows/model matrices, fit normal profiles or train models. Give me a separate PREPROCESSING_PLAN.md and reproducible extraction/label/split demonstration notes.
+
+Repository: C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318
+Raw dataset: C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\data\raw\Modbus Dataset
+
+Read component3_reference/CODEX_COMPONENT3_PROMPT.txt and follow its preparation requirements. Read the supplied TAF, individual proposal, README, old datasets and audit material as directed there. Treat historical prompts as reference and independently verify earlier findings.
+
+Start with the actual CIC source inventory, salvage/label feasibility and a small validated parsing pilot; proceed to supported extraction and grouped partitions once checks pass. Keep contiguous chunks and mirrored views in the same independent recording group. Report class-bearing groups, duplicate containment, pair boundaries and source membership. Do not fabricate independence or missing classes. Preserve original data and other components. Stop before model preprocessing. Report missing capabilities honestly and complete all unaffected work.

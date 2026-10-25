@@ -1,0 +1,1120 @@
+{
+  "scope": "Read-only bundle review, independent direct-PCAP checks of accepted commands; no extraction, labels, splits, model preprocessing or training rerun.",
+  "command_records_checked": 100,
+  "raw_packet_report_mismatches": 0,
+  "wire_value_counts": {
+    "65535": 66,
+    "1": 31,
+    "65280": 2,
+    "8": 1
+  },
+  "independent_shape_status_disagreements": 0,
+  "command_days_utc": {
+    "2023-03-15": 18,
+    "2023-03-16": 21,
+    "2023-03-17": 25,
+    "2023-03-18": 9,
+    "2023-03-19": 24,
+    "2023-03-21": 3
+  },
+  "reported_code_hashes_match_downloaded_code": {
+    "c3prep/audit.py": true,
+    "c3prep/cli.py": true,
+    "c3prep/demo.py": true,
+    "c3prep/extract.py": true,
+    "c3prep/integrity.py": true,
+    "c3prep/inventory.py": true,
+    "c3prep/labels.py": true,
+    "c3prep/logs.py": true,
+    "c3prep/modbus.py": true,
+    "c3prep/pairing.py": true,
+    "c3prep/pcapio.py": true,
+    "c3prep/pilot.py": true,
+    "c3prep/reports.py": true,
+    "c3prep/run_extraction.py": true
+  },
+  "accepted_shape_and_pattern_summary": {
+    "response_injection": {
+      "events": 54,
+      "parse_status_counts": {
+        "malformed": 53,
+        "ok": 1
+      },
+      "unique_pdu_patterns": 3,
+      "pdu_patterns": {
+        "01abcd": 52,
+        "02abcd": 1,
+        "0302abcd": 1
+      }
+    },
+    "command_injection": {
+      "events": 100,
+      "parse_status_counts": {
+        "malformed": 98,
+        "ok": 2
+      },
+      "unique_pdu_patterns": 6,
+      "pdu_patterns": {
+        "05000dffff": 32,
+        "05000effff": 32,
+        "0500080001": 31,
+        "050001ff00": 2,
+        "050001ffff": 2,
+        "0500080008": 1
+      }
+    }
+  },
+  "log_signature_selection_counts": {
+    "unmatched_log_attempt_or_unverified_tid_semantics": 468,
+    "accepted_core_mechanism_event_evidence": 154,
+    "outside_selected_capture_interval_candidate_utc": 93969,
+    "outside_selected_endpoint_scope_not_absent_from_raw_dataset": 155227,
+    "candidate_only_or_ambiguous": 36040
+  },
+  "strict_tolerance_sensitivity": [
+    {
+      "recording_id": "cic_compromised_ied_march",
+      "family": "false_data_injection",
+      "tolerance_us": 1000,
+      "two_sided_unique_candidate_pairs": 29
+    },
+    {
+      "recording_id": "cic_compromised_ied_march",
+      "family": "false_data_injection",
+      "tolerance_us": 5000,
+      "two_sided_unique_candidate_pairs": 53
+    },
+    {
+      "recording_id": "cic_compromised_ied_march",
+      "family": "false_data_injection",
+      "tolerance_us": 25000,
+      "two_sided_unique_candidate_pairs": 54
+    },
+    {
+      "recording_id": "cic_compromised_scada_march",
+      "family": "brute_force_or_specific_coil",
+      "tolerance_us": 0,
+      "two_sided_unique_candidate_pairs": 82
+    },
+    {
+      "recording_id": "cic_compromised_scada_march",
+      "family": "brute_force_or_specific_coil",
+      "tolerance_us": 1000,
+      "two_sided_unique_candidate_pairs": 400
+    },
+    {
+      "recording_id": "cic_compromised_scada_march",
+      "family": "brute_force_or_specific_coil",
+      "tolerance_us": 5000,
+      "two_sided_unique_candidate_pairs": 187
+    },
+    {
+      "recording_id": "cic_compromised_scada_march",
+      "family": "brute_force_or_specific_coil",
+      "tolerance_us": 25000,
+      "two_sided_unique_candidate_pairs": 100
+    }
+  ],
+  "command_checks": [
+    {
+      "event_uid": "scada_ied1a:e14564",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-15T04:08:57+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e14565",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-15T04:08:57+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e14566",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-15T04:08:57+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e60349",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65280,
+      "independently_allowed_coil_value": true,
+      "reported_parse_status": "ok",
+      "packet_time_utc": "2023-03-15T10:22:55+00:00",
+      "pdu_hex": "050001ff00"
+    },
+    {
+      "event_uid": "scada_ied1a:e68275",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-15T11:35:43+00:00",
+      "pdu_hex": "050001ffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e69748",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65280,
+      "independently_allowed_coil_value": true,
+      "reported_parse_status": "ok",
+      "packet_time_utc": "2023-03-15T11:36:26+00:00",
+      "pdu_hex": "050001ff00"
+    },
+    {
+      "event_uid": "scada_ied1a:e75722",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-15T12:58:46+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e75723",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-15T12:58:46+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e75724",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-15T12:58:46+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e77138",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-15T13:20:46+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e77139",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-15T13:20:46+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e77140",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-15T13:20:46+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e95415",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-15T17:48:36+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e95417",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-15T17:48:36+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e95418",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-15T17:48:36+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e128080",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-15T23:23:02+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e128081",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-15T23:23:02+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e128082",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-15T23:23:02+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e145461",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T02:29:46+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e145462",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T02:29:46+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e145463",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T02:29:46+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e156635",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T04:26:46+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e156636",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T04:26:46+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e156637",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T04:26:46+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e184778",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T13:44:20+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e184780",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T13:44:20+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e184781",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T13:44:20+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e186412",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T14:07:20+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e186413",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T14:07:20+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e186414",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T14:07:20+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e189579",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T15:01:20+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e189580",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T15:01:20+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e189581",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T15:01:20+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e195538",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T16:02:20+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e195539",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T16:02:20+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e195540",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T16:02:20+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e206750",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T18:33:20+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e206751",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T18:33:20+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e206752",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-16T18:33:20+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e231493",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T02:27:37+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e231494",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T02:27:37+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e231495",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T02:27:37+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e237634",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T03:02:58+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e237635",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T03:02:58+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e237636",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T03:02:58+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e256212",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T06:55:58+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e256214",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T06:55:58+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e256215",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T06:55:58+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e259191",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T07:39:58+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e259192",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T07:39:58+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e259193",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T07:39:58+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e259996",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T07:55:58+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e259997",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T07:55:58+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e259998",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T07:55:58+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e267993",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T09:40:58+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e267994",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T09:40:58+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e267995",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T09:40:58+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e306704",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T18:00:58+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e306706",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T18:00:59+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e306707",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T18:00:59+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e307509",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T18:16:59+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e307511",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T18:16:59+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e307512",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T18:16:59+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e334739",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-2.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-17T23:31:30+00:00",
+      "pdu_hex": "050001ffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e342812",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-2.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-18T00:24:06+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e342813",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-2.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-18T00:24:06+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e342814",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-2.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-18T00:24:06+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e348158",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-2.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-18T01:25:38+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e348159",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-2.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-18T01:25:38+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e348160",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-2.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-18T01:25:38+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e348526",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-2.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-18T02:21:38+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e348527",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-2.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-18T02:21:38+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e348528",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-2.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-18T02:21:38+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e522582",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T03:45:14+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e522583",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T03:45:14+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e522584",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T03:45:14+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e544524",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T07:28:29+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e544525",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T07:28:29+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e544526",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T07:28:29+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e547078",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T08:08:29+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e547079",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T08:08:29+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e547080",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T08:08:29+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e553907",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T09:42:29+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e553908",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T09:42:29+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e553909",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T09:42:29+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e554840",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T09:59:29+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e554841",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T09:59:29+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e554842",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T09:59:29+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e587584",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T16:13:20+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e587585",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T16:13:20+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e587586",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T16:13:20+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e601504",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T19:26:20+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e601505",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T19:26:20+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e601506",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T19:26:20+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e602517",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T19:53:20+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e602519",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T19:53:20+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e602520",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 1,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-19T19:53:20+00:00",
+      "pdu_hex": "0500080001"
+    },
+    {
+      "event_uid": "scada_ied1a:e873064",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-4.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-21T14:37:17+00:00",
+      "pdu_hex": "05000dffff"
+    },
+    {
+      "event_uid": "scada_ied1a:e873065",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-4.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 65535,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-21T14:37:17+00:00",
+      "pdu_hex": "05000effff"
+    },
+    {
+      "event_uid": "scada_ied1a:e873066",
+      "source_path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-4.pcap",
+      "raw_packet_matches_report": true,
+      "wire_value": 8,
+      "independently_allowed_coil_value": false,
+      "reported_parse_status": "malformed",
+      "packet_time_utc": "2023-03-21T14:37:17+00:00",
+      "pdu_hex": "0500080008"
+    }
+  ]
+}

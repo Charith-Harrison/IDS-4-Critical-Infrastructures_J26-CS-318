@@ -1,0 +1,34 @@
+{
+  "checked_at_utc": "2026-10-25T07:32:06.168908+00:00",
+  "collection_id": "40ae7a846cce48fc8e3c52ebfca7e2cd",
+  "source_bundle_id": "1fe2b0eb6f44807bc6759d3f3e998ce5064047516585d9e8e313f01b24050663",
+  "independent_inspector_result": {
+    "status": "ALL_104_VALIDATED",
+    "validated": 104,
+    "expected": 104,
+    "label_counts": {
+      "command_injection": 720,
+      "normal": 247906,
+      "response_injection": 1440
+    },
+    "attempts": 107,
+    "preprocessing_or_models": false
+  },
+  "independent_inspector_command": "python -B tools/inspect_collection.py --output <original collection path>",
+  "note": "The original frozen inspector completed successfully before packaging. Counts here summarize sealed receipts; no model work or data-dependent final-test selection occurred.",
+  "intended_role_runs": {
+    "train": 32,
+    "validation": 16,
+    "final_test_repeat": 24,
+    "final_test_values": 8,
+    "final_test_map": 8,
+    "final_test_order": 8,
+    "final_test_timing": 8
+  },
+  "excluded_attempts": [
+    "MX086-20261025T063126Z-16600283",
+    "MX087-20261025T063952Z-1fa45191",
+    "MX088-20261025T064936Z-55b059c6"
+  ],
+  "accepted_post_capture_recovery": "MX040"
+}

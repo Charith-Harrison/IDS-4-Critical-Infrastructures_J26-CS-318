@@ -1,0 +1,54 @@
+{
+  "status": "READY_FOR_MANUAL_START",
+  "traffic_generated": false,
+  "source_bundle_id": "1fe2b0eb6f44807bc6759d3f3e998ce5064047516585d9e8e313f01b24050663",
+  "output": "D:\\VSCode\\GitHub\\4th Year Cyber\\C3\\Component3_Modbus_Collector\\component3_collection_runs\\main-frozen-v1-20261025",
+  "validated_completed": 0,
+  "frozen_total": 104,
+  "docker_storage_paths": [
+    "C:\\Users\\Thithira\\AppData\\Local\\Docker\\wsl\\disk",
+    "C:\\Users\\Thithira\\AppData\\Local\\Docker\\wsl\\main"
+  ],
+  "docker_storage_discovery": "discovered existing Docker Desktop VHDX files",
+  "space": {
+    "status": "PASSED",
+    "limits": {
+      "safety_factor": 2,
+      "planned_copies": 2,
+      "reserve_gib": 2,
+      "docker_reserve_gib": 2
+    },
+    "host_filesystems": [
+      {
+        "paths": [
+          "D:\\VSCode\\GitHub\\4th Year Cyber\\C3\\Component3_Modbus_Collector"
+        ],
+        "roles": [
+          "output originals, planned copies, temporary/retry allowance and reserve"
+        ],
+        "free": 17992712192,
+        "required": 7144946888,
+        "total": 502112710656
+      },
+      {
+        "paths": [
+          "C:\\Users\\Thithira\\AppData\\Local\\Docker\\wsl\\disk"
+        ],
+        "roles": [
+          "Docker backing storage reserve"
+        ],
+        "free": 35011661824,
+        "required": 2147483648,
+        "total": 510994149376
+      }
+    ],
+    "docker_guest_free": 1013733036032,
+    "output_required_bytes": 7144946888,
+    "upper_per_run_bytes": 11898722,
+    "copy_note": "Headroom reserved; backup copies are not automatically created",
+    "failures": []
+  },
+  "expected_remaining_hours": 2.3080536955555564,
+  "academic_acceptance": "NOT_RECORDED",
+  "note": "ETA uses measured qualified/completed runs; no simulated progress"
+}

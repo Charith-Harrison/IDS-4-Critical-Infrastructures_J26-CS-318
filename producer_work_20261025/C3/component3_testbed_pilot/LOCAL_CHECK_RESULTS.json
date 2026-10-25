@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-24",
+  "tests_run": 27,
+  "tests_passed": true,
+  "smoke_messages": 216,
+  "independent_decoder_shape_disagreements": [],
+  "docker_build_and_capture_executed": true,
+  "synthetic_capture_test_fixtures_are_research_data": false,
+  "docker_tests_passed": 27,
+  "verified_run_id": "pilot-20261024T145730Z-4a7f6472",
+  "verified_message_count": 216,
+  "captured_frames": 224,
+  "kernel_drops": 0,
+  "accepted_label_counts": {
+    "normal": 208,
+    "command_injection": 4,
+    "response_injection": 4
+  },
+  "original_byte_reference_disagreements": 0,
+  "container_capability_fix": "Added SETGID for tcpdump initgroups; network remains none"
+}

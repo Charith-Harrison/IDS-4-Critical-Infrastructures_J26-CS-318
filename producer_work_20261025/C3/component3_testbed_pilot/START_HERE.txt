@@ -1,0 +1,78 @@
+KAVEESHA: SMALL COMPONENT 3 PILOT
+
+This is for learning and feasibility. It is NOT the final training dataset.
+
+IF YOU RECEIVED THE VERIFIED HANDOFF:
+Open DATASET_CARD.md, HANDOVER.md and the supplied run's EVIDENCE_WALKTHROUGH.txt
+first. The verified recording was collected on Thithira's PC. You do not need to
+regenerate it or install Docker just to read the supplied evidence. The steps
+below are for running a NEW pilot or rechecking via the Docker environment.
+
+1. Install Docker Desktop for Windows from the official instructions:
+   https://docs.docker.com/desktop/setup/install/windows-install/
+   Use WSL2/Linux containers. Restart if requested. Open Docker Desktop and
+   wait for its engine to run. Follow actual installer errors rather than
+   guessing system/BIOS changes.
+
+2. Extract this package into your repository so there is exactly:
+   IDS-4-Critical-Infrastructures_J26-CS-318\component3_testbed_pilot\README.md
+   Keep existing component3_preparation and component3_reassessment folders.
+
+3. Open your repository in Codex. Open PowerShell at the repository root.
+   Type these ONE AT A TIME:
+
+   Set-Location .\component3_testbed_pilot
+   .\start-pilot.ps1 -CheckOnly
+
+4. If that check succeeds:
+
+   .\start-pilot.ps1
+
+   First build downloads required software. The experiment runs offline.
+   It prints a NEW outputs\pilot-... folder. Keep the exact name.
+
+5. Run the verifier using the ACTUAL folder name:
+
+   .\verify-pilot.ps1 -Run pilot-20261024T120000Z-a1b2c3d4
+
+   The name above is only an example. Verification also prints a short
+   evidence walkthrough showing normal/attack messages with matching PDUs.
+
+6. Open validation_report.json in that run folder. A passing report should
+   have status PASSED and counts 208 normal / 4 command / 4 response for
+   the default pilot. These are application messages, not raw packet counts.
+
+7. Discuss one command and one response example with Thithira using
+   docs\DISCORD_LESSON.md. Send the actual report/status for review.
+
+8. Stop there. No bulk collection, random split, preprocessing or ML yet.
+   Explain the toy assumptions and agree the larger experiment's scope first.
+
+If PowerShell blocks a script, read README.md for a process-only invocation.
+Do not change machine-wide policy or mix previous CIC outputs into this lab.
+
+WHAT HAS BEEN CHECKED BEFORE HANDOFF
+- 27 software tests passed, including a real loopback TCP integration check.
+- A separate 216-message loopback smoke run succeeded.
+- PowerShell scripts and Compose configuration passed syntax checks.
+- Docker image build, all27 tests inside Docker, actual tcpdump capture and
+  full216-message byte/state/label verification have now passed on Thithira's PC.
+- The first startup failure is preserved; tcpdump needed SETGID in addition
+  to NET_RAW to initialize its groups. Container networking remains disabled.
+- Synthetic PCAPs in unit tests are test fixtures, not research captures.
+
+WHAT TO PASTE INTO YOUR CODEX CHAT
+
+Read component3_testbed_pilot/README.md, START_HERE.txt, docs/EXPERIMENT.md and
+docs/DISCORD_LESSON.md. Help me install/check Docker Desktop with the Linux
+engine, run start-pilot.ps1 -CheckOnly, then ONE default captured pilot and
+verify-pilot.ps1 for its actual folder. Explain each step in plain language.
+Inspect actual outputs before claiming success. Existing CIC preparation and
+reassessment must stay unchanged. No MSU, mass data generation, final splits,
+feature engineering, preprocessing or ML training. Preserve failed runs and
+diagnose actual errors. After success, explain a normal/attack pair for commands
+and replies using captured bytes and the evidence ledger. Distinguish private
+label evidence from inputs that a live detector could observe. This is a toy
+feasibility pilot; it does not prove research validity, ML benefit or independent
+deployment generalization. Make no changes to Docker/Windows settings unrelated
+to the smallest required environment fix.

@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-24",
+  "tests_run": 27,
+  "tests_passed": true,
+  "smoke_messages": 216,
+  "independent_decoder_shape_disagreements": [],
+  "docker_build_and_capture_executed": false,
+  "synthetic_capture_test_fixtures_are_research_data": false
+}

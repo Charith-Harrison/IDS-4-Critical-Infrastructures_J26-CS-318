@@ -1,0 +1,11 @@
+{
+  "csv_rows": 1,
+  "xlsx_ied4c_rows": 1,
+  "rowwise_non_time_fields_matching": 1,
+  "rowwise_short_display_timestamps_matching": 1,
+  "status": "verified_version_overlap",
+  "short_display_rounding_difference_rows": 0,
+  "policy": "Preserve both sources. Do not double-count the time-damaged CSV as new log evidence; use original XLSX full serial for candidate clock calibration.",
+  "timestamp_precision_limit": "XLSX serial text and exact decimal epoch microseconds retained; integer timestamp_us is rounded for joins. Source timezone unknown.",
+  "example_mismatches": []
+}

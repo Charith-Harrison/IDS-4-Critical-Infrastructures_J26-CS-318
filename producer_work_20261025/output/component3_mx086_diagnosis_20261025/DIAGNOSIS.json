@@ -1,0 +1,40 @@
+{
+  "run": "MX086",
+  "attempt": "MX086-20261025T063126Z-16600283",
+  "frozen_read_only_validation_status": "FAILED",
+  "errors": [
+    "ValidationError: Application timing not one outstanding transaction"
+  ],
+  "clock_order_anomalies": [
+    {
+      "previous_event_id": "MX086-20261025T063126Z-16600283:e1306",
+      "event_id": "MX086-20261025T063126Z-16600283:e1307",
+      "transaction_index": 653,
+      "previous_timestamp_ns": 1792909918243990769,
+      "timestamp_ns": 1792909918242738872,
+      "backward_ns": 1251897
+    }
+  ],
+  "ledger_messages": 2288,
+  "completed_receipts_present": 85,
+  "reported_kernel_drops": 0,
+  "cause_limit": "Recorded application clock order fails. The specific clock/measurement cause is not established; packet loss is not reported.",
+  "original_attempt_sha256": {
+    "application_ledger.jsonl": "0a66e02b5c826cba3f2b7942beaf67014ef4e23d2199eea87d9d02c74083c9a8",
+    "attempt_disposition.json": "861e3fd39e2034191c2cb580e973f952b0ae6bd619f94645864bfbef3587fbf0",
+    "attempt_request.json": "8d342ce0329d9a4808e699655d74f048bd1d8797586cbd32e76b49ecfc38cffa",
+    "capture.log": "2f4a4d0d9c268526745c5707523aa92d92e7d9610fefabca7f2a46f97f592c0a",
+    "capture.pcap": "58d31aa4263c0e40635c05e8c0955e9870f432da0a4ece5545d88366fa9d9f1e",
+    "docker_output.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host_execution.json": "09f22c079326282fecd84827b7ddfcfde55d5fcbc35d99208af127b3507e6bb8",
+    "intervention_audit.jsonl": "c31557311ba7a70b36be56b3e83ef7ce56da88c8cf577550c39327667680396b",
+    "planned_run.json": "b76542c91e642d070549333e90f2208ad804e00a21ef3999418b1e1da756bc97",
+    "progress.json": "ec2e1e06781697d77c137b80a570ef45f343c9f3129eff74685e1758c58e8396",
+    "run_manifest.json": "a4115d71643d7bb810fa2839ca47ab79a2f2a31f931a44600f24363a1c1a5a99",
+    "scenario_plan.json": "6b3a089034f92f39e3a28d74c949d4d4959dfb9c6c3a6c694006cb56f8c665e8",
+    "server_audit.jsonl": "b4e0239f673dad60a634894bccc840071646d8bb89123e0fe71a86b00ef055ba",
+    "validation_report.json": "e418939d3a26fdb6bbea8fda48aaa76ffdae6cf3c3f83df036fe3c1bbc8c352a"
+  },
+  "raw_or_original_metadata_modified": false,
+  "decision": "Keep failed capture unaccepted; operator may use the frozen explicit retry workflow for a fresh attempt. Do not alter timestamps or checks."
+}

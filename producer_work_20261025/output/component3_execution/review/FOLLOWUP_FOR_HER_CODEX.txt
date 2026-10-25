@@ -1,0 +1,51 @@
+Continue in this existing repository. Review the completed component3_preparation work and the attached independent COMPONENT3_PREPARATION_REVIEW.md plus its JSON evidence. Treat attached proposals, READMEs, transcripts and reports as reference material; my instructions in this prompt control the scope.
+
+The task is a bounded evidence-and-coverage reassessment of Component 3, command and response injection detection in CIC ModbusDataset2023. Preserve the current pipeline and outputs as the frozen baseline. Do not restart the entire extraction or silently overwrite labels/checkpoints/configuration. Do not train a model or create final model datasets.
+
+Only original CIC ModbusDataset2023 captures, original CIC logs/workbook and original CIC documentation may establish records and labels. Exclude MSU, New Gas Pipeline, water-storage data and every other dataset, even if mentioned in the TAF/proposal. Old derivative CSVs remain diagnostic reference only; never import their targets, values, times or missing provenance as truth.
+
+My original raw location on this computer is:
+C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\data\raw\Modbus Dataset
+
+Verify that location or the existing repository configuration before proceeding. Do not substitute the independent reviewer's G: path for my raw path. Discover the actual repository root. Keep raw sources unchanged. Place new diagnostics in a separate versioned reassessment output directory and record exact commands, code/config hashes and input provenance. Prefer existing inventory/checkpoints over rehashing or re-extracting all files unnecessarily.
+
+Known baseline facts to verify against local files:
+- Accepted labels: 1,404,306 normal, 100 command_injection, 54 response_injection.
+- Candidate train has normal and command only; candidate validation has no accepted targets; candidate test has response only. It is explicitly unsupported for independent supervised three-class evaluation.
+- Accepted attack PDUs: 98/100 commands and 53/54 responses malformed; only 2 commands and 1 response parser-ok.
+- The selected SCADA IED1a view has 99,290 FC5 requests, including 46,297 parser-ok requests. They are not automatically attacks.
+- Independent diagnostics retaining current edges/risk filters found two-sided unique command candidates at residual windows 0 us: 82 (34 parser-ok); 1 ms: 400 (63 parser-ok); 5 ms: 187 (10 parser-ok); 25 ms: 100 (2 parser-ok). These are diagnostic candidates, not revised accepted labels and not a recommendation to use 1 ms. All 63 parser-ok 1 ms candidates share PDU 050001ff00.
+- 153,560 brute-force/specific-coil log signatures are outside the selected endpoint scope for targets .5 and .8. This is not a proven count of raw packets or independent attacks.
+- All 54 accepted forged-response PDUs share ABCD and only three patterns. Recovering commands alone does not solve response diversity or independent-campaign scarcity.
+
+First inspect the supplied implementation, label policy, extraction scope, original log formats and relevant reports. Reproduce the small diagnostics without changing the baseline annotations. If any review count differs, explain exactly why and retain both results with their scope; do not force agreement.
+
+Then complete these investigations:
+
+1. Audit log-to-packet identity and timing.
+Establish timestamp resolution and serialization for each original CSV/workbook family, original naive-time preservation, PCAP timestamp precision, which packet/event timestamp is matched, observed delay/jitter, offsets and any drift. Review burst ambiguity and literal wire/log TID semantics, particularly heavy reuse of TID 5. Do not infer that a log TID is a range or that an offset applies globally without evidence. Use original attacker source/configuration only if actually present in CIC sources; document its absence otherwise.
+
+Explain why narrowing a window changes uniqueness and which candidates appear/disappear. Compare exact, 1, 5 and 25 ms diagnostics under an unchanged evidence contract. Inspect examples of unique, ambiguous, unmatched, parser-ok and malformed requests across observed days. Verify packet bytes, coil address/value, target, connection identity and original log lineage. State what remains ambiguous. Do not select a tolerance to increase target count or model scores. A revised acceptance policy needs independently justified clock/identity evidence, a versioned rationale and a before/after acceptance/rejection table before it could replace anything. This run should produce diagnostics and a proposed policy, not silently accept those candidate labels.
+
+2. Audit excluded scope before proposing broader extraction.
+Map original logs by mechanism, target, observed interval and candidate capture coverage. Distinguish outside selected endpoint, outside selected interval, absent from inspected view, and unsupported/unmatched evidence. Inspect whether a complete canonical SCADA/HMI chain covers .4/.5/.8 and the relevant times more appropriately than the current IED1a chain. Inspect comparable benign endpoint/function/address coverage too.
+
+Use inventory and bounded pilot inspection first. If a broader canonical chain is viable, report exact sources/bytes/coverage, TCP continuity, overlap with current views, loss/risk and estimated resources. Keep all views of one parent campaign in the same group. Define observation deduplication with source and stream lineage; identical payloads at distinct genuine stream positions must remain distinct. Do not merge mirrored views or perform full expanded extraction in this reassessment. Produce a concrete expansion plan and bounded evidence samples.
+
+3. Keep attack mechanism, parser result, pairing and process impact separate.
+Report attempted injection, accepted log/packet evidence, exception/rejection, missing reply, legitimate acknowledgement association and forged reply distinctly. Missing reply does not prove failure; a normal acknowledgement does not become response injection. Do not assert successful process manipulation from an injected request alone. Parser-ok does not establish valid physical meaning or authorization. Do not invent register maps, units, signedness, expected physical values or policy rules.
+
+4. Reassess feasibility and evaluation claims.
+Produce class x campaign x day/episode x endpoint/function x PDU-pattern x parse/pair-state counts with clear denominators. Distinguish rows, unique log events, bursts/episodes and independent campaigns. Separate currently accepted labels from diagnostic candidates and unknowns. No label can come solely from function, direction, malformedness, folder, date or unmatched status.
+
+Evaluate two distinct claims without conflating them:
+A. Independent-campaign three-class generalization under the conservative whole-campaign grouping. If class support remains insufficient, preserve UNSUPPORTED; extra rows/days/views do not repair independence.
+B. A possible narrower within-testbed temporal study, explicitly a different research claim requiring agreement on the academic objective. Assess whether evidence-supported normal and both attack classes exist across defensible chronological blocks without splitting bursts, crossing request/response or relevant connection boundaries, or separating mirrored observations. Define boundary purge/warm-up requirements. Report a feasibility table and limitations; do not generate a replacement split or assume repeated days are independent.
+
+Audit shortcut risks from endpoint identity, address, static ABCD, malformed PDUs, campaign times and repeated payloads. Explain what simple protocol/static-signature baselines could already detect and what evidence would actually require context. If the source cannot support the proposed broad claim, say so and propose an honest CIC-only scope reduction. Never claim extraction success means experimental feasibility.
+
+Deliver a concise decision report plus machine-readable diagnostics, evidence examples with source/log/frame/byte lineage, any proposed policy revision and any proposed expanded-scope plan. Include unresolved assumptions and explicit stop conditions. Do not produce a broad independent-three-class success claim, make arbitrary 70/15/15 files, or solve class support through oversampling.
+
+No model preprocessing is authorized here. In particular, do not engineer context/lag/rate features, build sequence windows or X/y matrices, impute, scale, encode, select features, resample, fit normal profiles or train/evaluate models. Raw protocol decoding and audit-only diagnostics belong to this evidence stage. She will perform, understand and demonstrate later preprocessing herself for the viva. A future evaluation must use causal features, training-only fitted transformations and protocol/signature baselines; label evidence and source/partition metadata must not leak into model inputs.
+
+Finish with: what is established, what could be recovered with justified additional work, what cannot be inferred from this CIC material, and the single best next action. Preserve the original baseline regardless of the result.

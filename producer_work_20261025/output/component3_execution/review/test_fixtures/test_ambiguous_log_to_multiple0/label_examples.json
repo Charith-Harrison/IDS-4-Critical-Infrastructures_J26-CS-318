@@ -1,0 +1,37 @@
+{
+  "fixture_ied": {
+    "response_injection": {
+      "events": 3,
+      "parse_status_counts": {
+        "ok": 3
+      },
+      "pdu_hex_counts": {},
+      "examples": [
+        {
+          "event_uid": "rsp1",
+          "ts_complete_us": 1679587201000500,
+          "mbap_trans_id": 1,
+          "func_code": 1,
+          "address": null,
+          "single_value": null,
+          "parse_status": "ok",
+          "client_ip": "185.175.0.2",
+          "server_ip": "185.175.0.5",
+          "adu_hex": null
+        },
+        {
+          "event_uid": "rsp2",
+          "ts_complete_us": 1679587202000500,
+          "mbap_trans_id": 2,
+          "func_code": 1,
+          "address": null,
+          "single_value": null,
+          "parse_status": "ok",
+          "client_ip": "185.175.0.2",
+          "server_ip": "185.175.0.5",
+          "adu_hex": null
+        }
+      ]
+    }
+  }
+}

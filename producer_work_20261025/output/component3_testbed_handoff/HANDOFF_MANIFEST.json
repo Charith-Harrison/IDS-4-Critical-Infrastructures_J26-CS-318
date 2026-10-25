@@ -1,0 +1,207 @@
+{
+  "purpose": "VERIFIED_FEASIBILITY_PILOT_NOT_FINAL_TRAINING_DATASET",
+  "collection_machine": "Thithira PC",
+  "successful_run": "pilot-20261024T145730Z-4a7f6472",
+  "failed_initialization_run": "pilot-20261024T145617Z-80339fda",
+  "success_counts": {
+    "normal": 208,
+    "command_injection": 4,
+    "response_injection": 4
+  },
+  "files": {
+    "component3_testbed_pilot/.dockerignore": {
+      "bytes": 62,
+      "sha256": "1f07240c3d15851fb206c68a12021f0e829933588c456bbb3d7a6f83c51eff4a"
+    },
+    "component3_testbed_pilot/.gitignore": {
+      "bytes": 43,
+      "sha256": "08cff4e25b96e0bcc9336c33ac9995350cd3da60483b664173d628aed8dbd46e"
+    },
+    "component3_testbed_pilot/background/CIC_REASSESSMENT_DECISION.md": {
+      "bytes": 6529,
+      "sha256": "776b38b03819264ab8f00bb904735c3bbbf3fd75a1d2b320322189689fcbb9f1"
+    },
+    "component3_testbed_pilot/background/CIC_REVIEW_BEFORE_TESTBED.md": {
+      "bytes": 38288,
+      "sha256": "759c158eca760c9c8a323db4135897780c9ea69ec8a831b491435b0b8db09d1a"
+    },
+    "component3_testbed_pilot/background/READ_CONTEXT_FIRST.txt": {
+      "bytes": 452,
+      "sha256": "8977df7adaa25dc96305baf9c2b71c863ebbe443a8687f443100f81187be4572"
+    },
+    "component3_testbed_pilot/BUILD_STATUS.md": {
+      "bytes": 2365,
+      "sha256": "689c27fed27f2877e4b28f5217c9b2a3e847b1d684f53b11298eb34941dbf589"
+    },
+    "component3_testbed_pilot/c3lab/__init__.py": {
+      "bytes": 106,
+      "sha256": "62f0944238deb4661ecd5f54104ecc86a95439d8c569a41cc427a2ac3030b9c3"
+    },
+    "component3_testbed_pilot/c3lab/__main__.py": {
+      "bytes": 1599,
+      "sha256": "20f591f812dbcb66d876a62f737e7134a02582e6f2b80205eac49e7e629674f8"
+    },
+    "component3_testbed_pilot/c3lab/capture_validation.py": {
+      "bytes": 21277,
+      "sha256": "f6fc7dd33fbdc8887fb242b4d0f2e575fa9a0c46ebf67c110e5086517afceae8"
+    },
+    "component3_testbed_pilot/c3lab/explain.py": {
+      "bytes": 3134,
+      "sha256": "21e49eb2d01c291b40a30ea5c9988325b2eced200bade265218586edb84834e3"
+    },
+    "component3_testbed_pilot/c3lab/pilot.py": {
+      "bytes": 13668,
+      "sha256": "65a17e97c7114ad1ca76f046ba321844bbb9eb7df2f25dfd147a50f55d2b6a38"
+    },
+    "component3_testbed_pilot/c3lab/protocol.py": {
+      "bytes": 4127,
+      "sha256": "a3840464bc47be1ead994f635be2fe342aaa9fdb9ccfff6ddf2a558d789fbe30"
+    },
+    "component3_testbed_pilot/compose.yaml": {
+      "bytes": 484,
+      "sha256": "951e7690ec4c4095c03c6bf93565cc0653c4e67a459e7cbd0b43f4d581df1fd3"
+    },
+    "component3_testbed_pilot/DATASET_CARD.md": {
+      "bytes": 5401,
+      "sha256": "473df05c370dd085f1a25b9775fc8a33a46c6ae370416c4aca7fb559d72a9073"
+    },
+    "component3_testbed_pilot/Dockerfile": {
+      "bytes": 307,
+      "sha256": "76e5cd9947b8fdeefa347957f2fcddcf72c720f7dd07f7e016a9653138ed8334"
+    },
+    "component3_testbed_pilot/docs/DISCORD_LESSON.md": {
+      "bytes": 11027,
+      "sha256": "431b5abdca2fca09d4f5b932a7445d1731a7c2e78ec95a63e466cfe8270796d5"
+    },
+    "component3_testbed_pilot/docs/EXPERIMENT.md": {
+      "bytes": 12885,
+      "sha256": "c09099fbccf498f22d59c0d05750f0af6cef3b477cbf6f430c191e7583a2442d"
+    },
+    "component3_testbed_pilot/HANDOVER.md": {
+      "bytes": 4580,
+      "sha256": "1d16e5aada2bc3264c8e1f80974271c73a5282510031a20bf264fcd51ab61766"
+    },
+    "component3_testbed_pilot/INDEPENDENT_CAPTURE_CHECKS.json": {
+      "bytes": 598,
+      "sha256": "899d3dd577cb1f1f76b083973600266b58afdd85855b12d892392e80bca4a71b"
+    },
+    "component3_testbed_pilot/LOCAL_CHECK_RESULTS.json": {
+      "bytes": 683,
+      "sha256": "59914be0520c26d61b6528ea36f0e077ec50116df45e2bacaf38f4355425255e"
+    },
+    "component3_testbed_pilot/README.md": {
+      "bytes": 5746,
+      "sha256": "aca49fa0354e15302343ff89cd2734d458ff7408aac6b278749d9b862d0a215b"
+    },
+    "component3_testbed_pilot/start-pilot.ps1": {
+      "bytes": 3884,
+      "sha256": "da049f62ff0d9a6837705f497a89c4ba3a26c9c28b6fdf219cce10133847884b"
+    },
+    "component3_testbed_pilot/START_HERE.txt": {
+      "bytes": 3953,
+      "sha256": "a67824f82ca35602605da09dee8c11fa727e209662b3ebc7511053efdf383969"
+    },
+    "component3_testbed_pilot/tests/test_capture_validation.py": {
+      "bytes": 12042,
+      "sha256": "6895e5e783ff604ade1a3291a6068f16f7eb44937873b19d7f182be1638071e4"
+    },
+    "component3_testbed_pilot/tests/test_pilot.py": {
+      "bytes": 2523,
+      "sha256": "bc9e5082318e2c70a4d4ec6d2aac254fc2216c51564900feb3548ce6c052c1fd"
+    },
+    "component3_testbed_pilot/tests/test_protocol.py": {
+      "bytes": 3038,
+      "sha256": "08ac6e79eec684d5192bff1c11cc03127dd2fdc84b68d00bd82e8ca3af4dde1c"
+    },
+    "component3_testbed_pilot/verify-pilot.ps1": {
+      "bytes": 930,
+      "sha256": "01688d11a1f902df74696d547c160fecce472db8e128b67de0a1f4acebcba014"
+    },
+    "component3_testbed_pilot/FILE_HASHES.json": {
+      "bytes": 2557,
+      "sha256": "11664e98effdb5627d6b88cb975bd4e1872187679ab888c09111914b079e2247"
+    },
+    "component3_testbed_pilot/outputs/pilot-20261024T145730Z-4a7f6472/application_ledger.jsonl": {
+      "bytes": 119778,
+      "sha256": "dce594d666f5701fd065eddd94c0eb5b7c583c2eb1f8c8dc391020e5b2ed6438"
+    },
+    "component3_testbed_pilot/outputs/pilot-20261024T145730Z-4a7f6472/capture.log": {
+      "bytes": 164,
+      "sha256": "23760378bfd0f2552ffb5ce8fb765a5805db6be3408df06e8cf1488097a92acb"
+    },
+    "component3_testbed_pilot/outputs/pilot-20261024T145730Z-4a7f6472/capture.pcap": {
+      "bytes": 20940,
+      "sha256": "54560fd05077665e580ad247d433732087bbb336601bfe2d4a475edef118972d"
+    },
+    "component3_testbed_pilot/outputs/pilot-20261024T145730Z-4a7f6472/EVIDENCE_WALKTHROUGH.txt": {
+      "bytes": 1165,
+      "sha256": "c62d07a0edcf6ec4dc454ce2b37fb9ed612b4b446f05c94b9f91fff0f3fee855"
+    },
+    "component3_testbed_pilot/outputs/pilot-20261024T145730Z-4a7f6472/host_execution.json": {
+      "bytes": 2915,
+      "sha256": "beb974ccc3bb88d3cec3cc59cd06568ed631d9af64f87cbb5e36b9d93dd3ffc4"
+    },
+    "component3_testbed_pilot/outputs/pilot-20261024T145730Z-4a7f6472/INDEPENDENT_CAPTURE_CHECKS.json": {
+      "bytes": 598,
+      "sha256": "899d3dd577cb1f1f76b083973600266b58afdd85855b12d892392e80bca4a71b"
+    },
+    "component3_testbed_pilot/outputs/pilot-20261024T145730Z-4a7f6472/run_manifest.json": {
+      "bytes": 1892,
+      "sha256": "9899fb3c057b76463a12b02db565175263c1030c7dd5366734d40bb0ed26ed91"
+    },
+    "component3_testbed_pilot/outputs/pilot-20261024T145730Z-4a7f6472/server_audit.jsonl": {
+      "bytes": 44947,
+      "sha256": "9536d8fe8e98c9f394abef6a6bfd21e3136e2e0801c28c6773555220cf9d2aa4"
+    },
+    "component3_testbed_pilot/outputs/pilot-20261024T145730Z-4a7f6472/validation_report.json": {
+      "bytes": 1376,
+      "sha256": "c92fa34c375fa694ceccb10abe7edb892bce6b9f8e1d726f97eb026b4be2927c"
+    },
+    "component3_testbed_pilot/outputs/pilot-20261024T145730Z-4a7f6472/verified_labels.jsonl": {
+      "bytes": 201653,
+      "sha256": "cc9d2cae57db90ecf7670ddd70b9b6de4ae017a05a0bd022961ddfd01697e9b9"
+    },
+    "component3_testbed_pilot/outputs/pilot-20261024T145617Z-80339fda/application_ledger.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "component3_testbed_pilot/outputs/pilot-20261024T145617Z-80339fda/capture.log": {
+      "bytes": 72,
+      "sha256": "11ed3e193034bc45fe57a29caa02c9504b6c3d6e5e7c9097d38dabc1e7bdb323"
+    },
+    "component3_testbed_pilot/outputs/pilot-20261024T145617Z-80339fda/capture.pcap": {
+      "bytes": 24,
+      "sha256": "704e5e5b3234433c01fcfd1b20a306e77e985038120492dc53965c3edd38a4ea"
+    },
+    "component3_testbed_pilot/outputs/pilot-20261024T145617Z-80339fda/host_execution.json": {
+      "bytes": 2915,
+      "sha256": "d8c174c88410a500d955d6006c58afc2b1d79435d3827f83be62c4627e849756"
+    },
+    "component3_testbed_pilot/outputs/pilot-20261024T145617Z-80339fda/run_manifest.json": {
+      "bytes": 1839,
+      "sha256": "39812d63dbaf04b4bb1a555e95dbd8f4a04704183fef71d79fc64bb804bbef25"
+    },
+    "component3_testbed_pilot/outputs/pilot-20261024T145617Z-80339fda/server_audit.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "optional_image_archive": {
+    "platform": "linux/amd64",
+    "source_image": "kaveesha-c3-pilot:0.1.0",
+    "gzip_file": "KAVEESHA_C3_DOCKER_IMAGE.tar.gz",
+    "gzip_bytes": 44756087,
+    "gzip_sha256": "84c9c9c4791d2a61cc909456423eade725f0ea6bf35d8a7d0eee0e6d09734faf",
+    "uncompressed_tar_bytes": 45132800,
+    "uncompressed_tar_sha256": "b3e3be971c9ba245336eb7dc5030e3490b1c1dba85e2c8d8d96e0a592d530ecb",
+    "note": "Optional image for reproduction; Docker is not required to read supplied text/JSON evidence."
+  },
+  "exact_image_load_and_verification": {
+    "date": "2026-10-24",
+    "archive": "KAVEESHA_C3_DOCKER_IMAGE.tar.gz",
+    "docker_load_passed": true,
+    "image_id": "sha256:b014186e8a16896968cd1019873f390c7450ca367c9251cc7e2c621493749825",
+    "loaded_image_capture_verification_passed": true,
+    "run": "pilot-20261024T145730Z-4a7f6472"
+  }
+}

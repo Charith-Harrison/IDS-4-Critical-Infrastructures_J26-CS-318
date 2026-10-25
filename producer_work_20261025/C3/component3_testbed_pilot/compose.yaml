@@ -1,0 +1,21 @@
+name: kaveesha-c3-pilot
+services:
+  lab:
+    build: .
+    image: kaveesha-c3-pilot:0.1.0
+    network_mode: none
+    cap_drop: [ALL]
+    # tcpdump -Z root calls initgroups even when it keeps uid/gid0.
+    cap_add: [NET_RAW, SETGID]
+    security_opt: [no-new-privileges:true]
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m
+    volumes:
+      - ./outputs:/output
+    environment:
+      C3LAB_ISOLATED_DOCKER: "1"
+    mem_limit: 256m
+    cpus: 1.0
+    init: true
+    pids_limit: 64

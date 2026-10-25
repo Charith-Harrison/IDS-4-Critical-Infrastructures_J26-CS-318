@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-24",
+  "archive": "KAVEESHA_C3_DOCKER_IMAGE.tar.gz",
+  "docker_load_passed": true,
+  "image_id": "sha256:b014186e8a16896968cd1019873f390c7450ca367c9251cc7e2c621493749825",
+  "loaded_image_capture_verification_passed": true,
+  "run": "pilot-20261024T145730Z-4a7f6472"
+}

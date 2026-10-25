@@ -1,0 +1,137 @@
+{
+  "policy_version": "cic-evidence-v1",
+  "tolerance_us": 25000,
+  "clock_offset_candidates_us": [
+    0,
+    -10800000000,
+    10800000000
+  ],
+  "clock_calibration": [
+    {
+      "recording_id": "cic_compromised_ied_march",
+      "family": "false_data_injection",
+      "offset_us": 0,
+      "unique_behavior_matches": 3,
+      "zero_offset_calibrated": true,
+      "residual_min_us": 500,
+      "residual_median_us": 500,
+      "residual_max_us": 500,
+      "source_log_dates_candidate_utc": [
+        "2023-03-23"
+      ],
+      "tolerance_sensitivity_unique_candidates": {
+        "1000": 3,
+        "5000": 3,
+        "25000": 3
+      }
+    }
+  ],
+  "strict_candidate_uniqueness_sensitivity": [
+    {
+      "recording_id": "cic_compromised_ied_march",
+      "family": "false_data_injection",
+      "tolerance_us": 1000,
+      "two_sided_unique_candidate_pairs": 3
+    },
+    {
+      "recording_id": "cic_compromised_ied_march",
+      "family": "false_data_injection",
+      "tolerance_us": 5000,
+      "two_sided_unique_candidate_pairs": 3
+    },
+    {
+      "recording_id": "cic_compromised_ied_march",
+      "family": "false_data_injection",
+      "tolerance_us": 25000,
+      "two_sided_unique_candidate_pairs": 3
+    }
+  ],
+  "clock_scope_limit": "Zero offset accepted only for observed family/campaign with>=3unique behavior matches and more support than\u00b13hours; no claim for all logs/clocks.",
+  "source_log_counts": {
+    "source_rows": 4,
+    "distinct_candidate_log_signatures": 4
+  },
+  "signature_match_states": {
+    "accepted_core_mechanism_event_evidence": 3,
+    "candidate_only_or_ambiguous": 1
+  },
+  "views": {
+    "fixture_ied": {
+      "counts": {
+        "label:unlabelled": 6,
+        "state:unlabelled": 4,
+        "events": 9,
+        "label:response_injection": 3,
+        "state:supported_log_packet_mechanism": 3,
+        "state:unknown_or_ambiguous": 2
+      },
+      "supported_log_packet_events_by_class": {
+        "response_injection": 3
+      },
+      "independence_policy": "Distinct log/packet events are NOT independent recordings. All campaign events remain in one parent group.",
+      "risk_connections_withheld_from_confident_labels": 0,
+      "candidate_edge_count": 5,
+      "contradictory_core_target_event_count": 0,
+      "conflict_policy": "No arbitrary target chosen for multiple supported log candidates; those events remain unknown_or_ambiguous.",
+      "multiple_individually_unique_core_log_candidates_event_count": 0,
+      "ambiguous_core_candidate_events_quarantined": 2,
+      "ambiguity_definition": "Core log association exists but a target is withheld; this includes many-to-many burst matches, not only multiple individually unique candidates."
+    }
+  },
+  "selected_endpoint_scope": {
+    "cic_compromised_ied_march": {
+      "server_ips": [
+        "185.175.0.5"
+      ],
+      "client_ips": [
+        "185.175.0.2"
+      ],
+      "first_ts_us": 1679587200900000,
+      "last_ts_us": 1679587204001000
+    }
+  },
+  "limitations": [
+    "Naive log timezone is not independently documented.",
+    "Brute-force log TID5/completion65535 semantics not assumed to enumerate literal wire TIDs.",
+    "Other attack mechanisms remain candidate evidence, not fabricated core labels.",
+    "Distinct event evidence does not establish independent episodes or campaigns."
+  ],
+  "elapsed_s": 0.063,
+  "accepted_target_shape_audit": {
+    "fixture_ied": {
+      "response_injection": {
+        "events": 3,
+        "parse_status_counts": {
+          "ok": 3
+        },
+        "pdu_hex_counts": {},
+        "examples": [
+          {
+            "event_uid": "rsp1",
+            "ts_complete_us": 1679587201000500,
+            "mbap_trans_id": 1,
+            "func_code": 1,
+            "address": null,
+            "single_value": null,
+            "parse_status": "ok",
+            "client_ip": "185.175.0.2",
+            "server_ip": "185.175.0.5",
+            "adu_hex": null
+          },
+          {
+            "event_uid": "rsp2",
+            "ts_complete_us": 1679587202000500,
+            "mbap_trans_id": 2,
+            "func_code": 1,
+            "address": null,
+            "single_value": null,
+            "parse_status": "ok",
+            "client_ip": "185.175.0.2",
+            "server_ip": "185.175.0.5",
+            "adu_hex": null
+          }
+        ]
+      }
+    }
+  }
+}

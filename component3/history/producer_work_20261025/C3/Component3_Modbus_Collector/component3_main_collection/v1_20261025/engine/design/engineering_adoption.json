@@ -1,0 +1,14 @@
+{
+  "status": "USER_ADOPTED_ENGINEERING_PROBES_ONLY",
+  "user_instruction": "please do it.",
+  "date_local": "2026-10-25",
+  "timezone": "Asia/Colombo",
+  "authorized": "Separate v0.3 implementation and EQ01-EQ14 engineering probes only",
+  "main_104_runs": "NOT_AUTHORIZED_OR_COLLECTED",
+  "main_partition_memberships": "NOT_CREATED",
+  "academic_supervisor_approval": "NOT_RECORDED",
+  "no_model_preprocessing_or_training": true,
+  "source_design_sha256": "abf58faacfeec93518cf48c235204c56eefbf78b0e90bc760d4d2cfc2722fd9c",
+  "source_roster_sha256": "f32aca83a42a89bf9db642afacbc5371344693167c64ff8ee89e689a0a96dfd1",
+  "design_status_note": "Original proposed files unchanged; this engineering adoption does not freeze or adopt main collection memberships."
+}

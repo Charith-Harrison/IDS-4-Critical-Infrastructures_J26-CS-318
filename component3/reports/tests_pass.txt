@@ -1,0 +1,57 @@
+test_concurrent_requests_fail_closed (test_runtime.RuntimeTests.test_concurrent_requests_fail_closed) ... ok
+test_current_reply_has_no_address_and_zero_is_valid (test_runtime.RuntimeTests.test_current_reply_has_no_address_and_zero_is_valid) ... ok
+test_gap_and_malformed_input_are_statuses_not_normal (test_runtime.RuntimeTests.test_gap_and_malformed_input_are_statuses_not_normal) ... ok
+test_missing_anchor_is_eligible_abstention (test_runtime.RuntimeTests.test_missing_anchor_is_eligible_abstention) ... ok
+test_missing_context_cannot_be_filled_into_prediction (test_runtime.RuntimeTests.test_missing_context_cannot_be_filled_into_prediction) ... ok
+test_mode_write_invalidates_and_no_future_ack_backfill (test_runtime.RuntimeTests.test_mode_write_invalidates_and_no_future_ack_backfill) ... ok
+test_new_connection_has_no_old_anchors (test_runtime.RuntimeTests.test_new_connection_has_no_old_anchors) ... ok
+test_old_anchor_expires_and_episode_does_not_reset (test_runtime.RuntimeTests.test_old_anchor_expires_and_episode_does_not_reset) ... ok
+test_private_ordinals_and_labels_are_irrelevant (test_runtime.RuntimeTests.test_private_ordinals_and_labels_are_irrelevant) ... ok
+test_public_map_change_clears_anchors (test_runtime.RuntimeTests.test_public_map_change_clears_anchors) ... ok
+test_requires_explicit_trust_contract (test_runtime.RuntimeTests.test_requires_explicit_trust_contract) ... ok
+test_reused_tid_and_repeated_bytes_preserve_events (test_runtime.RuntimeTests.test_reused_tid_and_repeated_bytes_preserve_events) ... ok
+test_wrong_tid_echo_and_unit_invalidate (test_runtime.RuntimeTests.test_wrong_tid_echo_and_unit_invalidate) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 2.038s
+
+OK
+test_explicit_allowlist_never_admits_private_columns (test_experiment.ExperimentTests.test_explicit_allowlist_never_admits_private_columns) ... ok
+test_fpr_reports_unscored_traffic_separately (test_experiment.ExperimentTests.test_fpr_reports_unscored_traffic_separately) ... ok
+B {'max_depth': 12, 'min_samples_leaf': 2, 'class_weight': 'balanced'} validation macroF1=0.1667
+B {'max_depth': 8, 'min_samples_leaf': 5, 'class_weight': 'balanced'} validation macroF1=0.1667
+B {'max_depth': 12, 'min_samples_leaf': 2, 'class_weight': None} validation macroF1=0.1667
+B {'max_depth': 8, 'min_samples_leaf': 5, 'class_weight': None} validation macroF1=0.1667
+D {'max_depth': 12, 'min_samples_leaf': 2, 'class_weight': 'balanced'} validation macroF1=0.1667
+D {'max_depth': 8, 'min_samples_leaf': 5, 'class_weight': 'balanced'} validation macroF1=0.1667
+D {'max_depth': 12, 'min_samples_leaf': 2, 'class_weight': None} validation macroF1=0.1667
+D {'max_depth': 8, 'min_samples_leaf': 5, 'class_weight': None} validation macroF1=0.1667
+B-wire {'max_depth': 12, 'min_samples_leaf': 2, 'class_weight': 'balanced'} validation macroF1=0.1667
+B-wire {'max_depth': 8, 'min_samples_leaf': 5, 'class_weight': 'balanced'} validation macroF1=0.1667
+B-wire {'max_depth': 12, 'min_samples_leaf': 2, 'class_weight': None} validation macroF1=0.1667
+B-wire {'max_depth': 8, 'min_samples_leaf': 5, 'class_weight': None} validation macroF1=0.1667
+D-wire {'max_depth': 12, 'min_samples_leaf': 2, 'class_weight': 'balanced'} validation macroF1=0.1667
+D-wire {'max_depth': 8, 'min_samples_leaf': 5, 'class_weight': 'balanced'} validation macroF1=0.1667
+D-wire {'max_depth': 12, 'min_samples_leaf': 2, 'class_weight': None} validation macroF1=0.1667
+D-wire {'max_depth': 8, 'min_samples_leaf': 5, 'class_weight': None} validation macroF1=0.1667
+test_train_only_imputer_and_serialized_reload (test_experiment.ExperimentTests.test_train_only_imputer_and_serialized_reload) ... ok
+test_fc3_response_has_no_current_wire_address_or_quantity (test_records.RecordsTests.test_fc3_response_has_no_current_wire_address_or_quantity) ... ok
+test_future_ack_does_not_backfill_current_request_or_ack_features (test_records.RecordsTests.test_future_ack_does_not_backfill_current_request_or_ack_features) ... ok
+test_future_message_mutation_cannot_change_past_features (test_records.RecordsTests.test_future_message_mutation_cannot_change_past_features) ... ok
+test_missing_mode_anchor_abstains_despite_attack_label (test_records.RecordsTests.test_missing_mode_anchor_abstains_despite_attack_label) ... ok
+test_missing_truth_record_cannot_be_silently_relabelled_normal (test_records.RecordsTests.test_missing_truth_record_cannot_be_silently_relabelled_normal) ... ok
+test_mode_write_invalidates_old_read_and_ack_does_not_restore_it (test_records.RecordsTests.test_mode_write_invalidates_old_read_and_ack_does_not_restore_it) ... ok
+test_new_connection_resets_context_without_using_private_episode (test_records.RecordsTests.test_new_connection_resets_context_without_using_private_episode) ... ok
+test_private_episode_boundary_does_not_reset_observable_history (test_records.RecordsTests.test_private_episode_boundary_does_not_reset_observable_history) ... ok
+test_private_metadata_and_truth_changes_cannot_change_features (test_records.RecordsTests.test_private_metadata_and_truth_changes_cannot_change_features) ... ok
+test_reply_uses_earlier_acknowledged_word_not_private_truth (test_records.RecordsTests.test_reply_uses_earlier_acknowledged_word_not_private_truth) ... ok
+test_response_anchor_expires_by_reply_decision (test_records.RecordsTests.test_response_anchor_expires_by_reply_decision) ... ok
+test_six_intervening_adus_allowed_eight_are_stale (test_records.RecordsTests.test_six_intervening_adus_allowed_eight_are_stale) ... ok
+test_supplied_public_map_routes_roles_without_private_object_metadata (test_records.RecordsTests.test_supplied_public_map_routes_roles_without_private_object_metadata) ... ok
+test_tid_reuse_and_equal_pdus_preserve_distinct_occurrences (test_records.RecordsTests.test_tid_reuse_and_equal_pdus_preserve_distinct_occurrences) ... ok
+test_zero_mode_and_zero_setpoint_are_values_not_missing_anchors (test_records.RecordsTests.test_zero_mode_and_zero_setpoint_are_values_not_missing_anchors) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 8.489s
+
+OK

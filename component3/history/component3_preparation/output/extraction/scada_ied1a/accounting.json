@@ -1,0 +1,69 @@
+{
+ "frames_modbus_port": 5686109,
+ "payload_bytes_captured": 10926498,
+ "connections": 682326,
+ "bytes_delivered": 10913550,
+ "records_adu": 964683,
+ "bytes_in_adu": 10911162,
+ "adu_status_ok": 911543,
+ "conn_end:superseded_by_new_syn": 18175,
+ "conn_end:idle_timeout": 200845,
+ "retrans_segments": 83,
+ "bytes_dup_dropped": 12948,
+ "adu_status_exception": 147,
+ "conn_end:closed": 461852,
+ "records_incomplete": 276,
+ "bytes_in_incomplete": 2388,
+ "adu_status_malformed": 52993,
+ "frames_total": 6064388,
+ "conn_end:chain_end": 1454,
+ "nonmodbus_frames": {
+  "tcp_port_1099": 365099,
+  "ipv6": 1186,
+  "arp": 11482,
+  "udp": 510,
+  "ipproto_2": 2
+ },
+ "per_chunk": [
+  {
+   "chunk": 0,
+   "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-scada\\ied1a\\ied1a-network-captures\\veth3614724-0.pcap",
+   "frames": 1087381,
+   "non_monotonic_frames": 2
+  },
+  {
+   "chunk": 1,
+   "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-scada\\ied1a\\ied1a-network-captures\\veth3614724-1.pcap",
+   "frames": 1084366,
+   "non_monotonic_frames": 2
+  },
+  {
+   "chunk": 2,
+   "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-scada\\ied1a\\ied1a-network-captures\\veth3614724-2.pcap",
+   "frames": 1139054,
+   "non_monotonic_frames": 1
+  },
+  {
+   "chunk": 3,
+   "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-scada\\ied1a\\ied1a-network-captures\\veth3614724-3.pcap",
+   "frames": 1114472,
+   "non_monotonic_frames": 3
+  },
+  {
+   "chunk": 4,
+   "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-scada\\ied1a\\ied1a-network-captures\\veth3614724-4.pcap",
+   "frames": 1142584,
+   "non_monotonic_frames": 3
+  },
+  {
+   "chunk": 5,
+   "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-scada\\ied1a\\ied1a-network-captures\\veth3614724-5.pcap",
+   "frames": 496531,
+   "non_monotonic_frames": 1
+  }
+ ],
+ "elapsed_s": 282.05,
+ "check_bytes_captured_eq_dup_plus_delivered": true,
+ "check_bytes_delivered_eq_records": true,
+ "check_frames_accounted": true
+}

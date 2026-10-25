@@ -1,9 +1,0 @@
-{
-  "status": "PINNED_LOCAL_IMAGE",
-  "image_id": "sha256:4abe62902059561c7e2d383a301b6fa4cee8015a4f1ce76245177c0d76ed4ffd",
-  "image_tag": "c3-main-manual:v1-20261025",
-  "source_bundle_id": "1fe2b0eb6f44807bc6759d3f3e998ce5064047516585d9e8e313f01b24050663",
-  "qualified_base_image_id": "sha256:3ce0e2f0e82a40eb0fddfb2f594c88084a8ed5f7b86a0cf2ef8064dfb0e77f7d",
-  "build_network": "none",
-  "new_collection_started": false
-}

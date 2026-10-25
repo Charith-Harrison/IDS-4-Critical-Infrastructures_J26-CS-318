@@ -1,0 +1,19 @@
+{
+  "status": "PASSED",
+  "launch_cwd": "tmp",
+  "script": "absolute repository c3.py",
+  "result": {
+    "status": "LOCKED_MODELS_LOADED",
+    "collection_id": "40ae7a846cce48fc8e3c52ebfca7e2cd",
+    "source": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3\\data\\collection",
+    "models": [
+      "B",
+      "D",
+      "B-wire",
+      "D-wire"
+    ],
+    "training": false,
+    "scope": "Quick index/model identity check. Use audit for full raw verification."
+  },
+  "limit": "Different working directory on this laptop; not an installation test on another machine"
+}

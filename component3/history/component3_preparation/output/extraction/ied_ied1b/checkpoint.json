@@ -1,0 +1,137 @@
+{
+  "signature": "f6a8d3f1747126d4e475fc005dd586b004eb3ab9d47530e457edc84c1b4cfd27",
+  "contract": {
+    "view_id": "ied_ied1b",
+    "recording_id": "cic_compromised_ied_march",
+    "sources": [
+      {
+        "chunk": 0,
+        "path": "attack/compromised-ied/ied1b/ied1b-network-captures/vethc76bd3f-0.pcap",
+        "bytes": 100000057,
+        "sha256": "f7a453f2a844c990f6d7afb2f3d39e77575f4ad0579dbb0301c9caea7d7787d2"
+      },
+      {
+        "chunk": 1,
+        "path": "attack/compromised-ied/ied1b/ied1b-network-captures/vethc76bd3f-1.pcap",
+        "bytes": 100000037,
+        "sha256": "d9e5ff4fb79e1efd46ebd4037b9a408392c1a0b1841c359b16f790c917eabb6d"
+      },
+      {
+        "chunk": 2,
+        "path": "attack/compromised-ied/ied1b/ied1b-network-captures/vethc76bd3f-2.pcap",
+        "bytes": 100000012,
+        "sha256": "f447c75974e0618b91cb87d8d8f62dbef034221545cdd21b0bada1b4f0384d09"
+      },
+      {
+        "chunk": 3,
+        "path": "attack/compromised-ied/ied1b/ied1b-network-captures/vethc76bd3f-3.pcap",
+        "bytes": 100000028,
+        "sha256": "af5050c46c4a7bcbe58b75a495c2aaf9334900f1c6b19f6c943709a2244ae2b1"
+      },
+      {
+        "chunk": 4,
+        "path": "attack/compromised-ied/ied1b/ied1b-network-captures/vethc76bd3f-4.pcap",
+        "bytes": 100000054,
+        "sha256": "0e5c8ba0555067f356f464a54ac1c15e6ba033d241c6adff6a7b283b8c03f152"
+      },
+      {
+        "chunk": 5,
+        "path": "attack/compromised-ied/ied1b/ied1b-network-captures/vethc76bd3f-5.pcap",
+        "bytes": 19956043,
+        "sha256": "62ae79bef89f60919fedc950d8b57cce50ea12c48e1d0fb4c218659b7be64a58"
+      }
+    ],
+    "config": {
+      "modbus_ports": [
+        502
+      ],
+      "conn_idle_timeout_s": 300,
+      "closed_linger_s": 2,
+      "max_open_connections": 20000,
+      "max_ooo_segments": 128,
+      "max_ooo_bytes": 262144,
+      "max_pending_bytes": 70000,
+      "max_frame_refs": 1000,
+      "row_batch_size": 10000
+    },
+    "code_sha256": {
+      "extract.py": "ed0bd485557e81fc94d51696f5840755a4c83ef520aa635b9fb5a0ace4d94e98",
+      "modbus.py": "c4e63c18727bcbfe20129363f45ce5a6a5075b0108086bf74aaf51ec2e9925c7",
+      "pcapio.py": "d21fba12953ca4cf18fe8afb44b4737b15d2abdba7c55e088bc8b0f228fa1dba"
+    }
+  },
+  "source_hashes_unchanged": true,
+  "reconciliation_passed": true,
+  "peak_working_set_bytes": 247701504,
+  "output_bytes": 101728929,
+  "accounting": {
+    "frames_modbus_port": 6124040,
+    "payload_bytes_captured": 12511888,
+    "connections": 558642,
+    "bytes_delivered": 12511888,
+    "records_adu": 1116805,
+    "bytes_in_adu": 12510953,
+    "adu_status_ok": 1116752,
+    "conn_end:superseded_by_new_syn": 12193,
+    "conn_end:idle_timeout": 70250,
+    "conn_end:closed": 473953,
+    "records_incomplete": 116,
+    "bytes_in_incomplete": 935,
+    "adu_status_malformed": 53,
+    "frames_total": 6125628,
+    "conn_end:chain_end": 2246,
+    "nonmodbus_frames": {
+      "ipproto_2": 6,
+      "ipv6": 1106,
+      "tcp_port_1099": 1,
+      "udp": 475
+    },
+    "per_chunk": [
+      {
+        "chunk": 0,
+        "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-ied\\ied1b\\ied1b-network-captures\\vethc76bd3f-0.pcap",
+        "frames": 1177238,
+        "non_monotonic_frames": 1
+      },
+      {
+        "chunk": 1,
+        "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-ied\\ied1b\\ied1b-network-captures\\vethc76bd3f-1.pcap",
+        "frames": 1178259,
+        "non_monotonic_frames": 1
+      },
+      {
+        "chunk": 2,
+        "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-ied\\ied1b\\ied1b-network-captures\\vethc76bd3f-2.pcap",
+        "frames": 1178302
+      },
+      {
+        "chunk": 3,
+        "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-ied\\ied1b\\ied1b-network-captures\\vethc76bd3f-3.pcap",
+        "frames": 1178340,
+        "non_monotonic_frames": 3
+      },
+      {
+        "chunk": 4,
+        "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-ied\\ied1b\\ied1b-network-captures\\vethc76bd3f-4.pcap",
+        "frames": 1178352,
+        "non_monotonic_frames": 3
+      },
+      {
+        "chunk": 5,
+        "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-ied\\ied1b\\ied1b-network-captures\\vethc76bd3f-5.pcap",
+        "frames": 235137
+      }
+    ],
+    "elapsed_s": 261.14,
+    "check_bytes_captured_eq_dup_plus_delivered": true,
+    "check_bytes_delivered_eq_records": true,
+    "check_frames_accounted": true
+  },
+  "output_sha256": {
+    "accounting.json": "1394f4861d220a4e3977af94725cd4c65554350d9b7535351479880a3550753c",
+    "connections.parquet": "7582b0b174908fe54d6a2c940abc0c0c3152a2f304d346d87a9ae324f77734d0",
+    "events.parquet": "4bf5f1b849eedf9dd8820f6aced5e65c6114a047ececee1b908192021e2769ee"
+  },
+  "checkpoint_version": 2,
+  "integrity_sealed_after_first_run": true
+}

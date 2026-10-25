@@ -1,0 +1,981 @@
+test_concurrent_requests_fail_closed (test_runtime.RuntimeTests.test_concurrent_requests_fail_closed) ... ok
+test_current_reply_has_no_address_and_zero_is_valid (test_runtime.RuntimeTests.test_current_reply_has_no_address_and_zero_is_valid) ... ok
+test_gap_and_malformed_input_are_statuses_not_normal (test_runtime.RuntimeTests.test_gap_and_malformed_input_are_statuses_not_normal) ... ok
+test_missing_anchor_is_eligible_abstention (test_runtime.RuntimeTests.test_missing_anchor_is_eligible_abstention) ... ok
+test_missing_context_cannot_be_filled_into_prediction (test_runtime.RuntimeTests.test_missing_context_cannot_be_filled_into_prediction) ... ok
+test_mode_write_invalidates_and_no_future_ack_backfill (test_runtime.RuntimeTests.test_mode_write_invalidates_and_no_future_ack_backfill) ... ok
+test_new_connection_has_no_old_anchors (test_runtime.RuntimeTests.test_new_connection_has_no_old_anchors) ... ok
+test_old_anchor_expires_and_episode_does_not_reset (test_runtime.RuntimeTests.test_old_anchor_expires_and_episode_does_not_reset) ... ok
+test_private_ordinals_and_labels_are_irrelevant (test_runtime.RuntimeTests.test_private_ordinals_and_labels_are_irrelevant) ... ok
+test_public_map_change_clears_anchors (test_runtime.RuntimeTests.test_public_map_change_clears_anchors) ... ok
+test_requires_explicit_trust_contract (test_runtime.RuntimeTests.test_requires_explicit_trust_contract) ... ok
+test_reused_tid_and_repeated_bytes_preserve_events (test_runtime.RuntimeTests.test_reused_tid_and_repeated_bytes_preserve_events) ... ok
+test_wrong_tid_echo_and_unit_invalidate (test_runtime.RuntimeTests.test_wrong_tid_echo_and_unit_invalidate) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 3.699s
+
+OK
+test_explicit_allowlist_never_admits_private_columns (test_experiment.ExperimentTests.test_explicit_allowlist_never_admits_private_columns) ... ok
+test_fpr_reports_unscored_traffic_separately (test_experiment.ExperimentTests.test_fpr_reports_unscored_traffic_separately) ... ok
+test_train_only_imputer_and_serialized_reload (test_experiment.ExperimentTests.test_train_only_imputer_and_serialized_reload) ... ERROR
+test_fc3_response_has_no_current_wire_address_or_quantity (test_records.RecordsTests.test_fc3_response_has_no_current_wire_address_or_quantity) ... ERROR
+test_fc3_response_has_no_current_wire_address_or_quantity (test_records.RecordsTests.test_fc3_response_has_no_current_wire_address_or_quantity) ... ERROR
+test_future_ack_does_not_backfill_current_request_or_ack_features (test_records.RecordsTests.test_future_ack_does_not_backfill_current_request_or_ack_features) ... ERROR
+test_future_ack_does_not_backfill_current_request_or_ack_features (test_records.RecordsTests.test_future_ack_does_not_backfill_current_request_or_ack_features) ... ERROR
+test_future_message_mutation_cannot_change_past_features (test_records.RecordsTests.test_future_message_mutation_cannot_change_past_features) ... ERROR
+test_future_message_mutation_cannot_change_past_features (test_records.RecordsTests.test_future_message_mutation_cannot_change_past_features) ... ERROR
+test_missing_mode_anchor_abstains_despite_attack_label (test_records.RecordsTests.test_missing_mode_anchor_abstains_despite_attack_label) ... ERROR
+test_missing_mode_anchor_abstains_despite_attack_label (test_records.RecordsTests.test_missing_mode_anchor_abstains_despite_attack_label) ... ERROR
+test_missing_truth_record_cannot_be_silently_relabelled_normal (test_records.RecordsTests.test_missing_truth_record_cannot_be_silently_relabelled_normal) ... ERROR
+test_missing_truth_record_cannot_be_silently_relabelled_normal (test_records.RecordsTests.test_missing_truth_record_cannot_be_silently_relabelled_normal) ... ERROR
+test_mode_write_invalidates_old_read_and_ack_does_not_restore_it (test_records.RecordsTests.test_mode_write_invalidates_old_read_and_ack_does_not_restore_it) ... ERROR
+test_mode_write_invalidates_old_read_and_ack_does_not_restore_it (test_records.RecordsTests.test_mode_write_invalidates_old_read_and_ack_does_not_restore_it) ... ERROR
+test_new_connection_resets_context_without_using_private_episode (test_records.RecordsTests.test_new_connection_resets_context_without_using_private_episode) ... ERROR
+test_new_connection_resets_context_without_using_private_episode (test_records.RecordsTests.test_new_connection_resets_context_without_using_private_episode) ... ERROR
+test_private_episode_boundary_does_not_reset_observable_history (test_records.RecordsTests.test_private_episode_boundary_does_not_reset_observable_history) ... ERROR
+test_private_episode_boundary_does_not_reset_observable_history (test_records.RecordsTests.test_private_episode_boundary_does_not_reset_observable_history) ... ERROR
+test_private_metadata_and_truth_changes_cannot_change_features (test_records.RecordsTests.test_private_metadata_and_truth_changes_cannot_change_features) ... ERROR
+test_private_metadata_and_truth_changes_cannot_change_features (test_records.RecordsTests.test_private_metadata_and_truth_changes_cannot_change_features) ... ERROR
+test_reply_uses_earlier_acknowledged_word_not_private_truth (test_records.RecordsTests.test_reply_uses_earlier_acknowledged_word_not_private_truth) ... ERROR
+test_reply_uses_earlier_acknowledged_word_not_private_truth (test_records.RecordsTests.test_reply_uses_earlier_acknowledged_word_not_private_truth) ... ERROR
+test_response_anchor_expires_by_reply_decision (test_records.RecordsTests.test_response_anchor_expires_by_reply_decision) ... 
+  test_response_anchor_expires_by_reply_decision (test_records.RecordsTests.test_response_anchor_expires_by_reply_decision) (filler_transactions=2) ... ERROR
+  test_response_anchor_expires_by_reply_decision (test_records.RecordsTests.test_response_anchor_expires_by_reply_decision) (filler_transactions=3) ... ERROR
+test_response_anchor_expires_by_reply_decision (test_records.RecordsTests.test_response_anchor_expires_by_reply_decision) ... ERROR
+test_six_intervening_adus_allowed_eight_are_stale (test_records.RecordsTests.test_six_intervening_adus_allowed_eight_are_stale) ... 
+  test_six_intervening_adus_allowed_eight_are_stale (test_records.RecordsTests.test_six_intervening_adus_allowed_eight_are_stale) (filler_transactions=3) ... ERROR
+  test_six_intervening_adus_allowed_eight_are_stale (test_records.RecordsTests.test_six_intervening_adus_allowed_eight_are_stale) (filler_transactions=4) ... ERROR
+test_six_intervening_adus_allowed_eight_are_stale (test_records.RecordsTests.test_six_intervening_adus_allowed_eight_are_stale) ... ERROR
+test_supplied_public_map_routes_roles_without_private_object_metadata (test_records.RecordsTests.test_supplied_public_map_routes_roles_without_private_object_metadata) ... ERROR
+test_supplied_public_map_routes_roles_without_private_object_metadata (test_records.RecordsTests.test_supplied_public_map_routes_roles_without_private_object_metadata) ... ERROR
+test_tid_reuse_and_equal_pdus_preserve_distinct_occurrences (test_records.RecordsTests.test_tid_reuse_and_equal_pdus_preserve_distinct_occurrences) ... ERROR
+test_tid_reuse_and_equal_pdus_preserve_distinct_occurrences (test_records.RecordsTests.test_tid_reuse_and_equal_pdus_preserve_distinct_occurrences) ... ERROR
+test_zero_mode_and_zero_setpoint_are_values_not_missing_anchors (test_records.RecordsTests.test_zero_mode_and_zero_setpoint_are_values_not_missing_anchors) ... ERROR
+test_zero_mode_and_zero_setpoint_are_values_not_missing_anchors (test_records.RecordsTests.test_zero_mode_and_zero_setpoint_are_values_not_missing_anchors) ... ERROR
+
+======================================================================
+ERROR: test_train_only_imputer_and_serialized_reload (test_experiment.ExperimentTests.test_train_only_imputer_and_serialized_reload)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_experiment.py", line 40, in test_train_only_imputer_and_serialized_reload
+    root = Path(name); (root/'development').mkdir()
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 1011, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\tmp70j1mi53\\development'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 707, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\tmp70j1mi53'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_experiment.py", line 39, in test_train_only_imputer_and_serialized_reload
+    with tempfile.TemporaryDirectory() as name:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 971, in __exit__
+    self.cleanup()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 975, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 955, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 711, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 927, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 276, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\tmp70j1mi53'
+
+======================================================================
+ERROR: test_fc3_response_has_no_current_wire_address_or_quantity (test_records.RecordsTests.test_fc3_response_has_no_current_wire_address_or_quantity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 117, in test_fc3_response_has_no_current_wire_address_or_quantity
+    frame = self.build(f)
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 106, in build
+    fixture.write(folder)
+    ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 91, in write
+    folder.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 1011, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-m8aoxic3\\case'
+
+======================================================================
+ERROR: test_fc3_response_has_no_current_wire_address_or_quantity (test_records.RecordsTests.test_fc3_response_has_no_current_wire_address_or_quantity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 707, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-m8aoxic3'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 102, in tearDown
+    self.temporary.cleanup()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 975, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 955, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 711, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 927, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 276, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-m8aoxic3'
+
+======================================================================
+ERROR: test_future_ack_does_not_backfill_current_request_or_ack_features (test_records.RecordsTests.test_future_ack_does_not_backfill_current_request_or_ack_features)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 127, in test_future_ack_does_not_backfill_current_request_or_ack_features
+    frame = self.build(f)
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 106, in build
+    fixture.write(folder)
+    ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 91, in write
+    folder.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 1011, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-fu0rxxdh\\case'
+
+======================================================================
+ERROR: test_future_ack_does_not_backfill_current_request_or_ack_features (test_records.RecordsTests.test_future_ack_does_not_backfill_current_request_or_ack_features)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 707, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-fu0rxxdh'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 102, in tearDown
+    self.temporary.cleanup()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 975, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 955, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 711, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 927, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 276, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-fu0rxxdh'
+
+======================================================================
+ERROR: test_future_message_mutation_cannot_change_past_features (test_records.RecordsTests.test_future_message_mutation_cannot_change_past_features)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 157, in test_future_message_mutation_cannot_change_past_features
+    before = self.build(f, "before")
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 106, in build
+    fixture.write(folder)
+    ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 91, in write
+    folder.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 1011, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-plqw44li\\before'
+
+======================================================================
+ERROR: test_future_message_mutation_cannot_change_past_features (test_records.RecordsTests.test_future_message_mutation_cannot_change_past_features)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 707, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-plqw44li'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 102, in tearDown
+    self.temporary.cleanup()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 975, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 955, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 711, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 927, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 276, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-plqw44li'
+
+======================================================================
+ERROR: test_missing_mode_anchor_abstains_despite_attack_label (test_records.RecordsTests.test_missing_mode_anchor_abstains_despite_attack_label)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 182, in test_missing_mode_anchor_abstains_despite_attack_label
+    frame = self.build(f)
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 106, in build
+    fixture.write(folder)
+    ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 91, in write
+    folder.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 1011, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-azglrwaz\\case'
+
+======================================================================
+ERROR: test_missing_mode_anchor_abstains_despite_attack_label (test_records.RecordsTests.test_missing_mode_anchor_abstains_despite_attack_label)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 707, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-azglrwaz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 102, in tearDown
+    self.temporary.cleanup()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 975, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 955, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 711, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 927, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 276, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-azglrwaz'
+
+======================================================================
+ERROR: test_missing_truth_record_cannot_be_silently_relabelled_normal (test_records.RecordsTests.test_missing_truth_record_cannot_be_silently_relabelled_normal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 276, in test_missing_truth_record_cannot_be_silently_relabelled_normal
+    self.build(f)
+    ~~~~~~~~~~^^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 106, in build
+    fixture.write(folder)
+    ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 91, in write
+    folder.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 1011, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-27o_79ue\\case'
+
+======================================================================
+ERROR: test_missing_truth_record_cannot_be_silently_relabelled_normal (test_records.RecordsTests.test_missing_truth_record_cannot_be_silently_relabelled_normal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 707, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-27o_79ue'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 102, in tearDown
+    self.temporary.cleanup()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 975, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 955, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 711, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 927, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 276, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-27o_79ue'
+
+======================================================================
+ERROR: test_mode_write_invalidates_old_read_and_ack_does_not_restore_it (test_records.RecordsTests.test_mode_write_invalidates_old_read_and_ack_does_not_restore_it)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 173, in test_mode_write_invalidates_old_read_and_ack_does_not_restore_it
+    frame = self.build(f)
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 106, in build
+    fixture.write(folder)
+    ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 91, in write
+    folder.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 1011, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-v1luir2b\\case'
+
+======================================================================
+ERROR: test_mode_write_invalidates_old_read_and_ack_does_not_restore_it (test_records.RecordsTests.test_mode_write_invalidates_old_read_and_ack_does_not_restore_it)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 707, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-v1luir2b'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 102, in tearDown
+    self.temporary.cleanup()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 975, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 955, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 711, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 927, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 276, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-v1luir2b'
+
+======================================================================
+ERROR: test_new_connection_resets_context_without_using_private_episode (test_records.RecordsTests.test_new_connection_resets_context_without_using_private_episode)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 228, in test_new_connection_resets_context_without_using_private_episode
+    frame = self.build(f)
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 106, in build
+    fixture.write(folder)
+    ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 91, in write
+    folder.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 1011, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-ga0zz_1k\\case'
+
+======================================================================
+ERROR: test_new_connection_resets_context_without_using_private_episode (test_records.RecordsTests.test_new_connection_resets_context_without_using_private_episode)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 707, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-ga0zz_1k'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 102, in tearDown
+    self.temporary.cleanup()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 975, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 955, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 711, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 927, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 276, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-ga0zz_1k'
+
+======================================================================
+ERROR: test_private_episode_boundary_does_not_reset_observable_history (test_records.RecordsTests.test_private_episode_boundary_does_not_reset_observable_history)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 238, in test_private_episode_boundary_does_not_reset_observable_history
+    frame = self.build(f)
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 106, in build
+    fixture.write(folder)
+    ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 91, in write
+    folder.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 1011, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-lzi76jq0\\case'
+
+======================================================================
+ERROR: test_private_episode_boundary_does_not_reset_observable_history (test_records.RecordsTests.test_private_episode_boundary_does_not_reset_observable_history)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 707, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-lzi76jq0'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 102, in tearDown
+    self.temporary.cleanup()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 975, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 955, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 711, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 927, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 276, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-lzi76jq0'
+
+======================================================================
+ERROR: test_private_metadata_and_truth_changes_cannot_change_features (test_records.RecordsTests.test_private_metadata_and_truth_changes_cannot_change_features)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 246, in test_private_metadata_and_truth_changes_cannot_change_features
+    before = self.build(f, "private-before")
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 106, in build
+    fixture.write(folder)
+    ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 91, in write
+    folder.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 1011, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-mkqjnuep\\private-before'
+
+======================================================================
+ERROR: test_private_metadata_and_truth_changes_cannot_change_features (test_records.RecordsTests.test_private_metadata_and_truth_changes_cannot_change_features)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 707, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-mkqjnuep'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 102, in tearDown
+    self.temporary.cleanup()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 975, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 955, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 711, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 927, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 276, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-mkqjnuep'
+
+======================================================================
+ERROR: test_reply_uses_earlier_acknowledged_word_not_private_truth (test_records.RecordsTests.test_reply_uses_earlier_acknowledged_word_not_private_truth)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 204, in test_reply_uses_earlier_acknowledged_word_not_private_truth
+    frame = self.build(f)
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 106, in build
+    fixture.write(folder)
+    ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 91, in write
+    folder.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 1011, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-53p3hwen\\case'
+
+======================================================================
+ERROR: test_reply_uses_earlier_acknowledged_word_not_private_truth (test_records.RecordsTests.test_reply_uses_earlier_acknowledged_word_not_private_truth)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 707, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-53p3hwen'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 102, in tearDown
+    self.temporary.cleanup()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 975, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 955, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 711, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 927, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 276, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-53p3hwen'
+
+======================================================================
+ERROR: test_response_anchor_expires_by_reply_decision (test_records.RecordsTests.test_response_anchor_expires_by_reply_decision) (filler_transactions=2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 218, in test_response_anchor_expires_by_reply_decision
+    frame = self.build(f, f"reply-staleness-{filler_count}")
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 106, in build
+    fixture.write(folder)
+    ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 91, in write
+    folder.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 1011, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-5z54zgzo\\reply-staleness-2'
+
+======================================================================
+ERROR: test_response_anchor_expires_by_reply_decision (test_records.RecordsTests.test_response_anchor_expires_by_reply_decision) (filler_transactions=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 218, in test_response_anchor_expires_by_reply_decision
+    frame = self.build(f, f"reply-staleness-{filler_count}")
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 106, in build
+    fixture.write(folder)
+    ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 91, in write
+    folder.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 1011, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-5z54zgzo\\reply-staleness-3'
+
+======================================================================
+ERROR: test_response_anchor_expires_by_reply_decision (test_records.RecordsTests.test_response_anchor_expires_by_reply_decision)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 707, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-5z54zgzo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 102, in tearDown
+    self.temporary.cleanup()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 975, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 955, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 711, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 927, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 276, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-5z54zgzo'
+
+======================================================================
+ERROR: test_six_intervening_adus_allowed_eight_are_stale (test_records.RecordsTests.test_six_intervening_adus_allowed_eight_are_stale) (filler_transactions=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 195, in test_six_intervening_adus_allowed_eight_are_stale
+    frame = self.build(f, f"staleness-{filler_count}")
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 106, in build
+    fixture.write(folder)
+    ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 91, in write
+    folder.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 1011, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-o00m8g1c\\staleness-3'
+
+======================================================================
+ERROR: test_six_intervening_adus_allowed_eight_are_stale (test_records.RecordsTests.test_six_intervening_adus_allowed_eight_are_stale) (filler_transactions=4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 195, in test_six_intervening_adus_allowed_eight_are_stale
+    frame = self.build(f, f"staleness-{filler_count}")
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 106, in build
+    fixture.write(folder)
+    ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 91, in write
+    folder.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 1011, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-o00m8g1c\\staleness-4'
+
+======================================================================
+ERROR: test_six_intervening_adus_allowed_eight_are_stale (test_records.RecordsTests.test_six_intervening_adus_allowed_eight_are_stale)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 707, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-o00m8g1c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 102, in tearDown
+    self.temporary.cleanup()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 975, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 955, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 711, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 927, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 276, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-o00m8g1c'
+
+======================================================================
+ERROR: test_supplied_public_map_routes_roles_without_private_object_metadata (test_records.RecordsTests.test_supplied_public_map_routes_roles_without_private_object_metadata)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 295, in test_supplied_public_map_routes_roles_without_private_object_metadata
+    f.write(folder)
+    ~~~~~~~^^^^^^^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 91, in write
+    folder.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 1011, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-kco75ibi\\alternate-map'
+
+======================================================================
+ERROR: test_supplied_public_map_routes_roles_without_private_object_metadata (test_records.RecordsTests.test_supplied_public_map_routes_roles_without_private_object_metadata)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 707, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-kco75ibi'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 102, in tearDown
+    self.temporary.cleanup()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 975, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 955, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 711, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 927, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 276, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-kco75ibi'
+
+======================================================================
+ERROR: test_tid_reuse_and_equal_pdus_preserve_distinct_occurrences (test_records.RecordsTests.test_tid_reuse_and_equal_pdus_preserve_distinct_occurrences)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 262, in test_tid_reuse_and_equal_pdus_preserve_distinct_occurrences
+    frame = self.build(f)
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 106, in build
+    fixture.write(folder)
+    ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 91, in write
+    folder.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 1011, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-rxjqvydt\\case'
+
+======================================================================
+ERROR: test_tid_reuse_and_equal_pdus_preserve_distinct_occurrences (test_records.RecordsTests.test_tid_reuse_and_equal_pdus_preserve_distinct_occurrences)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 707, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-rxjqvydt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 102, in tearDown
+    self.temporary.cleanup()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 975, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 955, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 711, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 927, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 276, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-rxjqvydt'
+
+======================================================================
+ERROR: test_zero_mode_and_zero_setpoint_are_values_not_missing_anchors (test_records.RecordsTests.test_zero_mode_and_zero_setpoint_are_values_not_missing_anchors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 141, in test_zero_mode_and_zero_setpoint_are_values_not_missing_anchors
+    frame = self.build(f)
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 106, in build
+    fixture.write(folder)
+    ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 91, in write
+    folder.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 1011, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-jr6x6b2h\\case'
+
+======================================================================
+ERROR: test_zero_mode_and_zero_setpoint_are_values_not_missing_anchors (test_records.RecordsTests.test_zero_mode_and_zero_setpoint_are_values_not_missing_anchors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 707, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-jr6x6b2h'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\locked\v1_20261025\tests\test_records.py", line 102, in tearDown
+    self.temporary.cleanup()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 975, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 955, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\shutil.py", line 711, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 927, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\tempfile.py", line 276, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ASUS\\AppData\\Local\\Packages\\sandbox.{f5194c1b-a9b3-4f6d-804d-1089a522f751}\\AC\\Temp\\c3model-SYNTHETIC-records-jr6x6b2h'
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.382s
+
+FAILED (errors=33)
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\c3.py", line 10, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\cli.py", line 26, in main
+    subprocess.run([sys.executable,'-B','-m','unittest','discover','-s',str(folder),'-v'],env=env,check=True,cwd=ROOT)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\.venv\\Scripts\\python.exe', '-B', '-m', 'unittest', 'discover', '-s', 'C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3\\locked\\v1_20261025\\tests', '-v']' returned non-zero exit status 1.

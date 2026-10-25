@@ -80,3 +80,32 @@ Desktop.ini
 /.venv-c3/
 
 /component3_model_pipeline/v1_20261025/development_balanced_only/
+
+# Canonical Component 3 layout (original rules above remain historical).
+/component3/data/
+/component3/local/
+/component3/locked/*/artifacts/
+/component3/locked/*/development_balanced_only/
+/component3/history/producer_work_20261025/**/component3_collection_runs/
+/component3/history/producer_work_20261025/**/component3_preparation/output/
+/component3/history/producer_work_20261025/**/component3_reassessment/**/output/
+/component3/history/producer_work_20261025/**/*.jsonl
+/component3/history/producer_work_20261025/**/*.parquet
+/component3/history/producer_work_20261025/**/*.pcap
+/component3/history/producer_work_20261025/**/*.pcapng
+/component3/history/producer_work_20261025/**/*.csv
+/component3/history/producer_work_20261025/**/*.tar
+/component3/history/producer_work_20261025/**/*.gz
+/component3/history/producer_work_20261025/**/*.zip
+/component3/history/producer_work_20261025/**/original_attempt_backup/
+/tmp/pdfs/
+/component3/history/component3_collection_runs/
+/component3/history/**/*.pcap
+/component3/history/**/*.pcapng
+/component3/history/**/*.jsonl
+/component3/history/**/*.parquet
+/component3/history/**/*.csv.gz
+/component3/history/**/*.tar
+/component3/history/**/*.zip
+/component3/history/component3_preparation/output/inventory.json
+/component3/history/component3_reassessment/v1_20261024/output/bounded_raw_evidence.json

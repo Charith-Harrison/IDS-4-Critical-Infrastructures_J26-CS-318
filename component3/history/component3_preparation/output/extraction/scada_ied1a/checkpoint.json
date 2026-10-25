@@ -1,0 +1,144 @@
+{
+  "signature": "40d57a01f149ac822c62279e29f929c429c4eee11658ed0f28485b2162c10acc",
+  "contract": {
+    "view_id": "scada_ied1a",
+    "recording_id": "cic_compromised_scada_march",
+    "sources": [
+      {
+        "chunk": 0,
+        "path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-0.pcap",
+        "bytes": 100000036,
+        "sha256": "740e6fcb4013747d5ec7f23927774f2b32042064acbd65a3bc4ceec660b44e9e"
+      },
+      {
+        "chunk": 1,
+        "path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-1.pcap",
+        "bytes": 100000038,
+        "sha256": "e5593f8092b2cba20fc6cb5a354901a7c4f8c24bf6625f1a64474ad28b27b2be"
+      },
+      {
+        "chunk": 2,
+        "path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-2.pcap",
+        "bytes": 100000007,
+        "sha256": "5772f554aa1d8701e93aa090dce8fe1e82ae8305163728467c1b5d88b4e6e482"
+      },
+      {
+        "chunk": 3,
+        "path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-3.pcap",
+        "bytes": 100000037,
+        "sha256": "85792548b11b02862bf476998f9c47149ab4cec9b6fef0ce9ca4473549ac50ee"
+      },
+      {
+        "chunk": 4,
+        "path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-4.pcap",
+        "bytes": 100000041,
+        "sha256": "694ac1bb5d34051325857d1383145dec2324338178d73be5a22aa3c640a4240a"
+      },
+      {
+        "chunk": 5,
+        "path": "attack/compromised-scada/ied1a/ied1a-network-captures/veth3614724-5.pcap",
+        "bytes": 46226939,
+        "sha256": "795e28792720a7a209a3c56d9e670db5b358a82a8e8d432fd2affa805111edd6"
+      }
+    ],
+    "config": {
+      "modbus_ports": [
+        502
+      ],
+      "conn_idle_timeout_s": 300,
+      "closed_linger_s": 2,
+      "max_open_connections": 20000,
+      "max_ooo_segments": 128,
+      "max_ooo_bytes": 262144,
+      "max_pending_bytes": 70000,
+      "max_frame_refs": 1000,
+      "row_batch_size": 10000
+    },
+    "code_sha256": {
+      "extract.py": "ed0bd485557e81fc94d51696f5840755a4c83ef520aa635b9fb5a0ace4d94e98",
+      "modbus.py": "c4e63c18727bcbfe20129363f45ce5a6a5075b0108086bf74aaf51ec2e9925c7",
+      "pcapio.py": "d21fba12953ca4cf18fe8afb44b4737b15d2abdba7c55e088bc8b0f228fa1dba"
+    }
+  },
+  "source_hashes_unchanged": true,
+  "reconciliation_passed": true,
+  "peak_working_set_bytes": 251928576,
+  "output_bytes": 88507047,
+  "accounting": {
+    "frames_modbus_port": 5686109,
+    "payload_bytes_captured": 10926498,
+    "connections": 682326,
+    "bytes_delivered": 10913550,
+    "records_adu": 964683,
+    "bytes_in_adu": 10911162,
+    "adu_status_ok": 911543,
+    "conn_end:superseded_by_new_syn": 18175,
+    "conn_end:idle_timeout": 200845,
+    "retrans_segments": 83,
+    "bytes_dup_dropped": 12948,
+    "adu_status_exception": 147,
+    "conn_end:closed": 461852,
+    "records_incomplete": 276,
+    "bytes_in_incomplete": 2388,
+    "adu_status_malformed": 52993,
+    "frames_total": 6064388,
+    "conn_end:chain_end": 1454,
+    "nonmodbus_frames": {
+      "tcp_port_1099": 365099,
+      "ipv6": 1186,
+      "arp": 11482,
+      "udp": 510,
+      "ipproto_2": 2
+    },
+    "per_chunk": [
+      {
+        "chunk": 0,
+        "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-scada\\ied1a\\ied1a-network-captures\\veth3614724-0.pcap",
+        "frames": 1087381,
+        "non_monotonic_frames": 2
+      },
+      {
+        "chunk": 1,
+        "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-scada\\ied1a\\ied1a-network-captures\\veth3614724-1.pcap",
+        "frames": 1084366,
+        "non_monotonic_frames": 2
+      },
+      {
+        "chunk": 2,
+        "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-scada\\ied1a\\ied1a-network-captures\\veth3614724-2.pcap",
+        "frames": 1139054,
+        "non_monotonic_frames": 1
+      },
+      {
+        "chunk": 3,
+        "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-scada\\ied1a\\ied1a-network-captures\\veth3614724-3.pcap",
+        "frames": 1114472,
+        "non_monotonic_frames": 3
+      },
+      {
+        "chunk": 4,
+        "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-scada\\ied1a\\ied1a-network-captures\\veth3614724-4.pcap",
+        "frames": 1142584,
+        "non_monotonic_frames": 3
+      },
+      {
+        "chunk": 5,
+        "path": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\data\\raw\\Modbus Dataset\\attack\\compromised-scada\\ied1a\\ied1a-network-captures\\veth3614724-5.pcap",
+        "frames": 496531,
+        "non_monotonic_frames": 1
+      }
+    ],
+    "elapsed_s": 282.05,
+    "check_bytes_captured_eq_dup_plus_delivered": true,
+    "check_bytes_delivered_eq_records": true,
+    "check_frames_accounted": true
+  },
+  "output_sha256": {
+    "accounting.json": "0d15250f34e8e3bd0b709fd3fe8c8fdc0054c55384a132edd6a63e6d08eb3b67",
+    "connections.parquet": "32befc993199dd297b8615e6d5a1a3323867318b7e937c9cd6e497a2a33121e2",
+    "events.parquet": "d1134394cc4ac4c01bef5b0b0bb5d653a08b80e0d703d02d0d92c86f688979ad",
+    "suppressed_observations.parquet": "c04d467fd2d9e79196af577208bd9b5892164197c57493f25f75c877ff85f4e3"
+  },
+  "checkpoint_version": 2,
+  "integrity_sealed_after_first_run": true
+}

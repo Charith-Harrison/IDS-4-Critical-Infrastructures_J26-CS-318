@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "metric": "two_sided_unique_0us",
+      "review": 82,
+      "local": 82,
+      "agrees": true
+    },
+    {
+      "metric": "parse_counts_0us",
+      "review": {
+        "ok": 34,
+        "malformed": 48
+      },
+      "local": {
+        "ok": 34,
+        "malformed": 48
+      },
+      "agrees": true
+    },
+    {
+      "metric": "two_sided_unique_1000us",
+      "review": 400,
+      "local": 400,
+      "agrees": true
+    },
+    {
+      "metric": "parse_counts_1000us",
+      "review": {
+        "malformed": 337,
+        "ok": 63
+      },
+      "local": {
+        "malformed": 337,
+        "ok": 63
+      },
+      "agrees": true
+    },
+    {
+      "metric": "two_sided_unique_5000us",
+      "review": 187,
+      "local": 187,
+      "agrees": true
+    },
+    {
+      "metric": "parse_counts_5000us",
+      "review": {
+        "malformed": 177,
+        "ok": 10
+      },
+      "local": {
+        "malformed": 177,
+        "ok": 10
+      },
+      "agrees": true
+    },
+    {
+      "metric": "two_sided_unique_25000us",
+      "review": 100,
+      "local": 100,
+      "agrees": true
+    },
+    {
+      "metric": "parse_counts_25000us",
+      "review": {
+        "malformed": 98,
+        "ok": 2
+      },
+      "local": {
+        "malformed": 98,
+        "ok": 2
+      },
+      "agrees": true
+    },
+    {
+      "metric": "outside_selected_endpoint_brute_signatures",
+      "review": 153560,
+      "local": 153560,
+      "agrees": true
+    }
+  ],
+  "all_checked_counts_agree": true,
+  "scope_differences": "None forced. Baseline code sensitivity includes one-sided diagnostics; this reproduction retains review two-sided uniqueness and current stream-risk filters."
+}

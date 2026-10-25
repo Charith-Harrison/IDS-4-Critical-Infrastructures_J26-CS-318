@@ -1,4 +1,4 @@
-> **Current Component3 research (25 October 2026):** The verified104-run controlled-testbed pipeline and locked results are in [component3_model_pipeline/v1_20261025](component3_model_pipeline/v1_20261025/README.md). Read [RESULTS.md](component3_model_pipeline/v1_20261025/RESULTS.md) and [the producer-work index](PRODUCER_WORK_INDEX.md). The binary CSV workflow below is historical and must not be used as the new experiment's training/evaluation pipeline.
+> **Component 3: start at [component3/README.md](component3/README.md).** It contains the audited testbed study, safe root commands, viva guide and methodology gaps. The original experiment is preserved under `component3/locked/v1_20261025`; canonical raw evidence is `component3/data/collection`. The binary CSV workflow below is historical and is not the new experiment's training/evaluation pipeline.
 
 # Command and Response Injection Detection in Modbus/TCP Using Context-Aware Command Analysis
 

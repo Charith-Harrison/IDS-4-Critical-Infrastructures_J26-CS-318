@@ -1,2 +1,0 @@
-frame.number	frame.time_epoch	ip.src	ip.dst	tcp.srcport	tcp.dstport	mbtcp.trans_id	mbtcp.len	modbus.func_code	modbus.byte_cnt	modbus.regval_uint16	tcp.payload
-5	1674481924.004676000	185.175.0.5	185.175.0.3	502	34546	57464	5	3	2	9	e078000000050103020009

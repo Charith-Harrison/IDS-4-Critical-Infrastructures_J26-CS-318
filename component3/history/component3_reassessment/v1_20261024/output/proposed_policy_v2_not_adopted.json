@@ -1,0 +1,68 @@
+{
+  "version": "c3-evidence-policy-proposal-v2.0-NOT-ADOPTED",
+  "decision": "NO_TIMING_TOLERANCE_CHANGE_JUSTIFIED_BY_AVAILABLE_CLOCK_AND_IDENTITY_EVIDENCE",
+  "baseline_policy_remains": "cic-evidence-v1,25ms; labels/checkpoints/configuration untouched",
+  "rationale": [
+    "Window counts are selection/ambiguity diagnostics, not ground-truth improvement.",
+    "CSV millisecond serialization and workbook fractional digits do not establish capture/logger clock accuracy or send/log ordering.",
+    "96,200 selected FC5 requests literally reuse TID5; equality alone is weak identity. No local original attacker code/configuration resolves logger semantics.",
+    "Accepted residuals are conditioned on the current matching policy; fitting an offset/tolerance to maximize accepted targets would be circular.",
+    "Expanded canonical coverage may add competing observations and invalidate present selected-view uniqueness."
+  ],
+  "proposed_gates_before_any_replacement": [
+    "Preserve v1 accepted labels separately and retain all original log rows/serials.",
+    "Establish original logger serialization/call order and independently justified clock uncertainty, scoped by family/source/day/device; otherwise retain ambiguous timing intervals.",
+    "Reconcile connection generations, target/unit/function/address and literal TID behavior in a complete justified canonical view; keep all candidate edges.",
+    "Require mechanism-specific support independent of malformedness or direction; record injection attempt, pair outcome and physical impact separately.",
+    "Publish event-level before/after dispositions with source/log/frame/byte lineage and explicit reasons for every promotion/rejection, then obtain approval before replacing the baseline."
+  ],
+  "before_after_diagnostic_table": [
+    {
+      "diagnostic_window_us": 0,
+      "frozen_command_labels_before": 100,
+      "two_sided_unique_diagnostic_candidates": 82,
+      "old_accepted_retained_in_candidate_set": 0,
+      "old_accepted_not_unique_in_candidate_set": 100,
+      "new_diagnostic_candidates_not_accepted": 82,
+      "accepted_command_labels_after_reassessment": 100,
+      "labels_promoted_or_removed": 0
+    },
+    {
+      "diagnostic_window_us": 1000,
+      "frozen_command_labels_before": 100,
+      "two_sided_unique_diagnostic_candidates": 400,
+      "old_accepted_retained_in_candidate_set": 97,
+      "old_accepted_not_unique_in_candidate_set": 3,
+      "new_diagnostic_candidates_not_accepted": 303,
+      "accepted_command_labels_after_reassessment": 100,
+      "labels_promoted_or_removed": 0
+    },
+    {
+      "diagnostic_window_us": 5000,
+      "frozen_command_labels_before": 100,
+      "two_sided_unique_diagnostic_candidates": 187,
+      "old_accepted_retained_in_candidate_set": 100,
+      "old_accepted_not_unique_in_candidate_set": 0,
+      "new_diagnostic_candidates_not_accepted": 87,
+      "accepted_command_labels_after_reassessment": 100,
+      "labels_promoted_or_removed": 0
+    },
+    {
+      "diagnostic_window_us": 25000,
+      "frozen_command_labels_before": 100,
+      "two_sided_unique_diagnostic_candidates": 100,
+      "old_accepted_retained_in_candidate_set": 100,
+      "old_accepted_not_unique_in_candidate_set": 0,
+      "new_diagnostic_candidates_not_accepted": 0,
+      "accepted_command_labels_after_reassessment": 100,
+      "labels_promoted_or_removed": 0
+    }
+  ],
+  "acceptance_after_this_run": {
+    "normal": 1404306,
+    "command_injection": 100,
+    "response_injection": 54
+  },
+  "new_labels_accepted": 0,
+  "new_policy_activated": false
+}

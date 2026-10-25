@@ -1,0 +1,369 @@
+{
+  "status": "AUDIT_ONLY_NO_TRAINING",
+  "episodes": 9360,
+  "episodes_crossing_roles": 0,
+  "matched_controls": [
+    {
+      "class": "command_injection",
+      "scope": "same_run_normal_PDU",
+      "rows": 720
+    },
+    {
+      "class": "command_injection",
+      "scope": "same_run_normal_complete_ADU",
+      "rows": 240
+    },
+    {
+      "class": "command_injection",
+      "scope": "targets",
+      "rows": 720
+    },
+    {
+      "class": "response_injection",
+      "scope": "same_run_normal_PDU",
+      "rows": 1440
+    },
+    {
+      "class": "response_injection",
+      "scope": "same_run_normal_complete_ADU",
+      "rows": 480
+    },
+    {
+      "class": "response_injection",
+      "scope": "targets",
+      "rows": 1440
+    }
+  ],
+  "importance": {
+    "B": [
+      {
+        "feature": "current_wire_word",
+        "impurity_importance": 0.5940286190924324
+      },
+      {
+        "feature": "current_function",
+        "impurity_importance": 0.08516503494993809
+      },
+      {
+        "feature": "missingindicator_current_wire_address",
+        "impurity_importance": 0.06835779758064846
+      },
+      {
+        "feature": "missingindicator_current_request_object_role",
+        "impurity_importance": 0.06419426189387141
+      },
+      {
+        "feature": "current_pdu_length",
+        "impurity_importance": 0.06152810928372611
+      },
+      {
+        "feature": "missingindicator_current_byte_count",
+        "impurity_importance": 0.06003846478671082
+      },
+      {
+        "feature": "current_is_request",
+        "impurity_importance": 0.057340169991443465
+      },
+      {
+        "feature": "current_wire_address",
+        "impurity_importance": 0.009347542421229215
+      },
+      {
+        "feature": "current_unit",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "current_wire_quantity",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "current_byte_count",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "current_request_object_role",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "missingindicator_current_wire_quantity",
+        "impurity_importance": 0.0
+      }
+    ],
+    "D": [
+      {
+        "feature": "earlier_observed_mode",
+        "impurity_importance": 0.3450770957386494
+      },
+      {
+        "feature": "response_minus_acknowledged_setpoint",
+        "impurity_importance": 0.2787873006545206
+      },
+      {
+        "feature": "current_wire_word",
+        "impurity_importance": 0.05137195317827725
+      },
+      {
+        "feature": "current_is_request",
+        "impurity_importance": 0.037348729527812964
+      },
+      {
+        "feature": "earlier_acknowledged_setpoint",
+        "impurity_importance": 0.03705808251663453
+      },
+      {
+        "feature": "missingindicator_paired_request_object_role",
+        "impurity_importance": 0.0358361489671456
+      },
+      {
+        "feature": "missingindicator_current_byte_count",
+        "impurity_importance": 0.03576258086906823
+      },
+      {
+        "feature": "current_function",
+        "impurity_importance": 0.03533617421886015
+      },
+      {
+        "feature": "current_pdu_length",
+        "impurity_importance": 0.03480926561027998
+      },
+      {
+        "feature": "missingindicator_current_wire_address",
+        "impurity_importance": 0.03379774047875574
+      },
+      {
+        "feature": "missingindicator_response_minus_acknowledged_setpoint",
+        "impurity_importance": 0.027970234122609086
+      },
+      {
+        "feature": "missingindicator_earlier_observed_mode",
+        "impurity_importance": 0.021688864394110517
+      },
+      {
+        "feature": "missingindicator_current_request_object_role",
+        "impurity_importance": 0.020864416226757946
+      },
+      {
+        "feature": "missingindicator_earlier_acknowledged_setpoint",
+        "impurity_importance": 0.0024773388784211418
+      },
+      {
+        "feature": "current_wire_address",
+        "impurity_importance": 0.0018140746180968417
+      },
+      {
+        "feature": "current_unit",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "current_wire_quantity",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "current_byte_count",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "current_request_object_role",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "paired_request_object_role",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "context_available",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "missingindicator_current_wire_quantity",
+        "impurity_importance": 0.0
+      }
+    ],
+    "B-wire": [
+      {
+        "feature": "current_numeric_tid",
+        "impurity_importance": 0.517429936379353
+      },
+      {
+        "feature": "current_destination_port",
+        "impurity_importance": 0.16494607675447004
+      },
+      {
+        "feature": "current_wire_word",
+        "impurity_importance": 0.15917598803577404
+      },
+      {
+        "feature": "current_source_port",
+        "impurity_importance": 0.08191600331850267
+      },
+      {
+        "feature": "missingindicator_current_byte_count",
+        "impurity_importance": 0.015562313725671073
+      },
+      {
+        "feature": "current_function",
+        "impurity_importance": 0.014055646730905163
+      },
+      {
+        "feature": "missingindicator_current_request_object_role",
+        "impurity_importance": 0.01226405660842611
+      },
+      {
+        "feature": "missingindicator_current_wire_address",
+        "impurity_importance": 0.011058540043223488
+      },
+      {
+        "feature": "current_is_request",
+        "impurity_importance": 0.010701868669242222
+      },
+      {
+        "feature": "current_pdu_length",
+        "impurity_importance": 0.008146004701822038
+      },
+      {
+        "feature": "current_wire_address",
+        "impurity_importance": 0.004743565032609969
+      },
+      {
+        "feature": "current_unit",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "current_wire_quantity",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "current_byte_count",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "current_request_object_role",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "current_source_ip",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "current_destination_ip",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "missingindicator_current_wire_quantity",
+        "impurity_importance": 0.0
+      }
+    ],
+    "D-wire": [
+      {
+        "feature": "earlier_observed_mode",
+        "impurity_importance": 0.3280424967587024
+      },
+      {
+        "feature": "response_minus_acknowledged_setpoint",
+        "impurity_importance": 0.2578076530507762
+      },
+      {
+        "feature": "current_destination_port",
+        "impurity_importance": 0.049723702632242954
+      },
+      {
+        "feature": "current_source_port",
+        "impurity_importance": 0.04545464197349799
+      },
+      {
+        "feature": "current_wire_word",
+        "impurity_importance": 0.03671605885366537
+      },
+      {
+        "feature": "current_function",
+        "impurity_importance": 0.036417443169704626
+      },
+      {
+        "feature": "missingindicator_paired_request_object_role",
+        "impurity_importance": 0.03516534554827321
+      },
+      {
+        "feature": "earlier_acknowledged_setpoint",
+        "impurity_importance": 0.03146000723102121
+      },
+      {
+        "feature": "current_pdu_length",
+        "impurity_importance": 0.030675927432225417
+      },
+      {
+        "feature": "missingindicator_current_wire_address",
+        "impurity_importance": 0.027310024955503897
+      },
+      {
+        "feature": "current_is_request",
+        "impurity_importance": 0.02569772067124533
+      },
+      {
+        "feature": "missingindicator_response_minus_acknowledged_setpoint",
+        "impurity_importance": 0.024696819596611557
+      },
+      {
+        "feature": "missingindicator_current_byte_count",
+        "impurity_importance": 0.022336706403822924
+      },
+      {
+        "feature": "missingindicator_current_request_object_role",
+        "impurity_importance": 0.018308971005417216
+      },
+      {
+        "feature": "current_numeric_tid",
+        "impurity_importance": 0.014481929174495596
+      },
+      {
+        "feature": "missingindicator_earlier_observed_mode",
+        "impurity_importance": 0.010506730100640583
+      },
+      {
+        "feature": "current_wire_address",
+        "impurity_importance": 0.0033442257889071915
+      },
+      {
+        "feature": "missingindicator_earlier_acknowledged_setpoint",
+        "impurity_importance": 0.001853595653246444
+      },
+      {
+        "feature": "current_unit",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "current_wire_quantity",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "current_byte_count",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "current_request_object_role",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "paired_request_object_role",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "context_available",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "current_source_ip",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "current_destination_ip",
+        "impurity_importance": 0.0
+      },
+      {
+        "feature": "missingindicator_current_wire_quantity",
+        "impurity_importance": 0.0
+      }
+    ]
+  },
+  "importance_limit": "Impurity importance of saved trees is descriptive, not causal attribution; correlated engineered features share credit.",
+  "error_scope": "Known original final D error inspected retrospectively; no retuning, new predictions or revised labels."
+}

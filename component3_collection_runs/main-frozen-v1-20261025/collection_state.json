@@ -1,6 +1,0 @@
-{
-  "error": "MX005 stopped with exit 2; inspect run_manifest.json, capture.log and validation_report.json",
-  "status": "STOPPED",
-  "updated_at_utc": "2026-10-24T22:40:10.989001+00:00",
-  "validated_completed": 4
-}

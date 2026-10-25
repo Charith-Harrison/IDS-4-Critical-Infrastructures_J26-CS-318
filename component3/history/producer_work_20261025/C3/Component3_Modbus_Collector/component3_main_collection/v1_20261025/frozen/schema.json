@@ -1,0 +1,41 @@
+{
+  "annotation_format": "verified_labels.jsonl adds exact capture SHA256, frame/file byte references, parse/pair evidence and direct evidence label",
+  "forbidden_predictor_metadata": [
+    "label",
+    "scenario",
+    "step",
+    "episode_id",
+    "run_id",
+    "seed",
+    "planned role",
+    "private oracle/state",
+    "intervention flags",
+    "source/partition IDs",
+    "block",
+    "tid_profile",
+    "anchor_poll_count"
+  ],
+  "observation_format": "application_ledger.jsonl, one complete observed request or reply ADU per row",
+  "pair_identity": "Connection generation plus stream/transaction ordinal; literal TID alone is never unique",
+  "private_evidence": [
+    "server_audit.jsonl",
+    "intervention_audit.jsonl",
+    "scenario_plan.json"
+  ],
+  "required_observation_fields": [
+    "event_id",
+    "run_id",
+    "connection_id",
+    "transaction_index",
+    "role",
+    "direction",
+    "tid",
+    "unit",
+    "adu_hex",
+    "pdu_hex",
+    "stream_offset",
+    "observed_at_ns"
+  ],
+  "response_fields": "Request-derived address/object roles are context/audit, not fields carried by a current FC3 reply",
+  "status": "RAW_EVIDENCE_SCHEMA_NOT_MODEL_INPUT_MATRIX"
+}

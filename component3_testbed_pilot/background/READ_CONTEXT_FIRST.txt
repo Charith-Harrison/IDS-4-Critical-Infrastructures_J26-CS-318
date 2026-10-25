@@ -1,6 +1,0 @@
-These reports describe the earlier CIC-only audit, before this new lab pilot.
-Their no-training conclusions remain true. Their current-status statements
-do not describe the later testbed capture. Read DATASET_CARD.md for the new
-measured pilot. Historical links/drive letters refer to the reviewer copy.
-The individual proposal identified CIC as primary; a testbed-primary study
-is a methodology change to document/discuss. MSU remains excluded.

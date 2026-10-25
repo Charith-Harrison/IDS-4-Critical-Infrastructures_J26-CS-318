@@ -1,0 +1,964 @@
+{
+  "status": "PASSED",
+  "kind": "RETROSPECTIVE_EVIDENCE_AUDIT_NOT_NEW_FINAL_EVALUATION",
+  "created_at_utc": "2026-10-25T10:44:21.448419+00:00",
+  "command": [
+    "c3.py",
+    "audit",
+    "--output",
+    "component3/reports/audit_final_20261025"
+  ],
+  "source": "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3\\data\\collection",
+  "collection_id": "40ae7a846cce48fc8e3c52ebfca7e2cd",
+  "index_sha256": "ff74c745b5004973e516d0d05662173cd80f0768a4d941918c4b01428ac8c8cf",
+  "lock_sha256": "f59f8e8922de62afd28f610a2521d9c45c0ebc46cec35b587210f4da0c6181c9",
+  "final_summary_sha256": "72efc4b66bf0d73d257b6019bf64ca3751afe776997eb9721a9b18e9272cfa2e",
+  "accepted_runs": 104,
+  "excluded_attempts": [
+    "MX086-20261025T063126Z-16600283",
+    "MX087-20261025T063952Z-1fa45191",
+    "MX088-20261025T064936Z-55b059c6"
+  ],
+  "label_counts": {
+    "normal": 247906,
+    "command_injection": 720,
+    "response_injection": 1440
+  },
+  "frames_independently_parsed": 313208,
+  "byte_references_checked": 250066,
+  "campaigns": [
+    "controlled-testbed-v03"
+  ],
+  "genuine_repeated_pdu_occurrences": 243127,
+  "cross_role_shared_payload_patterns": 787,
+  "duplicate_note": "Shared PDU values are templates/repetitions, not shared observations. Whole traces verified unique by admission.",
+  "role_counts": {
+    "train": 32,
+    "validation": 16,
+    "final_test_repeat": 24,
+    "final_test_values": 8,
+    "final_test_map": 8,
+    "final_test_order": 8,
+    "final_test_timing": 8
+  },
+  "raw_sealed_hashes_checked": 1597,
+  "development_rows_reconstructed_equal": 114604,
+  "model_reload": {
+    "B": {
+      "features": 9,
+      "training_medians_equal": true,
+      "validation_predictions_equal": true,
+      "rows": 4240
+    },
+    "D": {
+      "features": 14,
+      "training_medians_equal": true,
+      "validation_predictions_equal": true,
+      "rows": 2992
+    },
+    "B-wire": {
+      "features": 14,
+      "training_medians_equal": true,
+      "validation_predictions_equal": true,
+      "rows": 4240
+    },
+    "D-wire": {
+      "features": 19,
+      "training_medians_equal": true,
+      "validation_predictions_equal": true,
+      "rows": 2992
+    }
+  },
+  "final_saved_prediction_audit": {
+    "final_test_repeat": {
+      "adus": 57364,
+      "eligible": 6360,
+      "common": 4488,
+      "abstained_context": 1872,
+      "methods": {
+        "A": {
+          "support": 4488,
+          "class_support": {
+            "normal": 4056,
+            "command_injection": 144,
+            "response_injection": 288
+          },
+          "confusion": [
+            [
+              4056,
+              0,
+              0
+            ],
+            [
+              144,
+              0,
+              0
+            ],
+            [
+              288,
+              0,
+              0
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 0.31647940074906367,
+          "unsupported_classes": []
+        },
+        "B": {
+          "support": 4488,
+          "class_support": {
+            "normal": 4056,
+            "command_injection": 144,
+            "response_injection": 288
+          },
+          "confusion": [
+            [
+              4056,
+              0,
+              0
+            ],
+            [
+              144,
+              0,
+              0
+            ],
+            [
+              288,
+              0,
+              0
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 0.31647940074906367,
+          "unsupported_classes": []
+        },
+        "C": {
+          "support": 4488,
+          "class_support": {
+            "normal": 4056,
+            "command_injection": 144,
+            "response_injection": 288
+          },
+          "confusion": [
+            [
+              4056,
+              0,
+              0
+            ],
+            [
+              0,
+              144,
+              0
+            ],
+            [
+              0,
+              0,
+              288
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 1.0,
+          "unsupported_classes": []
+        },
+        "D": {
+          "support": 4488,
+          "class_support": {
+            "normal": 4056,
+            "command_injection": 144,
+            "response_injection": 288
+          },
+          "confusion": [
+            [
+              4056,
+              0,
+              0
+            ],
+            [
+              0,
+              144,
+              0
+            ],
+            [
+              0,
+              0,
+              288
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 1.0,
+          "unsupported_classes": []
+        },
+        "B-wire": {
+          "support": 4488,
+          "class_support": {
+            "normal": 4056,
+            "command_injection": 144,
+            "response_injection": 288
+          },
+          "confusion": [
+            [
+              4055,
+              0,
+              1
+            ],
+            [
+              144,
+              0,
+              0
+            ],
+            [
+              288,
+              0,
+              0
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 0.316438409614109,
+          "unsupported_classes": []
+        },
+        "D-wire": {
+          "support": 4488,
+          "class_support": {
+            "normal": 4056,
+            "command_injection": 144,
+            "response_injection": 288
+          },
+          "confusion": [
+            [
+              4056,
+              0,
+              0
+            ],
+            [
+              0,
+              144,
+              0
+            ],
+            [
+              0,
+              0,
+              288
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 1.0,
+          "unsupported_classes": []
+        }
+      },
+      "prediction_sha256": "c006d0205dda43d85b53fcb0bcb7b32607b1d6a59f56615c30ae46e3de3c2299"
+    },
+    "final_test_values": {
+      "adus": 19136,
+      "eligible": 2120,
+      "common": 1496,
+      "abstained_context": 624,
+      "methods": {
+        "A": {
+          "support": 1496,
+          "class_support": {
+            "normal": 1280,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1280,
+              0,
+              0
+            ],
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              144,
+              0,
+              0
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 0.3073967339097022,
+          "unsupported_classes": []
+        },
+        "B": {
+          "support": 1496,
+          "class_support": {
+            "normal": 1280,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1280,
+              0,
+              0
+            ],
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              144,
+              0,
+              0
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 0.3073967339097022,
+          "unsupported_classes": []
+        },
+        "C": {
+          "support": 1496,
+          "class_support": {
+            "normal": 1280,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1280,
+              0,
+              0
+            ],
+            [
+              0,
+              72,
+              0
+            ],
+            [
+              0,
+              0,
+              144
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 1.0,
+          "unsupported_classes": []
+        },
+        "D": {
+          "support": 1496,
+          "class_support": {
+            "normal": 1280,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1280,
+              0,
+              0
+            ],
+            [
+              0,
+              72,
+              0
+            ],
+            [
+              0,
+              0,
+              144
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 1.0,
+          "unsupported_classes": []
+        },
+        "B-wire": {
+          "support": 1496,
+          "class_support": {
+            "normal": 1280,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1280,
+              0,
+              0
+            ],
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              144,
+              0,
+              0
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 0.3073967339097022,
+          "unsupported_classes": []
+        },
+        "D-wire": {
+          "support": 1496,
+          "class_support": {
+            "normal": 1280,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1280,
+              0,
+              0
+            ],
+            [
+              0,
+              72,
+              0
+            ],
+            [
+              0,
+              0,
+              144
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 1.0,
+          "unsupported_classes": []
+        }
+      },
+      "prediction_sha256": "d3b348d612af296688faf469c080e6d0438b54f6c1bb3bf2c1f92e4801cb8a11"
+    },
+    "final_test_map": {
+      "adus": 19150,
+      "eligible": 2120,
+      "common": 1496,
+      "abstained_context": 624,
+      "methods": {
+        "A": {
+          "support": 1496,
+          "class_support": {
+            "normal": 1280,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1280,
+              0,
+              0
+            ],
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              144,
+              0,
+              0
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 0.3073967339097022,
+          "unsupported_classes": []
+        },
+        "B": {
+          "support": 1496,
+          "class_support": {
+            "normal": 1280,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1280,
+              0,
+              0
+            ],
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              144,
+              0,
+              0
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 0.3073967339097022,
+          "unsupported_classes": []
+        },
+        "C": {
+          "support": 1496,
+          "class_support": {
+            "normal": 1280,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1280,
+              0,
+              0
+            ],
+            [
+              0,
+              72,
+              0
+            ],
+            [
+              0,
+              0,
+              144
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 1.0,
+          "unsupported_classes": []
+        },
+        "D": {
+          "support": 1496,
+          "class_support": {
+            "normal": 1280,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1280,
+              0,
+              0
+            ],
+            [
+              0,
+              72,
+              0
+            ],
+            [
+              0,
+              0,
+              144
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 1.0,
+          "unsupported_classes": []
+        },
+        "B-wire": {
+          "support": 1496,
+          "class_support": {
+            "normal": 1280,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1280,
+              0,
+              0
+            ],
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              144,
+              0,
+              0
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 0.3073967339097022,
+          "unsupported_classes": []
+        },
+        "D-wire": {
+          "support": 1496,
+          "class_support": {
+            "normal": 1280,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1280,
+              0,
+              0
+            ],
+            [
+              0,
+              72,
+              0
+            ],
+            [
+              0,
+              0,
+              144
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 1.0,
+          "unsupported_classes": []
+        }
+      },
+      "prediction_sha256": "b282eb1389d3c515f07de65cb34a0095a4ae96dab8760e8b72c0abc5012bbca6"
+    },
+    "final_test_order": {
+      "adus": 20622,
+      "eligible": 2120,
+      "common": 1400,
+      "abstained_context": 720,
+      "methods": {
+        "A": {
+          "support": 1400,
+          "class_support": {
+            "normal": 1184,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1184,
+              0,
+              0
+            ],
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              144,
+              0,
+              0
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 0.30546955624355004,
+          "unsupported_classes": []
+        },
+        "B": {
+          "support": 1400,
+          "class_support": {
+            "normal": 1184,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1184,
+              0,
+              0
+            ],
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              144,
+              0,
+              0
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 0.30546955624355004,
+          "unsupported_classes": []
+        },
+        "C": {
+          "support": 1400,
+          "class_support": {
+            "normal": 1184,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1184,
+              0,
+              0
+            ],
+            [
+              0,
+              72,
+              0
+            ],
+            [
+              0,
+              0,
+              144
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 1.0,
+          "unsupported_classes": []
+        },
+        "D": {
+          "support": 1400,
+          "class_support": {
+            "normal": 1184,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1184,
+              0,
+              0
+            ],
+            [
+              0,
+              72,
+              0
+            ],
+            [
+              1,
+              0,
+              143
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 0.9986978534683134,
+          "unsupported_classes": []
+        },
+        "B-wire": {
+          "support": 1400,
+          "class_support": {
+            "normal": 1184,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1184,
+              0,
+              0
+            ],
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              144,
+              0,
+              0
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 0.30546955624355004,
+          "unsupported_classes": []
+        },
+        "D-wire": {
+          "support": 1400,
+          "class_support": {
+            "normal": 1184,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1184,
+              0,
+              0
+            ],
+            [
+              0,
+              72,
+              0
+            ],
+            [
+              0,
+              0,
+              144
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 1.0,
+          "unsupported_classes": []
+        }
+      },
+      "prediction_sha256": "3df1f8b4e7c105928b1ecd7c86927563548fa939a7395461561b82f89b6984aa"
+    },
+    "final_test_timing": {
+      "adus": 19190,
+      "eligible": 2120,
+      "common": 1496,
+      "abstained_context": 624,
+      "methods": {
+        "A": {
+          "support": 1496,
+          "class_support": {
+            "normal": 1280,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1280,
+              0,
+              0
+            ],
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              144,
+              0,
+              0
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 0.3073967339097022,
+          "unsupported_classes": []
+        },
+        "B": {
+          "support": 1496,
+          "class_support": {
+            "normal": 1280,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1280,
+              0,
+              0
+            ],
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              144,
+              0,
+              0
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 0.3073967339097022,
+          "unsupported_classes": []
+        },
+        "C": {
+          "support": 1496,
+          "class_support": {
+            "normal": 1280,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1280,
+              0,
+              0
+            ],
+            [
+              0,
+              72,
+              0
+            ],
+            [
+              0,
+              0,
+              144
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 1.0,
+          "unsupported_classes": []
+        },
+        "D": {
+          "support": 1496,
+          "class_support": {
+            "normal": 1280,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1280,
+              0,
+              0
+            ],
+            [
+              0,
+              72,
+              0
+            ],
+            [
+              0,
+              0,
+              144
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 1.0,
+          "unsupported_classes": []
+        },
+        "B-wire": {
+          "support": 1496,
+          "class_support": {
+            "normal": 1280,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1280,
+              0,
+              0
+            ],
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              144,
+              0,
+              0
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 0.3073967339097022,
+          "unsupported_classes": []
+        },
+        "D-wire": {
+          "support": 1496,
+          "class_support": {
+            "normal": 1280,
+            "command_injection": 72,
+            "response_injection": 144
+          },
+          "confusion": [
+            [
+              1280,
+              0,
+              0
+            ],
+            [
+              0,
+              72,
+              0
+            ],
+            [
+              0,
+              0,
+              144
+            ]
+          ],
+          "macro_f1_fixed_three_classes": 1.0,
+          "unsupported_classes": []
+        }
+      },
+      "prediction_sha256": "1b2962e94bc121096a97e55d3849d93399eb5baf10724a5b5ba5edfeedd36a06"
+    }
+  },
+  "D_errors": [
+    {
+      "event_id": "MX069-20261025T060458Z-f13e4f3b:e1851",
+      "run_id": "MX069-20261025T060458Z-f13e4f3b",
+      "label": "response_injection",
+      "task": "response",
+      "eligible": true,
+      "context_available": true,
+      "A": "normal",
+      "C": "response_injection",
+      "B": "normal",
+      "D": "normal",
+      "B-wire": "normal",
+      "D-wire": "response_injection"
+    }
+  ],
+  "original_bundle_unchanged": true,
+  "training_executed": false,
+  "final_predictions_generated": false,
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.8.0",
+    "joblib": "1.6.0",
+    "pyarrow": "26.0.0"
+  },
+  "audit_code_sha256": "b98655f33b3dbe4d0d2a52be52d1efa98ec2d23bebd460262d3be1eae1bebc81",
+  "limits": [
+    "Same source authorship; independent implementation is not independent data collection.",
+    "No TCP/IP checksum validation; bounded single-connection captures only.",
+    "No industrial campaign/physical effect/clock accuracy claim.",
+    "Final eligibility and rules independently replayed; RF final predictions only read from saved evidence."
+  ]
+}

@@ -1,0 +1,1306 @@
+[
+  {
+    "planned_run_id": "MX001",
+    "run_id": "MX001-20261025T050857Z-878e257e",
+    "role": "train",
+    "group": "MX-GROUP-001",
+    "adus": 2280,
+    "label_counts": {
+      "normal": 2253,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX002",
+    "run_id": "MX002-20261025T050921Z-0d2edec8",
+    "role": "train",
+    "group": "MX-GROUP-002",
+    "adus": 2308,
+    "label_counts": {
+      "normal": 2281,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX003",
+    "run_id": "MX003-20261025T050942Z-bb434441",
+    "role": "train",
+    "group": "MX-GROUP-003",
+    "adus": 2302,
+    "label_counts": {
+      "normal": 2275,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX004",
+    "run_id": "MX004-20261025T051003Z-59e83d68",
+    "role": "train",
+    "group": "MX-GROUP-004",
+    "adus": 2272,
+    "label_counts": {
+      "normal": 2245,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX005",
+    "run_id": "MX005-20261025T051102Z-0bf51277",
+    "role": "train",
+    "group": "MX-GROUP-005",
+    "adus": 2288,
+    "label_counts": {
+      "normal": 2261,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX006",
+    "run_id": "MX006-20261025T051203Z-d891dc3f",
+    "role": "train",
+    "group": "MX-GROUP-006",
+    "adus": 2290,
+    "label_counts": {
+      "normal": 2263,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX007",
+    "run_id": "MX007-20261025T051304Z-2c5089cf",
+    "role": "train",
+    "group": "MX-GROUP-007",
+    "adus": 2484,
+    "label_counts": {
+      "normal": 2457,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX008",
+    "run_id": "MX008-20261025T051327Z-e39e0783",
+    "role": "train",
+    "group": "MX-GROUP-008",
+    "adus": 2470,
+    "label_counts": {
+      "normal": 2443,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX009",
+    "run_id": "MX009-20261025T051349Z-f1d9f2e4",
+    "role": "train",
+    "group": "MX-GROUP-009",
+    "adus": 2470,
+    "label_counts": {
+      "normal": 2443,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX010",
+    "run_id": "MX010-20261025T051412Z-3cb49011",
+    "role": "train",
+    "group": "MX-GROUP-010",
+    "adus": 2488,
+    "label_counts": {
+      "normal": 2461,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX011",
+    "run_id": "MX011-20261025T051517Z-1485c054",
+    "role": "train",
+    "group": "MX-GROUP-011",
+    "adus": 2486,
+    "label_counts": {
+      "normal": 2459,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX012",
+    "run_id": "MX012-20261025T051622Z-673284b5",
+    "role": "train",
+    "group": "MX-GROUP-012",
+    "adus": 2500,
+    "label_counts": {
+      "normal": 2473,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX013",
+    "run_id": "MX013-20261025T051727Z-b8be1968",
+    "role": "train",
+    "group": "MX-GROUP-013",
+    "adus": 2306,
+    "label_counts": {
+      "normal": 2279,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX014",
+    "run_id": "MX014-20261025T051747Z-7c5adfcc",
+    "role": "train",
+    "group": "MX-GROUP-014",
+    "adus": 2276,
+    "label_counts": {
+      "normal": 2249,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX015",
+    "run_id": "MX015-20261025T051808Z-6e4a8c16",
+    "role": "train",
+    "group": "MX-GROUP-015",
+    "adus": 2306,
+    "label_counts": {
+      "normal": 2279,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX016",
+    "run_id": "MX016-20261025T051829Z-f6c4f1ea",
+    "role": "train",
+    "group": "MX-GROUP-016",
+    "adus": 2306,
+    "label_counts": {
+      "normal": 2279,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX017",
+    "run_id": "MX017-20261025T051930Z-24f7f559",
+    "role": "train",
+    "group": "MX-GROUP-017",
+    "adus": 2274,
+    "label_counts": {
+      "normal": 2247,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX018",
+    "run_id": "MX018-20261025T052029Z-aab150d4",
+    "role": "train",
+    "group": "MX-GROUP-018",
+    "adus": 2294,
+    "label_counts": {
+      "normal": 2267,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX019",
+    "run_id": "MX019-20261025T052127Z-8fcabdff",
+    "role": "train",
+    "group": "MX-GROUP-019",
+    "adus": 2486,
+    "label_counts": {
+      "normal": 2459,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX020",
+    "run_id": "MX020-20261025T052150Z-8543db67",
+    "role": "train",
+    "group": "MX-GROUP-020",
+    "adus": 2486,
+    "label_counts": {
+      "normal": 2459,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX021",
+    "run_id": "MX021-20261025T052213Z-4cbae09c",
+    "role": "train",
+    "group": "MX-GROUP-021",
+    "adus": 2468,
+    "label_counts": {
+      "normal": 2441,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX022",
+    "run_id": "MX022-20261025T052235Z-a149c9db",
+    "role": "train",
+    "group": "MX-GROUP-022",
+    "adus": 2486,
+    "label_counts": {
+      "normal": 2459,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX023",
+    "run_id": "MX023-20261025T052340Z-6f9b8d0e",
+    "role": "train",
+    "group": "MX-GROUP-023",
+    "adus": 2494,
+    "label_counts": {
+      "normal": 2467,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX024",
+    "run_id": "MX024-20261025T052445Z-083ab81e",
+    "role": "train",
+    "group": "MX-GROUP-024",
+    "adus": 2486,
+    "label_counts": {
+      "normal": 2459,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX025",
+    "run_id": "MX025-20261025T052550Z-e356f7ee",
+    "role": "validation",
+    "group": "MX-GROUP-025",
+    "adus": 2272,
+    "label_counts": {
+      "normal": 2245,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX026",
+    "run_id": "MX026-20261025T052611Z-02a8eb1a",
+    "role": "validation",
+    "group": "MX-GROUP-026",
+    "adus": 2300,
+    "label_counts": {
+      "normal": 2273,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX027",
+    "run_id": "MX027-20261025T052712Z-84c0ed9f",
+    "role": "validation",
+    "group": "MX-GROUP-027",
+    "adus": 2456,
+    "label_counts": {
+      "normal": 2429,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX028",
+    "run_id": "MX028-20261025T052735Z-8dec537d",
+    "role": "validation",
+    "group": "MX-GROUP-028",
+    "adus": 2476,
+    "label_counts": {
+      "normal": 2449,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX029",
+    "run_id": "MX029-20261025T052840Z-6c695bee",
+    "role": "validation",
+    "group": "MX-GROUP-029",
+    "adus": 2300,
+    "label_counts": {
+      "normal": 2273,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX030",
+    "run_id": "MX030-20261025T052900Z-a9520a9e",
+    "role": "validation",
+    "group": "MX-GROUP-030",
+    "adus": 2306,
+    "label_counts": {
+      "normal": 2279,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX031",
+    "run_id": "MX031-20261025T052959Z-f11bbea1",
+    "role": "validation",
+    "group": "MX-GROUP-031",
+    "adus": 2456,
+    "label_counts": {
+      "normal": 2429,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX032",
+    "run_id": "MX032-20261025T053022Z-273526c7",
+    "role": "validation",
+    "group": "MX-GROUP-032",
+    "adus": 2500,
+    "label_counts": {
+      "normal": 2473,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX033",
+    "run_id": "MX033-20261025T053127Z-b9468920",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-033",
+    "adus": 2292,
+    "label_counts": {
+      "normal": 2265,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX034",
+    "run_id": "MX034-20261025T053147Z-5da39b20",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-034",
+    "adus": 2288,
+    "label_counts": {
+      "normal": 2261,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX035",
+    "run_id": "MX035-20261025T053208Z-5156b46a",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-035",
+    "adus": 2296,
+    "label_counts": {
+      "normal": 2269,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX036",
+    "run_id": "MX036-20261025T053309Z-49abfb06",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-036",
+    "adus": 2324,
+    "label_counts": {
+      "normal": 2297,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX037",
+    "run_id": "MX037-20261025T053410Z-b9575f09",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-037",
+    "adus": 2468,
+    "label_counts": {
+      "normal": 2441,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX038",
+    "run_id": "MX038-20261025T053432Z-d6452e04",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-038",
+    "adus": 2460,
+    "label_counts": {
+      "normal": 2433,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX039",
+    "run_id": "MX039-20261025T053455Z-9fed732c",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-039",
+    "adus": 2492,
+    "label_counts": {
+      "normal": 2465,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX040",
+    "run_id": "MX040-20261025T053600Z-74b40178",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-040",
+    "adus": 2482,
+    "label_counts": {
+      "normal": 2455,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX041",
+    "run_id": "MX041-20261025T054507Z-c2726313",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-041",
+    "adus": 2294,
+    "label_counts": {
+      "normal": 2267,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX042",
+    "run_id": "MX042-20261025T054528Z-f56260af",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-042",
+    "adus": 2302,
+    "label_counts": {
+      "normal": 2275,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX043",
+    "run_id": "MX043-20261025T054549Z-04c915ff",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-043",
+    "adus": 2278,
+    "label_counts": {
+      "normal": 2251,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX044",
+    "run_id": "MX044-20261025T054648Z-dbb11ef7",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-044",
+    "adus": 2294,
+    "label_counts": {
+      "normal": 2267,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX045",
+    "run_id": "MX045-20261025T054747Z-ffd4be48",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-045",
+    "adus": 2482,
+    "label_counts": {
+      "normal": 2455,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX046",
+    "run_id": "MX046-20261025T054810Z-848e1244",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-046",
+    "adus": 2528,
+    "label_counts": {
+      "normal": 2501,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX047",
+    "run_id": "MX047-20261025T054833Z-2cd5be7e",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-047",
+    "adus": 2474,
+    "label_counts": {
+      "normal": 2447,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX048",
+    "run_id": "MX048-20261025T054938Z-b4aac736",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-048",
+    "adus": 2492,
+    "label_counts": {
+      "normal": 2465,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX049",
+    "run_id": "MX049-20261025T055044Z-0521338c",
+    "role": "final_test_values",
+    "group": "MX-GROUP-049",
+    "adus": 2320,
+    "label_counts": {
+      "normal": 2293,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX050",
+    "run_id": "MX050-20261025T055104Z-d555fdc4",
+    "role": "final_test_values",
+    "group": "MX-GROUP-050",
+    "adus": 2294,
+    "label_counts": {
+      "normal": 2267,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX051",
+    "run_id": "MX051-20261025T055204Z-4bca4444",
+    "role": "final_test_values",
+    "group": "MX-GROUP-051",
+    "adus": 2496,
+    "label_counts": {
+      "normal": 2469,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX052",
+    "run_id": "MX052-20261025T055227Z-6eba6331",
+    "role": "final_test_values",
+    "group": "MX-GROUP-052",
+    "adus": 2466,
+    "label_counts": {
+      "normal": 2439,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX053",
+    "run_id": "MX053-20261025T055331Z-61748e62",
+    "role": "final_test_values",
+    "group": "MX-GROUP-053",
+    "adus": 2304,
+    "label_counts": {
+      "normal": 2277,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX054",
+    "run_id": "MX054-20261025T055351Z-a66b9295",
+    "role": "final_test_values",
+    "group": "MX-GROUP-054",
+    "adus": 2290,
+    "label_counts": {
+      "normal": 2263,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX055",
+    "run_id": "MX055-20261025T055450Z-bfa2b28d",
+    "role": "final_test_values",
+    "group": "MX-GROUP-055",
+    "adus": 2482,
+    "label_counts": {
+      "normal": 2455,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX056",
+    "run_id": "MX056-20261025T055513Z-32236c08",
+    "role": "final_test_values",
+    "group": "MX-GROUP-056",
+    "adus": 2484,
+    "label_counts": {
+      "normal": 2457,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX057",
+    "run_id": "MX057-20261025T055619Z-28f8a0d4",
+    "role": "final_test_map",
+    "group": "MX-GROUP-057",
+    "adus": 2320,
+    "label_counts": {
+      "normal": 2293,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX058",
+    "run_id": "MX058-20261025T055642Z-37b712bf",
+    "role": "final_test_map",
+    "group": "MX-GROUP-058",
+    "adus": 2304,
+    "label_counts": {
+      "normal": 2277,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX059",
+    "run_id": "MX059-20261025T055704Z-e72a336d",
+    "role": "final_test_map",
+    "group": "MX-GROUP-059",
+    "adus": 2300,
+    "label_counts": {
+      "normal": 2273,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX060",
+    "run_id": "MX060-20261025T055804Z-65cf9f97",
+    "role": "final_test_map",
+    "group": "MX-GROUP-060",
+    "adus": 2324,
+    "label_counts": {
+      "normal": 2297,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX061",
+    "run_id": "MX061-20261025T055905Z-96551131",
+    "role": "final_test_map",
+    "group": "MX-GROUP-061",
+    "adus": 2490,
+    "label_counts": {
+      "normal": 2463,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX062",
+    "run_id": "MX062-20261025T055928Z-56ee42b4",
+    "role": "final_test_map",
+    "group": "MX-GROUP-062",
+    "adus": 2464,
+    "label_counts": {
+      "normal": 2437,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX063",
+    "run_id": "MX063-20261025T055951Z-65d9e181",
+    "role": "final_test_map",
+    "group": "MX-GROUP-063",
+    "adus": 2472,
+    "label_counts": {
+      "normal": 2445,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX064",
+    "run_id": "MX064-20261025T060054Z-0ef0658c",
+    "role": "final_test_map",
+    "group": "MX-GROUP-064",
+    "adus": 2476,
+    "label_counts": {
+      "normal": 2449,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX065",
+    "run_id": "MX065-20261025T060159Z-dff629ab",
+    "role": "final_test_order",
+    "group": "MX-GROUP-065",
+    "adus": 2594,
+    "label_counts": {
+      "normal": 2567,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX066",
+    "run_id": "MX066-20261025T060222Z-8e727a54",
+    "role": "final_test_order",
+    "group": "MX-GROUP-066",
+    "adus": 2596,
+    "label_counts": {
+      "normal": 2569,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX067",
+    "run_id": "MX067-20261025T060245Z-04ece9e8",
+    "role": "final_test_order",
+    "group": "MX-GROUP-067",
+    "adus": 2594,
+    "label_counts": {
+      "normal": 2567,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX068",
+    "run_id": "MX068-20261025T060352Z-0429af0e",
+    "role": "final_test_order",
+    "group": "MX-GROUP-068",
+    "adus": 2542,
+    "label_counts": {
+      "normal": 2515,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX069",
+    "run_id": "MX069-20261025T060458Z-f13e4f3b",
+    "role": "final_test_order",
+    "group": "MX-GROUP-069",
+    "adus": 2544,
+    "label_counts": {
+      "normal": 2517,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX070",
+    "run_id": "MX070-20261025T060521Z-6754eec9",
+    "role": "final_test_order",
+    "group": "MX-GROUP-070",
+    "adus": 2584,
+    "label_counts": {
+      "normal": 2557,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX071",
+    "run_id": "MX071-20261025T060544Z-0fe74a06",
+    "role": "final_test_order",
+    "group": "MX-GROUP-071",
+    "adus": 2584,
+    "label_counts": {
+      "normal": 2557,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX072",
+    "run_id": "MX072-20261025T060651Z-69c28101",
+    "role": "final_test_order",
+    "group": "MX-GROUP-072",
+    "adus": 2584,
+    "label_counts": {
+      "normal": 2557,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX073",
+    "run_id": "MX073-20261025T060758Z-2ed5e9b9",
+    "role": "final_test_timing",
+    "group": "MX-GROUP-073",
+    "adus": 2342,
+    "label_counts": {
+      "normal": 2315,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX074",
+    "run_id": "MX074-20261025T061025Z-05499168",
+    "role": "final_test_timing",
+    "group": "MX-GROUP-074",
+    "adus": 2288,
+    "label_counts": {
+      "normal": 2261,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX075",
+    "run_id": "MX075-20261025T061251Z-db794c45",
+    "role": "final_test_timing",
+    "group": "MX-GROUP-075",
+    "adus": 2492,
+    "label_counts": {
+      "normal": 2465,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX076",
+    "run_id": "MX076-20261025T061529Z-5f5ef342",
+    "role": "final_test_timing",
+    "group": "MX-GROUP-076",
+    "adus": 2486,
+    "label_counts": {
+      "normal": 2459,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX077",
+    "run_id": "MX077-20261025T061808Z-87f1f582",
+    "role": "final_test_timing",
+    "group": "MX-GROUP-077",
+    "adus": 2282,
+    "label_counts": {
+      "normal": 2255,
+      "command_injection": 9,
+      "response_injection": 18
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX078",
+    "run_id": "MX078-20261025T062034Z-77cd2f38",
+    "role": "final_test_timing",
+    "group": "MX-GROUP-078",
+    "adus": 2312,
+    "label_counts": {
+      "normal": 2285,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX079",
+    "run_id": "MX079-20261025T062301Z-1075818f",
+    "role": "final_test_timing",
+    "group": "MX-GROUP-079",
+    "adus": 2522,
+    "label_counts": {
+      "normal": 2495,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX080",
+    "run_id": "MX080-20261025T062541Z-f9b8708b",
+    "role": "final_test_timing",
+    "group": "MX-GROUP-080",
+    "adus": 2466,
+    "label_counts": {
+      "normal": 2439,
+      "response_injection": 18,
+      "command_injection": 9
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX081",
+    "run_id": "MX081-20261025T062817Z-3b44510e",
+    "role": "train",
+    "group": "MX-GROUP-081",
+    "adus": 2300,
+    "label_counts": {
+      "normal": 2300
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX082",
+    "run_id": "MX082-20261025T062837Z-ebda261e",
+    "role": "train",
+    "group": "MX-GROUP-082",
+    "adus": 2280,
+    "label_counts": {
+      "normal": 2280
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX083",
+    "run_id": "MX083-20261025T062938Z-1171b290",
+    "role": "train",
+    "group": "MX-GROUP-083",
+    "adus": 2482,
+    "label_counts": {
+      "normal": 2482
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX084",
+    "run_id": "MX084-20261025T063001Z-dfeac789",
+    "role": "train",
+    "group": "MX-GROUP-084",
+    "adus": 2486,
+    "label_counts": {
+      "normal": 2486
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX085",
+    "run_id": "MX085-20261025T063105Z-c2ae34d9",
+    "role": "train",
+    "group": "MX-GROUP-085",
+    "adus": 2276,
+    "label_counts": {
+      "normal": 2276
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX086",
+    "run_id": "MX086-20261025T063851Z-4c42bf80",
+    "role": "train",
+    "group": "MX-GROUP-086",
+    "adus": 2288,
+    "label_counts": {
+      "normal": 2288
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX087",
+    "run_id": "MX087-20261025T064914Z-69b6f05c",
+    "role": "train",
+    "group": "MX-GROUP-087",
+    "adus": 2494,
+    "label_counts": {
+      "normal": 2494
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX088",
+    "run_id": "MX088-20261025T070609Z-9cc16dd9",
+    "role": "train",
+    "group": "MX-GROUP-088",
+    "adus": 2474,
+    "label_counts": {
+      "normal": 2474
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX089",
+    "run_id": "MX089-20261025T070714Z-db76460a",
+    "role": "validation",
+    "group": "MX-GROUP-089",
+    "adus": 2306,
+    "label_counts": {
+      "normal": 2306
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX090",
+    "run_id": "MX090-20261025T070735Z-a1548067",
+    "role": "validation",
+    "group": "MX-GROUP-090",
+    "adus": 2282,
+    "label_counts": {
+      "normal": 2282
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX091",
+    "run_id": "MX091-20261025T070836Z-c35a2f00",
+    "role": "validation",
+    "group": "MX-GROUP-091",
+    "adus": 2498,
+    "label_counts": {
+      "normal": 2498
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX092",
+    "run_id": "MX092-20261025T070858Z-7e214d31",
+    "role": "validation",
+    "group": "MX-GROUP-092",
+    "adus": 2468,
+    "label_counts": {
+      "normal": 2468
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX093",
+    "run_id": "MX093-20261025T071004Z-9168bd6a",
+    "role": "validation",
+    "group": "MX-GROUP-093",
+    "adus": 2302,
+    "label_counts": {
+      "normal": 2302
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX094",
+    "run_id": "MX094-20261025T071024Z-bbee7d65",
+    "role": "validation",
+    "group": "MX-GROUP-094",
+    "adus": 2294,
+    "label_counts": {
+      "normal": 2294
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX095",
+    "run_id": "MX095-20261025T071125Z-f6f86cea",
+    "role": "validation",
+    "group": "MX-GROUP-095",
+    "adus": 2504,
+    "label_counts": {
+      "normal": 2504
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX096",
+    "run_id": "MX096-20261025T071148Z-5c5f49a5",
+    "role": "validation",
+    "group": "MX-GROUP-096",
+    "adus": 2498,
+    "label_counts": {
+      "normal": 2498
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX097",
+    "run_id": "MX097-20261025T071253Z-009f5fd2",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-097",
+    "adus": 2312,
+    "label_counts": {
+      "normal": 2312
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX098",
+    "run_id": "MX098-20261025T071313Z-ba26597c",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-098",
+    "adus": 2296,
+    "label_counts": {
+      "normal": 2296
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX099",
+    "run_id": "MX099-20261025T071415Z-2fd024f8",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-099",
+    "adus": 2492,
+    "label_counts": {
+      "normal": 2492
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX100",
+    "run_id": "MX100-20261025T071437Z-b19d07d5",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-100",
+    "adus": 2466,
+    "label_counts": {
+      "normal": 2466
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX101",
+    "run_id": "MX101-20261025T071540Z-ebbc5481",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-101",
+    "adus": 2302,
+    "label_counts": {
+      "normal": 2302
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX102",
+    "run_id": "MX102-20261025T071601Z-96ea59f6",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-102",
+    "adus": 2322,
+    "label_counts": {
+      "normal": 2322
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX103",
+    "run_id": "MX103-20261025T071702Z-ca7054b7",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-103",
+    "adus": 2464,
+    "label_counts": {
+      "normal": 2464
+    },
+    "tcp_retransmitted_bytes": 0
+  },
+  {
+    "planned_run_id": "MX104",
+    "run_id": "MX104-20261025T071724Z-a7e09160",
+    "role": "final_test_repeat",
+    "group": "MX-GROUP-104",
+    "adus": 2464,
+    "label_counts": {
+      "normal": 2464
+    },
+    "tcp_retransmitted_bytes": 0
+  }
+]

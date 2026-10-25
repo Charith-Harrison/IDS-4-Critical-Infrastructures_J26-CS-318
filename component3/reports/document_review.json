@@ -1,0 +1,35 @@
+{
+  "proposal": {
+    "current_path": "component3\\history\\producer_work_20261025\\output\\component3_review\\component3_reference\\IT23150270_Rathnayaka K.H..pdf",
+    "pages_read": 52,
+    "sha256": "e32e468897e075b75f6f30998fa17647fc5ce30ac63ddf84ee078732da097bf5",
+    "matches_read_source": true
+  },
+  "taf": {
+    "current_path": "component3\\history\\producer_work_20261025\\output\\component3_review\\component3_reference\\IT4010-TAF-2026 J26-CS-318 (1).pdf",
+    "pages_read": 13,
+    "sha256": "896c5fbfbce3b4e00c8e4b68c72ef1623f4436342bff399b3a8a57e0db0a1744",
+    "matches_read_source": true
+  },
+  "rubric": {
+    "current_path": "component3\\docs\\PP1_Assessment_Criteria.pdf",
+    "pages_read": 1,
+    "sha256": "ecc6110c94aa18e5a00fee45848a454a8fa126fd5c4cf6e626804f273fe4fbf0",
+    "matches_read_source": true
+  },
+  "visual_pages": {
+    "proposal": [
+      2,
+      32,
+      33,
+      47,
+      50
+    ],
+    "taf": [
+      5
+    ],
+    "rubric": [
+      1
+    ]
+  }
+}

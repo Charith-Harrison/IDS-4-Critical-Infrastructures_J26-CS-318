@@ -1,0 +1,60 @@
+{
+  "status": "PASSED",
+  "version": "c3-stream-v2-20261025",
+  "scope": "DEVELOPMENT_ONLY_ENGINEERING_VALIDATION_NOT_FINAL_CONFIRMATION",
+  "development_runs": 48,
+  "development_adus": 114604,
+  "all_features_pairing_anchors_rules_equal": true,
+  "models": {
+    "B": {
+      "predictions_equal": true,
+      "rows": 4240
+    },
+    "D": {
+      "predictions_equal": true,
+      "rows": 2992
+    },
+    "B-wire": {
+      "predictions_equal": true,
+      "rows": 4240
+    },
+    "D-wire": {
+      "predictions_equal": true,
+      "rows": 2992
+    }
+  },
+  "training_executed": false,
+  "final_rows_read": false,
+  "latency": {
+    "1": {
+      "batch_rows": 1,
+      "repetitions": 30,
+      "median_batch_ms": 39.6736,
+      "p95_batch_ms": 51.3305,
+      "median_prepared_rows_per_second": 25.205678335215357
+    },
+    "32": {
+      "batch_rows": 32,
+      "repetitions": 30,
+      "median_batch_ms": 48.89625,
+      "p95_batch_ms": 52.93203,
+      "median_prepared_rows_per_second": 654.4469156632666
+    },
+    "128": {
+      "batch_rows": 128,
+      "repetitions": 30,
+      "median_batch_ms": 49.92815,
+      "p95_batch_ms": 57.54419499999999,
+      "median_prepared_rows_per_second": 2563.6840139280143
+    }
+  },
+  "latency_scope": "Warm saved D imputer+RF predict on prepared validation rows; not TCP/end-to-end latency; not confidence/explanation generation.",
+  "scalability_limit": "Small batch-size benchmark only. Sustained load, memory growth, live loss and production capacity unmeasured.",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "code_sha256": {
+    "runtime.py": "88be1ca084126ddb9f28fa4a792a755f067275a6a8d5e00287313e775e065e9d",
+    "tools\\runtime_check.py": "d655d54330237dd2ebd5893cca0e5d72ccda59f89b9500abbdbc9d4e1591dba9"
+  }
+}

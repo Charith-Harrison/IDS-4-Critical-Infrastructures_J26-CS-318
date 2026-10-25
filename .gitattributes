@@ -3,3 +3,7 @@
 # Frozen imported evidence/source and locked experiment hashes require exact bytes
 /producer_work_20261025/** -text whitespace=cr-at-eol
 /component3_model_pipeline/v1_20261025/** -text whitespace=cr-at-eol
+
+# Intact relocated evidence. Never normalize historical/frozen bytes.
+/component3/history/** -text whitespace=cr-at-eol
+/component3/locked/** -text whitespace=cr-at-eol

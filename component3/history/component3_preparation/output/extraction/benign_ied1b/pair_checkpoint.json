@@ -1,0 +1,22 @@
+{
+  "signature": "e0ab3822cba3f0bd7258368af17326a6909d4a021a97ad1ada1b7a7483730a50",
+  "contract": {
+    "events_sha256": "7eb2bd3989c204878a1b32b3b177f5ca43904578fd50f3b08497f496357d18bf",
+    "pairing_code_sha256": "bc821aae200e8fdbb9d43128f9e060ca7e03bf316c5cc628ad7c71c7608c50d4",
+    "max_pending": 8192
+  },
+  "output_sha256": "a4873456020f280b029a19874b9bf817c22ceecc15223261b1e23d8912123a33",
+  "report": {
+    "input_records": 1404306,
+    "relation_counts": {
+      "matched": 702153
+    },
+    "pair_chunk_boundaries": {
+      "matched_relations": 702153,
+      "request_response_cross_chunk": 2
+    },
+    "timeout_sensitivity_audit": {},
+    "timeout_policy": "No time expiry. Explicit bounded outstanding capacity per connection.",
+    "max_pending_per_connection": 8192
+  }
+}

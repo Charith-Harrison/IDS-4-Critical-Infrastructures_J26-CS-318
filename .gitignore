@@ -32,6 +32,7 @@ coverage.xml
 
 # Local datasets and generated training/validation data
 # Keep JSON manifests and small reports available for version control.
+/component3_raw/
 /data/raw/*
 # Full local Modbus dataset (intentionally excluded from Git)
 /data/raw/Modbus Dataset/

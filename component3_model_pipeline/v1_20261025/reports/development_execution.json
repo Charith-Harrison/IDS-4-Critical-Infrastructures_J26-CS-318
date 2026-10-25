@@ -1,0 +1,35 @@
+{
+  "machine_role": "Producer PC running Kaveesha repository",
+  "stages": [
+    {
+      "stage": "prepare",
+      "argv": [
+        "C:\\Users\\Thithira\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "c3model",
+        "prepare"
+      ],
+      "cwd": "D:\\VSCode\\Github-Other\\Github-Kavisha\\IDS-4-Critical-Infrastructures_J26-CS-318",
+      "started_at_utc": "2026-10-25T07:59:20.637155+00:00",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-25T07:59:47.546833+00:00"
+    },
+    {
+      "stage": "train",
+      "argv": [
+        "C:\\Users\\Thithira\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "c3model",
+        "train"
+      ],
+      "cwd": "D:\\VSCode\\Github-Other\\Github-Kavisha\\IDS-4-Critical-Infrastructures_J26-CS-318",
+      "started_at_utc": "2026-10-25T07:59:47.546833+00:00",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-25T08:00:07.870190+00:00"
+    }
+  ]
+}

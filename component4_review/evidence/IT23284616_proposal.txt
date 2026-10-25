@@ -1,0 +1,1372 @@
+PAGE 1
+1  
+Protocol-aware ML framework for intelligent Modbus 
+attack detection and incident analysis  
+ 
+Individual Component: Replay attack detection using 
+Transaction Consistency Analysis 
+ 
+R26-CS-318 
+ 
+ 
+ 
+Project Proposal Report 
+Ilankoon I M D S – IT23284616 
+ 
+ 
+ 
+ 
+B.Sc. (Hons) Degree in Information Technology Specialized in  
+Cyber Security 
+ 
+ 
+ 
+ 
+Department of Computer System Engineering 
+ 
+ 
+Sri Lanka Institute of Information Technology Sri Lanka 
+ 
+ 
+ 
+ 
+September 2026 
+ 
+PAGE 2
+2  
+  
+
+PAGE 3
+3  
+ABSTRACT  
+ 
+Industrial Control Systems and SCADA environments frequently use Modbus/TCP because of 
+its simplicity and long-standing industrial adoption. However, the protocol was not originally 
+designed with strong authentication, confidentiality, or integrity protect ion. This creates a 
+practical replay -attack risk: an adversary can capture a legitimate Modbus request and 
+retransmit it later, while the replayed packet may still contain a valid function code, register 
+address, value, and packet structure.  
+ 
+The individual research problem is therefore not simply to identify malformed traffic, but to 
+distinguish malicious re -use of valid transactions from legitimate repetitive industrial 
+communication. Existing packet -content, static -signature, and generic flo w approaches are 
+insufficient when the malicious packet is syntactically valid and only becomes suspicious when 
+its relationship with earlier transactions is examined.  
+ 
+The proposed contribution is a protocol -aware replay -detection component based on 
+transaction-consistency analysis. Modbus/TCP packets will be reconstructed into transaction -
+level records, and features including transaction identifiers, transaction -ID chan ges, 
+request/response timing, duplicate behaviour, repeated payload patterns, function codes, 
+register information, session context, and sequence consistency will be extracted. These 
+structured features will be supplied to an XGBoost binary classifier that labels traffic as normal 
+or replay.  
+ 
+The component will be evaluated using labelled public or controlled testbed traffic, with 
+emphasis on precision, recall, F1-score, false-positive rate, ROC-AUC, and detection latency. 
+A key validation experiment will compare transaction -consistency features against 
+conventional packet/flow features using a consistent classifier. The resulting replay score will 
+be integrated into the wider project’s decision-fusion and incident-analysis layer. The intended 
+outcome is a defensible, low -cost and explainable replay -detection mechanism for Modbus -
+based industrial environments. 
+ 
+Keywords: Modbus/TCP, Replay Attack Detection, Transaction Consistency, Machine 
+learning, Industrial Control Systems 
+ 
+ 
+PAGE 4
+4  
+ACKNOWLEDGEMENT 
+ 
+I would like to acknowledge the guidance of my supervisor Mr. Amila Senarathne and co-
+supervisor Prof. Harinda Fernando in refining the scope of this research and in ensuring that the 
+proposed work remains suitable for an undergraduate research project. Their feedback is 
+particularly important because this research proposal in industrial networks requires both 
+cybersecurity knowledge and an understanding of how legitimate Modbus communication 
+behaves in practice. 
+ 
+I would also like to extend my appreciation to the Faculty of Computing and the Department  
+of Information Technology at the Sri Lanka Institute of Information Technology (SLIIT) for  
+providing a supportive academic environment and the necessary resources to carry out this  
+Research. The knowledge and practical skills gained through the university subjects greatly 
+contributed to the development of this study. 
+ 
+Finally, I appreciate the support of the research team, thank my three group members, Charith, 
+Savindi, Kaveesha for working together with me on the parts of this project that we all share.  
+ 
+ 
+PAGE 5
+5  
+Table of Contents 
+ 
+ABSTRACT ............................................................................................................................... 3 
+ACKNOWLEDGEMENT ......................................................................................................... 4 
+Table of Contents ....................................................................................................................... 5 
+LIST OF TABLES ...................................................................................................................... 6 
+LIST OF FIGURES .................................................................................................................... 7 
+LIST OF ABBREVIATIONS ..................................................................................................... 8 
+LIST OF APPENDICES ............................................................................................................. 9 
+1. INTRODUCTION ................................................................................................................ 10 
+1.1 Background and Context ................................................................................................. 10 
+1.2 Literature Review ............................................................................................................ 11 
+1.3 Research Gap .................................................................................................................. 13 
+2. OBJECTIVE ......................................................................................................................... 14 
+2.1 Main Objective ............................................................................................................... 14 
+2.2 Specific Objectives ......................................................................................................... 14 
+3. METHODOLOGY ............................................................................................................... 15 
+3.1 Research Methodology and Design ................................................................................ 15 
+3.3 Baseline and Benchmark Plan ........................................................................................ 16 
+3.4 Evaluation Metrics .......................................................................................................... 17 
+3.5 Validation Strategy ......................................................................................................... 18 
+3.6 Development Approach .................................................................................................. 18 
+4. HIGH-LEVEL SYSTEM ARCHITECTURE ...................................................................... 19 
+4.1 Overall Integration .......................................................................................................... 20 
+4.2 Individual Responsibility Boundary ............................................................................... 20 
+5. USER REQUIREMENTS .................................................................................................... 21 
+5.1.Stakeholder Identification ............................................................................................... 21 
+5.2 Functional requirements ................................................................................................. 21 
+5.3 Non-functional requirements .......................................................................................... 22 
+6. COMMERCIALIZATION PLAN........................................................................................ 23 
+7. BUDGET AND JUSTIFICATION ....................................................................................... 26 
+8. WORK BREAKDOWN STRUCTURE (WBS) ................................................................... 27 
+9. GANTT CHART .................................................................................................................. 28 
+10. REFERENCES LIST .......................................................................................................... 29 
+11. APPENDICES .................................................................................................................... 31 
+ 
+PAGE 6
+6  
+LIST OF TABLES 
+ 
+Table 1: Research gap comparison ........................................................................................... 13 
+Table 2: Evaluation Metrics and Target Performance Criteria ................................................ 18 
+Table 3: Individual Responsibility Boundary .......................................................................... 20 
+Table 4: Functional requirement .............................................................................................. 21 
+Table 5: Non - Functional requirements .................................................................................. 22 
+Table 6: Pricing strategy .......................................................................................................... 24 
+Table 7: Budget and Justification ............................................................................................. 26 
+Table 8: Work Breakdown Structure ....................................................................................... 27 
+ 
+ 
+ 
+PAGE 7
+7  
+LIST OF FIGURES 
+ 
+Figure 1:System architecture .................................................................................................... 15 
+Figure 2: High-level system architecture ................................................................................. 19 
+Figure 3: Gantt chart ................................................................................................................ 28 
+ 
+ 
+PAGE 8
+8  
+LIST OF ABBREVIATIONS 
+ 
+AI Artificial Intelligence 
+CSV Comma - Separated Values 
+FPR False Positive Rate 
+ICS Industrial Control System 
+IDS Intrusion Detection System 
+IP Internet Protocol 
+MBAP Modbus Application Protocol 
+ML Machine Learning 
+OT Operational Technology 
+PCAP Packet Capture 
+PLC Programmable Logic Controller 
+ROC-AUC Receiver Operating Characteristic - Area Under the Curve 
+SCADA Supervisory Control and Data Acquisition 
+SHAP SHapley Additive exPlanations 
+TCP Transmission Control Protocol 
+TID Transaction Identifier 
+XGBoost Extreme Gradient Boosting 
+ 
+PAGE 9
+9  
+LIST OF APPENDICES 
+ 
+Appendix A -  Survey Evidence  
+Appendix B - AI Use Disclosure 
+Appendix C - Mandatory Proposal Evidence and Decision Log 
+Appendix D - CIC DATASET DOWNLOAD FORM  for "CIC_Modbus_Dataset2023" 
+PAGE 10
+10  
+1. INTRODUCTION 
+ 
+1.1 Background and Context 
+Industrial control systems  (ICS) are the computer systems and machines that keep really 
+important infrastructure running. This includes things most people don't think about every day, 
+like power stations that make our electricity, water treatment plants that make our water safe to 
+drink, pipelines that carry oil and gas, and factories that make the things we use. A lot of these 
+systems talk to each other over a network using a communication method called Modbus, and 
+specifically a version made for network use called Modbus/TCP 
+. 
+The problem with Modbus is that it's genuinely old. It was conceived in the 1970s, when no 
+one in the industry was interested in hackers or cyber security because these industrial networks 
+were almost always isolated from the outside world. This means that Modbus is not a password 
+protected, encrypted, or has no built-in method of determining if a message originated from a 
+trusted device or if it was altered during transmission. If the attacker succeeds in gaining access 
+to the network, the machines cannot tell whether the command is a legitimate one from a trusted 
+source or a bogus one issued by a malicious attacker. 
+ 
+This used to be a smaller problem when these industrial networks were physically isolated from 
+everything else. But that's not how most modern factories and utility companies work anymore. 
+To make monitoring easier and to let engineers check on their systems remotely, more and more 
+of these ICS networks are now connected to normal company networks and, in some cases, 
+directly to the internet. This has made things much more dangerous, because it has massively 
+increased the number of ways an attacker could actually reach these systems [4], [11]. 
+ 
+Given this increased exposure to the outside world, there are now various types of attacks that 
+attackers can make against Modbus-based systems. A Denial-of-Service attack is an attack that 
+takes place when the attacker sends a massive amount of requests to exhaust the resource. They 
+may enter the network without raising suspicion and determine what devices are in the network 
+and what they are doing (reconnaissance). They can be able to send fake command that appears 
+to be a real command, known as command and response injection. The attacker can also 
+intercept an actual command that had previously been sent and repeat it later causing the same 
+action to be repeated, kn own as a replay attack. The four attack types are separated into four 
+different sub-groups of our group project, so that each group can catch the respective attack 
+type correctly without trying to create a tool which would try to catch everything. 
+ 
+Most of the security tools that are actually used in these environments today rely on either fixed, 
+hand-written rules, or on looking at very general network measurements, for example, how big 
+a message is, or how often messages are being sent, without pay ing any attention to what a 
+Modbus message actually says or means [1], [6]. Because of this, these tools often fail to catch 
+attacks that are slow, quiet, or that look almost exactly like a burst of normal, heavy traffic. At 
+the same time, they tend to rai se way too many false alarms, which causes real operators to 
+eventually start ignoring the alerts altogether [10], [15]. 
+ 
+This research supports Sustainable Development Goal 9, Industry, Innovation and 
+Infrastructure, because it works directly on making industrial systems more resistant to attacks 
+that could damage physical infrastructure. It also supports Sustainable Develop ment Goal 7, 
+Affordable and Clean Energy, since a lot of Modbus systems are found specifically inside 
+energy and utility companies. Our project fits within the AIMS research group and the Cyber 
+Security and Network Engineering research cluster. 
+PAGE 11
+11  
+1.2 Literature Review 
+ 
+1.2.1 Existing Research Approaches 
+ 
+Existing research on Modbus/TCP security can be grouped into several broad approaches: 
+protocol protection, signature -based intrusion detection, protocol -aware modelling, replay -
+specific detection, and machine -learning-based classification. Preventive work  proposed a 
+secure Modbus design, while investigated the use of message authentication codes for 
+protecting Modbus/TCP -based industrial automation systems [9]. These studies show that 
+authentication and message integrity are important security requirements . However, they 
+mainly focus on strengthening communication itself. In many existing industrial environments, 
+changing the underlying protocol or replacing field devices may not be practical. Therefore,  
+takes a complementary monitoring-based approach rather than modifying Modbus/TCP. 
+ 
+Replay-focused research is particularly relevant to this study. Mo, Chabukswar and Sinopoli 
+investigated integrity -attack detection in SCADA systems [1], while Naha et al. explored 
+sequential replay-attack detection [2]. These studies collectively indicate  that replay attacks 
+cannot always be identified from a single observation. Instead, timing, sequence, state, and 
+relationships between events can provide stronger evidence. This directly supports th is 
+component concept of analyzing  transactions across time rather than inspecting packets 
+independently. 
+ 
+In a Modbus-specific context, R. L. and P. Satyanarayana studied the detection and blocking 
+of replay, false-command, and false-access injection attacks [11]. Deng et al. applied Support 
+Vector Machines to Modbus/TCP intrusion detection [4], while Wang et al. and Goldenberg 
+and Wool demonstrated the importance of Modbus -specific modelling for intrusion detection  
+[13]. Gao and Morris further examined signature-based detection for Modbus industrial control 
+systems [15]. These studies support the decision to use protocol -aware information instead of 
+relying only on generic network-flow characteristics. 
+ 
+Machine-learning research provides the implementation basis for this. Benka et al. investigated 
+machine-learning-based detection of anomalies and intrusions in industrial control systems [8]. 
+For this component, XGBoost is selected as the classifier because the proposed preprocessing 
+stage converts communication behaviour into structured transaction-level features. XGBoost is 
+suitable for this type of tabular data and can model interactions between several variables while 
+also supporting feature -importance analysis [16]. The research contribution, however, is not 
+the use of XGBoost alone; it is the use of transaction consistency features specifically designed 
+for replay detection. 
+ 
+1.2.2 Existing Products and Services 
+ 
+The references supplied for RP4 mainly describe academic methods and security mechanisms 
+rather than detailed commercial products. Therefore, the most defensible comparison is 
+between existing categories of practical security solutions. 
+ 
+One category is protocol -hardening solutions, where cryptographic mechanisms such as 
+message authentication are added to Modbus communication [7]. These solutions can provide 
+strong protection against message manipulation when both endpoints support the re quired 
+changes. Their practical limitation is that existing industrial systems may include legacy PLCs, 
+controllers, and software that cannot easily be modified. 
+ 
+PAGE 12
+12  
+A second category is signature-based intrusion detection. Gao and Morris showed how Modbus 
+attacks can be identified using known signatures [15]. Such systems are useful when malicious 
+behaviour has a recognizable pattern, but they are less reliable when a  replayed message is 
+copied directly from legitimate communication. A third category is protocol -aware anomaly 
+detection, where Modbus function codes, request -response behaviour , and communication 
+patterns are modelled rather than treating traffic as generic TCP data [12].  
+ 
+1.2.3 Existing System Limitations 
+ 
+The main limitation identified from the literature is that replay attacks can remain valid at the 
+packet-content level. A captured Modbus request may contain a legitimate function code, valid 
+register address, valid value, and correct protocol structure. If that request is transmitted again 
+later, a detector that examines only packet syntax or a known signature may not recognize it as 
+malicious. Replay -oriented studies therefore support the need for temporal and sequential 
+reasoning. 
+ 
+Another limitation is the risk of over -relying on one indicator, particularly the transaction 
+identifier. Transaction IDs are useful for matching Modbus requests and responses, but 
+legitimate implementations may increment, reset, wrap, or reuse them differ ently. Treating a 
+repeated transaction ID as sufficient evidence of replay could therefore produce false positives. 
+ 
+For this reason, RP4 proposes a broader transaction-consistency representation. The model will 
+combine transaction ID behaviour  with response timing, duplicate requests, register 
+information, request-response matching, source and destination context, inter-arrival time, and 
+session consistency. The central research gap is therefore the lack of sufficient evaluation of 
+whether a co mbined set of transaction -level consistency features can reliably distinguish 
+malicious replay traffic from legitimate repetitive Modbus/TCP communication. This 
+component addresses this gap by engineering these features and evaluating them with an 
+XGBoost classifier using labelled normal and replay traffic. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PAGE 13
+13  
+1.3 Research Gap 
+ 
+The reviewed work establishes that Modbus security, replay attacks, protocol -aware intrusion 
+detection, and machine -learning IDS have all been investigated. The remaining gap for this 
+component is more specific. Many existing approaches still depend on packet content, static 
+signatures, or generic traffic statistics. These methods can detect malformed, high -volume, or 
+known attacks, but replayed Modbus transactions are more difficult because the retransmitted 
+packet may still be completely valid [12]. The real evidence of malicious behaviour may 
+therefore appear only when the transaction is compared with surrounding communication. 
+ 
+This research addresses that limitation through transaction -consistency analysis. Instead of 
+treating a repeated packet as automatically malicious, the proposed method evaluates 
+transaction identifiers, response timing, duplicate behaviour, request -response relationships, 
+session consistency, and transaction sequence. Replay-focused studies support the importance 
+of temporal and sequential evidence [10], while Modbus-specific research highlights the value 
+of protocol-aware modelling [13]. 
+ 
+The novelty of RP4 lies in representing replay behaviour through relationships across 
+transactions rather than relying on one packet or one feature. This is particularly important 
+because legitimate Modbus communication often contains repeated polling, ret ries, and stable 
+register reads [12]. The proposed approach therefore aims to detect suspicious repetition while 
+maintaining a low false-positive rate. 
+ 
+Existing 
+Research  
+Approach Key Limitation Identified Gap 
+Signature-Based 
+Intrusion 
+Detection for 
+Modbus ICS  
+Uses predefined 
+signatures and rules to 
+detect known Modbus 
+attacks. 
+May miss replayed 
+packets that are still 
+valid and do not 
+match known  
+malicious signatures. 
+Need transaction -level 
+consistency analysis 
+beyond static signatures. 
+Detection and 
+Blocking of 
+Replay, False 
+Command and 
+False Access 
+Injection in 
+Modbus SCADA 
+Detects and blocks 
+replay and command -
+injection attacks in 
+Modbus SCADA 
+communication. 
+Does not focus on 
+ML-based 
+classification using 
+combined transaction-
+consistency features. 
+Need an ML -based 
+replay detector using 
+timing, duplicates, 
+transaction IDs and 
+session behaviour. 
+Modbus TCP 
+Intrusion 
+Detection  
+Applies intrusion -
+detection techniques 
+specifically to 
+Modbus/TCP traffic. 
+General Modbus 
+attack detection may 
+not fully distinguish 
+valid replayed 
+transactions from 
+legitimate traffic. 
+Need a replay -specific 
+detector that analyzes 
+relationships between 
+consecutive 
+transactions. 
+Detection of 
+Replay Attacks in 
+Smart Grid 
+Systems  
+Detects replay attacks 
+by analyzing 
+communication 
+behaviour in smart -
+grid systems. 
+Focuses on the smart -
+grid context rather 
+than Modbus/TCP 
+transaction semantics. 
+Need a Modbus-specific 
+replay approach using 
+protocol and 
+transaction-level 
+features. 
+Table 1: Research gap comparison 
+PAGE 14
+14  
+2. OBJECTIVE 
+ 
+2.1 Main Objective 
+ 
+To develop and evaluate a protocol -aware machine -learning component that distinguishes 
+replayed Modbus/TCP transactions from legitimate communication by analyzing transaction  
+consistency across transaction identifiers, response timing, duplicate requests, request/ response 
+relationships, sequence behaviour, and session context, and to integrate the resulting detection 
+output with the overall project’s decision-fusion and incident-analysis layer. 
+ 
+2.2 Specific Objectives 
+ 
+1. To capture, identify, and prepare labelled normal and replay-attack Modbus/TCP traffic 
+using suitable public industrial datasets and an isolated controlled Modbus testbed. 
+ 
+2. To reconstruct packet captures into transaction -level records and engineer protocol -
+aware features covering MBAP fields, Modbus commands, timing, duplication, 
+sequence, request/response consistency, session context, and expected polling 
+behaviour. 
+ 
+3. To develop an XGBoost -based supervised binary classifier that labels each analyzed 
+transaction or transaction window as Normal or Replay Attack. 
+ 
+4. To quantify the contribution of transaction -consistency features by comparing the 
+proposed feature representation with a baseline using conventional packet/flow features 
+under a controlled and leakage-resistant evaluation procedure. 
+ 
+5. To evaluate detection quality using accuracy, precision, recall, F1 -score, false-positive 
+rate, confusion-matrix analysis, and detection latency, with particular attention to recall, 
+F1-score, false-positive rate, and latency, ROC-AUC. 
+ 
+6. To expose the replay -detection result, confidence score, relevant evidence, and attack 
+metadata in a format that can be consumed by the common decision-fusion and incident-
+analysis layer of the overall Modbus attack-detection framework. 
+PAGE 15
+15  
+3. METHODOLOGY 
+ 
+3.1 Research Methodology and Design 
+ 
+This research will use a design -oriented experimental methodology. The work has two 
+inseparable outputs: a technical artefact and empirical evidence about that artefact. The 
+technical artefact is the RP4 replay -detection module. The empirical contribution is the 
+evaluation of whether transaction-consistency features improve the ability to distinguish replay 
+attacks from legitimate repetitive Modbus/TCP behaviour. A purely descriptive study would 
+not be sufficient because the central claim must be tested through controlled data, trained 
+models, baseline comparisons, and measured outcomes. 
+ 
+The methodology follows a claim -evidence-decision logic. The claim is that replay detection 
+requires cross -transaction consistency information. The evidence will come from labelled 
+normal and replay traffic, feature -level analysis, baseline experiments, ablation tests, and 
+performance metrics. The decision will be whether the proposed transaction -consistency 
+representation is justified for integration into the final multi -attack framework. This structure 
+directly matches the proposal template’s expectation that te chnical choices be evidence-based 
+rather than merely listed. 
+ 
+The main experimental unit will be a Modbus transaction or a short transaction context derived 
+from captured traffic. Raw PCAP traffic will not be given directly to XGBoost. It will first be 
+parsed into requests and responses, associated with TCP sessions, ordered by timestamp, and 
+converted into structured records. Features will then describe both the current transaction and 
+its relationship to previous relevant transactions. This design ensures that the model is learning 
+replay-related consistency patterns rather than memorizing arbitrary raw packet bytes. 
+ 
+System Architecture 
+Figure 1:System architecture 
+PAGE 16
+16  
+3.2 Data / Participants / Experimental Inputs 
+ 
+This study requires labelled Modbus/TCP traffic containing both legitimate communication and 
+replay-attack behaviour. This type of data directly supports the RP4 research question, which 
+investigates whether replayed transactions can be separated from legitimate repetitive traffic 
+using transaction -level consistency rather than packet content alone. The main evidence 
+required includes transaction identifiers, response timing, duplicate requests, request -response 
+relationships, register information, and session consistency.  
+ 
+Two experimental data sources will be used. The primary public dataset selected for the study 
+is CIC Modbus 2023 , which will be used as the main benchmark dataset for training and 
+evaluating the machine -learning model. Before model development, the available records, 
+labels, protocol fields, and class distribution will be inspected to determine which data can 
+directly support the replay-detection task. Where replay-specific transaction information is not 
+sufficiently represented, the public dataset will be complemented with traffic generated through 
+a controlled Modbus/TCP testbed . This approach is consistent with the RP4 methodology, 
+which proposes using normal traffic, controlled replay traffic, suitable public ICS/SCADA data, 
+and testbed-generated communication.  
+ 
+The testbed will consist of a Modbus master and PLC/slave environment. Normal 
+communication will first be captured to represent legitimate polling and repeated industrial 
+operations. Replay scenarios will then be generated by capturing valid Modbus transactions and 
+retransmitting them under controlled conditions. Wireshark/Tshark, Scapy, and PyModbus will 
+support packet capture, manipulation, and Modbus simulation, with traffic stored in PCAP and 
+processed CSV formats.  
+ 
+The experimental sample will consist of reconstructed Modbus transaction records, labelled as 
+Normal (0) or Replay Attack (1) . No human participants are involved because the research 
+analyzes network communication rather than personal data. During preprocessing, packets will 
+be parsed and paired into request -response transactions. Features such as transaction ID 
+behaviour, inter -arrival time, response latency, duplicate frequency, function code, register 
+information, session context, and transaction sequence will then be extracted.  
+Finally, the dataset will be cleaned, checked for missing or invalid records, encoded where 
+required, and separated into training and testing data while avoiding data leakage. Legitimate 
+repeated transactions will intentionally be retained because distingu ishing normal repetition 
+from malicious replay is central to the contribution of RP4. 
+ 
+3.3 Baseline and Benchmark Plan 
+ 
+The strongest self -evaluation design is to compare the proposed transaction -consistency 
+representation against a simpler representation while keeping the classifier a s constant as 
+possible. Baseline A will therefore use XGBoost trained on conventional packet/flow or 
+current-packet features available from the same traffic. Proposed Model B will use XGBoost 
+with the transaction -consistency feature set. If Model B produce s higher replay recall or F1 -
+score and a lower false -positive rate on unseen sessions, the evidence directly supports the 
+proposed novelty. 
+ 
+A second baseline will be a transparent rule-based detector using obvious replay indicators such 
+as duplicate payload or repeated transaction identifier within a time window. This baseline is 
+PAGE 17
+17  
+intentionally simple. Its role is to demonstrate why a single rule is insufficient in normal 
+repetitive industrial traffic. A third optional baseline may use an SVM or another conventional 
+supervised classifier if the final schedule permits. However, addin g many models is less 
+important than evaluating the research claim cleanly. 
+ 
+The comparison will use the same train/test scenarios, labels, and metric definitions. 
+Hyperparameter tuning will be performed independently but only on training/validation data. 
+The final test set will remain untouched until the experiment design is fixed. Where data from 
+both public sources and the testbed are available, cross-source evaluation will be attempted, for 
+example training on one set and testing on a separate capture source. Even if performance 
+decreases, such a result is useful because it reveals the generalization limits of the method. 
+ 
+3.4 Evaluation Metrics  
+ 
+Accuracy will report the proportion of all evaluated events classified correctly, but it will not 
+be treated as the main success measure because class imbalance can make accuracy misleading. 
+Precision will measure how many transactions predicted as replay are act ually replay. Recall 
+will measure how many true replay events are detected. F1 -score will combine precision and 
+recall through their harmonic mean. False -positive rate will measure the proportion of 
+legitimate events incorrectly labelled as replay. ROC-AUC will summarize the model’s ability 
+to discriminate across thresholds. 
+ 
+No unsupported numerical performance target such as “99% accuracy” will be promised before 
+experiments. Instead, the proposal defines comparative success criteria. The proposed model 
+should improve replay recall and F1 -score over the packet/flow baseline, should reduce false 
+positives relative to a simple duplicate/TID rule, and should operate with latency appropriate 
+for near-real-time incident analysis. These are defensible criteria because they measure whether 
+the proposed transaction representation adds value. 
+ 
+Metric Why Relevant Target / Comparison 
+Accuracy Shows the overall proportion of normal and 
+replay transactions classified correctly. 
+Higher than the baseline 
+model using conventional 
+packet/ flow features. 
+Precision Measures how many transactions predicted as 
+replay attacks are actually replay attacks. This 
+helps avoid unnecessary security alerts. 
+Maintain high precision 
+and improve on the 
+baseline. 
+Recall Measures how many actual replay attacks are 
+successfully detected. This is important because 
+missed replay attacks can remain hidden within 
+valid-looking traffic. 
+Maximize recall compared 
+with the baseline detector. 
+F1-Score Provides a balanced measure of precision and 
+recall, which is useful when both missed attacks 
+and false alarms are important. 
+Achieve a higher F1-score 
+than the baseline 
+approach. 
+False 
+Positive 
+Rate (FPR) 
+Measures how often legitimate repetitive 
+Modbus traffic is incorrectly classified as replay. 
+This is particularly important because normal 
+polling and retries can resemble repetition. 
+Lower FPR than the 
+packet/flow-based 
+baseline. 
+ROC-AUC Evaluates how well the classifier separates 
+normal and replay traffic across different 
+Higher ROC -AUC than 
+the baseline model. 
+PAGE 18
+18  
+decision thresholds. 
+Detection 
+Latency 
+Measures the time required to classify a 
+transaction after the required consistency 
+information becomes available. 
+Keep detection delay low 
+enough for practical 
+Modbus monitoring and 
+compare latency with the 
+baseline. 
+                                        Table 2: Evaluation Metrics and Target Performance Criteria 
+ 
+3.5 Validation Strategy 
+ 
+Validation will occur at four levels. First, data validation will confirm that labelled replay events 
+were actually generated as intended and that normal captures contain realistic repetitive 
+behaviour. Packet-level inspection with Wireshark or Tshark and scripted checks will be used 
+to confirm the ground truth. Second, model validation will use separated training/validation/test 
+data with scenario or session -aware splitting. Confusion matrices and threshold analysis will 
+reveal whether errors concentrate in particular traffic patterns. 
+ 
+Third, feature valid ation will test the novelty claim. Ablatio n experiments will remove one 
+feature group at a time  for example transaction, timing, duplication, or session features  and 
+observe the effect on F1, recall and FPR. Feature importance and, if required, SHAP 
+explanations will identify which variables contribute to the XGBoost decisions. This does not 
+by itself prove causality, but it provides interpretable evidence about the learned detector. 
+ 
+Fourth, integration validation will verify that can produce a consiste nt output record for the 
+common framework. The record should contain timestamp, session or flow key, replay label, 
+probability/confidence, relevant evidence features, and processing latency. The decision-fusion 
+layer should be able to consume the output wi thout needing access to it’s internal model. This 
+preserves modularity and makes the component independently testable. 
+ 
+Reliability tests will include repeated normal scenarios, variations in polling interval, different 
+replay delays, multiple function cod es where feasible, session restarts, and transaction -ID 
+wrap/reuse conditions if they can be generated safely. The purpose is not to make the testbed 
+artificially complex, but to challenge the shortcuts that would otherwise make replay detection 
+appear easier than it is. 
+ 
+3.6 Development Approach 
+ 
+An iterative prototyping approach will be used. The first iteration will establish packet capture, 
+Modbus parsing, and transaction reconstruction. The second will create the baseline feature 
+table and simple duplica te/TID detector. The third will implement the full transaction -
+consistency feature set and XGBoost model. The fourth will focus on feature ablation, latency 
+measurement, and false-positive analysis. The final iteration will expose the model through an 
+integration interface and connect it to the common decision-fusion layer. 
+ 
+This approach is preferred to a single waterfall implementation because the research contains 
+uncertainty. Dataset fields may differ, replay timing may need adjustment, and some features  
+may prove unreliable after inspection. Iterative development allows each assumption to be 
+tested before the next layer is built. Version -controlled code, experiment configuration files, 
+fixed random seeds where applicable, and saved model artifacts will support reproducibility. 
+PAGE 19
+19  
+4. HIGH-LEVEL SYSTEM ARCHITECTURE 
+ 
+ 
+Figure 2: High-level system architecture 
+The high -level architecture of the proposed protocol -aware Modbus/TCP attack detection 
+framework. The architecture follows a structured processing flow beginning with the 
+Modbus/TCP testbed, where normal and attack traffic are generated between the SCADA/HMI 
+master and PLC/RTU devices. Captured traffic is then passed to the data acquisition layer, 
+where packet captures and labelled traffic are prepared for further processing. The next stage 
+performs Modbus/TCP parsing, transaction reconstruction, protocol -aware feature extraction, 
+data cleaning, and normalization. A shared feature repository is used so that all research 
+components work with a consistent representation of the captured traffic. 
+ 
+After preprocessing, the extracted information is supplied to the parallel attack -detection 
+modules. Each research component applies an attack -specific detection strategy rather than 
+relying on one generic model for every Modbus attack. The outputs from th ese modules are 
+forwarded to the decision -fusion layer, where individual results are combined to produce the 
+final attack classification and alert information. The resulting detection information is then 
+displayed through the dashboard and reporting layer for monitoring and analysis. 
+ 
+The individual contribution of this research is Replay Attack Detection using Transaction 
+Consistency Analysis . Replay attacks are challenging because an attacker may retransmit a 
+previously legitimate Modbus message, meaning that the packet itself can still appear valid. 
+Therefore, it does not depend only on packet content. First, Modbus request -response 
+transactions are reconstructed from the captured traffic. Transaction -consistency features are 
+then extracted, including transaction ID behaviour, response timing, duplicate requests, register 
+information, and session consistency. These structured features are provided to an XGBoost 
+classifier, which learns patterns that distinguish legitimate repeated communication from 
+malicious replay behaviour. The model produces a normal/replay classification together with a 
+confidence score, and this result is forwarded to the common decision-fusion layer. This design 
+keeps RP4 clearly separated as an individual research contribution while allowing it to operate 
+as part of the complete Modbus attack-detection framework. 
+ 
+
+PAGE 20
+20  
+4.1 Overall Integration 
+ 
+The overall project contains separate attack-specific research components that share a common 
+protocol-aware pipeline. This component does not need to know the internal algorithms of the 
+DoS, reconnaissance, or command/response injection modules. Its dependency is the common 
+parsed traffic representation and the agreed output contract to the fusion layer. This is an 
+important architectural boundary: the replay component can be developed, tested, and scored 
+independently while still participating in the final multi-attack system. 
+ 
+The planned integration method is a structured record or service interface. The shared parser 
+provides timestamped Modbus transactions and session metadata. This component returns 
+fields such as attack_type = replay, predicted_label, confidence, event_time , session_id, 
+evidence summary, and model latency. The fusion layer can then combine the component result 
+with other module outputs and deduplicate correlated alerts. This design minimizes coupling 
+and allows the replay model to be retrained without changing the rest of the system. 
+ 
+ 
+4.2 Individual Responsibility Boundary  
+ 
+Activity / Deliverable My Responsibility Shared 
+Responsibility 
+Replay testbed scenarios and replay labels ✓  
+RP4 transaction reconstruction and replay 
+feature engineering 
+✓  
+Preprocessing CIC Modbus 2023 ✓  
+XGBoost replay classifier design, training 
+and tuning 
+✓  
+RP4 metrics, ablation and latency 
+evaluation 
+✓  
+Common Modbus protocol parser  ✓ 
+Shared feature repository  ✓ 
+Decision-fusion layer  ✓ 
+ 
+Table 3: Individual Responsibility Boundary 
+ 
+PAGE 21
+21  
+5. USER REQUIREMENTS 
+ 
+5.1.Stakeholder Identification  
+ 
+The primary users of the proposed component are OT/ICS security analysts and network 
+administrators who need to investigate suspicious Modbus events without being overwhelmed 
+by false alarms. Secondary stakeholders include ICS engineers, plant operators, s ystem 
+integrators, cybersecurity researchers, and managers responsible for operational risk. The wider 
+project may also be relevant to organizations operating energy, utility, manufacturing, or other 
+industrial automation environments. 
+ 
+The stakeholder survey in Appendix A provides a planned question set so that evidence can be 
+collected before final implementation. This approach preserves honesty while still translating 
+the current research evidence into implementable requirements. 
+ 
+5.2 Functional requirements 
+  
+ID Functional requirement 
+FR-01 The component shall ingest parsed Modbus/TCP packet or transaction records 
+from PCAP/CSV-derived inputs or the common project parser. 
+FR-02 The component shall reconstruct Modbus requests and responses into transaction-
+level records using timestamp, direction, session information, transaction 
+identifier, and function-code correspondence. 
+FR-03 The component shall maintain limited recent transaction history needed to 
+compute duplicate, timing, sequence, and session-consistency features. 
+FR-04 The component shall extract MBAP, Modbus command, timing, duplication, 
+sequence, request/response, session, and behavioural-state features defined for the 
+RP4 model. 
+FR-05 The component shall classify each analysis event as Normal or Replay Attack 
+using the trained XGBoost model. 
+FR-06 The component shall produce a confidence/probability value and a compact 
+evidence summary for each replay prediction. 
+FR-07 The component shall record prediction time and processing latency for evaluation 
+and later incident analysis. 
+FR-08 The component shall support offline evaluation against labelled datasets and 
+controlled testbed captures. 
+FR-09 The component shall export results in a structured format compatible with the 
+common decision-fusion and incident-analysis layer. 
+FR-10 The evaluation pipeline shall calculate confusion matrix, accuracy, precision, 
+recall, F1-score, false-positive rate, ROC-AUC and latency. 
+FR-11 The research code shall support feature -group ablation and baseline comparison 
+so that the transaction-consistency contribution can be evaluated. 
+FR-12 The component shall store model version, feature schema version, and experiment 
+configuration with evaluation results for reproducibility. 
+ 
+Table 4: Functional requirement 
+PAGE 22
+22  
+5.3 Non-functional requirements  
+ 
+ID / Area Testable requirement 
+NFR-01 Performance The model should support near -real-time analysis. Per -event 
+inference latency and end-to-end detection latency shall be measured 
+and reported rather than assumed. 
+NFR-02 Reliability The detector shall be evaluated on normal repetitive traffic, session 
+variation, and multiple replay delays to expose false -positive and 
+generalization weaknesses. 
+NFR-03 Security Replay-generation tools and captures shall remain within the isolated 
+research environment; no live external industrial target shall be used. 
+NFR-04 Privacy The component shall not require personal data. Captures shall 
+contain only laboratory/public industrial communication used for 
+academic research. 
+NFR-05 
+Explainability 
+Each replay alert should expose at least the prediction confidence and 
+relevant consistency evidence or feature explanation. 
+NFR-06 
+Maintainability 
+Parsing, feature engineering, model inference, evaluation, and 
+integration output should be implemented as separable modules with 
+version-controlled code. 
+NFR-07 
+Reproducibility 
+Training configuration, random seed where applicable, data split 
+definition, feature version, and model artifact shall be stored for each 
+final experiment. 
+NFR-08 Scalability The detector should process transaction records in a streaming or 
+batched manner without requiring the entire dataset to be kept in 
+memory. 
+NFR-09 
+Compatibility 
+The RP4 output format shall remain stable enough for the shared 
+decision-fusion layer to consume different model versions without 
+major redesign. 
+NFR-10 Usability Evaluation outputs and alerts shall use clear terminology 
+understandable to a cybersecurity analyst, including Normal/Replay 
+label, time, session, confidence and evidence. 
+ 
+Table 5: Non - Functional requirements
+PAGE 23
+23  
+6. COMMERCIALIZATION PLAN 
+  
+6.1 Target market, customer persona, and key stakeholders 
+ 
+The proposed Protocol -Aware Machine Learning Framework for Intelligent Modbus Attack 
+Detection is intended for organizations that depend on Modbus/TCP -based industrial control 
+systems but may not have the budget or specialist staff required for large commercial OT -
+security platforms. Suitable customers include small and medium manufacturing plants, water 
+and wastewater facilities, energy and utility operators, process industries, and other 
+organizations operating SCADA, PLC and RTU environments. These sectors are relevant 
+because Modbus remains important in industrial communication, while attacks against control 
+devices can cause operational disruption, equipment problems and safety concerns.  
+ 
+The main user persona is an OT/SCADA engineer, automation technician or cybersecurity 
+engineer responsible for maintaining reliable industrial operations. Plant managers and asset 
+owners are also important stakeholders because they are concerned with downt ime, security 
+expenditure and operational continuity. System integrators may support deployment and 
+configuration, while the development team would be responsible for maintaining the detection 
+models, protocol parser and software releases. 
+ 
+6.2 Value proposition 
+ 
+The proposed framework provides an affordable, non -intrusive, software -based intrusion 
+detection system specially developed for Modbus/TCP industrial networks. Rather than 
+inspecting individual packets with fragile, manually crafted rules, the system exami nes 
+protocol-aware semantics for all four of the primary attack vectors in ICS: Denial -of-Service, 
+Reconnaissance, Command/Response Injection, and Replay. It is passive technology that works 
+on standard off-the-shelf industrial PCs or edge servers, with no need of specialized hardware 
+or changes to existing PLCs. Additionally, the multi -module detection and Layer 5 decision 
+fusion, along with Layer 6 explainability, provide operators with a single consolidated alert and 
+explanations of the individual transactions, not multiple conflicting alerts. 
+ 
+6.3 Revenue model 
+ 
+A flexible hybrid revenue model is established to accommodate both operating expenditure 
+(OpEx) and capital expenditure (CapEx) purchasing preferences common in industrial 
+organizations: 
+• Tier 1: Annual / Multi-Year Software-as-a-Service (SaaS) Subscription (OpEx) 
+o Provides ongoing access to the complete four-module detection engine, unified 
+fusion dashboard, continuous background threat modeling, and routine software 
+maintenance.  
+o Billed annually or as a 3 -year enterprise license per monitored SCADA subnet 
+or gateway. 
+• Tier 2: Perpetual License with Annual Maintenance Contract (CapEx) 
+o A one-time upfront software purchase intended for air -gapped or high-security 
+facilities that do not permit recurring cloud billing. 
+o Coupled with an optional Annual Maintenance Contract (AMC)  (priced at 
+approximately 18-20% of the initial license cost per year) covering technical 
+support, bug fixes, periodic rule updates, and scheduled model recalibration. 
+ 
+ 
+PAGE 24
+24  
+• Tier 3: Professional Services & One-Time Deployment 
+o One-time fee for initial on -site/remote deployment, passive TAP/SPAN port 
+configuration, normal traffic baseline capture and profiling, and custom 
+threshold tuning tailored to the plant's specific operational polling cycle. 
+ 
+6.4 Cost estimation 
+ 
+• Development and Retraining Compute: Model training and evaluation are conducted 
+on standard computational workstations using open -source machine learning 
+frameworks (PyTorch, scikit-learn), minimizing initial capital outlays.  
+• Ongoing Maintenance and Patch Releases: Minor operational overhead for hosting a 
+secure software repository to distribute minor patch updates, dependency fixes, and 
+updated protocol parsers. 
+• Support and Baseline Calibration : Engineering labor allocated to perform initial 
+baseline profiling (e.g., establishing normal reconstruction thresholds and transaction 
+ID progression windows) during customer onboarding.  
+• Documentation and Compliance Packaging: Costs associated with maintaining user 
+manuals, integration guides for SCADA HMIs, and security verification logs.  
+ 
+6.5 Pricing strategy 
+ 
+Service option Billing structure Inclusion and scope 
+Complete 
+module subscription 
+Recurring (LKR 80K  gateway / 
+year) 
+All 4 detection modules (Dos,  
+Recon, Injection, Replay),  fusion 
+dashboard, quarterly \ model re  
+tuning, and priority  on-premises 
+patch updates 
+Perpetual software 
+license 
+One-time (LKR 70K - 100K /  
+installation) 
+Lifetime deployment of the four - 
+module engine and visualization 
+dashboard. 
+Annual Maintenance 
+Contract 
+(AMC) 
+Annual (LKR 60K - 120K /  
+year) 
+Essential security patches,  software 
+bug fixes, OS compatibility updates, 
+and Tier-2 technical support 
+Onboarding 
+services 
+and 
+tuning 
+One-time fixed fee (LKR 50K  
+-70K) 
+Network capture analysis,  baseline 
+anomaly threshold tuning, and  
+operator training profiling, 
+ 
+Table 6: Pricing strategy 
+ 
+6.6 Maintenance, versioning, and patch updates 
+ 
+To maintain high detection accuracy and ensure stability in continuous 24/7 OT environments, 
+a structured maintenance lifecycle is established: 
+• Periodic Version Releases : Major versions released annually introducing enhanced 
+Periodic Version Releases: Versions released every year, with more advanced detection 
+models, support for new ICS protocols, and advanced dashboard analytical tools. 
+• Routine Security & Patch Updates: Maintenance releases twice a month, with minor 
+PAGE 25
+25  
+parser optimizations, container/dependency security updates, and UI tweaks. Normal 
+baseline thresholds are scheduled or automatically recalibrated when the plant changes 
+its PLC firmware or adds new RTUs or changes the normal polling interval, thus 
+avoiding the risk of false alarms.  
+• Passive Non -Disruptive Deployment:  All updates and patches are delivered as 
+containerized microservices (e.g., Docker containers) which can be hot reloaded without 
+interfering with any underlying SCADA network communications or stopping physical 
+processes. 
+ 
+6.7 Competitive advantage 
+ 
+The component’s competitive advantage is its specific focus on protocol -valid replay 
+behaviour. Signature -based Modbus IDS remains useful for known attacks [15], and 
+cryptographic protection is stronger when it can be deployed [7], [9]. The proposed detect or 
+occupies a different space: it can be added as a monitoring layer and can learn patterns of 
+transaction inconsistency without requiring every field device to support a modified security 
+protocol. Its integration with a wider multi -attack framework also increases value because a 
+customer would receive a common incident view rather than four disconnected research tools. 
+ 
+The strongest defensible differentiator is not the use of XGBoost, since XGBoost is a known 
+algorithm [16]. The potential intellectual property lies in the engineered replay -consistency 
+pipeline, the feature definitions, the transaction -history logic, the model calibration and 
+deployment process, and the way RP4 evidence is fused with other Modbus attack signals. 
+Software copyright can protect the implementation. Any claim of patentability would require 
+professional novelty assessment and should not be assumed in this proposal. 
+ 
+6.8 Intellectual property considerations 
+ 
+All algorithms, protocol parsing code, trained machine learning model weights, fusion logic, 
+and documentation developed across the project belong to the student research team and the 
+university under SLIIT's standard research and intellectual property reg ulations. Third-party 
+academic datasets utilized for training and benchmarking (such as the CIC Modbus 2023 dataset 
+and the MSU/ORNL Gas Pipeline dataset) are restricted strictly to academic benchmarking in 
+accordance with their respective non -commercial open data  licenses [2], [19]. Commercial 
+releases will utilize proprietary baseline profiles and synthetic testbed traffic generated 
+exclusively within our controlled laboratory environment.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PAGE 26
+26  
+7. BUDGET AND JUSTIFICATION 
+ 
+ 
+Category Justification Estimated cost 
+Hardware 
+A normal laptop or desktop computer 
+is enough to train this specific model, 
+since 
+the dataset size does not require 
+specialized hardware 
+0 (no special hardware required) 
+Software licenses 
+Python, pandas, TensorFlow or 
+PyTorch, 
+scikit-learn, Wireshark/tshark, and 
+Scapy are all free and open-source 
+0 
+Cloud services 
+Google Colab is available for free as 
+a 
+backup, in case extra compute is ever 
+needed for a larger training run 
+0 (free tier expected to be 
+sufficient) 
+Human effort My own time spent on research, 
+development, and testing 
+Not separately costed, since this is 
+part of the academic project 
+Dataset access 
+CIC Modbus 2023 and MSU/ORNL 
+are both freely available public 
+academic 
+datasets 
+0 
+Documentation 
+& Printing 
+Interim progress reports, proposal 
+hard copies, logbooks, final 
+dissertation binding, and project 
+presentation posters 
+Required for official academic 
+submissions, progress 
+presentations, and hard-copy 
+archival at the department library: 
+ 
+• Proposal & Progress draft copies: 
+LKR 2,500 
+ 
+• Final project report hard-binding 
+(3 copies): LKR 10,000 
+ 
+ 
+Table 7: Budget and Justification
+PAGE 27
+27  
+8. WORK BREAKDOWN STRUCTURE (WBS) 
+ 
+ 
+Work Package Key Tasks Deliverables 
+WP1 - Research 
+Planning 
+Review literature, define gap, 
+objectives, and methodology. 
+Final research plan and 
+literature review. 
+WP2 - Testbed Setup Build Modbus/TCP master–slave 
+environment and capture normal 
+traffic. 
+Working testbed and 
+normal traffic dataset. 
+WP3 - Replay Attack 
+Generation 
+Create controlled replay attacks and 
+label captured traffic. 
+Labelled normal and 
+replay dataset. 
+WP4 - Transaction 
+Reconstruction 
+Parse packets and rebuild Modbus 
+request-response transactions. 
+Clean transaction-level 
+dataset. 
+WP5 - Feature 
+Engineering 
+Extract transaction ID, timing, 
+duplicates, session, and protocol 
+features. 
+Transaction-consistency 
+feature set. 
+WP6 - Model 
+Development 
+Train and tune the replay detection 
+model and baseline. 
+Trained replay classifier. 
+WP7 - Evaluation Measure precision, recall, F1, FPR, 
+and latency. 
+Model performance 
+results and comparison. 
+WP8 - Integration & 
+Testing 
+Connect RP4 results to the decision-
+fusion and incident-analysis layer. 
+Integrated and tested this 
+component module. 
+WP9 - Documentation 
+& Final Delivery 
+Analyze results and prepare report, 
+presentation, and final evidence. 
+Final report and 
+presentation materials. 
+ 
+Table 8: Work Breakdown Structure
+ 
+PAGE 28
+28  
+9. GANTT CHART 
+ 
+Figure 3: Gantt chart 
+ 
+ 
+ 
+PAGE 29
+29  
+10. REFERENCES LIST 
+ 
+[1] Y. Mo, R. Chabukswar and B. Sinopoli, “Detecting Integrity Attacks on SCADA Systems,” 
+IEEE Transactions on Control Systems Technology, vol. 22, no. 4, pp. 1396–1407, Jul. 2014. 
+ 
+[2] Naha, A. Teixeira, A. Ahlén  and S. Dey, “Sequential Detection of Replay Attacks,” IEEE 
+Transactions on Automatic Control, vol. 68, no. 3, pp. 1941–1948, Mar. 2023. 
+ 
+[3] T.-T. Tran, O.-S. Shin and J. -H. Lee, “Detection of replay attacks in smart grid systems,” 
+in Proc. Int. Conf. Computing, Management and Telecommunications (ComManTel), Ho Chi 
+Minh City, Vietnam, 2013, pp. 298–302. 
+ 
+[4] L. Deng, Y. Peng, C. Liu, X. Xin and Y. Xie, “Intrusion detection method based on support 
+vector machine access of Modbus TCP protocol,” in Proc. IEEE Int. Conf. Internet of Things 
+(iThings), IEEE Green Computing and Communications (GreenCom), IEEE Cyb er, Physical 
+and Social Computing (CPSCom), and IEEE Smart Data (SmartData), Chengdu, China, 2016, 
+pp. 380–383. 
+ 
+[5] K. Boakye-Boateng, A. A. Ghorbani and A. H. Lashkari, “Securing Substations with Trust, 
+Risk Posture, and Multi -Agent Systems: A Comprehensive Approach,” in 2023 20th Annual 
+International Conference on Privacy, Security and Trust (PST), Copenhagen, Den mark, 2023, 
+pp. 1–12. 
+ 
+[6] J. Zhao, J. Wang and L. Yin, “Detection and control against replay attacks in smart grid,” 
+in Proc. 12th Int. Conf. Computational Intelligence and Security (CIS), Wuxi, China, 2016, pp. 
+624–62. 
+ 
+[7] F. Katulić, D. Sumina, S. Groš  and I. Erceg, “Protecting Modbus/TCP -based industrial 
+automation and control systems using message authentication codes,” IEEE Access, vol. 11, 
+pp. 47007–47023, 2023. 
+ 
+[8] D. Benka, D. Horváth, L. Špendla, G. Gašpar and M. Strémy, “Machine Learning -Based 
+Detection of Anomalies, Intrusions, and Threats in Industrial Control Systems,” IEEE Access, 
+vol. 13, pp. 12502–12514, 2025. 
+ 
+[9] I. N. Fovino, A. Carcano, M. Masera  and A. Trombetta, “Design and implementation of a 
+secure Modbus protocol,” in Critical Infrastructure Protection III, Berlin, Germany: Springer, 
+2009, pp. 83–9. 
+ 
+[10] T. Irita and T. Namerikawa, “Detection of replay attack on smart grid with code signal and 
+bargaining game,” in Proc. American Control Conf. (ACC), Seattle, WA, USA, 2017, pp. 
+2112–2117. 
+ 
+[11] R. L and P. Satyanarayana, “Detection and blocking of replay, false command, and false 
+access injection commands in SCADA systems with Modbus protocol,” Security and 
+Communication Networks, vol. 2021, pp. 1–15, 2021, Art. no. 8887666. 
+ 
+[12] N. Goldenberg and A. Wool, “Accurate modeling of Modbus/TCP for intrusion detection 
+in SCADA systems,” International Journal of Critical Infrastructure Protection, vol. 6, no. 2, 
+pp. 63–75, Jun. 2013. 
+PAGE 30
+30  
+ 
+[13] Y. Wang, K. Fan, Y. Lai, Z. Liu, R. Zhou, X. Yao and L. Li, “Intrusion detection of 
+industrial control system based on Modbus TCP protocol,” in Proc. IEEE 13th Int. Symp. 
+Autonomous Decentralized Systems (ISADS), Bangkok, Thailand, 2017, pp. 156–162. 
+ 
+[14] M. Bashendy, S. Eltanbouly, A. Tantawy and A. Erradi, “Design and implementation of 
+cyber-physical attacks on Modbus/TCP protocol,” in Proc. World Congress on Industrial 
+Control Systems Security (WCICSS), 2020. 
+ 
+[15] W. Gao and T. H. Morris, “On cyber attacks and signature based intrusion detection for 
+Modbus based industrial control systems,” Journal of Digital Forensics, Security and Law, vol. 
+9, no. 1, pp. 37–56, 2014. 
+ 
+[16] T. Chen and C. Guestrin, “XGBoost: A scalable tree boosting system,” in Proc. 22nd ACM 
+SIGKDD Int. Conf. Knowledge Discovery and Data Mining, San Francisco, CA, USA, 2016. 
+ 
+[17] A. Dehlaghi-Ghadim, M. H. Moghadam, A. Balador and H. Hansson, “Anomaly detection 
+dataset for industrial control systems,” IEEE Access, vol. 11, pp. 107982–107996, 2023. 
+PAGE 31
+31  
+11. APPENDICES 
+ 
+ 
+Appendix A -  Survey Evidence  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+PAGE 32
+32  
+Appendix B - AI Use Disclosure 
+ 
+ 
+AI Tool Purpose of Use What Was 
+Generated/Assisted 
+How Output Was 
+Verified 
+Final Student 
+Contribution 
+ChatGPT Proposal 
+drafting support, 
+restructuring, 
+methodology 
+clarification and 
+diagram-
+reference 
+planning 
+Draft wording, table 
+structure, proposed 
+schema and reference 
+diagram layouts 
+Student must cross-
+check every claim 
+against the RP4 
+component 
+document, TAF and 
+listed references; 
+verify reference 
+metadata; revise 
+content after 
+supervisor feedback. 
+Student is 
+responsible for 
+literature checking, 
+methodology, 
+technical choices, 
+manual diagrams, 
+implementation, 
+experiments, 
+analysis and defense 
+ 
+ 
+ 
+Appendix C – Mandatory Proposal Evidence and Decision Log 
+ 
+ 
+Date Claim / Problem Evidence 
+Collected 
+Alternatives 
+Considered 
+Decision 
+Made 
+Supervisor 
+Discussion 
+08.05.2026 
+Generic flow 
+features miss real 
+Modbus meaning  
+Read ICS-IDS 
+papers during 
+literature review 
+Rule-based IDS / 
+generic-flow ML 
+/ protocol-aware 
+ML 
+Decided to use 
+transaction 
+consistency 
+analysis for 
+RP4 
+Discussed 
+with 
+supervisor 
+22.08.2026 
+Need a suitable 
+labelled Modbus 
+dataset for RP4. 
+CIC Modbus 
+2023 contains 
+Modbus/ICS 
+traffic suitable 
+for model 
+training and 
+evaluation. 
+Controlled 
+Modbus/TCP 
+testbed data. 
+Selected CIC 
+Modbus 2023 
+as the main 
+public dataset, 
+supported by 
+testbed replay 
+traffic where 
+needed. 
+Discussed 
+with 
+supervisor 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PAGE 33
+33  
+ 
+ 
+Appendix D - CIC DATASET DOWNLOAD FORM  for "CIC_Modbus_Dataset2023" 
+ 

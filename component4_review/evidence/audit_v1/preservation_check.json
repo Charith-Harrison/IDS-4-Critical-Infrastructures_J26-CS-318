@@ -1,0 +1,14 @@
+{
+  "original_protected_files_checked": 23,
+  "all_original_data_models_results_unchanged": true,
+  "intentional_original_changes": [
+    ".gitignore",
+    "app/routes.py",
+    "app/templates/base.html",
+    "README.md",
+    "run_pipeline.py"
+  ],
+  "branch": "shashi-branch",
+  "new_regression_tests_passed": 24,
+  "raw_pcap_extraction_performed": false
+}

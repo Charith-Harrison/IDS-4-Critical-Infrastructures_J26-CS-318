@@ -1,0 +1,5567 @@
+{
+  "inventory": [
+    {
+      "path": ".gitignore",
+      "size": 280,
+      "sha256": "d5ab87d5b06d03817723ff2f77e305bac9f3fab05c61f72ce6840d9095b72947"
+    },
+    {
+      "path": ".vscode/extensions.json",
+      "size": 134,
+      "sha256": "89cea9a8ba158c41d09a9da248e79bdaf0045c2b2ccd9b4578cf1d00d0f939d3"
+    },
+    {
+      "path": ".vscode/launch.json",
+      "size": 1813,
+      "sha256": "44fd344577f5bb91d4c5c63432db53a017ba0ff80d4df727766eb2dd19c3fc37"
+    },
+    {
+      "path": ".vscode/settings.json",
+      "size": 795,
+      "sha256": "56aaf998e77a2544690dab92f7c0e80ddc67993075835327120b2930daccfa0a"
+    },
+    {
+      "path": ".vscode/tasks.json",
+      "size": 1671,
+      "sha256": "77502ccd5b53e20cb333738260d727c060e4870dd291c4f6780d4295ff1cd358"
+    },
+    {
+      "path": "app/__init__.py",
+      "size": 1149,
+      "sha256": "c1f352407a0777b6ff7d85e534de3745ba4008d3b216dfcd5527f9825d9b5ab7"
+    },
+    {
+      "path": "app/routes.py",
+      "size": 58829,
+      "sha256": "bcd9e5ac5ba56b5053883729a850bf01a4f4a22cf6e4b373bdf5336f2c0eea3d"
+    },
+    {
+      "path": "app/static/app.js",
+      "size": 57215,
+      "sha256": "5d2339afe97e7da9a413eab94a47b00ccdc0357e878da6e6b6660e05632c2d6e"
+    },
+    {
+      "path": "app/static/style.css",
+      "size": 15959,
+      "sha256": "85363742497b2e1f2854d822330560d1ab5f8e8a23a8646667aa3b6caca630d7"
+    },
+    {
+      "path": "app/templates/audit.html",
+      "size": 16408,
+      "sha256": "3aeb5a5b0ab1ca237d03ad1583249f94168c414b97eda572d5a33334aff44d9c"
+    },
+    {
+      "path": "app/templates/base.html",
+      "size": 2087,
+      "sha256": "286bbf48e6ec8005e9b21bdf14fa3440ce519c34a34bccd57ec389671c15a704"
+    },
+    {
+      "path": "app/templates/evaluation.html",
+      "size": 17766,
+      "sha256": "ee927f0f064d4c10806e39df1dd34f7fff6bdd701b1d6dccb460e8d4d8095150"
+    },
+    {
+      "path": "app/templates/features.html",
+      "size": 11017,
+      "sha256": "bf5b88a6fe9ea669a15c81022befd1cf076698ce3c36ef85b219a4ed95d1f724"
+    },
+    {
+      "path": "app/templates/training.html",
+      "size": 9924,
+      "sha256": "312c48c3c78e62152f65f283e59f97838b44d2772d4945c01a65ff9b5f5ba52a"
+    },
+    {
+      "path": "app/templates/upload.html",
+      "size": 10966,
+      "sha256": "d50f0b9aea297310f1055f9b4834b3f4116c20e720c681042fe592e34f94eeff"
+    },
+    {
+      "path": "artifacts/audits/data_audit_report.json",
+      "size": 10779,
+      "sha256": "81a1ce80b11de71fc5604979862b777cb7bc4dec88e20f3cae0c258edbed5e85"
+    },
+    {
+      "path": "artifacts/audits/reconstructed_transactions.csv",
+      "size": 24561500,
+      "sha256": "44133e31a881418a8773b8ade6ec82c6bbe30619a94049561424062f8d130c1f"
+    },
+    {
+      "path": "artifacts/audits/RP4_Data_Audit_Report.pdf",
+      "size": 5569,
+      "sha256": "5d07cdee6a97f3f72a4392c0fe6e4185ce2eb4b26a200d472a449c57db292fd7"
+    },
+    {
+      "path": "artifacts/metrics/evaluation_metrics.json",
+      "size": 4535,
+      "sha256": "3fe3db48f265579a3cd491502c734bebbab4f24a1090b6ef5a9dea7d03c4c041"
+    },
+    {
+      "path": "artifacts/models/feature_importance.json",
+      "size": 1528,
+      "sha256": "2c49ce36be159be926dbd23f75379a8fe0cfbc736630267b7a579eb4970c49dd"
+    },
+    {
+      "path": "artifacts/models/pipeline_artifacts.joblib",
+      "size": 5761,
+      "sha256": "5fd8b47568eedd7ea43c26461f58d52fb98d317428e18f324bb31d6cc3935f05"
+    },
+    {
+      "path": "artifacts/models/xgboost_model.json",
+      "size": 156266,
+      "sha256": "e9e0c754bf04d9d4ff3ca0f9269ddaa8f0e4dac9b57bdc5e6f12be4415aa3452"
+    },
+    {
+      "path": "artifacts/models/xgboost_training_history.json",
+      "size": 9999,
+      "sha256": "dda5a05cf56f96051d254d93921bdda69ce0069dc330f6e3ddbe7adf199bcb99"
+    },
+    {
+      "path": "artifacts/predictions/test_predictions.csv",
+      "size": 7066292,
+      "sha256": "125b1598daea59afadc5255ca739f2cf7b4aefa4b235ab3bf6d88bff2d8268da"
+    },
+    {
+      "path": "artifacts/results/extracted_features.csv",
+      "size": 30075836,
+      "sha256": "2c29f1a28cd0e69a35fc81c2c64a4e0410722010348949f4fb39cb7cdc3e8c5a"
+    },
+    {
+      "path": "artifacts/results/feature_dictionary.json",
+      "size": 7264,
+      "sha256": "a6fb7e790a20e5b707b1599abb5c2137ba0ca5bcffdbab2a55f6c34e89d10c83"
+    },
+    {
+      "path": "artifacts/results/normal_protocol_features.csv",
+      "size": 28214222,
+      "sha256": "2fb9a8ff7f3e0be2bb9cdc944e64b55398eec3c39faf1b33af70534a94e25d5f"
+    },
+    {
+      "path": "artifacts/results/replay_protocol_features.csv",
+      "size": 1862196,
+      "sha256": "d959018c6ba0f958b455db1c1c4107683e680a2f0067d13aa1654de0fbf1d3ed"
+    },
+    {
+      "path": "artifacts/session/session_metadata.json",
+      "size": 549,
+      "sha256": "8ce21a78b944965a50aec3805598d07786e6b79fce8596e5f65069c0f158b79d"
+    },
+    {
+      "path": "artifacts/splits/split_manifest.csv",
+      "size": 15292839,
+      "sha256": "b56a641b97030731b66a345457e4539ddee75c22d1dd3ed3e9ae41f840a44890"
+    },
+    {
+      "path": "config/default.yaml",
+      "size": 2379,
+      "sha256": "de0e44cdee972dce423b7361ab83b5206b828a16ecdb75380c7aa437faa2bd2c"
+    },
+    {
+      "path": "data/raw/normal_traffic_baseline.csv",
+      "size": 26117984,
+      "sha256": "70d08fc730a8572d16a08d860be61536ae7565af048c7c7e283004e54fe55b01"
+    },
+    {
+      "path": "data/raw/replay_attacks.csv",
+      "size": 1427736,
+      "sha256": "714587f4511b12400a809f3ba6bd533e10167ff25f353414b4151f5d362918b1"
+    },
+    {
+      "path": "normal_traffic_baseline.csv",
+      "size": 26117984,
+      "sha256": "70d08fc730a8572d16a08d860be61536ae7565af048c7c7e283004e54fe55b01"
+    },
+    {
+      "path": "README.md",
+      "size": 43,
+      "sha256": "b172937dd4ad839c167aef9000b2614cf17010722c2e7cd6c5e889ef4c90c9e1"
+    },
+    {
+      "path": "replay_attacks.csv",
+      "size": 1427736,
+      "sha256": "714587f4511b12400a809f3ba6bd533e10167ff25f353414b4151f5d362918b1"
+    },
+    {
+      "path": "requirements.txt",
+      "size": 173,
+      "sha256": "8bdd3ef06496cdba649bf328bbfdd1d7cd6f4e6a71935aac6e1dabb2fc0a3775"
+    },
+    {
+      "path": "run_app.py",
+      "size": 1276,
+      "sha256": "3d9bf9170e4a38ca5277f7c20723d750e31acadfc71132fcb84bed4f2f383183"
+    },
+    {
+      "path": "run_pipeline.py",
+      "size": 10175,
+      "sha256": "0cbfecef1d14833397276a3ec30521539c82314916998e599ad6623855c75bc6"
+    },
+    {
+      "path": "src/__init__.py",
+      "size": 938,
+      "sha256": "47f1c929a7fbef6d0f6d0b54404bc127e748ec58eb233679f37e29881c1f8bb6"
+    },
+    {
+      "path": "src/baseline.py",
+      "size": 4532,
+      "sha256": "7e8f902098c668cde0593fcffcd13b37b361769b08dfae429d42230023484448"
+    },
+    {
+      "path": "src/data_cleaning.py",
+      "size": 10481,
+      "sha256": "ae25b8ac089d1eb50d0932e2f3a64c21cf5ea665a58cb73a967670bea228bcf1"
+    },
+    {
+      "path": "src/data_loader.py",
+      "size": 15839,
+      "sha256": "8188850a86e350ae5e6b6b4ec5d336a93f1b4330592c769a0f75ccb20757fb39"
+    },
+    {
+      "path": "src/data_validation.py",
+      "size": 9071,
+      "sha256": "d9a2202ae1f7de7c3dea1b5bb8f20abb68a6c7b3f9e25928c9c857a01002439a"
+    },
+    {
+      "path": "src/evaluate_model.py",
+      "size": 12977,
+      "sha256": "6c163876bc4f9febb0ccc41c249a2ad28b4d17d2a3883bd124c4f9f4e1ade8bc"
+    },
+    {
+      "path": "src/excel_exporter.py",
+      "size": 3442,
+      "sha256": "79889a93b38f4577c1edf02319016a642068c2b6a1c57bd269ade4fe3832149f"
+    },
+    {
+      "path": "src/feature_engineering.py",
+      "size": 19654,
+      "sha256": "ad2faae65a9782987b7619dec40f1a4c0cd64581722200ca9bfdffcfddb14b8f"
+    },
+    {
+      "path": "src/pcap_loader.py",
+      "size": 9302,
+      "sha256": "32b6fc0a1d514ab9389c3f4f3c35c0acf3dd6049e8d8572bd619d391d37cd291"
+    },
+    {
+      "path": "src/pdf_generator.py",
+      "size": 13128,
+      "sha256": "18472213df2089cff6899b696028074647131d7536a93d9db1e6a8fee7e62532"
+    },
+    {
+      "path": "src/predictor.py",
+      "size": 4614,
+      "sha256": "311836248a6d87d8623eb68ffac8edb152ae3d994af8b60d003527ea66ffa4f1"
+    },
+    {
+      "path": "src/split_data.py",
+      "size": 11244,
+      "sha256": "10989209e40c1dc06027c60c608f7220d58a1355cb02f4943f9b4dbe3e6f30b6"
+    },
+    {
+      "path": "src/train_model.py",
+      "size": 8589,
+      "sha256": "dd0d089ab4e2e4c69d3aa69c0f3a6b0092d9be14e899e91f2d2323641dab66dd"
+    },
+    {
+      "path": "src/transaction_context.py",
+      "size": 10955,
+      "sha256": "1945bf1cb153cd6bad8d770515c5ea31acc1ac37db0adc4a95b1d90daeccb075"
+    },
+    {
+      "path": "tests/test_extended_functionalities.py",
+      "size": 9811,
+      "sha256": "0eb5cbf431d345c741ba62c3efbbce24db0ab977c8c957342d5105bbd29b3925"
+    },
+    {
+      "path": "tests/test_new_pipeline_features.py",
+      "size": 11217,
+      "sha256": "961772702f60698e581e19bd1a3dc92332264c0987f3d38aad40d42aa584c136"
+    },
+    {
+      "path": "tests/test_verification.py",
+      "size": 11960,
+      "sha256": "aa097a09eaf6e4dae2d90a9b0ed8d0e0e6be96d6a0ccb86c8128a710eaeef751"
+    },
+    {
+      "path": "uploads/active_dataset.json",
+      "size": 359,
+      "sha256": "95ab45e0968e964cd6523c7dee312bdee8d9a6df2ba0e7c79c06b2284da81e0a"
+    },
+    {
+      "path": "uploads/normal/normal_traffic_baseline.csv",
+      "size": 26117984,
+      "sha256": "70d08fc730a8572d16a08d860be61536ae7565af048c7c7e283004e54fe55b01"
+    },
+    {
+      "path": "uploads/normal/sample_test_normal.csv",
+      "size": 152,
+      "sha256": "b0a5934e88dcdc9705549dba132c3af30d6905257e46c33b8aea6fe6bb7e3c45"
+    },
+    {
+      "path": "uploads/normal/temporary_normal.csv",
+      "size": 152,
+      "sha256": "b0a5934e88dcdc9705549dba132c3af30d6905257e46c33b8aea6fe6bb7e3c45"
+    },
+    {
+      "path": "uploads/replay/replay_attacks.csv",
+      "size": 1427736,
+      "sha256": "714587f4511b12400a809f3ba6bd533e10167ff25f353414b4151f5d362918b1"
+    }
+  ],
+  "datasets": {
+    "artifacts/audits/reconstructed_transactions.csv": {
+      "sha256": "44133e31a881418a8773b8ade6ec82c6bbe30619a94049561424062f8d130c1f",
+      "rows": 80753,
+      "columns": [
+        "transaction_id",
+        "capture_id",
+        "source_file",
+        "dataset_category",
+        "request_row",
+        "request_frame",
+        "request_timestamp",
+        "client_ip",
+        "server_ip",
+        "client_port",
+        "server_port",
+        "mbtcp_trans_id",
+        "mbtcp_unit_id",
+        "modbus_func_code",
+        "modbus_ref_num",
+        "modbus_word_cnt",
+        "modbus_bit_cnt",
+        "modbus_val",
+        "payload_len",
+        "request_is_attack",
+        "request_attack_category",
+        "request_attack_sub_type",
+        "response_row",
+        "response_frame",
+        "response_timestamp",
+        "response_is_attack",
+        "response_time",
+        "match_status",
+        "label_conflict",
+        "is_ambiguous",
+        "transaction_is_attack"
+      ],
+      "dtypes": {
+        "transaction_id": "str",
+        "capture_id": "str",
+        "source_file": "str",
+        "dataset_category": "str",
+        "request_row": "int64",
+        "request_frame": "int64",
+        "request_timestamp": "float64",
+        "client_ip": "str",
+        "server_ip": "str",
+        "client_port": "int64",
+        "server_port": "int64",
+        "mbtcp_trans_id": "int64",
+        "mbtcp_unit_id": "int64",
+        "modbus_func_code": "int64",
+        "modbus_ref_num": "float64",
+        "modbus_word_cnt": "float64",
+        "modbus_bit_cnt": "float64",
+        "modbus_val": "float64",
+        "payload_len": "float64",
+        "request_is_attack": "int64",
+        "request_attack_category": "str",
+        "request_attack_sub_type": "str",
+        "response_row": "float64",
+        "response_frame": "float64",
+        "response_timestamp": "float64",
+        "response_is_attack": "float64",
+        "response_time": "float64",
+        "match_status": "str",
+        "label_conflict": "bool",
+        "is_ambiguous": "bool",
+        "transaction_is_attack": "int64"
+      },
+      "nulls": {
+        "transaction_id": 0,
+        "capture_id": 0,
+        "source_file": 0,
+        "dataset_category": 0,
+        "request_row": 0,
+        "request_frame": 0,
+        "request_timestamp": 0,
+        "client_ip": 0,
+        "server_ip": 0,
+        "client_port": 0,
+        "server_port": 0,
+        "mbtcp_trans_id": 0,
+        "mbtcp_unit_id": 0,
+        "modbus_func_code": 0,
+        "modbus_ref_num": 0,
+        "modbus_word_cnt": 0,
+        "modbus_bit_cnt": 0,
+        "modbus_val": 0,
+        "payload_len": 0,
+        "request_is_attack": 0,
+        "request_attack_category": 0,
+        "request_attack_sub_type": 0,
+        "response_row": 2133,
+        "response_frame": 2133,
+        "response_timestamp": 2133,
+        "response_is_attack": 2133,
+        "response_time": 2133,
+        "match_status": 0,
+        "label_conflict": 0,
+        "is_ambiguous": 0,
+        "transaction_is_attack": 0
+      },
+      "exact_duplicate_rows": 0,
+      "transaction_is_attack": {
+        "0": 78679,
+        "1": 2074
+      },
+      "transaction_is_attack_percent": {
+        "0": 97.43167436503907,
+        "1": 2.5683256349609302
+      },
+      "request_is_attack": {
+        "0": 78679,
+        "1": 2074
+      },
+      "request_is_attack_percent": {
+        "0": 97.43167436503907,
+        "1": 2.5683256349609302
+      },
+      "mbtcp_trans_id": {
+        "null": 0,
+        "unique": 39472,
+        "negative": 0,
+        "zero": 8,
+        "quantiles": {
+          "0.0": 0.0,
+          "0.01": 80.0,
+          "0.5": 17010.0,
+          "0.95": 60063.0,
+          "0.99": 61142.0,
+          "1.0": 61669.0
+        }
+      },
+      "response_time": {
+        "null": 2133,
+        "unique": 8695,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 0.000101089477539,
+          "0.01": 0.0001740455627441,
+          "0.5": 0.0011639595031738,
+          "0.95": 0.0031090259552001226,
+          "0.99": 0.04091777086257881,
+          "1.0": 0.7262630462646484
+        }
+      },
+      "capture_id_counts": {
+        "veth5bbeaa2-normal-14.pcap": 12501,
+        "network-wide-normal-14.pcap": 12501,
+        "veth5bbeaa2-normal-13.pcap": 12500,
+        "veth4edc015-normal-4.pcap": 12500,
+        "vethd9e14c0-normal-4.pcap": 12500,
+        "veth8bc3408-normal-4.pcap": 12500,
+        "replay_capture_2": 3213,
+        "replay_capture_1": 2499,
+        "replay_capture_3": 6,
+        "replay_capture_4": 6,
+        "replay_capture_5": 6,
+        "replay_capture_6": 6,
+        "replay_capture_7": 5,
+        "replay_capture_0": 4,
+        "replay_capture_9": 4,
+        "replay_capture_8": 2
+      },
+      "source_file_counts": {
+        "normal_traffic_baseline.csv": 75002,
+        "replay_attacks.csv": 5751
+      },
+      "modbus_func_code_counts": {
+        "1": 30948,
+        "3": 18543,
+        "4": 15487,
+        "2": 15460,
+        "6": 242,
+        "5": 73
+      },
+      "modbus_ref_num_counts": {
+        "8.0": 32816,
+        "5.0": 10700,
+        "14.0": 10150,
+        "13.0": 10142,
+        "35.0": 6216,
+        "25.0": 5370,
+        "15.0": 5350,
+        "1.0": 9
+      },
+      "modbus_word_cnt_counts": {
+        "0.0": 46723,
+        "1.0": 34029,
+        "2.0": 1
+      },
+      "modbus_bit_cnt_counts": {
+        "1.0": 46399,
+        "0.0": 34345,
+        "20.0": 9
+      },
+      "modbus_val_counts": {
+        "1.0": 80501,
+        "0.0": 251,
+        "2.0": 1
+      },
+      "payload_len_counts": {
+        "12.0": 80753
+      },
+      "match_status_counts": {
+        "matched": 78620,
+        "timeout_missing_response": 2133
+      },
+      "timestamp": {
+        "null": 0,
+        "unique": 80737,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 1674360030.295526,
+          "0.01": 1674360743.6983147,
+          "0.5": 1674482905.089763,
+          "0.95": 1675225107.1311948,
+          "0.99": 1678878519.461678,
+          "1.0": 1679546582.992352
+        },
+        "backward_steps": 304,
+        "equal_adjacent": 4,
+        "decimal_digits": {
+          "6": 72787,
+          "5": 7090,
+          "4": 801,
+          "3": 64,
+          "2": 9,
+          "1": 2
+        }
+      },
+      "payload_columns": [
+        "modbus_val",
+        "payload_len"
+      ]
+    },
+    "artifacts/predictions/test_predictions.csv": {
+      "sha256": "125b1598daea59afadc5255ca739f2cf7b4aefa4b235ab3bf6d88bff2d8268da",
+      "rows": 25923,
+      "columns": [
+        "transaction_id",
+        "request_timestamp",
+        "source_dataset",
+        "client_ip",
+        "server_ip",
+        "modbus_func_code",
+        "target_is_attack",
+        "rule_pred",
+        "xgb_pred",
+        "replay_probability",
+        "confidence",
+        "prediction_status",
+        "partition",
+        "capture_id",
+        "source_file",
+        "trans_id_delta",
+        "tid_previously_seen",
+        "request_iat",
+        "is_repeated_command",
+        "duplicate_cmd_freq",
+        "is_timeout",
+        "response_latency"
+      ],
+      "dtypes": {
+        "transaction_id": "str",
+        "request_timestamp": "float64",
+        "source_dataset": "str",
+        "client_ip": "str",
+        "server_ip": "str",
+        "modbus_func_code": "float64",
+        "target_is_attack": "int64",
+        "rule_pred": "int64",
+        "xgb_pred": "int64",
+        "replay_probability": "float64",
+        "confidence": "float64",
+        "prediction_status": "str",
+        "partition": "str",
+        "capture_id": "str",
+        "source_file": "str",
+        "trans_id_delta": "float64",
+        "tid_previously_seen": "float64",
+        "request_iat": "float64",
+        "is_repeated_command": "float64",
+        "duplicate_cmd_freq": "float64",
+        "is_timeout": "float64",
+        "response_latency": "float64"
+      },
+      "nulls": {
+        "transaction_id": 0,
+        "request_timestamp": 0,
+        "source_dataset": 0,
+        "client_ip": 0,
+        "server_ip": 0,
+        "modbus_func_code": 0,
+        "target_is_attack": 0,
+        "rule_pred": 0,
+        "xgb_pred": 0,
+        "replay_probability": 0,
+        "confidence": 0,
+        "prediction_status": 0,
+        "partition": 0,
+        "capture_id": 0,
+        "source_file": 0,
+        "trans_id_delta": 0,
+        "tid_previously_seen": 0,
+        "request_iat": 0,
+        "is_repeated_command": 0,
+        "duplicate_cmd_freq": 0,
+        "is_timeout": 0,
+        "response_latency": 0
+      },
+      "exact_duplicate_rows": 0,
+      "target_is_attack": {
+        "0": 25330,
+        "1": 593
+      },
+      "target_is_attack_percent": {
+        "0": 97.71245612004783,
+        "1": 2.287543879952166
+      },
+      "request_iat": {
+        "null": 0,
+        "unique": 11012,
+        "negative": 0,
+        "zero": 25,
+        "quantiles": {
+          "0.0": 0.0,
+          "0.01": 0.019637842178344717,
+          "0.5": 0.0224168300628662,
+          "0.95": 5.007881045341492,
+          "0.99": 5.41461140632629,
+          "1.0": 58154.48074007034
+        }
+      },
+      "response_latency": {
+        "null": 0,
+        "unique": 6121,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 0.0001070499420166,
+          "0.01": 0.00027921199798581,
+          "0.5": 0.0013809204101562,
+          "0.95": 0.007184576988220121,
+          "0.99": 1.0,
+          "1.0": 1.0
+        }
+      },
+      "capture_id_counts": {
+        "network-wide-normal-14.pcap": 12501,
+        "veth8bc3408-normal-4.pcap": 12500,
+        "replay_capture_2": 887,
+        "replay_capture_3": 6,
+        "replay_capture_4": 6,
+        "replay_capture_5": 6,
+        "replay_capture_6": 6,
+        "replay_capture_7": 5,
+        "replay_capture_9": 4,
+        "replay_capture_8": 2
+      },
+      "source_file_counts": {
+        "normal_traffic_baseline.csv": 25001,
+        "replay_attacks.csv": 922
+      },
+      "modbus_func_code_counts": {
+        "1.0": 9968,
+        "3.0": 5759,
+        "4.0": 4986,
+        "2.0": 4981,
+        "6.0": 207,
+        "5.0": 22
+      },
+      "partition_counts": {
+        "test": 25923
+      },
+      "timestamp": {
+        "null": 0,
+        "unique": 25923,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 1674360030.295526,
+          "0.01": 1674360291.3158379,
+          "0.5": 1674507283.4668,
+          "0.95": 1674512425.3008566,
+          "0.99": 1678880420.7681267,
+          "1.0": 1679546582.992352
+        },
+        "backward_steps": 0,
+        "equal_adjacent": 0,
+        "decimal_digits": {
+          "6": 23338,
+          "5": 2328,
+          "4": 241,
+          "3": 13,
+          "2": 3
+        }
+      },
+      "payload_columns": []
+    },
+    "artifacts/results/extracted_features.csv": {
+      "sha256": "2c29f1a28cd0e69a35fc81c2c64a4e0410722010348949f4fb39cb7cdc3e8c5a",
+      "rows": 80753,
+      "columns": [
+        "transaction_id",
+        "partition",
+        "capture_id",
+        "source_file",
+        "dataset_category",
+        "request_row",
+        "response_row",
+        "request_frame",
+        "response_frame",
+        "request_timestamp",
+        "response_timestamp",
+        "client_ip",
+        "server_ip",
+        "client_port",
+        "server_port",
+        "label_conflict",
+        "target_is_attack",
+        "trans_id_delta",
+        "trans_id_raw_diff",
+        "tid_previously_seen",
+        "request_iat",
+        "time_since_identical_cmd",
+        "is_repeated_command",
+        "repeated_cmd_count_window",
+        "duplicate_cmd_freq",
+        "outstanding_requests",
+        "modbus_func_code",
+        "mbtcp_unit_id",
+        "modbus_ref_num",
+        "modbus_word_cnt",
+        "modbus_bit_cnt",
+        "modbus_val",
+        "payload_len",
+        "is_matched",
+        "is_timeout",
+        "is_ambiguous",
+        "response_latency",
+        "has_response_latency"
+      ],
+      "dtypes": {
+        "transaction_id": "str",
+        "partition": "str",
+        "capture_id": "str",
+        "source_file": "str",
+        "dataset_category": "str",
+        "request_row": "int64",
+        "response_row": "float64",
+        "request_frame": "int64",
+        "response_frame": "float64",
+        "request_timestamp": "float64",
+        "response_timestamp": "float64",
+        "client_ip": "str",
+        "server_ip": "str",
+        "client_port": "int64",
+        "server_port": "int64",
+        "label_conflict": "bool",
+        "target_is_attack": "int64",
+        "trans_id_delta": "float64",
+        "trans_id_raw_diff": "float64",
+        "tid_previously_seen": "float64",
+        "request_iat": "float64",
+        "time_since_identical_cmd": "float64",
+        "is_repeated_command": "float64",
+        "repeated_cmd_count_window": "float64",
+        "duplicate_cmd_freq": "float64",
+        "outstanding_requests": "float64",
+        "modbus_func_code": "float64",
+        "mbtcp_unit_id": "float64",
+        "modbus_ref_num": "float64",
+        "modbus_word_cnt": "float64",
+        "modbus_bit_cnt": "float64",
+        "modbus_val": "float64",
+        "payload_len": "float64",
+        "is_matched": "float64",
+        "is_timeout": "float64",
+        "is_ambiguous": "float64",
+        "response_latency": "float64",
+        "has_response_latency": "float64"
+      },
+      "nulls": {
+        "transaction_id": 0,
+        "partition": 0,
+        "capture_id": 0,
+        "source_file": 0,
+        "dataset_category": 0,
+        "request_row": 0,
+        "response_row": 2133,
+        "request_frame": 0,
+        "response_frame": 2133,
+        "request_timestamp": 0,
+        "response_timestamp": 2133,
+        "client_ip": 0,
+        "server_ip": 0,
+        "client_port": 0,
+        "server_port": 0,
+        "label_conflict": 0,
+        "target_is_attack": 0,
+        "trans_id_delta": 0,
+        "trans_id_raw_diff": 0,
+        "tid_previously_seen": 0,
+        "request_iat": 0,
+        "time_since_identical_cmd": 0,
+        "is_repeated_command": 0,
+        "repeated_cmd_count_window": 0,
+        "duplicate_cmd_freq": 0,
+        "outstanding_requests": 0,
+        "modbus_func_code": 0,
+        "mbtcp_unit_id": 0,
+        "modbus_ref_num": 0,
+        "modbus_word_cnt": 0,
+        "modbus_bit_cnt": 0,
+        "modbus_val": 0,
+        "payload_len": 0,
+        "is_matched": 0,
+        "is_timeout": 0,
+        "is_ambiguous": 0,
+        "response_latency": 0,
+        "has_response_latency": 0
+      },
+      "exact_duplicate_rows": 0,
+      "target_is_attack": {
+        "0": 78679,
+        "1": 2074
+      },
+      "target_is_attack_percent": {
+        "0": 97.43167436503907,
+        "1": 2.5683256349609302
+      },
+      "request_iat": {
+        "null": 0,
+        "unique": 19253,
+        "negative": 0,
+        "zero": 41,
+        "quantiles": {
+          "0.0": 0.0,
+          "0.01": 0.020807523727416927,
+          "0.5": 0.0222170352935791,
+          "0.95": 5.007763862609863,
+          "0.99": 5.381266489028923,
+          "1.0": 58155.28101396561
+        }
+      },
+      "response_latency": {
+        "null": 0,
+        "unique": 8696,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 0.000101089477539,
+          "0.01": 0.0001749992370605,
+          "0.5": 0.0011820793151855,
+          "0.95": 0.006982707977294848,
+          "0.99": 1.0,
+          "1.0": 1.0
+        }
+      },
+      "outstanding_requests": {
+        "null": 0,
+        "unique": 750,
+        "negative": 0,
+        "zero": 77766,
+        "quantiles": {
+          "0.0": 0.0,
+          "0.01": 0.0,
+          "0.5": 0.0,
+          "0.95": 0.0,
+          "0.99": 221.0,
+          "1.0": 749.0
+        }
+      },
+      "capture_id_counts": {
+        "veth5bbeaa2-normal-14.pcap": 12501,
+        "network-wide-normal-14.pcap": 12501,
+        "veth5bbeaa2-normal-13.pcap": 12500,
+        "veth4edc015-normal-4.pcap": 12500,
+        "vethd9e14c0-normal-4.pcap": 12500,
+        "veth8bc3408-normal-4.pcap": 12500,
+        "replay_capture_2": 3213,
+        "replay_capture_1": 2499,
+        "replay_capture_3": 6,
+        "replay_capture_4": 6,
+        "replay_capture_5": 6,
+        "replay_capture_6": 6,
+        "replay_capture_7": 5,
+        "replay_capture_0": 4,
+        "replay_capture_9": 4,
+        "replay_capture_8": 2
+      },
+      "source_file_counts": {
+        "normal_traffic_baseline.csv": 75002,
+        "replay_attacks.csv": 5751
+      },
+      "modbus_func_code_counts": {
+        "1.0": 30948,
+        "3.0": 18543,
+        "4.0": 15487,
+        "2.0": 15460,
+        "6.0": 242,
+        "5.0": 73
+      },
+      "modbus_ref_num_counts": {
+        "8.0": 32816,
+        "5.0": 10700,
+        "14.0": 10150,
+        "13.0": 10142,
+        "35.0": 6216,
+        "25.0": 5370,
+        "15.0": 5350,
+        "1.0": 9
+      },
+      "modbus_word_cnt_counts": {
+        "0.0": 46723,
+        "1.0": 34029,
+        "2.0": 1
+      },
+      "modbus_bit_cnt_counts": {
+        "1.0": 46399,
+        "0.0": 34345,
+        "20.0": 9
+      },
+      "modbus_val_counts": {
+        "1.0": 80501,
+        "0.0": 251,
+        "2.0": 1
+      },
+      "payload_len_counts": {
+        "12.0": 80753
+      },
+      "partition_counts": {
+        "train": 54777,
+        "test": 25923,
+        "gap_excluded": 53
+      },
+      "timestamp": {
+        "null": 0,
+        "unique": 80737,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 1674360030.295526,
+          "0.01": 1674360743.6983147,
+          "0.5": 1674482905.089763,
+          "0.95": 1675225107.1311948,
+          "0.99": 1678878519.461678,
+          "1.0": 1679546582.992352
+        },
+        "backward_steps": 3,
+        "equal_adjacent": 4,
+        "decimal_digits": {
+          "6": 72787,
+          "5": 7090,
+          "4": 801,
+          "3": 64,
+          "2": 9,
+          "1": 2
+        }
+      },
+      "payload_columns": [
+        "modbus_val",
+        "payload_len"
+      ]
+    },
+    "artifacts/results/normal_protocol_features.csv": {
+      "sha256": "2fb9a8ff7f3e0be2bb9cdc944e64b55398eec3c39faf1b33af70534a94e25d5f",
+      "rows": 75002,
+      "columns": [
+        "transaction_id",
+        "partition",
+        "capture_id",
+        "source_file",
+        "dataset_category",
+        "request_row",
+        "response_row",
+        "request_frame",
+        "response_frame",
+        "request_timestamp",
+        "response_timestamp",
+        "client_ip",
+        "server_ip",
+        "client_port",
+        "server_port",
+        "label_conflict",
+        "target_is_attack",
+        "trans_id_delta",
+        "trans_id_raw_diff",
+        "tid_previously_seen",
+        "request_iat",
+        "time_since_identical_cmd",
+        "is_repeated_command",
+        "repeated_cmd_count_window",
+        "duplicate_cmd_freq",
+        "outstanding_requests",
+        "modbus_func_code",
+        "mbtcp_unit_id",
+        "modbus_ref_num",
+        "modbus_word_cnt",
+        "modbus_bit_cnt",
+        "modbus_val",
+        "payload_len",
+        "is_matched",
+        "is_timeout",
+        "is_ambiguous",
+        "response_latency",
+        "has_response_latency"
+      ],
+      "dtypes": {
+        "transaction_id": "str",
+        "partition": "str",
+        "capture_id": "str",
+        "source_file": "str",
+        "dataset_category": "str",
+        "request_row": "int64",
+        "response_row": "float64",
+        "request_frame": "int64",
+        "response_frame": "float64",
+        "request_timestamp": "float64",
+        "response_timestamp": "float64",
+        "client_ip": "str",
+        "server_ip": "str",
+        "client_port": "int64",
+        "server_port": "int64",
+        "label_conflict": "bool",
+        "target_is_attack": "int64",
+        "trans_id_delta": "float64",
+        "trans_id_raw_diff": "float64",
+        "tid_previously_seen": "float64",
+        "request_iat": "float64",
+        "time_since_identical_cmd": "float64",
+        "is_repeated_command": "float64",
+        "repeated_cmd_count_window": "float64",
+        "duplicate_cmd_freq": "float64",
+        "outstanding_requests": "float64",
+        "modbus_func_code": "float64",
+        "mbtcp_unit_id": "float64",
+        "modbus_ref_num": "float64",
+        "modbus_word_cnt": "float64",
+        "modbus_bit_cnt": "float64",
+        "modbus_val": "float64",
+        "payload_len": "float64",
+        "is_matched": "float64",
+        "is_timeout": "float64",
+        "is_ambiguous": "float64",
+        "response_latency": "float64",
+        "has_response_latency": "float64"
+      },
+      "nulls": {
+        "transaction_id": 0,
+        "partition": 0,
+        "capture_id": 0,
+        "source_file": 0,
+        "dataset_category": 0,
+        "request_row": 0,
+        "response_row": 50,
+        "request_frame": 0,
+        "response_frame": 50,
+        "request_timestamp": 0,
+        "response_timestamp": 50,
+        "client_ip": 0,
+        "server_ip": 0,
+        "client_port": 0,
+        "server_port": 0,
+        "label_conflict": 0,
+        "target_is_attack": 0,
+        "trans_id_delta": 0,
+        "trans_id_raw_diff": 0,
+        "tid_previously_seen": 0,
+        "request_iat": 0,
+        "time_since_identical_cmd": 0,
+        "is_repeated_command": 0,
+        "repeated_cmd_count_window": 0,
+        "duplicate_cmd_freq": 0,
+        "outstanding_requests": 0,
+        "modbus_func_code": 0,
+        "mbtcp_unit_id": 0,
+        "modbus_ref_num": 0,
+        "modbus_word_cnt": 0,
+        "modbus_bit_cnt": 0,
+        "modbus_val": 0,
+        "payload_len": 0,
+        "is_matched": 0,
+        "is_timeout": 0,
+        "is_ambiguous": 0,
+        "response_latency": 0,
+        "has_response_latency": 0
+      },
+      "exact_duplicate_rows": 0,
+      "target_is_attack": {
+        "0": 75002
+      },
+      "target_is_attack_percent": {
+        "0": 100.0
+      },
+      "request_iat": {
+        "null": 0,
+        "unique": 15723,
+        "negative": 0,
+        "zero": 12,
+        "quantiles": {
+          "0.0": 0.0,
+          "0.01": 0.02080012321472166,
+          "0.5": 0.0221459865570068,
+          "0.95": 5.006830930709839,
+          "0.99": 5.007993927001953,
+          "1.0": 58155.28101396561
+        }
+      },
+      "response_latency": {
+        "null": 0,
+        "unique": 7209,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 0.000101089477539,
+          "0.01": 0.0001728534698486,
+          "0.5": 0.0011329650878906,
+          "0.95": 0.0025289058685302,
+          "0.99": 0.006803879737853972,
+          "1.0": 1.0
+        }
+      },
+      "outstanding_requests": {
+        "null": 0,
+        "unique": 5,
+        "negative": 0,
+        "zero": 74935,
+        "quantiles": {
+          "0.0": 0.0,
+          "0.01": 0.0,
+          "0.5": 0.0,
+          "0.95": 0.0,
+          "0.99": 0.0,
+          "1.0": 4.0
+        }
+      },
+      "capture_id_counts": {
+        "veth5bbeaa2-normal-14.pcap": 12501,
+        "network-wide-normal-14.pcap": 12501,
+        "veth5bbeaa2-normal-13.pcap": 12500,
+        "veth4edc015-normal-4.pcap": 12500,
+        "vethd9e14c0-normal-4.pcap": 12500,
+        "veth8bc3408-normal-4.pcap": 12500
+      },
+      "source_file_counts": {
+        "normal_traffic_baseline.csv": 75002
+      },
+      "modbus_func_code_counts": {
+        "1.0": 29780,
+        "3.0": 15127,
+        "4.0": 14892,
+        "2.0": 14888,
+        "6.0": 242,
+        "5.0": 73
+      },
+      "modbus_ref_num_counts": {
+        "8.0": 29198,
+        "5.0": 10615,
+        "14.0": 9605,
+        "13.0": 9604,
+        "35.0": 5336,
+        "25.0": 5323,
+        "15.0": 5321
+      },
+      "modbus_word_cnt_counts": {
+        "0.0": 44983,
+        "1.0": 30019
+      },
+      "modbus_bit_cnt_counts": {
+        "1.0": 44668,
+        "0.0": 30334
+      },
+      "modbus_val_counts": {
+        "1.0": 74760,
+        "0.0": 242
+      },
+      "payload_len_counts": {
+        "12.0": 75002
+      },
+      "partition_counts": {
+        "train": 50001,
+        "test": 25001
+      },
+      "timestamp": {
+        "null": 0,
+        "unique": 74986,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 1674360030.295526,
+          "0.01": 1674360713.1363719,
+          "0.5": 1674481924.014726,
+          "0.95": 1674524536.8049538,
+          "0.99": 1674526061.9461274,
+          "1.0": 1674526444.074282
+        },
+        "backward_steps": 2,
+        "equal_adjacent": 4,
+        "decimal_digits": {
+          "6": 67601,
+          "5": 6601,
+          "4": 726,
+          "3": 63,
+          "2": 9,
+          "1": 2
+        }
+      },
+      "payload_columns": [
+        "modbus_val",
+        "payload_len"
+      ]
+    },
+    "artifacts/results/replay_protocol_features.csv": {
+      "sha256": "d959018c6ba0f958b455db1c1c4107683e680a2f0067d13aa1654de0fbf1d3ed",
+      "rows": 5751,
+      "columns": [
+        "transaction_id",
+        "partition",
+        "capture_id",
+        "source_file",
+        "dataset_category",
+        "request_row",
+        "response_row",
+        "request_frame",
+        "response_frame",
+        "request_timestamp",
+        "response_timestamp",
+        "client_ip",
+        "server_ip",
+        "client_port",
+        "server_port",
+        "label_conflict",
+        "target_is_attack",
+        "trans_id_delta",
+        "trans_id_raw_diff",
+        "tid_previously_seen",
+        "request_iat",
+        "time_since_identical_cmd",
+        "is_repeated_command",
+        "repeated_cmd_count_window",
+        "duplicate_cmd_freq",
+        "outstanding_requests",
+        "modbus_func_code",
+        "mbtcp_unit_id",
+        "modbus_ref_num",
+        "modbus_word_cnt",
+        "modbus_bit_cnt",
+        "modbus_val",
+        "payload_len",
+        "is_matched",
+        "is_timeout",
+        "is_ambiguous",
+        "response_latency",
+        "has_response_latency"
+      ],
+      "dtypes": {
+        "transaction_id": "str",
+        "partition": "str",
+        "capture_id": "str",
+        "source_file": "str",
+        "dataset_category": "str",
+        "request_row": "int64",
+        "response_row": "float64",
+        "request_frame": "int64",
+        "response_frame": "float64",
+        "request_timestamp": "float64",
+        "response_timestamp": "float64",
+        "client_ip": "str",
+        "server_ip": "str",
+        "client_port": "int64",
+        "server_port": "int64",
+        "label_conflict": "bool",
+        "target_is_attack": "int64",
+        "trans_id_delta": "float64",
+        "trans_id_raw_diff": "float64",
+        "tid_previously_seen": "float64",
+        "request_iat": "float64",
+        "time_since_identical_cmd": "float64",
+        "is_repeated_command": "float64",
+        "repeated_cmd_count_window": "float64",
+        "duplicate_cmd_freq": "float64",
+        "outstanding_requests": "float64",
+        "modbus_func_code": "float64",
+        "mbtcp_unit_id": "float64",
+        "modbus_ref_num": "float64",
+        "modbus_word_cnt": "float64",
+        "modbus_bit_cnt": "float64",
+        "modbus_val": "float64",
+        "payload_len": "float64",
+        "is_matched": "float64",
+        "is_timeout": "float64",
+        "is_ambiguous": "float64",
+        "response_latency": "float64",
+        "has_response_latency": "float64"
+      },
+      "nulls": {
+        "transaction_id": 0,
+        "partition": 0,
+        "capture_id": 0,
+        "source_file": 0,
+        "dataset_category": 0,
+        "request_row": 0,
+        "response_row": 2083,
+        "request_frame": 0,
+        "response_frame": 2083,
+        "request_timestamp": 0,
+        "response_timestamp": 2083,
+        "client_ip": 0,
+        "server_ip": 0,
+        "client_port": 0,
+        "server_port": 0,
+        "label_conflict": 0,
+        "target_is_attack": 0,
+        "trans_id_delta": 0,
+        "trans_id_raw_diff": 0,
+        "tid_previously_seen": 0,
+        "request_iat": 0,
+        "time_since_identical_cmd": 0,
+        "is_repeated_command": 0,
+        "repeated_cmd_count_window": 0,
+        "duplicate_cmd_freq": 0,
+        "outstanding_requests": 0,
+        "modbus_func_code": 0,
+        "mbtcp_unit_id": 0,
+        "modbus_ref_num": 0,
+        "modbus_word_cnt": 0,
+        "modbus_bit_cnt": 0,
+        "modbus_val": 0,
+        "payload_len": 0,
+        "is_matched": 0,
+        "is_timeout": 0,
+        "is_ambiguous": 0,
+        "response_latency": 0,
+        "has_response_latency": 0
+      },
+      "exact_duplicate_rows": 0,
+      "target_is_attack": {
+        "0": 3677,
+        "1": 2074
+      },
+      "target_is_attack_percent": {
+        "0": 63.936706659711355,
+        "1": 36.063293340288645
+      },
+      "request_iat": {
+        "null": 0,
+        "unique": 5220,
+        "negative": 0,
+        "zero": 29,
+        "quantiles": {
+          "0.0": 0.0,
+          "0.01": 0.021630048751831,
+          "0.5": 5.011934041976929,
+          "0.95": 5.76397705078125,
+          "0.99": 131.12757694721222,
+          "1.0": 654.7160730361938
+        }
+      },
+      "response_latency": {
+        "null": 0,
+        "unique": 2941,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 0.0001540184020996,
+          "0.01": 0.0010880231857299501,
+          "0.5": 0.0386848449707031,
+          "0.95": 1.0,
+          "0.99": 1.0,
+          "1.0": 1.0
+        }
+      },
+      "outstanding_requests": {
+        "null": 0,
+        "unique": 750,
+        "negative": 0,
+        "zero": 2831,
+        "quantiles": {
+          "0.0": 0.0,
+          "0.01": 0.0,
+          "0.5": 2.0,
+          "0.95": 461.5,
+          "0.99": 691.5,
+          "1.0": 749.0
+        }
+      },
+      "capture_id_counts": {
+        "replay_capture_2": 3213,
+        "replay_capture_1": 2499,
+        "replay_capture_3": 6,
+        "replay_capture_4": 6,
+        "replay_capture_5": 6,
+        "replay_capture_6": 6,
+        "replay_capture_7": 5,
+        "replay_capture_0": 4,
+        "replay_capture_9": 4,
+        "replay_capture_8": 2
+      },
+      "source_file_counts": {
+        "replay_attacks.csv": 5751
+      },
+      "modbus_func_code_counts": {
+        "3.0": 3416,
+        "1.0": 1168,
+        "4.0": 595,
+        "2.0": 572
+      },
+      "modbus_ref_num_counts": {
+        "8.0": 3618,
+        "35.0": 880,
+        "14.0": 545,
+        "13.0": 538,
+        "5.0": 85,
+        "25.0": 47,
+        "15.0": 29,
+        "1.0": 9
+      },
+      "modbus_word_cnt_counts": {
+        "1.0": 4010,
+        "0.0": 1740,
+        "2.0": 1
+      },
+      "modbus_bit_cnt_counts": {
+        "0.0": 4011,
+        "1.0": 1731,
+        "20.0": 9
+      },
+      "modbus_val_counts": {
+        "1.0": 5741,
+        "0.0": 9,
+        "2.0": 1
+      },
+      "payload_len_counts": {
+        "12.0": 5751
+      },
+      "partition_counts": {
+        "train": 4776,
+        "test": 922,
+        "gap_excluded": 53
+      },
+      "timestamp": {
+        "null": 0,
+        "unique": 5751,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 1675223325.48644,
+          "0.01": 1675223414.766343,
+          "0.5": 1678871372.916559,
+          "0.95": 1678880348.7395134,
+          "0.99": 1678881098.6012983,
+          "1.0": 1679546582.992352
+        },
+        "backward_steps": 1,
+        "equal_adjacent": 0,
+        "decimal_digits": {
+          "6": 5186,
+          "5": 489,
+          "4": 75,
+          "3": 1
+        }
+      },
+      "payload_columns": [
+        "modbus_val",
+        "payload_len"
+      ]
+    },
+    "artifacts/splits/split_manifest.csv": {
+      "sha256": "b56a641b97030731b66a345457e4539ddee75c22d1dd3ed3e9ae41f840a44890",
+      "rows": 80753,
+      "columns": [
+        "transaction_id",
+        "partition",
+        "capture_id",
+        "source_file",
+        "request_row",
+        "response_row",
+        "request_timestamp",
+        "transaction_is_attack",
+        "split_method"
+      ],
+      "dtypes": {
+        "transaction_id": "str",
+        "partition": "str",
+        "capture_id": "str",
+        "source_file": "str",
+        "request_row": "int64",
+        "response_row": "float64",
+        "request_timestamp": "float64",
+        "transaction_is_attack": "int64",
+        "split_method": "str"
+      },
+      "nulls": {
+        "transaction_id": 0,
+        "partition": 0,
+        "capture_id": 0,
+        "source_file": 0,
+        "request_row": 0,
+        "response_row": 2133,
+        "request_timestamp": 0,
+        "transaction_is_attack": 0,
+        "split_method": 0
+      },
+      "exact_duplicate_rows": 0,
+      "transaction_is_attack": {
+        "0": 78679,
+        "1": 2074
+      },
+      "transaction_is_attack_percent": {
+        "0": 97.43167436503907,
+        "1": 2.5683256349609302
+      },
+      "capture_id_counts": {
+        "veth5bbeaa2-normal-14.pcap": 12501,
+        "network-wide-normal-14.pcap": 12501,
+        "veth5bbeaa2-normal-13.pcap": 12500,
+        "veth4edc015-normal-4.pcap": 12500,
+        "vethd9e14c0-normal-4.pcap": 12500,
+        "veth8bc3408-normal-4.pcap": 12500,
+        "replay_capture_2": 3213,
+        "replay_capture_1": 2499,
+        "replay_capture_3": 6,
+        "replay_capture_4": 6,
+        "replay_capture_5": 6,
+        "replay_capture_6": 6,
+        "replay_capture_7": 5,
+        "replay_capture_0": 4,
+        "replay_capture_9": 4,
+        "replay_capture_8": 2
+      },
+      "source_file_counts": {
+        "normal_traffic_baseline.csv": 75002,
+        "replay_attacks.csv": 5751
+      },
+      "partition_counts": {
+        "train": 54777,
+        "test": 25923,
+        "gap_excluded": 53
+      },
+      "timestamp": {
+        "null": 0,
+        "unique": 80737,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 1674360030.295526,
+          "0.01": 1674360743.6983147,
+          "0.5": 1674482905.089763,
+          "0.95": 1675225107.1311948,
+          "0.99": 1678878519.461678,
+          "1.0": 1679546582.992352
+        },
+        "backward_steps": 304,
+        "equal_adjacent": 4,
+        "decimal_digits": {
+          "6": 72787,
+          "5": 7090,
+          "4": 801,
+          "3": 64,
+          "2": 9,
+          "1": 2
+        }
+      },
+      "payload_columns": []
+    },
+    "data/raw/normal_traffic_baseline.csv": {
+      "sha256": "70d08fc730a8572d16a08d860be61536ae7565af048c7c7e283004e54fe55b01",
+      "rows": 150000,
+      "columns": [
+        "frame_number",
+        "timestamp",
+        "frame_len",
+        "src_ip",
+        "dst_ip",
+        "src_port",
+        "dst_port",
+        "payload_len",
+        "is_request",
+        "tcp_flags_syn",
+        "tcp_flags_ack",
+        "tcp_flags_fin",
+        "tcp_flags_rst",
+        "tcp_flags_psh",
+        "mbtcp_trans_id",
+        "mbtcp_proto_id",
+        "mbtcp_len",
+        "mbtcp_unit_id",
+        "modbus_func_code",
+        "is_exception",
+        "modbus_exception_code",
+        "modbus_ref_num",
+        "modbus_word_cnt",
+        "modbus_bit_cnt",
+        "modbus_byte_cnt",
+        "modbus_val",
+        "len_discrepancy",
+        "has_stacked_frames",
+        "inter_arrival_time",
+        "packet_rate_1s",
+        "response_time",
+        "trans_id_diff",
+        "attack_sub_type",
+        "is_attack",
+        "attack_category",
+        "file_source"
+      ],
+      "dtypes": {
+        "frame_number": "int64",
+        "timestamp": "float64",
+        "frame_len": "int64",
+        "src_ip": "str",
+        "dst_ip": "str",
+        "src_port": "int64",
+        "dst_port": "int64",
+        "payload_len": "int64",
+        "is_request": "int64",
+        "tcp_flags_syn": "int64",
+        "tcp_flags_ack": "int64",
+        "tcp_flags_fin": "int64",
+        "tcp_flags_rst": "int64",
+        "tcp_flags_psh": "int64",
+        "mbtcp_trans_id": "int64",
+        "mbtcp_proto_id": "int64",
+        "mbtcp_len": "int64",
+        "mbtcp_unit_id": "int64",
+        "modbus_func_code": "int64",
+        "is_exception": "int64",
+        "modbus_exception_code": "int64",
+        "modbus_ref_num": "int64",
+        "modbus_word_cnt": "int64",
+        "modbus_bit_cnt": "int64",
+        "modbus_byte_cnt": "int64",
+        "modbus_val": "int64",
+        "len_discrepancy": "int64",
+        "has_stacked_frames": "int64",
+        "inter_arrival_time": "float64",
+        "packet_rate_1s": "int64",
+        "response_time": "float64",
+        "trans_id_diff": "int64",
+        "attack_sub_type": "str",
+        "is_attack": "int64",
+        "attack_category": "str",
+        "file_source": "str"
+      },
+      "nulls": {
+        "frame_number": 0,
+        "timestamp": 0,
+        "frame_len": 0,
+        "src_ip": 0,
+        "dst_ip": 0,
+        "src_port": 0,
+        "dst_port": 0,
+        "payload_len": 0,
+        "is_request": 0,
+        "tcp_flags_syn": 0,
+        "tcp_flags_ack": 0,
+        "tcp_flags_fin": 0,
+        "tcp_flags_rst": 0,
+        "tcp_flags_psh": 0,
+        "mbtcp_trans_id": 0,
+        "mbtcp_proto_id": 0,
+        "mbtcp_len": 0,
+        "mbtcp_unit_id": 0,
+        "modbus_func_code": 0,
+        "is_exception": 0,
+        "modbus_exception_code": 0,
+        "modbus_ref_num": 0,
+        "modbus_word_cnt": 0,
+        "modbus_bit_cnt": 0,
+        "modbus_byte_cnt": 0,
+        "modbus_val": 0,
+        "len_discrepancy": 0,
+        "has_stacked_frames": 0,
+        "inter_arrival_time": 0,
+        "packet_rate_1s": 0,
+        "response_time": 0,
+        "trans_id_diff": 0,
+        "attack_sub_type": 0,
+        "is_attack": 0,
+        "attack_category": 0,
+        "file_source": 0
+      },
+      "exact_duplicate_rows": 0,
+      "is_attack": {
+        "0": 150000
+      },
+      "is_attack_percent": {
+        "0": 100.0
+      },
+      "mbtcp_trans_id": {
+        "null": 0,
+        "unique": 38130,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 1.0,
+          "0.01": 84.0,
+          "0.5": 17164.0,
+          "0.95": 60159.0,
+          "0.99": 61161.0,
+          "1.0": 61669.0
+        }
+      },
+      "response_time": {
+        "null": 0,
+        "unique": 4860,
+        "negative": 0,
+        "zero": 75007,
+        "quantiles": {
+          "0.0": 0.0,
+          "0.01": 0.0,
+          "0.5": 0.0,
+          "0.95": 0.001991,
+          "0.99": 0.004216030000000028,
+          "1.0": 41.071027
+        }
+      },
+      "trans_id_diff": {
+        "null": 0,
+        "unique": 215,
+        "negative": 7854,
+        "zero": 73257,
+        "quantiles": {
+          "0.0": -27518.0,
+          "0.01": -104.0,
+          "0.5": 0.0,
+          "0.95": 1.0,
+          "0.99": 101.0,
+          "1.0": 11143.0
+        }
+      },
+      "file_source_counts": {
+        "veth5bbeaa2-normal-13.pcap": 25000,
+        "veth5bbeaa2-normal-14.pcap": 25000,
+        "veth4edc015-normal-4.pcap": 25000,
+        "vethd9e14c0-normal-4.pcap": 25000,
+        "veth8bc3408-normal-4.pcap": 25000,
+        "network-wide-normal-14.pcap": 25000
+      },
+      "src_ip_counts": {
+        "185.175.0.3": 75002,
+        "185.175.0.5": 26594,
+        "185.175.0.4": 26475,
+        "185.175.0.8": 21929
+      },
+      "dst_ip_counts": {
+        "185.175.0.3": 74998,
+        "185.175.0.5": 26595,
+        "185.175.0.4": 26477,
+        "185.175.0.8": 21930
+      },
+      "src_port_counts": {
+        "distinct": 14117,
+        "top_30": {
+          "502": 74998,
+          "41408": 8,
+          "41412": 8,
+          "41414": 8,
+          "41416": 8,
+          "41418": 8,
+          "41422": 8,
+          "41430": 8,
+          "41432": 8,
+          "41436": 8,
+          "41442": 8,
+          "41444": 8,
+          "41446": 8,
+          "41448": 8,
+          "41450": 8,
+          "41452": 8,
+          "41454": 8,
+          "41458": 8,
+          "41468": 8,
+          "41470": 8,
+          "41476": 8,
+          "41480": 8,
+          "41484": 8,
+          "41488": 8,
+          "41490": 8,
+          "41494": 8,
+          "41496": 8,
+          "41498": 8,
+          "41500": 8,
+          "41502": 8
+        }
+      },
+      "dst_port_counts": {
+        "distinct": 14117,
+        "top_30": {
+          "502": 75002,
+          "41408": 8,
+          "41412": 8,
+          "41414": 8,
+          "41416": 8,
+          "41418": 8,
+          "41422": 8,
+          "41430": 8,
+          "41432": 8,
+          "41436": 8,
+          "41442": 8,
+          "41444": 8,
+          "41446": 8,
+          "41448": 8,
+          "41450": 8,
+          "41452": 8,
+          "41454": 8,
+          "41458": 8,
+          "41468": 8,
+          "41470": 8,
+          "41476": 8,
+          "41480": 8,
+          "41484": 8,
+          "41488": 8,
+          "41490": 8,
+          "41494": 8,
+          "41496": 8,
+          "41498": 8,
+          "41500": 8,
+          "41502": 8
+        }
+      },
+      "modbus_func_code_counts": {
+        "1": 59558,
+        "3": 30254,
+        "4": 29784,
+        "2": 29774,
+        "6": 484,
+        "5": 146
+      },
+      "is_request_counts": {
+        "1": 75002,
+        "0": 74998
+      },
+      "modbus_ref_num_counts": {
+        "0": 74683,
+        "8": 29413,
+        "5": 10615,
+        "14": 9626,
+        "13": 9625,
+        "35": 5363,
+        "25": 5339,
+        "15": 5336
+      },
+      "modbus_word_cnt_counts": {
+        "0": 119981,
+        "1": 30019
+      },
+      "modbus_bit_cnt_counts": {
+        "0": 105332,
+        "1": 44668
+      },
+      "modbus_byte_cnt_counts": {
+        "0": 75317,
+        "1": 44664,
+        "2": 30019
+      },
+      "modbus_val_counts": {
+        "0": 75167,
+        "1": 74833
+      },
+      "payload_len_counts": {
+        "12": 75317,
+        "10": 44664,
+        "11": 30019
+      },
+      "frame_len_counts": {
+        "78": 75317,
+        "76": 44664,
+        "77": 30019
+      },
+      "mbtcp_len_counts": {
+        "6": 75317,
+        "4": 44664,
+        "5": 30019
+      },
+      "is_exception_counts": {
+        "0": 150000
+      },
+      "mbtcp_proto_id_counts": {
+        "0": 150000
+      },
+      "len_discrepancy_counts": {
+        "0": 150000
+      },
+      "has_stacked_frames_counts": {
+        "0": 150000
+      },
+      "timestamp": {
+        "null": 0,
+        "unique": 149983,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 1674360030.274995,
+          "0.01": 1674360713.1198652,
+          "0.5": 1674481414.9144154,
+          "0.95": 1674524536.8060732,
+          "0.99": 1674526061.9463625,
+          "1.0": 1674526444.074282
+        },
+        "backward_steps": 2,
+        "equal_adjacent": 4,
+        "decimal_digits": {
+          "6": 150000
+        }
+      },
+      "frame_resets": [
+        25000,
+        50000,
+        75000,
+        100000,
+        125000
+      ],
+      "endpoint_pairs": {
+        "185.175.0.3 -> 185.175.0.5": 26595,
+        "185.175.0.5 -> 185.175.0.3": 26594,
+        "185.175.0.3 -> 185.175.0.4": 26477,
+        "185.175.0.4 -> 185.175.0.3": 26475,
+        "185.175.0.3 -> 185.175.0.8": 21930,
+        "185.175.0.8 -> 185.175.0.3": 21929
+      },
+      "payload_columns": [
+        "payload_len",
+        "modbus_byte_cnt",
+        "modbus_val",
+        "has_stacked_frames",
+        "inter_arrival_time"
+      ],
+      "observed_segments": [
+        {
+          "observed_segment": 1,
+          "rows": 25000,
+          "positives": 0,
+          "start": 1674481924.004201,
+          "end": 1674486194.498424,
+          "frame_start": 3,
+          "frame_end": 133331
+        },
+        {
+          "observed_segment": 2,
+          "rows": 25000,
+          "positives": 0,
+          "start": 1674520590.864227,
+          "end": 1674526444.074282,
+          "frame_start": 8,
+          "frame_end": 131762
+        },
+        {
+          "observed_segment": 3,
+          "rows": 9372,
+          "positives": 0,
+          "start": 1674360636.658912,
+          "end": 1674365484.387946,
+          "frame_start": 283,
+          "frame_end": 52893
+        },
+        {
+          "observed_segment": 4,
+          "rows": 15628,
+          "positives": 0,
+          "start": 1674423639.660549,
+          "end": 1674431602.346113,
+          "frame_start": 53278,
+          "frame_end": 140087
+        },
+        {
+          "observed_segment": 5,
+          "rows": 25000,
+          "positives": 0,
+          "start": 1674468178.561445,
+          "end": 1674480905.82463,
+          "frame_start": 2,
+          "frame_end": 125023
+        },
+        {
+          "observed_segment": 6,
+          "rows": 10585,
+          "positives": 0,
+          "start": 1674360030.274995,
+          "end": 1674365489.464286,
+          "frame_start": 2,
+          "frame_end": 59586
+        },
+        {
+          "observed_segment": 7,
+          "rows": 14415,
+          "positives": 0,
+          "start": 1674423643.943761,
+          "end": 1674430797.41358,
+          "frame_start": 59833,
+          "frame_end": 140753
+        },
+        {
+          "observed_segment": 8,
+          "rows": 9442,
+          "positives": 0,
+          "start": 1674507125.777466,
+          "end": 1674508725.771959,
+          "frame_start": 3,
+          "frame_end": 50662
+        },
+        {
+          "observed_segment": 9,
+          "rows": 1251,
+          "positives": 0,
+          "start": 1674509152.664583,
+          "end": 1674509381.546108,
+          "frame_start": 51402,
+          "frame_end": 58238
+        },
+        {
+          "observed_segment": 10,
+          "rows": 14307,
+          "positives": 0,
+          "start": 1674510122.314705,
+          "end": 1674512552.536585,
+          "frame_start": 58405,
+          "frame_end": 134620
+        }
+      ],
+      "read_response_values": {
+        "rows": 74683,
+        "values": {
+          "0": 74683
+        }
+      }
+    },
+    "data/raw/replay_attacks.csv": {
+      "sha256": "714587f4511b12400a809f3ba6bd533e10167ff25f353414b4151f5d362918b1",
+      "rows": 9494,
+      "columns": [
+        "frame_number",
+        "timestamp",
+        "frame_len",
+        "src_ip",
+        "dst_ip",
+        "src_port",
+        "dst_port",
+        "payload_len",
+        "is_request",
+        "tcp_flags_syn",
+        "tcp_flags_ack",
+        "tcp_flags_fin",
+        "tcp_flags_rst",
+        "tcp_flags_psh",
+        "mbtcp_trans_id",
+        "mbtcp_proto_id",
+        "mbtcp_len",
+        "mbtcp_unit_id",
+        "modbus_func_code",
+        "is_exception",
+        "modbus_exception_code",
+        "modbus_ref_num",
+        "modbus_word_cnt",
+        "modbus_bit_cnt",
+        "modbus_byte_cnt",
+        "modbus_val",
+        "len_discrepancy",
+        "has_stacked_frames",
+        "inter_arrival_time",
+        "packet_rate_1s",
+        "response_time",
+        "trans_id_diff",
+        "attack_sub_type",
+        "is_attack",
+        "attack_category"
+      ],
+      "dtypes": {
+        "frame_number": "int64",
+        "timestamp": "float64",
+        "frame_len": "int64",
+        "src_ip": "str",
+        "dst_ip": "str",
+        "src_port": "int64",
+        "dst_port": "int64",
+        "payload_len": "int64",
+        "is_request": "int64",
+        "tcp_flags_syn": "int64",
+        "tcp_flags_ack": "int64",
+        "tcp_flags_fin": "int64",
+        "tcp_flags_rst": "int64",
+        "tcp_flags_psh": "int64",
+        "mbtcp_trans_id": "int64",
+        "mbtcp_proto_id": "int64",
+        "mbtcp_len": "int64",
+        "mbtcp_unit_id": "int64",
+        "modbus_func_code": "int64",
+        "is_exception": "int64",
+        "modbus_exception_code": "int64",
+        "modbus_ref_num": "int64",
+        "modbus_word_cnt": "int64",
+        "modbus_bit_cnt": "int64",
+        "modbus_byte_cnt": "int64",
+        "modbus_val": "int64",
+        "len_discrepancy": "int64",
+        "has_stacked_frames": "int64",
+        "inter_arrival_time": "float64",
+        "packet_rate_1s": "int64",
+        "response_time": "float64",
+        "trans_id_diff": "int64",
+        "attack_sub_type": "str",
+        "is_attack": "int64",
+        "attack_category": "str"
+      },
+      "nulls": {
+        "frame_number": 0,
+        "timestamp": 0,
+        "frame_len": 0,
+        "src_ip": 0,
+        "dst_ip": 0,
+        "src_port": 0,
+        "dst_port": 0,
+        "payload_len": 0,
+        "is_request": 0,
+        "tcp_flags_syn": 0,
+        "tcp_flags_ack": 0,
+        "tcp_flags_fin": 0,
+        "tcp_flags_rst": 0,
+        "tcp_flags_psh": 0,
+        "mbtcp_trans_id": 0,
+        "mbtcp_proto_id": 0,
+        "mbtcp_len": 0,
+        "mbtcp_unit_id": 0,
+        "modbus_func_code": 0,
+        "is_exception": 0,
+        "modbus_exception_code": 0,
+        "modbus_ref_num": 0,
+        "modbus_word_cnt": 0,
+        "modbus_bit_cnt": 0,
+        "modbus_byte_cnt": 0,
+        "modbus_val": 0,
+        "len_discrepancy": 0,
+        "has_stacked_frames": 0,
+        "inter_arrival_time": 0,
+        "packet_rate_1s": 0,
+        "response_time": 0,
+        "trans_id_diff": 0,
+        "attack_sub_type": 0,
+        "is_attack": 0,
+        "attack_category": 0
+      },
+      "exact_duplicate_rows": 0,
+      "is_attack": {
+        "0": 7247,
+        "1": 2247
+      },
+      "is_attack_percent": {
+        "0": 76.33242047609016,
+        "1": 23.667579523909836
+      },
+      "mbtcp_trans_id": {
+        "null": 0,
+        "unique": 5777,
+        "negative": 0,
+        "zero": 10,
+        "quantiles": {
+          "0.0": 0.0,
+          "0.01": 42.0,
+          "0.5": 2365.5,
+          "0.95": 47585.5,
+          "0.99": 51824.7,
+          "1.0": 52640.0
+        }
+      },
+      "response_time": {
+        "null": 0,
+        "unique": 2770,
+        "negative": 0,
+        "zero": 5751,
+        "quantiles": {
+          "0.0": 0.0,
+          "0.01": 0.0,
+          "0.5": 0.0,
+          "0.95": 0.09664910000000006,
+          "0.99": 0.21029969999999956,
+          "1.0": 0.720804
+        }
+      },
+      "trans_id_diff": {
+        "null": 0,
+        "unique": 2249,
+        "negative": 2244,
+        "zero": 3586,
+        "quantiles": {
+          "0.0": -46155.0,
+          "0.01": -31129.28,
+          "0.5": 0.0,
+          "0.95": 29262.4,
+          "0.99": 30824.559999999998,
+          "1.0": 31238.0
+        }
+      },
+      "src_ip_counts": {
+        "185.175.0.3": 5712,
+        "185.175.0.4": 3700,
+        "185.175.0.2": 35,
+        "185.175.0.5": 31,
+        "185.175.0.8": 12,
+        "185.175.0.7": 4
+      },
+      "dst_ip_counts": {
+        "185.175.0.4": 4633,
+        "185.175.0.3": 3708,
+        "185.175.0.5": 1046,
+        "185.175.0.8": 72,
+        "185.175.0.2": 35
+      },
+      "src_port_counts": {
+        "distinct": 4906,
+        "top_30": {
+          "502": 3743,
+          "53984": 4,
+          "55298": 4,
+          "55908": 4,
+          "57490": 4,
+          "33732": 4,
+          "45288": 4,
+          "53456": 3,
+          "53812": 3,
+          "53842": 3,
+          "53846": 3,
+          "53848": 3,
+          "53870": 3,
+          "53894": 3,
+          "54116": 3,
+          "54148": 3,
+          "54208": 3,
+          "54320": 3,
+          "54778": 3,
+          "54856": 3,
+          "54898": 3,
+          "54914": 3,
+          "54996": 3,
+          "55078": 3,
+          "55156": 3,
+          "55224": 3,
+          "55362": 3,
+          "55490": 3,
+          "55496": 3,
+          "55634": 3
+        }
+      },
+      "dst_port_counts": {
+        "distinct": 3489,
+        "top_30": {
+          "502": 5751,
+          "53456": 3,
+          "53812": 3,
+          "53870": 3,
+          "54208": 3,
+          "55156": 3,
+          "55224": 3,
+          "55298": 3,
+          "55496": 3,
+          "55722": 3,
+          "55812": 3,
+          "57424": 3,
+          "53482": 2,
+          "53534": 2,
+          "53642": 2,
+          "53746": 2,
+          "53768": 2,
+          "53778": 2,
+          "53834": 2,
+          "53842": 2,
+          "53846": 2,
+          "53848": 2,
+          "53886": 2,
+          "53894": 2,
+          "53900": 2,
+          "53914": 2,
+          "53932": 2,
+          "53984": 2,
+          "54004": 2,
+          "54036": 2
+        }
+      },
+      "modbus_func_code_counts": {
+        "3": 4976,
+        "1": 2255,
+        "4": 1149,
+        "2": 1114
+      },
+      "is_request_counts": {
+        "1": 5751,
+        "0": 3743
+      },
+      "modbus_ref_num_counts": {
+        "0": 3743,
+        "8": 3618,
+        "35": 880,
+        "14": 545,
+        "13": 538,
+        "5": 85,
+        "25": 47,
+        "15": 29,
+        "1": 9
+      },
+      "modbus_word_cnt_counts": {
+        "0": 5483,
+        "1": 4010,
+        "2": 1
+      },
+      "modbus_bit_cnt_counts": {
+        "0": 7754,
+        "1": 1731,
+        "20": 9
+      },
+      "modbus_byte_cnt_counts": {
+        "0": 5751,
+        "2": 2114,
+        "1": 1628,
+        "3": 1
+      },
+      "modbus_val_counts": {
+        "1": 5741,
+        "0": 3752,
+        "2": 1
+      },
+      "payload_len_counts": {
+        "12": 5752,
+        "11": 2114,
+        "10": 1628
+      },
+      "frame_len_counts": {
+        "78": 5752,
+        "77": 2114,
+        "76": 1628
+      },
+      "mbtcp_len_counts": {
+        "6": 5752,
+        "5": 2114,
+        "4": 1628
+      },
+      "is_exception_counts": {
+        "0": 9494
+      },
+      "mbtcp_proto_id_counts": {
+        "0": 9494
+      },
+      "len_discrepancy_counts": {
+        "0": 9494
+      },
+      "has_stacked_frames_counts": {
+        "0": 9494
+      },
+      "timestamp": {
+        "null": 0,
+        "unique": 9494,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 1675223325.48644,
+          "0.01": 1675223406.6942787,
+          "0.5": 1675225783.272701,
+          "0.95": 1678880041.3502188,
+          "0.99": 1678881089.0182858,
+          "1.0": 1679546582.992797
+        },
+        "backward_steps": 1,
+        "equal_adjacent": 0,
+        "decimal_digits": {
+          "6": 9494
+        }
+      },
+      "frame_resets": [
+        4,
+        5000,
+        9424
+      ],
+      "endpoint_pairs": {
+        "185.175.0.3 -> 185.175.0.4": 4618,
+        "185.175.0.4 -> 185.175.0.3": 3689,
+        "185.175.0.3 -> 185.175.0.5": 1035,
+        "185.175.0.3 -> 185.175.0.8": 59,
+        "185.175.0.5 -> 185.175.0.3": 19,
+        "185.175.0.2 -> 185.175.0.8": 13,
+        "185.175.0.5 -> 185.175.0.2": 12,
+        "185.175.0.8 -> 185.175.0.2": 12,
+        "185.175.0.2 -> 185.175.0.5": 11,
+        "185.175.0.2 -> 185.175.0.4": 11,
+        "185.175.0.4 -> 185.175.0.2": 11,
+        "185.175.0.7 -> 185.175.0.4": 4
+      },
+      "payload_columns": [
+        "payload_len",
+        "modbus_byte_cnt",
+        "modbus_val",
+        "has_stacked_frames",
+        "inter_arrival_time"
+      ],
+      "observed_segments": [
+        {
+          "observed_segment": 1,
+          "rows": 4,
+          "positives": 0,
+          "start": 1675256622.70579,
+          "end": 1675256777.70174,
+          "frame_start": 480,
+          "frame_end": 516
+        },
+        {
+          "observed_segment": 2,
+          "rows": 4996,
+          "positives": 0,
+          "start": 1675223325.48644,
+          "end": 1675225910.727015,
+          "frame_start": 5,
+          "frame_end": 27948
+        },
+        {
+          "observed_segment": 3,
+          "rows": 4424,
+          "positives": 2212,
+          "start": 1678870414.805525,
+          "end": 1678881156.665522,
+          "frame_start": 64,
+          "frame_end": 299126
+        },
+        {
+          "observed_segment": 4,
+          "rows": 12,
+          "positives": 6,
+          "start": 1679539957.149365,
+          "end": 1679540021.814174,
+          "frame_start": 46246,
+          "frame_end": 48358
+        },
+        {
+          "observed_segment": 5,
+          "rows": 12,
+          "positives": 6,
+          "start": 1679541220.689726,
+          "end": 1679541287.183009,
+          "frame_start": 92851,
+          "frame_end": 95778
+        },
+        {
+          "observed_segment": 6,
+          "rows": 12,
+          "positives": 6,
+          "start": 1679542184.25562,
+          "end": 1679542246.564995,
+          "frame_start": 128418,
+          "frame_end": 131283
+        },
+        {
+          "observed_segment": 7,
+          "rows": 12,
+          "positives": 6,
+          "start": 1679543865.509983,
+          "end": 1679543930.728626,
+          "frame_start": 190413,
+          "frame_end": 192508
+        },
+        {
+          "observed_segment": 8,
+          "rows": 10,
+          "positives": 5,
+          "start": 1679544767.24382,
+          "end": 1679544838.60795,
+          "frame_start": 222981,
+          "frame_end": 225222
+        },
+        {
+          "observed_segment": 9,
+          "rows": 4,
+          "positives": 2,
+          "start": 1679546362.648966,
+          "end": 1679546362.67068,
+          "frame_start": 282441,
+          "frame_end": 282455
+        },
+        {
+          "observed_segment": 10,
+          "rows": 8,
+          "positives": 4,
+          "start": 1679546532.984944,
+          "end": 1679546582.992797,
+          "frame_start": 288934,
+          "frame_end": 290532
+        }
+      ],
+      "read_response_values": {
+        "rows": 3743,
+        "values": {
+          "0": 3743
+        }
+      }
+    },
+    "normal_traffic_baseline.csv": {
+      "sha256": "70d08fc730a8572d16a08d860be61536ae7565af048c7c7e283004e54fe55b01",
+      "rows": 150000,
+      "columns": [
+        "frame_number",
+        "timestamp",
+        "frame_len",
+        "src_ip",
+        "dst_ip",
+        "src_port",
+        "dst_port",
+        "payload_len",
+        "is_request",
+        "tcp_flags_syn",
+        "tcp_flags_ack",
+        "tcp_flags_fin",
+        "tcp_flags_rst",
+        "tcp_flags_psh",
+        "mbtcp_trans_id",
+        "mbtcp_proto_id",
+        "mbtcp_len",
+        "mbtcp_unit_id",
+        "modbus_func_code",
+        "is_exception",
+        "modbus_exception_code",
+        "modbus_ref_num",
+        "modbus_word_cnt",
+        "modbus_bit_cnt",
+        "modbus_byte_cnt",
+        "modbus_val",
+        "len_discrepancy",
+        "has_stacked_frames",
+        "inter_arrival_time",
+        "packet_rate_1s",
+        "response_time",
+        "trans_id_diff",
+        "attack_sub_type",
+        "is_attack",
+        "attack_category",
+        "file_source"
+      ],
+      "dtypes": {
+        "frame_number": "int64",
+        "timestamp": "float64",
+        "frame_len": "int64",
+        "src_ip": "str",
+        "dst_ip": "str",
+        "src_port": "int64",
+        "dst_port": "int64",
+        "payload_len": "int64",
+        "is_request": "int64",
+        "tcp_flags_syn": "int64",
+        "tcp_flags_ack": "int64",
+        "tcp_flags_fin": "int64",
+        "tcp_flags_rst": "int64",
+        "tcp_flags_psh": "int64",
+        "mbtcp_trans_id": "int64",
+        "mbtcp_proto_id": "int64",
+        "mbtcp_len": "int64",
+        "mbtcp_unit_id": "int64",
+        "modbus_func_code": "int64",
+        "is_exception": "int64",
+        "modbus_exception_code": "int64",
+        "modbus_ref_num": "int64",
+        "modbus_word_cnt": "int64",
+        "modbus_bit_cnt": "int64",
+        "modbus_byte_cnt": "int64",
+        "modbus_val": "int64",
+        "len_discrepancy": "int64",
+        "has_stacked_frames": "int64",
+        "inter_arrival_time": "float64",
+        "packet_rate_1s": "int64",
+        "response_time": "float64",
+        "trans_id_diff": "int64",
+        "attack_sub_type": "str",
+        "is_attack": "int64",
+        "attack_category": "str",
+        "file_source": "str"
+      },
+      "nulls": {
+        "frame_number": 0,
+        "timestamp": 0,
+        "frame_len": 0,
+        "src_ip": 0,
+        "dst_ip": 0,
+        "src_port": 0,
+        "dst_port": 0,
+        "payload_len": 0,
+        "is_request": 0,
+        "tcp_flags_syn": 0,
+        "tcp_flags_ack": 0,
+        "tcp_flags_fin": 0,
+        "tcp_flags_rst": 0,
+        "tcp_flags_psh": 0,
+        "mbtcp_trans_id": 0,
+        "mbtcp_proto_id": 0,
+        "mbtcp_len": 0,
+        "mbtcp_unit_id": 0,
+        "modbus_func_code": 0,
+        "is_exception": 0,
+        "modbus_exception_code": 0,
+        "modbus_ref_num": 0,
+        "modbus_word_cnt": 0,
+        "modbus_bit_cnt": 0,
+        "modbus_byte_cnt": 0,
+        "modbus_val": 0,
+        "len_discrepancy": 0,
+        "has_stacked_frames": 0,
+        "inter_arrival_time": 0,
+        "packet_rate_1s": 0,
+        "response_time": 0,
+        "trans_id_diff": 0,
+        "attack_sub_type": 0,
+        "is_attack": 0,
+        "attack_category": 0,
+        "file_source": 0
+      },
+      "exact_duplicate_rows": 0,
+      "is_attack": {
+        "0": 150000
+      },
+      "is_attack_percent": {
+        "0": 100.0
+      },
+      "mbtcp_trans_id": {
+        "null": 0,
+        "unique": 38130,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 1.0,
+          "0.01": 84.0,
+          "0.5": 17164.0,
+          "0.95": 60159.0,
+          "0.99": 61161.0,
+          "1.0": 61669.0
+        }
+      },
+      "response_time": {
+        "null": 0,
+        "unique": 4860,
+        "negative": 0,
+        "zero": 75007,
+        "quantiles": {
+          "0.0": 0.0,
+          "0.01": 0.0,
+          "0.5": 0.0,
+          "0.95": 0.001991,
+          "0.99": 0.004216030000000028,
+          "1.0": 41.071027
+        }
+      },
+      "trans_id_diff": {
+        "null": 0,
+        "unique": 215,
+        "negative": 7854,
+        "zero": 73257,
+        "quantiles": {
+          "0.0": -27518.0,
+          "0.01": -104.0,
+          "0.5": 0.0,
+          "0.95": 1.0,
+          "0.99": 101.0,
+          "1.0": 11143.0
+        }
+      },
+      "file_source_counts": {
+        "veth5bbeaa2-normal-13.pcap": 25000,
+        "veth5bbeaa2-normal-14.pcap": 25000,
+        "veth4edc015-normal-4.pcap": 25000,
+        "vethd9e14c0-normal-4.pcap": 25000,
+        "veth8bc3408-normal-4.pcap": 25000,
+        "network-wide-normal-14.pcap": 25000
+      },
+      "src_ip_counts": {
+        "185.175.0.3": 75002,
+        "185.175.0.5": 26594,
+        "185.175.0.4": 26475,
+        "185.175.0.8": 21929
+      },
+      "dst_ip_counts": {
+        "185.175.0.3": 74998,
+        "185.175.0.5": 26595,
+        "185.175.0.4": 26477,
+        "185.175.0.8": 21930
+      },
+      "src_port_counts": {
+        "distinct": 14117,
+        "top_30": {
+          "502": 74998,
+          "41408": 8,
+          "41412": 8,
+          "41414": 8,
+          "41416": 8,
+          "41418": 8,
+          "41422": 8,
+          "41430": 8,
+          "41432": 8,
+          "41436": 8,
+          "41442": 8,
+          "41444": 8,
+          "41446": 8,
+          "41448": 8,
+          "41450": 8,
+          "41452": 8,
+          "41454": 8,
+          "41458": 8,
+          "41468": 8,
+          "41470": 8,
+          "41476": 8,
+          "41480": 8,
+          "41484": 8,
+          "41488": 8,
+          "41490": 8,
+          "41494": 8,
+          "41496": 8,
+          "41498": 8,
+          "41500": 8,
+          "41502": 8
+        }
+      },
+      "dst_port_counts": {
+        "distinct": 14117,
+        "top_30": {
+          "502": 75002,
+          "41408": 8,
+          "41412": 8,
+          "41414": 8,
+          "41416": 8,
+          "41418": 8,
+          "41422": 8,
+          "41430": 8,
+          "41432": 8,
+          "41436": 8,
+          "41442": 8,
+          "41444": 8,
+          "41446": 8,
+          "41448": 8,
+          "41450": 8,
+          "41452": 8,
+          "41454": 8,
+          "41458": 8,
+          "41468": 8,
+          "41470": 8,
+          "41476": 8,
+          "41480": 8,
+          "41484": 8,
+          "41488": 8,
+          "41490": 8,
+          "41494": 8,
+          "41496": 8,
+          "41498": 8,
+          "41500": 8,
+          "41502": 8
+        }
+      },
+      "modbus_func_code_counts": {
+        "1": 59558,
+        "3": 30254,
+        "4": 29784,
+        "2": 29774,
+        "6": 484,
+        "5": 146
+      },
+      "is_request_counts": {
+        "1": 75002,
+        "0": 74998
+      },
+      "modbus_ref_num_counts": {
+        "0": 74683,
+        "8": 29413,
+        "5": 10615,
+        "14": 9626,
+        "13": 9625,
+        "35": 5363,
+        "25": 5339,
+        "15": 5336
+      },
+      "modbus_word_cnt_counts": {
+        "0": 119981,
+        "1": 30019
+      },
+      "modbus_bit_cnt_counts": {
+        "0": 105332,
+        "1": 44668
+      },
+      "modbus_byte_cnt_counts": {
+        "0": 75317,
+        "1": 44664,
+        "2": 30019
+      },
+      "modbus_val_counts": {
+        "0": 75167,
+        "1": 74833
+      },
+      "payload_len_counts": {
+        "12": 75317,
+        "10": 44664,
+        "11": 30019
+      },
+      "frame_len_counts": {
+        "78": 75317,
+        "76": 44664,
+        "77": 30019
+      },
+      "mbtcp_len_counts": {
+        "6": 75317,
+        "4": 44664,
+        "5": 30019
+      },
+      "is_exception_counts": {
+        "0": 150000
+      },
+      "mbtcp_proto_id_counts": {
+        "0": 150000
+      },
+      "len_discrepancy_counts": {
+        "0": 150000
+      },
+      "has_stacked_frames_counts": {
+        "0": 150000
+      },
+      "timestamp": {
+        "null": 0,
+        "unique": 149983,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 1674360030.274995,
+          "0.01": 1674360713.1198652,
+          "0.5": 1674481414.9144154,
+          "0.95": 1674524536.8060732,
+          "0.99": 1674526061.9463625,
+          "1.0": 1674526444.074282
+        },
+        "backward_steps": 2,
+        "equal_adjacent": 4,
+        "decimal_digits": {
+          "6": 150000
+        }
+      },
+      "frame_resets": [
+        25000,
+        50000,
+        75000,
+        100000,
+        125000
+      ],
+      "endpoint_pairs": {
+        "185.175.0.3 -> 185.175.0.5": 26595,
+        "185.175.0.5 -> 185.175.0.3": 26594,
+        "185.175.0.3 -> 185.175.0.4": 26477,
+        "185.175.0.4 -> 185.175.0.3": 26475,
+        "185.175.0.3 -> 185.175.0.8": 21930,
+        "185.175.0.8 -> 185.175.0.3": 21929
+      },
+      "payload_columns": [
+        "payload_len",
+        "modbus_byte_cnt",
+        "modbus_val",
+        "has_stacked_frames",
+        "inter_arrival_time"
+      ],
+      "observed_segments": [
+        {
+          "observed_segment": 1,
+          "rows": 25000,
+          "positives": 0,
+          "start": 1674481924.004201,
+          "end": 1674486194.498424,
+          "frame_start": 3,
+          "frame_end": 133331
+        },
+        {
+          "observed_segment": 2,
+          "rows": 25000,
+          "positives": 0,
+          "start": 1674520590.864227,
+          "end": 1674526444.074282,
+          "frame_start": 8,
+          "frame_end": 131762
+        },
+        {
+          "observed_segment": 3,
+          "rows": 9372,
+          "positives": 0,
+          "start": 1674360636.658912,
+          "end": 1674365484.387946,
+          "frame_start": 283,
+          "frame_end": 52893
+        },
+        {
+          "observed_segment": 4,
+          "rows": 15628,
+          "positives": 0,
+          "start": 1674423639.660549,
+          "end": 1674431602.346113,
+          "frame_start": 53278,
+          "frame_end": 140087
+        },
+        {
+          "observed_segment": 5,
+          "rows": 25000,
+          "positives": 0,
+          "start": 1674468178.561445,
+          "end": 1674480905.82463,
+          "frame_start": 2,
+          "frame_end": 125023
+        },
+        {
+          "observed_segment": 6,
+          "rows": 10585,
+          "positives": 0,
+          "start": 1674360030.274995,
+          "end": 1674365489.464286,
+          "frame_start": 2,
+          "frame_end": 59586
+        },
+        {
+          "observed_segment": 7,
+          "rows": 14415,
+          "positives": 0,
+          "start": 1674423643.943761,
+          "end": 1674430797.41358,
+          "frame_start": 59833,
+          "frame_end": 140753
+        },
+        {
+          "observed_segment": 8,
+          "rows": 9442,
+          "positives": 0,
+          "start": 1674507125.777466,
+          "end": 1674508725.771959,
+          "frame_start": 3,
+          "frame_end": 50662
+        },
+        {
+          "observed_segment": 9,
+          "rows": 1251,
+          "positives": 0,
+          "start": 1674509152.664583,
+          "end": 1674509381.546108,
+          "frame_start": 51402,
+          "frame_end": 58238
+        },
+        {
+          "observed_segment": 10,
+          "rows": 14307,
+          "positives": 0,
+          "start": 1674510122.314705,
+          "end": 1674512552.536585,
+          "frame_start": 58405,
+          "frame_end": 134620
+        }
+      ],
+      "read_response_values": {
+        "rows": 74683,
+        "values": {
+          "0": 74683
+        }
+      }
+    },
+    "replay_attacks.csv": {
+      "sha256": "714587f4511b12400a809f3ba6bd533e10167ff25f353414b4151f5d362918b1",
+      "rows": 9494,
+      "columns": [
+        "frame_number",
+        "timestamp",
+        "frame_len",
+        "src_ip",
+        "dst_ip",
+        "src_port",
+        "dst_port",
+        "payload_len",
+        "is_request",
+        "tcp_flags_syn",
+        "tcp_flags_ack",
+        "tcp_flags_fin",
+        "tcp_flags_rst",
+        "tcp_flags_psh",
+        "mbtcp_trans_id",
+        "mbtcp_proto_id",
+        "mbtcp_len",
+        "mbtcp_unit_id",
+        "modbus_func_code",
+        "is_exception",
+        "modbus_exception_code",
+        "modbus_ref_num",
+        "modbus_word_cnt",
+        "modbus_bit_cnt",
+        "modbus_byte_cnt",
+        "modbus_val",
+        "len_discrepancy",
+        "has_stacked_frames",
+        "inter_arrival_time",
+        "packet_rate_1s",
+        "response_time",
+        "trans_id_diff",
+        "attack_sub_type",
+        "is_attack",
+        "attack_category"
+      ],
+      "dtypes": {
+        "frame_number": "int64",
+        "timestamp": "float64",
+        "frame_len": "int64",
+        "src_ip": "str",
+        "dst_ip": "str",
+        "src_port": "int64",
+        "dst_port": "int64",
+        "payload_len": "int64",
+        "is_request": "int64",
+        "tcp_flags_syn": "int64",
+        "tcp_flags_ack": "int64",
+        "tcp_flags_fin": "int64",
+        "tcp_flags_rst": "int64",
+        "tcp_flags_psh": "int64",
+        "mbtcp_trans_id": "int64",
+        "mbtcp_proto_id": "int64",
+        "mbtcp_len": "int64",
+        "mbtcp_unit_id": "int64",
+        "modbus_func_code": "int64",
+        "is_exception": "int64",
+        "modbus_exception_code": "int64",
+        "modbus_ref_num": "int64",
+        "modbus_word_cnt": "int64",
+        "modbus_bit_cnt": "int64",
+        "modbus_byte_cnt": "int64",
+        "modbus_val": "int64",
+        "len_discrepancy": "int64",
+        "has_stacked_frames": "int64",
+        "inter_arrival_time": "float64",
+        "packet_rate_1s": "int64",
+        "response_time": "float64",
+        "trans_id_diff": "int64",
+        "attack_sub_type": "str",
+        "is_attack": "int64",
+        "attack_category": "str"
+      },
+      "nulls": {
+        "frame_number": 0,
+        "timestamp": 0,
+        "frame_len": 0,
+        "src_ip": 0,
+        "dst_ip": 0,
+        "src_port": 0,
+        "dst_port": 0,
+        "payload_len": 0,
+        "is_request": 0,
+        "tcp_flags_syn": 0,
+        "tcp_flags_ack": 0,
+        "tcp_flags_fin": 0,
+        "tcp_flags_rst": 0,
+        "tcp_flags_psh": 0,
+        "mbtcp_trans_id": 0,
+        "mbtcp_proto_id": 0,
+        "mbtcp_len": 0,
+        "mbtcp_unit_id": 0,
+        "modbus_func_code": 0,
+        "is_exception": 0,
+        "modbus_exception_code": 0,
+        "modbus_ref_num": 0,
+        "modbus_word_cnt": 0,
+        "modbus_bit_cnt": 0,
+        "modbus_byte_cnt": 0,
+        "modbus_val": 0,
+        "len_discrepancy": 0,
+        "has_stacked_frames": 0,
+        "inter_arrival_time": 0,
+        "packet_rate_1s": 0,
+        "response_time": 0,
+        "trans_id_diff": 0,
+        "attack_sub_type": 0,
+        "is_attack": 0,
+        "attack_category": 0
+      },
+      "exact_duplicate_rows": 0,
+      "is_attack": {
+        "0": 7247,
+        "1": 2247
+      },
+      "is_attack_percent": {
+        "0": 76.33242047609016,
+        "1": 23.667579523909836
+      },
+      "mbtcp_trans_id": {
+        "null": 0,
+        "unique": 5777,
+        "negative": 0,
+        "zero": 10,
+        "quantiles": {
+          "0.0": 0.0,
+          "0.01": 42.0,
+          "0.5": 2365.5,
+          "0.95": 47585.5,
+          "0.99": 51824.7,
+          "1.0": 52640.0
+        }
+      },
+      "response_time": {
+        "null": 0,
+        "unique": 2770,
+        "negative": 0,
+        "zero": 5751,
+        "quantiles": {
+          "0.0": 0.0,
+          "0.01": 0.0,
+          "0.5": 0.0,
+          "0.95": 0.09664910000000006,
+          "0.99": 0.21029969999999956,
+          "1.0": 0.720804
+        }
+      },
+      "trans_id_diff": {
+        "null": 0,
+        "unique": 2249,
+        "negative": 2244,
+        "zero": 3586,
+        "quantiles": {
+          "0.0": -46155.0,
+          "0.01": -31129.28,
+          "0.5": 0.0,
+          "0.95": 29262.4,
+          "0.99": 30824.559999999998,
+          "1.0": 31238.0
+        }
+      },
+      "src_ip_counts": {
+        "185.175.0.3": 5712,
+        "185.175.0.4": 3700,
+        "185.175.0.2": 35,
+        "185.175.0.5": 31,
+        "185.175.0.8": 12,
+        "185.175.0.7": 4
+      },
+      "dst_ip_counts": {
+        "185.175.0.4": 4633,
+        "185.175.0.3": 3708,
+        "185.175.0.5": 1046,
+        "185.175.0.8": 72,
+        "185.175.0.2": 35
+      },
+      "src_port_counts": {
+        "distinct": 4906,
+        "top_30": {
+          "502": 3743,
+          "53984": 4,
+          "55298": 4,
+          "55908": 4,
+          "57490": 4,
+          "33732": 4,
+          "45288": 4,
+          "53456": 3,
+          "53812": 3,
+          "53842": 3,
+          "53846": 3,
+          "53848": 3,
+          "53870": 3,
+          "53894": 3,
+          "54116": 3,
+          "54148": 3,
+          "54208": 3,
+          "54320": 3,
+          "54778": 3,
+          "54856": 3,
+          "54898": 3,
+          "54914": 3,
+          "54996": 3,
+          "55078": 3,
+          "55156": 3,
+          "55224": 3,
+          "55362": 3,
+          "55490": 3,
+          "55496": 3,
+          "55634": 3
+        }
+      },
+      "dst_port_counts": {
+        "distinct": 3489,
+        "top_30": {
+          "502": 5751,
+          "53456": 3,
+          "53812": 3,
+          "53870": 3,
+          "54208": 3,
+          "55156": 3,
+          "55224": 3,
+          "55298": 3,
+          "55496": 3,
+          "55722": 3,
+          "55812": 3,
+          "57424": 3,
+          "53482": 2,
+          "53534": 2,
+          "53642": 2,
+          "53746": 2,
+          "53768": 2,
+          "53778": 2,
+          "53834": 2,
+          "53842": 2,
+          "53846": 2,
+          "53848": 2,
+          "53886": 2,
+          "53894": 2,
+          "53900": 2,
+          "53914": 2,
+          "53932": 2,
+          "53984": 2,
+          "54004": 2,
+          "54036": 2
+        }
+      },
+      "modbus_func_code_counts": {
+        "3": 4976,
+        "1": 2255,
+        "4": 1149,
+        "2": 1114
+      },
+      "is_request_counts": {
+        "1": 5751,
+        "0": 3743
+      },
+      "modbus_ref_num_counts": {
+        "0": 3743,
+        "8": 3618,
+        "35": 880,
+        "14": 545,
+        "13": 538,
+        "5": 85,
+        "25": 47,
+        "15": 29,
+        "1": 9
+      },
+      "modbus_word_cnt_counts": {
+        "0": 5483,
+        "1": 4010,
+        "2": 1
+      },
+      "modbus_bit_cnt_counts": {
+        "0": 7754,
+        "1": 1731,
+        "20": 9
+      },
+      "modbus_byte_cnt_counts": {
+        "0": 5751,
+        "2": 2114,
+        "1": 1628,
+        "3": 1
+      },
+      "modbus_val_counts": {
+        "1": 5741,
+        "0": 3752,
+        "2": 1
+      },
+      "payload_len_counts": {
+        "12": 5752,
+        "11": 2114,
+        "10": 1628
+      },
+      "frame_len_counts": {
+        "78": 5752,
+        "77": 2114,
+        "76": 1628
+      },
+      "mbtcp_len_counts": {
+        "6": 5752,
+        "5": 2114,
+        "4": 1628
+      },
+      "is_exception_counts": {
+        "0": 9494
+      },
+      "mbtcp_proto_id_counts": {
+        "0": 9494
+      },
+      "len_discrepancy_counts": {
+        "0": 9494
+      },
+      "has_stacked_frames_counts": {
+        "0": 9494
+      },
+      "timestamp": {
+        "null": 0,
+        "unique": 9494,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 1675223325.48644,
+          "0.01": 1675223406.6942787,
+          "0.5": 1675225783.272701,
+          "0.95": 1678880041.3502188,
+          "0.99": 1678881089.0182858,
+          "1.0": 1679546582.992797
+        },
+        "backward_steps": 1,
+        "equal_adjacent": 0,
+        "decimal_digits": {
+          "6": 9494
+        }
+      },
+      "frame_resets": [
+        4,
+        5000,
+        9424
+      ],
+      "endpoint_pairs": {
+        "185.175.0.3 -> 185.175.0.4": 4618,
+        "185.175.0.4 -> 185.175.0.3": 3689,
+        "185.175.0.3 -> 185.175.0.5": 1035,
+        "185.175.0.3 -> 185.175.0.8": 59,
+        "185.175.0.5 -> 185.175.0.3": 19,
+        "185.175.0.2 -> 185.175.0.8": 13,
+        "185.175.0.5 -> 185.175.0.2": 12,
+        "185.175.0.8 -> 185.175.0.2": 12,
+        "185.175.0.2 -> 185.175.0.5": 11,
+        "185.175.0.2 -> 185.175.0.4": 11,
+        "185.175.0.4 -> 185.175.0.2": 11,
+        "185.175.0.7 -> 185.175.0.4": 4
+      },
+      "payload_columns": [
+        "payload_len",
+        "modbus_byte_cnt",
+        "modbus_val",
+        "has_stacked_frames",
+        "inter_arrival_time"
+      ],
+      "observed_segments": [
+        {
+          "observed_segment": 1,
+          "rows": 4,
+          "positives": 0,
+          "start": 1675256622.70579,
+          "end": 1675256777.70174,
+          "frame_start": 480,
+          "frame_end": 516
+        },
+        {
+          "observed_segment": 2,
+          "rows": 4996,
+          "positives": 0,
+          "start": 1675223325.48644,
+          "end": 1675225910.727015,
+          "frame_start": 5,
+          "frame_end": 27948
+        },
+        {
+          "observed_segment": 3,
+          "rows": 4424,
+          "positives": 2212,
+          "start": 1678870414.805525,
+          "end": 1678881156.665522,
+          "frame_start": 64,
+          "frame_end": 299126
+        },
+        {
+          "observed_segment": 4,
+          "rows": 12,
+          "positives": 6,
+          "start": 1679539957.149365,
+          "end": 1679540021.814174,
+          "frame_start": 46246,
+          "frame_end": 48358
+        },
+        {
+          "observed_segment": 5,
+          "rows": 12,
+          "positives": 6,
+          "start": 1679541220.689726,
+          "end": 1679541287.183009,
+          "frame_start": 92851,
+          "frame_end": 95778
+        },
+        {
+          "observed_segment": 6,
+          "rows": 12,
+          "positives": 6,
+          "start": 1679542184.25562,
+          "end": 1679542246.564995,
+          "frame_start": 128418,
+          "frame_end": 131283
+        },
+        {
+          "observed_segment": 7,
+          "rows": 12,
+          "positives": 6,
+          "start": 1679543865.509983,
+          "end": 1679543930.728626,
+          "frame_start": 190413,
+          "frame_end": 192508
+        },
+        {
+          "observed_segment": 8,
+          "rows": 10,
+          "positives": 5,
+          "start": 1679544767.24382,
+          "end": 1679544838.60795,
+          "frame_start": 222981,
+          "frame_end": 225222
+        },
+        {
+          "observed_segment": 9,
+          "rows": 4,
+          "positives": 2,
+          "start": 1679546362.648966,
+          "end": 1679546362.67068,
+          "frame_start": 282441,
+          "frame_end": 282455
+        },
+        {
+          "observed_segment": 10,
+          "rows": 8,
+          "positives": 4,
+          "start": 1679546532.984944,
+          "end": 1679546582.992797,
+          "frame_start": 288934,
+          "frame_end": 290532
+        }
+      ],
+      "read_response_values": {
+        "rows": 3743,
+        "values": {
+          "0": 3743
+        }
+      }
+    },
+    "uploads/normal/normal_traffic_baseline.csv": {
+      "sha256": "70d08fc730a8572d16a08d860be61536ae7565af048c7c7e283004e54fe55b01",
+      "rows": 150000,
+      "columns": [
+        "frame_number",
+        "timestamp",
+        "frame_len",
+        "src_ip",
+        "dst_ip",
+        "src_port",
+        "dst_port",
+        "payload_len",
+        "is_request",
+        "tcp_flags_syn",
+        "tcp_flags_ack",
+        "tcp_flags_fin",
+        "tcp_flags_rst",
+        "tcp_flags_psh",
+        "mbtcp_trans_id",
+        "mbtcp_proto_id",
+        "mbtcp_len",
+        "mbtcp_unit_id",
+        "modbus_func_code",
+        "is_exception",
+        "modbus_exception_code",
+        "modbus_ref_num",
+        "modbus_word_cnt",
+        "modbus_bit_cnt",
+        "modbus_byte_cnt",
+        "modbus_val",
+        "len_discrepancy",
+        "has_stacked_frames",
+        "inter_arrival_time",
+        "packet_rate_1s",
+        "response_time",
+        "trans_id_diff",
+        "attack_sub_type",
+        "is_attack",
+        "attack_category",
+        "file_source"
+      ],
+      "dtypes": {
+        "frame_number": "int64",
+        "timestamp": "float64",
+        "frame_len": "int64",
+        "src_ip": "str",
+        "dst_ip": "str",
+        "src_port": "int64",
+        "dst_port": "int64",
+        "payload_len": "int64",
+        "is_request": "int64",
+        "tcp_flags_syn": "int64",
+        "tcp_flags_ack": "int64",
+        "tcp_flags_fin": "int64",
+        "tcp_flags_rst": "int64",
+        "tcp_flags_psh": "int64",
+        "mbtcp_trans_id": "int64",
+        "mbtcp_proto_id": "int64",
+        "mbtcp_len": "int64",
+        "mbtcp_unit_id": "int64",
+        "modbus_func_code": "int64",
+        "is_exception": "int64",
+        "modbus_exception_code": "int64",
+        "modbus_ref_num": "int64",
+        "modbus_word_cnt": "int64",
+        "modbus_bit_cnt": "int64",
+        "modbus_byte_cnt": "int64",
+        "modbus_val": "int64",
+        "len_discrepancy": "int64",
+        "has_stacked_frames": "int64",
+        "inter_arrival_time": "float64",
+        "packet_rate_1s": "int64",
+        "response_time": "float64",
+        "trans_id_diff": "int64",
+        "attack_sub_type": "str",
+        "is_attack": "int64",
+        "attack_category": "str",
+        "file_source": "str"
+      },
+      "nulls": {
+        "frame_number": 0,
+        "timestamp": 0,
+        "frame_len": 0,
+        "src_ip": 0,
+        "dst_ip": 0,
+        "src_port": 0,
+        "dst_port": 0,
+        "payload_len": 0,
+        "is_request": 0,
+        "tcp_flags_syn": 0,
+        "tcp_flags_ack": 0,
+        "tcp_flags_fin": 0,
+        "tcp_flags_rst": 0,
+        "tcp_flags_psh": 0,
+        "mbtcp_trans_id": 0,
+        "mbtcp_proto_id": 0,
+        "mbtcp_len": 0,
+        "mbtcp_unit_id": 0,
+        "modbus_func_code": 0,
+        "is_exception": 0,
+        "modbus_exception_code": 0,
+        "modbus_ref_num": 0,
+        "modbus_word_cnt": 0,
+        "modbus_bit_cnt": 0,
+        "modbus_byte_cnt": 0,
+        "modbus_val": 0,
+        "len_discrepancy": 0,
+        "has_stacked_frames": 0,
+        "inter_arrival_time": 0,
+        "packet_rate_1s": 0,
+        "response_time": 0,
+        "trans_id_diff": 0,
+        "attack_sub_type": 0,
+        "is_attack": 0,
+        "attack_category": 0,
+        "file_source": 0
+      },
+      "exact_duplicate_rows": 0,
+      "is_attack": {
+        "0": 150000
+      },
+      "is_attack_percent": {
+        "0": 100.0
+      },
+      "mbtcp_trans_id": {
+        "null": 0,
+        "unique": 38130,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 1.0,
+          "0.01": 84.0,
+          "0.5": 17164.0,
+          "0.95": 60159.0,
+          "0.99": 61161.0,
+          "1.0": 61669.0
+        }
+      },
+      "response_time": {
+        "null": 0,
+        "unique": 4860,
+        "negative": 0,
+        "zero": 75007,
+        "quantiles": {
+          "0.0": 0.0,
+          "0.01": 0.0,
+          "0.5": 0.0,
+          "0.95": 0.001991,
+          "0.99": 0.004216030000000028,
+          "1.0": 41.071027
+        }
+      },
+      "trans_id_diff": {
+        "null": 0,
+        "unique": 215,
+        "negative": 7854,
+        "zero": 73257,
+        "quantiles": {
+          "0.0": -27518.0,
+          "0.01": -104.0,
+          "0.5": 0.0,
+          "0.95": 1.0,
+          "0.99": 101.0,
+          "1.0": 11143.0
+        }
+      },
+      "file_source_counts": {
+        "veth5bbeaa2-normal-13.pcap": 25000,
+        "veth5bbeaa2-normal-14.pcap": 25000,
+        "veth4edc015-normal-4.pcap": 25000,
+        "vethd9e14c0-normal-4.pcap": 25000,
+        "veth8bc3408-normal-4.pcap": 25000,
+        "network-wide-normal-14.pcap": 25000
+      },
+      "src_ip_counts": {
+        "185.175.0.3": 75002,
+        "185.175.0.5": 26594,
+        "185.175.0.4": 26475,
+        "185.175.0.8": 21929
+      },
+      "dst_ip_counts": {
+        "185.175.0.3": 74998,
+        "185.175.0.5": 26595,
+        "185.175.0.4": 26477,
+        "185.175.0.8": 21930
+      },
+      "src_port_counts": {
+        "distinct": 14117,
+        "top_30": {
+          "502": 74998,
+          "41408": 8,
+          "41412": 8,
+          "41414": 8,
+          "41416": 8,
+          "41418": 8,
+          "41422": 8,
+          "41430": 8,
+          "41432": 8,
+          "41436": 8,
+          "41442": 8,
+          "41444": 8,
+          "41446": 8,
+          "41448": 8,
+          "41450": 8,
+          "41452": 8,
+          "41454": 8,
+          "41458": 8,
+          "41468": 8,
+          "41470": 8,
+          "41476": 8,
+          "41480": 8,
+          "41484": 8,
+          "41488": 8,
+          "41490": 8,
+          "41494": 8,
+          "41496": 8,
+          "41498": 8,
+          "41500": 8,
+          "41502": 8
+        }
+      },
+      "dst_port_counts": {
+        "distinct": 14117,
+        "top_30": {
+          "502": 75002,
+          "41408": 8,
+          "41412": 8,
+          "41414": 8,
+          "41416": 8,
+          "41418": 8,
+          "41422": 8,
+          "41430": 8,
+          "41432": 8,
+          "41436": 8,
+          "41442": 8,
+          "41444": 8,
+          "41446": 8,
+          "41448": 8,
+          "41450": 8,
+          "41452": 8,
+          "41454": 8,
+          "41458": 8,
+          "41468": 8,
+          "41470": 8,
+          "41476": 8,
+          "41480": 8,
+          "41484": 8,
+          "41488": 8,
+          "41490": 8,
+          "41494": 8,
+          "41496": 8,
+          "41498": 8,
+          "41500": 8,
+          "41502": 8
+        }
+      },
+      "modbus_func_code_counts": {
+        "1": 59558,
+        "3": 30254,
+        "4": 29784,
+        "2": 29774,
+        "6": 484,
+        "5": 146
+      },
+      "is_request_counts": {
+        "1": 75002,
+        "0": 74998
+      },
+      "modbus_ref_num_counts": {
+        "0": 74683,
+        "8": 29413,
+        "5": 10615,
+        "14": 9626,
+        "13": 9625,
+        "35": 5363,
+        "25": 5339,
+        "15": 5336
+      },
+      "modbus_word_cnt_counts": {
+        "0": 119981,
+        "1": 30019
+      },
+      "modbus_bit_cnt_counts": {
+        "0": 105332,
+        "1": 44668
+      },
+      "modbus_byte_cnt_counts": {
+        "0": 75317,
+        "1": 44664,
+        "2": 30019
+      },
+      "modbus_val_counts": {
+        "0": 75167,
+        "1": 74833
+      },
+      "payload_len_counts": {
+        "12": 75317,
+        "10": 44664,
+        "11": 30019
+      },
+      "frame_len_counts": {
+        "78": 75317,
+        "76": 44664,
+        "77": 30019
+      },
+      "mbtcp_len_counts": {
+        "6": 75317,
+        "4": 44664,
+        "5": 30019
+      },
+      "is_exception_counts": {
+        "0": 150000
+      },
+      "mbtcp_proto_id_counts": {
+        "0": 150000
+      },
+      "len_discrepancy_counts": {
+        "0": 150000
+      },
+      "has_stacked_frames_counts": {
+        "0": 150000
+      },
+      "timestamp": {
+        "null": 0,
+        "unique": 149983,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 1674360030.274995,
+          "0.01": 1674360713.1198652,
+          "0.5": 1674481414.9144154,
+          "0.95": 1674524536.8060732,
+          "0.99": 1674526061.9463625,
+          "1.0": 1674526444.074282
+        },
+        "backward_steps": 2,
+        "equal_adjacent": 4,
+        "decimal_digits": {
+          "6": 150000
+        }
+      },
+      "frame_resets": [
+        25000,
+        50000,
+        75000,
+        100000,
+        125000
+      ],
+      "endpoint_pairs": {
+        "185.175.0.3 -> 185.175.0.5": 26595,
+        "185.175.0.5 -> 185.175.0.3": 26594,
+        "185.175.0.3 -> 185.175.0.4": 26477,
+        "185.175.0.4 -> 185.175.0.3": 26475,
+        "185.175.0.3 -> 185.175.0.8": 21930,
+        "185.175.0.8 -> 185.175.0.3": 21929
+      },
+      "payload_columns": [
+        "payload_len",
+        "modbus_byte_cnt",
+        "modbus_val",
+        "has_stacked_frames",
+        "inter_arrival_time"
+      ],
+      "observed_segments": [
+        {
+          "observed_segment": 1,
+          "rows": 25000,
+          "positives": 0,
+          "start": 1674481924.004201,
+          "end": 1674486194.498424,
+          "frame_start": 3,
+          "frame_end": 133331
+        },
+        {
+          "observed_segment": 2,
+          "rows": 25000,
+          "positives": 0,
+          "start": 1674520590.864227,
+          "end": 1674526444.074282,
+          "frame_start": 8,
+          "frame_end": 131762
+        },
+        {
+          "observed_segment": 3,
+          "rows": 9372,
+          "positives": 0,
+          "start": 1674360636.658912,
+          "end": 1674365484.387946,
+          "frame_start": 283,
+          "frame_end": 52893
+        },
+        {
+          "observed_segment": 4,
+          "rows": 15628,
+          "positives": 0,
+          "start": 1674423639.660549,
+          "end": 1674431602.346113,
+          "frame_start": 53278,
+          "frame_end": 140087
+        },
+        {
+          "observed_segment": 5,
+          "rows": 25000,
+          "positives": 0,
+          "start": 1674468178.561445,
+          "end": 1674480905.82463,
+          "frame_start": 2,
+          "frame_end": 125023
+        },
+        {
+          "observed_segment": 6,
+          "rows": 10585,
+          "positives": 0,
+          "start": 1674360030.274995,
+          "end": 1674365489.464286,
+          "frame_start": 2,
+          "frame_end": 59586
+        },
+        {
+          "observed_segment": 7,
+          "rows": 14415,
+          "positives": 0,
+          "start": 1674423643.943761,
+          "end": 1674430797.41358,
+          "frame_start": 59833,
+          "frame_end": 140753
+        },
+        {
+          "observed_segment": 8,
+          "rows": 9442,
+          "positives": 0,
+          "start": 1674507125.777466,
+          "end": 1674508725.771959,
+          "frame_start": 3,
+          "frame_end": 50662
+        },
+        {
+          "observed_segment": 9,
+          "rows": 1251,
+          "positives": 0,
+          "start": 1674509152.664583,
+          "end": 1674509381.546108,
+          "frame_start": 51402,
+          "frame_end": 58238
+        },
+        {
+          "observed_segment": 10,
+          "rows": 14307,
+          "positives": 0,
+          "start": 1674510122.314705,
+          "end": 1674512552.536585,
+          "frame_start": 58405,
+          "frame_end": 134620
+        }
+      ],
+      "read_response_values": {
+        "rows": 74683,
+        "values": {
+          "0": 74683
+        }
+      }
+    },
+    "uploads/normal/sample_test_normal.csv": {
+      "sha256": "b0a5934e88dcdc9705549dba132c3af30d6905257e46c33b8aea6fe6bb7e3c45",
+      "rows": 1,
+      "columns": [
+        "timestamp",
+        "src_ip",
+        "dst_ip",
+        "src_port",
+        "dst_port",
+        "mbtcp_trans_id",
+        "mbtcp_unit_id",
+        "modbus_func_code",
+        "is_request",
+        "is_attack"
+      ],
+      "dtypes": {
+        "timestamp": "float64",
+        "src_ip": "str",
+        "dst_ip": "str",
+        "src_port": "int64",
+        "dst_port": "int64",
+        "mbtcp_trans_id": "int64",
+        "mbtcp_unit_id": "int64",
+        "modbus_func_code": "int64",
+        "is_request": "int64",
+        "is_attack": "int64"
+      },
+      "nulls": {
+        "timestamp": 0,
+        "src_ip": 0,
+        "dst_ip": 0,
+        "src_port": 0,
+        "dst_port": 0,
+        "mbtcp_trans_id": 0,
+        "mbtcp_unit_id": 0,
+        "modbus_func_code": 0,
+        "is_request": 0,
+        "is_attack": 0
+      },
+      "exact_duplicate_rows": 0,
+      "is_attack": {
+        "0": 1
+      },
+      "is_attack_percent": {
+        "0": 100.0
+      },
+      "mbtcp_trans_id": {
+        "null": 0,
+        "unique": 1,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 1.0,
+          "0.01": 1.0,
+          "0.5": 1.0,
+          "0.95": 1.0,
+          "0.99": 1.0,
+          "1.0": 1.0
+        }
+      },
+      "src_ip_counts": {
+        "1.1.1.1": 1
+      },
+      "dst_ip_counts": {
+        "2.2.2.2": 1
+      },
+      "src_port_counts": {
+        "1234": 1
+      },
+      "dst_port_counts": {
+        "502": 1
+      },
+      "modbus_func_code_counts": {
+        "3": 1
+      },
+      "is_request_counts": {
+        "1": 1
+      },
+      "timestamp": {
+        "null": 0,
+        "unique": 1,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 100.0,
+          "0.01": 100.0,
+          "0.5": 100.0,
+          "0.95": 100.0,
+          "0.99": 100.0,
+          "1.0": 100.0
+        },
+        "backward_steps": 0,
+        "equal_adjacent": 0,
+        "decimal_digits": {
+          "1": 1
+        }
+      },
+      "endpoint_pairs": {
+        "1.1.1.1 -> 2.2.2.2": 1
+      },
+      "payload_columns": []
+    },
+    "uploads/normal/temporary_normal.csv": {
+      "sha256": "b0a5934e88dcdc9705549dba132c3af30d6905257e46c33b8aea6fe6bb7e3c45",
+      "rows": 1,
+      "columns": [
+        "timestamp",
+        "src_ip",
+        "dst_ip",
+        "src_port",
+        "dst_port",
+        "mbtcp_trans_id",
+        "mbtcp_unit_id",
+        "modbus_func_code",
+        "is_request",
+        "is_attack"
+      ],
+      "dtypes": {
+        "timestamp": "float64",
+        "src_ip": "str",
+        "dst_ip": "str",
+        "src_port": "int64",
+        "dst_port": "int64",
+        "mbtcp_trans_id": "int64",
+        "mbtcp_unit_id": "int64",
+        "modbus_func_code": "int64",
+        "is_request": "int64",
+        "is_attack": "int64"
+      },
+      "nulls": {
+        "timestamp": 0,
+        "src_ip": 0,
+        "dst_ip": 0,
+        "src_port": 0,
+        "dst_port": 0,
+        "mbtcp_trans_id": 0,
+        "mbtcp_unit_id": 0,
+        "modbus_func_code": 0,
+        "is_request": 0,
+        "is_attack": 0
+      },
+      "exact_duplicate_rows": 0,
+      "is_attack": {
+        "0": 1
+      },
+      "is_attack_percent": {
+        "0": 100.0
+      },
+      "mbtcp_trans_id": {
+        "null": 0,
+        "unique": 1,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 1.0,
+          "0.01": 1.0,
+          "0.5": 1.0,
+          "0.95": 1.0,
+          "0.99": 1.0,
+          "1.0": 1.0
+        }
+      },
+      "src_ip_counts": {
+        "1.1.1.1": 1
+      },
+      "dst_ip_counts": {
+        "2.2.2.2": 1
+      },
+      "src_port_counts": {
+        "1234": 1
+      },
+      "dst_port_counts": {
+        "502": 1
+      },
+      "modbus_func_code_counts": {
+        "3": 1
+      },
+      "is_request_counts": {
+        "1": 1
+      },
+      "timestamp": {
+        "null": 0,
+        "unique": 1,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 100.0,
+          "0.01": 100.0,
+          "0.5": 100.0,
+          "0.95": 100.0,
+          "0.99": 100.0,
+          "1.0": 100.0
+        },
+        "backward_steps": 0,
+        "equal_adjacent": 0,
+        "decimal_digits": {
+          "1": 1
+        }
+      },
+      "endpoint_pairs": {
+        "1.1.1.1 -> 2.2.2.2": 1
+      },
+      "payload_columns": []
+    },
+    "uploads/replay/replay_attacks.csv": {
+      "sha256": "714587f4511b12400a809f3ba6bd533e10167ff25f353414b4151f5d362918b1",
+      "rows": 9494,
+      "columns": [
+        "frame_number",
+        "timestamp",
+        "frame_len",
+        "src_ip",
+        "dst_ip",
+        "src_port",
+        "dst_port",
+        "payload_len",
+        "is_request",
+        "tcp_flags_syn",
+        "tcp_flags_ack",
+        "tcp_flags_fin",
+        "tcp_flags_rst",
+        "tcp_flags_psh",
+        "mbtcp_trans_id",
+        "mbtcp_proto_id",
+        "mbtcp_len",
+        "mbtcp_unit_id",
+        "modbus_func_code",
+        "is_exception",
+        "modbus_exception_code",
+        "modbus_ref_num",
+        "modbus_word_cnt",
+        "modbus_bit_cnt",
+        "modbus_byte_cnt",
+        "modbus_val",
+        "len_discrepancy",
+        "has_stacked_frames",
+        "inter_arrival_time",
+        "packet_rate_1s",
+        "response_time",
+        "trans_id_diff",
+        "attack_sub_type",
+        "is_attack",
+        "attack_category"
+      ],
+      "dtypes": {
+        "frame_number": "int64",
+        "timestamp": "float64",
+        "frame_len": "int64",
+        "src_ip": "str",
+        "dst_ip": "str",
+        "src_port": "int64",
+        "dst_port": "int64",
+        "payload_len": "int64",
+        "is_request": "int64",
+        "tcp_flags_syn": "int64",
+        "tcp_flags_ack": "int64",
+        "tcp_flags_fin": "int64",
+        "tcp_flags_rst": "int64",
+        "tcp_flags_psh": "int64",
+        "mbtcp_trans_id": "int64",
+        "mbtcp_proto_id": "int64",
+        "mbtcp_len": "int64",
+        "mbtcp_unit_id": "int64",
+        "modbus_func_code": "int64",
+        "is_exception": "int64",
+        "modbus_exception_code": "int64",
+        "modbus_ref_num": "int64",
+        "modbus_word_cnt": "int64",
+        "modbus_bit_cnt": "int64",
+        "modbus_byte_cnt": "int64",
+        "modbus_val": "int64",
+        "len_discrepancy": "int64",
+        "has_stacked_frames": "int64",
+        "inter_arrival_time": "float64",
+        "packet_rate_1s": "int64",
+        "response_time": "float64",
+        "trans_id_diff": "int64",
+        "attack_sub_type": "str",
+        "is_attack": "int64",
+        "attack_category": "str"
+      },
+      "nulls": {
+        "frame_number": 0,
+        "timestamp": 0,
+        "frame_len": 0,
+        "src_ip": 0,
+        "dst_ip": 0,
+        "src_port": 0,
+        "dst_port": 0,
+        "payload_len": 0,
+        "is_request": 0,
+        "tcp_flags_syn": 0,
+        "tcp_flags_ack": 0,
+        "tcp_flags_fin": 0,
+        "tcp_flags_rst": 0,
+        "tcp_flags_psh": 0,
+        "mbtcp_trans_id": 0,
+        "mbtcp_proto_id": 0,
+        "mbtcp_len": 0,
+        "mbtcp_unit_id": 0,
+        "modbus_func_code": 0,
+        "is_exception": 0,
+        "modbus_exception_code": 0,
+        "modbus_ref_num": 0,
+        "modbus_word_cnt": 0,
+        "modbus_bit_cnt": 0,
+        "modbus_byte_cnt": 0,
+        "modbus_val": 0,
+        "len_discrepancy": 0,
+        "has_stacked_frames": 0,
+        "inter_arrival_time": 0,
+        "packet_rate_1s": 0,
+        "response_time": 0,
+        "trans_id_diff": 0,
+        "attack_sub_type": 0,
+        "is_attack": 0,
+        "attack_category": 0
+      },
+      "exact_duplicate_rows": 0,
+      "is_attack": {
+        "0": 7247,
+        "1": 2247
+      },
+      "is_attack_percent": {
+        "0": 76.33242047609016,
+        "1": 23.667579523909836
+      },
+      "mbtcp_trans_id": {
+        "null": 0,
+        "unique": 5777,
+        "negative": 0,
+        "zero": 10,
+        "quantiles": {
+          "0.0": 0.0,
+          "0.01": 42.0,
+          "0.5": 2365.5,
+          "0.95": 47585.5,
+          "0.99": 51824.7,
+          "1.0": 52640.0
+        }
+      },
+      "response_time": {
+        "null": 0,
+        "unique": 2770,
+        "negative": 0,
+        "zero": 5751,
+        "quantiles": {
+          "0.0": 0.0,
+          "0.01": 0.0,
+          "0.5": 0.0,
+          "0.95": 0.09664910000000006,
+          "0.99": 0.21029969999999956,
+          "1.0": 0.720804
+        }
+      },
+      "trans_id_diff": {
+        "null": 0,
+        "unique": 2249,
+        "negative": 2244,
+        "zero": 3586,
+        "quantiles": {
+          "0.0": -46155.0,
+          "0.01": -31129.28,
+          "0.5": 0.0,
+          "0.95": 29262.4,
+          "0.99": 30824.559999999998,
+          "1.0": 31238.0
+        }
+      },
+      "src_ip_counts": {
+        "185.175.0.3": 5712,
+        "185.175.0.4": 3700,
+        "185.175.0.2": 35,
+        "185.175.0.5": 31,
+        "185.175.0.8": 12,
+        "185.175.0.7": 4
+      },
+      "dst_ip_counts": {
+        "185.175.0.4": 4633,
+        "185.175.0.3": 3708,
+        "185.175.0.5": 1046,
+        "185.175.0.8": 72,
+        "185.175.0.2": 35
+      },
+      "src_port_counts": {
+        "distinct": 4906,
+        "top_30": {
+          "502": 3743,
+          "53984": 4,
+          "55298": 4,
+          "55908": 4,
+          "57490": 4,
+          "33732": 4,
+          "45288": 4,
+          "53456": 3,
+          "53812": 3,
+          "53842": 3,
+          "53846": 3,
+          "53848": 3,
+          "53870": 3,
+          "53894": 3,
+          "54116": 3,
+          "54148": 3,
+          "54208": 3,
+          "54320": 3,
+          "54778": 3,
+          "54856": 3,
+          "54898": 3,
+          "54914": 3,
+          "54996": 3,
+          "55078": 3,
+          "55156": 3,
+          "55224": 3,
+          "55362": 3,
+          "55490": 3,
+          "55496": 3,
+          "55634": 3
+        }
+      },
+      "dst_port_counts": {
+        "distinct": 3489,
+        "top_30": {
+          "502": 5751,
+          "53456": 3,
+          "53812": 3,
+          "53870": 3,
+          "54208": 3,
+          "55156": 3,
+          "55224": 3,
+          "55298": 3,
+          "55496": 3,
+          "55722": 3,
+          "55812": 3,
+          "57424": 3,
+          "53482": 2,
+          "53534": 2,
+          "53642": 2,
+          "53746": 2,
+          "53768": 2,
+          "53778": 2,
+          "53834": 2,
+          "53842": 2,
+          "53846": 2,
+          "53848": 2,
+          "53886": 2,
+          "53894": 2,
+          "53900": 2,
+          "53914": 2,
+          "53932": 2,
+          "53984": 2,
+          "54004": 2,
+          "54036": 2
+        }
+      },
+      "modbus_func_code_counts": {
+        "3": 4976,
+        "1": 2255,
+        "4": 1149,
+        "2": 1114
+      },
+      "is_request_counts": {
+        "1": 5751,
+        "0": 3743
+      },
+      "modbus_ref_num_counts": {
+        "0": 3743,
+        "8": 3618,
+        "35": 880,
+        "14": 545,
+        "13": 538,
+        "5": 85,
+        "25": 47,
+        "15": 29,
+        "1": 9
+      },
+      "modbus_word_cnt_counts": {
+        "0": 5483,
+        "1": 4010,
+        "2": 1
+      },
+      "modbus_bit_cnt_counts": {
+        "0": 7754,
+        "1": 1731,
+        "20": 9
+      },
+      "modbus_byte_cnt_counts": {
+        "0": 5751,
+        "2": 2114,
+        "1": 1628,
+        "3": 1
+      },
+      "modbus_val_counts": {
+        "1": 5741,
+        "0": 3752,
+        "2": 1
+      },
+      "payload_len_counts": {
+        "12": 5752,
+        "11": 2114,
+        "10": 1628
+      },
+      "frame_len_counts": {
+        "78": 5752,
+        "77": 2114,
+        "76": 1628
+      },
+      "mbtcp_len_counts": {
+        "6": 5752,
+        "5": 2114,
+        "4": 1628
+      },
+      "is_exception_counts": {
+        "0": 9494
+      },
+      "mbtcp_proto_id_counts": {
+        "0": 9494
+      },
+      "len_discrepancy_counts": {
+        "0": 9494
+      },
+      "has_stacked_frames_counts": {
+        "0": 9494
+      },
+      "timestamp": {
+        "null": 0,
+        "unique": 9494,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 1675223325.48644,
+          "0.01": 1675223406.6942787,
+          "0.5": 1675225783.272701,
+          "0.95": 1678880041.3502188,
+          "0.99": 1678881089.0182858,
+          "1.0": 1679546582.992797
+        },
+        "backward_steps": 1,
+        "equal_adjacent": 0,
+        "decimal_digits": {
+          "6": 9494
+        }
+      },
+      "frame_resets": [
+        4,
+        5000,
+        9424
+      ],
+      "endpoint_pairs": {
+        "185.175.0.3 -> 185.175.0.4": 4618,
+        "185.175.0.4 -> 185.175.0.3": 3689,
+        "185.175.0.3 -> 185.175.0.5": 1035,
+        "185.175.0.3 -> 185.175.0.8": 59,
+        "185.175.0.5 -> 185.175.0.3": 19,
+        "185.175.0.2 -> 185.175.0.8": 13,
+        "185.175.0.5 -> 185.175.0.2": 12,
+        "185.175.0.8 -> 185.175.0.2": 12,
+        "185.175.0.2 -> 185.175.0.5": 11,
+        "185.175.0.2 -> 185.175.0.4": 11,
+        "185.175.0.4 -> 185.175.0.2": 11,
+        "185.175.0.7 -> 185.175.0.4": 4
+      },
+      "payload_columns": [
+        "payload_len",
+        "modbus_byte_cnt",
+        "modbus_val",
+        "has_stacked_frames",
+        "inter_arrival_time"
+      ],
+      "observed_segments": [
+        {
+          "observed_segment": 1,
+          "rows": 4,
+          "positives": 0,
+          "start": 1675256622.70579,
+          "end": 1675256777.70174,
+          "frame_start": 480,
+          "frame_end": 516
+        },
+        {
+          "observed_segment": 2,
+          "rows": 4996,
+          "positives": 0,
+          "start": 1675223325.48644,
+          "end": 1675225910.727015,
+          "frame_start": 5,
+          "frame_end": 27948
+        },
+        {
+          "observed_segment": 3,
+          "rows": 4424,
+          "positives": 2212,
+          "start": 1678870414.805525,
+          "end": 1678881156.665522,
+          "frame_start": 64,
+          "frame_end": 299126
+        },
+        {
+          "observed_segment": 4,
+          "rows": 12,
+          "positives": 6,
+          "start": 1679539957.149365,
+          "end": 1679540021.814174,
+          "frame_start": 46246,
+          "frame_end": 48358
+        },
+        {
+          "observed_segment": 5,
+          "rows": 12,
+          "positives": 6,
+          "start": 1679541220.689726,
+          "end": 1679541287.183009,
+          "frame_start": 92851,
+          "frame_end": 95778
+        },
+        {
+          "observed_segment": 6,
+          "rows": 12,
+          "positives": 6,
+          "start": 1679542184.25562,
+          "end": 1679542246.564995,
+          "frame_start": 128418,
+          "frame_end": 131283
+        },
+        {
+          "observed_segment": 7,
+          "rows": 12,
+          "positives": 6,
+          "start": 1679543865.509983,
+          "end": 1679543930.728626,
+          "frame_start": 190413,
+          "frame_end": 192508
+        },
+        {
+          "observed_segment": 8,
+          "rows": 10,
+          "positives": 5,
+          "start": 1679544767.24382,
+          "end": 1679544838.60795,
+          "frame_start": 222981,
+          "frame_end": 225222
+        },
+        {
+          "observed_segment": 9,
+          "rows": 4,
+          "positives": 2,
+          "start": 1679546362.648966,
+          "end": 1679546362.67068,
+          "frame_start": 282441,
+          "frame_end": 282455
+        },
+        {
+          "observed_segment": 10,
+          "rows": 8,
+          "positives": 4,
+          "start": 1679546532.984944,
+          "end": 1679546582.992797,
+          "frame_start": 288934,
+          "frame_end": 290532
+        }
+      ],
+      "read_response_values": {
+        "rows": 3743,
+        "values": {
+          "0": 3743
+        }
+      }
+    }
+  },
+  "tid": {
+    "normal": {
+      "global_csv_order": {
+        "comparable_rows": 149999,
+        "stored_equal": 149994,
+        "negative": 7856,
+        "zero": 73251,
+        "first_or_missing": 1
+      },
+      "within_observed_segment": {
+        "comparable_rows": 149990,
+        "stored_equal": 149990,
+        "negative": 7850,
+        "zero": 73251,
+        "first_or_missing": 10
+      },
+      "directed_ip_pair": {
+        "comparable_rows": 149960,
+        "stored_equal": 61706,
+        "negative": 11,
+        "zero": 0,
+        "first_or_missing": 40
+      },
+      "directed_4tuple": {
+        "comparable_rows": 1,
+        "stored_equal": 1,
+        "negative": 0,
+        "zero": 0,
+        "first_or_missing": 149999
+      },
+      "bidirectional_4tuple_proxy": {
+        "comparable_rows": 74994,
+        "stored_equal": 73227,
+        "negative": 0,
+        "zero": 74993,
+        "first_or_missing": 75006
+      },
+      "request_only_ip_pair": {
+        "comparable_rows": 74982,
+        "stored_equal": 61682,
+        "negative": 1,
+        "zero": 0,
+        "first_or_missing": 75018
+      },
+      "request_only_4tuple_proxy": {
+        "comparable_rows": 1,
+        "stored_equal": 1,
+        "negative": 0,
+        "zero": 0,
+        "first_or_missing": 149999
+      },
+      "implied_previous_tid_in_csv_range": 150000,
+      "tcp_connection_identity": "UNAVAILABLE: no tcp.stream/sequence/handshake history; 4-tuple is a proxy only"
+    },
+    "replay": {
+      "global_csv_order": {
+        "comparable_rows": 9493,
+        "stored_equal": 7319,
+        "negative": 1111,
+        "zero": 3585,
+        "first_or_missing": 1
+      },
+      "within_observed_segment": {
+        "comparable_rows": 9484,
+        "stored_equal": 7319,
+        "negative": 1109,
+        "zero": 3585,
+        "first_or_missing": 10
+      },
+      "directed_ip_pair": {
+        "comparable_rows": 9450,
+        "stored_equal": 2546,
+        "negative": 8,
+        "zero": 1,
+        "first_or_missing": 44
+      },
+      "directed_4tuple": {
+        "comparable_rows": 231,
+        "stored_equal": 4,
+        "negative": 0,
+        "zero": 0,
+        "first_or_missing": 9263
+      },
+      "bidirectional_4tuple_proxy": {
+        "comparable_rows": 3861,
+        "stored_equal": 3580,
+        "negative": 0,
+        "zero": 3668,
+        "first_or_missing": 5633
+      },
+      "request_only_ip_pair": {
+        "comparable_rows": 5728,
+        "stored_equal": 2546,
+        "negative": 6,
+        "zero": 1,
+        "first_or_missing": 3766
+      },
+      "request_only_4tuple_proxy": {
+        "comparable_rows": 183,
+        "stored_equal": 4,
+        "negative": 0,
+        "zero": 0,
+        "first_or_missing": 9311
+      },
+      "implied_previous_tid_in_csv_range": 9494,
+      "tcp_connection_identity": "UNAVAILABLE: no tcp.stream/sequence/handshake history; 4-tuple is a proxy only"
+    }
+  },
+  "diagnostics": {
+    "derivative": {
+      "stored_tid_negative": {
+        "TP": 2213,
+        "FP": 31,
+        "TN": 7216,
+        "FN": 34,
+        "precision": 0.9861853832442068,
+        "recall": 0.9848687138406764,
+        "F1": 0.9855266087731017,
+        "false_positive_rate": 0.004277632123637367,
+        "accuracy": 0.9931535706762166,
+        "balanced_accuracy": 0.9902955408585195
+      },
+      "stored_tid_zero": {
+        "TP": 19,
+        "FP": 3567,
+        "TN": 3680,
+        "FN": 2228,
+        "precision": 0.005298382598996096,
+        "recall": 0.008455718736092568,
+        "F1": 0.006514657980456026,
+        "false_positive_rate": 0.49220367048433833,
+        "accuracy": 0.38961449336423004,
+        "balanced_accuracy": 0.2581260241258771
+      },
+      "stored_tid_abs_gt_1000": {
+        "TP": 2210,
+        "FP": 1087,
+        "TN": 6160,
+        "FN": 37,
+        "precision": 0.670306339096148,
+        "recall": 0.9835336003560302,
+        "F1": 0.7972582972582972,
+        "false_positive_rate": 0.14999310059334897,
+        "accuracy": 0.8816094375394986,
+        "balanced_accuracy": 0.9167702498813406
+      },
+      "earlier_observed_signature_in_table": {
+        "TP": 0,
+        "FP": 0,
+        "TN": 7247,
+        "FN": 2247,
+        "precision": 0.0,
+        "recall": 0.0,
+        "F1": 0.0,
+        "false_positive_rate": 0.0,
+        "accuracy": 0.7633242047609016,
+        "balanced_accuracy": 0.5
+      },
+      "request_direction": {
+        "TP": 2074,
+        "FP": 3677,
+        "TN": 3570,
+        "FN": 173,
+        "precision": 0.36063293340288644,
+        "recall": 0.9230084557187361,
+        "F1": 0.5186296574143536,
+        "false_positive_rate": 0.5073823651166,
+        "accuracy": 0.5944807246682114,
+        "balanced_accuracy": 0.707813045301068
+      },
+      "function_3": {
+        "TP": 2019,
+        "FP": 2957,
+        "TN": 4290,
+        "FN": 228,
+        "precision": 0.4057475884244373,
+        "recall": 0.8985313751668892,
+        "F1": 0.5590474871936868,
+        "false_positive_rate": 0.4080309093417966,
+        "accuracy": 0.6645249631346113,
+        "balanced_accuracy": 0.7452502329125463
+      },
+      "frame_length_78": {
+        "TP": 2074,
+        "FP": 3678,
+        "TN": 3569,
+        "FN": 173,
+        "precision": 0.3605702364394993,
+        "recall": 0.9230084557187361,
+        "F1": 0.5185648206025752,
+        "false_positive_rate": 0.5075203532496205,
+        "accuracy": 0.5943753949863071,
+        "balanced_accuracy": 0.7077440512345579
+      },
+      "response_time_zero": {
+        "TP": 2074,
+        "FP": 3677,
+        "TN": 3570,
+        "FN": 173,
+        "precision": 0.36063293340288644,
+        "recall": 0.9230084557187361,
+        "F1": 0.5186296574143536,
+        "false_positive_rate": 0.5073823651166,
+        "accuracy": 0.5944807246682114,
+        "balanced_accuracy": 0.707813045301068
+      },
+      "iat_gt_1_second": {
+        "TP": 1508,
+        "FP": 1258,
+        "TN": 5989,
+        "FN": 739,
+        "precision": 0.5451916124367318,
+        "recall": 0.6711170449488206,
+        "F1": 0.6016357470576501,
+        "false_positive_rate": 0.17358907133986476,
+        "accuracy": 0.7896566252369918,
+        "balanced_accuracy": 0.748763986804478
+      },
+      "single_field_in_sample_majority": {
+        "src_ip": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 7247,
+          "FN": 2247,
+          "precision": 0.0,
+          "recall": 0.0,
+          "F1": 0.0,
+          "false_positive_rate": 0.0,
+          "accuracy": 0.7633242047609016,
+          "balanced_accuracy": 0.5
+        },
+        "dst_ip": {
+          "TP": 62,
+          "FP": 45,
+          "TN": 7202,
+          "FN": 2185,
+          "precision": 0.5794392523364486,
+          "recall": 0.027592345349354695,
+          "F1": 0.05267629566694987,
+          "false_positive_rate": 0.00620946598592521,
+          "accuracy": 0.7651148093532758,
+          "balanced_accuracy": 0.5106914396817147
+        },
+        "modbus_func_code": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 7247,
+          "FN": 2247,
+          "precision": 0.0,
+          "recall": 0.0,
+          "F1": 0.0,
+          "false_positive_rate": 0.0,
+          "accuracy": 0.7633242047609016,
+          "balanced_accuracy": 0.5
+        },
+        "is_request": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 7247,
+          "FN": 2247,
+          "precision": 0.0,
+          "recall": 0.0,
+          "F1": 0.0,
+          "false_positive_rate": 0.0,
+          "accuracy": 0.7633242047609016,
+          "balanced_accuracy": 0.5
+        },
+        "frame_len": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 7247,
+          "FN": 2247,
+          "precision": 0.0,
+          "recall": 0.0,
+          "F1": 0.0,
+          "false_positive_rate": 0.0,
+          "accuracy": 0.7633242047609016,
+          "balanced_accuracy": 0.5
+        },
+        "payload_len": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 7247,
+          "FN": 2247,
+          "precision": 0.0,
+          "recall": 0.0,
+          "F1": 0.0,
+          "false_positive_rate": 0.0,
+          "accuracy": 0.7633242047609016,
+          "balanced_accuracy": 0.5
+        },
+        "modbus_ref_num": {
+          "TP": 2024,
+          "FP": 1603,
+          "TN": 5644,
+          "FN": 223,
+          "precision": 0.5580369451337194,
+          "recall": 0.9007565643079661,
+          "F1": 0.6891385767790262,
+          "false_positive_rate": 0.22119497723195805,
+          "accuracy": 0.8076680008426375,
+          "balanced_accuracy": 0.8397807935380041
+        }
+      }
+    },
+    "full_normal_plus_replay_positives": {
+      "stored_tid_negative": {
+        "TP": 2213,
+        "FP": 7854,
+        "TN": 142146,
+        "FN": 34,
+        "precision": 0.21982715804112446,
+        "recall": 0.9848687138406764,
+        "F1": 0.3594282929998376,
+        "false_positive_rate": 0.05236,
+        "accuracy": 0.9481894552930435,
+        "balanced_accuracy": 0.9662543569203382
+      },
+      "stored_tid_zero": {
+        "TP": 19,
+        "FP": 73257,
+        "TN": 76743,
+        "FN": 2228,
+        "precision": 0.0002592936295649326,
+        "recall": 0.008455718736092568,
+        "F1": 0.000503157978364207,
+        "false_positive_rate": 0.48838,
+        "accuracy": 0.5041938429000243,
+        "balanced_accuracy": 0.26003785936804624
+      },
+      "stored_tid_abs_gt_1000": {
+        "TP": 2210,
+        "FP": 31,
+        "TN": 149969,
+        "FN": 37,
+        "precision": 0.9861668897813476,
+        "recall": 0.9835336003560302,
+        "F1": 0.9848484848484849,
+        "false_positive_rate": 0.00020666666666666666,
+        "accuracy": 0.9995533573732159,
+        "balanced_accuracy": 0.9916634668446818
+      },
+      "earlier_observed_signature_in_table": {
+        "TP": 0,
+        "FP": 0,
+        "TN": 150000,
+        "FN": 2247,
+        "precision": 0.0,
+        "recall": 0.0,
+        "F1": 0.0,
+        "false_positive_rate": 0.0,
+        "accuracy": 0.9852410884943545,
+        "balanced_accuracy": 0.5
+      },
+      "request_direction": {
+        "TP": 2074,
+        "FP": 75002,
+        "TN": 74998,
+        "FN": 173,
+        "precision": 0.026908505890290105,
+        "recall": 0.9230084557187361,
+        "F1": 0.05229252549701852,
+        "false_positive_rate": 0.5000133333333333,
+        "accuracy": 0.5062300078162459,
+        "balanced_accuracy": 0.7114975611927015
+      },
+      "function_3": {
+        "TP": 2019,
+        "FP": 30254,
+        "TN": 119746,
+        "FN": 228,
+        "precision": 0.06256003470393208,
+        "recall": 0.8985313751668892,
+        "F1": 0.11697566628041715,
+        "false_positive_rate": 0.20169333333333334,
+        "accuracy": 0.7997858742701005,
+        "balanced_accuracy": 0.8484190209167779
+      },
+      "frame_length_78": {
+        "TP": 2074,
+        "FP": 75317,
+        "TN": 74683,
+        "FN": 173,
+        "precision": 0.02679898179374863,
+        "recall": 0.9230084557187361,
+        "F1": 0.05208568773700997,
+        "false_positive_rate": 0.5021133333333333,
+        "accuracy": 0.5041610015304078,
+        "balanced_accuracy": 0.7104475611927014
+      },
+      "response_time_zero": {
+        "TP": 2074,
+        "FP": 75007,
+        "TN": 74993,
+        "FN": 173,
+        "precision": 0.026906760420855984,
+        "recall": 0.9230084557187361,
+        "F1": 0.0522892295280355,
+        "false_positive_rate": 0.5000466666666666,
+        "accuracy": 0.5061971664466295,
+        "balanced_accuracy": 0.7114808945260347
+      },
+      "iat_gt_1_second": {
+        "TP": 1508,
+        "FP": 11900,
+        "TN": 138100,
+        "FN": 739,
+        "precision": 0.11247016706443914,
+        "recall": 0.6711170449488206,
+        "F1": 0.19265410412008943,
+        "false_positive_rate": 0.07933333333333334,
+        "accuracy": 0.9169835858834657,
+        "balanced_accuracy": 0.7958918558077437
+      },
+      "single_field_in_sample_majority": {
+        "src_ip": {
+          "TP": 17,
+          "FP": 0,
+          "TN": 150000,
+          "FN": 2230,
+          "precision": 1.0,
+          "recall": 0.0075656430796617715,
+          "F1": 0.015017667844522969,
+          "false_positive_rate": 0.0,
+          "accuracy": 0.9853527491510506,
+          "balanced_accuracy": 0.5037828215398309
+        },
+        "dst_ip": {
+          "TP": 18,
+          "FP": 0,
+          "TN": 150000,
+          "FN": 2229,
+          "precision": 1.0,
+          "recall": 0.00801068090787717,
+          "F1": 0.015894039735099338,
+          "false_positive_rate": 0.0,
+          "accuracy": 0.9853593174249738,
+          "balanced_accuracy": 0.5040053404539386
+        },
+        "modbus_func_code": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 150000,
+          "FN": 2247,
+          "precision": 0.0,
+          "recall": 0.0,
+          "F1": 0.0,
+          "false_positive_rate": 0.0,
+          "accuracy": 0.9852410884943545,
+          "balanced_accuracy": 0.5
+        },
+        "is_request": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 150000,
+          "FN": 2247,
+          "precision": 0.0,
+          "recall": 0.0,
+          "F1": 0.0,
+          "false_positive_rate": 0.0,
+          "accuracy": 0.9852410884943545,
+          "balanced_accuracy": 0.5
+        },
+        "frame_len": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 150000,
+          "FN": 2247,
+          "precision": 0.0,
+          "recall": 0.0,
+          "F1": 0.0,
+          "false_positive_rate": 0.0,
+          "accuracy": 0.9852410884943545,
+          "balanced_accuracy": 0.5
+        },
+        "payload_len": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 150000,
+          "FN": 2247,
+          "precision": 0.0,
+          "recall": 0.0,
+          "F1": 0.0,
+          "false_positive_rate": 0.0,
+          "accuracy": 0.9852410884943545,
+          "balanced_accuracy": 0.5
+        },
+        "modbus_ref_num": {
+          "TP": 5,
+          "FP": 0,
+          "TN": 150000,
+          "FN": 2242,
+          "precision": 1.0,
+          "recall": 0.0022251891410769915,
+          "F1": 0.004440497335701598,
+          "false_positive_rate": 0.0,
+          "accuracy": 0.985273929863971,
+          "balanced_accuracy": 0.5011125945705385
+        }
+      }
+    }
+  },
+  "overlap": {
+    "current_message": {
+      "columns": [
+        "is_request",
+        "mbtcp_proto_id",
+        "mbtcp_unit_id",
+        "modbus_func_code",
+        "modbus_ref_num",
+        "modbus_word_cnt",
+        "modbus_bit_cnt",
+        "modbus_byte_cnt",
+        "modbus_val",
+        "mbtcp_len",
+        "payload_len",
+        "frame_len",
+        "is_exception",
+        "modbus_exception_code"
+      ],
+      "replay_rows_matching_normal": 2247,
+      "replay_rows": 2247,
+      "fraction": 1.0,
+      "unique_positive_signatures": 14
+    },
+    "command_semantics": {
+      "columns": [
+        "is_request",
+        "mbtcp_proto_id",
+        "mbtcp_unit_id",
+        "modbus_func_code",
+        "modbus_ref_num",
+        "modbus_word_cnt",
+        "modbus_bit_cnt",
+        "modbus_byte_cnt",
+        "modbus_val"
+      ],
+      "replay_rows_matching_normal": 2247,
+      "replay_rows": 2247,
+      "fraction": 1.0,
+      "unique_positive_signatures": 14
+    },
+    "current_plus_tid": {
+      "columns": [
+        "is_request",
+        "mbtcp_proto_id",
+        "mbtcp_unit_id",
+        "modbus_func_code",
+        "modbus_ref_num",
+        "modbus_word_cnt",
+        "modbus_bit_cnt",
+        "modbus_byte_cnt",
+        "modbus_val",
+        "mbtcp_len",
+        "payload_len",
+        "frame_len",
+        "is_exception",
+        "modbus_exception_code",
+        "mbtcp_trans_id"
+      ],
+      "replay_rows_matching_normal": 438,
+      "replay_rows": 2247,
+      "fraction": 0.19492656875834447,
+      "unique_positive_signatures": 2230
+    },
+    "unique_positive_request_command_signatures": 10,
+    "positive_structure": {
+      "is_request": {
+        "1": 2074,
+        "0": 173
+      },
+      "modbus_func_code": {
+        "3": 2019,
+        "1": 122,
+        "4": 57,
+        "2": 49
+      },
+      "mbtcp_proto_id": {
+        "0": 2247
+      },
+      "is_exception": {
+        "0": 2247
+      },
+      "len_discrepancy": {
+        "0": 2247
+      },
+      "has_stacked_frames": {
+        "0": 2247
+      },
+      "mbtcp_len": {
+        "6": 2074,
+        "4": 99,
+        "5": 74
+      },
+      "payload_len": {
+        "12": 2074,
+        "10": 99,
+        "11": 74
+      }
+    }
+  },
+  "saved_results": {
+    "saved_prediction_metrics": {
+      "TP": 573,
+      "FP": 42,
+      "TN": 25288,
+      "FN": 20,
+      "precision": 0.9317073170731708,
+      "recall": 0.9662731871838112,
+      "F1": 0.9486754966887417,
+      "false_positive_rate": 0.0016581129095933676,
+      "accuracy": 0.997608301508313,
+      "balanced_accuracy": 0.9823075371371088,
+      "ROC_AUC_rounded_probabilities": 0.9995041506082609,
+      "PR_AUC_average_precision_rounded_probabilities": 0.9834347643810126
+    },
+    "train_test_capture_overlap": [
+      "replay_capture_2"
+    ],
+    "partition_by_capture": [
+      {
+        "partition": "gap_excluded",
+        "capture_id": "replay_capture_2",
+        "target_is_attack": 0,
+        "rows": 7
+      },
+      {
+        "partition": "gap_excluded",
+        "capture_id": "replay_capture_2",
+        "target_is_attack": 1,
+        "rows": 46
+      },
+      {
+        "partition": "test",
+        "capture_id": "network-wide-normal-14.pcap",
+        "target_is_attack": 0,
+        "rows": 12501
+      },
+      {
+        "partition": "test",
+        "capture_id": "replay_capture_2",
+        "target_is_attack": 0,
+        "rows": 311
+      },
+      {
+        "partition": "test",
+        "capture_id": "replay_capture_2",
+        "target_is_attack": 1,
+        "rows": 576
+      },
+      {
+        "partition": "test",
+        "capture_id": "replay_capture_3",
+        "target_is_attack": 0,
+        "rows": 3
+      },
+      {
+        "partition": "test",
+        "capture_id": "replay_capture_3",
+        "target_is_attack": 1,
+        "rows": 3
+      },
+      {
+        "partition": "test",
+        "capture_id": "replay_capture_4",
+        "target_is_attack": 0,
+        "rows": 3
+      },
+      {
+        "partition": "test",
+        "capture_id": "replay_capture_4",
+        "target_is_attack": 1,
+        "rows": 3
+      },
+      {
+        "partition": "test",
+        "capture_id": "replay_capture_5",
+        "target_is_attack": 0,
+        "rows": 3
+      },
+      {
+        "partition": "test",
+        "capture_id": "replay_capture_5",
+        "target_is_attack": 1,
+        "rows": 3
+      },
+      {
+        "partition": "test",
+        "capture_id": "replay_capture_6",
+        "target_is_attack": 0,
+        "rows": 3
+      },
+      {
+        "partition": "test",
+        "capture_id": "replay_capture_6",
+        "target_is_attack": 1,
+        "rows": 3
+      },
+      {
+        "partition": "test",
+        "capture_id": "replay_capture_7",
+        "target_is_attack": 0,
+        "rows": 3
+      },
+      {
+        "partition": "test",
+        "capture_id": "replay_capture_7",
+        "target_is_attack": 1,
+        "rows": 2
+      },
+      {
+        "partition": "test",
+        "capture_id": "replay_capture_8",
+        "target_is_attack": 0,
+        "rows": 1
+      },
+      {
+        "partition": "test",
+        "capture_id": "replay_capture_8",
+        "target_is_attack": 1,
+        "rows": 1
+      },
+      {
+        "partition": "test",
+        "capture_id": "replay_capture_9",
+        "target_is_attack": 0,
+        "rows": 2
+      },
+      {
+        "partition": "test",
+        "capture_id": "replay_capture_9",
+        "target_is_attack": 1,
+        "rows": 2
+      },
+      {
+        "partition": "test",
+        "capture_id": "veth8bc3408-normal-4.pcap",
+        "target_is_attack": 0,
+        "rows": 12500
+      },
+      {
+        "partition": "train",
+        "capture_id": "replay_capture_0",
+        "target_is_attack": 0,
+        "rows": 4
+      },
+      {
+        "partition": "train",
+        "capture_id": "replay_capture_1",
+        "target_is_attack": 0,
+        "rows": 2499
+      },
+      {
+        "partition": "train",
+        "capture_id": "replay_capture_2",
+        "target_is_attack": 0,
+        "rows": 838
+      },
+      {
+        "partition": "train",
+        "capture_id": "replay_capture_2",
+        "target_is_attack": 1,
+        "rows": 1435
+      },
+      {
+        "partition": "train",
+        "capture_id": "veth4edc015-normal-4.pcap",
+        "target_is_attack": 0,
+        "rows": 12500
+      },
+      {
+        "partition": "train",
+        "capture_id": "veth5bbeaa2-normal-13.pcap",
+        "target_is_attack": 0,
+        "rows": 12500
+      },
+      {
+        "partition": "train",
+        "capture_id": "veth5bbeaa2-normal-14.pcap",
+        "target_is_attack": 0,
+        "rows": 12501
+      },
+      {
+        "partition": "train",
+        "capture_id": "vethd9e14c0-normal-4.pcap",
+        "target_is_attack": 0,
+        "rows": 12500
+      }
+    ],
+    "unique_transaction_ids": 80753,
+    "label_conflict_by_class": {
+      "0": 8,
+      "1": 1039
+    },
+    "reconstructed_legacy_coverage": {
+      "total_requests_processed": 80753,
+      "matched_transactions": 78620,
+      "ambiguous_matches": 0,
+      "timeout_missing_responses": 2133,
+      "orphan_responses": 121,
+      "pairing_success_rate": 0.9736,
+      "timeout_rate": 0.0264,
+      "label_conflicts_flagged": 1047,
+      "label_conflict_explanation": "Flagged 1047 transactions where request is_attack != response is_attack. In CIC Modbus 2023 replay episodes, victim servers execute replayed queries legitimately, causing the response packet to be labeled Normal while the initiating request is labeled Replay. The transaction label preserves the request's attack annotation while retaining conflict metadata."
+    },
+    "legacy_reconstruction_count_matches": true,
+    "feature_reproduction_max_abs_difference": {
+      "trans_id_delta": 0.0,
+      "trans_id_raw_diff": 0.0,
+      "tid_previously_seen": 0.0,
+      "request_iat": 5.684341886080802e-14,
+      "time_since_identical_cmd": 4.547473508864641e-13,
+      "is_repeated_command": 0.0,
+      "repeated_cmd_count_window": 0.0,
+      "duplicate_cmd_freq": 4.440892098500626e-16,
+      "outstanding_requests": 0.0,
+      "modbus_func_code": 0.0,
+      "mbtcp_unit_id": 0.0,
+      "modbus_ref_num": 0.0,
+      "modbus_word_cnt": 0.0,
+      "modbus_bit_cnt": 0.0,
+      "modbus_val": 0.0,
+      "payload_len": 0.0,
+      "is_matched": 0.0,
+      "is_timeout": 0.0,
+      "is_ambiguous": 0.0,
+      "response_latency": 9.8879238130678e-17,
+      "has_response_latency": 0.0
+    },
+    "saved_model_direct_metrics": {
+      "TP": 573,
+      "FP": 42,
+      "TN": 25288,
+      "FN": 20,
+      "precision": 0.9317073170731708,
+      "recall": 0.9662731871838112,
+      "F1": 0.9486754966887417,
+      "false_positive_rate": 0.0016581129095933676,
+      "accuracy": 0.997608301508313,
+      "balanced_accuracy": 0.9823075371371088
+    },
+    "saved_model_prediction_agreement": 1.0,
+    "ROC_AUC": 0.9995012546028179,
+    "PR_AUC_average_precision": 0.9838061405310949,
+    "libraries": {
+      "pandas": "3.0.6",
+      "numpy": "2.5.4",
+      "sklearn": "1.9.1",
+      "xgboost": "3.4.1"
+    },
+    "model_configuration": {
+      "learner": {
+        "generic_param": {
+          "device": "cpu",
+          "fail_on_invalid_gpu_id": "0",
+          "n_jobs": "0",
+          "nthread": "0",
+          "random_state": "0",
+          "rng_state": "0 1 6c078967 714acb41 48077044 93e7383e f0f54bb2 141f95dc c0acdbd4 3cb9cadc bee0c4d6 69cf1baf be4809b2 236b027d af7e05f 31775c8a 24635c82 e743115b bb25efca 11c1a1fb f2f13b1b af74288d d2718781 54dd0861 7f4fadf8 ac58e456 3f8f093e 812d391 379d1151 a4732e12 8787bc6e d35722bb 95fd2ab8 4bd56583 bd119e6c c2be5f89 8b028b96 75bf4589 176436ce 437fdd6d ace527c4 771ba747 e55774c8 1e8eb742 492e9f36 611a3fe0 6b19cf3 7fb5f70e d96a801b 663961a9 957e6f7a 50d1328b 705acaa6 e8d65318 38c53cdd d96e4868 ec30d56f b76effd5 7895ff0d e1ff0bf7 eab14b80 cdf0e5ec 48a09e89 51ed53e7 a7d22ffe 517ecaad 1c30021e 86e4e419 571d71eb f5fa2b97 8e1165aa 3dc038f b09deeb3 65e2e51e f6fafc85 31d35729 70255479 28368ba5 7bc36567 3324978d 63653ff1 65b9aa01 243a1252 76f51cad 73c05c30 cd9198aa 7dc2ac03 57e8ef21 60be77f8 6d289696 9bbb38ed 4de5da6 8362c8da 515cd595 ef877c2 fe6c11e9 6b9f4bb2 4b40a900 55fb36c7 63d69281 398e4ce4 26865a59 1dca4683 321eed16 16ae5016 b43b5f17 56e1c0b3 740e48a5 9afe6d20 a2b640d7 5c6c9177 52e789fd b4154cdc 349c2207 32002c35 632cce5c fba83025 a4295573 e51f2f0b beb0d69f f8e9b169 d60ab94b a05aa1e2 b182bddb bd1d0819 c287a624 56806ce1 550ed4df f8d6ca16 8175f7ca 5b9cca6a ba1c1fba f819fc1c c3060fc0 e2289375 c1265415 4bb8f336 b4a1643c 8803bb00 9d9ada55 b951b3df fd883bbe 4ce2b71f 53434d65 2bb40d04 a41c4725 474cf1f5 dc8309d7 d4c15538 9f8033dc 9c68452c ce6ae9bd 3376e68e 252cf49f 7dfe9a55 9e55d7bf a7d432d fe99965e fc9b184f 6345429b 52db162 b0a26e4b 6d19946f 32886e09 c0f53b31 13cc1d5f ecd86e21 9f41a611 854bb127 8cacb142 c3bd2eea c1d3398 f149b3a4 c94090 86e3897e ebc9a9b 5d62f2d7 b7d8551f ddb11a23 74ba6f53 765ece0e 661653a0 6ef7283b 9d9fe999 8b581ddf 2eca0dea b08fb80c 82951c41 5ac9022b 2a9c554f 227defe9 dc7258ac 6b5ba4cb 1fde1e73 ca128f21 e9d9ab2d d5be27ea 7ac070b2 3214265 756a3fa0 d85f444d 1f45b18f d16d9535 218fc519 1de224a9 1c75e87a 274402f0 37f7997f 5c4d86eb 502f7523 9456693c cd1bb449 e56fbc06 90d6dbce 32f8e452 249ff731 7cbcc02d a835e35 62b188c3 8788c765 937dcb7f cef22e2e 7f7d4d9f 224b2e35 62d698c9 63e54fc9 afa282ca 3692a1cb 10fc78fb 3370eec b4293002 6eeff0e7 cadf21a6 fa8c9402 8cb1ee4f bad53a4c 5275bfb2 4df06d8c e556ae8f b46fca2b d669b41d bdea1ec7 2b3891ab 72f2fc6a 6ddfda2b d4378d87 3427a0a 6acf80e9 96320480 fdb35a43 8acedc3a 1cfedb13 d54e9a7b 11f52a55 4db43187 f94240dd 39ec6696 7344c02f ee3a7128 7fcba9fa f32e640b e10dc02d cf87712c 484acf92 3f9e9107 e05cf7cc 5ff48cb5 83b3d80f 98ee332d 9a75998 f120b206 9b4dea08 9642b102 d008d611 408a182c 2a69fd4 61183b8 fe6e70ad f8a193bc 2e098272 e9ad7a12 8a3b42ce 23b48796 afe2c549 c919fab3 5938188d f4189c5a 4bd0513c 5954b331 b89f6311 dc6c42a1 10ccfd0d bba6cc45 d6119828 2c8d0d1d a775b298 e839e1ea 121ad316 8d260ed8 6dec872d 34dbe188 1129c3d5 561a4137 95bba17d 7aecaf4b 2c35c363 527b1241 e7127473 79a7e164 9c9dfb0e 430178f2 bf3c416 cfb623e6 354b792 43a78fd4 27e7bd44 9f931110 b8a65f57 59fb1ac7 24cf875d 84dc2df1 51a2d20 c159eee2 dd78a908 365e959b 8c9dfa6c 465aacac fce9b688 7cb2691f 3476881f ee754c85 79e4e829 d0a50114 5a4fbe60 6eff0693 b1fbae9 c6ea703d 2a4177c7 ef5ec1d5 baf800c1 c595a943 ac5f0795 c5aecee9 eb18dda9 d7156f6a abf326c6 b60930ae a1604137 52521845 c33bf831 ffd9af18 9d548a06 c65298f4 d53389d4 2afa7235 77606d4c 2ca455c5 31f451e 8325543c 2d816bdd 65d3d499 79803961 9feb044a 5afb39d3 83cd3346 e7409f41 4872878 d94330c7 b1f722c4 f386af8f 4e92fae 7045ef19 62332dec 5f3ff4f6 b514d5e9 95202a2e c37630d4 67a5554c 2ffbdddb 2d15bbe2 e64d13a6 416f0e96 59c09211 359431cf 22c86f2b 2abee078 c6b6c8da 41886020 63269789 4a09922d e43438e2 7531db4c 6622bbe9 e59b4c11 5e78a6a4 14b0da4 3c652740 8a9bdcd ee25986f ce5af02b 857e2958 485d7c13 90c596ac 62599239 5c1ea9ac 60a187d6 fc4da869 6caa2d69 f4893a0 6802dfb9 50e3bd32 7a7ef1ba c38f7363 93f6e67d 633be8b9 33354a37 f43eb853 b7918931 933c6dc1 b1e9aa92 a7675c74 ab7ca233 764f37fb 120be149 6f3ef475 33d4876d df4dc4ab f8847ff3 b44deb5c ed452bc3 d2f4046e eb9f15b0 34455c4f 97ecb3dc 2fb6c648 6f30c41b 4be549f6 dfcc5f28 68bc90ad c0852193 de6c4f88 8819c690 836d7b54 188cb0a9 1aab2569 6e69f52a 1c2ebeb5 b5731c28 ada29852 6ed8e951 f19fde52 224310b8 7d70125c 33960576 91564f54 fadc54b5 fb3cd396 514d3892 f6c2fec9 e4cea17d 6c642682 adb44e7c 53966784 68600648 893e8d9d 92d0f88c 75580fd8 67286370 b43db669 43e53d0c 9e780cf7 7aff3b80 2a1184bd 561d856a 8ff8e811 5deabc5a 36e604c3 26a13dcc 48438f5a f9dc43c6 6a8e2b99 70938cd9 5a7e2b1a ca95768a f32616f1 8ec915f 2cba3361 9e9c302c e2a9a20e 1f00e60a 38bc1ddc af3685b7 52039f55 16fdd211 d205fba3 7164e80f fd610d76 a1b0ee1a 1ce0c96a ea5f32c5 55250012 69283474 cc22511f eeb5fe03 84bb37f8 8ea7e19b d725e457 d7700b1f 12ea6008 e4142d25 c2927fc 3a86a46b c8092337 b5ddb985 6f747345 217cdfd7 dcef60d7 5b0ea9a9 492bd94e 9ac10532 be3dbdf8 c2dcbfab 21408752 f21e4765 b5f1c34a e0db9575 17d81f9c be72f69b f3822d6d 62adcc77 5036d2a0 aac04498 1ac77cd6 45cc883 1f7e38c5 a290d4d0 ec65af2 8f8b6593 2e50ad4f 83bca946 40e02df0 7e9f1b32 5cb9083d 240c5dcb b9fa637 c57104d4 370ef9f5 ee5fbccc c57946cf cf501ca1 ca5c0010 16db34a6 cc329da6 91d88142 f056406a 95e9c98 bc492224 632ad12b 79fa01c0 62d9fc54 6a5d0cb9 bb8c7ec9 49d5ab49 88ee1d9b cef79091 b0082dcf 9057c917 48d19480 5eafa21d 97cff345 c92cfc3d 7f6eb4b1 b62f7bac 13adebe3 e0f8dcd 3ba0a920 a0c4dbe0 2284b46b b5d57379 46064ca 497ddff6 af458db8 b75f76a8 65d0cd59 a6ad1e00 1169eb13 ff1bebc9 41b922fd 46a7abb8 591bc34a fe8431e5 8e25c80d 1960f73b 8e2d1f98 12ece414 ea10b237 176024d8 ce8e238d 6ffd075c 74faf08 b0535880 6ecd7fa3 85cf0f44 8cc77ef9 aa866e63 28c277a2 c42ce748 648b65f6 42516bd3 4790ee3b c7410944 9f90aa66 37febfd8 cb144a9d ad4200bc daa1fb5d 78ff7c7e 71e51784 499b76e3 d522db95 75dea9a 8ccffb2f b5b4302f 6b1a1930",
+          "seed": "0",
+          "seed_per_iteration": "0",
+          "validate_parameters": "1"
+        },
+        "gradient_booster": {
+          "dart_train_param": {
+            "normalize_type": "tree",
+            "one_drop": "0",
+            "rate_drop": "0",
+            "sample_type": "uniform",
+            "skip_drop": "0"
+          },
+          "gbtree_model_param": {
+            "num_parallel_tree": "1",
+            "num_trees": "100"
+          },
+          "gbtree_train_param": {
+            "process_type": "default",
+            "tree_method": "auto",
+            "updater": "grow_quantile_histmaker",
+            "updater_seq": "grow_quantile_histmaker"
+          },
+          "name": "gbtree",
+          "specified_updater": false,
+          "tree_train_param": {
+            "alpha": "0",
+            "colsample_bylevel": "1",
+            "colsample_bynode": "1",
+            "colsample_bytree": "1",
+            "eta": "0.300000012",
+            "gamma": "0",
+            "grow_policy": "depthwise",
+            "interaction_constraints": "",
+            "lambda": "1",
+            "learning_rate": "0.300000012",
+            "max_bin": "256",
+            "max_cat_threshold": "64",
+            "max_cat_to_onehot": "4",
+            "max_delta_step": "0",
+            "max_depth": "6",
+            "max_leaves": "0",
+            "min_child_weight": "1",
+            "min_split_loss": "0",
+            "monotone_constraints": "()",
+            "refresh_leaf": "1",
+            "reg_alpha": "0",
+            "reg_lambda": "1",
+            "sampling_method": "uniform",
+            "sparse_threshold": "0.20000000000000001",
+            "subsample": "1"
+          },
+          "updater": [
+            {
+              "hist_train_param": {
+                "debug_synchronize": "0",
+                "max_cached_hist_node": "18446744073709551615"
+              },
+              "name": "grow_quantile_histmaker"
+            }
+          ]
+        },
+        "learner_model_param": {
+          "base_score": "[5E-1]",
+          "boost_from_average": "1",
+          "num_class": "0",
+          "num_feature": "21",
+          "num_target": "1"
+        },
+        "learner_train_param": {
+          "booster": "gbtree",
+          "disable_default_eval_metric": "0",
+          "multi_strategy": "one_output_per_tree",
+          "objective": "binary:logistic"
+        },
+        "metrics": [],
+        "objective": {
+          "name": "binary:logistic",
+          "reg_loss_param": {
+            "scale_pos_weight": "37.1721268"
+          }
+        }
+      },
+      "version": [
+        3,
+        4,
+        1
+      ]
+    },
+    "outstanding_by_class": {
+      "0": {
+        "null": 0,
+        "unique": 749,
+        "negative": 0,
+        "zero": 77477,
+        "quantiles": {
+          "0.0": 0.0,
+          "0.01": 0.0,
+          "0.5": 0.0,
+          "0.95": 0.0,
+          "0.99": 135.0,
+          "1.0": 749.0
+        }
+      },
+      "1": {
+        "null": 0,
+        "unique": 306,
+        "negative": 0,
+        "zero": 289,
+        "quantiles": {
+          "0.0": 0.0,
+          "0.01": 0.0,
+          "0.5": 95.0,
+          "0.95": 254.3499999999999,
+          "0.99": 295.0,
+          "1.0": 480.0
+        }
+      }
+    },
+    "latency_by_class": {
+      "0": {
+        "null": 0,
+        "unique": 7592,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 0.000101089477539,
+          "0.01": 0.0001740455627441,
+          "0.5": 0.0011641979217529,
+          "0.95": 0.003162884712219208,
+          "0.99": 1.0,
+          "1.0": 1.0
+        }
+      },
+      "1": {
+        "null": 0,
+        "unique": 1140,
+        "negative": 0,
+        "zero": 0,
+        "quantiles": {
+          "0.0": 0.0001540184020996,
+          "0.01": 0.0013396120071410339,
+          "0.5": 0.1957379579544067,
+          "0.95": 1.0,
+          "0.99": 1.0,
+          "1.0": 1.0
+        }
+      }
+    }
+  }
+}

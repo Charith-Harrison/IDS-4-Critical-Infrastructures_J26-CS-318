@@ -1,0 +1,10 @@
+# Tested on Python 3.13.7, Windows, during the 2026-10-25 audit.
+numpy==2.5.4
+pandas==3.0.6
+scikit-learn==1.9.1
+xgboost==3.4.1
+scipy==1.18.1
+joblib==1.6.0
+threadpoolctl==3.7.0
+python-dateutil==2.9.0.post0
+six==1.17.0

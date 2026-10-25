@@ -61,6 +61,18 @@ from src.excel_exporter import export_dataframe_to_excel_buffer
 main_bp = Blueprint("main", __name__)
 
 
+@main_bp.before_request
+def preserve_historical_artifacts():
+    """The original dashboard is a read-only viewer of historical experiments."""
+    if request.method not in {"GET", "HEAD", "OPTIONS"}:
+        return jsonify({
+            "success": False,
+            "error": "Historical dashboard is read-only after the Component 4 audit. "
+                     "Use the versioned CLI in component4_replay/README.md. "
+                     "Verified independence evidence is required for new training."
+        }), 409
+
+
 def get_paths() -> Dict[str, str]:
     """
     Resolves absolute filesystem paths for all project artifacts and active datasets.

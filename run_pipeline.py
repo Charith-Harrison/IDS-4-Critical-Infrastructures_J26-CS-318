@@ -35,6 +35,12 @@ def load_config(config_path: str = "config/default.yaml") -> dict:
 
 
 def run_pipeline(config: dict, normal_max_rows: int = None) -> dict:
+    raise RuntimeError(
+        "Historical pipeline disabled after the Component 4 audit: its inferred capture "
+        "split and outcome-dependent features do not establish independent evaluation. "
+        "Use python -m component4_replay.src.prepare --out <NEW_DIRECTORY>; "
+        "see component4_replay/README.md. Existing artifacts are preserved."
+    )
     print("=" * 75)
     print("Protocol-Aware Replay Attack Detection for Modbus/TCP")
     print("Stage 1 University Research Prototype Pipeline")

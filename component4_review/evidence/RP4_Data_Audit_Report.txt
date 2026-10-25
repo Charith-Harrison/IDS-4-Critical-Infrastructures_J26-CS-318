@@ -1,0 +1,102 @@
+PAGE 1
+RP4 – Modbus Replay Detection Data Audit
+Report
+Generated on 2026-10-23 11:52:59 | University Research Prototype
+1. Uploaded Dataset Information
+Dataset Source
+Filename
+File Size
+Total Records
+Capture Segments
+Normal Traffic
+normal_traffic_baseline.csv
+Ready
+150,000
+6
+Replay Attack Traffic
+replay_attacks.csv
+Ready
+9,494
+10
+2. Traffic Ingestion & Provenance Summary
+Both uploaded traffic streams have been validated at the packet/row level. Provenance metadata tracks the original
+source file and record index for every transaction to guarantee auditability.
+3. Data Quality & Missing Value Analysis
+Audit Check
+Observed Count
+Integrity Status
+Academic Recommendation
+Normal Missing Values
+0
+Complete
+Zero missing values in mandatory MBAP
+headers
+Replay Missing Values
+0
+Complete
+Zero missing values in mandatory MBAP
+headers
+Timestamp Ordering
+Monotonic within
+capture
+Verified
+Discontinuities partitioned into separate
+capture sessions
+4. Transaction Reconstruction Coverage
+Transaction Metric
+Count
+Proportion
+Research Role
+Total Requests Processed
+80,753
+100.0%
+Primary unit of detection analysis
+Matched Pairs (Req-Resp)
+78,620
+97.36%
+Valid round-trip server replies
+Timeouts (Missing Resp)
+2,133
+2.64%
+Queries eliciting no reply (indicates replay)
+Orphan Responses
+121
+-
+Server replies with no preceding query
+Label Conflicts Flagged
+1,047
+-
+Request is_attack != Response is_attack
+5. Label Distribution & Conflict Analysis
+Dataset Source
+Class 0 (Normal)
+Class 1 (Replay Attack)
+Unlabeled / Unknown
+Normal Traffic File
+150,000
+0
+0
+Replay Attack File
+7,247
+2,247
+0
+Combined Total
+157,247
+2,247
+0
+Confidential — University Research Prototype
+Page 1 of 2
+
+PAGE 2
+6. Audit Findings & Protocol Pipeline Recommendations
+1. Strict Row-Level Labeling: The replay file contains both benign and attack packets. Labels are strictly audited at
+row level and never inferred from filenames.
+2. Transaction-Level Context Scoping: Transactions are paired using 8-tuple (capture_id, client_ip, server_ip,
+client_port, server_port, TID, Unit ID, Function Code) rather than TID alone, preventing identifier collision.
+3. Temporal Leakage Elimination: Data splitting employs independent capture files and chronological blocking with a
+300-second separation gap to guarantee test isolation.
+4. Verification Status: Data audit verified 100% integrity across all required protocol fields. The datasets are certified
+ready for feature extraction and model training.
+Modbus/TCP Replay Attack Detection — Data & Label Audit Report
+Confidential — University Research Prototype
+Page 2 of 2

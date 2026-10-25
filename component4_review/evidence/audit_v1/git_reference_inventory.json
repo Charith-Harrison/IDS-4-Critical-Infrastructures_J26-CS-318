@@ -1,0 +1,180 @@
+{
+  "Kavisha-Branch": {
+    "file_count": 735,
+    "relevant": [
+      "component3/history/component3_main_design/v1_20261025/DECISION.md",
+      "component3/history/component3_preparation/PREPROCESSING_PLAN.md",
+      "component3/history/component3_reassessment/v1_20261024/DECISION_REPORT.md",
+      "component3/history/component3_reassessment/v1_20261024/output/decision.json",
+      "component3/history/component3_research_scaffold/v1_20261025/PREPROCESSING_PLAN.md",
+      "component3/history/component3_testbed_pilot/background/CIC_REASSESSMENT_DECISION.md",
+      "component3/history/producer_work_20261025/C3/component3_preparation/PREPROCESSING_PLAN.md",
+      "component3/history/producer_work_20261025/C3/component3_reassessment/v1_20261024/DECISION_REPORT.md",
+      "component3/history/producer_work_20261025/C3/component3_testbed_pilot/background/CIC_REASSESSMENT_DECISION.md",
+      "component3/history/producer_work_20261025/output/component3_handoff_20261025/PROMPT_FOR_KAVEESHA_CODEX.txt",
+      "component3/history/producer_work_20261025/output/component3_review/CLAUDE_ANTIGRAVITY_PROMPT.txt",
+      "component3/history/producer_work_20261025/output/component3_review/CODEX_COMPONENT3_CIC_ONLY_STAGE1_HANDOFF/component3_reference/CODEX_COMPONENT3_PROMPT.txt",
+      "component3/history/producer_work_20261025/output/component3_review/CODEX_COMPONENT3_HANDOFF/component3_reference/CODEX_COMPONENT3_PROMPT.txt",
+      "component3/history/producer_work_20261025/output/component3_review/CODEX_COMPONENT3_PROMPT.txt",
+      "component3/history/producer_work_20261025/output/component3_review/component3_reference/CODEX_COMPONENT3_PROMPT.txt",
+      "data/manifests/preprocessing.json",
+      "docs/research_limitations.md",
+      "src/preprocessing.py",
+      "tests/test_preprocessing.py"
+    ]
+  },
+  "main": {
+    "file_count": 1,
+    "relevant": []
+  },
+  "shashi-branch": {
+    "file_count": 61,
+    "relevant": [
+      "artifacts/results/replay_protocol_features.csv",
+      "data/raw/normal_traffic_baseline.csv",
+      "data/raw/replay_attacks.csv",
+      "normal_traffic_baseline.csv",
+      "replay_attacks.csv",
+      "uploads/normal/normal_traffic_baseline.csv",
+      "uploads/replay/replay_attacks.csv"
+    ]
+  },
+  "shashi-branch-backup": {
+    "file_count": 61,
+    "relevant": [
+      "artifacts/results/replay_protocol_features.csv",
+      "data/raw/normal_traffic_baseline.csv",
+      "data/raw/replay_attacks.csv",
+      "normal_traffic_baseline.csv",
+      "replay_attacks.csv",
+      "uploads/normal/normal_traffic_baseline.csv",
+      "uploads/replay/replay_attacks.csv"
+    ]
+  },
+  "origin/Backup-working-Harry": {
+    "file_count": 98,
+    "relevant": [
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_a_packet_dt_scaler.joblib",
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_a_packet_logreg_scaler.joblib",
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_b_window_logreg_scaler.joblib",
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_b_window_rf_scaler.joblib",
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_c_lstm_full_scaler.json",
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_c_lstm_recon_sequences_all_scaler.json",
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_d_lstm_no_timing_scaler.json",
+      "C2_Reconnaissance_Detection/docs/C2_DECISIONS.md",
+      "C2_Reconnaissance_Detection/docs/C2_LIMITATIONS.md"
+    ]
+  },
+  "origin": {
+    "file_count": 1,
+    "relevant": []
+  },
+  "origin/Harry-Branch": {
+    "file_count": 98,
+    "relevant": [
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_a_packet_dt_scaler.joblib",
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_a_packet_logreg_scaler.joblib",
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_b_window_logreg_scaler.joblib",
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_b_window_rf_scaler.joblib",
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_c_lstm_full_scaler.json",
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_c_lstm_recon_sequences_all_scaler.json",
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_d_lstm_no_timing_scaler.json",
+      "C2_Reconnaissance_Detection/docs/C2_DECISIONS.md",
+      "C2_Reconnaissance_Detection/docs/C2_LIMITATIONS.md"
+    ]
+  },
+  "origin/Kaveesha-Branch-Backup": {
+    "file_count": 858,
+    "relevant": [
+      "component3_main_design/v1_20261025/DECISION.md",
+      "component3_preparation/PREPROCESSING_PLAN.md",
+      "component3_reassessment/v1_20261024/DECISION_REPORT.md",
+      "component3_reassessment/v1_20261024/output/decision.json",
+      "component3_research_scaffold/v1_20261025/PREPROCESSING_PLAN.md",
+      "component3_testbed_pilot/background/CIC_REASSESSMENT_DECISION.md",
+      "data/manifests/preprocessing.json",
+      "docs/research_limitations.md",
+      "producer_work_20261025/C3/component3_preparation/PREPROCESSING_PLAN.md",
+      "producer_work_20261025/C3/component3_reassessment/v1_20261024/DECISION_REPORT.md",
+      "producer_work_20261025/C3/component3_testbed_pilot/background/CIC_REASSESSMENT_DECISION.md",
+      "producer_work_20261025/output/component3_handoff_20261025/PROMPT_FOR_KAVEESHA_CODEX.txt",
+      "producer_work_20261025/output/component3_review/CLAUDE_ANTIGRAVITY_PROMPT.txt",
+      "producer_work_20261025/output/component3_review/CODEX_COMPONENT3_CIC_ONLY_STAGE1_HANDOFF/component3_reference/CODEX_COMPONENT3_PROMPT.txt",
+      "producer_work_20261025/output/component3_review/CODEX_COMPONENT3_HANDOFF/component3_reference/CODEX_COMPONENT3_PROMPT.txt",
+      "producer_work_20261025/output/component3_review/CODEX_COMPONENT3_PROMPT.txt",
+      "producer_work_20261025/output/component3_review/component3_reference/CODEX_COMPONENT3_PROMPT.txt",
+      "src/preprocessing.py",
+      "tests/test_preprocessing.py"
+    ]
+  },
+  "origin/Kavisha-Branch": {
+    "file_count": 735,
+    "relevant": [
+      "component3/history/component3_main_design/v1_20261025/DECISION.md",
+      "component3/history/component3_preparation/PREPROCESSING_PLAN.md",
+      "component3/history/component3_reassessment/v1_20261024/DECISION_REPORT.md",
+      "component3/history/component3_reassessment/v1_20261024/output/decision.json",
+      "component3/history/component3_research_scaffold/v1_20261025/PREPROCESSING_PLAN.md",
+      "component3/history/component3_testbed_pilot/background/CIC_REASSESSMENT_DECISION.md",
+      "component3/history/producer_work_20261025/C3/component3_preparation/PREPROCESSING_PLAN.md",
+      "component3/history/producer_work_20261025/C3/component3_reassessment/v1_20261024/DECISION_REPORT.md",
+      "component3/history/producer_work_20261025/C3/component3_testbed_pilot/background/CIC_REASSESSMENT_DECISION.md",
+      "component3/history/producer_work_20261025/output/component3_handoff_20261025/PROMPT_FOR_KAVEESHA_CODEX.txt",
+      "component3/history/producer_work_20261025/output/component3_review/CLAUDE_ANTIGRAVITY_PROMPT.txt",
+      "component3/history/producer_work_20261025/output/component3_review/CODEX_COMPONENT3_CIC_ONLY_STAGE1_HANDOFF/component3_reference/CODEX_COMPONENT3_PROMPT.txt",
+      "component3/history/producer_work_20261025/output/component3_review/CODEX_COMPONENT3_HANDOFF/component3_reference/CODEX_COMPONENT3_PROMPT.txt",
+      "component3/history/producer_work_20261025/output/component3_review/CODEX_COMPONENT3_PROMPT.txt",
+      "component3/history/producer_work_20261025/output/component3_review/component3_reference/CODEX_COMPONENT3_PROMPT.txt",
+      "data/manifests/preprocessing.json",
+      "docs/research_limitations.md",
+      "src/preprocessing.py",
+      "tests/test_preprocessing.py"
+    ]
+  },
+  "origin/Savi-Branch": {
+    "file_count": 1,
+    "relevant": []
+  },
+  "origin/branch-ghost": {
+    "file_count": 98,
+    "relevant": [
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_a_packet_dt_scaler.joblib",
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_a_packet_logreg_scaler.joblib",
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_b_window_logreg_scaler.joblib",
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_b_window_rf_scaler.joblib",
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_c_lstm_full_scaler.json",
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_c_lstm_recon_sequences_all_scaler.json",
+      "C2_Reconnaissance_Detection/artifacts/preprocessing/model_d_lstm_no_timing_scaler.json",
+      "C2_Reconnaissance_Detection/docs/C2_DECISIONS.md",
+      "C2_Reconnaissance_Detection/docs/C2_LIMITATIONS.md"
+    ]
+  },
+  "origin/main": {
+    "file_count": 1,
+    "relevant": []
+  },
+  "origin/shashi-branch": {
+    "file_count": 61,
+    "relevant": [
+      "artifacts/results/replay_protocol_features.csv",
+      "data/raw/normal_traffic_baseline.csv",
+      "data/raw/replay_attacks.csv",
+      "normal_traffic_baseline.csv",
+      "replay_attacks.csv",
+      "uploads/normal/normal_traffic_baseline.csv",
+      "uploads/replay/replay_attacks.csv"
+    ]
+  },
+  "origin/shashi-branch-backup": {
+    "file_count": 61,
+    "relevant": [
+      "artifacts/results/replay_protocol_features.csv",
+      "data/raw/normal_traffic_baseline.csv",
+      "data/raw/replay_attacks.csv",
+      "normal_traffic_baseline.csv",
+      "replay_attacks.csv",
+      "uploads/normal/normal_traffic_baseline.csv",
+      "uploads/replay/replay_attacks.csv"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "metrics": {
+    "TP": 573,
+    "FP": 42,
+    "TN": 25288,
+    "FN": 20,
+    "support": 25923,
+    "precision": 0.9317073170731708,
+    "recall": 0.9662731871838112,
+    "F1": 0.9486754966887417,
+    "accuracy": 0.997608301508313,
+    "false_positive_rate": 0.0016581129095933676,
+    "balanced_accuracy": 0.9823075371371088,
+    "ROC_AUC": 0.9995012546028179,
+    "PR_AUC_average_precision": 0.9838061405310949
+  },
+  "metadata": {
+    "training_samples": 54777,
+    "class_distribution": {
+      "Normal (0)": 53342,
+      "Replay (1)": 1435
+    },
+    "scale_pos_weight_applied": 37.1721,
+    "hyperparameters": {
+      "random_state": 42,
+      "n_estimators": 100,
+      "max_depth": 4,
+      "learning_rate": 0.1,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "probability_threshold": 0.5,
+      "eval_metric": "logloss"
+    },
+    "training_duration_seconds": 1.017
+  },
+  "scope": "original training helper, no output artifacts, current environment, stored feature CSV"
+}

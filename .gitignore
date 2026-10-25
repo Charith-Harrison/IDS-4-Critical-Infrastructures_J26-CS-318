@@ -19,3 +19,7 @@ __pycache__/
 
 # Scratch files
 scratch/
+
+# Versioned Component 4 generated data/models stay local; reports and source remain tracked.
+component4_replay/data/processed/*/
+component4_replay/artifacts/*/

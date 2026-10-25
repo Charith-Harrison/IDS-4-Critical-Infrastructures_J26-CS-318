@@ -1,0 +1,22 @@
+{
+  "schema_version": "c4-request-arrival-v1",
+  "decision_point": "request_arrival",
+  "normal_csv": "data/raw/normal_traffic_baseline.csv",
+  "replay_csv": "data/raw/replay_attacks.csv",
+  "observed_boundary_gap_seconds": 100.0,
+  "pair_timeout_seconds": 1.0,
+  "history_size": 100,
+  "window_seconds": 60.0,
+  "probability_threshold": 0.5,
+  "model": {
+    "random_state": 42,
+    "n_estimators": 100,
+    "max_depth": 4,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "n_jobs": 1,
+    "tree_method": "hist",
+    "eval_metric": "logloss"
+  }
+}

@@ -13,6 +13,7 @@ async function call(path, opts) {
 export const api = {
   health: () => call('/health'),
   summary: () => call('/summary'),
+  metrics: () => call('/metrics'),
   validation: () => call('/validation'),
   cic: () => call('/cic'),
   runs: () => call('/runs'),

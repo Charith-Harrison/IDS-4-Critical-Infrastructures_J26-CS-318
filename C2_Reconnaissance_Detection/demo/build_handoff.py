@@ -28,6 +28,8 @@ REQUIRED = [
      "runs, upload samples with reference scores, final reports", ["C2_Reconnaissance_Detection/demo_bundle/**/*"]),
     ("frontend_build", "Built React frontend served by the demo server (no Node.js needed)",
      ["C2_Reconnaissance_Detection/frontend/dist/**/*"]),
+    ("dashboard_metrics", "Request-pooled metrics and exact confusion counts aggregated from existing frozen test predictions; no model fitting or new test scoring",
+     ["C2_Reconnaissance_Detection/demo/metrics_report.json"]),
     ("final_models", "Frozen fitted models, thresholds, CV selection, validation/test scores and reports, test-opening logs",
      [f"{FV}/models/*"]),
     ("model_inputs", "Exact train/validation/test model inputs (19 step features, 20-request windows, B3 statistics, "

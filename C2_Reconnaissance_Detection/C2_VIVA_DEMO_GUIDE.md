@@ -34,18 +34,20 @@ The browser opens <http://127.0.0.1:8020/>. After setup it works offline.
 
 ## Demo sequence
 
-1. **Overview:** final held-out results, model comparison and the known limitation.
-2. **Traffic Replay** (the default run is a sequential scan):
+1. **Overview:** the research question, final held-out results and the one-pass limitation.
+2. **Metrics:** choose test set, legitimate workload, history length and model. Show precision, recall, F1, accuracy, ROC-AUC, false-positive rate and exact TP/FP/TN/FN counts. Change from revisiting normal to legitimate one-pass work. These are saved-prediction summaries, not newly fitted or rescored tests. The page explains request-pooled versus scenario-balanced recall.
+3. **Traffic replay** (the default run is a sequential scan):
    1. Press **Play**.
    2. Watch Current Message, Model Prediction, Temporal Context and Recent 20 Requests.
    3. Switch the run to **Configuration backup** (a legitimate one-pass read, which is flagged: the known limitation).
    4. Switch to **Fixed polling** (revisiting normal traffic, which stays quiet).
    5. Switch to **Unit probe · Site C** (an unseen site).
    6. At the bottom, press **Verify with frozen models**. It re-scores the run live and should show 0 disagreements.
-3. **Compare:** recon scan vs one-pass read vs normal polling.
-4. **Validation:** runs, split, gates G1–G3, tshark and ledger checks, the rejected run.
-5. **Why the dataset changed:** the CIC audit summary.
-6. **Score a file:**
+4. **Compare:** recon scan vs one-pass read vs normal polling.
+5. **Walkthrough:** plain-language presentation notes, model explanations, metric formulas and changes from the CIC prototype. A printable version is in `FRONTEND_WALKTHROUGH.md`.
+6. **Data checks:** runs, split, gates G1–G3, tshark and ledger checks, the rejected run.
+7. **CIC audit:** why the inherited labels and old scores are historical evidence rather than the current result.
+8. **Score a file:**
    1. Choose a file from `C2_Reconnaissance_Detection\demo_bundle\samples\`, CSV or Parquet, e.g.
       `recon_sequential_scan_siteA.parquet`. The files can also be downloaded from the links on the page.
    2. The page shows alert counts per model and a **Reference check** against the saved held-out scores, which

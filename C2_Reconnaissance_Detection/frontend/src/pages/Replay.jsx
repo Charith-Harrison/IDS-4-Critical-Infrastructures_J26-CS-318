@@ -21,7 +21,7 @@ export function useRuns() {
 export function RunSelect({ runs, value, onChange }) {
   const groups = ['recon', 'one_pass_normal', 'revisiting_normal'];
   return (
-    <select className="select" value={value} onChange={(e) => onChange(e.target.value)}>
+    <select aria-label="Recorded run" className="select" value={value} onChange={(e) => onChange(e.target.value)}>
       {groups.map((g) => (
         <optgroup key={g} label={GROUP[g]}>
           {runs
@@ -142,7 +142,7 @@ export default function Replay() {
     <div className="page">
       <div className="page-head">
         <div>
-          <div className="eyebrow">Live / Replay Traffic · held-out test run</div>
+          <div className="eyebrow">Recorded traffic · held-out test run</div>
           <h1>{info.caption}</h1>
           <div className="meta-line">
             <Badge>Site {info.site}</Badge>
@@ -157,6 +157,8 @@ export default function Replay() {
           <RunSelect runs={runs} value={runId} onChange={setRunId} />
         </div>
       </div>
+
+      <div className="context-note">This page explains one recorded run, not the whole test set. <a href="#metrics">Open full test metrics</a> · <a href="#guide">How to explain this page</a></div>
 
       <Panel
         title="Run timeline"
@@ -176,7 +178,7 @@ export default function Replay() {
               ))}
             </div>
             <label className="muted small">Alerts</label>
-            <select className="select small" value={tlModel} onChange={(e) => setTlModel(e.target.value)}>
+            <select aria-label="Timeline alert model" className="select small" value={tlModel} onChange={(e) => setTlModel(e.target.value)}>
               {MODELS.map((m) => (
                 <option key={m.id} value={m.id}>{m.name}</option>
               ))}
@@ -186,15 +188,16 @@ export default function Replay() {
       >
         <Timeline idx={idx} t={r.t} address={r.address} recon={r.recon} alert={alerts[tlModel]} cursor={c} onSeek={setCursor} />
         <div className="player">
-          <button className="btn" onClick={() => setCursor(Math.max(0, c - 1))}>◀ Step</button>
+          <button className="btn" onClick={() => setCursor(Math.max(0, c - 1))}>Previous</button>
           <button className="btn primary" onClick={() => setPlaying(!playing)}>{playing ? 'Pause' : 'Play'}</button>
-          <button className="btn" onClick={() => setCursor(Math.min(idx.length - 1, c + 1))}>Step ▶</button>
+          <button className="btn" onClick={() => setCursor(Math.min(idx.length - 1, c + 1))}>Next</button>
+          <span className="muted small">Replay speed</span>
           <div className="seg">
             {SPEEDS.map((s, k) => (
               <button key={s.label} className={speed === k ? 'on' : ''} onClick={() => setSpeed(k)}>{s.label}</button>
             ))}
           </div>
-          <input type="range" min={0} max={idx.length - 1} value={c} onChange={(e) => setCursor(+e.target.value)} className="scrub" />
+          <input aria-label="Selected request in replay" type="range" min={0} max={idx.length - 1} value={c} onChange={(e) => setCursor(+e.target.value)} className="scrub" />
           <span className="muted small mono">{c + 1} / {idx.length}</span>
           {info.group === 'recon' && <button className="btn ghost small" onClick={() => jump((k) => r.recon[k] === 1)}>First recon request</button>}
           {info.group !== 'recon' && <button className="btn ghost small" onClick={() => jump((k) => r.phase[k] === 'normal_workload')}>Task start</button>}
@@ -203,6 +206,7 @@ export default function Replay() {
 
       <div className="grid-replay">
         <Panel title="Current Message">
+          <p className="context-note">What the client asked the PLC: read {r.quantity[i]} item{r.quantity[i] === 1 ? '' : 's'} from address {r.address[i]}, unit {r.unit[i]}.</p>
           <dl className="kv">
             <dt>Time</dt><dd className="mono">{r.t[i].toFixed(3)} s</dd>
             <dt>Client → target</dt><dd className="mono">{r.src_ip[i]}:{r.src_port[i]} → {r.dst_ip[i]}:502</dd>
@@ -215,6 +219,7 @@ export default function Replay() {
             <dt>Request bytes</dt><dd className="mono small wrap">{r.adu_hex[i]}</dd>
             <dt>Response bytes</dt><dd className="mono small wrap">{r.response_hex[i]} <span className="muted">({r.latency_us[i]} µs)</span></dd>
           </dl>
+          <details className="read-this"><summary>What do these fields mean?</summary><p>Unit identifies the logical device. Function is the read operation. Address is where it starts; quantity is how many items are requested. TID, endpoints and frame numbers provide matching and traceability, not model evidence of an attack.</p><p>The bytes are the captured request and response. Ground truth below comes from the experiment ledger and is never given to the models.</p></details>
           <div className="truth">
             <div className="truth-label">Ground Truth</div>
             <Badge tone={isRecon ? 'recon' : 'normal'}>{isRecon ? 'Reconnaissance' : 'Normal'}</Badge>
@@ -226,6 +231,7 @@ export default function Replay() {
         </Panel>
 
         <Panel title="Model Prediction" note="Saved held-out test scores · tick = frozen threshold (5% FPR on validation revisiting normal)">
+          <p className="context-note">Each row is a different detector. A score above its line produces an alert; scores are not verified attack probabilities. Bars use a logarithmic scale; the numeric score is shown beside each bar.</p>
           <div className="preds">
             {MODELS.map((m) => {
               const sc = r.saved_scores[m.id][i];
@@ -250,10 +256,11 @@ export default function Replay() {
               {finalAlert ? (isRecon ? 'Correct detection' : 'False positive') : isRecon ? 'Missed' : 'Correctly quiet'}
             </div>
           </div>
-          {!r.full_context[i] && <div className="footnote">Partial context: fewer than 20 earlier requests in this stream.</div>}
+          {!r.full_context[i] && <div className="footnote">Partial context: fewer than 20 requests including the current one in this stream.</div>}
         </Panel>
 
         <Panel title="Temporal Context" note="History-statistics features of this request (model B3 input)">
+          <p className="context-note">These are measured patterns, not explanations of intent. A request key means unit + function + address + quantity.</p>
           <div className="feat-grid">
             {B3_FEATURES.map((f) => (
               <div key={f.key} className="feat">
@@ -262,19 +269,20 @@ export default function Replay() {
               </div>
             ))}
             <div className="feat">
-              <div className="feat-label">Revisited targets</div>
+              <div className="feat-label">Repeated keys in window</div>
               <div className="feat-value">{Math.round((1 - r.saved_b3.h_unique_target_frac[i]) * r.saved_b3.h_context_len[i])} of {r.saved_b3.h_context_len[i]}</div>
             </div>
           </div>
+          <details className="read-this"><summary>New, repeated and ascending requests</summary><p>Distinct keys count different requests in the recent history. First-seen share measures how much of that history reached keys not seen earlier in this stream segment. Ascending steps track contiguous address progression. Interval CV describes timing variability.</p><p>First-seen indicators remember past requests beyond the displayed 20 rows. A legitimate backup can have the same novelty pattern as a scan.</p></details>
           <div className="sub-head">Recent 20 address path</div>
           <ContextPath win={win} address={r.address} unit={r.unit} fc={r.wire_fc} firstSeen={firstSeen} recon={r.recon} />
           <div className="legend small">
-            <span className="dot filled" /> first time in stream <span className="dot hollow" /> revisit
+            <span className="dot filled" /> first time in stream segment <span className="dot hollow" /> revisit
           </div>
         </Panel>
       </div>
 
-      <Panel title="Recent 20 Requests" note={`Causal window for the current request · stream ${si.key(i)}`}>
+      <Panel title="Recent 20 requests" note={`Ends at the current request. Earlier rows only, same run/client/target stream · ${si.key(i)}`}>
         <table className="table compact mono">
           <thead>
             <tr>

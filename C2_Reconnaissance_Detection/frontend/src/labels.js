@@ -51,9 +51,9 @@ export const GROUP = { recon: 'Reconnaissance', one_pass_normal: 'Legitimate one
 
 // Pre-specified B3 history statistics (component2_testbed/c2tb/diagnostics.py, PILOT_PROTOCOL.md)
 export const B3_FEATURES = [
-  { key: 'h_unique_target_frac', label: 'Unique targets', fmt: 'pct' },
+  { key: 'h_unique_target_frac', label: 'Distinct request keys', fmt: 'pct' },
   { key: 'h_first_seen_frac', label: 'First-seen share', fmt: 'pct' },
-  { key: 'h_current_first_seen', label: 'Current target new', fmt: 'yesno' },
+  { key: 'h_current_first_seen', label: 'Current key first seen', fmt: 'yesno' },
   { key: 'h_ascending_step_frac', label: 'Ascending steps', fmt: 'pct' },
   { key: 'h_mean_abs_addr_delta', label: 'Mean |Δ address|', fmt: 'num1' },
   { key: 'h_fc_transition_frac', label: 'FC changes', fmt: 'pct' },

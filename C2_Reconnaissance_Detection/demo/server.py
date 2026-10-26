@@ -7,6 +7,7 @@ final reports).  No internet, Docker or PyTorch needed.  Start with start_c2_dem
 from __future__ import annotations
 
 import hashlib
+import csv
 import io
 import json
 import os
@@ -16,7 +17,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from fastapi import FastAPI, File, HTTPException, UploadFile
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, Response
 from fastapi.staticfiles import StaticFiles
 
 from inference import BUNDLE as DEFAULT_BUNDLE
@@ -105,6 +106,35 @@ def validation():
 @app.get("/api/cic")
 def cic():
     return j("reports/cic_audit_facts.json")
+
+
+@lru_cache(maxsize=1)
+def display_metrics():
+    path = HERE / 'metrics_report.json'
+    if not path.is_file():
+        raise HTTPException(503, 'Display metrics are missing. Run demo/export_metrics.py using the saved test predictions.')
+    return json.loads(path.read_text(encoding='utf8'))
+
+
+@app.get('/api/metrics')
+def metrics():
+    return display_metrics()
+
+
+@app.get('/api/metrics.csv')
+def metrics_csv(population: str = 'test_in_site', context: str = 'full', comparison: str = 'revisiting'):
+    try:
+        rows = display_metrics()['populations'][population]['contexts'][context]['comparisons'][comparison]['models']
+    except KeyError as exc:
+        raise HTTPException(400, 'Unknown test population, history selection or normal workload') from exc
+    output = io.StringIO(newline='')
+    names = ['model', 'population', 'context', 'comparison', *rows['A'].keys()]
+    writer = csv.DictWriter(output, fieldnames=names)
+    writer.writeheader()
+    for model, row in rows.items():
+        writer.writerow({'model': model, 'population': population, 'context': context, 'comparison': comparison, **row})
+    return Response(output.getvalue(), media_type='text/csv',
+                    headers={'Content-Disposition': f'attachment; filename="c2_metrics_{population}_{context}_{comparison}.csv"'})
 
 
 @app.get("/api/runs")

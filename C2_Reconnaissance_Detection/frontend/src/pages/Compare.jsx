@@ -73,7 +73,7 @@ function Column({ col, runs }) {
           </dl>
           <div className="sub-head">Temporal context (median over task requests)</div>
           <dl className="kv tight">
-            <dt>Unique targets in last 20</dt><dd>{fmt(s.feats.unique, 'pct')}</dd>
+            <dt>Distinct keys in last 20</dt><dd>{fmt(s.feats.unique, 'pct')}</dd>
             <dt>First-seen share</dt><dd>{fmt(s.feats.firstSeen, 'pct')}</dd>
             <dt>Ascending steps</dt><dd>{fmt(s.feats.ascending, 'pct')}</dd>
             <dt>Mean interval</dt><dd>{fmt(s.feats.interval, 'log10s')}</dd>
@@ -114,7 +114,8 @@ export default function Compare() {
       <div className="page-head">
         <div>
           <div className="eyebrow">Held-out test runs · saved predictions</div>
-          <h1>Single requests overlap; history separates scans from revisiting traffic</h1>
+          <h1>Compare three behaviours</h1>
+          <p className="page-intro">A scan, a legitimate one-pass read and repeated polling. Alert rates below describe these example tasks; <a href="#metrics">full test metrics are separate</a>.</p>
         </div>
       </div>
       <div className="grid-3">
@@ -123,8 +124,8 @@ export default function Compare() {
         ))}
       </div>
       <div className="callouts">
-        <div className="callout"><b>Current message</b> — every request is an ordinary read inside the normal envelope; the current-message model does not separate the three.</div>
-        <div className="callout"><b>Temporal context</b> — scans and one-pass reads keep reaching targets never read before (first-seen ≈ 100%); polling re-reads targets it already read (first-seen ≈ 0%).</div>
+        <div className="callout"><b>Current message</b> — the examples use overlapping read fields. Model A is the current-message baseline; compare it with the history models.</div>
+        <div className="callout"><b>Temporal context</b> — scans and one-pass reads keep reaching new request keys; polling repeats familiar ones. A key means unit + function + address + quantity, not a new IP address.</div>
         <div className="callout warn"><b>Known limitation</b> — a legitimate one-pass read produces the same history as a scan and is flagged.</div>
       </div>
     </div>

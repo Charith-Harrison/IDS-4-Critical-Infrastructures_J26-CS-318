@@ -30,7 +30,7 @@ export default function History() {
         <Tile label="Inherited windows" value={num(c.legacy_windows)} sub={`${num(c.windows_with_backward_time)} with time running backwards`} tone="bad" />
         <Tile label="Inherited positive labels" value={num(c.legacy_positive_rows)} sub={`${num(c.positive_label_states.attack_associated_response)} were exception replies`} tone="bad" />
         <Tile label="One-line rule: length = 3" value={`F1 ${c.len3_rule_packet_F1.toFixed(3)}`} sub="Explains the old labels without any history" tone="bad" />
-        <Tile label="Recovered real recon requests" value={num(c.recovered_recon_candidates)} sub={`${c.recovered_supported} with solid log support`} />
+        <Tile label="Recovered request candidates" value={num(c.recovered_recon_candidates)} sub={`${c.recovered_supported} uniquely matched contextual cases`} />
       </div>
 
       <div className="grid-2">

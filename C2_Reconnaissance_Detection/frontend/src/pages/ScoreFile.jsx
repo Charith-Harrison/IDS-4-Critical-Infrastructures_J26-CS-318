@@ -33,6 +33,7 @@ export default function ScoreFile() {
         <div>
           <div className="eyebrow">Frozen pipeline</div>
           <h1>Score a request table</h1>
+          <p className="page-intro">Apply the frozen models to parsed requests. This does not train a model or measure accuracy on an unlabelled file.</p>
         </div>
       </div>
       <div className="grid-2">
@@ -62,6 +63,7 @@ export default function ScoreFile() {
           )}
         </Panel>
         <Panel title="Result">
+          <p className="context-note">Alert share means how many requests crossed the cutoff. It is not an accuracy, recall or malicious-intent percentage. <a href="#metrics">Labelled held-out metrics are here.</a></p>
           {busy && <Loading text="Scoring with frozen models…" />}
           {err && <div className="error">{err}</div>}
           {res && (

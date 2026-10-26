@@ -132,11 +132,13 @@ export function RecallBars({ rows }) {
           <div className="rb-label">{r.label}</div>
           <div className="rb-tracks">
             {r.series.map((s) => (
-              <div key={s.name} className="rb-track" title={`${s.name}: ${(s.value * 100).toFixed(1)}%`}>
-                <div className={`rb-fill ${s.cls}`} style={{ width: `${s.value * 100}%` }} />
-                {s.ci && (
-                  <div className="rb-ci" style={{ left: `${s.ci[0] * 100}%`, width: `${(s.ci[1] - s.ci[0]) * 100}%` }} />
-                )}
+              <div key={s.name} className="rb-item" title={`${s.name}: ${(s.value * 100).toFixed(1)}%`}>
+                <div className="rb-track">
+                  <div className={`rb-fill ${s.cls}`} style={{ width: `${s.value * 100}%` }} />
+                  {s.ci && (
+                    <div className="rb-ci" style={{ left: `${s.ci[0] * 100}%`, width: `${(s.ci[1] - s.ci[0]) * 100}%` }} />
+                  )}
+                </div>
                 <span className="rb-val">{(s.value * 100).toFixed(1)}%</span>
               </div>
             ))}

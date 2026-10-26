@@ -33,6 +33,7 @@ export default function Validation() {
         <div>
           <div className="eyebrow">Validation</div>
           <h1>Final dataset evidence</h1>
+          <p className="page-intro">How the requests were captured, labelled and kept apart for evaluation. <a href="#guide">Walkthrough notes</a> explain these checks.</p>
         </div>
       </div>
 
@@ -71,7 +72,7 @@ export default function Validation() {
             <tbody>
               <tr>
                 <td>G1 value coverage</td>
-                <td className="muted">Every recon field value also occurs in normal traffic</td>
+                <td className="muted">Checks declared overlap limits for recon field values in normal traffic</td>
                 <td className="r"><Pass ok={g.G1.pass} /></td>
               </tr>
               <tr>
@@ -83,7 +84,7 @@ export default function Validation() {
                 <td className="r"><Pass ok={g.G2.pass} /></td>
               </tr>
               <tr>
-                <td>G3 no single-message solution</td>
+                <td>G3 current-message baselines</td>
                 <td className="muted">
                   Best current-message model AUC{' '}
                   {Math.max(...Object.values(g.G3.max_by_scope).map((x) => x.roc_auc)).toFixed(3)} (limit 0.80)

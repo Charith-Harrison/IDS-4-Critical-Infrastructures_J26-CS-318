@@ -16,6 +16,7 @@ __pycache__/
 frontend/node_modules/
 frontend/dist/
 frontend/.vite/
+frontend/.qa/
 npm-debug.log*
 
 # Generated working CSV/NPY dataset copies (reproducible via src/run_all.py)

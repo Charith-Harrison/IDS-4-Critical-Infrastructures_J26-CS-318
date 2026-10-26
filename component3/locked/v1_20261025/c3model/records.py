@@ -14,7 +14,7 @@ import math
 import struct
 
 import pandas as pd
-
+#feature definitions. CURRENT - Information from the current Modbus message, WIRE-Network and transaction-header information, CONTEXT-Information from previous communication
 CURRENT = [
     'current_function', 'current_unit', 'current_is_request', 'current_pdu_length',
     'current_wire_address', 'current_wire_word', 'current_wire_quantity',
@@ -25,7 +25,7 @@ WIRE = ['current_numeric_tid', 'current_source_ip', 'current_destination_ip',
 CONTEXT = ['earlier_observed_mode', 'earlier_acknowledged_setpoint',
            'paired_request_object_role', 'response_minus_acknowledged_setpoint',
            'context_available']
-MAX_INTERVENING = 6
+MAX_INTERVENING = 6 #This means a previous observation is used as context only if no more than six Modbus application messages occurred between that observation and the current message.
 ROLE_CODE = {'mode': 1, 'setpoint': 2, 'pump': 3}
 NAN = float('nan')
 LABELS = {'normal', 'command_injection', 'response_injection'}
@@ -64,7 +64,7 @@ def _child(root, name):
     _require(candidate.is_relative_to(root), 'Artifact escaped source directory')
     return candidate
 
-
+#converts raw Modbus/TCP bytes into understandable information.
 def decode(raw: bytes, is_request: bool) -> dict:
     """Decode only the declared FC1/3/5/6 single-object subset, losslessly.
 
@@ -104,7 +104,7 @@ def decode(raw: bytes, is_request: bool) -> dict:
             result['word'] = int.from_bytes(pdu[2:], 'big')
     return result
 
-
+#code which addresses correspond to these objects
 def _public_map(membership, maps):
     if isinstance(maps, list):
         indexed = {m['id']: m for m in maps}
@@ -125,7 +125,7 @@ def _public_map(membership, maps):
         _require(isinstance(mapping[key], int) and 0 <= mapping[key] <= 65535, 'Invalid public map')
     return mapping
 
-
+#identifies whether a message refers to the mode, setpoint, or pump.
 def _object_role(decoded, mapping):
     address, function = decoded['address'], decoded['function']
     if address is None:
@@ -146,7 +146,7 @@ def _number(value):
 def _ip(value):
     return NAN if value is None else int(ipaddress.ip_address(value))
 
-
+#feature-engineering function. It processes one accepted recording and creates a DataFrame containing the decoded messages, features, context information, and verified labels.
 def build_run(folder: Path, membership: dict, public_maps) -> pd.DataFrame:
     """Build every row's public features, then attach separate accepted truth.
 
@@ -277,7 +277,7 @@ def build_run(folder: Path, membership: dict, public_maps) -> pd.DataFrame:
     frame['observed_at_ns'] = frame['observed_at_ns'].astype('int64')
     return frame
 
-
+#checks that dataset is complete and has not been unexpectedly modified.
 def verify_collection(root) -> dict:
     """Verify frozen sources, accepted seals and all listed hashes, no row parsing.
 
@@ -363,3 +363,7 @@ def verify_collection(root) -> dict:
             'roster_sha256': freeze['roster_sha256'],
             'final_payload_values_parsed': False,
             'limits': 'Artifact hashes and seals verified; this does not independently reconstruct all PCAPs or certify clock accuracy/industrial generalization.'}
+
+
+
+

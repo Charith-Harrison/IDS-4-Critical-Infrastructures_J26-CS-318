@@ -41,3 +41,8 @@ frontend/public/dashboard_data.json
 !.env.example
 .DS_Store
 Thumbs.db
+
+# Offline viva demo: generated bundle (data/models, shipped in the viva package) and its venv
+demo_bundle/
+demo/.venv/
+C2_viva_demo_package.zip

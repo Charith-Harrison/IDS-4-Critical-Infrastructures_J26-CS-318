@@ -107,6 +107,24 @@ def export_runs():
     (d / "index.json").write_text(json.dumps(index, indent=1))
 
 
+SAMPLES = [("final_v1-r086", "recon_sequential_scan_siteA"), ("final_v1-r200", "legit_config_backup_siteA"),
+           ("final_v1-r020", "recon_unit_probe_siteC")]
+
+
+def export_samples():
+    """Upload samples for 'Score a file': the pipeline input of held-out runs (no labels), in CSV and Parquet, plus
+    the saved held-out scores as the reference the upload is checked against."""
+    d = OUT / "samples"
+    d.mkdir(parents=True, exist_ok=True)
+    for run_id, name in SAMPLES:
+        raw = pd.read_csv(OUT / "runs" / f"{run_id}.csv")
+        raw.to_csv(d / f"{name}.csv", index=False)
+        raw.to_parquet(d / f"{name}.parquet", index=False)
+        rows = json.loads((OUT / "runs" / f"{run_id}.json").read_text())["rows"]
+        ref = pd.DataFrame({"adu_id": rows["adu_id"], **{m: rows["saved_scores"][m] for m in MODELS}})
+        ref.to_csv(d / f"{name}.reference_scores.csv", index=False, float_format="%.17g")
+
+
 def validation_evidence():
     status = j(TB / "final/collection_status.json")
     acc_files = sorted((DATA / "derived").glob("*/acceptance.json"))
@@ -177,6 +195,7 @@ if __name__ == "__main__":
         shutil.rmtree(OUT)
     src_hashes = export_models()
     export_runs()
+    export_samples()
     export_reports()
     files = {str(p.relative_to(OUT)).replace("\\", "/"): sha(p) for p in sorted(OUT.rglob("*")) if p.is_file()}
     (OUT / "bundle_manifest.json").write_text(json.dumps(

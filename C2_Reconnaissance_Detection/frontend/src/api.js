@@ -16,6 +16,7 @@ export const api = {
   validation: () => call('/validation'),
   cic: () => call('/cic'),
   runs: () => call('/runs'),
+  samples: () => call('/samples'),
   run: (id) => call(`/runs/${id}`),
   verify: (id) => call(`/runs/${id}/verify`, { method: 'POST' }),
   score: (file) => {

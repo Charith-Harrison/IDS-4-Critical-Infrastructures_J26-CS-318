@@ -233,3 +233,4 @@ a { color: var(--accent); }
 .drop { display: block; margin: 0.9rem 0 0.6rem; padding: 0.9rem; border: 1.5px dashed var(--border); border-radius: 8px; text-align: center; cursor: pointer; color: var(--muted); }
 .drop input { display: none; }
 .drop:hover { border-color: var(--accent); color: var(--accent); }
+.sample-list { margin: 0.3rem 0 0; padding-left: 1.1rem; }

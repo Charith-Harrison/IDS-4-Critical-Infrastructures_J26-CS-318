@@ -91,3 +91,7 @@ Desktop.ini
 .idea/
 *.swp
 *.swo
+
+# Component 2 handoff package output and its extracted manifest
+/handoff/
+/HANDOFF_MANIFEST.json

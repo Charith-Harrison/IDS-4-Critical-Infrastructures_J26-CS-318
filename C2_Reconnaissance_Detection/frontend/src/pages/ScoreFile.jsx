@@ -1,14 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { api } from '../api.js';
 import { Loading, Panel, Tile } from '../components/ui.jsx';
 import { MODELS, num } from '../labels.js';
-import { useRuns } from './Replay.jsx';
 
 const REQUIRED = ['src_ip', 'dst_ip', 'ts_corr_ns (or ts_ns)', 'unit', 'wire_fc', 'address', 'quantity', 'mbap_len', 'frame_len'];
 const OPTIONAL = ['run_id', 'frame_number', 'adu_id', 'tid', 'src_port'];
 
 export default function ScoreFile() {
-  const runs = useRuns();
+  const [samples, setSamples] = useState([]);
+  useEffect(() => {
+    api.samples().then(setSamples).catch(() => setSamples([]));
+  }, []);
   const [res, setRes] = useState(null);
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState(null);
@@ -48,12 +50,14 @@ export default function ScoreFile() {
             <input type="file" accept=".csv,.parquet" onChange={(e) => onFile(e.target.files[0])} />
             {name || 'Choose a file…'}
           </label>
-          {runs && (
+          {samples.length > 0 && (
             <div className="small muted">
-              Sample inputs (held-out runs, labels removed):{' '}
-              {runs.slice(0, 4).map((r) => (
-                <a key={r.run_id} className="link" href={`/api/runs/${r.run_id}/input.csv`}>{r.run_id.replace('final_v1-', '')}</a>
-              ))}
+              Samples (held-out test runs, labels removed; also in <span className="mono">demo_bundle\samples</span>):
+              <ul className="sample-list">
+                {samples.map((s) => (
+                  <li key={s}><a className="mono" href={`/api/samples/${s}`}>{s}</a></li>
+                ))}
+              </ul>
             </div>
           )}
         </Panel>
@@ -78,6 +82,33 @@ export default function ScoreFile() {
                   ))}
                 </tbody>
               </table>
+              {res.reference_check ? (
+                <>
+                  <div className="sub-head">Reference check</div>
+                  <div className="small muted">
+                    {num(res.reference_check.matched_requests)} requests match held-out run {res.reference_check.runs.join(', ')}; live
+                    scores compared with the saved test scores.
+                  </div>
+                  <table className="table compact">
+                    <thead><tr><th>Model</th><th className="r">Max |difference|</th><th className="r">Disagreements</th><th className="r">Exact threshold ties</th></tr></thead>
+                    <tbody>
+                      {MODELS.map((m) => {
+                        const v = res.reference_check.models[m.id];
+                        return (
+                          <tr key={m.id}>
+                            <td>{m.name}</td>
+                            <td className="r mono">{v.max_abs_diff.toExponential(1)}</td>
+                            <td className="r">{v.disagreements}</td>
+                            <td className="r muted">{v.exact_ties}</td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </>
+              ) : (
+                <div className="footnote">No reference: these requests are not part of a prepared held-out run.</div>
+              )}
             </>
           )}
         </Panel>

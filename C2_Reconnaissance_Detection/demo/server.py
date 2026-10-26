@@ -135,6 +135,21 @@ def run(run_id: str):
     return {"info": info, "rows": rows, "thresholds": pipeline().thresholds}
 
 
+@app.get("/api/samples")
+def samples():
+    d = BUNDLE / "samples"
+    return sorted(p.name for p in d.iterdir() if p.suffix in (".csv", ".parquet") and "reference" not in p.name) \
+        if d.exists() else []
+
+
+@app.get("/api/samples/{name}")
+def sample(name: str):
+    p = (BUNDLE / "samples" / name).resolve()
+    if p.parent != (BUNDLE / "samples").resolve() or not p.is_file():
+        raise HTTPException(404, "unknown sample")
+    return FileResponse(p, filename=name)
+
+
 @app.get("/api/runs/{run_id}/input.csv")
 def run_input(run_id: str):
     """The run's raw parsed request table exactly as fed to the pipeline (no ground-truth columns)."""
@@ -165,6 +180,30 @@ def verify(run_id: str):
     return {"run_id": run_id, "requests": len(raw), "models": res, "b3_feature_max_abs_diff": b3}
 
 
+def reference_check(out: pd.DataFrame):
+    """If uploaded requests belong to a prepared held-out run, compare live scores with its saved test scores."""
+    thr = pipeline().thresholds
+    res = None
+    for info in j("runs/index.json"):
+        d, _ = load_run(info["run_id"])
+        saved = pd.DataFrame({"adu_id": d["rows"]["adu_id"], **{m: d["rows"]["saved_scores"][m] for m in MODELS}})
+        x = out[["adu_id"] + MODELS].merge(saved, on="adu_id", suffixes=("", "_saved"))
+        if x.empty:
+            continue
+        res = res or {"matched_requests": 0, "runs": [], "models": {m: {"max_abs_diff": 0.0, "disagreements": 0,
+                                                                         "exact_ties": 0} for m in MODELS}}
+        res["matched_requests"] += len(x)
+        res["runs"].append(info["run_id"])
+        for m in MODELS:
+            dis = (x[m] > thr[m]) != (x[f"{m}_saved"] > thr[m])
+            tie = (x[f"{m}_saved"] - thr[m]).abs() <= TIE
+            r = res["models"][m]
+            r["max_abs_diff"] = max(r["max_abs_diff"], float((x[m] - x[f"{m}_saved"]).abs().max()))
+            r["disagreements"] += int((dis & ~tie).sum())
+            r["exact_ties"] += int((dis & tie).sum())
+    return res
+
+
 @app.post("/api/score")
 async def score_upload(file: UploadFile = File(...)):
     data = await file.read()
@@ -186,6 +225,7 @@ async def score_upload(file: UploadFile = File(...)):
     out["t"] = (out.ts_corr_ns - out.ts_corr_ns.min()) / 1e9
     return {"requests": len(out), "streams": int(out.groupby(["run_id", "src_ip", "dst_ip"]).ngroups),
             "alerts": {m: int(out[f"alert_{m}"].sum()) for m in MODELS},
+            "reference_check": reference_check(out),
             "rows": out[cols + ["t"]].head(2000).to_dict("list"), "truncated_to": min(len(out), 2000)}
 
 

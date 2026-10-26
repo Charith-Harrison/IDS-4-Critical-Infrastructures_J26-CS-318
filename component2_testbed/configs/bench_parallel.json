@@ -1,0 +1,186 @@
+{
+ "config_id": "bench_parallel",
+ "frozen": false,
+ "frozen_on": "2026-10-26",
+ "protocol": "FINAL_COLLECTION_PROTOCOL.md",
+ "scenario_design": "final_v1",
+ "image": "c2-recon-testbed:0.1.0",
+ "collection_id": "bench",
+ "collection_seed": 777,
+ "horizon_s": 75,
+ "end_tail_s": 5,
+ "subnet": "10.52.0.0/24",
+ "target_ip": "10.52.0.10",
+ "client_ip_pool": [
+  20,
+  250
+ ],
+ "clock_monitor": true,
+ "run_duration_s": 75,
+ "sites": {
+  "A": {
+   "site_id": "A",
+   "site_seed": 11,
+   "units": [
+    1,
+    2,
+    3
+   ],
+   "map_size": 32
+  },
+  "B": {
+   "site_id": "B",
+   "site_seed": 29,
+   "units": [
+    1,
+    2,
+    3
+   ],
+   "map_size": 32
+  },
+  "C": {
+   "site_id": "C",
+   "site_seed": 47,
+   "units": [
+    1,
+    2,
+    5,
+    7
+   ],
+   "map_size": 48
+  }
+ },
+ "scenario_groups": {
+  "recon": [
+   "R1_sequential_scan",
+   "R2_sparse_strided_scan",
+   "R3_randomized_scan",
+   "R4_slow_jittered_scan",
+   "R5_function_probe",
+   "R6_unit_probe"
+  ],
+  "revisiting_normal": [
+   "N1_fixed_polling",
+   "N2_variable_polling_bursts",
+   "N3_maintenance_blocks",
+   "N4_trend_watch"
+  ],
+  "one_pass_normal": [
+   "N5_hmi_cold_start",
+   "N6_config_backup",
+   "N7_historian_backfill",
+   "N8_commissioning_checkout"
+  ]
+ },
+ "runs_per_scenario": {
+  "A": {
+   "train": {
+    "recon": 4,
+    "revisiting_normal": 4,
+    "one_pass_normal": 4
+   },
+   "validation": {
+    "recon": 2,
+    "revisiting_normal": 2,
+    "one_pass_normal": 2
+   },
+   "test_in_site": {
+    "recon": 6,
+    "revisiting_normal": 3,
+    "one_pass_normal": 2
+   }
+  },
+  "B": {
+   "train": {
+    "recon": 4,
+    "revisiting_normal": 4,
+    "one_pass_normal": 4
+   },
+   "validation": {
+    "recon": 2,
+    "revisiting_normal": 2,
+    "one_pass_normal": 2
+   },
+   "test_in_site": {
+    "recon": 6,
+    "revisiting_normal": 3,
+    "one_pass_normal": 2
+   }
+  },
+  "C": {
+   "test_out_of_site": {
+    "recon": 12,
+    "revisiting_normal": 5,
+    "one_pass_normal": 3
+   }
+  }
+ },
+ "run_count_evidence": [
+  "final/run_count_evidence.json",
+  "final/run_count_scenario_stratified.json"
+ ],
+ "predictors": {
+  "current_message": [
+   "wire_fc",
+   "unit",
+   "address",
+   "quantity",
+   "mbap_len",
+   "frame_len"
+  ],
+  "never_predictors": [
+   "tid",
+   "src_ip",
+   "src_port",
+   "dst_ip",
+   "dst_port",
+   "run_id",
+   "site_id",
+   "scenario_id",
+   "adu_id",
+   "frame_number",
+   "end_frame_number",
+   "pcap_record_offset",
+   "pcap_file",
+   "ts_ns",
+   "adu_hex",
+   "response_hex",
+   "clock_ambiguous",
+   "gt_*",
+   "ledger_*"
+  ],
+  "timing_source": "ts_corr_ns"
+ },
+ "context": {
+  "stream_key": [
+   "run_id",
+   "src_ip",
+   "dst_ip"
+  ],
+  "length": 20,
+  "idle_reset_s": 60,
+  "order": [
+   "ts_corr_ns",
+   "frame_number"
+  ],
+  "partial_context": "padded+masked; primary metrics on full-20 targets"
+ },
+ "gates": {
+  "G1_value_coverage_min": 1.0,
+  "G1_address_coverage_min": 0.95,
+  "G2_joint_shape_other_runs_min": 0.9,
+  "G3_auc_max": 0.8,
+  "G3_balanced_accuracy_max": 0.75,
+  "G3_within_fold_auc_mean_max": 0.7,
+  "G2_G3_scope": "per site and pooled; G3 primary without raw TID, raw-TID variant reported"
+ },
+ "operating_point": {
+  "fpr_target": 0.05,
+  "calibrated_on": "validation revisiting_normal task requests"
+ },
+ "parallel": {
+  "workers_if_benchmark_passes": 2,
+  "benchmark_report": "final/parallel_benchmark.json"
+ },
+ "description": "DISPOSABLE parallel-collection benchmark; not part of the final dataset"
+}

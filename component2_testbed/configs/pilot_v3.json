@@ -1,0 +1,20 @@
+{
+  "config_id": "pilot_v3",
+  "description": "v2 site envelope + legitimate one-pass coverage workloads (N5-N8) as hard negatives + two site configurations + per-run VM clock monitoring. 14 scenarios x 2 sites x 1 replicate. Not a power-justified sample.",
+  "scenario_design": "v3_one_pass_hard_negatives",
+  "sites": [{"site_id": "A", "site_seed": 11}, {"site_id": "B", "site_seed": 29}],
+  "clock_monitor": true,
+  "image": "c2-recon-testbed:0.1.0",
+  "collection_seed": 20261027,
+  "replicates_per_scenario": 1,
+  "run_duration_s": 75,
+  "subnet": "10.52.0.0/24",
+  "target_ip": "10.52.0.10",
+  "client_ip_pool": [20, 250],
+  "scenarios": [
+    "N1_fixed_polling", "N2_variable_polling_bursts", "N3_maintenance_blocks", "N4_trend_watch",
+    "N5_hmi_cold_start", "N6_config_backup", "N7_historian_backfill", "N8_commissioning_checkout",
+    "R1_sequential_scan", "R2_sparse_strided_scan", "R3_randomized_scan",
+    "R4_slow_jittered_scan", "R5_function_probe", "R6_unit_probe"
+  ]
+}

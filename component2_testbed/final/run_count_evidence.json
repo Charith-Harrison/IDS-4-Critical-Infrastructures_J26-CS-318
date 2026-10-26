@@ -1,0 +1,74 @@
+{
+ "source_collection": "pilot_v3_20261025",
+ "unit_of_analysis": "run",
+ "target_fpr_revisiting": 0.05,
+ "half_widths": {
+  "recon_recall": 0.1,
+  "revisiting_fpr": 0.03,
+  "one_pass_fpr": 0.1,
+  "recall_gain_history_minus_current": 0.1
+ },
+ "models": {
+  "history": {
+   "threshold": 0.13790933998921617,
+   "per_run": {
+    "recon_recall": {
+     "runs": 12,
+     "mean": 0.8703,
+     "sd_between_runs": 0.2867
+    },
+    "revisiting_fpr": {
+     "runs": 8,
+     "mean": 0.1814,
+     "sd_between_runs": 0.2733
+    },
+    "one_pass_fpr": {
+     "runs": 8,
+     "mean": 0.9866,
+     "sd_between_runs": 0.0379
+    },
+    "lead_in_fpr": {
+     "runs": 20,
+     "mean": 0.3332,
+     "sd_between_runs": 0.2296
+    }
+   }
+  },
+  "current_without_tid": {
+   "threshold": 0.8213322814350488,
+   "per_run": {
+    "recon_recall": {
+     "runs": 12,
+     "mean": 0.0056,
+     "sd_between_runs": 0.0192
+    },
+    "revisiting_fpr": {
+     "runs": 8,
+     "mean": 0.0239,
+     "sd_between_runs": 0.0436
+    },
+    "one_pass_fpr": {
+     "runs": 8,
+     "mean": 0.0898,
+     "sd_between_runs": 0.1826
+    },
+    "lead_in_fpr": {
+     "runs": 20,
+     "mean": 0.0708,
+     "sd_between_runs": 0.2377
+    }
+   }
+  }
+ },
+ "paired_recall_gain": {
+  "runs": 12,
+  "mean": 0.8648,
+  "sd_between_runs": 0.2846
+ },
+ "required_test_runs_per_test_population": {
+  "recon_runs_for_recall": 35,
+  "revisiting_normal_runs_for_fpr": 322,
+  "one_pass_runs_for_fpr": 3,
+  "recon_runs_for_paired_gain": 34
+ }
+}

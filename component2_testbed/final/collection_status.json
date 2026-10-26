@@ -1,0 +1,187 @@
+{
+ "collection_id": "final_v1",
+ "collection_started_utc": "2026-10-25T19:52:16.059845+00:00",
+ "collection_finished_utc": "2026-10-25T23:02:30.306647+00:00",
+ "workers": 2,
+ "frozen_config_sha256": "efd9c742111eb19b22a034e005a967f077fcac1b6167770bd91421d549bab37a",
+ "frozen_plan_manifest_sha256": "93e73788fa20d6c0e2972da718f71b904dbb49412887132306c92e76b6d8d27b",
+ "planned_runs": 384,
+ "collected_runs": 384,
+ "collection_errors": 0,
+ "accepted_first_attempt": 383,
+ "retries": [
+  "final_v1-r189-retry1"
+ ],
+ "accepted_final": 383,
+ "failed_plans": [
+  {
+   "run_id": "final_v1-r189",
+   "site_id": "C",
+   "partition": "test_out_of_site",
+   "scenario_id": "R3_randomized_scan",
+   "first_attempt": [
+    "recon_plan_not_truncated"
+   ],
+   "retry1": [
+    "recon_plan_not_truncated"
+   ],
+   "cause": "frozen-plan property: recon plan truncated at the 75 s horizon (deterministic; the retry of the same plan necessarily fails identically)"
+  }
+ ],
+ "achieved_vs_planned": [
+  {
+   "site_id": "A",
+   "partition": "test_in_site",
+   "group": "one_pass_normal",
+   "planned": 8,
+   "accepted": 8
+  },
+  {
+   "site_id": "A",
+   "partition": "test_in_site",
+   "group": "recon",
+   "planned": 36,
+   "accepted": 36
+  },
+  {
+   "site_id": "A",
+   "partition": "test_in_site",
+   "group": "revisiting_normal",
+   "planned": 12,
+   "accepted": 12
+  },
+  {
+   "site_id": "A",
+   "partition": "train",
+   "group": "one_pass_normal",
+   "planned": 16,
+   "accepted": 16
+  },
+  {
+   "site_id": "A",
+   "partition": "train",
+   "group": "recon",
+   "planned": 24,
+   "accepted": 24
+  },
+  {
+   "site_id": "A",
+   "partition": "train",
+   "group": "revisiting_normal",
+   "planned": 16,
+   "accepted": 16
+  },
+  {
+   "site_id": "A",
+   "partition": "validation",
+   "group": "one_pass_normal",
+   "planned": 8,
+   "accepted": 8
+  },
+  {
+   "site_id": "A",
+   "partition": "validation",
+   "group": "recon",
+   "planned": 12,
+   "accepted": 12
+  },
+  {
+   "site_id": "A",
+   "partition": "validation",
+   "group": "revisiting_normal",
+   "planned": 8,
+   "accepted": 8
+  },
+  {
+   "site_id": "B",
+   "partition": "test_in_site",
+   "group": "one_pass_normal",
+   "planned": 8,
+   "accepted": 8
+  },
+  {
+   "site_id": "B",
+   "partition": "test_in_site",
+   "group": "recon",
+   "planned": 36,
+   "accepted": 36
+  },
+  {
+   "site_id": "B",
+   "partition": "test_in_site",
+   "group": "revisiting_normal",
+   "planned": 12,
+   "accepted": 12
+  },
+  {
+   "site_id": "B",
+   "partition": "train",
+   "group": "one_pass_normal",
+   "planned": 16,
+   "accepted": 16
+  },
+  {
+   "site_id": "B",
+   "partition": "train",
+   "group": "recon",
+   "planned": 24,
+   "accepted": 24
+  },
+  {
+   "site_id": "B",
+   "partition": "train",
+   "group": "revisiting_normal",
+   "planned": 16,
+   "accepted": 16
+  },
+  {
+   "site_id": "B",
+   "partition": "validation",
+   "group": "one_pass_normal",
+   "planned": 8,
+   "accepted": 8
+  },
+  {
+   "site_id": "B",
+   "partition": "validation",
+   "group": "recon",
+   "planned": 12,
+   "accepted": 12
+  },
+  {
+   "site_id": "B",
+   "partition": "validation",
+   "group": "revisiting_normal",
+   "planned": 8,
+   "accepted": 8
+  },
+  {
+   "site_id": "C",
+   "partition": "test_out_of_site",
+   "group": "one_pass_normal",
+   "planned": 12,
+   "accepted": 12
+  },
+  {
+   "site_id": "C",
+   "partition": "test_out_of_site",
+   "group": "recon",
+   "planned": 72,
+   "accepted": 71
+  },
+  {
+   "site_id": "C",
+   "partition": "test_out_of_site",
+   "group": "revisiting_normal",
+   "planned": 20,
+   "accepted": 20
+  }
+ ],
+ "clock": {
+  "steps_total": 722,
+  "ambiguous_requests_total": 1514,
+  "max_ambiguous_fraction": 0.0034059945504087193
+ },
+ "requests_total_accepted_runs": 1481352,
+ "collection_level_analysis": "NOT RUN (awaiting instruction)"
+}

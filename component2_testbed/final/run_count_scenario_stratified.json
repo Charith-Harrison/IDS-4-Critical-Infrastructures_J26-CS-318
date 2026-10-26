@@ -1,0 +1,62 @@
+{
+ "method": "Scenario-stratified run count (frozen design).  Uses per-run rates from run_count.py.\n\nBetween-run SD is pooled within scenario (scenario means removed), and a one-sided 80 % upper confidence limit of\nthat SD (chi-square, pooled df) is used because v3 has only 2 runs per scenario.  Required runs per scenario per\ntest population: smallest n with t_{0.975,n-1} * sd_ucl / sqrt(n) <= h.",
+ "h_per_scenario": {
+  "recon": 0.15,
+  "revisiting_normal": 0.15,
+  "one_pass_normal": 0.15
+ },
+ "strata": {
+  "recon": {
+   "runs": 12,
+   "scenarios": 6,
+   "pooled_df": 6,
+   "pooled_within_scenario_sd": 0.3036,
+   "sd_ucl80": 0.4244,
+   "sd_used": 0.4244,
+   "required_runs_per_scenario_per_test_population": 34,
+   "scenario_means": {
+    "R1_sequential_scan": 0.712,
+    "R2_sparse_strided_scan": 1.0,
+    "R3_randomized_scan": 0.99,
+    "R4_slow_jittered_scan": 1.0,
+    "R5_function_probe": 0.562,
+    "R6_unit_probe": 0.958
+   }
+  },
+  "revisiting_normal": {
+   "runs": 8,
+   "scenarios": 4,
+   "pooled_df": 4,
+   "pooled_within_scenario_sd": 0.0751,
+   "sd_ucl80": 0.117,
+   "sd_used": 0.117,
+   "required_runs_per_scenario_per_test_population": 5,
+   "scenario_means": {
+    "N1_fixed_polling": 0.001,
+    "N2_variable_polling_bursts": 0.055,
+    "N3_maintenance_blocks": 0.613,
+    "N4_trend_watch": 0.058
+   }
+  },
+  "one_pass_normal": {
+   "runs": 8,
+   "scenarios": 4,
+   "pooled_df": 4,
+   "pooled_within_scenario_sd": 0.0379,
+   "sd_ucl80": 0.059,
+   "sd_used": 0.059,
+   "required_runs_per_scenario_per_test_population": 3,
+   "scenario_means": {
+    "N5_hmi_cold_start": 1.0,
+    "N6_config_backup": 0.946,
+    "N7_historian_backfill": 1.0,
+    "N8_commissioning_checkout": 1.0
+   }
+  }
+ },
+ "paired_gain_history_minus_current": {
+  "pooled_within_scenario_sd": 0.3027,
+  "sd_ucl80": 0.4231,
+  "required_runs_per_recon_scenario_for_halfwidth_0.10": 12
+ }
+}

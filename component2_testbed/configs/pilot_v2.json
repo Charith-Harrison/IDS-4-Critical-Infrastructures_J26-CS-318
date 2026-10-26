@@ -1,0 +1,18 @@
+{
+  "config_id": "pilot_v2",
+  "description": "Redesigned feasibility pilot after v1 failed gate G2: fixed site envelope (per-table read granularity), 32-address tables, broad background polling. 10 scenarios x 2 independently initialised runs. Not a power-justified sample.",
+  "scenario_design": "v2_site_envelope",
+  "site_seed": 11,
+  "image": "c2-recon-testbed:0.1.0",
+  "collection_seed": 20261026,
+  "replicates_per_scenario": 2,
+  "run_duration_s": 75,
+  "subnet": "10.52.0.0/24",
+  "target_ip": "10.52.0.10",
+  "client_ip_pool": [20, 250],
+  "scenarios": [
+    "N1_fixed_polling", "N2_variable_polling_bursts", "N3_maintenance_blocks", "N4_trend_watch",
+    "R1_sequential_scan", "R2_sparse_strided_scan", "R3_randomized_scan",
+    "R4_slow_jittered_scan", "R5_function_probe", "R6_unit_probe"
+  ]
+}

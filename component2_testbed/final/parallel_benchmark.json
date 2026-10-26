@@ -1,0 +1,128 @@
+{
+ "runs": {
+  "bench_serial/bench-r001": {
+   "state": "accepted",
+   "failures": null,
+   "drops_ok": true,
+   "no_cross_run_traffic": true,
+   "ledger_1to1": true,
+   "clock_ok": true,
+   "clock_steps": 2,
+   "clock_ambiguous_fraction": 0.0008606674954575882,
+   "requests": 10457,
+   "send_minus_schedule_ms_p50_p99_max": [
+    0.161,
+    0.302,
+    0.982
+   ],
+   "response_latency_us_p50_p99": [
+    350.9,
+    709.6
+   ],
+   "capture_minus_send_us_p50_p99": [
+    57.9,
+    121.6
+   ],
+   "iat_minus_scheduled_iat_ms_max_abs": 2.129
+  },
+  "bench_serial/bench-r002": {
+   "state": "accepted",
+   "failures": null,
+   "drops_ok": true,
+   "no_cross_run_traffic": true,
+   "ledger_1to1": true,
+   "clock_ok": true,
+   "clock_steps": 2,
+   "clock_ambiguous_fraction": 0.0011135857461024498,
+   "requests": 2694,
+   "send_minus_schedule_ms_p50_p99_max": [
+    0.161,
+    0.305,
+    0.555
+   ],
+   "response_latency_us_p50_p99": [
+    345.3,
+    605.6
+   ],
+   "capture_minus_send_us_p50_p99": [
+    57.3,
+    108.3
+   ],
+   "iat_minus_scheduled_iat_ms_max_abs": 2.167
+  },
+  "bench_parallel/bench-r001": {
+   "state": "accepted",
+   "failures": null,
+   "drops_ok": true,
+   "no_cross_run_traffic": true,
+   "ledger_1to1": true,
+   "clock_ok": true,
+   "clock_steps": 3,
+   "clock_ambiguous_fraction": 0.0007650377737400784,
+   "requests": 10457,
+   "send_minus_schedule_ms_p50_p99_max": [
+    0.131,
+    0.276,
+    1.865
+   ],
+   "response_latency_us_p50_p99": [
+    269.8,
+    527.9
+   ],
+   "capture_minus_send_us_p50_p99": [
+    39.9,
+    91.4
+   ],
+   "iat_minus_scheduled_iat_ms_max_abs": 2.491
+  },
+  "bench_parallel/bench-r002": {
+   "state": "accepted",
+   "failures": null,
+   "drops_ok": true,
+   "no_cross_run_traffic": true,
+   "ledger_1to1": true,
+   "clock_ok": true,
+   "clock_steps": 2,
+   "clock_ambiguous_fraction": 0.0011135857461024498,
+   "requests": 2694,
+   "send_minus_schedule_ms_p50_p99_max": [
+    0.129,
+    0.278,
+    0.397
+   ],
+   "response_latency_us_p50_p99": [
+    269.2,
+    500.6
+   ],
+   "capture_minus_send_us_p50_p99": [
+    32.3,
+    82.7
+   ],
+   "iat_minus_scheduled_iat_ms_max_abs": 1.601
+  }
+ },
+ "criteria": {
+  "zero_capture_drops": true,
+  "no_cross_run_traffic": true,
+  "ledger_pcap_1to1": true,
+  "clock_correction_valid": true,
+  "all_runs_accepted": true,
+  "same_request_counts_as_serial": true,
+  "schedule_fidelity_p99_send_lag_ms_below_2": true,
+  "response_latency_p99_within_2x_serial": true,
+  "cpu_headroom_peak_below_50pct_of_host": true,
+  "mem_peak_below_25pct_of_host": true
+ },
+ "resources_parallel": {
+  "samples": 20,
+  "total_container_cpu_percent_p50_max": [
+   10.0,
+   109.6
+  ],
+  "total_container_mem_mib_max": 111.5,
+  "host_cpus": 20,
+  "host_mem_gib": 15.4,
+  "note": "docker stats CPU% is per-core (100% = one core)"
+ },
+ "decision": "use 2 workers"
+}

@@ -1,0 +1,58 @@
+{
+ "config_id": "bench_parallel",
+ "collection_id": "bench",
+ "n_runs": 2,
+ "schedule": [
+  {
+   "run_id": "bench-r001",
+   "site_id": "C",
+   "partition": "test_out_of_site",
+   "group": "revisiting_normal",
+   "scenario_id": "N2_variable_polling_bursts",
+   "replicate": 0,
+   "seed": 492491201,
+   "site": {
+    "site_id": "C",
+    "site_seed": 47,
+    "units": [
+     1,
+     2,
+     5,
+     7
+    ],
+    "map_size": 48
+   },
+   "effective_duration_s": 75,
+   "planned_requests": 10457,
+   "frozen_plan": {
+    "path": "final/bench/plans/bench-r001.json",
+    "sha256": "48eed8c2806b6adbd033df26ec92ca0712ea766d23a6fa46fce31245ce66e426"
+   }
+  },
+  {
+   "run_id": "bench-r002",
+   "site_id": "A",
+   "partition": "train",
+   "group": "recon",
+   "scenario_id": "R3_randomized_scan",
+   "replicate": 0,
+   "seed": 957442964,
+   "site": {
+    "site_id": "A",
+    "site_seed": 11,
+    "units": [
+     1,
+     2,
+     3
+    ],
+    "map_size": 32
+   },
+   "effective_duration_s": 39.923,
+   "planned_requests": 2694,
+   "frozen_plan": {
+    "path": "final/bench/plans/bench-r002.json",
+    "sha256": "a9af9fdfbb6edb46346dd118a794777d3bbd1c4ae0cabee629b7b72b0b4b8f18"
+   }
+  }
+ ]
+}

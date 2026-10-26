@@ -1,0 +1,28 @@
+{
+ "A": {
+  "min_samples_leaf": 20,
+  "max_features": 0.5,
+  "cv_auc": 0.6110626552222216
+ },
+ "B2": {
+  "min_samples_leaf": 20,
+  "max_features": 0.5,
+  "cv_auc": 0.7716239739548936
+ },
+ "B3": {
+  "min_samples_leaf": 5,
+  "max_features": "sqrt",
+  "cv_auc": 0.9992178449431869
+ },
+ "B1": {
+  "min_samples_leaf": 1,
+  "max_features": "sqrt",
+  "cv_auc": 0.9985644343533717
+ },
+ "L": {
+  "hidden": 64,
+  "lr": 0.001,
+  "cv_auc": 0.9921240442291399,
+  "epochs": 4
+ }
+}

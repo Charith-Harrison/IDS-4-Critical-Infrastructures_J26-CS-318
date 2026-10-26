@@ -1,0 +1,3 @@
+# Modelling image: the frozen collection image plus CPU PyTorch (the collection image itself is not changed).
+FROM c2-recon-testbed:0.1.0
+RUN pip install --no-cache-dir torch==2.4.1 --index-url https://download.pytorch.org/whl/cpu

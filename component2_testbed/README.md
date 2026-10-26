@@ -10,6 +10,8 @@ audit field is merged here. Component 3 data is not used.
 | `PILOT_PROTOCOL.md` | Pre-specified design, run definition, acceptance checks and stop/redesign gates (written before collection) |
 | `DESIGN_ITERATIONS.md` | Why v1 was rejected, what v2 and v3 changed, and each outcome |
 | `PILOT_RESULTS.md` | What the pilot actually produced, gate outcomes, limitations and next step |
+| `MODELLING_PLAN.md` | Frozen modelling plan (representations, selection, operating point, test sealing) |
+| `FINAL_RESULTS.md` | **Final H1/H2/H3 results** across validation, in-site test and Site C |
 | `FINAL_COLLECTION_PROTOCOL.md` | **Frozen** final-collection protocol (strata, TID treatment, context, Site C, gates, splits, run count, execution) |
 
 ## Layout

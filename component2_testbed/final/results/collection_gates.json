@@ -1,0 +1,85 @@
+{
+ "collection_id": "final_v1",
+ "accepted_runs": 383,
+ "requests": 1481352,
+ "recon_requests": 9805,
+ "G1": {
+  "values": {
+   "wire_fc": 1.0,
+   "unit": 1.0,
+   "quantity": 1.0,
+   "mbap_len": 1.0,
+   "frame_len": 1.0
+  },
+  "address_per_site_fc_unit": 1.0,
+  "pass": true
+ },
+ "G2": {
+  "by_site": {
+   "A": 1.0,
+   "B": 1.0,
+   "C": 1.0
+  },
+  "pooled": 1.0,
+  "pass": true
+ },
+ "G3": {
+  "thresholds": {
+   "G3_auc_max": 0.8,
+   "G3_balanced_accuracy_max": 0.75,
+   "G3_within_fold_auc_mean_max": 0.7
+  },
+  "max_by_scope": {
+   "A": {
+    "roc_auc": 0.6042,
+    "oracle_balanced_accuracy": 0.5992,
+    "within_fold_auc_mean": 0.6097
+   },
+   "B": {
+    "roc_auc": 0.5589,
+    "oracle_balanced_accuracy": 0.5756,
+    "within_fold_auc_mean": 0.5721
+   },
+   "C": {
+    "roc_auc": 0.607,
+    "oracle_balanced_accuracy": 0.6009,
+    "within_fold_auc_mean": 0.6177
+   },
+   "pooled": {
+    "roc_auc": 0.5917,
+    "oracle_balanced_accuracy": 0.5867,
+    "within_fold_auc_mean": 0.5991
+   }
+  },
+  "violations": [],
+  "pass": true
+ },
+ "G3_raw_TID_variant": {
+  "max_by_scope": {
+   "A": {
+    "roc_auc": 0.4968,
+    "oracle_balanced_accuracy": 0.5177,
+    "within_fold_auc_mean": 0.4985
+   },
+   "B": {
+    "roc_auc": 0.4879,
+    "oracle_balanced_accuracy": 0.5063,
+    "within_fold_auc_mean": 0.4889
+   },
+   "C": {
+    "roc_auc": 0.5574,
+    "oracle_balanced_accuracy": 0.5525,
+    "within_fold_auc_mean": 0.5581
+   },
+   "pooled": {
+    "roc_auc": 0.5432,
+    "oracle_balanced_accuracy": 0.5519,
+    "within_fold_auc_mean": 0.553
+   }
+  },
+  "would_violate_G3_thresholds": [],
+  "within_thresholds": true,
+  "status": "reported, not gated (raw TID is never a predictor)"
+ },
+ "all_gates_pass": true
+}

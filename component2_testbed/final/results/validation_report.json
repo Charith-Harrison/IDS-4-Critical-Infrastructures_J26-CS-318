@@ -1,0 +1,512 @@
+{
+ "partition": "validation",
+ "thresholds": {
+  "A": 0.6663874045561807,
+  "B1": 0.006666666666666667,
+  "B2": 0.8656202583523901,
+  "B3": 0.01552888892539941,
+  "L": 0.17258474230766296
+ },
+ "models": {
+  "A": {
+   "full_context": {
+    "recall_recon": {
+     "value": 0.0586,
+     "requests": 836,
+     "runs": 24,
+     "ci95_run_bootstrap": [
+      0.0294,
+      0.1009
+     ]
+    },
+    "fpr_revisiting_normal": {
+     "value": 0.0495,
+     "requests": 24742,
+     "runs": 16,
+     "ci95_run_bootstrap": [
+      0.0168,
+      0.1096
+     ]
+    },
+    "fpr_one_pass_normal": {
+     "value": 0.0677,
+     "requests": 694,
+     "runs": 16,
+     "ci95_run_bootstrap": [
+      0.0334,
+      0.1131
+     ]
+    },
+    "fpr_legitimate_lead_in": {
+     "value": 0.0,
+     "requests": 2,
+     "runs": 2,
+     "ci95_run_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "fpr_background": {
+     "value": 0.0642,
+     "requests": 160104,
+     "runs": 56,
+     "ci95_run_bootstrap": [
+      0.059,
+      0.0698
+     ]
+    },
+    "auc_recon_vs_revisiting_normal": 0.5754,
+    "auc_recon_vs_one_pass_normal": 0.4994
+   },
+   "all_targets": {
+    "recall_recon": {
+     "value": 0.0592,
+     "requests": 1014,
+     "runs": 24,
+     "ci95_run_bootstrap": [
+      0.0336,
+      0.095
+     ]
+    },
+    "fpr_revisiting_normal": {
+     "value": 0.0498,
+     "requests": 25046,
+     "runs": 16,
+     "ci95_run_bootstrap": [
+      0.0168,
+      0.1098
+     ]
+    },
+    "fpr_one_pass_normal": {
+     "value": 0.0675,
+     "requests": 815,
+     "runs": 16,
+     "ci95_run_bootstrap": [
+      0.0363,
+      0.1089
+     ]
+    },
+    "fpr_legitimate_lead_in": {
+     "value": 0.0432,
+     "requests": 463,
+     "runs": 40,
+     "ci95_run_bootstrap": [
+      0.0182,
+      0.0729
+     ]
+    },
+    "fpr_background": {
+     "value": 0.0645,
+     "requests": 161168,
+     "runs": 56,
+     "ci95_run_bootstrap": [
+      0.0593,
+      0.0701
+     ]
+    },
+    "auc_recon_vs_revisiting_normal": 0.5882,
+    "auc_recon_vs_one_pass_normal": 0.5156
+   }
+  },
+  "B1": {
+   "full_context": {
+    "recall_recon": {
+     "value": 1.0,
+     "requests": 836,
+     "runs": 24,
+     "ci95_run_bootstrap": [
+      1.0,
+      1.0
+     ]
+    },
+    "fpr_revisiting_normal": {
+     "value": 0.0322,
+     "requests": 24742,
+     "runs": 16,
+     "ci95_run_bootstrap": [
+      0.0177,
+      0.0591
+     ]
+    },
+    "fpr_one_pass_normal": {
+     "value": 1.0,
+     "requests": 694,
+     "runs": 16,
+     "ci95_run_bootstrap": [
+      1.0,
+      1.0
+     ]
+    },
+    "fpr_legitimate_lead_in": {
+     "value": 1.0,
+     "requests": 2,
+     "runs": 2,
+     "ci95_run_bootstrap": [
+      1.0,
+      1.0
+     ]
+    },
+    "fpr_background": {
+     "value": 0.0421,
+     "requests": 160104,
+     "runs": 56,
+     "ci95_run_bootstrap": [
+      0.0371,
+      0.0477
+     ]
+    },
+    "auc_recon_vs_revisiting_normal": 0.9972,
+    "auc_recon_vs_one_pass_normal": 0.5874
+   },
+   "all_targets": {
+    "recall_recon": {
+     "value": 0.9961,
+     "requests": 1014,
+     "runs": 24,
+     "ci95_run_bootstrap": [
+      0.9917,
+      0.9991
+     ]
+    },
+    "fpr_revisiting_normal": {
+     "value": 0.0391,
+     "requests": 25046,
+     "runs": 16,
+     "ci95_run_bootstrap": [
+      0.023,
+      0.0705
+     ]
+    },
+    "fpr_one_pass_normal": {
+     "value": 0.9975,
+     "requests": 815,
+     "runs": 16,
+     "ci95_run_bootstrap": [
+      0.9928,
+      1.0
+     ]
+    },
+    "fpr_legitimate_lead_in": {
+     "value": 0.4363,
+     "requests": 463,
+     "runs": 40,
+     "ci95_run_bootstrap": [
+      0.3662,
+      0.4959
+     ]
+    },
+    "fpr_background": {
+     "value": 0.0441,
+     "requests": 161168,
+     "runs": 56,
+     "ci95_run_bootstrap": [
+      0.039,
+      0.05
+     ]
+    },
+    "auc_recon_vs_revisiting_normal": 0.9961,
+    "auc_recon_vs_one_pass_normal": 0.5739
+   }
+  },
+  "B2": {
+   "full_context": {
+    "recall_recon": {
+     "value": 0.2045,
+     "requests": 836,
+     "runs": 24,
+     "ci95_run_bootstrap": [
+      0.0888,
+      0.3526
+     ]
+    },
+    "fpr_revisiting_normal": {
+     "value": 0.0501,
+     "requests": 24742,
+     "runs": 16,
+     "ci95_run_bootstrap": [
+      0.0046,
+      0.1142
+     ]
+    },
+    "fpr_one_pass_normal": {
+     "value": 0.1138,
+     "requests": 694,
+     "runs": 16,
+     "ci95_run_bootstrap": [
+      0.037,
+      0.1955
+     ]
+    },
+    "fpr_legitimate_lead_in": {
+     "value": 0.0,
+     "requests": 2,
+     "runs": 2,
+     "ci95_run_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "fpr_background": {
+     "value": 0.0015,
+     "requests": 160104,
+     "runs": 56,
+     "ci95_run_bootstrap": [
+      0.0003,
+      0.0032
+     ]
+    },
+    "auc_recon_vs_revisiting_normal": 0.7153,
+    "auc_recon_vs_one_pass_normal": 0.5837
+   },
+   "all_targets": {
+    "recall_recon": {
+     "value": 0.1903,
+     "requests": 1014,
+     "runs": 24,
+     "ci95_run_bootstrap": [
+      0.0903,
+      0.3166
+     ]
+    },
+    "fpr_revisiting_normal": {
+     "value": 0.0497,
+     "requests": 25046,
+     "runs": 16,
+     "ci95_run_bootstrap": [
+      0.0048,
+      0.1135
+     ]
+    },
+    "fpr_one_pass_normal": {
+     "value": 0.108,
+     "requests": 815,
+     "runs": 16,
+     "ci95_run_bootstrap": [
+      0.0397,
+      0.1783
+     ]
+    },
+    "fpr_legitimate_lead_in": {
+     "value": 0.013,
+     "requests": 463,
+     "runs": 40,
+     "ci95_run_bootstrap": [
+      0.0,
+      0.0339
+     ]
+    },
+    "fpr_background": {
+     "value": 0.0015,
+     "requests": 161168,
+     "runs": 56,
+     "ci95_run_bootstrap": [
+      0.0003,
+      0.0031
+     ]
+    },
+    "auc_recon_vs_revisiting_normal": 0.7284,
+    "auc_recon_vs_one_pass_normal": 0.5804
+   }
+  },
+  "B3": {
+   "full_context": {
+    "recall_recon": {
+     "value": 1.0,
+     "requests": 836,
+     "runs": 24,
+     "ci95_run_bootstrap": [
+      1.0,
+      1.0
+     ]
+    },
+    "fpr_revisiting_normal": {
+     "value": 0.0461,
+     "requests": 24742,
+     "runs": 16,
+     "ci95_run_bootstrap": [
+      0.0109,
+      0.1434
+     ]
+    },
+    "fpr_one_pass_normal": {
+     "value": 1.0,
+     "requests": 694,
+     "runs": 16,
+     "ci95_run_bootstrap": [
+      1.0,
+      1.0
+     ]
+    },
+    "fpr_legitimate_lead_in": {
+     "value": 1.0,
+     "requests": 2,
+     "runs": 2,
+     "ci95_run_bootstrap": [
+      1.0,
+      1.0
+     ]
+    },
+    "fpr_background": {
+     "value": 0.003,
+     "requests": 160104,
+     "runs": 56,
+     "ci95_run_bootstrap": [
+      0.0022,
+      0.0039
+     ]
+    },
+    "auc_recon_vs_revisiting_normal": 0.997,
+    "auc_recon_vs_one_pass_normal": 0.355
+   },
+   "all_targets": {
+    "recall_recon": {
+     "value": 1.0,
+     "requests": 1014,
+     "runs": 24,
+     "ci95_run_bootstrap": [
+      1.0,
+      1.0
+     ]
+    },
+    "fpr_revisiting_normal": {
+     "value": 0.05,
+     "requests": 25046,
+     "runs": 16,
+     "ci95_run_bootstrap": [
+      0.0136,
+      0.1499
+     ]
+    },
+    "fpr_one_pass_normal": {
+     "value": 1.0,
+     "requests": 815,
+     "runs": 16,
+     "ci95_run_bootstrap": [
+      1.0,
+      1.0
+     ]
+    },
+    "fpr_legitimate_lead_in": {
+     "value": 0.568,
+     "requests": 463,
+     "runs": 40,
+     "ci95_run_bootstrap": [
+      0.5023,
+      0.6295
+     ]
+    },
+    "fpr_background": {
+     "value": 0.0035,
+     "requests": 161168,
+     "runs": 56,
+     "ci95_run_bootstrap": [
+      0.0026,
+      0.0044
+     ]
+    },
+    "auc_recon_vs_revisiting_normal": 0.9963,
+    "auc_recon_vs_one_pass_normal": 0.3536
+   }
+  },
+  "L": {
+   "full_context": {
+    "recall_recon": {
+     "value": 0.9976,
+     "requests": 836,
+     "runs": 24,
+     "ci95_run_bootstrap": [
+      0.9919,
+      1.0
+     ]
+    },
+    "fpr_revisiting_normal": {
+     "value": 0.0445,
+     "requests": 24742,
+     "runs": 16,
+     "ci95_run_bootstrap": [
+      0.0092,
+      0.0934
+     ]
+    },
+    "fpr_one_pass_normal": {
+     "value": 0.9712,
+     "requests": 694,
+     "runs": 16,
+     "ci95_run_bootstrap": [
+      0.905,
+      1.0
+     ]
+    },
+    "fpr_legitimate_lead_in": {
+     "value": 1.0,
+     "requests": 2,
+     "runs": 2,
+     "ci95_run_bootstrap": [
+      1.0,
+      1.0
+     ]
+    },
+    "fpr_background": {
+     "value": 0.0227,
+     "requests": 160104,
+     "runs": 56,
+     "ci95_run_bootstrap": [
+      0.0185,
+      0.0274
+     ]
+    },
+    "auc_recon_vs_revisiting_normal": 0.9981,
+    "auc_recon_vs_one_pass_normal": 0.6011
+   },
+   "all_targets": {
+    "recall_recon": {
+     "value": 0.998,
+     "requests": 1014,
+     "runs": 24,
+     "ci95_run_bootstrap": [
+      0.9935,
+      1.0
+     ]
+    },
+    "fpr_revisiting_normal": {
+     "value": 0.05,
+     "requests": 25046,
+     "runs": 16,
+     "ci95_run_bootstrap": [
+      0.014,
+      0.0996
+     ]
+    },
+    "fpr_one_pass_normal": {
+     "value": 0.9755,
+     "requests": 815,
+     "runs": 16,
+     "ci95_run_bootstrap": [
+      0.9185,
+      1.0
+     ]
+    },
+    "fpr_legitimate_lead_in": {
+     "value": 0.797,
+     "requests": 463,
+     "runs": 40,
+     "ci95_run_bootstrap": [
+      0.7677,
+      0.8214
+     ]
+    },
+    "fpr_background": {
+     "value": 0.0254,
+     "requests": 161168,
+     "runs": 56,
+     "ci95_run_bootstrap": [
+      0.0208,
+      0.0305
+     ]
+    },
+    "auc_recon_vs_revisiting_normal": 0.9973,
+    "auc_recon_vs_one_pass_normal": 0.5803
+   }
+  }
+ }
+}

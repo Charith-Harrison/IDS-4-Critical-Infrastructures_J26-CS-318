@@ -1,0 +1,15 @@
+{
+ "partition": "test_out_of_site",
+ "opened_utc": "2026-10-26T04:15:42.739063+00:00",
+ "frozen_artifact_sha256": {
+  "model_A.joblib": "13935a3f850c8b5c4e76f2d87e4c60c55ec561d96224fd0bbf61d9fbb1edf59a",
+  "model_B1.joblib": "f3b4f3817ce491cb49a739fd7c7bae3ce4cc8997fa2b23e65b7bd94ebbc3ca6a",
+  "model_B2.joblib": "bf546e22374cc58d5475730d7a030e930f0a09b9d0e3b53ecbc2a11466279350",
+  "model_B3.joblib": "37d2c2721da548d4f6f179ee281836c705b6e8866689f435110ce8b3e4e78f15",
+  "model_L.pt": "42fbc310c29d589aa0221c34bb46fb36ed3750444ca65b75a52ea6e6f25fc03c",
+  "thresholds.json": "b6a622908900b5bfa73504dbcce287a36f86ef543ee80f4b945a1de182840d32",
+  "selected.json": "cdfdbde56ec8097b29a778e1ac3924c344f837cf5c6244c8f9e246cbed784f63",
+  "configs/models_v1.json": "2d3457554b92d330ef1f9f6cd46209db476732a94f996d98698b3b88b34deac1",
+  "MODELLING_PLAN.md": "3c1222052f35621e0ae62ab9f1ac703ad6ccb7c264d4075d8fc0f38dc1b91e98"
+ }
+}

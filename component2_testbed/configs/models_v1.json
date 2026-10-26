@@ -1,0 +1,22 @@
+{
+  "config_id": "models_v1",
+  "frozen": true,
+  "frozen_on": "2026-10-26",
+  "plan": "MODELLING_PLAN.md",
+  "collection": "final_v1",
+  "context_length": 20,
+  "background_train_fraction": 0.10,
+  "background_sample_seed": 20261026,
+  "cv": {"folds": 5, "seed": 20261026, "deal_within": ["site_id", "scenario_id"]},
+  "selection_metric": "within-fold mean ROC-AUC, recon vs revisiting_normal task requests, full-20 context",
+  "units_one_hot": [1, 2, 3, 5, 7],
+  "iat_log10_clip": [-4, 2],
+  "rf": {"n_estimators": 300, "random_state": 0, "class_weight": "balanced",
+         "grid": {"min_samples_leaf": [1, 5, 20], "max_features": ["sqrt", 0.5]}},
+  "lstm": {"layers": 1, "dropout": 0.2, "batch_size": 512, "max_epochs": 15, "patience": 3,
+           "inner_early_stop_fraction_of_train_runs": 0.2, "seed": 0,
+           "grid": {"hidden": [32, 64], "lr": [0.001, 0.003]}},
+  "operating_point": {"fpr": 0.05, "on": "validation revisiting_normal task requests"},
+  "bootstrap": {"unit": "run", "resamples": 2000, "seed": 7},
+  "sealed_partitions": ["test_in_site", "test_out_of_site"]
+}

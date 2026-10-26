@@ -1,0 +1,49 @@
+{
+  "status": "PASSED",
+  "active_tests_passed": 43,
+  "browser": {
+    "pcap": {
+      "status": "PASSED",
+      "page_errors": [],
+      "run": "MX025",
+      "messages": 2272,
+      "predicted_alerts": 27,
+      "exported_rows": 2272,
+      "checked": [
+        "PCAP model inference button",
+        "fresh confidence",
+        "CSV export",
+        "per-class metrics",
+        "confusion matrix"
+      ],
+      "scope": "Development replay only; original final metrics read, never regenerated."
+    },
+    "csv": {
+      "status": "PASSED",
+      "page_errors": [],
+      "checked": [
+        "incompatible schema rejected",
+        "unlabelled CSV predicted",
+        "validation badge",
+        "labelled CSV scored after prediction",
+        "prediction report downloaded"
+      ],
+      "report_rows": 2272,
+      "screenshots": "component3/local/csv_demo"
+    }
+  },
+  "protected_files_checked": 1821,
+  "intentionally_recovered_original_sources": [
+    "component3\\locked\\v1_20261025\\c3model\\experiment.py",
+    "component3\\locked\\v1_20261025\\c3model\\records.py"
+  ],
+  "all_other_protected_files_unchanged": true,
+  "all_files_match_original_preservation_baseline": true,
+  "preservation_baseline_files": 1821,
+  "source_and_model_hash_checks_enabled": true,
+  "accuracy_page_code_unchanged": true,
+  "unrelated_preprocessing_file_unchanged": true,
+  "models_retrained": false,
+  "locked_final_evaluation_rerun": false,
+  "edited_source_copies_preserved": true
+}

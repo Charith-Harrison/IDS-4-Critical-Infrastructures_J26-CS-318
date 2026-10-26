@@ -138,6 +138,6 @@ class FrontendTests(unittest.TestCase):
         self.assertTrue(any('Confidence is computed now' in item.value for item in page.caption))
         detail=[item.value for item in page.dataframe if 'Support' in item.value and 'Class' in item.value]
         self.assertEqual(detail[0]['Support'].tolist(),[4056,144,288])
-        self.assertEqual(detail[0]['Recall'].tolist(),['1.0000','1.0000','1.0000'])
+        self.assertEqual(detail[0]['Recall'].tolist(),['100.00%','100.00%','100.00%'])
 
 if __name__=='__main__':unittest.main()

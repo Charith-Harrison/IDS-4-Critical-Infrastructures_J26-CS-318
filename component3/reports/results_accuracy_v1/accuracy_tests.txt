@@ -1,0 +1,11 @@
+test_all_method_condition_accuracies_and_coverage_match_saved_reports (test_results_accuracy.ResultsAccuracyTests.test_all_method_condition_accuracies_and_coverage_match_saved_reports) ... ok
+test_export_keeps_method_condition_and_cohort_identity (test_results_accuracy.ResultsAccuracyTests.test_export_keeps_method_condition_and_cohort_identity) ... ok
+test_frontend_displays_two_decimal_accuracy_and_selected_condition (test_results_accuracy.ResultsAccuracyTests.test_frontend_displays_two_decimal_accuracy_and_selected_condition) ... 2026-10-26 14:05:24.985 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_saved_prediction_files_independently_confirm_all_confusion_matrices (test_results_accuracy.ResultsAccuracyTests.test_saved_prediction_files_independently_confirm_all_confusion_matrices) ... ok
+test_unrepresented_common_decisions_do_not_disappear_from_accuracy (test_results_accuracy.ResultsAccuracyTests.test_unrepresented_common_decisions_do_not_disappear_from_accuracy) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 11.740s
+
+OK

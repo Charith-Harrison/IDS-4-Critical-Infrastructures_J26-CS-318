@@ -1,0 +1,16 @@
+{
+  "status": "PASSED",
+  "page_errors": [],
+  "run": "MX025",
+  "messages": 2272,
+  "predicted_alerts": 27,
+  "exported_rows": 2272,
+  "checked": [
+    "PCAP model inference button",
+    "fresh confidence",
+    "CSV export",
+    "per-class metrics",
+    "confusion matrix"
+  ],
+  "scope": "Development replay only; original final metrics read, never regenerated."
+}

@@ -1,0 +1,10 @@
+{
+  "status": "PASSED",
+  "checked": [
+    "labelled observations upload",
+    "saved-model inference",
+    "detection results visible",
+    "no locked-source error"
+  ],
+  "screenshot": "component3/local/locked_source_recovery_v2/csv_working.png"
+}

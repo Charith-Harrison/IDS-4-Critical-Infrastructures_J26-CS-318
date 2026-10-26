@@ -20,11 +20,8 @@ from .records import CURRENT, WIRE, CONTEXT, build_run, verify_collection
 CLASSES = ['normal', 'command_injection', 'response_injection']
 METHODS = {'B': CURRENT, 'D': CURRENT + CONTEXT,
            'B-wire': CURRENT + WIRE, 'D-wire': CURRENT + CONTEXT + WIRE}
-#combinations of hyperparameters to try for the Random Forest model.
 CANDIDATES = [dict(max_depth=depth, min_samples_leaf=leaf, class_weight=weight)
               for weight in ['balanced', None] for depth, leaf in [(12, 2), (8, 5)]]
-
-#Hyperparameters
 FIXED = dict(n_estimators=160, max_features='sqrt', random_state=42, n_jobs=2)
 FINAL_ROLES = ['final_test_repeat', 'final_test_values', 'final_test_map', 'final_test_order', 'final_test_timing']
 
@@ -46,7 +43,7 @@ def code_hashes():
     root = Path(__file__).resolve().parent
     return {p.name: sha(p) for p in sorted(root.glob('*.py'))}
 
-#selects the exact input features for the model.
+
 def feature_frame(frame, columns):
     # The explicit list is the only model admission path. Never infer X by dropping y.
     result = frame.loc[:, columns].apply(pd.to_numeric, errors='raise').astype(float)
@@ -174,7 +171,7 @@ def admission_report(info):
             'roles': dict(Counter(r['evaluation_role'] for r in info['runs'])),
             'canonical_index_sha256': sha(Path(info['root']) / 'collection_complete.json')}
 
-#prepares the dataset before training.
+
 def prepare(source, artifacts):
     artifacts = Path(artifacts)
     if (artifacts/'development/prepare_report.json').exists(): raise ValueError('Prepared outputs already exist; choose a fresh artifacts folder')
@@ -219,35 +216,26 @@ def train(source, artifacts):
         raise ValueError('Prepared code/data/membership changed; create a fresh preparation')
     info = verify_collection(Path(source))
     if prepared['source_admission'] != admission_report(info): raise ValueError('Prepared source identity differs')
- #model receives prepared Modbus data, not raw PCAP bytes.  
     data = pd.read_parquet(artifacts/'development/all_adus.parquet')
- #Separate training and validation data    
     fit = data.loc[(data.evaluation_role == 'train') & common(data)]
     validation = data.loc[(data.evaluation_role == 'validation') & common(data)]
-    
     if set(fit.label) != set(CLASSES) or set(validation.label) != set(CLASSES): raise ValueError('Class-complete development cohort required')
     if set(fit.related_group) & set(validation.related_group): raise ValueError('Train/validation group leakage')
     models, selection = {}, {}
     for name, columns in METHODS.items():
         trials = []
         for params in CANDIDATES:
-  #Create the preprocessing and Random Forest pipeline         
             model = Pipeline([('imputer', SimpleImputer(strategy='median', add_indicator=True, keep_empty_features=True)),
                               ('rf', RandomForestClassifier(**FIXED, **params))])
-        
-  #model training (where the model actually learns from your training dataset.)
-            model.fit(feature_frame(fit, columns), fit.label) 
-  #Validate the model
+            model.fit(feature_frame(fit, columns), fit.label)
             score = metrics(validation.label, model.predict(feature_frame(validation, columns)))
             trials.append((score['macro_f1'], params, model, score))
             print(f'{name} {params} validation macroF1={score["macro_f1"]:.4f}', flush=True)
         # A fixed candidate order resolves ties; test data cannot influence this choice.
-  #Select the best configuration      
         best = max(range(len(trials)), key=lambda i: trials[i][0])
         _, params, model, score = trials[best]
         models[name] = model
         destination = artifacts/'models'/f'{name}.joblib'; destination.parent.mkdir(exist_ok=True)
-  #Save the model      
         joblib.dump(model, destination)
         restored = joblib.load(destination)
         if not np.array_equal(model.predict(feature_frame(validation, columns)), restored.predict(feature_frame(validation, columns))):
@@ -269,7 +257,7 @@ def train(source, artifacts):
                                      'versions': {n: importlib.metadata.version(n) for n in ['numpy','pandas','scikit-learn','joblib','pyarrow']}})
     return {k: v['validation']['macro_f1'] for k, v in selection.items()}
 
-#function locks the experiment before final testing.
+
 def freeze(source, artifacts):
     artifacts = Path(artifacts)
     lock = artifacts/'experiment_lock.json'
@@ -303,7 +291,7 @@ def freeze(source, artifacts):
     save(lock, value)
     return {'status': value['status'], 'lock_sha256': sha(lock)}
 
-#evaluates the saved models on the final test recordings.
+
 def final_evaluation(source, artifacts):
     artifacts = Path(artifacts)
     if (artifacts/'final_evaluation_started.json').exists(): raise ValueError('Final evaluation already started; preserve the first result, no silent rerun')
@@ -315,7 +303,7 @@ def final_evaluation(source, artifacts):
     if admission_report(info) != lock['collection']: raise ValueError('Collection changed after freeze')
     save(artifacts/'final_evaluation_started.json', {'started_at_utc': datetime.now(timezone.utc).isoformat(),
                                                  'experiment_lock_sha256': sha(artifacts/'experiment_lock.json')})
-    models = {name: joblib.load(artifacts/'models'/f'{name}.joblib') for name in METHODS} #loads the saved models:
+    models = {name: joblib.load(artifacts/'models'/f'{name}.joblib') for name in METHODS}
     results = {}
     for role in FINAL_ROLES:
         frame = load_roles(source, info, [role])

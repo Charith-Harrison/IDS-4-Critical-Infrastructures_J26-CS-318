@@ -1,0 +1,78 @@
+setUpClass (test_capture_replay.CaptureReplayTests) ... ERROR
+setUpClass (test_csv_inference.CsvInferenceTests) ... ERROR
+test_duplicate_ids_partial_endpoints_schema_version_rejected (test_csv_inference.CsvSchemaTests.test_duplicate_ids_partial_endpoints_schema_version_rejected) ... ok
+test_missing_column_generic_flow_and_precomputed_features_rejected (test_csv_inference.CsvSchemaTests.test_missing_column_generic_flow_and_precomputed_features_rejected) ... ok
+test_one_ground_truth_alias_only (test_csv_inference.CsvSchemaTests.test_one_ground_truth_alias_only) ... ok
+test_template_is_exact_complete_wire_observation_schema (test_csv_inference.CsvSchemaTests.test_template_is_exact_complete_wire_observation_schema) ... ok
+test_wrong_type_unknown_private_column_and_inconsistent_decoding_rejected (test_csv_inference.CsvSchemaTests.test_wrong_type_unknown_private_column_and_inconsistent_decoding_rejected) ... ok
+test_demonstrations_and_saved_results_are_read_only (test_frontend.FrontendTests.test_demonstrations_and_saved_results_are_read_only) ... 2026-10-26 14:07:12.799 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_missing_saved_predictions_do_not_trigger_live_inference (test_frontend.FrontendTests.test_missing_saved_predictions_do_not_trigger_live_inference) ... ok
+test_pcap_button_runs_detection_and_metrics_include_confusion (test_frontend.FrontendTests.test_pcap_button_runs_detection_and_metrics_include_confusion) ... 2026-10-26 14:07:21.813 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ERROR
+test_results_labels_and_denominators_match_saved_reports (test_frontend.FrontendTests.test_results_labels_and_denominators_match_saved_reports) ... ok
+test_saved_outputs_and_public_features_are_separate (test_frontend.FrontendTests.test_saved_outputs_and_public_features_are_separate) ... ok
+test_all_method_condition_accuracies_and_coverage_match_saved_reports (test_results_accuracy.ResultsAccuracyTests.test_all_method_condition_accuracies_and_coverage_match_saved_reports) ... ok
+test_export_keeps_method_condition_and_cohort_identity (test_results_accuracy.ResultsAccuracyTests.test_export_keeps_method_condition_and_cohort_identity) ... ok
+test_frontend_displays_two_decimal_accuracy_and_selected_condition (test_results_accuracy.ResultsAccuracyTests.test_frontend_displays_two_decimal_accuracy_and_selected_condition) ... 2026-10-26 14:07:25.615 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_saved_prediction_files_independently_confirm_all_confusion_matrices (test_results_accuracy.ResultsAccuracyTests.test_saved_prediction_files_independently_confirm_all_confusion_matrices) ... ok
+test_unrepresented_common_decisions_do_not_disappear_from_accuracy (test_results_accuracy.ResultsAccuracyTests.test_unrepresented_common_decisions_do_not_disappear_from_accuracy) ... ok
+test_concurrent_requests_fail_closed (test_runtime.RuntimeTests.test_concurrent_requests_fail_closed) ... ok
+test_current_reply_has_no_address_and_zero_is_valid (test_runtime.RuntimeTests.test_current_reply_has_no_address_and_zero_is_valid) ... ok
+test_gap_and_malformed_input_are_statuses_not_normal (test_runtime.RuntimeTests.test_gap_and_malformed_input_are_statuses_not_normal) ... ok
+test_missing_anchor_is_eligible_abstention (test_runtime.RuntimeTests.test_missing_anchor_is_eligible_abstention) ... ok
+test_missing_context_cannot_be_filled_into_prediction (test_runtime.RuntimeTests.test_missing_context_cannot_be_filled_into_prediction) ... ok
+test_missing_public_identity_or_timestamp_fails_closed (test_runtime.RuntimeTests.test_missing_public_identity_or_timestamp_fails_closed) ... ok
+test_mode_write_invalidates_and_no_future_ack_backfill (test_runtime.RuntimeTests.test_mode_write_invalidates_and_no_future_ack_backfill) ... ok
+test_new_connection_has_no_old_anchors (test_runtime.RuntimeTests.test_new_connection_has_no_old_anchors) ... ok
+test_old_anchor_expires_and_episode_does_not_reset (test_runtime.RuntimeTests.test_old_anchor_expires_and_episode_does_not_reset) ... ok
+test_private_ordinals_and_labels_are_irrelevant (test_runtime.RuntimeTests.test_private_ordinals_and_labels_are_irrelevant) ... ok
+test_public_map_change_clears_anchors (test_runtime.RuntimeTests.test_public_map_change_clears_anchors) ... ok
+test_requires_explicit_trust_contract (test_runtime.RuntimeTests.test_requires_explicit_trust_contract) ... ok
+test_reused_tid_and_repeated_bytes_preserve_events (test_runtime.RuntimeTests.test_reused_tid_and_repeated_bytes_preserve_events) ... ok
+test_wrong_tid_echo_and_unit_invalidate (test_runtime.RuntimeTests.test_wrong_tid_echo_and_unit_invalidate) ... ok
+
+======================================================================
+ERROR: setUpClass (test_capture_replay.CaptureReplayTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\tests\test_capture_replay.py", line 34, in setUpClass
+    cls.result=replay_capture('MX025')
+               ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\capture_replay.py", line 93, in replay_capture
+    decoded,predictions=infer_observations(observations,mapping,models)
+                        ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\observation_inference.py", line 19, in infer_observations
+    models=load_locked_models() if models is None else models
+           ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\runtime.py", line 182, in load_locked_models
+    if digest(LOCKED/'c3model'/name) != expected: raise ValueError('Locked decoder/model code changed')
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Locked decoder/model code changed
+
+======================================================================
+ERROR: setUpClass (test_csv_inference.CsvInferenceTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\tests\test_csv_inference.py", line 63, in setUpClass
+    cls.models=load_locked_models(); cls.registry=manifest_registry()
+               ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\runtime.py", line 182, in load_locked_models
+    if digest(LOCKED/'c3model'/name) != expected: raise ValueError('Locked decoder/model code changed')
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Locked decoder/model code changed
+
+======================================================================
+ERROR: test_pcap_button_runs_detection_and_metrics_include_confusion (test_frontend.FrontendTests.test_pcap_button_runs_detection_and_metrics_include_confusion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Github_Kavisha_Harshangi\IDS-4-Critical-Infrastructures_J26-CS-318\component3\tests\test_frontend.py", line 133, in test_pcap_button_runs_detection_and_metrics_include_confusion
+    self.assertEqual(values['Messages replayed'],'2,272')
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'Messages replayed'
+
+----------------------------------------------------------------------
+Ran 29 tests in 18.696s
+
+FAILED (errors=3)

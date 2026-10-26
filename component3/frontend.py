@@ -9,7 +9,7 @@ sys.path.insert(0,str(HERE))
 import pandas as pd
 import streamlit as st
 from demo_data import load_demo
-from demo_results import CONDITIONS,comparison_rows,load_results
+from demo_results import CONDITIONS,comparison_rows,comparison_export,load_results
 from runtime import CURRENT,CONTEXT
 from traffic_ui import render_analyze_traffic
 
@@ -154,13 +154,19 @@ with how_tab:
             st.caption('An imputed value cannot replace missing communication history. This example is available in Evidence.')
 
 # Present saved per-class metrics and confusion counts for the selected condition.
-def metric_table(report,methods):
-    rows=comparison_rows(report,methods)
+def metric_table(report,methods,condition):
+    rows=comparison_rows(report,methods,evaluation='Final test · '+condition)
     for row in rows:
         row['Macro F1']='—' if row['Macro F1'] is None else f'{row["Macro F1"]:.4f}'
+        for key in ('Accuracy (%)','Prediction coverage (% eligible)'):
+            row[key]='—' if row[key] is None else f'{row[key]:.2f}%'
         for key in ('Command recall','Response recall','False-alarm rate','Normal precision'):
             row[key]='—' if row[key] is None else f'{100*row[key]:.2f}%'
-    st.dataframe(pd.DataFrame(rows),hide_index=True,width='stretch')
+    display=['Model','Accuracy (%)','Macro F1','Command recall','Response recall','Normal precision',
+             'False-alarm rate','Evaluated decisions','Prediction coverage (% eligible)','Abstentions']
+    st.dataframe(pd.DataFrame(rows).reindex(columns=display),hide_index=True,width='stretch')
+    if any(row['Common cohort unscored'] for row in rows):
+        st.caption('Unscored decisions inside the common cohort remain in the accuracy denominator and are not counted as correct.')
 
 with results_tab:
     st.subheader('Model comparison')
@@ -171,9 +177,10 @@ with results_tab:
     for column,label,value in zip(columns,['Evaluated runs','Supported decisions','Context abstentions','Captured messages'],
                                   [runs,report['common_supported'],report['context_abstentions'],report['all_adus']]):
         column.metric(label,f'{value:,}')
-    metric_table(report,('B','D'))
+    st.caption('Final test · '+condition+' · Common supported cohort')
+    metric_table(report,('B','D'),condition)
     normal_count=sum(report['methods']['B']['common_cohort']['confusion'][0])
-    st.caption(f'Saved final results. Both models use the same supported decisions. False-alarm rate uses {normal_count:,} supported normal messages. Abstentions and other traffic are not counted as correct normal predictions.')
+    st.caption(f'Accuracy and Macro F1 use the same common supported decisions (scored-only in these saved reports). Coverage is predictions ÷ all eligible decisions; abstentions are shown separately. False-alarm rate uses {normal_count:,} supported normal messages. Out-of-scope traffic is excluded, not counted as correct.')
     with st.expander('Per-class metrics and confusion matrix'):
         method_names={'Context-aware RF':'D','Packet-only RF':'B','Causal policy rules':'C',
                       'Protocol checks':'A','Packet-only RF + wire headers':'B-wire',
@@ -183,24 +190,23 @@ with results_tab:
         metrics=[]
         for label,item in detail['per_class'].items():
             metrics.append({'Class':NAMES[label],
-                'Precision':'—' if item['precision'] is None else f'{item["precision"]:.4f}',
-                'Recall':'—' if item['recall'] is None else f'{item["recall"]:.4f}',
+                'Precision':'—' if item['precision'] is None else f'{100*item["precision"]:.2f}%',
+                'Recall':'—' if item['recall'] is None else f'{100*item["recall"]:.2f}%',
                 'F1':'—' if item['f1'] is None else f'{item["f1"]:.4f}',
                 'Support':item['support']})
         st.dataframe(pd.DataFrame(metrics),hide_index=True,width='stretch')
         labels=[NAMES[label] for label in detail['labels']]
         st.dataframe(pd.DataFrame(detail['confusion'],index=labels,columns=labels),width='stretch')
         st.caption('Confusion matrix: rows are true classes; columns are predictions. “—” means undefined, not zero.')
-    metrics_csv=HERE/'reports/model_metrics_saved_20261026.csv'
-    if metrics_csv.is_file():
-        st.download_button('Download saved evaluation metrics (CSV)',metrics_csv.read_bytes(),
-                           file_name=metrics_csv.name,mime='text/csv',key='download_saved_metrics')
+    metrics_csv=pd.DataFrame(comparison_export(saved['conditions'])).to_csv(index=False).encode('utf-8')
+    st.download_button('Download saved evaluation metrics (CSV)',metrics_csv,
+                       file_name='c3_final_metrics_with_derived_accuracy.csv',mime='text/csv',key='download_saved_metrics')
     st.subheader('Rule-baseline results')
-    metric_table(report,('C',))
+    metric_table(report,('C',),condition)
     st.write('The causal rules classify every supported case correctly. The context-aware RF misses one response in the ordering test. ML has not outperformed these rules.')
     with st.expander('Protocol and wire-header comparisons'):
         st.write('The wire-header variants also receive the current transaction ID, IP addresses and ports.')
-        metric_table(report,('A','B-wire','D-wire'))
+        metric_table(report,('A','B-wire','D-wire'),condition)
     with st.expander('Evaluation coverage'):
         st.dataframe(pd.DataFrame([{'Condition':name,'Runs':saved['audit']['role_counts'][r],
                                    'Supported decisions':saved['conditions'][r]['common_supported'],

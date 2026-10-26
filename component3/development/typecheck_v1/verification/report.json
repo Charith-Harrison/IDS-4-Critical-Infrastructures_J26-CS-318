@@ -1,0 +1,421 @@
+{
+  "status": "PASSED",
+  "syntax": "PASSED",
+  "files": {
+    "experiment.py": {
+      "task_start_sha256": "dd601ff0fd5452cd18ed0063c7c4bc41e7c8a9bc1c6e6b85919fda83b312110e",
+      "current_original_sha256": "dd601ff0fd5452cd18ed0063c7c4bc41e7c8a9bc1c6e6b85919fda83b312110e",
+      "experiment_lock_sha256": "8012e15e2a10922e31c77d2d2aa8537d800149d456a4fa4372cc09a96c58936c",
+      "proposal_sha256": "95ab18f2512250d5980a3f8661842b6d652ed94ecee2032854ba0cfd6521eb9a",
+      "preexisting_lock_mismatch": true
+    },
+    "records.py": {
+      "task_start_sha256": "304b7c35f10a658b25582a36bc12f234c6592576555058118f560dcf106fb7c8",
+      "current_original_sha256": "304b7c35f10a658b25582a36bc12f234c6592576555058118f560dcf106fb7c8",
+      "experiment_lock_sha256": "adb2ac4fed42e09490ac7415bc7d59d19bb448654924b4c3d5007395f6f8a189",
+      "proposal_sha256": "3797d6e7d9922458ce8e0c11fcdc7c4425ea0dc54e9e403f266c1deee9d4986d",
+      "preexisting_lock_mismatch": true
+    }
+  },
+  "pyright_version": "1.1.414",
+  "type_checking_mode": "basic",
+  "stub_source": "Installed Pylance 2026.4.1 bundled stubs",
+  "baseline_type_errors": 17,
+  "proposal_type_errors": 0,
+  "feature_counts": {
+    "CURRENT": 9,
+    "CONTEXT": 5,
+    "WIRE": 5
+  },
+  "feature_names_and_order_unchanged": true,
+  "candidates_fixed_parameters_and_classes_unchanged": true,
+  "runs_checked": 48,
+  "messages_checked": 114604,
+  "roles_checked": {
+    "train": 32,
+    "validation": 16
+  },
+  "runs": [
+    {
+      "run": "MX001",
+      "role": "train",
+      "messages": 2280,
+      "abstentions": 90,
+      "out_of_scope": 2015
+    },
+    {
+      "run": "MX002",
+      "role": "train",
+      "messages": 2308,
+      "abstentions": 90,
+      "out_of_scope": 2043
+    },
+    {
+      "run": "MX003",
+      "role": "train",
+      "messages": 2302,
+      "abstentions": 90,
+      "out_of_scope": 2037
+    },
+    {
+      "run": "MX004",
+      "role": "train",
+      "messages": 2272,
+      "abstentions": 90,
+      "out_of_scope": 2007
+    },
+    {
+      "run": "MX005",
+      "role": "train",
+      "messages": 2288,
+      "abstentions": 90,
+      "out_of_scope": 2023
+    },
+    {
+      "run": "MX006",
+      "role": "train",
+      "messages": 2290,
+      "abstentions": 90,
+      "out_of_scope": 2025
+    },
+    {
+      "run": "MX007",
+      "role": "train",
+      "messages": 2484,
+      "abstentions": 66,
+      "out_of_scope": 2219
+    },
+    {
+      "run": "MX008",
+      "role": "train",
+      "messages": 2470,
+      "abstentions": 66,
+      "out_of_scope": 2205
+    },
+    {
+      "run": "MX009",
+      "role": "train",
+      "messages": 2470,
+      "abstentions": 66,
+      "out_of_scope": 2205
+    },
+    {
+      "run": "MX010",
+      "role": "train",
+      "messages": 2488,
+      "abstentions": 66,
+      "out_of_scope": 2223
+    },
+    {
+      "run": "MX011",
+      "role": "train",
+      "messages": 2486,
+      "abstentions": 66,
+      "out_of_scope": 2221
+    },
+    {
+      "run": "MX012",
+      "role": "train",
+      "messages": 2500,
+      "abstentions": 66,
+      "out_of_scope": 2235
+    },
+    {
+      "run": "MX013",
+      "role": "train",
+      "messages": 2306,
+      "abstentions": 90,
+      "out_of_scope": 2041
+    },
+    {
+      "run": "MX014",
+      "role": "train",
+      "messages": 2276,
+      "abstentions": 90,
+      "out_of_scope": 2011
+    },
+    {
+      "run": "MX015",
+      "role": "train",
+      "messages": 2306,
+      "abstentions": 90,
+      "out_of_scope": 2041
+    },
+    {
+      "run": "MX016",
+      "role": "train",
+      "messages": 2306,
+      "abstentions": 90,
+      "out_of_scope": 2041
+    },
+    {
+      "run": "MX017",
+      "role": "train",
+      "messages": 2274,
+      "abstentions": 90,
+      "out_of_scope": 2009
+    },
+    {
+      "run": "MX018",
+      "role": "train",
+      "messages": 2294,
+      "abstentions": 90,
+      "out_of_scope": 2029
+    },
+    {
+      "run": "MX019",
+      "role": "train",
+      "messages": 2486,
+      "abstentions": 66,
+      "out_of_scope": 2221
+    },
+    {
+      "run": "MX020",
+      "role": "train",
+      "messages": 2486,
+      "abstentions": 66,
+      "out_of_scope": 2221
+    },
+    {
+      "run": "MX021",
+      "role": "train",
+      "messages": 2468,
+      "abstentions": 66,
+      "out_of_scope": 2203
+    },
+    {
+      "run": "MX022",
+      "role": "train",
+      "messages": 2486,
+      "abstentions": 66,
+      "out_of_scope": 2221
+    },
+    {
+      "run": "MX023",
+      "role": "train",
+      "messages": 2494,
+      "abstentions": 66,
+      "out_of_scope": 2229
+    },
+    {
+      "run": "MX024",
+      "role": "train",
+      "messages": 2486,
+      "abstentions": 66,
+      "out_of_scope": 2221
+    },
+    {
+      "run": "MX025",
+      "role": "validation",
+      "messages": 2272,
+      "abstentions": 90,
+      "out_of_scope": 2007
+    },
+    {
+      "run": "MX026",
+      "role": "validation",
+      "messages": 2300,
+      "abstentions": 90,
+      "out_of_scope": 2035
+    },
+    {
+      "run": "MX027",
+      "role": "validation",
+      "messages": 2456,
+      "abstentions": 66,
+      "out_of_scope": 2191
+    },
+    {
+      "run": "MX028",
+      "role": "validation",
+      "messages": 2476,
+      "abstentions": 66,
+      "out_of_scope": 2211
+    },
+    {
+      "run": "MX029",
+      "role": "validation",
+      "messages": 2300,
+      "abstentions": 90,
+      "out_of_scope": 2035
+    },
+    {
+      "run": "MX030",
+      "role": "validation",
+      "messages": 2306,
+      "abstentions": 90,
+      "out_of_scope": 2041
+    },
+    {
+      "run": "MX031",
+      "role": "validation",
+      "messages": 2456,
+      "abstentions": 66,
+      "out_of_scope": 2191
+    },
+    {
+      "run": "MX032",
+      "role": "validation",
+      "messages": 2500,
+      "abstentions": 66,
+      "out_of_scope": 2235
+    },
+    {
+      "run": "MX081",
+      "role": "train",
+      "messages": 2300,
+      "abstentions": 90,
+      "out_of_scope": 2035
+    },
+    {
+      "run": "MX082",
+      "role": "train",
+      "messages": 2280,
+      "abstentions": 90,
+      "out_of_scope": 2015
+    },
+    {
+      "run": "MX083",
+      "role": "train",
+      "messages": 2482,
+      "abstentions": 66,
+      "out_of_scope": 2217
+    },
+    {
+      "run": "MX084",
+      "role": "train",
+      "messages": 2486,
+      "abstentions": 66,
+      "out_of_scope": 2221
+    },
+    {
+      "run": "MX085",
+      "role": "train",
+      "messages": 2276,
+      "abstentions": 90,
+      "out_of_scope": 2011
+    },
+    {
+      "run": "MX086",
+      "role": "train",
+      "messages": 2288,
+      "abstentions": 90,
+      "out_of_scope": 2023
+    },
+    {
+      "run": "MX087",
+      "role": "train",
+      "messages": 2494,
+      "abstentions": 66,
+      "out_of_scope": 2229
+    },
+    {
+      "run": "MX088",
+      "role": "train",
+      "messages": 2474,
+      "abstentions": 66,
+      "out_of_scope": 2209
+    },
+    {
+      "run": "MX089",
+      "role": "validation",
+      "messages": 2306,
+      "abstentions": 90,
+      "out_of_scope": 2041
+    },
+    {
+      "run": "MX090",
+      "role": "validation",
+      "messages": 2282,
+      "abstentions": 90,
+      "out_of_scope": 2017
+    },
+    {
+      "run": "MX091",
+      "role": "validation",
+      "messages": 2498,
+      "abstentions": 66,
+      "out_of_scope": 2233
+    },
+    {
+      "run": "MX092",
+      "role": "validation",
+      "messages": 2468,
+      "abstentions": 66,
+      "out_of_scope": 2203
+    },
+    {
+      "run": "MX093",
+      "role": "validation",
+      "messages": 2302,
+      "abstentions": 90,
+      "out_of_scope": 2037
+    },
+    {
+      "run": "MX094",
+      "role": "validation",
+      "messages": 2294,
+      "abstentions": 90,
+      "out_of_scope": 2029
+    },
+    {
+      "run": "MX095",
+      "role": "validation",
+      "messages": 2504,
+      "abstentions": 66,
+      "out_of_scope": 2239
+    },
+    {
+      "run": "MX096",
+      "role": "validation",
+      "messages": 2498,
+      "abstentions": 66,
+      "out_of_scope": 2233
+    }
+  ],
+  "all_decoded_features_predictions_abstentions_and_metrics_equal": true,
+  "maximum_probability_difference": 4.440892098500626e-16,
+  "probability_absolute_tolerance": 1e-12,
+  "existing_tests": {
+    "original": {
+      "command": [
+        "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_records",
+        "test_experiment.ExperimentTests.test_explicit_allowlist_never_admits_private_columns",
+        "test_experiment.ExperimentTests.test_fpr_reports_unscored_traffic_separately"
+      ],
+      "tests_passed": 17,
+      "training_test_omitted": true
+    },
+    "proposal": {
+      "command": [
+        "C:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_records",
+        "test_experiment.ExperimentTests.test_explicit_allowlist_never_admits_private_columns",
+        "test_experiment.ExperimentTests.test_fpr_reports_unscored_traffic_separately"
+      ],
+      "tests_passed": 17,
+      "training_test_omitted": true
+    }
+  },
+  "protected_files_unchanged_since_task_start": 1821,
+  "protected_changes": [],
+  "fitting_executed": false,
+  "final_payloads_parsed": false,
+  "final_evaluation_rerun": false,
+  "production_integration": false,
+  "limitations": [
+    "The frozen source files already differed from their lock hashes at task start.",
+    "This is a development proposal, not a change to the frozen experiment.",
+    "The existing toy-training test is omitted to avoid all fitting.",
+    "VS Code diagnostics on the original files remain until a separately approved workflow uses the development copy."
+  ]
+}

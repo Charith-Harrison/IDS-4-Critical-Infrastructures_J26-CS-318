@@ -1,0 +1,12 @@
+{
+  "status": "PASSED",
+  "active_tests_passed": 43,
+  "protected_files_matching_original_baseline": 1821,
+  "only_restored_file": [
+    "component3\\locked\\v1_20261025\\c3model\\experiment.py"
+  ],
+  "locked_folder_readonly_in_vscode": true,
+  "lock_and_models_unchanged": true,
+  "training_executed": false,
+  "final_evaluation_rerun": false
+}

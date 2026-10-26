@@ -1,0 +1,29 @@
+{
+  "status": "AUTHENTIC_SOURCE_RESTORED",
+  "files": [
+    {
+      "file": "component3/locked/v1_20261025/c3model/experiment.py",
+      "previous_sha256": "dd601ff0fd5452cd18ed0063c7c4bc41e7c8a9bc1c6e6b85919fda83b312110e",
+      "restored_sha256": "8012e15e2a10922e31c77d2d2aa8537d800149d456a4fa4372cc09a96c58936c",
+      "source_git_revision": "9a1811ab398a964965eb3417f0613ecaea27891d",
+      "preserved_copy": "component3/development/locked_source_recovery_v1/preserved_current/c3model/experiment.py",
+      "ast_unchanged": true
+    },
+    {
+      "file": "component3/locked/v1_20261025/c3model/records.py",
+      "previous_sha256": "304b7c35f10a658b25582a36bc12f234c6592576555058118f560dcf106fb7c8",
+      "restored_sha256": "adb2ac4fed42e09490ac7415bc7d59d19bb448654924b4c3d5007395f6f8a189",
+      "source_git_revision": "9a1811ab398a964965eb3417f0613ecaea27891d",
+      "preserved_copy": "component3/development/locked_source_recovery_v1/preserved_current/c3model/records.py",
+      "ast_unchanged": true
+    }
+  ],
+  "accuracy_and_unrelated_files_sha256": {
+    "component3/frontend.py": "1d9f201668b6e7a1db05c75123ce56578e0ee5481147fa8192cd36bf0cb198d4",
+    "component3/demo_results.py": "fd8d04a760df9d4b7c869d9d30ee84e2b1f60dfa7dcfd937e0f50e15b12b1ad4",
+    "src/preprocessing.py": "688c1a50f30632804c2549771a296575bf24883e6fae5a248deae273974c6407"
+  },
+  "lock_modified": false,
+  "models_modified": false,
+  "integrity_guard_modified": false
+}

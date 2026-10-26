@@ -1,0 +1,31 @@
+Method,Model,Accuracy (%),Macro F1,Command recall,Response recall,False-alarm rate,Normal precision,Evaluated decisions,Prediction coverage (% eligible),Abstentions,Predictions produced,Eligible decisions,Common cohort unscored,Evaluation,Accuracy cohort
+A,Protocol checks,90.37433155080214,0.31647940074906367,0.0,0.0,0.0,0.9037433155080213,4488,100.0,0,6360,6360,0,Final test · Repeat conditions,Common supported cohort
+B,Packet-only RF,90.37433155080214,0.31647940074906367,0.0,0.0,0.0,0.9037433155080213,4488,100.0,0,6360,6360,0,Final test · Repeat conditions,Common supported cohort
+C,Causal policy rules,100.0,1.0,1.0,1.0,0.0,1.0,4488,70.56603773584905,1872,4488,6360,0,Final test · Repeat conditions,Common supported cohort
+D,Context-aware RF,100.0,1.0,1.0,1.0,0.0,1.0,4488,70.56603773584905,1872,4488,6360,0,Final test · Repeat conditions,Common supported cohort
+B-wire,Packet-only RF + wire headers,90.35204991087345,0.316438409614109,0.0,0.0,0.0002465483234714004,0.9037218631602407,4488,100.0,0,6360,6360,0,Final test · Repeat conditions,Common supported cohort
+D-wire,Context-aware RF + wire headers,100.0,1.0,1.0,1.0,0.0,1.0,4488,70.56603773584905,1872,4488,6360,0,Final test · Repeat conditions,Common supported cohort
+A,Protocol checks,85.56149732620321,0.3073967339097022,0.0,0.0,0.0,0.8556149732620321,1496,100.0,0,2120,2120,0,Final test · New values,Common supported cohort
+B,Packet-only RF,85.56149732620321,0.3073967339097022,0.0,0.0,0.0,0.8556149732620321,1496,100.0,0,2120,2120,0,Final test · New values,Common supported cohort
+C,Causal policy rules,100.0,1.0,1.0,1.0,0.0,1.0,1496,70.56603773584905,624,1496,2120,0,Final test · New values,Common supported cohort
+D,Context-aware RF,100.0,1.0,1.0,1.0,0.0,1.0,1496,70.56603773584905,624,1496,2120,0,Final test · New values,Common supported cohort
+B-wire,Packet-only RF + wire headers,85.56149732620321,0.3073967339097022,0.0,0.0,0.0,0.8556149732620321,1496,100.0,0,2120,2120,0,Final test · New values,Common supported cohort
+D-wire,Context-aware RF + wire headers,100.0,1.0,1.0,1.0,0.0,1.0,1496,70.56603773584905,624,1496,2120,0,Final test · New values,Common supported cohort
+A,Protocol checks,85.56149732620321,0.3073967339097022,0.0,0.0,0.0,0.8556149732620321,1496,100.0,0,2120,2120,0,Final test · New public map,Common supported cohort
+B,Packet-only RF,85.56149732620321,0.3073967339097022,0.0,0.0,0.0,0.8556149732620321,1496,100.0,0,2120,2120,0,Final test · New public map,Common supported cohort
+C,Causal policy rules,100.0,1.0,1.0,1.0,0.0,1.0,1496,70.56603773584905,624,1496,2120,0,Final test · New public map,Common supported cohort
+D,Context-aware RF,100.0,1.0,1.0,1.0,0.0,1.0,1496,70.56603773584905,624,1496,2120,0,Final test · New public map,Common supported cohort
+B-wire,Packet-only RF + wire headers,85.56149732620321,0.3073967339097022,0.0,0.0,0.0,0.8556149732620321,1496,100.0,0,2120,2120,0,Final test · New public map,Common supported cohort
+D-wire,Context-aware RF + wire headers,100.0,1.0,1.0,1.0,0.0,1.0,1496,70.56603773584905,624,1496,2120,0,Final test · New public map,Common supported cohort
+A,Protocol checks,84.57142857142857,0.30546955624355004,0.0,0.0,0.0,0.8457142857142858,1400,100.0,0,2120,2120,0,Final test · Changed ordering,Common supported cohort
+B,Packet-only RF,84.57142857142857,0.30546955624355004,0.0,0.0,0.0,0.8457142857142858,1400,100.0,0,2120,2120,0,Final test · Changed ordering,Common supported cohort
+C,Causal policy rules,100.0,1.0,1.0,1.0,0.0,1.0,1400,66.0377358490566,720,1400,2120,0,Final test · Changed ordering,Common supported cohort
+D,Context-aware RF,99.92857142857143,0.9986978534683134,1.0,0.9930555555555556,0.0,0.99915611814346,1400,66.0377358490566,720,1400,2120,0,Final test · Changed ordering,Common supported cohort
+B-wire,Packet-only RF + wire headers,84.57142857142857,0.30546955624355004,0.0,0.0,0.0,0.8457142857142858,1400,100.0,0,2120,2120,0,Final test · Changed ordering,Common supported cohort
+D-wire,Context-aware RF + wire headers,100.0,1.0,1.0,1.0,0.0,1.0,1400,66.0377358490566,720,1400,2120,0,Final test · Changed ordering,Common supported cohort
+A,Protocol checks,85.56149732620321,0.3073967339097022,0.0,0.0,0.0,0.8556149732620321,1496,100.0,0,2120,2120,0,Final test · Changed timing,Common supported cohort
+B,Packet-only RF,85.56149732620321,0.3073967339097022,0.0,0.0,0.0,0.8556149732620321,1496,100.0,0,2120,2120,0,Final test · Changed timing,Common supported cohort
+C,Causal policy rules,100.0,1.0,1.0,1.0,0.0,1.0,1496,70.56603773584905,624,1496,2120,0,Final test · Changed timing,Common supported cohort
+D,Context-aware RF,100.0,1.0,1.0,1.0,0.0,1.0,1496,70.56603773584905,624,1496,2120,0,Final test · Changed timing,Common supported cohort
+B-wire,Packet-only RF + wire headers,85.56149732620321,0.3073967339097022,0.0,0.0,0.0,0.8556149732620321,1496,100.0,0,2120,2120,0,Final test · Changed timing,Common supported cohort
+D-wire,Context-aware RF + wire headers,100.0,1.0,1.0,1.0,0.0,1.0,1496,70.56603773584905,624,1496,2120,0,Final test · Changed timing,Common supported cohort

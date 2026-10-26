@@ -1,0 +1,116 @@
+--- before/c3model/experiment.py
++++ after/c3model/experiment.py
+@@ -6,9 +6,11 @@
+ import json
+ from pathlib import Path
+ import time
++from typing import Literal, TypedDict, cast
+ 
+ import joblib
+ import numpy as np
++from numpy.typing import NDArray
+ import pandas as pd
+ from sklearn.ensemble import RandomForestClassifier
+ from sklearn.impute import SimpleImputer
+@@ -21,11 +23,24 @@
+ METHODS = {'B': CURRENT, 'D': CURRENT + CONTEXT,
+            'B-wire': CURRENT + WIRE, 'D-wire': CURRENT + CONTEXT + WIRE}
+ #combinations of hyperparameters to try for the Random Forest model.
+-CANDIDATES = [dict(max_depth=depth, min_samples_leaf=leaf, class_weight=weight)
++class RFCandidate(TypedDict):
++    max_depth: int
++    min_samples_leaf: int
++    class_weight: Literal['balanced'] | None
++
++
++class RFFixed(TypedDict):
++    n_estimators: int
++    max_features: Literal['sqrt']
++    random_state: int
++    n_jobs: int
++
++
++CANDIDATES: list[RFCandidate] = [{'max_depth': depth, 'min_samples_leaf': leaf, 'class_weight': weight}
+               for weight in ['balanced', None] for depth, leaf in [(12, 2), (8, 5)]]
+ 
+ #Hyperparameters. 160 decision trees 
+-FIXED = dict(n_estimators=160, max_features='sqrt', random_state=42, n_jobs=2)
++FIXED: RFFixed = {'n_estimators': 160, 'max_features': 'sqrt', 'random_state': 42, 'n_jobs': 2}
+ FINAL_ROLES = ['final_test_repeat', 'final_test_values', 'final_test_map', 'final_test_order', 'final_test_timing']
+ 
+ 
+@@ -75,7 +90,11 @@
+ def metrics(y, predictions):
+     y, predictions = np.asarray(y, dtype=str), np.asarray(predictions, dtype=str)
+     if len(y) == 0: return {'support': 0, 'macro_f1': None, 'confusion': None}
+-    p, r, f, n = precision_recall_fscore_support(y, predictions, labels=CLASSES, zero_division=0)
++    # The default average=None returns four per-class arrays, not scalar averages.
++    p, r, f, n = cast(
++        tuple[NDArray[np.float64], NDArray[np.float64], NDArray[np.float64], NDArray[np.int64]],
++        precision_recall_fscore_support(y, predictions, labels=CLASSES, zero_division=0),
++    )
+     return {'support': len(y), 'labels': CLASSES,
+             'confusion': confusion_matrix(y, predictions, labels=CLASSES).tolist(),
+             'macro_f1': float(np.mean(f)),
+--- before/c3model/records.py
++++ after/c3model/records.py
+@@ -12,6 +12,7 @@
+ import json
+ import math
+ import struct
++from typing import TypedDict, cast
+ 
+ import pandas as pd
+ #feature definitions. CURRENT - Information from the current Modbus message, WIRE-Network and transaction-header information, CONTEXT-Information from previous communication
+@@ -26,9 +27,28 @@
+            'paired_request_object_role', 'response_minus_acknowledged_setpoint',
+            'context_available']
+ MAX_INTERVENING = 6 #This means a previous observation is used as context only if no more than six Modbus application messages occurred between that observation and the current message.
+-ROLE_CODE = {'mode': 1, 'setpoint': 2, 'pump': 3}
++ROLE_CODE: dict[str | None, int] = {'mode': 1, 'setpoint': 2, 'pump': 3}
+ NAN = float('nan')
+ LABELS = {'normal', 'command_injection', 'response_injection'}
++
++
++class Anchor(TypedDict):
++    value: int
++    ordinal: int
++    event_id: str
++
++
++class PendingRequest(TypedDict):
++    decoded: dict
++    object_role: str | None
++    event_id: str
++
++
++class ConnectionState(TypedDict):
++    mode: Anchor | None
++    setpoint: Anchor | None
++    pending: dict[int, PendingRequest]
++    offsets: dict[str, int]
+ 
+ 
+ def _require(condition, message):
+@@ -155,7 +175,8 @@
+     """
+     folder = Path(folder)
+     mapping = _public_map(membership, public_maps)
+-    states, records, seen = {}, [], set()
++    states: dict[str, ConnectionState] = {}
++    records, seen = [], set()
+     related_group = membership.get('related_group', membership.get('prospective_related_group'))
+     evaluation_role = membership.get('evaluation_role', membership.get('intended_evaluation_role'))
+     declared_run = membership.get('run_id')
+@@ -208,8 +229,9 @@
+         if task:
+             rule = 'abstain'
+             if available:
+-                rule = ('command_injection' if mode_anchor['value'] == 0 else 'normal') if task == 'command' else \
+-                       ('response_injection' if decoded['word'] != setpoint_anchor['value'] else 'normal')
++                # available already establishes the corresponding anchor; casts add no new checks.
++                rule = ('command_injection' if cast(Anchor, mode_anchor)['value'] == 0 else 'normal') if task == 'command' else \
++                       ('response_injection' if decoded['word'] != cast(Anchor, setpoint_anchor)['value'] else 'normal')
+         record = {
+             'event_id': event_id, 'run_id': row['run_id'], 'connection_id': connection,
+             'transaction_index': transaction, 'event_ordinal': ordinal,

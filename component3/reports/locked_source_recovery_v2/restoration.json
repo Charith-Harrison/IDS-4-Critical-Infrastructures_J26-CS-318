@@ -1,0 +1,9 @@
+{
+  "cause": "A new #Hyperparameters comment changed the frozen experiment.py hash.",
+  "file": "component3/locked/v1_20261025/c3model/experiment.py",
+  "before_sha256": "c7ff2957928c91060da9722ee21e4678f881d1c353d041c03dc87945479a7e7c",
+  "restored_sha256": "8012e15e2a10922e31c77d2d2aa8537d800149d456a4fa4372cc09a96c58936c",
+  "source_revision": "9a1811ab398a964965eb3417f0613ecaea27891d",
+  "preserved_copy": "component3/development/locked_source_recovery_v2/preserved_current/c3model/experiment.py",
+  "ast_unchanged": true
+}

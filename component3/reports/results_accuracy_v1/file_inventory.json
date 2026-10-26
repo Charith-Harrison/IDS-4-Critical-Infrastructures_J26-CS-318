@@ -1,0 +1,827 @@
+[
+  {
+    "path": "component3/data/collection/MX001-20261025T050857Z-878e257e/validation_report.json",
+    "bytes": 201773,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX002-20261025T050921Z-0d2edec8/validation_report.json",
+    "bytes": 202079,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX003-20261025T050942Z-bb434441/validation_report.json",
+    "bytes": 200478,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX004-20261025T051003Z-59e83d68/validation_report.json",
+    "bytes": 207041,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX005-20261025T051102Z-0bf51277/validation_report.json",
+    "bytes": 204550,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX006-20261025T051203Z-d891dc3f/validation_report.json",
+    "bytes": 204289,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX007-20261025T051304Z-2c5089cf/validation_report.json",
+    "bytes": 207031,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX008-20261025T051327Z-e39e0783/validation_report.json",
+    "bytes": 204530,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX009-20261025T051349Z-f1d9f2e4/validation_report.json",
+    "bytes": 206998,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX010-20261025T051412Z-3cb49011/validation_report.json",
+    "bytes": 206985,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX011-20261025T051517Z-1485c054/validation_report.json",
+    "bytes": 206974,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX012-20261025T051622Z-673284b5/validation_report.json",
+    "bytes": 204536,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX013-20261025T051727Z-b8be1968/validation_report.json",
+    "bytes": 200471,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX014-20261025T051747Z-7c5adfcc/validation_report.json",
+    "bytes": 207039,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX015-20261025T051808Z-6e4a8c16/validation_report.json",
+    "bytes": 204567,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX016-20261025T051829Z-f6c4f1ea/validation_report.json",
+    "bytes": 207060,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX017-20261025T051930Z-24f7f559/validation_report.json",
+    "bytes": 204276,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX018-20261025T052029Z-aab150d4/validation_report.json",
+    "bytes": 202051,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX019-20261025T052127Z-8fcabdff/validation_report.json",
+    "bytes": 206979,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX020-20261025T052150Z-8543db67/validation_report.json",
+    "bytes": 207016,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX021-20261025T052213Z-4cbae09c/validation_report.json",
+    "bytes": 199335,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX022-20261025T052235Z-a149c9db/validation_report.json",
+    "bytes": 207012,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX023-20261025T052340Z-6f9b8d0e/validation_report.json",
+    "bytes": 206973,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX024-20261025T052445Z-083ab81e/validation_report.json",
+    "bytes": 207020,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX025-20261025T052550Z-e356f7ee/validation_report.json",
+    "bytes": 191508,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX026-20261025T052611Z-02a8eb1a/validation_report.json",
+    "bytes": 202040,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX027-20261025T052712Z-84c0ed9f/validation_report.json",
+    "bytes": 207007,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX028-20261025T052735Z-8dec537d/validation_report.json",
+    "bytes": 200447,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX029-20261025T052840Z-6c695bee/validation_report.json",
+    "bytes": 204543,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX030-20261025T052900Z-a9520a9e/validation_report.json",
+    "bytes": 200484,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX031-20261025T052959Z-f11bbea1/validation_report.json",
+    "bytes": 197975,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX032-20261025T053022Z-273526c7/validation_report.json",
+    "bytes": 207046,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX033-20261025T053127Z-b9468920/validation_report.json",
+    "bytes": 207050,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX034-20261025T053147Z-5da39b20/validation_report.json",
+    "bytes": 207002,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX035-20261025T053208Z-5156b46a/validation_report.json",
+    "bytes": 204542,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX036-20261025T053309Z-49abfb06/validation_report.json",
+    "bytes": 204334,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX037-20261025T053410Z-b9575f09/validation_report.json",
+    "bytes": 206987,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX038-20261025T053432Z-d6452e04/validation_report.json",
+    "bytes": 204247,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX039-20261025T053455Z-9fed732c/validation_report.json",
+    "bytes": 206990,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX040-20261025T053600Z-74b40178/validation_report.json",
+    "bytes": 208679,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX041-20261025T054507Z-c2726313/validation_report.json",
+    "bytes": 207060,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX042-20261025T054528Z-f56260af/validation_report.json",
+    "bytes": 202089,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX043-20261025T054549Z-04c915ff/validation_report.json",
+    "bytes": 204527,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX044-20261025T054648Z-dbb11ef7/validation_report.json",
+    "bytes": 197760,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX045-20261025T054747Z-ffd4be48/validation_report.json",
+    "bytes": 206989,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX046-20261025T054810Z-848e1244/validation_report.json",
+    "bytes": 206994,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX047-20261025T054833Z-2cd5be7e/validation_report.json",
+    "bytes": 207029,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX048-20261025T054938Z-b4aac736/validation_report.json",
+    "bytes": 206986,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX049-20261025T055044Z-0521338c/validation_report.json",
+    "bytes": 207316,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX050-20261025T055104Z-d555fdc4/validation_report.json",
+    "bytes": 207317,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX051-20261025T055204Z-4bca4444/validation_report.json",
+    "bytes": 207304,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX052-20261025T055227Z-6eba6331/validation_report.json",
+    "bytes": 204525,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX053-20261025T055331Z-61748e62/validation_report.json",
+    "bytes": 207314,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX054-20261025T055351Z-a66b9295/validation_report.json",
+    "bytes": 204834,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX055-20261025T055450Z-bfa2b28d/validation_report.json",
+    "bytes": 207257,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX056-20261025T055513Z-32236c08/validation_report.json",
+    "bytes": 204524,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX057-20261025T055619Z-28f8a0d4/validation_report.json",
+    "bytes": 204562,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX058-20261025T055642Z-37b712bf/validation_report.json",
+    "bytes": 206985,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX059-20261025T055704Z-e72a336d/validation_report.json",
+    "bytes": 207023,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX060-20261025T055804Z-65cf9f97/validation_report.json",
+    "bytes": 201498,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX061-20261025T055905Z-96551131/validation_report.json",
+    "bytes": 204546,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX062-20261025T055928Z-56ee42b4/validation_report.json",
+    "bytes": 194952,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX063-20261025T055951Z-65d9e181/validation_report.json",
+    "bytes": 207001,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX064-20261025T060054Z-0ef0658c/validation_report.json",
+    "bytes": 206993,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX065-20261025T060159Z-dff629ab/validation_report.json",
+    "bytes": 207068,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX066-20261025T060222Z-8e727a54/validation_report.json",
+    "bytes": 195619,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX067-20261025T060245Z-04ece9e8/validation_report.json",
+    "bytes": 207117,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX068-20261025T060352Z-0429af0e/validation_report.json",
+    "bytes": 207073,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX069-20261025T060458Z-f13e4f3b/validation_report.json",
+    "bytes": 204329,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX070-20261025T060521Z-6754eec9/validation_report.json",
+    "bytes": 198099,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX071-20261025T060544Z-0fe74a06/validation_report.json",
+    "bytes": 200574,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX072-20261025T060651Z-69c28101/validation_report.json",
+    "bytes": 204659,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX073-20261025T060758Z-2ed5e9b9/validation_report.json",
+    "bytes": 207081,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX074-20261025T061025Z-05499168/validation_report.json",
+    "bytes": 204563,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX075-20261025T061251Z-db794c45/validation_report.json",
+    "bytes": 207042,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX076-20261025T061529Z-5f5ef342/validation_report.json",
+    "bytes": 204565,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX077-20261025T061808Z-87f1f582/validation_report.json",
+    "bytes": 200512,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX078-20261025T062034Z-77cd2f38/validation_report.json",
+    "bytes": 207037,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX079-20261025T062301Z-1075818f/validation_report.json",
+    "bytes": 204265,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX080-20261025T062541Z-f9b8708b/validation_report.json",
+    "bytes": 200493,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX081-20261025T062817Z-3b44510e/validation_report.json",
+    "bytes": 176652,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX082-20261025T062837Z-ebda261e/validation_report.json",
+    "bytes": 176967,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX083-20261025T062938Z-1171b290/validation_report.json",
+    "bytes": 172818,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX084-20261025T063001Z-dfeac789/validation_report.json",
+    "bytes": 179116,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX085-20261025T063105Z-c2ae34d9/validation_report.json",
+    "bytes": 179096,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX086-20261025T063126Z-16600283/validation_report.json",
+    "bytes": 595,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX086-20261025T063851Z-4c42bf80/validation_report.json",
+    "bytes": 174475,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX087-20261025T063952Z-1fa45191/validation_report.json",
+    "bytes": 595,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX087-20261025T064914Z-69b6f05c/validation_report.json",
+    "bytes": 172824,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX088-20261025T064936Z-55b059c6/validation_report.json",
+    "bytes": 595,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX088-20261025T070609Z-9cc16dd9/validation_report.json",
+    "bytes": 172787,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX089-20261025T070714Z-db76460a/validation_report.json",
+    "bytes": 179115,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX090-20261025T070735Z-a1548067/validation_report.json",
+    "bytes": 179128,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX091-20261025T070836Z-c35a2f00/validation_report.json",
+    "bytes": 179089,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX092-20261025T070858Z-7e214d31/validation_report.json",
+    "bytes": 172216,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX093-20261025T071004Z-9168bd6a/validation_report.json",
+    "bytes": 176958,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX094-20261025T071024Z-bbee7d65/validation_report.json",
+    "bytes": 179142,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX095-20261025T071125Z-f6f86cea/validation_report.json",
+    "bytes": 176632,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX096-20261025T071148Z-5c5f49a5/validation_report.json",
+    "bytes": 179098,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX097-20261025T071253Z-009f5fd2/validation_report.json",
+    "bytes": 179130,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX098-20261025T071313Z-ba26597c/validation_report.json",
+    "bytes": 176932,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX099-20261025T071415Z-2fd024f8/validation_report.json",
+    "bytes": 176595,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX100-20261025T071437Z-b19d07d5/validation_report.json",
+    "bytes": 172806,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX101-20261025T071540Z-ebbc5481/validation_report.json",
+    "bytes": 176656,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX102-20261025T071601Z-96ea59f6/validation_report.json",
+    "bytes": 170370,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX103-20261025T071702Z-ca7054b7/validation_report.json",
+    "bytes": 176899,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/data/collection/MX104-20261025T071724Z-a7e09160/validation_report.json",
+    "bytes": 179110,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/design-v1/Q01-20261024T180517Z-1a6f7c4b/validation_report.json",
+    "bytes": 67053,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/design-v1/Q02-20261024T180527Z-89646902/validation_report.json",
+    "bytes": 68366,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/design-v1/Q03-20261024T180540Z-5163f9af/validation_report.json",
+    "bytes": 68640,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/design-v1/Q04-20261024T180550Z-4ed64387/validation_report.json",
+    "bytes": 67833,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/engineering-v03/EQ01-20261024T195129Z-6b89b0d8/validation_report.json",
+    "bytes": 202106,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/engineering-v03/EQ02-20261024T195219Z-7dffb6c7/validation_report.json",
+    "bytes": 202130,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/engineering-v03/EQ03-20261024T195359Z-79823848/validation_report.json",
+    "bytes": 204587,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/engineering-v03/EQ04-20261024T195535Z-3e6cffa4/validation_report.json",
+    "bytes": 204548,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/engineering-v03/EQ05-20261024T195617Z-e6e31fae/validation_report.json",
+    "bytes": 204617,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/engineering-v03/EQ06-20261024T195700Z-038662b0/validation_report.json",
+    "bytes": 204576,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/engineering-v03/EQ07-20261024T195845Z-135b50f9/validation_report.json",
+    "bytes": 201884,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/engineering-v03/EQ08-20261024T195929Z-324fbc55/validation_report.json",
+    "bytes": 204643,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/engineering-v03/EQ09-20261024T200116Z-59cfb8b3/validation_report.json",
+    "bytes": 196599,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/engineering-v03/EQ10-20261024T200352Z-2c4eb685/validation_report.json",
+    "bytes": 204609,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/engineering-v03/EQ11-20261024T200637Z-f57cd9ac/validation_report.json",
+    "bytes": 202389,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/engineering-v03/EQ12-20261024T200717Z-73279988/validation_report.json",
+    "bytes": 204862,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/engineering-v03/EQ13-20261024T200857Z-31914ae2/validation_report.json",
+    "bytes": 172667,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/engineering-v03/EQ14-20261024T200942Z-b7a00201/validation_report.json",
+    "bytes": 176988,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/main-frozen-v1-20261025/MX001-20261024T214901Z-cdaccfbf/validation_report.json",
+    "bytes": 201773,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/main-frozen-v1-20261025/MX002-20261024T220214Z-7a737be7/validation_report.json",
+    "bytes": 202079,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/main-frozen-v1-20261025/MX003-20261024T220351Z-0669c201/validation_report.json",
+    "bytes": 580,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/main-frozen-v1-20261025/MX003-20261024T223154Z-8d6b9235/validation_report.json",
+    "bytes": 200478,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/main-frozen-v1-20261025/MX004-20261024T223400Z-229a256a/validation_report.json",
+    "bytes": 207041,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_collection_runs/main-frozen-v1-20261025/MX005-20261024T223717Z-70f95935/validation_report.json",
+    "bytes": 580,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/history/component3_testbed_pilot/outputs/pilot-20261024T170840Z-d137ea97/validation_report.json",
+    "bytes": 1341,
+    "category": "capture_or_other_validation"
+  },
+  {
+    "path": "component3/locked/v1_20261025/artifacts/final/final_test_map_predictions.parquet",
+    "bytes": 161178,
+    "category": "saved_experiment_artifact"
+  },
+  {
+    "path": "component3/locked/v1_20261025/artifacts/final/final_test_map_report.json",
+    "bytes": 49840,
+    "category": "saved_experiment_artifact"
+  },
+  {
+    "path": "component3/locked/v1_20261025/artifacts/final/final_test_order_predictions.parquet",
+    "bytes": 174348,
+    "category": "saved_experiment_artifact"
+  },
+  {
+    "path": "component3/locked/v1_20261025/artifacts/final/final_test_order_report.json",
+    "bytes": 50002,
+    "category": "saved_experiment_artifact"
+  },
+  {
+    "path": "component3/locked/v1_20261025/artifacts/final/final_test_repeat_predictions.parquet",
+    "bytes": 409688,
+    "category": "saved_experiment_artifact"
+  },
+  {
+    "path": "component3/locked/v1_20261025/artifacts/final/final_test_repeat_report.json",
+    "bytes": 85037,
+    "category": "saved_experiment_artifact"
+  },
+  {
+    "path": "component3/locked/v1_20261025/artifacts/final/final_test_timing_predictions.parquet",
+    "bytes": 161758,
+    "category": "saved_experiment_artifact"
+  },
+  {
+    "path": "component3/locked/v1_20261025/artifacts/final/final_test_timing_report.json",
+    "bytes": 49790,
+    "category": "saved_experiment_artifact"
+  },
+  {
+    "path": "component3/locked/v1_20261025/artifacts/final/final_test_values_predictions.parquet",
+    "bytes": 161295,
+    "category": "saved_experiment_artifact"
+  },
+  {
+    "path": "component3/locked/v1_20261025/artifacts/final/final_test_values_report.json",
+    "bytes": 49796,
+    "category": "saved_experiment_artifact"
+  },
+  {
+    "path": "component3/locked/v1_20261025/artifacts/final_summary.json",
+    "bytes": 1933,
+    "category": "saved_experiment_artifact"
+  },
+  {
+    "path": "component3/locked/v1_20261025/artifacts/selection.json",
+    "bytes": 9250,
+    "category": "saved_experiment_artifact"
+  },
+  {
+    "path": "component3/locked/v1_20261025/artifacts/validation_predictions.parquet",
+    "bytes": 291585,
+    "category": "saved_experiment_artifact"
+  },
+  {
+    "path": "component3/locked/v1_20261025/artifacts/validation_report.json",
+    "bytes": 67368,
+    "category": "classification_validation_metrics"
+  },
+  {
+    "path": "component3/locked/v1_20261025/reports/locked_results/final_summary.json",
+    "bytes": 1933,
+    "category": "saved_experiment_artifact"
+  },
+  {
+    "path": "component3/locked/v1_20261025/reports/locked_results/final_test_map_report.json",
+    "bytes": 49840,
+    "category": "saved_experiment_artifact"
+  },
+  {
+    "path": "component3/locked/v1_20261025/reports/locked_results/final_test_order_report.json",
+    "bytes": 50002,
+    "category": "saved_experiment_artifact"
+  },
+  {
+    "path": "component3/locked/v1_20261025/reports/locked_results/final_test_repeat_report.json",
+    "bytes": 85037,
+    "category": "saved_experiment_artifact"
+  },
+  {
+    "path": "component3/locked/v1_20261025/reports/locked_results/final_test_timing_report.json",
+    "bytes": 49790,
+    "category": "saved_experiment_artifact"
+  },
+  {
+    "path": "component3/locked/v1_20261025/reports/locked_results/final_test_values_report.json",
+    "bytes": 49796,
+    "category": "saved_experiment_artifact"
+  },
+  {
+    "path": "component3/locked/v1_20261025/reports/locked_results/selection.json",
+    "bytes": 9250,
+    "category": "saved_experiment_artifact"
+  },
+  {
+    "path": "component3/locked/v1_20261025/reports/locked_results/validation_report.json",
+    "bytes": 67368,
+    "category": "classification_validation_metrics"
+  },
+  {
+    "path": "component3/reports/model_metrics_saved_20261026.csv",
+    "bytes": 5432,
+    "category": "derived_reporting_export"
+  },
+  {
+    "path": "results/metrics/baseline_holdout.json",
+    "bytes": 1769,
+    "category": "older_application_report"
+  },
+  {
+    "path": "results/metrics/comparison.csv",
+    "bytes": 1145,
+    "category": "older_application_report"
+  },
+  {
+    "path": "results/metrics/comparison.json",
+    "bytes": 6636,
+    "category": "older_application_report"
+  },
+  {
+    "path": "results/metrics/comparison.md",
+    "bytes": 446,
+    "category": "older_application_report"
+  },
+  {
+    "path": "results/metrics/contextual_holdout.json",
+    "bytes": 1767,
+    "category": "older_application_report"
+  },
+  {
+    "path": "results/metrics/dashboard_verification.json",
+    "bytes": 1090,
+    "category": "older_application_report"
+  },
+  {
+    "path": "results/metrics/dataset_audit.json",
+    "bytes": 14502,
+    "category": "older_application_report"
+  },
+  {
+    "path": "results/metrics/dataset_audit.md",
+    "bytes": 1514,
+    "category": "older_application_report"
+  },
+  {
+    "path": "results/metrics/implementation_verification.json",
+    "bytes": 4353,
+    "category": "older_application_report"
+  },
+  {
+    "path": "results/metrics/validation.json",
+    "bytes": 3657,
+    "category": "older_application_report"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "status": "PASSED",
+  "page_errors": [],
+  "page_overflow": false,
+  "downloaded_rows": 30,
+  "checked": [
+    "final condition selector",
+    "all six methods",
+    "accuracy and coverage columns",
+    "metrics download",
+    "1366 and 1280 laptop viewports"
+  ],
+  "screenshot": "component3/local/results_accuracy_v1/results_ordering.png"
+}

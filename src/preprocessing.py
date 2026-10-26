@@ -18,9 +18,9 @@ from src.utils import PREPROCESSING_VERSION, ROOT, checksum, config_digest, now,
 def preprocess_frame(frame: pd.DataFrame, cfg: dict, source: str, labelled: bool = True) -> pd.DataFrame:
     out = normalize_columns(frame, cfg["dataset"].get("column_map"))
     if not labelled:
-        # Drop labels after alias normalization too: uploads never influence targets.
+# Drop labels after alias normalization too: uploads never influence targets.
         out = out.drop(columns=[cfg["dataset"]["label_column"], "is_attack", "attack_sub_type"], errors="ignore")
-    # Internal IDs are assigned by us, never trusted from uploads.
+# Internal IDs are assigned by us, never trusted from uploads.
     out["source_row"] = np.arange(len(out))
     out["source_file"] = source
     out["event_id"] = source + ":" + out.source_row.astype(str)
@@ -81,7 +81,7 @@ def split_events(frame: pd.DataFrame, cfg: dict) -> tuple[pd.DataFrame, dict]:
     else:
         if out.timestamp.isna().any():
             raise ValueError("Reliable groups or complete timestamps are required; random row splitting is disabled")
-        # Timestamp ties stay on one side of a boundary.
+# Timestamp ties stay on one side of a boundary.
         times = np.sort(out.timestamp.unique())
         a, b = times[int(len(times) * (1 - test_size - val_size))], times[int(len(times) * (1 - test_size))]
         masks = {

@@ -1,0 +1,285 @@
+{
+  "version": "1.1.414",
+  "time": "1793002834436",
+  "generalDiagnostics": [
+    {
+      "file": "c:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3\\locked\\v1_20261025\\c3model\\experiment.py",
+      "severity": "error",
+      "message": "Object of type \"None\" is not subscriptable",
+      "range": {
+        "start": {
+          "line": 81,
+          "character": 49
+        },
+        "end": {
+          "line": 81,
+          "character": 50
+        }
+      },
+      "rule": "reportOptionalSubscript"
+    },
+    {
+      "file": "c:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3\\locked\\v1_20261025\\c3model\\experiment.py",
+      "severity": "error",
+      "message": "\"__getitem__\" method not defined on type \"float\"",
+      "range": {
+        "start": {
+          "line": 81,
+          "character": 75
+        },
+        "end": {
+          "line": 81,
+          "character": 76
+        }
+      },
+      "rule": "reportIndexIssue"
+    },
+    {
+      "file": "c:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3\\locked\\v1_20261025\\c3model\\experiment.py",
+      "severity": "error",
+      "message": "\"__getitem__\" method not defined on type \"float\"",
+      "range": {
+        "start": {
+          "line": 82,
+          "character": 50
+        },
+        "end": {
+          "line": 82,
+          "character": 51
+        }
+      },
+      "rule": "reportIndexIssue"
+    },
+    {
+      "file": "c:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3\\locked\\v1_20261025\\c3model\\experiment.py",
+      "severity": "error",
+      "message": "Object of type \"None\" is not subscriptable",
+      "range": {
+        "start": {
+          "line": 82,
+          "character": 59
+        },
+        "end": {
+          "line": 82,
+          "character": 60
+        }
+      },
+      "rule": "reportOptionalSubscript"
+    },
+    {
+      "file": "c:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3\\locked\\v1_20261025\\c3model\\experiment.py",
+      "severity": "error",
+      "message": "\"__getitem__\" method not defined on type \"float\"",
+      "range": {
+        "start": {
+          "line": 82,
+          "character": 87
+        },
+        "end": {
+          "line": 82,
+          "character": 88
+        }
+      },
+      "rule": "reportIndexIssue"
+    },
+    {
+      "file": "c:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3\\locked\\v1_20261025\\c3model\\experiment.py",
+      "severity": "error",
+      "message": "Object of type \"None\" is not subscriptable",
+      "range": {
+        "start": {
+          "line": 82,
+          "character": 96
+        },
+        "end": {
+          "line": 82,
+          "character": 97
+        }
+      },
+      "rule": "reportOptionalSubscript"
+    },
+    {
+      "file": "c:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3\\locked\\v1_20261025\\c3model\\experiment.py",
+      "severity": "error",
+      "message": "Argument of type \"int\" cannot be assigned to parameter \"criterion\" of type \"Literal['gini', 'entropy', 'log_loss']\" in function \"__init__\"\n\u00a0\u00a0Type \"int\" is not assignable to type \"Literal['gini', 'entropy', 'log_loss']\"\n\u00a0\u00a0\u00a0\u00a0\"int\" is not assignable to \"Literal['gini']\"\n\u00a0\u00a0\u00a0\u00a0\"int\" is not assignable to \"Literal['entropy']\"\n\u00a0\u00a0\u00a0\u00a0\"int\" is not assignable to \"Literal['log_loss']\"",
+      "range": {
+        "start": {
+          "line": 236,
+          "character": 62
+        },
+        "end": {
+          "line": 236,
+          "character": 67
+        }
+      },
+      "rule": "reportArgumentType"
+    },
+    {
+      "file": "c:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3\\locked\\v1_20261025\\c3model\\experiment.py",
+      "severity": "error",
+      "message": "Argument of type \"int\" cannot be assigned to parameter \"bootstrap\" of type \"bool\" in function \"__init__\"\n\u00a0\u00a0\"int\" is not assignable to \"bool\"",
+      "range": {
+        "start": {
+          "line": 236,
+          "character": 62
+        },
+        "end": {
+          "line": 236,
+          "character": 67
+        }
+      },
+      "rule": "reportArgumentType"
+    },
+    {
+      "file": "c:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3\\locked\\v1_20261025\\c3model\\experiment.py",
+      "severity": "error",
+      "message": "Argument of type \"int\" cannot be assigned to parameter \"oob_score\" of type \"bool\" in function \"__init__\"\n\u00a0\u00a0\"int\" is not assignable to \"bool\"",
+      "range": {
+        "start": {
+          "line": 236,
+          "character": 62
+        },
+        "end": {
+          "line": 236,
+          "character": 67
+        }
+      },
+      "rule": "reportArgumentType"
+    },
+    {
+      "file": "c:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3\\locked\\v1_20261025\\c3model\\experiment.py",
+      "severity": "error",
+      "message": "Argument of type \"int\" cannot be assigned to parameter \"warm_start\" of type \"bool\" in function \"__init__\"\n\u00a0\u00a0\"int\" is not assignable to \"bool\"",
+      "range": {
+        "start": {
+          "line": 236,
+          "character": 62
+        },
+        "end": {
+          "line": 236,
+          "character": 67
+        }
+      },
+      "rule": "reportArgumentType"
+    },
+    {
+      "file": "c:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3\\locked\\v1_20261025\\c3model\\experiment.py",
+      "severity": "error",
+      "message": "Argument of type \"int\" cannot be assigned to parameter \"class_weight\" of type \"Mapping[Unknown, Unknown] | Sequence[Mapping[Unknown, Unknown]] | Literal['balanced', 'balanced_subsample'] | None\" in function \"__init__\"\n\u00a0\u00a0Type \"int\" is not assignable to type \"Mapping[Unknown, Unknown] | Sequence[Mapping[Unknown, Unknown]] | Literal['balanced', 'balanced_subsample'] | None\"\n\u00a0\u00a0\u00a0\u00a0\"int\" is not assignable to \"None\"\n\u00a0\u00a0\u00a0\u00a0\"int\" is not assignable to \"Mapping[Unknown, Unknown]\"\n\u00a0\u00a0\u00a0\u00a0\"int\" is not assignable to \"Sequence[Mapping[Unknown, Unknown]]\"\n\u00a0\u00a0\u00a0\u00a0\"int\" is not assignable to \"Literal['balanced']\"\n\u00a0\u00a0\u00a0\u00a0\"int\" is not assignable to \"Literal['balanced_subsample']\"",
+      "range": {
+        "start": {
+          "line": 236,
+          "character": 62
+        },
+        "end": {
+          "line": 236,
+          "character": 67
+        }
+      },
+      "rule": "reportArgumentType"
+    },
+    {
+      "file": "c:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3\\locked\\v1_20261025\\c3model\\records.py",
+      "severity": "error",
+      "message": "Object of type \"None\" is not subscriptable",
+      "range": {
+        "start": {
+          "line": 210,
+          "character": 47
+        },
+        "end": {
+          "line": 210,
+          "character": 58
+        }
+      },
+      "rule": "reportOptionalSubscript"
+    },
+    {
+      "file": "c:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3\\locked\\v1_20261025\\c3model\\records.py",
+      "severity": "error",
+      "message": "Object of type \"None\" is not subscriptable",
+      "range": {
+        "start": {
+          "line": 211,
+          "character": 67
+        },
+        "end": {
+          "line": 211,
+          "character": 82
+        }
+      },
+      "rule": "reportOptionalSubscript"
+    },
+    {
+      "file": "c:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3\\locked\\v1_20261025\\c3model\\records.py",
+      "severity": "error",
+      "message": "No overloads for \"get\" match the provided arguments",
+      "range": {
+        "start": {
+          "line": 225,
+          "character": 43
+        },
+        "end": {
+          "line": 225,
+          "character": 72
+        }
+      },
+      "rule": "reportCallIssue"
+    },
+    {
+      "file": "c:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3\\locked\\v1_20261025\\c3model\\records.py",
+      "severity": "error",
+      "message": "Argument of type \"Literal['pump', 'mode', 'setpoint'] | None\" cannot be assigned to parameter \"key\" of type \"str\" in function \"get\"\n\u00a0\u00a0Type \"Literal['pump', 'mode', 'setpoint'] | None\" is not assignable to type \"str\"\n\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\"",
+      "range": {
+        "start": {
+          "line": 225,
+          "character": 57
+        },
+        "end": {
+          "line": 225,
+          "character": 68
+        }
+      },
+      "rule": "reportArgumentType"
+    },
+    {
+      "file": "c:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3\\locked\\v1_20261025\\c3model\\records.py",
+      "severity": "error",
+      "message": "No overloads for \"get\" match the provided arguments",
+      "range": {
+        "start": {
+          "line": 232,
+          "character": 42
+        },
+        "end": {
+          "line": 232,
+          "character": 69
+        }
+      },
+      "rule": "reportCallIssue"
+    },
+    {
+      "file": "c:\\Users\\ASUS\\Desktop\\Github_Kavisha_Harshangi\\IDS-4-Critical-Infrastructures_J26-CS-318\\component3\\locked\\v1_20261025\\c3model\\records.py",
+      "severity": "error",
+      "message": "Argument of type \"Unknown | Literal['setpoint'] | None\" cannot be assigned to parameter \"key\" of type \"str\" in function \"get\"\n\u00a0\u00a0Type \"Unknown | Literal['setpoint'] | None\" is not assignable to type \"str\"\n\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\"",
+      "range": {
+        "start": {
+          "line": 232,
+          "character": 56
+        },
+        "end": {
+          "line": 232,
+          "character": 65
+        }
+      },
+      "rule": "reportArgumentType"
+    }
+  ],
+  "summary": {
+    "filesAnalyzed": 2,
+    "errorCount": 17,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 4.548
+  }
+}

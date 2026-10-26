@@ -38,15 +38,43 @@ def load_results():
     return {'audit':audit,'conditions':reports,'environment_count':environment_count}
 
 # Format saved methods on the same supported cohort; do not pool new scores.
-def comparison_rows(report,methods=('B','D')):
+def comparison_rows(report,methods=('B','D'),*,evaluation='Common supported cohort'):
     """Same saved common cohort throughout; no pooling or model evaluation."""
     output=[]
     for method in methods:
-        result=report['methods'][method]['common_cohort']
-        matrix=result['confusion']; normal=sum(matrix[0])
-        output.append({'Model':METHOD_NAMES[method],'Macro F1':result['macro_f1'],
+        saved=report['methods'][method]
+        result=saved['common_cohort']
+        matrix=result['confusion']; normal=sum(matrix[0]) if matrix else 0
+        support=result['support']
+        # Divide by the saved cohort support, not only the cells represented in
+        # the matrix. Any unrepresented decisions must not disappear from accuracy.
+        represented=sum(sum(row) for row in matrix) if matrix else 0
+        if represented>support:
+            raise ValueError('Confusion matrix exceeds saved evaluation support')
+        correct=sum(matrix[i][i] for i in range(len(matrix))) if matrix else None
+        eligible=report['task_eligible']
+        output.append({'Model':METHOD_NAMES[method],
+                       'Accuracy (%)':100*correct/support if correct is not None and support else None,
+                       'Macro F1':result['macro_f1'],
                        'Command recall':result['per_class']['command_injection']['recall'],
                        'Response recall':result['per_class']['response_injection']['recall'],
                        'False-alarm rate':sum(matrix[0][1:])/normal if normal else None,
-                       'Normal precision':result['per_class']['normal']['precision']})
+                       'Normal precision':result['per_class']['normal']['precision'],
+                       'Evaluated decisions':support,
+                       'Prediction coverage (% eligible)':100*saved['scored']/eligible if eligible else None,
+                       'Abstentions':saved['abstained'],
+                       'Predictions produced':saved['scored'], 'Eligible decisions':eligible,
+                       'Common cohort unscored':support-represented,
+                       'Evaluation':evaluation, 'Accuracy cohort':'Common supported cohort'})
     return output
+
+
+def comparison_export(conditions):
+    """Export derived final metrics separately from the original saved reports."""
+    rows=[]
+    for condition,role in CONDITIONS.items():
+        report=conditions[role]
+        methods=('A','B','C','D','B-wire','D-wire')
+        for method,row in zip(methods,comparison_rows(report,methods,evaluation='Final test · '+condition)):
+            rows.append({'Method':method,**row})
+    return rows

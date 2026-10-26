@@ -5,14 +5,21 @@ const fs=require('fs'),path=require('path');
   const fixtures=path.resolve(__dirname,'../local/csv_demo');
   const browser=await chromium.launch({channel:'msedge',headless:true}); const errors=[];
   try {
-    const page=await browser.newPage({viewport:{width:1366,height:768}});
-    page.on('pageerror',e=>errors.push(String(e)));
-    await page.goto('http://127.0.0.1:8503',{waitUntil:'domcontentloaded'});
-    await page.getByText('Analyze traffic',{exact:true}).waitFor({timeout:60000});
-    await page.getByText('CSV',{exact:true}).first().click();
-    await page.locator('input[type=file]').setInputFiles(path.join(fixtures,'incompatible.csv'));
-    await page.getByText(/This CSV does not contain the fields required to reconstruct/).waitFor();
-    await page.locator('input[type=file]').setInputFiles(path.join(fixtures,'observations.csv'));
+    // Use isolated sessions instead of relying on version-specific uploader delete buttons.
+    async function upload(name) {
+      const page=await browser.newPage({viewport:{width:1366,height:768}});
+      page.on('pageerror',e=>errors.push(String(e)));
+      await page.goto('http://127.0.0.1:8503',{waitUntil:'domcontentloaded'});
+      await page.getByText('Analyze traffic',{exact:true}).waitFor({timeout:60000});
+      await page.getByText('CSV',{exact:true}).first().click();
+      await page.locator('input[type=file]').setInputFiles(path.join(fixtures,name));
+      return page;
+    }
+    let page=await upload('incompatible.csv');
+    const schemaError=page.getByText(/This CSV does not contain the fields required to reconstruct/);
+    await schemaError.waitFor();
+    await page.close();
+    page=await upload('observations.csv');
     await page.getByText('CSV schema valid.',{exact:true}).waitFor();
     await page.getByText('These observations use the declared single-writer and trusted-anchor testbed policy.',{exact:true}).click();
     await page.getByRole('button',{name:'Run detection on CSV',exact:true}).click();
@@ -20,11 +27,10 @@ const fs=require('fs'),path=require('path');
     await page.getByText('VALIDATION RUN',{exact:true}).first().waitFor();
     await page.getByRole('heading',{name:'Detection results',exact:true}).evaluate(el=>el.scrollIntoView({block:'start'}));
     await page.screenshot({path:path.join(fixtures,'unlabelled_predictions.png')});
-    const clear=page.locator('[data-testid="stFileUploaderDeleteBtn"]');
-    if(await clear.count()) await clear.click();
-    await page.locator('input[type=file]').setInputFiles(path.join(fixtures,'labelled_observations.csv'));
-    await page.getByRole('heading',{name:'Detection results',exact:true}).waitFor({state:'hidden'});
+    await page.close();
+    page=await upload('labelled_observations.csv');
     await page.getByText('CSV schema valid.',{exact:true}).waitFor();
+    await page.getByText('These observations use the declared single-writer and trusted-anchor testbed policy.',{exact:true}).click();
     await page.getByRole('button',{name:'Run detection on CSV',exact:true}).click();
     await page.getByText('Evaluate predictions',{exact:true}).waitFor({timeout:60000});
     await page.getByText('Evaluate predictions',{exact:true}).click();
